@@ -9,6 +9,7 @@ var fs                 = require('fs');
 var minify             = require('gulp-minify');
 var rename             = require('gulp-rename');
 var autoprefixer       = require('gulp-autoprefixer');
+var concat             = require('gulp-concat');
 
 
 var options = {};
@@ -20,9 +21,9 @@ options.rootPath = {
 
 options.theme = {
   root  : options.rootPath.theme,
-  css   : options.rootPath.theme + 'css/',
   sass  : options.rootPath.theme + 'sass/',
-  js    : options.rootPath.theme + 'js/'
+  js    : options.rootPath.theme + 'js/',
+  dist  : options.rootPath.theme + 'dist/'
 };
 
 var sassFiles = [
@@ -30,29 +31,17 @@ var sassFiles = [
   // Do not open Sass partials as they will be included as needed.
   '!' + options.theme.sass + '**/_*.scss',
   // Hide additional files
-  '!' + options.theme.sass + 'vendors/govau-design-system.scss'
+  '!' + options.theme.sass + 'vendors/govau-design-system.scss',
+  '!' + options.theme.sass + 'vendors/font-awesome/font-awesome.scss'
 ];
 
 var $ = gulpLoadPlugins();
-
-// Clean all directories.
-gulp.task('clean', ['clean:css']);
-
-// Clean CSS files.
-gulp.task('clean:css', function() {
-  return del([
-      options.theme.css + '**/*.css',
-      options.theme.css + '**/*.map',
-      '!' + options.theme.css + 'print.css'
-    ], {force: true});
-});
-
 /**
  * Generate styles with soucemap and uncompressed.
  */
 gulp.task('styles:dev', function(callback) {
   runSequence(
-    'clean:css',
+    'styles:clean',
     'styles:generate:dev',
     callback);
 });
@@ -62,9 +51,9 @@ gulp.task('styles:dev', function(callback) {
  */
 gulp.task('styles:prod', function(callback) {
   runSequence(
-    'clean:css',
+    'styles:clean',
     'styles:generate:prod',
-    'css:compress',
+    'styles:compress',
     callback);
 });
 
@@ -88,18 +77,27 @@ gulp.task('js:prod', function(callback) {
     callback);
 });
 
+// Clean CSS files.
+gulp.task('styles:clean', function() {
+  return del([
+    options.theme.dist + '**/*.css',
+    options.theme.dist + '**/*.map',
+    '!' + options.theme.dist + 'print.css'
+  ], {force: true});
+});
+
 /**
  * Compress the css.
  */
-gulp.task('css:compress', function(){
-  return gulp.src(options.theme.css + '/*.css')
+gulp.task('styles:compress', function(){
+  return gulp.src(options.theme.dist + '/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest(options.theme.css));
+    .pipe(gulp.dest(options.theme.dist));
 });
 
 gulp.task('js:clean', function() {
   return del([
-    options.theme.js + 'dist/*.js',
+    options.theme.dist + '/*.js',
   ], {force: true});
 });
 
@@ -109,18 +107,19 @@ gulp.task('js:compress:dev', function() {
       path.basename += ".min";
       path.extname = ".js";
     }))
-    .pipe(gulp.dest(options.theme.js + 'dist'))
+    .pipe(gulp.dest(options.theme.dist))
 });
 
 gulp.task('js:compress:prod', function() {
-  gulp.src(options.theme.js + 'src/*.js')
+  gulp.src([options.theme.js + '/libraries/*.js', options.theme.js + '/src/*.js'])
     .pipe(minify({
       ext: {
         min:'.min.js'
       },
       noSource: true,
     }))
-    .pipe(gulp.dest(options.theme.js + 'dist'))
+    .pipe(concat('healthgovau-ds.min.js'))
+    .pipe(gulp.dest(options.theme.dist))
 });
 
 /**
@@ -136,7 +135,7 @@ gulp.task('styles:generate:dev', function(){
     .pipe($.autoprefixer())
     .pipe($.sourcemaps.write('./'))
     .pipe($.size({title: 'Styles'}))
-    .pipe(gulp.dest(options.theme.css));
+    .pipe(gulp.dest(options.theme.dist));
 });
 
 /**
@@ -150,7 +149,11 @@ gulp.task('styles:generate:prod', function(){
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer())
     .pipe($.size({title: 'Styles (production)'}))
-    .pipe(gulp.dest(options.theme.css));
+    .pipe(rename(function (path) {
+      path.basename += ".min";
+      path.extname = ".css";
+    }))
+    .pipe(gulp.dest(options.theme.dist));
 });
 
 // Watch files for changes & reload

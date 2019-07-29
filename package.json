@@ -17,6 +17,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
     "gulp-extract-media-queries": "^1.1.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-load-plugins": "^1.2.4",
@@ -90,7 +91,7 @@
     "js": {
       "minified": true,
       "modules": false,
-      "location": "js/",
+      "location": "js/src",
       "name": "pancake.js"
     },
     "json": {
@@ -106,8 +107,7 @@
       }
     },
     "react": {
-      "enable": false,
-      "location": "pancake/react/"
+      "location": false
     }
   }
 }
