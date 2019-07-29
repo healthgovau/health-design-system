@@ -92,6 +92,22 @@
       "modules": false,
       "location": "js/",
       "name": "pancake.js"
+    },
+    "json": {
+      "enable": false,
+      "location": "pancake/",
+      "name": "pancake",
+      "content": {
+        "name": true,
+        "version": true,
+        "dependencies": true,
+        "path": true,
+        "settings": true
+      }
+    },
+    "react": {
+      "enable": false,
+      "location": "pancake/react/"
     }
   }
 }
