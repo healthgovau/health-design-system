@@ -3,6 +3,11 @@ Design System for Australian Government Department of Health is built on top of 
 
 View the style guide for documentation on how to implement the Health Design System.
 
+## Dependencies
+Some of the components require jQuery and jQuery UI.
+These are included in the [javascript library](js/libraries) folder but are not bundled into the distribution files.
+You can use these or use your own versions.
+
 ## Usage
 
 ### Direct
