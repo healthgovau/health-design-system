@@ -111,7 +111,7 @@ gulp.task('js:compress:dev', function() {
 });
 
 gulp.task('js:compress:prod', function() {
-  gulp.src([options.theme.js + '/libraries/*.js', options.theme.js + '/src/*.js'])
+  gulp.src([options.theme.js + '/src/*.js'])
     .pipe(minify({
       ext: {
         min:'.min.js'

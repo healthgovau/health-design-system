@@ -2,7 +2,7 @@
   "name": "@healthgovau/design-system",
   "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
   "description": "Design system for health.gov.au and related products.",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/healthgovau/design-system.git"
@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/healthgovau/design-system/issues"
   },
+  "main": "index.js",
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -60,7 +61,6 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "private": true,
   "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
   "scripts": {
     "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
