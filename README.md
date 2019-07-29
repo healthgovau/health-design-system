@@ -1,7 +1,7 @@
 # Health Design System
 Design System for Australian Government Department of Health is built on top of the [DTA Design System](https://designsystem.gov.au/).
 
-View the style guide for documentation on how to implement the Health Design System.
+View the style guide for documentation on how to use the Health Design System components.
 
 ## Dependencies
 Javascript:
