@@ -61,9 +61,7 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
   "scripts": {
-    "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
     "pancake": "node node_modules/@gov.au/pancake/bin/pancake",
     "gulp": "gulp"
   },
