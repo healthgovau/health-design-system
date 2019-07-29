@@ -6,13 +6,13 @@ Design system for Australian Government Department of Health
 ### Direct
 Use the [distribution files](dist) directly.
 
-### Install
+### npm install
 
-`npm install`
+`npm i @healthgovau/design-system`
 
-Include the [core sass file](sass/healthgovau-ds.scss) in your project and compile with your chosen SASS compiler.
+Include the core sass file (node_modules/@healthgovau/design-system/sass/healthgovau-ds.scss) in your project and compile with your chosen SASS compiler.
 
-## Building
+## Development
 
 Install the design system then:
 * `npm run gulp prod` for a production build
