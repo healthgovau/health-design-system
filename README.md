@@ -26,7 +26,7 @@ Add pancake settings to your package.json
 
 ```
 "pancake": {
-    "auto-save": true,
+    "auto-save": false,
     "plugins": true,
     "ignore": [],
     "css": {
@@ -43,13 +43,13 @@ Add pancake settings to your package.json
     },
     "sass": {
       "modules": false,
-      "location": "sass/vendors/",
+      "location": "node_modules/@healthgovau/design-system/sass/vendors/",
       "name": "govau-design-system.scss"
     },
     "js": {
       "minified": true,
       "modules": false,
-      "location": "js/src",
+      "location": "node_modules/@healthgovau/design-system/js/src",
       "name": "pancake.js"
     },
     "json": {
