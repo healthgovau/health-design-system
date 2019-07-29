@@ -1,0 +1,56 @@
+// This is not the Design System Form component.
+// @todo Replace with Design system form component.
+.au-form {
+
+  &__item {
+
+    @include AU-space('margin-top', 1.5unit);
+    label {
+      font-weight: bold;
+      .au-control-input__text {
+        font-weight: normal;
+      }
+    }
+
+    &-description {
+      @include AU-space('margin-top', .5unit);
+    }
+
+    .au-text-input,
+    .au-select {
+      display: block;
+      @include AU-space('margin-top', .5unit);
+      max-width: 42em;
+    }
+
+    .au-control-input {
+      @include AU-space(margin-top, .75unit);
+      label {
+        font-weight: normal;
+      }
+    }
+
+    .form-required {
+      color: $AU-color-error;
+    }
+  }
+
+  .form-element-length-counter {
+    @include AU-space('margin-top', .5unit);
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+}
+
+// Hack to make our filter list checkboxes not have a margin at the top because they don't have a label.
+.au-link-list li:first-of-type .au-control-input {
+  margin-top: 0;
+}
+
+// No borders on buttons plz.
+button {
+  border: none;
+}

@@ -1,0 +1,11 @@
+.au-body {
+  .health-maps {
+    &--google {
+      width: 100%;
+      height: 500px;
+      * + img {
+        margin-top: 0;
+      }
+    }
+  }
+}

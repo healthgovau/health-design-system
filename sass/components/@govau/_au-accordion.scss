@@ -1,0 +1,22 @@
+.au-accordion {
+
+  // Small variation.
+  &.au-accordion--small {
+    border: 0;
+    .au-accordion__title {
+      font-weight: 400;
+      font-size: inherit;
+    }
+  }
+
+  // Light variation.
+  &.au-accordion--light {
+    .au-accordion__title {
+      font-weight: 400;
+      font-size: inherit;
+    }
+    .au-accordion__body-wrapper {
+      @include AU-space(padding, .5unit);
+    }
+  }
+}

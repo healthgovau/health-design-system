@@ -1,0 +1,59 @@
+.au-body {
+  .au-side-nav {
+
+    // Make our version flush with the sub-header above.
+    @include AU-space('margin-top', -1unit);
+
+    // Add our colours.
+    @extend %bg-neutral;
+    @include AU-media(sm) {
+      background: white;
+    }
+
+    a {
+      background: transparent;
+      &.au-side-nav--unpublished {
+        @include background-unpublished;
+      }
+      &:hover,
+      &:focus {
+        background-color: $colour-lighter;
+      }
+      &.active {
+        font-weight: bold;
+        color: $AU-color-foreground-text;
+        background-color: $colour-lighter;
+      }
+    }
+
+    li, ul {
+      position: relative;
+    }
+
+    // Add an unpublished flag for admins.
+    &--unpublished {
+      @include tag-unpublished;
+    }
+
+    @media print {
+      display: none;
+    }
+  }
+}
+
+// Float local nav right (reqd for source order)
+.page-content .sidebar-right {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+  @include AU-space(padding-bottom, 2unit);
+  @include AU-media(sm){
+    float: right;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  @media print {
+    display: none;
+  }
+}

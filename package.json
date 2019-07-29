@@ -1,0 +1,97 @@
+{
+  "name": "@healthgovau/design-system",
+  "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
+  "description": "Design system for health.gov.au and related products.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/healthgovau/design-system.git"
+  },
+  "license": "GNU GENERAL PUBLIC LICENSE v3",
+  "bugs": {
+    "url": "https://github.com/healthgovau/design-system/issues"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-extract-media-queries": "^1.1.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "path": "^0.12.7",
+    "run-sequence": "^2.2.1",
+    "sass-versioning": "^0.3.0"
+  },
+  "dependencies": {
+    "@gov.au/accordion": "7.0.8",
+    "@gov.au/body": "2.2.0",
+    "@gov.au/breadcrumbs": "3.0.5",
+    "@gov.au/buttons": "3.0.7",
+    "@gov.au/callout": "3.0.2",
+    "@gov.au/control-input": "3.0.1",
+    "@gov.au/core": "3.4.2",
+    "@gov.au/cta-link": "2.2.0",
+    "@gov.au/direction-links": "2.2.0",
+    "@gov.au/footer": "3.0.5",
+    "@gov.au/grid-12": "2.1.0",
+    "@gov.au/header": "4.1.12",
+    "@gov.au/headings": "2.0.11",
+    "@gov.au/inpage-nav": "3.0.6",
+    "@gov.au/keyword-list": "3.0.5",
+    "@gov.au/link-list": "3.0.7",
+    "@gov.au/main-nav": "1.0.7",
+    "@gov.au/page-alerts": "2.1.3",
+    "@gov.au/pancake-js": "1.2.1",
+    "@gov.au/responsive-media": "2.0.14",
+    "@gov.au/select": "2.0.11",
+    "@gov.au/side-nav": "5.0.7",
+    "@gov.au/skip-link": "2.0.16",
+    "@gov.au/tags": "3.1.7",
+    "@gov.au/text-inputs": "2.1.1"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "private": true,
+  "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
+  "scripts": {
+    "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
+    "pancake": "node node_modules/@gov.au/pancake/bin/pancake",
+    "gulp": "gulp"
+  },
+  "pancake": {
+    "auto-save": true,
+    "plugins": true,
+    "ignore": [],
+    "css": {
+      "minified": true,
+      "modules": false,
+      "browsers": [
+        "last 2 versions",
+        "ie 8",
+        "ie 9",
+        "ie 10"
+      ],
+      "location": "css/",
+      "name": false
+    },
+    "sass": {
+      "modules": false,
+      "location": "sass/vendors/",
+      "name": "govau-design-system.scss"
+    },
+    "js": {
+      "minified": true,
+      "modules": false,
+      "location": "js/",
+      "name": "pancake.js"
+    }
+  }
+}

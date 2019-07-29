@@ -1,0 +1,45 @@
+.au-body {
+  .health-image-text {
+
+    @include AU-space(margin-top, 1.5unit);
+
+    > li {
+      @include AU-space(margin-bottom, 4unit);
+      @media print {
+        @include AU-space(margin-bottom, 2unit);
+        height: auto !important;
+      }
+      @include AU-media(sm) {
+        text-align: center;
+      }
+    }
+
+    .health-image-text__image {
+      @media print {
+        height: auto !important;
+        img {
+          margin-top: 0 !important;
+        }
+      }
+    }
+
+    .health-image-text__text {}
+
+    .au-introduction {
+      @include AU-space(margin-top, 1unit);
+      display: inline-block;
+      @include AU-media(sm) {
+        display: block;
+      }
+    }
+
+    .text--minor {
+      margin-top: 0;
+      display: inline-block;
+      @include AU-media(sm) {
+        display: block;
+      }
+    }
+
+  }
+}

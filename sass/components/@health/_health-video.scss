@@ -1,0 +1,89 @@
+// Video
+//
+// Markup: video.twig
+//
+// Style guide: components.video
+
+.health-video {
+
+  * + & {
+    @include AU-space(margin-top, 3unit);
+  }
+
+  max-width: 768px;
+
+  &__preview {
+
+    position: relative;
+    line-height: 0;
+
+    &__link {
+      display: inline-block;
+    }
+
+    &__play-button {
+      background-image: url(../images/icons/video-play-button.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include opacity(0.75);
+      display: block;
+      height: 100%;
+      width: 100%;
+      transition: all .3s ease-in-out;
+      &:hover,
+      &:active,
+      &:focus {
+        @include opacity(1);
+        cursor: pointer;
+      }
+    }
+
+    &__length {
+      @include AU-space('padding', .75unit);
+      background-color: #000;
+      color: #fff;
+      @include opacity(0.75);
+      vertical-align: top;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      &:before {
+        background-image: url("../images/icons/video.svg");
+        background-position: 0px 2px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        content: ' ';
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+      }
+
+      &--small {
+        display: none;
+        @include AU-media(sm) {
+          display: inline-block;
+          @include AU-space('padding', .5unit);
+          font-size: 0.85em;
+          right: 3px;
+          bottom: 3px;
+        }
+      }
+    }
+  }
+
+  &--inline {
+    border: $health-borderize--thin;
+    @include AU-space(padding, 1unit);
+
+    * + & {
+      @include AU-space(margin-top, 1.5unit);
+    }
+  }
+
+}

@@ -1,0 +1,11 @@
+img,
+svg {
+  // Suppress the space beneath the baseline
+  @extend .au-responsive-media-img;
+  height: auto;
+}
+
+.responsive-media-vid {
+  // Suppress the space beneath the baseline
+  @extend .au-responsive-media-vid;
+}

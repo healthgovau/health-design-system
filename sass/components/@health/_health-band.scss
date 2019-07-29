@@ -1,0 +1,41 @@
+// Bands.
+.au-body {
+  .health-band {
+    @include AU-clearfix;
+    @include AU-space('padding-top', 1.25unit);
+    @include AU-space('padding-bottom', 1.25unit);
+    @include AU-media(md) {
+      @include AU-space('padding-top', 2.5unit);
+      @include AU-space('padding-bottom', 2.5unit);
+    }
+
+    // Background colours.
+    &.health-band--neutral-1 {
+      @extend %bg-neutral;
+    }
+
+    &.health-band--neutral-2 {
+      @extend %bg-neutral-reverse;
+    }
+
+    // Use au-body au-body--dark with these backgrounds.
+    &.health-band--primary {
+      @extend %bg-complementary-blue;
+    }
+
+    &.health-band--secondary {
+      @extend %bg-primary-teal;
+      .health-band__title--light {
+        color: $colour-primary-teal-text;
+      }
+    }
+
+    &.health-band--tertiary {
+      @extend %bg-complementary-skyblue;
+    }
+
+    &.health-band--tertiary-2 {
+      @extend %bg-primary-blue;
+    }
+  }
+}

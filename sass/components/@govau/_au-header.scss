@@ -1,0 +1,75 @@
+// Health variation on the au-header.
+.au-header.au-header {
+
+  margin-bottom: 0;
+  padding: 0;
+
+  @include AU-media(sm){
+    @include AU-space('padding', 1unit 0 .5unit);
+  }
+  @include AU-media(md){
+    @include AU-space('padding', 1.5unit 0);
+  }
+  .au-header__logo {
+    display: block;
+    @include AU-space('padding', .75unit .75unit .75unit 0);
+    width: 100%;
+    max-width: 250px;
+    // For IE 9, 10.
+    color: transparent;
+    @include AU-media(md) {
+      max-width: 300px;
+      margin: auto;
+      @include AU-space('padding', .75unit);
+      float: left;
+      padding: 0;
+    }
+    @media print {
+      width: 30%;
+    }
+    &-image {
+      display: block;
+      width: 100%;
+      margin: auto;
+      @include AU-media(sm) {
+        margin: 0;
+      }
+    }
+
+    @media print {
+      margin: inherit;
+      padding: 0;
+    }
+  }
+  .region-header {
+    width: 100%;
+    @include AU-media(sm) {
+      max-width: 420px;
+      @include AU-space('margin-top', -.5unit);
+      float: right;
+    }
+  }
+
+  &--dark {
+    background-color: $colour-primary-blue;
+    background: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-gradient);
+
+    a {
+      color: $AU-colordark-foreground-text;
+      &:hover {
+        color: $AU-colordark-foreground-text;
+        text-decoration: none;
+      }
+    }
+  }
+  &--light {
+    background-color: white;
+  }
+
+  // a.au-header__logo {
+  //   &:hover,
+  //   &:focus {
+  //     background: $colour-light-dark;
+  //   }
+  // }
+}

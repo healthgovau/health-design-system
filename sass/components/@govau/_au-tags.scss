@@ -1,0 +1,9 @@
+// Add modifier for au-tags
+.au-tags {
+  &.au-tags--inline {
+    display: inline;
+    > li {
+      @include AU-space('margin', 0unit .25unit .5unit 0unit);
+    }
+  }
+}

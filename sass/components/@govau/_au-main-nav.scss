@@ -1,0 +1,113 @@
+//--------------------------------------------------------------
+// Main nav
+//--------------------------------------------------------------
+
+.au-main-nav {
+  border-bottom-width: 12px; //override to better display Health pillars
+  &.au-main-nav--dark {
+    border-bottom-color: $colour-primary-blue-darker;
+    background-color: $colour-primary-blue;
+    background: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-gradient);
+    .active a {
+      border-color: $colour-primary-blue-darker;
+      background: $colour-primary-blue-darker;
+      border-width: 12px; //override to better display Health pillars
+    }
+    a {
+      border-color: $colour-primary-blue;
+      &:hover, &:focus {
+        background: $colour-primary-blue;
+      }
+    }
+    .au-main-nav__menu {
+      background-color: $colour-primary-blue;
+      @include AU-media('sm') {
+        background: none;
+      }
+    }
+    .au-main-nav__toggle {
+      color: $AU-colordark-foreground-text;
+      font-weight: bold;
+      font-size: 1.25rem;
+      @include AU-space(padding, .5unit 0);
+      &:hover, &:focus {
+        background-color: transparent;
+      }
+      &:before {
+        content: ""
+      }
+      i {
+        font-size: 1rem;
+      }
+
+      &--search {
+        float: right;
+        @include AU-media($AU-main-nav-breakpoint) {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  a {
+    @include AU-media($AU-main-nav-breakpoint) {
+      font-weight: bold;
+    }
+    color: $AU-color-foreground-text;
+
+    @include AU-media($AU-main-nav-breakpoint) {
+      &:hover, &:focus {
+        border-bottom: 0;
+        @include AU-space(margin-bottom, -.5unit);
+      }
+    }
+  }
+
+  .au-link-list {
+    > li {
+
+      &.active, &.active-trail {
+        a {
+          font-weight: bold;
+          @include AU-media($AU-main-nav-breakpoint) {
+            @include AU-space(margin-bottom, -12px); //override to better display Health pillars
+            @include AU-space(padding, 1unit);
+          }
+        }
+      }
+
+      // Hide menu links in primary navigation for Above mobile (as they are presented above search on desktop)
+      // 130106 = 
+      // 130111 = ministers
+      // 130116 = about us
+      // 130121 = contact us
+      // 481444 = media centre
+      // 481445 = news
+      &.menu-mlid-130106,
+      &.menu-mlid-130111,
+      &.menu-mlid-130116,
+      &.menu-mlid-130121,
+      &.menu-mlid-481444,
+      &.menu-mlid-481445 {
+        @include AU-media($AU-main-nav-breakpoint) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+// SHAME! Sub menu above search
+#block-menu-menu-sub-menu {
+  ul {
+    float: right;
+  }
+  display: none;
+  @include AU-media($AU-main-nav-breakpoint) {
+    display: block;
+  }
+}

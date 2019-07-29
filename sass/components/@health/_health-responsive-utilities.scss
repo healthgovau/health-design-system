@@ -1,0 +1,36 @@
+// Utility classes to be used in mark-up (not in other SASS files)
+  
+  // [converter] $parent hack
+  @mixin responsive-visibility($parent) {
+    #{$parent} {
+      display: block !important;
+    }
+  }
+  @mixin responsive-invisibility($parent) {
+    #{$parent} {
+      display: hidden !important;
+    }
+  }
+
+  // No breakpoint - allows for default application
+  .hidden {
+    display: none;
+  }
+
+  // Breakpoint classes for hiding
+  @include AU-media(xs){
+    @include responsive-invisibility('.hidden-xs');
+    @include responsive-visibility('.visible-xs');
+  }
+  @include AU-media(sm){
+    @include responsive-invisibility('.hidden-sm');
+    @include responsive-visibility('.visible-sm');
+  }
+  @include AU-media(md){
+    @include responsive-invisibility('.hidden-md');
+    @include responsive-visibility('.visible-md');
+  }
+  @include AU-media(lg){
+    @include responsive-invisibility('.hidden-lg');
+    @include responsive-visibility('.visible-lg');
+  }

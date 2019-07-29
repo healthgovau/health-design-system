@@ -1,0 +1,34 @@
+//--------------------------------------------------------------
+// Book navigation
+// Next, Previous, Up
+//-------------------------------------------------------------
+
+.health-book-nav {
+  border-top: 1px solid $AU-color-foreground-border;
+  @include AU-space(padding-top, 1.5unit);
+
+  .au-display-lg {
+    margin-top: 0;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $AU-color-foreground-text;
+    &:hover,
+    &:focus {
+      background: $AU-color-background-shade;
+    }
+    @include AU-space(padding, 1unit);
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+
+  @media print {
+    display: none;
+  }
+
+}

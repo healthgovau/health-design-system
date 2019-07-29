@@ -1,0 +1,76 @@
+.health-back-to-top {
+  background-color: transparent;
+  position: fixed;
+  display: block;
+  @include AU-space( right, 1unit );
+  bottom: -4px;
+  @include opacity(0);
+  z-index: -1;
+  padding: 0;
+
+  @media print {
+    display: none;
+  }
+
+  .au-btn.au-btn--secondary {
+    @include AU-fontgrid( sm );
+    line-height: 1.2;
+    font-size: 0.9rem;
+    @include AU-space( width, 5unit );
+    @include AU-space( padding, 1.5unit 0 .5unit);
+    @include AU-media(md) {
+      @include AU-space( width, 6unit );
+      @include AU-space( padding, 1.75unit 1unit 1unit);
+    }
+    background: $colour-lighter;
+    border: none;;
+    color: $AU-color-foreground-text;
+
+    // Hover
+    &:hover,
+    &:hover:not(:disabled) {
+      background-color: $colour-light-dark;
+      color: darken($AU-color-foreground-text, 10%);
+      border: none;
+      &:after {
+        background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+        '<path fill="#{ $colour-darker }" d="M64 0l64 64-16 16-64-64"/>' +
+        '<path fill="#{ $colour-darker }" d="M64 0l16 16-64 64L0 64"/>' +
+      '</svg>');
+      }
+    }
+
+    // Content
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      @include AU-space( margin-top, .75unit ); 
+      @include AU-space( right, 2unit );
+      @include AU-space( width, 1unit );
+      @include AU-space( height, 1unit );
+      @include AU-media(md) {
+        @include AU-space( margin-top, 1unit ); 
+        @include AU-space( right, 2.4unit );
+      }
+      background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+          '<path fill="#{ $colour-darker }" d="M64 0l64 64-16 16-64-64"/>' +
+          '<path fill="#{ $colour-darker }" d="M64 0l16 16-64 64L0 64"/>' +
+        '</svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 101;
+      transition: transform 0.25s ease-in;
+    }
+    
+    span {
+      display: block;
+    }
+  }
+
+  &.isVisible {
+    @include opacity(.8);
+    z-index: 9999;
+    transition: all .4s ease-in;
+  }
+}

@@ -1,0 +1,17 @@
+.au-page-alerts {
+
+  max-width: 42rem;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

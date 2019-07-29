@@ -1,0 +1,42 @@
+// Recommendation
+//
+// NHMRC recommendations
+//
+// .recommendation--grade-practice-point  - Practice point
+// .recommendation--grade-grade-a - Grade A-D
+// .recommendation--grade-consensus-based - Consensus based
+//
+// Markup: recommendation.twig
+//
+// Weight: 1
+//
+// Style guide: components.recommendation
+
+.health-recommendation {
+  &--grade-practice-point {
+    border-left-color: #d9c100;
+    .health-recommendation__grade {
+      background-color: #fff4c8;
+    }
+  }
+
+  &--grade-grade-a,
+  &--grade-grade-b,
+  &--grade-grade-c,
+  &--grade-grade-d,
+  &--grade-evidence-based,
+  &--grade-qualified-evidence-based
+  {
+    border-left-color: #8852ce;
+    .health-recommendation__grade {
+      background-color: #e0c8ff;
+    }
+  }
+
+  &--grade-consensus-based {
+    border-left-color: #5f904d;
+    .health-recommendation__grade {
+      background-color: #e7fddf;
+    }
+  }
+}

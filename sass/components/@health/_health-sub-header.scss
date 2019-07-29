@@ -1,0 +1,65 @@
+// Sub header variation. This includes our title and HP switcher.
+.health-sub-header {
+  @include AU-space('padding', 12px 0);
+  @include AU-media(sm){
+    @include AU-space('padding', 1.5unit 0 1unit 0);
+  }
+
+  // Title.
+  h1 {
+    margin-top: 0;
+  }
+
+  .au-introduction {
+    @include AU-space(margin-top, .5unit);
+    @include AU-media(sm) {
+      @include AU-space(margin-top, 1unit);
+    }
+  }
+
+  &__section-title {
+    @include AU-space(margin-bottom, .65unit);
+    @include AU-media(sm) { // Hide on desktop
+      display: none;
+    }
+    @media print {
+      display: none;
+    }
+
+  }
+
+  &__supp {
+
+    @media print {
+      display: none;
+    }
+
+    &--center {
+      @include AU-media(sm) {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+
+    @include AU-space('padding-top', 1.5unit);
+    @include AU-media(sm) {
+      padding-top: 0;
+    }
+
+    // Program logo - CHECK
+    // @todo Revisit this.
+    .field-name-field-image-featured .field-item {
+      display: none; // Hide for mobile
+      @include AU-media(sm) {
+        display: block;
+        @include AU-space('padding', 2unit 0 0 0);
+        text-align: center;
+        img {
+          max-width: 75%;
+        }
+      }
+    }
+  }
+}

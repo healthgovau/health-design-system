@@ -1,0 +1,7 @@
+// Global functions
+//
+
+@function width-decimal( $column-count) {
+  $width: (1 / $column-count);
+  @return ($width / 1) * 100%;
+}

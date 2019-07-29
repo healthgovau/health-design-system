@@ -1,0 +1,22 @@
+.au-form__item {
+  .au-control-input {
+    &.au-control-input--compact {
+      @include AU-space(margin-top, 0.5unit);
+      .au-control-input__text {
+        @include AU-space(padding, 0 0 0 1.5unit);
+        margin-right: 0;
+        &:before, &:after {
+          left: -4px;
+          top: 2px;
+          @include AU-space(width, 1.375unit);
+          @include AU-space(height, 1.375unit);
+        }
+      }
+
+      .au-control-input__input {
+        left: 0;
+        top: 7px;
+      }
+    }
+  }
+}

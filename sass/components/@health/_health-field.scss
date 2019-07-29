@@ -1,0 +1,115 @@
+// Fields
+.field {
+
+  // Provide margin on top.
+  * + & {
+    @include AU-space(margin-top, 1.5unit);
+  }
+
+  .field + &.field-label-hidden,
+  .metadata + &.field-label-hidden
+  {
+    @include AU-space(margin-top, .5unit);
+  }
+
+  @include AU-clearfix();
+
+  .field__label, .field-label, &.field__label {
+    font-weight: bold;
+    &--light {
+      font-weight: normal;
+    }
+  }
+
+  &__item + &__label {
+    @include AU-space(margin-top, .5unit);
+  }
+
+  // Special case of multiple addresses in one field.
+  .health-maps--google + .field__label {
+    @include AU-space(margin-top, 1.5unit);
+  }
+}
+
+// Metadata, such as dates and types, used mainly in listings.
+.metadata {
+
+  &--inline {
+
+    @include AU-space(margin-top, .5unit);
+
+    .field {
+      @include AU-space(margin-top, 0);
+    }
+
+    > div, > span {
+      color: $colour-minorText;
+      display: inline-block;
+      border-left: 1px solid $colour-minorText;
+      @include AU-space(margin-left, .5unit);
+      @include AU-space(padding-left, .5unit);
+    }
+
+    > :first-child {
+      border-left: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.health-separator {
+  border-top: $health-borderize--very-thin;
+  @include AU-space('margin-top', 3unit);
+  @include AU-media(sm){
+    @include AU-space('margin-top', 4unit);
+  }
+}
+
+//// STUFF WE NEED TO UPDATE ////
+
+// External link url
+.external-link-url {
+  word-break: break-all;
+  color: $colour-primary-teal-darker;
+  @include health-fontgrid('xs', 'default', 'light');
+}
+
+// Document accessibility
+.document-accessibility-form {
+  @include AU-space(margin-top, 1.5unit);
+  color: $colour-minorText;
+  a {
+    color: $colour-minorText;
+  }
+  font-size: 0.9em;
+}
+
+// Summary
+p.summary, .field-name-field-summary {
+  @include AU-clearfix;
+  clear: both;
+}
+
+// Resource title.
+.resource-title, p.resource-title {
+  @include AU-fontgrid('md');
+  @include AU-space('margin-bottom', .5unit);
+}
+
+// Override the line height from UIKit on image fields.
+.field-name-field-image,
+.field-name-field-image-featured {
+  div {
+    line-height: 0;
+  }
+}
+
+%minor-text {
+  font-size: 13px;
+}
+
+.field-name-field-resource-file-summary {
+  @include AU-space(margin-top, 1.5unit);
+  @include AU-space(margin-bottom, 1.5unit);
+}

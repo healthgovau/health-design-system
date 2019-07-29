@@ -1,0 +1,132 @@
+// Lists
+//
+// A collection of list types.
+//
+// Markup: lists.twig
+//
+// Style guide: Lists
+
+// Highlight an item in a list.
+ul {
+  li {
+    transition: background-color 1s;
+    &.highlight {
+      background-color: #ffffc6;
+    }
+  }
+}
+
+// Large list styles
+%list--large {
+  list-style-type: none;
+  counter-reset: standard-counter;
+  padding: 0;
+  margin: 0;
+
+  * + & {
+    @include AU-space(margin-top, 1.5unit);
+  }
+
+  >li {
+    vertical-align: top;
+    position: relative;
+    @include AU-space('margin', 0 0 1unit);
+    @include AU-space('padding', 1.5unit);
+    
+    background: $colour-lighter;
+    &::before {
+      content: counter(standard-counter, decimal);
+      counter-increment: standard-counter;
+      float: left;
+      text-align: center;
+      font-weight: 700;
+      position: absolute;
+      left: 14px;
+      @include AU-space('top', 1unit);
+      padding-top: 0;
+      font-size: 24px;
+    }
+    a {
+      font-weight: bold;
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+  // Apply default to <ol>
+ol.list--large {
+  @extend %list--large;
+  > li {
+    @include AU-space('padding-left', 3unit);
+  }
+}
+
+// Variant for <ul>
+ul.list--large {
+  @extend %list--large;
+  counter-reset: none;
+  > li {
+    &::before {
+      top: 0;
+      content: '■';
+      counter-increment: none;
+    }
+  }
+}
+
+// Plain list
+ul,ol {
+  &.list--large--plain {
+    @extend %list--large;
+    > li {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+// Checklist style
+ul {
+  &.list--large--checklist {
+    @extend %list--large;
+    > li {
+      @include AU-space('padding-left', 4unit);
+      @include AU-space('padding-top', 1unit);
+      background: $colour-lighter url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23313131' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23fff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E") no-repeat 13px 13px/30px 30px;
+      &::before {
+        content: '';
+      }
+      strong {
+        @extend .au-display-md;
+      }
+    }
+  }
+}
+
+// List items shouldn't be 100% as it is too long and hard to read, just like p tags.
+.region-content {
+  ol,
+  ul:not(.health-listing){
+    li {
+      max-width: $AU-maxwidth;
+    }
+  }
+}
+
+.au-body {  
+  ul.health-card-list {
+    li {
+      max-width: 100%;
+    }
+  }
+}
+
+.list--remove {
+  list-style: none;
+  padding-left: 0;
+  > li {
+    @include AU-space(margin-top, .5unit);
+  }
+}

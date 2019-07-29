@@ -1,0 +1,91 @@
+// Statistics
+//
+// Display a quick stat as a way to engage users.
+//
+// .stat--secondary - Secondary colour
+// .stat--tertiary - Tertiary colour
+// .stat--dark - Dark colour
+// .stat--no-trend - Don't display trend information
+//
+// Markup: stat.twig
+//
+// Style guide: Components.stats
+
+.stat {
+  @include AU-space('margin', 1.5unit 0 2unit);
+  @include AU-media('sm') {
+    border-right: 1px dotted $colour-primary-teal-text;
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}
+
+// Statistic value.
+.stat__value {
+  @include health-fontgrid('xxxl', 'default', 'heavy');
+  @include AU-space('padding', .5unit 0);
+  line-height: 0.9 !important; //override
+}
+
+// Statistic text.
+.stat__text {
+  @include health-fontgrid('md', 'default', 'light');
+  @include AU-space('padding', 0 0 .25unit 0);
+  @include AU-media('md') {
+    @include AU-space('padding-bottom', 1unit);
+  }
+}
+
+// The trend.
+.stat__trend {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.stat__trend-value {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.stat__trend-icon {
+  margin-right: 5px;
+  color: white;
+  &:before {
+    @include AU-space('margin-top', -1unit);
+  }
+}
+
+// Source text
+.stat__source {
+  @include AU-space('margin-bottom', .5unit);
+  margin-top: 0 !important;
+}
+
+// Variation with no trend.
+.stat--no-trend {
+  .stat__value {
+    border-bottom: 0;
+  }
+  .stat__trend {
+    display: none;
+  }
+}
+
+// UIKit overrides.
+.au-body {
+  i.stat__trend-icon {
+    font-style: normal;
+    &.positive {
+      color: $colour-positive;
+    }    
+    &.negative {
+      color: $colour-negative;
+    }
+  }
+
+  p.stat__trend, p.stat__value, p.stat__text {
+    margin-top: 0;
+  }
+}

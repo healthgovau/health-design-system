@@ -1,0 +1,30 @@
+// Breadcrumb navigation
+//
+// The path to the current page in the form of a list of links.
+//
+// Markup: breadcrumb.twig
+//
+// Style guide: navigation.breadcrumb
+
+.au-breadcrumbs {
+  display: none;
+  @include AU-media(sm) {
+    display: block;
+  }
+
+  @media print {
+    display: block;
+    ol {
+      li:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
+// Section header tweak mobile breadcrumbs
+.section-title {
+  [class*="fa-"]:before {
+    margin-left: -0.9em;
+  }
+}

@@ -1,0 +1,38 @@
+// Footnotes
+//
+// A list of footnotes useful for HTML versions of publications or books.
+//
+// Markup: footnotes.twig
+//
+// Style guide: Components.books.footnotes
+
+
+// List of footnotes.
+.health-footnotes {
+  border-top: $health-borderize--very-thin;
+  @include AU-space('margin-top', 1.5unit);
+  @include AU-space('padding-top', 1.5unit);
+
+  @at-root table & {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  &__footnote {
+
+    @include AU-space('padding-left', 3unit);
+    &-number {
+      position: absolute;
+      @include AU-space('margin-left', -3unit);
+    }
+  }
+
+
+}
+
+// Link to the footnote.
+.health-footnotes__link {
+  border-bottom: 1px dotted #CCC;
+  cursor: help;
+}

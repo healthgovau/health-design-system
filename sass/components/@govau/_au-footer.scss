@@ -1,0 +1,35 @@
+.au-footer {
+
+  // Add some space between the content and the footer.
+  // Not sure why this isn't in the @gov.au/footer.
+  @include AU-space(margin-top, 2unit);
+
+  // Remove the top border.
+  border-top: none;
+
+  // Apply our colour scheme on the background.
+  &.au-body.au-body--dark.au-footer--dark {
+    background: $colour-darkest;
+    background: linear-gradient(to right,$colour-dark-hover,$colour-darkest)
+  }
+
+  // Add a gap on mobile between the menus.
+  &__navigation-section {
+    @include AU-space(margin-top, 1.5unit);
+    @include AU-media(sm) {
+      margin-top: 0;
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .au-footer__end {
+    border-top-color: $colour-dark;
+  }
+
+  // Don't print the footer.
+  @media print {
+    display: none;
+  }
+}

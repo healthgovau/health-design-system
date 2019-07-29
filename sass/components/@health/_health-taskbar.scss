@@ -1,0 +1,164 @@
+// Taskbar
+//
+// A taskbar for displaying a wrappable list of task 'accelatorators' with icon.
+// Default display is plain but a 'tiled' version is available.
+// 
+// taskbar--2 - Displays 2 items in a row
+// taskbar--3 - Displays 3 items in a row
+// taskbar--4 - Displays 4 items in a row
+// taskbar--5 - Displays 5 items in a row
+// taskbar--6 - Displays 6 items in a row
+// taskbar--tiled--2 - Displays 2 tiled items in a row
+// taskbar--tiled--3 - Displays 3 tiled items in a row
+// taskbar--tiled--4 - Displays 4 tiled items in a row
+// taskbar--tiled--5 - Displays 5 tiled items in a row
+// taskbar--tiled--6 - Displays 6 tiled items in a row
+//
+// Markup: taskbar.twig
+//
+// Style guide: components.taskbar
+
+.taskbar,
+%taskbar {
+  color: #000;
+  @include AU-clearfix;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    >li {
+      display: inline;
+      float: left;
+      text-align: center;
+      margin-bottom: 0;
+      .taskbar__item:last {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .taskbar__item,
+  %taskbar__item {
+    @include AU-space('padding', 1unit);
+    margin: 0 3px 3px 0;
+    display: block;
+    border: 0;
+    min-height: 0;
+    @include AU-media('xs') {
+      min-height: $minHeight-Taskbar;
+    }
+    @extend %bg-primary-teal;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $colour-primary-blue-darker;
+    }
+  }
+
+  .taskbar__img,
+  %taskbar__img {
+    @extend .au-responsive-media-img;
+    border: 0;
+  }
+
+  .taskbar__title,
+  %taskbar__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .taskbar__desc,
+  %taskbar__desc {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: -10px;
+  }
+}
+
+@for $i from 2 through 6 {
+  .taskbar--tiled--#{$i} {
+    @extend %taskbar;
+    ul {
+      >li {
+        width: width-decimal(1);
+      } // Responsive
+      @include AU-media('xs') {
+        >li {
+          width: width-decimal(2);
+        }
+      } // Responsive
+      @include AU-media('sm') {
+        >li {
+          width: width-decimal(3);
+        }
+      } // Responsive
+      @include AU-media('md') {
+        >li {
+          width: width-decimal($i);
+        }
+      }
+    }
+  }
+
+  .taskbar--#{$i} {
+    @extend %taskbar;
+    ul {
+      >li {
+        width: width-decimal(1);
+      } // Responsive
+      @include AU-media('xs') {
+        >li {
+          width: width-decimal(2);
+        }
+      } // Responsive
+      @include AU-media('sm') {
+        >li {
+          width: width-decimal(3);
+        }
+      } // Responsive
+      @include AU-media('md') {
+        >li {
+          width: width-decimal($i);
+        }
+      }
+    }
+    .taskbar__item {
+      margin: 0;
+      background-color: transparent;
+    }
+  }
+}
+
+// Using taskbar with a view.
+.taskbar,
+.taskbar--tiled--2,
+.taskbar--tiled--3,
+.taskbar--tiled--4,
+.taskbar--tiled--5,
+.taskbar--tiled--6
+{
+
+  &.view ul > .views-row {
+    &:hover {
+      cursor: pointer;
+    }
+    margin: 0;
+    .node {
+      @extend %taskbar__item;
+    }
+
+    .field-name-field-image {
+      @extend %taskbar__img;
+    }
+
+    .field-name-title a {
+      @extend %taskbar__title;
+    }
+
+    .field-name-body p {
+      @extend %taskbar__desc;
+    }
+
+  }
+}

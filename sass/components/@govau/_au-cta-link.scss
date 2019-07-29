@@ -1,0 +1,14 @@
+// Health variations on UIKit call to action link.
+.au-body {
+  .au-cta-link {
+    // Right align the link.
+    &--right {
+      text-align: right;
+    }
+  }
+
+  // We want to apply the dark theme automatically to the link if it within au-body--dark.
+  &.au-body--dark .au-cta-link {
+    @extend .au-cta-link--dark;
+  }
+}

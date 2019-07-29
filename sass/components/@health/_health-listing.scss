@@ -1,0 +1,74 @@
+.health-listing {
+
+  margin-top: 0;
+  * + & {
+    @include AU-space(margin, 2unit 0 0 0);
+  }
+
+  padding: 0;
+
+  // If this listing is embedded amongst content, help separate it nicely from that content.
+  @at-root * + .row &--embedded, * + &--embedded {
+    li:first-of-type {
+      border-top: $health-borderize--very-thin;
+      @include AU-space(padding-top, 2unit);
+      @include AU-space(margin-top, 2unit);
+    }
+
+    li:last-of-type {
+      border-bottom: $health-borderize--very-thin;
+      @include AU-space(padding-bottom, 2unit);
+    }
+  }
+
+  li {
+    list-style: none;
+    max-width: inherit;
+    clear: both;
+  }
+
+  // Add spacing between items.
+  li + li {
+    @include AU-space(margin-top, 2unit);
+    border-top: $health-borderize--very-thin;
+    @include AU-space(padding-top, 2unit);
+  }
+
+  @include AU-space(margin-bottom, 2unit);
+
+  clear: both;
+
+  // Compact variation.
+  &--compact {
+    li + li {
+      @include AU-space(margin-top, 1unit);
+      @include AU-space(padding-top, 1unit);
+    }
+  }
+
+  // Filters
+  &__filters {
+
+    * + & {
+      @include AU-space(margin-top, 1unit);
+    }
+
+    @media print {
+      background: transparent !important;
+    }
+
+    &--inline {
+      > * {
+        display: inline-block;
+        @include  AU-space(margin-right, 1unit);
+      }
+    }
+
+    .clear-all {
+      @include  AU-space(margin, .5unit .25unit 0 0 );
+      @media print {
+        display: none;
+      }
+    }
+  }
+}

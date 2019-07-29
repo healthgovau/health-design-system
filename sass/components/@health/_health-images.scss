@@ -1,0 +1,132 @@
+// Reset the line height on images as this causes gaps at the bottom of some images.
+.au-body {
+  .media div,
+  .au-responsive-media-img div,
+  img {
+    line-height: 0;
+  }
+}
+
+img {
+  border: 0; // IE 9 fix.
+}
+
+.au-body {
+  picture {
+    display: block;
+    img {
+      margin-top: 0;
+    }
+    @at-root * + picture {
+      @include AU-space(margin-top, 1.5unit);
+    }
+  }
+}
+
+// Add a border to the image.
+.image--border {
+  img {
+    border: $health-borderize;
+  }
+  div {
+    line-height: 0;
+  }
+  @media print {
+    border: none;
+  }
+}
+
+.image--circle {
+  img {
+    border-radius: 50%;
+    border: $health-borderize;
+  }
+}
+
+// Image caption
+.field-name-field-image-caption {
+    margin-bottom: 2em;
+}
+
+%image--full {
+    @include AU-space('margin-bottom', 1unit);
+    @include AU-media(sm) {
+      margin-bottom: 0;
+    }
+    width: 100%;
+    img {
+        border: $health-borderize;
+        width: 100%;
+    }
+  div {
+    line-height: 0;
+  }
+}
+
+// Lazy loaded images.
+.image-outer {
+
+  line-height: 0;
+
+  .image-placeholder {
+    @media print {
+      border: 1px solid black;
+      &:before {
+        content: "This image hasn't loaded yet. Close the print dialog and try again.";
+      }
+    }
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 0;
+    position: relative;
+    line-height: 0;
+
+    &.image-loading {
+      background-color: transparent;
+    }
+
+    .image {
+      width: 100%;
+      img {
+        // Hide initially, until loaded.
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+// An image inside a link.
+.image--link {
+
+  a {
+    border-bottom: 0;
+    line-height: 0;
+    @include AU-media(sm) {
+      display: block;
+    }
+    &:focus {
+      border: 3px solid $colour-primary-teal-darker;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+    }
+
+    img {
+      margin-top: 0; // Override uikit * + img margin.
+    }
+  }
+
+}
+
+// Make the background colour white for images that are loading that have a link around them.
+// Normal this background is black and it looks ugly.
+a .image-wrapper {
+  &.image-loading {
+    background-color: white;
+  }
+}

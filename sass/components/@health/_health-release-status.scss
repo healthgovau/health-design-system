@@ -1,0 +1,57 @@
+.health-release-status {
+
+  @include AU-space('padding-top', 0.75unit);
+  @include AU-space('padding-bottom', 0.75unit);
+
+  &__icon {
+    padding: 0 8px;
+    margin-right: 10px;
+    float: left;
+    text-transform: uppercase;
+    border-radius: 12px;
+    margin-top: 2px;
+    font-size: 14px;
+
+    &--alpha {
+      background: $alpha-background;
+      color: $alpha-text;
+    }
+    &--beta {
+      background: $beta-background;
+      color: $beta-text;
+    }
+    &--launch {
+      background: $live-background;
+      color: $alpha-text;
+    }
+  }
+
+  &--desktop {
+    display: none;
+    @include AU-media(md) {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    display: block;
+    @include AU-media(md) {
+      display: none;
+    }
+  }
+
+  font-size: 13px;
+  @include AU-media(md) {
+    font-size: inherit;
+  }
+
+  @media print {
+    display: none;
+  }
+
+  // Override max -width
+  p {
+    max-width: 100%;
+  }
+
+}

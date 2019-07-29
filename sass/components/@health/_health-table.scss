@@ -1,0 +1,79 @@
+// Tables
+//
+// The `<table>` element displays tabular data in rows, columns, and cells.
+//
+// Markup: tables-table.twig
+//
+// Weight: 1
+//
+// Style guide: base.table
+
+// @todo We shouldn't need to import this here, but it won't compile without it.
+@import '../../abstracts/mixins';
+
+table {
+
+  // Spacing above.
+  * + &,
+  * + .health-table__responsive & {
+    @include AU-space('margin-top', 1.5unit);
+  }
+
+  border-collapse: collapse;
+  border: $health-borderize--very-thin;
+
+  caption {
+    text-align: left;
+    @include AU-space(margin-bottom, 1unit);
+  }
+
+  tr:nth-child(even) {
+    background-color: $AU-color-background;
+  }
+
+  &.table__no-banding {
+    tr:nth-child(even) {
+      background-color: transparent;
+    }
+  }
+
+  td,
+  th {
+    @include AU-media('md') {
+      @include AU-space('padding', .5unit);
+      font-size: initial;
+    }
+
+    border-bottom: $health-borderize--very-thin;
+    @include AU-space('padding', .25unit);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background-color: $colour-lightest;
+  }
+
+  thead {
+    border-bottom: $health-borderize--very-thin;
+  }
+
+  min-width: 43em;
+  @include AU-media(sm) {
+    min-width: inherit;
+  }
+}
+
+.health-table__responsive {
+  overflow: scroll;
+  @include AU-media( md ) {
+    overflow: auto;
+  }
+
+  @media print {
+    overflow: visible;
+    table {
+      min-width: inherit;
+    }
+  }
+}

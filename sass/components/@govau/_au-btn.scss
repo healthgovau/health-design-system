@@ -1,0 +1,14 @@
+// Button.
+.au-btn {
+
+  // Convert tertiary button to look like a link.
+  &--tertiary {
+    padding: 0;
+  }
+
+  // Large button.
+  &.au-btn--large {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+}

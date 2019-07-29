@@ -1,0 +1,160 @@
+/**
+ * Health-fontgrid Mixin for setting font-size and line-height that snaps to the grid, and also includes mobile :)
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ * @param  {keywords} $lineheight-key -  Either one of the following keywords: heading, nospace, default
+ *
+ * @return {string}                   - The code; fontsize in REM, with PX fallback, and unitless line-height which matches vertical grid
+*/
+@mixin health-fontgrid( $fontsize-key, $lineheight-key: 'default', $weight: 'heavy' ) {
+  $next-size-down: health-fontgrid-next-size($fontsize-key);
+  @include AU-fontgrid($next-size-down, $lineheight-key);
+  @include AU-media(sm) {
+    @include AU-fontgrid($fontsize-key, $lineheight-key);
+  }
+
+  @if $weight == 'heavy' {
+    font-weight: bold;
+  }
+
+  @if $weight == 'light' {
+    font-weight: normal;
+  }
+}
+
+/**
+ * Get the next size down.
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ *
+ * @return {string}                   -  One of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+*/
+@function health-fontgrid-next-size( $fontsize-key ) {
+  @if $fontsize-key == 'xs' {
+    @return 'xs';
+  }
+  @if $fontsize-key == 'sm' {
+    @return 'xs';
+  }
+  @if $fontsize-key == 'md' {
+    @return 'sm';
+  }
+  @if $fontsize-key == 'lg' {
+    @return 'md';
+  }
+  @if $fontsize-key == 'xl' {
+    @return 'lg';
+  }
+  @if $fontsize-key == 'xxl' {
+    @return 'xl';
+  }
+  @if $fontsize-key == 'xxxl' {
+    @return 'xxl';
+  }
+  @return 'md';
+}
+
+
+.au-body {
+
+  // Apply responsive to AU-fontgrid classes
+  .au-display-xxxl {
+    @include health-fontgrid('xxxl', 'heading');
+    &--text {
+      @include health-fontgrid('xxxl', 'default', 'light');
+    }
+  }
+
+  h1,
+  .au-display-xxl {
+    @include health-fontgrid('xxl', 'heading');
+    &--text {
+      @include health-fontgrid('xxl', 'default', 'light');
+    }
+  }
+
+  h2,
+  .au-display-xl {
+    @include health-fontgrid('xl', 'heading');
+    &--text {
+      @include health-fontgrid('xl', 'default', 'light');
+    }
+  }
+
+  h3,
+  .au-display-lg {
+    @include health-fontgrid('lg', 'heading');
+    &--text {
+      @include health-fontgrid('lg', 'default', 'light');
+    }
+  }
+
+  h4,
+  .au-display-md {
+    @include health-fontgrid('md', 'heading');
+    &--text {
+      @include health-fontgrid('md', 'default', 'light');
+    }
+  }
+
+  h5,
+  .au-display-sm {
+    @include health-fontgrid('sm', 'heading');
+    &--text {
+      @include health-fontgrid('sm', 'default', 'light');
+    }
+  }
+
+  h6,
+  .au-display-xs {
+    @include health-fontgrid('xs', 'heading');
+    &--text {
+      @include health-fontgrid('xs', 'default', 'light');
+    }
+  }
+
+  // Light variation of headings.
+  .au-display--light {
+    font-weight: normal;
+  }
+
+  .au-display--heavy {
+    font-weight: bold;
+  }
+
+  // Inline.
+  .au-display--inline {
+    display: inline;
+  }
+
+  // Number next to a heading.
+  &--numbered-heading {
+    &__number, p#{&}__number {
+      float: left;
+      @include AU-space(margin-right, 1.25unit);
+    }
+    &__heading {
+      display: inline;
+    }
+  }
+
+}
+
+// Anchor helpers.
+// When hover on a heading, show the ID of the heading.
+// Logged in users only, in content only.
+body.logged-in {
+  .region-content {
+    h2, h3, h4, h5, h6 {
+      position: relative;
+      .anchor-helper {
+        font-size: 14px;
+        position: absolute;
+        top: -14px;
+        left: 0;
+        color: grey;
+        font-weight: normal;
+      }
+    }
+  }
+}

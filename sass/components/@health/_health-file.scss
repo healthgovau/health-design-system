@@ -1,0 +1,27 @@
+// File download
+//
+// A link with metadata to download a file.
+//
+// Markup: document.twig
+//
+// Style guide: navigation.document
+
+.au-body {
+  .health-file {
+    &__icon {
+      @include AU-space('margin-right', .5unit);
+    }
+    &__link {
+      text-decoration: none;
+      color: $AU-color-foreground-text;
+      &--visible {
+        font-weight: bold;
+        text-decoration: underline;
+        color: $AU-color-foreground-action;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

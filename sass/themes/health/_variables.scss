@@ -1,0 +1,24 @@
+// Variables
+//
+// Set variables for this site before a library sets its !default value.
+//
+// Style guide: sass.variables
+
+// Font faces, stacks and sizes.
+$fontawesome: "FontAwesome";
+
+// Borders
+$AU-color-foreground-border: #ccc; // Apparently this is not accessible...
+$health-borderize: 3px solid $AU-color-foreground-border;
+$health-borderize--very-thin: 1px solid $AU-color-foreground-border;
+$health-borderize--thin: 2px solid $AU-color-foreground-border;
+$health-borderize--fat: 6px solid $AU-color-foreground-border;
+
+$health-borderize--tertiary: 3px solid $colour-complementary-skyblue;
+$health-borderize--tertiary-very-thin: 1px solid $colour-complementary-skyblue;
+
+// Taskbar
+$minHeight-Taskbar: 200px !default;
+
+// Box shadow
+$card-shadow: 0px 3px 10px $colour-Shadow;

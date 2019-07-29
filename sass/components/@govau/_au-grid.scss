@@ -1,0 +1,81 @@
+.au-grid {
+
+  // On non-full width pages, stop nested containers from pushing out wide.
+  // This allows us to nest containers in other elements and for them to still work.
+  .not-full-width {
+    // Top margin for content area
+    @include AU-space(margin-top, 1unit);
+    @include AU-media(sm ) {
+      @include AU-space(margin-top, 1.5unit);
+    }
+    @media print {
+      @include AU-space(margin-top, 1unit);
+    }
+    .container {
+      width: auto;
+      clear: both;
+    }
+  }
+
+  // On full width pages, stop nested containers from pushing out wide.
+  // This allows us to nest containers in other elements and for them to still work.
+  .full-width .container .container {
+    width: auto;
+    clear:both;
+  }
+
+
+  // Row variation which removes the gap between columns.
+  .row--no-column-gap {
+    div[class*="col-"] {
+      @include AU-media(sm) {
+        padding-left: 0;
+        padding-right: 0;
+        &:first-of-type {
+          padding-left: 12px;
+        }
+        &:last-of-type {
+          padding-right: 12px;
+        }
+      }
+    }
+  }
+
+  // Divide columns into 5ths.
+  .col-xs-5ths,
+  .col-sm-5ths,
+  .col-md-5ths,
+  .col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: $AU-grid-12-gutter-width / 2;
+    padding-left: $AU-grid-12-gutter-width / 2;
+  }
+
+  .col-xs-5ths {
+    width: 20%;
+    float: left;
+  }
+
+  @include AU-media( sm ) {
+    .col-sm-5ths {
+      width: 20%;
+      float: left;
+    }
+  }
+
+  @include AU-media( md ) {
+    .col-md-5ths {
+      width: 20%;
+      float: left;
+    }
+  }
+
+  @include AU-media( lg ) {
+    .col-lg-5ths {
+      width: 20%;
+      float: left;
+    }
+  }
+}
+
