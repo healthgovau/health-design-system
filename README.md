@@ -13,6 +13,7 @@ These are included in the [javascript library](js/libraries) folder but are not 
 
 ## Usage
 ### npm install
-`npm i @healthgovau/design-system`
-`npx pancake --set npmOrg "@gov.au @healthgovau"`
-`node node_modules/@gov.au/pancake/bin/pancake`
+
+* `npm i @healthgovau/design-system`
+* `npx pancake --set npmOrg "@gov.au @healthgovau"`
+* `node node_modules/@gov.au/pancake/bin/pancake`
