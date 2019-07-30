@@ -14,7 +14,7 @@ These are included in the [javascript library](js/libraries) folder but are not 
 ## Installation
 
 Requirements: 
- * node
+ * [Node.js](https://nodejs.org/)
 
 Installation:
 1. Make sure you have a package.json file. You can create a default one by running `npm init`
