@@ -12,15 +12,7 @@ Javascript:
 
 These are included in the [javascript library](js/libraries) folder for convenience.
 
-Disable by setting js config and not including the libraries:
-
-```apple js
-var healthgovauJsConfig = {
-  autocomplete: false,
-  lazyload: false,
-  fancybox: false
-}
-```
+Disable any of the libraries functionality by simply not including the library.
 
 ## Installation
 
