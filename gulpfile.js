@@ -31,7 +31,7 @@ var sassFiles = [
   // Do not open Sass partials as they will be included as needed.
   '!' + options.theme.sass + '**/_*.scss',
   // Hide additional files
-  '!' + options.theme.sass + 'vendors/govau-design-system.scss',
+  '!' + options.theme.sass + 'vendors/govau-ds.scss',
   '!' + options.theme.sass + 'vendors/font-awesome/font-awesome.scss'
 ];
 
