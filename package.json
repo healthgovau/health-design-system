@@ -40,25 +40,56 @@
     "@gov.au/text-inputs": "2.1.1",
     "@gov.au/pancake": "~1"
   },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browsersync": "0.0.1-security",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-extract-media-queries": "^1.1.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "kss": "^3.0.0-beta.18",
+    "path": "^0.12.7",
+    "run-sequence": "^2.2.1",
+    "sass-versioning": "^0.3.0"
+  },
   "engines": {
     "node": ">=4.0.0"
   },
   "scripts": {
-    "pancake": "node node_modules/@gov.au/pancake/bin/pancake",
-    "gulp": "gulp",
-    "postinstall": "pancake"
+    "gulp": "gulp"
   },
   "pancake": {
-    "pancake-module": {
-      "version": "1.0.0",
-      "org": "@gov.au @health.gov.au",
-      "plugins": [
-        "@gov.au/pancake-sass"
-      ],
-      "sass": {
-        "path": "sass/healthgovau-ds.scss",
-        "sass-versioning": true
-      }
+    "auto-save": false,
+    "plugins": true,
+    "ignore": [],
+    "css": {
+      "name": false
+    },
+    "sass": {
+      "modules": false,
+      "location": "sass/vendors/",
+      "name": "govau-ds.scss"
+    },
+    "js": {
+      "minified": true,
+      "modules": false,
+      "location": "js/src",
+      "name": "govau-ds.js"
+    },
+    "react": {
+      "location": false
+    },
+    "json": {
+      "enable": false
     }
   }
 }
