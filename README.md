@@ -11,9 +11,15 @@ Javascript:
 
 These are included in the [javascript library](js/libraries) folder but are not bundled into the distribution files.
 
-## Usage
-### npm install
+## Installation
 
-* `npm i @health.gov.au/design-system`
-* `npx pancake --set npmOrg "@gov.au @health.gov.au"`
-* `node node_modules/@gov.au/pancake/bin/pancake`
+Requirements: 
+ * node
+
+Installation:
+1. Make sure you have a package.json file. You can create a default one by running `npm init`
+1. Install the design system `npm i @health.gov.au/design-system`
+1. Tell pancake to include @health.gov.au in its scope when mixing `npx pancake --set npmOrg "@gov.au @health.gov.au"`
+1. Run pancake again `node node_modules/@gov.au/pancake/bin/pancake`
+
+Configuration for pancake can be found at the [pancake github](https://github.com/govau/pancake).
