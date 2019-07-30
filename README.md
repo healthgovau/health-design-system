@@ -14,6 +14,6 @@ These are included in the [javascript library](js/libraries) folder but are not 
 ## Usage
 ### npm install
 
-* `npm i @healthgovau/design-system`
+* `npm i @health.gov.au/design-system`
 * `npx pancake --set npmOrg "@gov.au @health.gov.au"`
 * `node node_modules/@gov.au/pancake/bin/pancake`
