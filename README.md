@@ -34,16 +34,16 @@ Simply download and include the css and js files from the [distribution](dist) f
 Include any [library scripts](js/libraries).
 
 #### Option 2: Build yourself
-Build from Sass files, allowing you to modify or override as you need.
-
 Clone, git submodule or download the repository.
 
 Build using the built in Gulp tasks:
+
 `npm install` and then run:
   * `npm run gulp prod` production ready files output to dist folder
   * `npm run gulp` development
   * `npm run gulp watch` development watch for changes and update
   
 Or you can import the core sass file into your pipeline `@import "design-system/sass/healthgovau-ds.scss"`
+
 Source javascript files are available in design-system/js/src.
 
