@@ -24,13 +24,22 @@ var healthgovauJsConfig = {
 
 ## Installation
 
-Requirements: 
+### Requirements: 
  * [Node.js](https://nodejs.org/)
 
-Installation:
-1. Make sure you have a package.json file. You can create a default one by running `npm init`
-1. Install the design system `npm i @health.gov.au/design-system`
-1. Tell pancake to include @health.gov.au in its scope when mixing `npx pancake --set npmOrg "@gov.au @health.gov.au"`
-1. Run pancake again `node node_modules/@gov.au/pancake/bin/pancake`
+### Usage
 
-Configuration for pancake can be found at the [pancake github](https://github.com/govau/pancake).
+#### Option 1: Out of the box
+Simply download and include the css and js files from the distribution folder.
+Include any library scripts.
+
+#### Option 2: SASS
+Build from SASS files, allowing you to modify or override as you need.
+
+1. Clone, git submodule or download the repository.
+1. `npm install`
+1. Either import the core sass file into your pipeline `@import "design-system/sass/healthgovau-ds.scss"` or
+1. Run gulp tasks to build 
+  * `npm run gulp prod` production ready files output to dist folder
+  * `npm run gulp` development
+  * `npm run gulp watch` development watch for changes and update
