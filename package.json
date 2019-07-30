@@ -76,12 +76,6 @@
       "sass": {
         "path": "sass/healthgovau-ds.scss",
         "sass-versioning": true
-      },
-      "js": {
-        "path": "lib/js/module.js"
-      },
-      "react": {
-        "location": "lib/js/react.js"
       }
     },
     "auto-save": false,
