@@ -10,73 +10,10 @@ Javascript:
 * [lazyload](https://github.com/verlok/lazyload)
 
 These are included in the [javascript library](js/libraries) folder but are not bundled into the distribution files.
-You can use these or use your own versions.
 
 ## Usage
-
-### Direct
-Use the css and js files directly from the [distribution folder](dist)
-
 ### npm install
 
-Dependencies:
- * npm
-
-Add pancake settings to your package.json
-
-```
-"pancake": {
-    "auto-save": false,
-    "plugins": true,
-    "ignore": [],
-    "css": {
-      "minified": true,
-      "modules": false,
-      "browsers": [
-        "last 2 versions",
-        "ie 8",
-        "ie 9",
-        "ie 10"
-      ],
-      "location": "css/",
-      "name": false
-    },
-    "sass": {
-      "modules": false,
-      "location": "node_modules/@healthgovau/design-system/sass/vendors/",
-      "name": "govau-design-system.scss"
-    },
-    "js": {
-      "minified": true,
-      "modules": false,
-      "location": "node_modules/@healthgovau/design-system/js/src",
-      "name": "pancake.js"
-    },
-    "json": {
-      "enable": false,
-      "location": "pancake/",
-      "name": "pancake",
-      "content": {
-        "name": true,
-        "version": true,
-        "dependencies": true,
-        "path": true,
-        "settings": true
-      }
-    },
-    "react": {
-      "location": false
-    }
-  }
-  ```
-
-`npm i @healthgovau/design-system`
-
-Include the core sass file [node_modules/@healthgovau/design-system/sass/healthgovau-ds.scss](sass/healthgovau-ds.scss) in your project and compile with your chosen SASS compiler.
-
-## Development
-
-Install the design system then:
-* `npm run gulp prod` for a production build
-* `npm run gulp` for a development build
-* `npm run gulp watch` to watch for changes
+* `npm i @healthgovau/design-system`
+* `npx pancake --set npmOrg "@gov.au @healthgovau"`
+* `node node_modules/@gov.au/pancake/bin/pancake`
