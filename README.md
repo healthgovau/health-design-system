@@ -6,7 +6,7 @@ View the style guide for documentation on how to use the Health Design System co
 ## Dependencies
 Javascript:
 * [jQuery v3+](https://jquery.com/)
-* [jQuery UI](https://jqueryui.com/download/#!version=1.12.1&components=110000010001000000100000100000000000000000000000)
+* [jQuery UI autocomplete](https://jqueryui.com/download/#!version=1.12.1&components=110000010001000000100000100000000000000000000000)
 * [lazyload](https://github.com/verlok/lazyload)
 
 These are included in the [javascript library](js/libraries) folder but are not bundled into the distribution files.
