@@ -76,7 +76,7 @@ Include the core sass file [node_modules/@healthgovau/design-system/sass/healthg
 
 ## Development
 
-Install the design system then:
-* `npm run gulp prod` for a production build
+Use gulp to build:
 * `npm run gulp` for a development build
 * `npm run gulp watch` to watch for changes
+* `npm run gulp prod` for a production build
