@@ -38,7 +38,7 @@ Build using the built in Gulp tasks:
   * `npm run gulp` development
   * `npm run gulp watch` development watch for changes and update
   
-Or you can import the core sass file into your pipeline `@import "design-system/sass/healthgovau-ds.scss"`
+Or you can import the core sass file into your pipeline `@import "health-design-system/sass/healthgovau-ds.scss"`
 
 Source javascript files are available in design-system/js/src.
 
