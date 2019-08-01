@@ -34,11 +34,10 @@ Clone, git submodule or download the repository.
 Build using the built in Gulp tasks:
 
 `npm install` and then run:
-  * `npm run gulp prod` production ready files output to dist folder
-  * `npm run gulp` development
-  * `npm run gulp watch` development watch for changes and update
+  * `npm run gulp`: Builds development and production ready CSS and JS files.
+  * `npm run gulp watch`: Watches for changes and rebuilds.
   
-Or you can import the core sass file into your pipeline `@import "health-design-system/sass/healthgovau-ds.scss"`
+Or you can import the core sass file into your pipeline `@import "health-design-system/sass/all.scss"`
 
-Source javascript files are available in design-system/js/src.
+Source javascript files are available in `health-design-system/js/src`.
 
