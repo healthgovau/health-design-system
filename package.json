@@ -1,15 +1,15 @@
 {
-  "name": "@health.gov.au/design-system",
+  "name": "@health.gov.au/health-design-system",
   "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
   "description": "Design system for health.gov.au and related products.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/healthgovau/design-system.git"
+    "url": "https://github.com/healthgovau/health-design-system.git"
   },
   "license": "GNU GENERAL PUBLIC LICENSE v3",
   "bugs": {
-    "url": "https://github.com/healthgovau/design-system/issues"
+    "url": "https://github.com/healthgovau/health-design-system/issues"
   },
   "main": "index.js",
   "dependencies": {
