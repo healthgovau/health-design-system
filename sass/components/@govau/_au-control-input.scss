@@ -18,5 +18,19 @@
         top: 7px;
       }
     }
+
+    &__input {
+      &:invalid + .au-control-input__text {
+        background: $AU-color-background;
+        &:after {
+          border-color: transparent;
+        }
+      }
+      &.error + .au-control-input__text {
+        &:after {
+          border-color: $AU-color-error;
+        }
+      }
+    }
   }
 }

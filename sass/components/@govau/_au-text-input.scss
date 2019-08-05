@@ -2,6 +2,14 @@
   &--block {
     max-width: 42em;
   }
+  &:invalid {
+    border-color: gray;
+    background-color: $AU-color-background;
+  }
+  &.error {
+    background-color: mix( $AU-color-error, $AU-color-background, 5% );
+    border-color: $AU-color-error;
+  }
 }
 
 textarea.au-text-input {
