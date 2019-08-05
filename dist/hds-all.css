@@ -5431,6 +5431,14 @@ body.logged-in .region-content h2, body.logged-in .region-content h3, body.logge
     left: 0;
     top: 7px; }
 
+.au-form__item .au-control-input__input:invalid + .au-control-input__text {
+  background: #ffffff; }
+  .au-form__item .au-control-input__input:invalid + .au-control-input__text:after {
+    border-color: transparent; }
+
+.au-form__item .au-control-input__input.error + .au-control-input__text:after {
+  border-color: #d60000; }
+
 .au-body .au-cta-link--right {
   text-align: right; }
 
@@ -5753,6 +5761,14 @@ svg {
 
 .au-text-input--block {
   max-width: 42em; }
+
+.au-text-input:invalid {
+  border-color: gray;
+  background-color: #ffffff; }
+
+.au-text-input.error {
+  background-color: #fdf2f2;
+  border-color: #d60000; }
 
 textarea.au-text-input {
   max-width: 42em; }
