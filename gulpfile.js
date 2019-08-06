@@ -6,13 +6,16 @@ const rename      = require("gulp-rename");
 const concat      = require("gulp-concat");
 const minify      = require('gulp-minify');
 const cleanCss    = require('gulp-clean-css');
+const svgmin      = require('gulp-svgmin');
+
 sass.compiler = require('node-sass');
 
 const options = {
   paths : {
-    sass: 'sass/',
-    js: 'js/',
-    dist: 'dist/'
+    sass: 'source/sass/',
+    js: 'source/js/',
+    dist: 'build/',
+    icons: 'source/icons/'
   },
   name: 'hds'
 };
@@ -37,7 +40,7 @@ function cssDev() {
       path.basename = options.name + '-' + path.basename;
       path.extname = ".css";
     }))
-    .pipe(gulp.dest(options.paths.dist));
+    .pipe(gulp.dest(options.paths.dist + 'css'));
 }
 
 function cssProd() {
@@ -50,7 +53,18 @@ function cssProd() {
       path.basename = options.name + '-' + path.basename;
       path.extname = ".min.css";
     }))
-    .pipe(gulp.dest(options.paths.dist));
+    .pipe(gulp.dest(options.paths.dist + 'css'));
+}
+
+function icons() {
+  return gulp.src(options.paths.icons + '*')
+    .pipe(svgmin())
+    .pipe(gulp.dest(options.paths.dist + 'icons'));
+}
+
+function libraries() {
+  return gulp.src(options.paths.js + 'libraries/*')
+    .pipe(gulp.dest(options.paths.dist + 'js/libraries'));
 }
 
 
@@ -60,7 +74,7 @@ function cssProd() {
 
 function jsClean() {
   return del([
-    options.paths.dist + '*.js'
+    options.paths.dist + 'js/*.js'
   ]);
 }
 
@@ -72,7 +86,7 @@ function js() {
         min:'.min.js'
       }
     }))
-    .pipe(gulp.dest(options.paths.dist));
+    .pipe(gulp.dest(options.paths.dist + 'js'));
 }
 
 
@@ -91,7 +105,9 @@ function watching() {
 
 exports.default = gulp.parallel(
   gulp.series(jsClean, js),
-  gulp.series(cssClean, gulp.parallel(cssDev, cssProd))
+  gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
+  icons,
+  libraries
 );
 
 exports.watch = watching;

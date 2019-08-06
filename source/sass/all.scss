@@ -1,0 +1,54 @@
+//
+// The architecture of the folders and file structure is based of the 7-1 SASS pattern
+// For more information and how each of the folders should be used please see: https://sass-guidelin.es/#architecture
+//
+
+// @file
+// The major stylesheet for this theme.
+//
+// We categorize our components by creating headings in this file. See the
+// description on the style guide home page for more information.
+//
+
+// Uikit and Sass
+//
+// Documentation for Uikit and Sass mixins and variables.
+//
+// Weight: -1
+//
+// Style guide: sass
+@import 'themes/health/colors';
+
+// 3rd party libraries
+//
+// The following sass modules are shared with all .scss files:
+// - Uikit
+//
+// Additional pre-built libraries can be found on the [Sache website](http://www.sache.in/).
+//
+// Style guide: sass.modules
+@import 'vendors/govau-ds';
+
+@import 'themes/health/variables';
+
+// Defaults
+//
+// These are the default base styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML element, these styles will be the ones displayed.
+//
+// Style guide: base
+
+// Ensure fonts get loaded first to minimize front-end performance impact
+@import 'base/fonts';
+@import 'base/normalize';
+
+// Mixins 
+@import 'abstracts/abstracts';
+
+// Components
+@import 'components/components';
+
+// Print style.
+@import 'base/print';
