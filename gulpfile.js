@@ -1,14 +1,14 @@
 const gulp        = require('gulp');
 const del         = require('del');
 const sass        = require('gulp-sass');
-const sourcemaps  = require('gulp-sourcemaps');
 const rename      = require("gulp-rename");
 const concat      = require("gulp-concat");
 const minify      = require('gulp-minify');
 const cleanCss    = require('gulp-clean-css');
 const svgmin      = require('gulp-svgmin');
+const header      = require('gulp-header');
 
-sass.compiler = require('node-sass');
+const pkg         = require('./package.json');
 
 const options = {
   paths : {
@@ -19,6 +19,10 @@ const options = {
   },
   name: 'hds'
 };
+
+const banner = '/*! <%= pkg.name %> v<%= pkg.version %> */\n';
+
+sass.compiler = require('node-sass');
 
 // ===================================
 // CSS
@@ -32,15 +36,14 @@ function cssClean() {
 }
 
 function cssDev() {
-  return gulp.src(options.paths.sass + '*.scss')
-    .pipe(sourcemaps.init())
+  return gulp.src(options.paths.sass + '*.scss', { sourcemaps: true })
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write('./maps'))
     .pipe(rename(function (path) {
       path.basename = options.name + '-' + path.basename;
       path.extname = ".css";
     }))
-    .pipe(gulp.dest(options.paths.dist + 'css'));
+    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(gulp.dest(options.paths.dist + 'css', { sourcemaps: '.' }));
 }
 
 function cssProd() {
@@ -53,6 +56,7 @@ function cssProd() {
       path.basename = options.name + '-' + path.basename;
       path.extname = ".min.css";
     }))
+    .pipe(header(banner, { pkg : pkg } ))
     .pipe(gulp.dest(options.paths.dist + 'css'));
 }
 
@@ -81,10 +85,12 @@ function jsClean() {
 function js() {
   return gulp.src(options.paths.js + 'src/*.js')
     .pipe(concat(options.name + '.js'))
+    .pipe(header(banner, { pkg : pkg } ))
     .pipe(minify({
       ext:{
         min:'.min.js'
-      }
+      },
+      preserveComments: 'some'
     }))
     .pipe(gulp.dest(options.paths.dist + 'js'));
 }

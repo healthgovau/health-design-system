@@ -1,3 +1,4 @@
+/*! @health.gov.au/health-design-system v0.1.0 */
 @charset "UTF-8";
 .ie8 body {
   margin: 24px; }
@@ -77,5 +78,4 @@
 
 .health-alert-content a {
   color: white; }
-
-/*# sourceMappingURL=maps/ie8.css.map */
+/*# sourceMappingURL=hds-ie8.css.map */

@@ -1,3 +1,4 @@
+/*! @health.gov.au/health-design-system v0.1.0 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
@@ -6472,5 +6473,4 @@ table {
     display: none; }
   .page-title__supp {
     display: none; } }
-
-/*# sourceMappingURL=maps/all.css.map */
+/*# sourceMappingURL=hds-all.css.map */
