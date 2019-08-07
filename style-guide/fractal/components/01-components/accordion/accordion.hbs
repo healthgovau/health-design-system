@@ -1,0 +1,14 @@
+<section class="au-accordion {{#if modifier}}{{modifier}}{{/if}}">
+    <button class="au-accordion__title js-au-accordion"
+            aria-controls="accordion-default"
+            aria-expanded="true"
+            onclick="return AU.accordion.Toggle( this )">
+        {{accordion.title}}
+    </button>
+
+    <div class="au-accordion__body" id="accordion-default">
+        <div class="au-accordion__body-wrapper">
+            <p>{{accordion.content}}</p>
+        </div>
+    </div>
+</section>

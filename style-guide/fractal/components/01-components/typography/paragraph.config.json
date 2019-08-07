@@ -1,0 +1,36 @@
+{
+  "title": "Paragraph",
+  "variants": [
+    {
+      "name": "Introduction",
+      "context": {
+        "modifier": "au-introduction"
+      }
+    },
+    {
+      "name": "Introduction - Dark",
+      "context": {
+        "modifier": "au-introduction au-introduction--dark"
+      }
+    },
+    {
+      "name": "Minor",
+      "context": {
+        "modifier": "text--minor"
+      }
+    },
+    {
+      "name": "Align right",
+      "context": {
+        "modifier": "text--align-right"
+      }
+    }
+  ,
+    {
+      "name": "Align center",
+      "context": {
+        "modifier": "text--align-center"
+      }
+    }
+  ]
+}

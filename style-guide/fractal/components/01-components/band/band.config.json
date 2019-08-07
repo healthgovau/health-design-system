@@ -1,0 +1,37 @@
+{
+  "title": "Band",
+  "preview": "@preview--full-width",
+  "context": {
+    "title": "Band title",
+    "content": "Plain text band. "
+  },
+  "variants": [
+    {
+      "name": "Hotline",
+      "context": {
+        "modifier": "primary",
+        "title": "National Immunisation Information Line",
+        "number": "1800 671 811",
+        "text": "Call us on 1800 671 811 for general advice and information about immunisation, Monday to Friday from 8:30am to 5pm Australian Eastern Standard Time. For individual medical/clinical advice, please consult your GP or other health care provider."
+      }
+    },
+    {
+      "name": "Cards image",
+      "context": {
+        "title": "Latest news"
+      }
+    },
+    {
+      "name": "Cards call to action",
+      "context": {
+        "title": "Top tasks"
+      }
+    },
+    {
+      "name": "Cards audience",
+      "context": {
+        "title": "Browse topic for"
+      }
+    }
+  ]
+}

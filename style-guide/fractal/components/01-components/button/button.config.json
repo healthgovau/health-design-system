@@ -1,0 +1,28 @@
+{
+  "title": "Button",
+  "context": {
+    "button": {
+      "title": "Primary"
+    }
+  },
+  "variants": [
+    {
+      "name": "Secondary",
+      "context": {
+        "modifier": "secondary",
+        "button": {
+          "title": "Secondary"
+        }
+      }
+    },
+    {
+      "name": "Tertiary",
+      "context": {
+        "modifier": "tertiary",
+        "button": {
+          "title": "Tertiary"
+        }
+      }
+    }
+  ]
+}

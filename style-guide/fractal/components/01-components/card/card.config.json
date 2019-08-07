@@ -1,0 +1,30 @@
+{
+  "title": "Card",
+  "context": {
+    "title": "More transparency for out of pocket costs",
+    "date": "20 July 2019"
+  },
+  "variants": [
+    {
+      "name": "Resource",
+      "context": {
+        "title": "More transparency for out of pocket costs",
+        "type": "Publication"
+      }
+    },
+    {
+      "name": "Call to action",
+      "context": {
+        "title": "Browse information by topic"
+      }
+    },
+    {
+      "name": "Audience",
+      "context": {
+        "title": "Pregnant women",
+        "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy.",
+        "colour": "colour1"
+      }
+    }
+  ]
+}
