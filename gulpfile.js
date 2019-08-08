@@ -1,14 +1,15 @@
-const gulp        = require('gulp');
-const del         = require('del');
-const sass        = require('gulp-sass');
-const rename      = require("gulp-rename");
-const concat      = require("gulp-concat");
-const minify      = require('gulp-minify');
-const cleanCss    = require('gulp-clean-css');
-const header      = require('gulp-header');
-const inlineSvg   = require("gulp-inline-svg");
-const filelist    = require('gulp-filelist');
-const svgMin      = require('gulp-svgmin');
+const gulp          = require('gulp');
+const del           = require('del');
+const sass          = require('gulp-sass');
+const rename        = require("gulp-rename");
+const concat        = require("gulp-concat");
+const minify        = require('gulp-minify');
+const cleanCss      = require('gulp-clean-css');
+const header        = require('gulp-header');
+const inlineSvg     = require("gulp-inline-svg");
+const filelist      = require('gulp-filelist');
+const svgMin        = require('gulp-svgmin');
+const autoprefixer  = require('gulp-autoprefixer');
 
 const pkg         = require('./package.json');
 
@@ -43,6 +44,7 @@ function cssClean() {
 function cssDev() {
   return gulp.src(options.paths.sass + '*.scss', { sourcemaps: true })
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(rename(function (path) {
       path.basename = options.name + '-' + path.basename;
       path.extname = ".css";
@@ -56,6 +58,7 @@ function cssProd() {
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(cleanCss())
     .pipe(rename(function (path) {
       path.basename = options.name + '-' + path.basename;
