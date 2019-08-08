@@ -45,17 +45,22 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^4.0.1",
+    "gulp-debug": "^4.0.0",
     "gulp-header": "^2.0.9",
+    "gulp-inline-svg": "^1.2.0",
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-svgmin": "^2.2.0",
-    "sass-versioning": "^0.4.0"
+    "sass-inline-svg": "^1.2.0",
+    "sass-versioning": "^0.4.0",
+    "gulp-filelist": "^2.0.1"
   },
   "engines": {
     "node": ">=4.0.0"
   },
   "scripts": {
+    "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
     "gulp": "gulp"
   },
   "pancake": {

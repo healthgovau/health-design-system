@@ -1,0 +1,65 @@
+@import "svg";
+
+// Font awesome.
+.fa, .fab, .fas, .far {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background-color: $AU-color-foreground-text;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: left;
+  margin-top: 0.25em;
+  margin-right: 0.35em;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  &.fa-block {
+    float: none;
+    margin-right: 0;
+  }
+
+  // Link colour.
+  &.fa-link {
+    background-color: $AU-color-foreground-action;
+  }
+
+  // Large.
+  &.fa-large {
+    width: 2em;
+    height: 2em;
+  }
+
+  // Very large.
+  &.fa-very-large {
+    width: 3em;
+    height: 3em;
+  }
+
+  // Icon is on the right not the left.
+  &.fa-right {
+    margin-left: 0.35em;
+    margin-right: 0;
+    float: right;
+  }
+}
+
+a:hover .fa-link, button:hover .fa-link {
+  background-color: $AU-color-foreground-text;
+}
+
+.au-body--dark, .au-main-nav--dark {
+  .fa {
+    background-color: white;
+  }
+}
+
+/**
+ * Create an inline svg using the mask technique
+ * so we can colour it.
+ */
+@mixin inline-svg-mask($name) {
+  mask-image: url(nth($name, 1));
+}
+
+@import "icon_list";
