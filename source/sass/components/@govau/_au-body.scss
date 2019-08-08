@@ -36,9 +36,9 @@
   }
 
   //// Abbreviations ////
-  abbr, .definition {
-    border-bottom: 1px dotted #CCC;
-    text-decoration: none;
+  abbr, abbr[title], .definition {
+    border-bottom: 1px dotted #CCC !important;
+    text-decoration: none !important;
     cursor: help;
   }
 
