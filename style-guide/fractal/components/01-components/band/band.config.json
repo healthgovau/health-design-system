@@ -18,7 +18,8 @@
     {
       "name": "Cards image",
       "context": {
-        "title": "Latest news"
+        "title": "Latest news",
+        "modifier": "neutral-1"
       }
     },
     {
@@ -31,6 +32,12 @@
       "name": "Cards audience",
       "context": {
         "title": "Browse topic for"
+      }
+    },
+    {
+      "name": "Cards resources",
+      "context": {
+        "title": "Latest resources"
       }
     }
   ]

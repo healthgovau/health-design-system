@@ -1,0 +1,23 @@
+<div class="health-band{{#if modifier}} health-band--{{ modifier }}{{/if}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>{{ title }}</h2>
+      </div>
+      <ul class="health-card-list health-card-list--matchheight">
+        <li class="col-sm-3">
+          {{ render '@card--call-to-action' }}
+        </li>
+        <li class="col-sm-3">
+          {{ render '@card--call-to-action---colour-2' }}
+        </li>
+        <li class="col-sm-3">
+          {{ render '@card--call-to-action---colour-3' }}
+        </li>
+        <li class="col-sm-3">
+          {{ render '@card--call-to-action---colour-4' }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

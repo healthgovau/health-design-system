@@ -1,8 +1,12 @@
 {
   "title": "Card",
+  "default": "Image",
   "context": {
     "title": "More transparency for out of pocket costs",
-    "date": "20 July 2019"
+    "date": "20 July 2019",
+    "icon": "phone",
+    "colour": "colour1",
+    "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
   },
   "variants": [
     {
@@ -19,11 +23,70 @@
       }
     },
     {
+      "name": "Call to action - Colour 2",
+      "hidden": true,
+      "view": "card--call-to-action.hbs",
+      "context": {
+        "colour": "health-card--colour2",
+        "icon": "envelope",
+        "title": "Find out more about the Australian health care system"
+      }
+    },
+    {
+      "name": "Call to action - Colour 3",
+      "hidden": true,
+      "view": "card--call-to-action.hbs",
+      "context": {
+        "colour": "health-card--colour3",
+        "icon": "youtube",
+        "title": "Learn about Medicare"
+      }
+    },
+    {
+      "name": "Call to action - Colour 4",
+      "hidden": true,
+      "view": "card--call-to-action.hbs",
+      "context": {
+        "colour": "health-card--colour4",
+        "icon": "search",
+        "title": "Find health services near you"
+      }
+    },
+    {
       "name": "Audience",
       "context": {
         "title": "Pregnant women",
-        "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy.",
-        "colour": "colour1"
+        "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+      }
+    },
+    {
+      "name": "Audience - Colour 2",
+      "hidden": true,
+      "view": "card--audience.hbs",
+      "context": {
+        "colour": "colour2",
+        "title": "Travel",
+        "content": "Find out what vaccines you may need before you leave Australia."
+      }
+    },
+    {
+      "name": "Audience - Colour 3",
+      "hidden": true,
+      "view": "card--audience.hbs",
+      "context": {
+        "colour": "colour3",
+        "title": "Children",
+        "content": "Find recommended immunisations for children from birth to 19 years of age."
+      }
+    },
+    {
+      "name": "Audience - Colour 4",
+      "hidden": true,
+      "view": "card--audience.hbs",
+      "context": {
+        "colour": "colour4",
+        "title": "Seniors",
+        "content": "As you get older, your doctor may recommend vaccinations to help prevent certain illnesses and keep you healthy."
       }
     }
   ]

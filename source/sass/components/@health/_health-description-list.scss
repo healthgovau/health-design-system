@@ -1,14 +1,8 @@
 // Description list
-//
-// A list of definitions
-//
-// Markup: description-list.twig
-//
-// Style guide: Components.description-list
 
 .au-body {
 
-  dl {
+  dl.health-dl {
 
     * + & {
       @include AU-space(margin-top, 1.5unit);
