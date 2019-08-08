@@ -6,7 +6,8 @@
 // Style guide: sass.mixins.visually-hidden
 
 .visually-hidden,
-%visually-hidden {
+%visually-hidden,
+.sr-only {
   @include AU-sronly();
   position: absolute !important;
 }
