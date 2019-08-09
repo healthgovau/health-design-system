@@ -19,25 +19,23 @@
 
   &__image-link {
     display: block;
-    &[href]:before {
-      position: absolute;
-      font-size: 1.75em;
-      left: 4px;
-      background: white;
-      @include AU-space(padding, .5unit);
-      top: 20px;
-      border: $health-borderize--very-thin;
+    position: relative;
+
+    &__icon {
+      display: none;
     }
 
     &:hover, &:focus {
-      &[href]:before {
-        content: "\f00e";
+      .health-figure__image-link__icon {
+        display: block;
+        position: absolute;
+        background: white;
+        @include AU-space(padding, .5unit);
+        left: 5px;
+        top: 5px;
+        border: $health-borderize--very-thin;
       }
     }
-  }
-
-  img {
-
   }
 }
 

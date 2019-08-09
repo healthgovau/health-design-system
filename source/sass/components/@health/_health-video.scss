@@ -21,24 +21,24 @@
       display: inline-block;
     }
 
-    &__play-button {
-      background-image: url(../images/icons/video-play-button.png);
-      background-repeat: no-repeat;
-      background-position: center center;
+    .health-video__preview__play-button {
+      display: none;
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      @include opacity(0.75);
-      display: block;
-      height: 100%;
-      width: 100%;
-      transition: all .3s ease-in-out;
-      &:hover,
-      &:active,
-      &:focus {
-        @include opacity(1);
+      font-size: 6em;
+      opacity: 0.8;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      svg {
+        fill: $AU-color-foreground-text;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      .health-video__preview__play-button {
+        display: block;
         cursor: pointer;
       }
     }
@@ -53,16 +53,6 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      &:before {
-        background-image: url("../images/icons/video.svg");
-        background-position: 0px 2px;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        content: ' ';
-        display: inline-block;
-        height: 1em;
-        width: 1em;
-      }
 
       &--small {
         display: none;
