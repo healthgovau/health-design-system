@@ -7,14 +7,11 @@
     // Add our colours.
     @extend %bg-neutral;
     @include AU-media(sm) {
-      background: white;
+      background: $AU-color-background;
     }
 
     a {
       background: transparent;
-      &.au-side-nav--unpublished {
-        @include background-unpublished;
-      }
       &:hover,
       &:focus {
         background-color: $colour-lighter;
@@ -30,30 +27,22 @@
       position: relative;
     }
 
-    // Add an unpublished flag for admins.
-    &--unpublished {
-      @include tag-unpublished;
-    }
-
     @media print {
       display: none;
     }
   }
-}
 
-// Float local nav right (reqd for source order)
-.page-content .sidebar-right {
-  float: none;
-  padding-left: 0;
-  padding-right: 0;
-  @include AU-space(padding-bottom, 2unit);
-  @include AU-media(sm){
-    float: right;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  @media print {
-    display: none;
+  // Put the nav on the right instead of the left.
+  // Apply to wrapper above au-side-nav.
+  .au-side-nav--right {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    @include AU-space(padding-bottom, 2unit);
+    @include AU-media(sm){
+      float: right;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
 }
