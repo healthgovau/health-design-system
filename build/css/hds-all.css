@@ -4942,18 +4942,19 @@ p.summary, .field-name-field-summary {
   padding: 1rem; }
 
 .health-figure__image-link {
-  display: block; }
-  .health-figure__image-link[href]:before {
+  display: block;
+  position: relative; }
+  .health-figure__image-link__icon {
+    display: none; }
+  .health-figure__image-link:hover .health-figure__image-link__icon, .health-figure__image-link:focus .health-figure__image-link__icon {
+    display: block;
     position: absolute;
-    font-size: 1.75em;
-    left: 4px;
     background: white;
     padding: 8px;
     padding: 0.5rem;
-    top: 20px;
+    left: 5px;
+    top: 5px;
     border: 1px solid #ccc; }
-  .health-figure__image-link:hover[href]:before, .health-figure__image-link:focus[href]:before {
-    content: "\f00e"; }
 
 figure {
   margin: 0; }
@@ -6518,27 +6519,21 @@ table {
     line-height: 0; }
     .health-video__preview__link {
       display: inline-block; }
-    .health-video__preview__play-button {
-      background-image: url(../images/icons/video-play-button.png);
-      background-repeat: no-repeat;
-      background-position: center center;
+    .health-video__preview .health-video__preview__play-button {
+      display: none;
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0.75;
-      filter: alpha(opacity=75);
+      font-size: 5em;
+      opacity: 0.8;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+          -ms-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%); }
+      .health-video__preview .health-video__preview__play-button svg {
+        fill: #313131; }
+    .health-video__preview:hover .health-video__preview__play-button, .health-video__preview:active .health-video__preview__play-button, .health-video__preview:focus .health-video__preview__play-button {
       display: block;
-      height: 100%;
-      width: 100%;
-      -webkit-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out; }
-      .health-video__preview__play-button:hover, .health-video__preview__play-button:active, .health-video__preview__play-button:focus {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        cursor: pointer; }
+      cursor: pointer; }
     .health-video__preview__length {
       padding: 12px;
       padding: 0.75rem;
@@ -6551,15 +6546,6 @@ table {
       position: absolute;
       right: 0;
       bottom: 0; }
-      .health-video__preview__length:before {
-        background-image: url("../images/icons/video.svg");
-        background-position: 0px 2px;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        content: ' ';
-        display: inline-block;
-        height: 1em;
-        width: 1em; }
       .health-video__preview__length--small {
         display: none; }
         @media (min-width: 768px) {
