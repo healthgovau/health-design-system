@@ -6,9 +6,7 @@ const concat        = require("gulp-concat");
 const minify        = require('gulp-minify');
 const cleanCss      = require('gulp-clean-css');
 const header        = require('gulp-header');
-const inlineSvg     = require("gulp-inline-svg");
 const filelist      = require('gulp-filelist');
-const svgMin        = require('gulp-svgmin');
 const autoprefixer  = require('gulp-autoprefixer');
 
 const pkg         = require('./package.json');
@@ -17,11 +15,7 @@ const options = {
   paths : {
     sass: 'source/sass/',
     js: 'source/js/',
-    dist: 'build/',
-    icons: {
-      source: 'source/icons/fontawesome/used/',
-      sass: 'source/sass/components/icons/'
-    }
+    dist: 'build/'
   },
   name: 'hds'
 };
@@ -67,28 +61,6 @@ function cssProd() {
     .pipe(header(banner, { pkg : pkg } ))
     .pipe(gulp.dest(options.paths.dist + 'css'));
 }
-
-// ===================================
-// Icons
-// ===================================
-
-function iconsInline() {
-  return gulp.src(options.paths.icons.source + "*.svg")
-    .pipe(svgMin())
-    .pipe(inlineSvg())
-    .pipe(gulp.dest(options.paths.icons.sass));
-}
-
-function iconsSass() {
-  return gulp.src(options.paths.icons.source + "*.svg")
-    .pipe(filelist('_icon_list.scss', {
-      relative: true,
-      removeExtensions: true,
-      destRowTemplate: ".fa-@filePath@ { @include inline-svg-mask($@filePath@); }\n"
-    }))
-    .pipe(gulp.dest(options.paths.icons.sass));
-}
-
 
 // ===================================
 // Copying
@@ -139,7 +111,7 @@ function watching() {
 
 exports.default = gulp.parallel(
   gulp.series(jsClean, js),
-  gulp.series(cssClean, iconsInline, iconsSass, gulp.parallel(cssDev, cssProd)),
+  gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
   libraries
 );
 
