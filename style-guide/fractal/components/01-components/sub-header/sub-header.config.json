@@ -1,0 +1,10 @@
+{
+  "title": "Sub header",
+  "preview": "@preview-full-width",
+  "context": {
+    "subheader": {
+      "title": "Page title",
+      "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor."
+    }
+  }
+}

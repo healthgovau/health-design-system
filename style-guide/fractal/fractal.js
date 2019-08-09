@@ -19,7 +19,7 @@ fractal.set('project.title', 'Health Design System');
  * Tell Fractal where to look for components.
  */
 fractal.components.set('path', path.join(__dirname, 'components'));
-fractal.components.set('default.preview', '@preview');
+fractal.components.set('default.preview', '@preview-not-full-width');
 /*
  * Tell Fractal where to look for documentation pages.
  */
