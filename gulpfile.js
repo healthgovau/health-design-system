@@ -15,7 +15,8 @@ const options = {
   paths : {
     sass: 'source/sass/',
     js: 'source/js/',
-    dist: 'build/'
+    dist: 'build/',
+    styleGuide: 'style-guide/fractal/'
   },
   name: 'hds'
 };
@@ -96,23 +97,31 @@ function js() {
 }
 
 
+function styleGuide() {
+  return gulp.src(options.paths.dist + '**')
+    .pipe(gulp.dest(options.paths.styleGuide + 'public/build'));
+}
+
 // ===================================
 // Watch
 // ===================================
 
 function watching() {
-  gulp.watch([options.paths.js + 'src/*.js'], gulp.series(jsClean, js));
-  gulp.watch([options.paths.sass + '**/*.scss'], gulp.series(cssClean, gulp.parallel(cssDev, cssProd)));
+  gulp.watch([options.paths.js + 'src/*.js'], gulp.series(jsClean, js, styleGuide));
+  gulp.watch([options.paths.sass + '**/*.scss'], gulp.series(cssClean, gulp.parallel(cssDev, cssProd), styleGuide));
 }
 
 // ===================================
 // Exports
 // ===================================
 
-exports.default = gulp.parallel(
-  gulp.series(jsClean, js),
-  gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
-  libraries
+exports.default = gulp.series(
+  gulp.parallel(
+    gulp.series(jsClean, js),
+    gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
+    libraries
+  ),
+  styleGuide
 );
 
 exports.watch = watching;
