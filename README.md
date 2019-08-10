@@ -7,7 +7,7 @@ Design System for Australian Government Department of Health is built on top of 
 ## Style guide
 View the [style guide](https://healthgovau.github.io/health-design-system/) for documentation on how to use the Health Design System components.
 
-## Dependencies
+## Optional dependencies
 Javascript:
 * [jQuery v3+](https://jquery.com/)
 * [jQuery UI autocomplete](https://jqueryui.com/download/#!version=1.12.1&components=110000010001000000100000100000000000000000000000)
@@ -21,9 +21,6 @@ Disable any of the libraries functionality by simply not including the library.
 
 ## Installation
 
-### Requirements: 
- * [Node.js](https://nodejs.org/)
-
 ### Usage
 
 #### Option 1: Out of the box
@@ -32,6 +29,8 @@ Include any [library scripts](build/js/libraries).
 
 #### Option 2: Build yourself
 Clone, git submodule or download the repository.
+
+Requires [Node.js](https://nodejs.org/)
 
 Build using the built in Gulp tasks:
 
