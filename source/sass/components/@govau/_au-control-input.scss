@@ -1,6 +1,5 @@
-.au-form__item {
   .au-control-input {
-    &.au-control-input--compact {
+    &.au-control-input--compact.au-control-input--block {
       @include AU-space(margin-top, 0.5unit);
       .au-control-input__text {
         @include AU-space(padding, 0 0 0 1.5unit);
@@ -33,4 +32,3 @@
       }
     }
   }
-}
