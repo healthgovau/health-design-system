@@ -1,6 +1,8 @@
 {
   "title": "Search",
   "context": {
-    "title": "Search this website"
+    "search": {
+      "placeholder": "Search this website"
+    }
   }
 }

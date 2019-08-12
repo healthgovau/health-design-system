@@ -1,0 +1,17 @@
+{
+  "title": "Text area",
+  "context": {
+    "error": false,
+    "textArea": {
+      "label": "Feedback"
+    }
+  },
+  "variants": [
+    {
+      "name": "Error",
+      "context": {
+        "error": true
+      }
+    }
+  ]
+}

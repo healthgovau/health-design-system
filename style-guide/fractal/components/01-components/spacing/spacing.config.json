@@ -1,0 +1,26 @@
+{
+  "title": "Spacing",
+  "variants": [
+    {
+      "name": "Standard gap",
+      "notes": "Applies a gab above the content.",
+      "context": {
+        "modifier": "standard-gap"
+      }
+    },
+    {
+      "name": "Standard gap - Mobile only",
+      "notes": "Used on mobile when the grid stacks",
+      "context": {
+        "modifier": "standard-gap--mobile-only"
+      }
+    },
+    {
+      "name": "Standard gap - Bottom",
+      "notes": "Used on mobile when the grid stacks",
+      "context": {
+        "modifier": "standard-gap--bottom"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Text input",
+  "context": {
+    "textInput": {
+      "label": "Email address"
+    },
+    "error": false
+  },
+  "variants": [
+    {
+      "name": "Error",
+      "context": {
+        "error": true
+      }
+    }
+  ]
+}

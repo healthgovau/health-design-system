@@ -1,0 +1,30 @@
+<div class="au-form__item">
+  <label for="is-this-feedback-for">
+    {{radios.label}}
+    {{> @label-mandatory }}
+  </label>
+  <div id="is-this-feedback-for" class="form-radios">
+    <div class="au-form__item-type--radio">
+      <div class="au-control-input">
+        <input required="required" type="radio" id="is-this-feedback-for-1"
+               name="submitted[is_this_feedback_for]"
+               value="The whole website"
+               class="au-control-input__input{{#if error}} error{{/if}}"/>
+        <label class="au-control-input__text" for="is-this-feedback-for-1">
+          The whole website
+        </label>
+      </div>
+    </div>
+    <div class="au-form__item-type--radio">
+      <div class="au-control-input">
+        <input required="required" type="radio" id="is-this-feedback-for-2"
+               name="submitted[is_this_feedback_for]"
+               value="The page you were just on"
+               class="au-control-input__input{{#if error}} error{{/if}}"/>
+        <label class="au-control-input__text" for="is-this-feedback-for-2">
+          The page you were just on
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

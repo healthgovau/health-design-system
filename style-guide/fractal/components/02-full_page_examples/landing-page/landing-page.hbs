@@ -1,0 +1,22 @@
+<div class="au-body">
+  {{ render '@header' }}
+  {{ render '@main-nav' }}
+  {{> @sub-header }}
+  {{ render '@toolbar' }}
+
+  <div class="container-fluid full-width">
+    <div class="row">
+      {{ render '@band--cards-call-to-action' }}
+      {{ render '@band--cards-image' }}
+      {{ render '@band--cards-audience' }}
+      {{ render '@band--hotline' }}
+      {{ render '@band--cards-resources' }}
+      {{ render '@band--statistics' }}
+    </div>
+  </div>
+
+  {{ render '@something-wrong' }}
+
+</div>
+
+{{ render '@footer' }}

@@ -3837,30 +3837,30 @@ body.logged-in .region-content h2, body.logged-in .region-content h3, body.logge
   .au-body .main-content-full .field-name-field-link-external {
     max-width: 66.6666666667%; } }
 
-.au-form__item .au-control-input.au-control-input--compact {
+.au-control-input.au-control-input--compact.au-control-input--block {
   margin-top: 8px;
   margin-top: 0.5rem; }
-  .au-form__item .au-control-input.au-control-input--compact .au-control-input__text {
+  .au-control-input.au-control-input--compact.au-control-input--block .au-control-input__text {
     padding: 0 0 0 24px;
     padding: 0 0 0 1.5rem;
     margin-right: 0; }
-    .au-form__item .au-control-input.au-control-input--compact .au-control-input__text:before, .au-form__item .au-control-input.au-control-input--compact .au-control-input__text:after {
+    .au-control-input.au-control-input--compact.au-control-input--block .au-control-input__text:before, .au-control-input.au-control-input--compact.au-control-input--block .au-control-input__text:after {
       left: -4px;
       top: 2px;
       width: 22px;
       width: 1.375rem;
       height: 22px;
       height: 1.375rem; }
-  .au-form__item .au-control-input.au-control-input--compact .au-control-input__input {
+  .au-control-input.au-control-input--compact.au-control-input--block .au-control-input__input {
     left: 0;
     top: 7px; }
 
-.au-form__item .au-control-input__input:invalid + .au-control-input__text {
+.au-control-input__input:invalid + .au-control-input__text {
   background: #ffffff; }
-  .au-form__item .au-control-input__input:invalid + .au-control-input__text:after {
+  .au-control-input__input:invalid + .au-control-input__text:after {
     border-color: transparent; }
 
-.au-form__item .au-control-input__input.error + .au-control-input__text:after {
+.au-control-input__input.error + .au-control-input__text:after {
   border-color: #d60000; }
 
 .au-body .au-cta-link--right {
@@ -4142,11 +4142,9 @@ svg {
   margin-top: -1rem; }
   @media (min-width: 768px) {
     .au-body .au-side-nav {
-      background: white; } }
+      background: #ffffff; } }
   .au-body .au-side-nav a {
     background: transparent; }
-    .au-body .au-side-nav a.au-side-nav--unpublished {
-      background: #ffe5e5; }
     .au-body .au-side-nav a:hover, .au-body .au-side-nav a:focus {
       background-color: #f1f1f2; }
     .au-body .au-side-nav a.active {
@@ -4155,33 +4153,21 @@ svg {
       background-color: #f1f1f2; }
   .au-body .au-side-nav li, .au-body .au-side-nav ul {
     position: relative; }
-  .au-body .au-side-nav--unpublished::after {
-    content: "\e9d1";
-    font-weight: normal;
-    font-size: 1.2em;
-    position: absolute;
-    top: 0;
-    right: 4px;
-    color: #e42622;
-    font-family: FontAwesome; }
   @media print {
     .au-body .au-side-nav {
       display: none; } }
 
-.page-content .sidebar-right {
+.au-body .au-side-nav--right {
   float: none;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 32px;
   padding-bottom: 2rem; }
   @media (min-width: 768px) {
-    .page-content .sidebar-right {
+    .au-body .au-side-nav--right {
       float: right;
       padding-left: 12px;
       padding-right: 12px; } }
-  @media print {
-    .page-content .sidebar-right {
-      display: none; } }
 
 .au-tags.au-tags--inline {
   display: inline; }
@@ -5322,10 +5308,10 @@ ul.list--large--checklist > li {
   text-align: center;
   margin-top: 16px;
   margin-top: 1rem; }
-  .health-pager__item {
+  .health-pager li {
     padding: 0 4px;
     padding: 0 0.25rem; }
-    .health-pager__item--active {
+    .health-pager li.active {
       font-weight: bold; }
   .health-listing + .health-pager {
     margin-top: 32px;
@@ -6522,7 +6508,7 @@ table {
     .health-video__preview .health-video__preview__play-button {
       display: none;
       position: absolute;
-      font-size: 5em;
+      font-size: 6em;
       opacity: 0.8;
       left: 50%;
       top: 50%;
@@ -6530,7 +6516,9 @@ table {
           -ms-transform: translateX(-50%) translateY(-50%);
               transform: translateX(-50%) translateY(-50%); }
       .health-video__preview .health-video__preview__play-button svg {
-        fill: #313131; }
+        fill: white;
+        -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75));
+                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75)); }
     .health-video__preview:hover .health-video__preview__play-button, .health-video__preview:active .health-video__preview__play-button, .health-video__preview:focus .health-video__preview__play-button {
       display: block;
       cursor: pointer; }

@@ -1,0 +1,34 @@
+{
+  "title": "Image",
+  "context": {
+    "image": {
+      "link": false,
+      "url": "/images/trex_16x9.jpg",
+      "width": 800,
+      "height": 450,
+      "ratio": 56.25
+    }
+  },
+  "variants": [
+    {
+      "name": "Border",
+      "context": {
+        "modifier": "image--border"
+      }
+    },
+    {
+      "name": "Link",
+      "context": {
+        "modifier": "image--link",
+        "link": true
+      }
+    },
+    {
+      "name": "Border link",
+      "context": {
+        "modifier": "image--link image--border",
+        "link": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Form",
+  "preview": "@preview-page",
+  "context": {
+    "subheader": {
+      "title": "Provide feedback",
+      "summary": "Use this form to give us thoughts or feedback on how we can improve the website"
+    },
+    "backToTop": {
+      "isVisible": false
+    },
+    "button": {
+      "title": "Submit"
+    },
+    "textArea": {
+      "label": "Feedback"
+    },
+    "textInput": {
+      "label": "Email address"
+    },
+    "radios": {
+      "label": "Is this feedback for:"
+    },
+    "checkboxes": {
+      "label": "My favourite animals are"
+    },
+    "error": false
+  },
+  "variants": [
+    {
+      "name": "Error",
+      "context": {
+        "error": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Recommendation",
+  "context": {
+    "name": "Grade"
+  },
+  "variants": [
+    {
+      "name": "Grade A",
+      "context": {
+        "name": "Grade A",
+        "modifier": "grade-grade-a"
+      }
+    },
+    {
+      "name": "Grade B",
+      "context": {
+        "name": "Grade B",
+        "modifier": "grade-grade-a"
+      }
+    },
+    {
+      "name": "Grade C",
+      "context": {
+        "name": "Grade C",
+        "modifier": "grade-grade-a"
+      }
+    },
+    {
+      "name": "Grade D",
+      "context": {
+        "name": "Grade D",
+        "modifier": "grade-grade-a"
+      }
+    },
+    {
+      "name": "Grade - Evidence based",
+      "context": {
+        "name": "Evidence based",
+        "modifier": "grade-evidence-based"
+      }
+    },
+    {
+      "name": "Grade - Qualified evidence based",
+      "context": {
+        "name": "Qualified evidence based",
+        "modifier": "grade-qualified-evidence-based"
+      }
+    },
+    {
+      "name": "Grade - Consensus based",
+      "context": {
+        "name": "Consensus based",
+        "modifier": "grade-consensus-based"
+      }
+    }
+  ]
+}
