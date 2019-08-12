@@ -3,10 +3,10 @@
   text-align: center;
   @include AU-space(margin-top, 1unit);
 
-  &__item {
+  li {
     @include AU-space('padding', 0 .25unit);
 
-    &--active {
+    &.active {
       font-weight: bold;
     }
   }
