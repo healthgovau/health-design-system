@@ -14,7 +14,27 @@
   <title>Preview Layout</title>
 </head>
 <body class="au-grid">
-  <div class="au-body">
+  <div class="health-release-status au-body au-body--dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <span class="health-release-status__icon health-release-status__icon--alpha">
+          Alpha
+        </span>
+        <div class="health-release-status--desktop">
+          Welcome to Health’s new website. <a href="/using-our-websites/about-our-website">Learn more about it</a>. This
+          is still a work in progress, so please <a href="/about-us/contact-us/provide-feedback">let us know what you
+          think</a>.
+        </div>
+        <div class="health-release-status--mobile">
+          Welcome to Health’s new website. <a href="/using-our-websites/about-our-website">Learn more about it</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="au-body">
 
   <header class="au-header au-header--dark" role="banner">
   <div class="container">
@@ -47,12 +67,11 @@
       <div class="au-form__item">
         <label class="au-sronly" for="search-field">Search</label>
         <input placeholder="Search this website"
-          class="health-search__form__input au-text-input au-text-input au-text-input--block ui-autocomplete-input"
-          size="30" type="text" id="search-field" name="funnelback_search_field" value=""
-          maxlength="128" autocomplete="off">
+               class="health-search__form__input au-text-input au-text-input au-text-input--block ui-autocomplete-input"
+               size="30" type="text" id="search-field" name="funnelback_search_field" value=""
+               maxlength="128" autocomplete="off">
       </div>
-      <div class="health-loading health-loading--search health-loading--small"></div>
-    </div>
+      <div class="health-loading"></div>    </div>
     <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
   </form>
 </div>
@@ -300,12 +319,11 @@
                   <div class="au-form__item">
                     <label class="au-sronly" for="search-field">Search</label>
                     <input placeholder="Search this list"
-                      class="health-search__form__input au-text-input au-text-input au-text-input--block ui-autocomplete-input"
-                      size="30" type="text" id="search-field" name="funnelback_search_field" value=""
-                      maxlength="128" autocomplete="off">
+                           class="health-search__form__input au-text-input au-text-input au-text-input--block ui-autocomplete-input"
+                           size="30" type="text" id="search-field" name="funnelback_search_field" value=""
+                           maxlength="128" autocomplete="off">
                   </div>
-                  <div class="health-loading health-loading--search health-loading--small"></div>
-                </div>
+                  <div class="health-loading"></div>    </div>
                 <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
               </form>
             </div>          </form>
