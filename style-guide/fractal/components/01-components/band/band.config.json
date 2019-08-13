@@ -10,9 +10,9 @@
       "name": "Hotline",
       "context": {
         "modifier": "primary",
-        "title": "National Immunisation Information Line",
+        "title": "Dinosaur escape hotline",
         "number": "1800 671 811",
-        "text": "Call us on 1800 671 811 for general advice and information about immunisation, Monday to Friday from 8:30am to 5pm Australian Eastern Standard Time. For individual medical/clinical advice, please consult your GP or other health care provider."
+        "text": "Call us on 1800 671 811 if you spot a dinosaur on the loose."
       }
     },
     {
@@ -38,6 +38,19 @@
       "name": "Cards resources",
       "context": {
         "title": "Latest resources"
+      }
+    },
+    {
+      "name": "Cards image vertical",
+      "context": {
+        "title": "The best dinosaurs",
+        "modifier": "neutral-1"
+      }
+    },
+    {
+      "name": "Featured",
+      "context": {
+        "title": "Featured resource"
       }
     }
   ]

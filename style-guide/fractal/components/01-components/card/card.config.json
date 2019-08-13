@@ -2,7 +2,7 @@
   "title": "Card",
   "default": "Image",
   "context": {
-    "title": "More transparency for out of pocket costs",
+    "title": "Dinosaurs to be crowned the earths greatest extinct animal",
     "date": "20 July 2019",
     "icon": "phone",
     "colour": "colour1",
@@ -12,14 +12,14 @@
     {
       "name": "Resource",
       "context": {
-        "title": "More transparency for out of pocket costs",
+        "title": "Dinosaur factsheet",
         "type": "Publication"
       }
     },
     {
       "name": "Call to action",
       "context": {
-        "title": "Browse information by topic"
+        "title": "Find your favourite dinosaur"
       }
     },
     {
@@ -29,7 +29,7 @@
       "context": {
         "colour": "health-card--colour2",
         "icon": "envelope",
-        "title": "Find out more about the Australian health care system"
+        "title": "Compare yourself to the largest dinosaur"
       }
     },
     {
@@ -39,7 +39,7 @@
       "context": {
         "colour": "health-card--colour3",
         "icon": "youtube",
-        "title": "Learn about Medicare"
+        "title": "Take our dinosaur quiz"
       }
     },
     {
@@ -49,14 +49,14 @@
       "context": {
         "colour": "health-card--colour4",
         "icon": "search",
-        "title": "Find health services near you"
+        "title": "Learn more about dinosaurs"
       }
     },
     {
       "name": "Audience",
       "context": {
-        "title": "Pregnant women",
-        "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+        "title": "Children",
+        "content": "Activities for children to learn about dinosaurs."
       }
     },
     {
@@ -65,8 +65,8 @@
       "view": "card--audience.hbs",
       "context": {
         "colour": "colour2",
-        "title": "Travel",
-        "content": "Find out what vaccines you may need before you leave Australia."
+        "title": "Teenages",
+        "content": "Get your teenager out of the house with a trip to your local dinosaur museum"
       }
     },
     {
@@ -75,8 +75,8 @@
       "view": "card--audience.hbs",
       "context": {
         "colour": "colour3",
-        "title": "Children",
-        "content": "Find recommended immunisations for children from birth to 19 years of age."
+        "title": "Adults",
+        "content": "When was the last time you watched Jurrasic Park?"
       }
     },
     {
@@ -86,7 +86,7 @@
       "context": {
         "colour": "colour4",
         "title": "Seniors",
-        "content": "As you get older, your doctor may recommend vaccinations to help prevent certain illnesses and keep you healthy."
+        "content": "Dinosaurs are for people of all ages."
       }
     }
   ]
