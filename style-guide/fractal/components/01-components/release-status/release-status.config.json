@@ -1,0 +1,24 @@
+{
+  "title": "Release status",
+  "preview": "@preview-full-width",
+  "context": {
+    "status": "Alpha",
+    "modifier": "alpha"
+  },
+  "variants": [
+    {
+      "name": "Beta",
+      "context": {
+        "status": "Beta",
+        "modifier": "beta"
+      }
+    },
+    {
+      "name": "Launch",
+      "context": {
+        "status": "New",
+        "modifier": "launch"
+      }
+    }
+  ]
+}

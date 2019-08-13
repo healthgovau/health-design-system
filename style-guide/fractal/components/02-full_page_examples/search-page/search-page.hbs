@@ -21,9 +21,6 @@
 
         <div class="row">
 
-          <div class="col-md-3 col-xs-12 standard-gap--mobile-only">
-            <span class="au-display-xl au-display--inline">517</span> results
-          </div>
           <form class="col-sm-8 col-md-9">
             {{> @search }}
           </form>
@@ -43,7 +40,42 @@
           </div>
         </div>
 
-        {{ render '@listing' }}
+        <ul class="health-listing">
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+          <li>
+            {{ render '@search-result' }}
+          </li>
+        </ul>
+
         {{ render '@pager' }}
       </div>
 

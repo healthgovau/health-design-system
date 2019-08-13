@@ -1,0 +1,29 @@
+{
+  "title": "Callout",
+  "variants": [
+    {
+      "name": "Simple",
+      "context": {
+        "modifier": "simple"
+      }
+    },
+    {
+      "name": "Colour - Secondary",
+      "context": {
+        "modifier": "secondary"
+      }
+    },
+    {
+      "name": "Colour - Tertiary",
+      "context": {
+        "modifier": "tertiary"
+      }
+    },
+    {
+      "name": "Colour - Success",
+      "context": {
+        "modifier": "success"
+      }
+    }
+  ]
+}

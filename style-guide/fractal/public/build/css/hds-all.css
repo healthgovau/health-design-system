@@ -4832,19 +4832,20 @@ p.summary, .field-name-field-summary {
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
 
-.au-body .health-file__icon {
-  margin-right: 8px;
-  margin-right: 0.5rem; }
-
-.au-body .health-file__link {
-  text-decoration: none;
-  color: #313131; }
-  .au-body .health-file__link--visible {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #006FB0; }
-    .au-body .health-file__link--visible:hover {
-      text-decoration: none; }
+.au-body .health-file {
+  display: block; }
+  .au-body .health-file__icon {
+    margin-right: 8px;
+    margin-right: 0.5rem; }
+  .au-body .health-file__link {
+    text-decoration: none;
+    color: #313131; }
+    .au-body .health-file__link--visible {
+      font-weight: bold;
+      text-decoration: underline;
+      color: #006FB0; }
+      .au-body .health-file__link--visible:hover {
+        text-decoration: none; }
 
 .health-filter {
   display: block; }
