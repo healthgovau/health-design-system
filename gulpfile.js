@@ -16,7 +16,7 @@ const options = {
     sass: 'source/sass/',
     js: 'source/js/',
     dist: 'build/',
-    styleGuide: 'style-guide/fractal/'
+    styleGuide: 'style-guide/'
   },
   name: 'hds'
 };
