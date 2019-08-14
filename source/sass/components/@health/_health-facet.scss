@@ -1,0 +1,27 @@
+.health-facet {
+
+  visibility: visible;
+  @include opacity(1);
+  height: auto;
+  transition: opacity 1s;
+
+  @include AU-space(padding, 1unit);
+
+  * + & {
+    @include AU-space(margin-top, 1unit);
+  }
+
+  &--mobile-hidden {
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    @include opacity(0);
+    height: 0;
+  }
+
+  background: $colour-lighter;
+
+  &__more {
+    font-size: 0.8em;
+  }
+}

@@ -45,8 +45,12 @@
         @include AU-media($AU-main-nav-breakpoint) {
           display: none;
         }
+        &__open {
+          display: none;
+        }
       }
     }
+
   }
   
   a {
@@ -76,19 +80,7 @@
         }
       }
 
-      // Hide menu links in primary navigation for Above mobile (as they are presented above search on desktop)
-      // 130106 = 
-      // 130111 = ministers
-      // 130116 = about us
-      // 130121 = contact us
-      // 481444 = media centre
-      // 481445 = news
-      &.menu-mlid-130106,
-      &.menu-mlid-130111,
-      &.menu-mlid-130116,
-      &.menu-mlid-130121,
-      &.menu-mlid-481444,
-      &.menu-mlid-481445 {
+      &.au-main-nav--mobile-only {
         @include AU-media($AU-main-nav-breakpoint) {
           display: none;
         }
@@ -98,16 +90,5 @@
 
   @media print {
     display: none;
-  }
-}
-
-// SHAME! Sub menu above search
-#block-menu-menu-sub-menu {
-  ul {
-    float: right;
-  }
-  display: none;
-  @include AU-media($AU-main-nav-breakpoint) {
-    display: block;
   }
 }

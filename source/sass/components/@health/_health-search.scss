@@ -10,6 +10,7 @@
 .health-search {
 
   position: relative;
+  display: inline-block;
 
   @media print {
     display: none;

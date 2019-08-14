@@ -1,0 +1,6 @@
+.health-sub-nav {
+  display: none;
+  @include AU-media($AU-main-nav-breakpoint) {
+    display: block;
+  }
+}

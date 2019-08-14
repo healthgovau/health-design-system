@@ -4,76 +4,15 @@
     display: none;
   }
   .health-filter__title {
-    display: block;
-    @include AU-fontgrid('sm');
-    font-weight: 700;
+
     background: $colour-lighter;
 
     @include AU-space('padding', .5unit);
     @include AU-media(sm) {
       display: none;
     }
-    &.expanded {
-      @include AU-space(margin-bottom, -1unit)
+    &.health-filter--open {
+      @include AU-space(margin-bottom, 1unit)
     }
-  }
-}
-
-.health-filter__more {
-  font-size: 0.8em;
-}
-
-// @todo We should use the animation classes from the Design System for this.
-// Hide and show the filters on mobile.
-.block-facetapi,
-#block-funnelback-funnelback-facet
-{
-  visibility: hidden;
-  @include opacity(0);
-  height: 0;
-  
-  @include AU-media(sm) {
-    visibility: visible;
-    @include opacity(1);
-    height: auto;
-  }
-
-  .facetapi-facetapi-checkbox-links a {
-    border: none;
-  }
-  &.facetshow {
-    visibility: visible;
-    @include opacity(1);
-    height: auto;
-  }
-
-  // Font
-  .au-control-input__text {
-    font-size: 0.9em;
-  }
-}
-
-// Filter - search and listings
-.block-funnelback.facetshow {
-  .health-facet {
-    background: $colour-lighter;
-    @include AU-space(padding, 1unit);
-    @include AU-space(margin-top, 1unit);
-  }
-}
-
-.health-facet {
-  background: $colour-lighter;
-  @include AU-media(sm) {
-    & + & {
-      @include AU-space(margin-top, 1unit);
-    }
-  }
-  &.facetshow {
-    @include AU-space(padding, 1unit);
-    @include AU-space(margin-top, 1unit);
-  }
-  @include AU-media( sm ){
-    @include AU-space(padding, 1unit); // Can't apply to mobile hidden as the padding renders
   }
 }
