@@ -2,22 +2,24 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+<head class="no-js">
   <meta charset="utf-8">
   <link media="all" rel="stylesheet" href="../../build/css/hds-all.min.css">
   <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
   <script src="../../build/js/libraries/jquery.min.js"></script>
   <script src="../../build/js/libraries/jquery-ui.min.js"></script>
   <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
+  <script src="../../build/js/libraries/jquery.once.min.js"></script>
   <script src="../../build/js/libraries/lazyload.min.js"></script>
-  <script src="../../build/js/hds.min.js"></script>
+  <script src="../../data.js"></script>
+  <script src="../../build/js/hds.js"></script>
   <title>Preview Layout</title>
 </head>
 <body class="au-body au-grid">
 <div class="container not-full-width">
   <div class="row">
     <div class="col-xs-12">
-      <div class="health-search">
+      <div class="health-search health-search--global">
   <form class="au-form">
     <div class="health-search__form__input-wrapper">
       <div class="au-form__item">
@@ -31,6 +33,12 @@
     <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
   </form>
 </div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    healthSearchAutocomplete('#search-field', dinosaurData);
+  });
+</script>
     </div>
   </div>
 </div>

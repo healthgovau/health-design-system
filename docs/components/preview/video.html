@@ -2,15 +2,17 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+<head class="no-js">
   <meta charset="utf-8">
   <link media="all" rel="stylesheet" href="../../build/css/hds-all.min.css">
   <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
   <script src="../../build/js/libraries/jquery.min.js"></script>
   <script src="../../build/js/libraries/jquery-ui.min.js"></script>
   <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
+  <script src="../../build/js/libraries/jquery.once.min.js"></script>
   <script src="../../build/js/libraries/lazyload.min.js"></script>
-  <script src="../../build/js/hds.min.js"></script>
+  <script src="../../data.js"></script>
+  <script src="../../build/js/hds.js"></script>
   <title>Preview Layout</title>
 </head>
 <body class="au-body au-grid">
@@ -40,15 +42,15 @@
   </div>
 </div>
 
-<section class="au-accordion ">
-    <button class="au-accordion__title js-au-accordion"
+<section class="au-accordion">
+    <button class="au-accordion__title js-au-accordion au-accordion--closed"
             aria-controls="accordion-default"
-            aria-expanded="true"
+            aria-expanded="false"
             onclick="return AU.accordion.Toggle( this )">
         Transcript
     </button>
 
-    <div class="au-accordion__body" id="accordion-default">
+    <div class="au-accordion__body au-accordion--closed" id="accordion-default">
         <div class="au-accordion__body-wrapper">
           <p><i>NARRATOR:</i> It's one of the most mysterious dinosaurs ever discovered: head like a crocodile, meter-long jaws, a spectacular sail, and an overall body larger than T. rex.</p><p><i>NIZAR IBRAHIM (University of Chicago):</i> There is no animal alive or extinct, that we know of, that looks anything like <i>Spinosaurus</i> .</p><p><i>NARRATOR:</i> <i>Spinosaurus</i> : only one skeleton has ever been found, and, in a single night, it was destroyed.</p><p><i>HANS-DIETER SUES (National Museum of Natural History):</i> It was a catastrophic loss to science, overall.</p><p><i>NARRATOR:</i> Now, after a century of searching, a new skeleton has emerged from the Sahara.</p><p><i>MATT LAMANNA (Carnegie Museum of Natural History):</i> When this skeleton is revealed, it's going to change our understanding of this animal in pretty fundamental ways.</p>
         </div>

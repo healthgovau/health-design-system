@@ -36,17 +36,17 @@
         </div>
       </div>
       <div class="col-sm-7">
-        <div class="text--align-right">
-          <h3 class="au-sronly">Sub menu</h3>
-          <ul class="au-link-list au-link-list--inline">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Ministers</a></li>
-            <li><a href="#">Media centre</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-        <div class="health-search">
+        <div class="health-sub-nav text--align-right">
+  <h3 class="au-sronly">Sub menu</h3>
+  <ul class="au-link-list au-link-list--inline">
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Ministers</a></li>
+    <li><a href="#">Media centre</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Contact us</a></li>
+  </ul>
+</div>
+        <div class="health-search health-search--global">
   <form class="au-form">
     <div class="health-search__form__input-wrapper">
       <div class="au-form__item">
@@ -60,15 +60,22 @@
     <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
   </form>
 </div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    healthSearchAutocomplete('#search-field', dinosaurData);
+  });
+</script>
       </div>
     </div>
   </div>
 </header>
-  <nav class="au-main-nav au-main-nav--dark pillars-container" aria-label="main">
+
+<nav class="au-main-nav au-main-nav--dark pillars-container" aria-label="main">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="au-main-nav__content">
+        <div id="main-nav-default" class="au-main-nav__content">
           <div id="pillars"></div>
           <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--open" onclick="return AU.mainNav.Toggle( this )">
             <span class="svg-inline--fa fa-fw">
@@ -77,8 +84,11 @@
             Menu
           </button>
           <button class="au-main-nav__toggle au-main-nav__toggle--search au-main-nav__toggle--open">
-            <span class="svg-inline--fa fa-fw">
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__closed">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+            </span>
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__open">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
             </span>
             Search
           </button>
@@ -92,14 +102,12 @@
                 </span>
                 Close
               </button>
-              <div class="region region-navigation">
-                <ul class="au-link-list">
-                  <li><a href="#" class="active-trail">Home</a></li>
-                  <li><a href="#">Health topics</a></li>
-                  <li><a href="#">Initiatives and programs</a></li>
-                  <li><a href="#">Resources</a></li>
-                </ul>
-              </div>
+              <ul class="au-link-list">
+                <li><a href="#" class="active-trail">Home</a></li>
+                <li><a href="#">Health topics</a></li>
+                <li><a href="#">Initiatives and programs</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
               <div class="au-main-nav__focus-trap-bottom"></div>
             </div>
           </div>
@@ -127,9 +135,9 @@
           <div class="health-sub-header__section-title">
             <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
           </div>
-          <h1>Immunisation</h1>
+          <h1>Dinosaurs</h1>
           <p class="au-introduction au-introduction--dark">
-            Immunisation is a simple, safe and effective way of protecting people against harmful diseases before they come into contact with them. Immunisation not only protects individuals, but also others in the community, by reducing the spread of preventable diseases.
+            Dinosaurs are a diverse group of reptiles of the clade Dinosauria. They first appeared during the Triassic period, between 243 and 233.23 million years ago, although the exact origin and timing of the evolution of dinosaurs is the subject of active research.
           </p>
         </div>
       </div>
@@ -186,6 +194,11 @@
 
   <div class="container-fluid full-width">
     <div class="row">
+      <div class="container health-band">
+        <p class="au-callout au-callout--simple">
+  More than 20 almost-complete t rex skeletons have been found. The most perfect, nicknamed Sue, was unearthed in South Dakota, USA, 20 years ago.
+</p>
+      </div>
       <div class="health-band">
   <div class="container">
     <div class="row">
@@ -208,7 +221,7 @@ colour1
     </span>
   </div>
   <h3 class="health-card__title au-display-md au-display--heavy">
-    Browse information by topic
+    Find your favourite dinosaur
   </h3>
 </a>
         </li>
@@ -227,7 +240,7 @@ health-card--colour2
     </span>
   </div>
   <h3 class="health-card__title au-display-md au-display--heavy">
-    Find out more about the Australian health care system
+    Compare yourself to the largest dinosaur
   </h3>
 </a>
         </li>
@@ -246,7 +259,7 @@ health-card--colour3
     </span>
   </div>
   <h3 class="health-card__title au-display-md au-display--heavy">
-    Learn about Medicare
+    Take our dinosaur quiz
   </h3>
 </a>
         </li>
@@ -265,7 +278,7 @@ health-card--colour4
     </span>
   </div>
   <h3 class="health-card__title au-display-md au-display--heavy">
-    Find health services near you
+    Learn more about dinosaurs
   </h3>
 </a>
         </li>
@@ -286,11 +299,23 @@ health-card--colour4
   <div class="wrapper">
     <div class="health-card__image health-card__image--full-width image--link">
       <a href="#">
-        <img src="../../images/real_16x9.jpg">
+        
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+
       </a>
     </div>
     <h3 class="health-card__title au-display-md">
-      <a href="#">More transparency for out of pocket costs</a>
+      <a href="#">Dinosaurs to be crowned the earths greatest extinct animal</a>
     </h3>
     <footer class="metadata metadata--inline">
       20 July 2019
@@ -304,11 +329,23 @@ health-card--colour4
   <div class="wrapper">
     <div class="health-card__image health-card__image--full-width image--link">
       <a href="#">
-        <img src="../../images/real_16x9.jpg">
+        
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+
       </a>
     </div>
     <h3 class="health-card__title au-display-md">
-      <a href="#">More transparency for out of pocket costs</a>
+      <a href="#">Dinosaurs to be crowned the earths greatest extinct animal</a>
     </h3>
     <footer class="metadata metadata--inline">
       20 July 2019
@@ -322,11 +359,23 @@ health-card--colour4
   <div class="wrapper">
     <div class="health-card__image health-card__image--full-width image--link">
       <a href="#">
-        <img src="../../images/real_16x9.jpg">
+        
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+
       </a>
     </div>
     <h3 class="health-card__title au-display-md">
-      <a href="#">More transparency for out of pocket costs</a>
+      <a href="#">Dinosaurs to be crowned the earths greatest extinct animal</a>
     </h3>
     <footer class="metadata metadata--inline">
       20 July 2019
@@ -344,32 +393,69 @@ health-card--colour4
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <h2>Featured resource</h2>
+      </div>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-sm-3 col-xs-4">
+        
+  <div class="image--link image--border">
+  <a href="#">
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+  </a>
+  </div>
+
+      </div>
+      <div class="col-sm-9 col-xs-8">
+        <h3><a href="#">Tyrannosaurus</a></h3>
+        <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning
+          "king" in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large
+          theropods.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="health-band">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
         <h2>Browse topic for</h2>
       </div>
       <ul class="health-card-list health-card-list--matchheight">
         <li class="col-sm-6">
           <a class="health-card health-card--solid-half health-card--shadow health-card--colour1" href="#">
-  <h3 class="health-card__title au-display-md">Pregnant women</h3>
+  <h3 class="health-card__title au-display-md">Children</h3>
   <div class="health-card__text">
-    <p>Protect yourself and your baby by getting the right vaccines before and during your pregnancy.</p>
+    <p>Activities for children to learn about dinosaurs.</p>
   </div>
 </a>
 
         </li>
         <li class="col-sm-6">
           <a class="health-card health-card--solid-half health-card--shadow health-card--colour2" href="#">
-  <h3 class="health-card__title au-display-md">Travel</h3>
+  <h3 class="health-card__title au-display-md">Teenages</h3>
   <div class="health-card__text">
-    <p>Find out what vaccines you may need before you leave Australia.</p>
+    <p>Get your teenager out of the house with a trip to your local dinosaur museum</p>
   </div>
 </a>
 
         </li>
         <li class="col-sm-6">
           <a class="health-card health-card--solid-half health-card--shadow health-card--colour3" href="#">
-  <h3 class="health-card__title au-display-md">Children</h3>
+  <h3 class="health-card__title au-display-md">Adults</h3>
   <div class="health-card__text">
-    <p>Find recommended immunisations for children from birth to 19 years of age.</p>
+    <p>When was the last time you watched Jurrasic Park?</p>
   </div>
 </a>
 
@@ -378,7 +464,7 @@ health-card--colour4
           <a class="health-card health-card--solid-half health-card--shadow health-card--colour4" href="#">
   <h3 class="health-card__title au-display-md">Seniors</h3>
   <div class="health-card__text">
-    <p>As you get older, your doctor may recommend vaccinations to help prevent certain illnesses and keep you healthy.</p>
+    <p>Dinosaurs are for people of all ages.</p>
   </div>
 </a>
 
@@ -389,20 +475,24 @@ health-card--colour4
 </div>
 
       <div class="health-band health-band--primary au-body au-body--dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h2>National Immunisation Information Line</h2>
-            </div>
-            <div class="col-sm-8">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <a href="tel:1800671811" class="au-display-lg au-display--inline">1800 671 811</a>
-                <p>
-                    Call us on 1800 671 811 for general advice and information about immunisation, Monday to Friday from 8:30am to 5pm Australian Eastern Standard Time. For individual medical/clinical advice, please consult your GP or other health care provider.
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Dinosaur escape hotline</h2>
+      </div>
+      <div class="col-sm-8 standard-gap--mobile-only">
+        <a href="tel:1800 671 811" class="au-display-lg au-display--inline">
+          <span class="svg-inline--fa">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+          </span>
+          1800 671 811
+        </a>
+        <p>
+          Call us on 1800 671 811 if you spot a dinosaur on the loose.
+        </p>
+      </div>
     </div>
+  </div>
 </div>
       <div class="health-band">
   <div class="container">
@@ -422,7 +512,7 @@ health-card--colour4
   </div>
   <div class="col-xs-9">
     <h3 class="au-display-md">
-      <a href="#">More transparency for out of pocket costs</a>
+      <a href="#">Dinosaur factsheet</a>
     </h3>
     <div class="metadata metadata--inline au-display-sm--text">
       <div class="field__item">20 July 2019</div>
@@ -442,7 +532,7 @@ health-card--colour4
   </div>
   <div class="col-xs-9">
     <h3 class="au-display-md">
-      <a href="#">More transparency for out of pocket costs</a>
+      <a href="#">Dinosaur factsheet</a>
     </h3>
     <div class="metadata metadata--inline au-display-sm--text">
       <div class="field__item">20 July 2019</div>
@@ -462,7 +552,7 @@ health-card--colour4
   </div>
   <div class="col-xs-9">
     <h3 class="au-display-md">
-      <a href="#">More transparency for out of pocket costs</a>
+      <a href="#">Dinosaur factsheet</a>
     </h3>
     <div class="metadata metadata--inline au-display-sm--text">
       <div class="field__item">20 July 2019</div>
@@ -482,7 +572,7 @@ health-card--colour4
   </div>
   <div class="col-xs-9">
     <h3 class="au-display-md">
-      <a href="#">More transparency for out of pocket costs</a>
+      <a href="#">Dinosaur factsheet</a>
     </h3>
     <div class="metadata metadata--inline au-display-sm--text">
       <div class="field__item">20 July 2019</div>
@@ -497,50 +587,120 @@ health-card--colour4
 </div>
 
       <div class="health-band health-band--secondary au-body au-body--dark">
-    <div class="container">
-        <div class="row">
-            <h2 class="col-xs-12">Did you know?</h2>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 stat stat--no-trend">
-                <div class="wrapper">
-                    <p class="stat__value">94.14%</p>
-                    <p class="stat__text">immunisation coverage for all 1 year olds</p>
-                </div>
-            </div>
-            <div class="col-sm-4 stat">
-                <div class="wrapper">
-                    <p class="stat__value">96.66%</p>
-                    <p class="stat__text">coverage for Aboriginal and Torres Strait Islander 5 year olds</p>
-                    <div class="stat__trend">
-                        <i class="stat__trend-icon fa fa-arrow-down"></i>
-                        <p class="stat__trend-value">13% decrease in 2019</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 stat">
-                <div class="wrapper">
-                    <p class="stat__value">94.78%</p>
-                    <p class="stat__text">immunisation coverage for all 5 year olds</p>
-                    <div class="stat__trend">
-                        <i class="stat__trend-icon fa fa-arrow-up"></i>
-                        <p class="stat__trend-value">13% increase in 2019</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <p>Source: Australian Immunisation Register (AIR) annualised quarterly report, December 2018</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <a href="#" class="au-cta-link">View more on immunisation coverage in Australia</a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <h2 class="col-xs-12">Did you know?</h2>
     </div>
+    <div class="row">
+      <div class="col-sm-4 stat stat--no-trend">
+        <div class="wrapper">
+          <p class="stat__value">94.14%</p>
+          <p class="stat__text">of people think dinosaurs are awesome</p>
+          <span class="svg-inline--fa">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+          </span>
+          <p class="stat__trend-value">13% increase in 2019</p>
+        </div>
+      </div>
+      <div class="col-sm-4 stat stat--no-trend">
+        <div class="wrapper">
+          <p class="stat__value">100%</p>
+          <p class="stat__text">of dinosaurs are extinct</p>
+        </div>
+      </div>
+      <div class="col-sm-4 stat">
+        <div class="wrapper">
+          <p class="stat__value">$8.6 million</p>
+          <p class="stat__text">is spent every year on dinosaur containment</p>
+          <div class="stat__trend">
+            <span class="svg-inline--fa">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"/></svg>
+            </span>
+            <p class="stat__trend-value">25% decrease over 2017-19</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Source: Australian Bureau of Dinosaurs</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <a href="#" class="au-cta-link">More amazing dinosaur facts</a>
+      </div>
+    </div>
+  </div>
 </div>
+      <div class="health-band health-band--neutral-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>The best dinosaurs</h2>
+      </div>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-sm-6">
+        <div class=" health-card health-card--light">
+  <div class="health-card__image health-card__image--full-width">
+    
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  <h3 id="ageing-and-aged-care">Tyrannosaurus</h3>
+  <div class="au-display-md--text standard-gap">
+    <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning "king"
+      in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods.
+    </p>
+  </div>
+  <div class="au-cta-link">
+    <a href="#">Learn more</a>
+  </div>
+</div>
+      </div>
+      <div class="col-sm-6">
+        <div class=" health-card health-card--light">
+  <div class="health-card__image health-card__image--full-width">
+    
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  <h3 id="ageing-and-aged-care">Tyrannosaurus</h3>
+  <div class="au-display-md--text standard-gap">
+    <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning "king"
+      in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods.
+    </p>
+  </div>
+  <div class="au-cta-link">
+    <a href="#">Learn more</a>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 

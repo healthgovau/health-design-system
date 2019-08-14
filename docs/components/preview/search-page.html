@@ -2,15 +2,17 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+<head class="no-js">
   <meta charset="utf-8">
   <link media="all" rel="stylesheet" href="../../build/css/hds-all.min.css">
   <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
   <script src="../../build/js/libraries/jquery.min.js"></script>
   <script src="../../build/js/libraries/jquery-ui.min.js"></script>
   <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
+  <script src="../../build/js/libraries/jquery.once.min.js"></script>
   <script src="../../build/js/libraries/lazyload.min.js"></script>
-  <script src="../../build/js/hds.min.js"></script>
+  <script src="../../data.js"></script>
+  <script src="../../build/js/hds.js"></script>
   <title>Preview Layout</title>
 </head>
 <body class="au-grid">
@@ -51,17 +53,17 @@
         </div>
       </div>
       <div class="col-sm-7">
-        <div class="text--align-right">
-          <h3 class="au-sronly">Sub menu</h3>
-          <ul class="au-link-list au-link-list--inline">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Ministers</a></li>
-            <li><a href="#">Media centre</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-        <div class="health-search">
+        <div class="health-sub-nav text--align-right">
+  <h3 class="au-sronly">Sub menu</h3>
+  <ul class="au-link-list au-link-list--inline">
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Ministers</a></li>
+    <li><a href="#">Media centre</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Contact us</a></li>
+  </ul>
+</div>
+        <div class="health-search health-search--global">
   <form class="au-form">
     <div class="health-search__form__input-wrapper">
       <div class="au-form__item">
@@ -75,15 +77,22 @@
     <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
   </form>
 </div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    healthSearchAutocomplete('#search-field', dinosaurData);
+  });
+</script>
       </div>
     </div>
   </div>
 </header>
-  <nav class="au-main-nav au-main-nav--dark pillars-container" aria-label="main">
+
+<nav class="au-main-nav au-main-nav--dark pillars-container" aria-label="main">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="au-main-nav__content">
+        <div id="main-nav-default" class="au-main-nav__content">
           <div id="pillars"></div>
           <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--open" onclick="return AU.mainNav.Toggle( this )">
             <span class="svg-inline--fa fa-fw">
@@ -92,8 +101,11 @@
             Menu
           </button>
           <button class="au-main-nav__toggle au-main-nav__toggle--search au-main-nav__toggle--open">
-            <span class="svg-inline--fa fa-fw">
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__closed">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+            </span>
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__open">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
             </span>
             Search
           </button>
@@ -107,14 +119,12 @@
                 </span>
                 Close
               </button>
-              <div class="region region-navigation">
-                <ul class="au-link-list">
-                  <li><a href="#" class="active-trail">Home</a></li>
-                  <li><a href="#">Health topics</a></li>
-                  <li><a href="#">Initiatives and programs</a></li>
-                  <li><a href="#">Resources</a></li>
-                </ul>
-              </div>
+              <ul class="au-link-list">
+                <li><a href="#" class="active-trail">Home</a></li>
+                <li><a href="#">Health topics</a></li>
+                <li><a href="#">Initiatives and programs</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
               <div class="au-main-nav__focus-trap-bottom"></div>
             </div>
           </div>
@@ -204,105 +214,437 @@
 
       <div class="col-sm-4 col-md-3">
         <div class="health-facet">
-  <h2 class="au-display-sm">Audience</h2>
-  <div id="interested-in" class="form-checkboxes">
+  <h2 class="au-display-sm">Topics</h2>
+  <div id="interested-in" class="health-facet__list">
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-1"
-             name="submitted[is_this_feedback_for]"
-             value="Dinosaurs"
+      <input type="checkbox" id="topic-1"
+             name="topic"
+             value="1"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-1">
-        General public
-      </label>
+      <label class="au-control-input__text" for="topic-1">Aboriginal and Torres Strait Islander health (25)</label>
     </div>
 
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-2"
-             name="submitted[is_this_feedback_for]"
-             value="Birds"
+      <input type="checkbox" id="topic-2"
+             name="topic"
+             value="2"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-2">
-        Health professional
-      </label>
+      <label class="au-control-input__text" for="topic-2">About the department (164)</label>
     </div>
 
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-3"
+             name="topic"
+             value="3"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-3">Aged care (35)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-4"
+             name="topic"
+             value="4"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-4">Alcohol (29)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-5"
+             name="topic"
+             value="5"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-5">Bladder and bowel (11)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-6"
+             name="topic"
+             value="6"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-6">Cancer (5)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-7"
+             name="topic"
+             value="7"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-7">Children's health (44)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-8"
+             name="topic"
+             value="8"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-8">Chronic conditions (7)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-9"
+             name="topic"
+             value="9"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-9">Communicable diseases (6)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-10"
+             name="topic"
+             value="10"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-10">Culturally and linguistically diverse health (1)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-11"
+             name="topic"
+             value="11"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-11">Drugs (27)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-12"
+             name="topic"
+             value="12"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-12">Ear health (2)</label>
+    </div>
   </div>
+
+  <script language="JavaScript">
+    $(document).ready(function () {
+      healthFacetShowMore('.health-facet', 8);
+    });
+  </script>
 </div>
+
+
         <div class="health-facet">
-  <h2 class="au-display-sm">Audience</h2>
-  <div id="interested-in" class="form-checkboxes">
+  <h2 class="au-display-sm">Topics</h2>
+  <div id="interested-in" class="health-facet__list">
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-1"
-             name="submitted[is_this_feedback_for]"
-             value="Dinosaurs"
+      <input type="checkbox" id="topic-1"
+             name="topic"
+             value="1"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-1">
-        General public
-      </label>
+      <label class="au-control-input__text" for="topic-1">Aboriginal and Torres Strait Islander health (25)</label>
     </div>
 
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-2"
-             name="submitted[is_this_feedback_for]"
-             value="Birds"
+      <input type="checkbox" id="topic-2"
+             name="topic"
+             value="2"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-2">
-        Health professional
-      </label>
+      <label class="au-control-input__text" for="topic-2">About the department (164)</label>
     </div>
 
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-3"
+             name="topic"
+             value="3"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-3">Aged care (35)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-4"
+             name="topic"
+             value="4"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-4">Alcohol (29)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-5"
+             name="topic"
+             value="5"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-5">Bladder and bowel (11)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-6"
+             name="topic"
+             value="6"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-6">Cancer (5)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-7"
+             name="topic"
+             value="7"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-7">Children's health (44)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-8"
+             name="topic"
+             value="8"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-8">Chronic conditions (7)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-9"
+             name="topic"
+             value="9"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-9">Communicable diseases (6)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-10"
+             name="topic"
+             value="10"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-10">Culturally and linguistically diverse health (1)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-11"
+             name="topic"
+             value="11"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-11">Drugs (27)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-12"
+             name="topic"
+             value="12"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-12">Ear health (2)</label>
+    </div>
   </div>
+
+  <script language="JavaScript">
+    $(document).ready(function () {
+      healthFacetShowMore('.health-facet', 8);
+    });
+  </script>
 </div>
+
+
         <div class="health-facet">
-  <h2 class="au-display-sm">Audience</h2>
-  <div id="interested-in" class="form-checkboxes">
+  <h2 class="au-display-sm">Topics</h2>
+  <div id="interested-in" class="health-facet__list">
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-1"
-             name="submitted[is_this_feedback_for]"
-             value="Dinosaurs"
+      <input type="checkbox" id="topic-1"
+             name="topic"
+             value="1"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-1">
-        General public
-      </label>
+      <label class="au-control-input__text" for="topic-1">Aboriginal and Torres Strait Islander health (25)</label>
     </div>
 
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-2"
-             name="submitted[is_this_feedback_for]"
-             value="Birds"
+      <input type="checkbox" id="topic-2"
+             name="topic"
+             value="2"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-2">
-        Health professional
-      </label>
+      <label class="au-control-input__text" for="topic-2">About the department (164)</label>
     </div>
 
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-3"
+             name="topic"
+             value="3"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-3">Aged care (35)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-4"
+             name="topic"
+             value="4"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-4">Alcohol (29)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-5"
+             name="topic"
+             value="5"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-5">Bladder and bowel (11)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-6"
+             name="topic"
+             value="6"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-6">Cancer (5)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-7"
+             name="topic"
+             value="7"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-7">Children's health (44)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-8"
+             name="topic"
+             value="8"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-8">Chronic conditions (7)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-9"
+             name="topic"
+             value="9"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-9">Communicable diseases (6)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-10"
+             name="topic"
+             value="10"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-10">Culturally and linguistically diverse health (1)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-11"
+             name="topic"
+             value="11"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-11">Drugs (27)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-12"
+             name="topic"
+             value="12"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-12">Ear health (2)</label>
+    </div>
   </div>
+
+  <script language="JavaScript">
+    $(document).ready(function () {
+      healthFacetShowMore('.health-facet', 8);
+    });
+  </script>
 </div>
+
+
         <div class="health-facet">
-  <h2 class="au-display-sm">Audience</h2>
-  <div id="interested-in" class="form-checkboxes">
+  <h2 class="au-display-sm">Topics</h2>
+  <div id="interested-in" class="health-facet__list">
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-1"
-             name="submitted[is_this_feedback_for]"
-             value="Dinosaurs"
+      <input type="checkbox" id="topic-1"
+             name="topic"
+             value="1"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-1">
-        General public
-      </label>
+      <label class="au-control-input__text" for="topic-1">Aboriginal and Torres Strait Islander health (25)</label>
     </div>
 
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-2"
-             name="submitted[is_this_feedback_for]"
-             value="Birds"
+      <input type="checkbox" id="topic-2"
+             name="topic"
+             value="2"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-2">
-        Health professional
-      </label>
+      <label class="au-control-input__text" for="topic-2">About the department (164)</label>
     </div>
 
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-3"
+             name="topic"
+             value="3"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-3">Aged care (35)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-4"
+             name="topic"
+             value="4"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-4">Alcohol (29)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-5"
+             name="topic"
+             value="5"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-5">Bladder and bowel (11)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-6"
+             name="topic"
+             value="6"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-6">Cancer (5)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-7"
+             name="topic"
+             value="7"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-7">Children's health (44)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-8"
+             name="topic"
+             value="8"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-8">Chronic conditions (7)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-9"
+             name="topic"
+             value="9"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-9">Communicable diseases (6)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-10"
+             name="topic"
+             value="10"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-10">Culturally and linguistically diverse health (1)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-11"
+             name="topic"
+             value="11"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-11">Drugs (27)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-12"
+             name="topic"
+             value="12"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-12">Ear health (2)</label>
+    </div>
   </div>
+
+  <script language="JavaScript">
+    $(document).ready(function () {
+      healthFacetShowMore('.health-facet', 8);
+    });
+  </script>
 </div>
+
+
       </div>
 
       <div class="col-sm-8 col-md-9">
@@ -315,7 +657,7 @@
                 <div class="health-search__form__input-wrapper">
                   <div class="au-form__item">
                     <label class="au-sronly" for="search-field">Search</label>
-                    <input placeholder="Search this list"
+                    <input placeholder="Search this website"
                            class="health-search__form__input au-text-input au-text-input au-text-input--block ui-autocomplete-input"
                            size="30" type="text" id="search-field" name="funnelback_search_field" value=""
                            maxlength="128" autocomplete="off">
@@ -323,7 +665,13 @@
                   <div class="health-loading"></div>    </div>
                 <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
               </form>
-            </div>          </form>
+            </div>
+            
+            <script language="JavaScript">
+              $(document).ready(function () {
+                healthSearchAutocomplete('#search-field', dinosaurData);
+              });
+            </script>          </form>
 
           <div class="col-xs-12 standard-gap">
             <span>Filters applied:</span>
