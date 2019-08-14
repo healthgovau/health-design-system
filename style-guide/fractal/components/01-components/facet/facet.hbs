@@ -1,25 +1,107 @@
 <div class="health-facet">
-  <h2 class="au-display-sm">Audience</h2>
-  <div id="interested-in" class="form-checkboxes">
+  <h2 class="au-display-sm">Topics</h2>
+  <div id="interested-in" class="health-facet__list">
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-1"
-             name="submitted[is_this_feedback_for]"
-             value="Dinosaurs"
+      <input type="checkbox" id="topic-1"
+             name="topic"
+             value="1"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-1">
-        General public
-      </label>
+      <label class="au-control-input__text" for="topic-1">Aboriginal and Torres Strait Islander health (25)</label>
     </div>
 
     <div class="au-control-input au-control-input--compact au-control-input--block">
-      <input type="checkbox" id="interested-in-2"
-             name="submitted[is_this_feedback_for]"
-             value="Birds"
+      <input type="checkbox" id="topic-2"
+             name="topic"
+             value="2"
              class="au-control-input__input"/>
-      <label class="au-control-input__text" for="interested-in-2">
-        Health professional
-      </label>
+      <label class="au-control-input__text" for="topic-2">About the department (164)</label>
     </div>
 
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-3"
+             name="topic"
+             value="3"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-3">Aged care (35)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-4"
+             name="topic"
+             value="4"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-4">Alcohol (29)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-5"
+             name="topic"
+             value="5"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-5">Bladder and bowel (11)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-6"
+             name="topic"
+             value="6"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-6">Cancer (5)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-7"
+             name="topic"
+             value="7"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-7">Children's health (44)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-8"
+             name="topic"
+             value="8"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-8">Chronic conditions (7)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-9"
+             name="topic"
+             value="9"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-9">Communicable diseases (6)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-10"
+             name="topic"
+             value="10"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-10">Culturally and linguistically diverse health (1)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-11"
+             name="topic"
+             value="11"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-11">Drugs (27)</label>
+    </div>
+
+    <div class="au-control-input au-control-input--compact au-control-input--block">
+      <input type="checkbox" id="topic-12"
+             name="topic"
+             value="12"
+             class="au-control-input__input"/>
+      <label class="au-control-input__text" for="topic-12">Ear health (2)</label>
+    </div>
   </div>
+
+  <script language="JavaScript">
+    $(document).ready(function () {
+      healthFacetShowMore('.health-facet', 8);
+    });
+  </script>
 </div>
+

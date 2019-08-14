@@ -11,7 +11,9 @@
       "isVisible": false
     },
     "search": {
-      "placeholder": "Search this list"
+      "placeholder": "Search this website",
+      "global": false,
+      "id": "search-field"
     }
   }
 }

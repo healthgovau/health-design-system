@@ -3,11 +3,18 @@
 <div class="au-body">
 
   {{ render '@header' }}
-  {{ render '@main-nav' }}
   {{> @sub-header }}
   {{ render '@toolbar' }}
 
   <div class="container not-full-width">
+    <div class="row">
+
+      <div class="col-xs-12">
+        {{ render '@filter' }}
+      </div>
+
+    </div>
+
     <div class="row">
 
       <div class="col-sm-4 col-md-3">
@@ -48,7 +55,7 @@
       </div>
 
     </div>
-  </div>
+  </>
 
   {{ render '@something-wrong' }}
 

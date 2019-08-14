@@ -13,18 +13,11 @@
         </div>
       </div>
       <div class="col-sm-7">
-        <div class="text--align-right">
-          <h3 class="au-sronly">Sub menu</h3>
-          <ul class="au-link-list au-link-list--inline">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Ministers</a></li>
-            <li><a href="#">Media centre</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
+        {{ render '@sub-nav' }}
         {{ render '@search' }}
       </div>
     </div>
   </div>
 </header>
+
+{{ render '@main-nav' }}
