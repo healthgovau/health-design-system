@@ -127,34 +127,4 @@
     display: inline;
   }
 
-  // Number next to a heading.
-  &--numbered-heading {
-    &__number, p#{&}__number {
-      float: left;
-      @include AU-space(margin-right, 1.25unit);
-    }
-    &__heading {
-      display: inline;
-    }
-  }
-
-}
-
-// Anchor helpers.
-// When hover on a heading, show the ID of the heading.
-// Logged in users only, in content only.
-body.logged-in {
-  .region-content {
-    h2, h3, h4, h5, h6 {
-      position: relative;
-      .anchor-helper {
-        font-size: 14px;
-        position: absolute;
-        top: -14px;
-        left: 0;
-        color: grey;
-        font-weight: normal;
-      }
-    }
-  }
 }

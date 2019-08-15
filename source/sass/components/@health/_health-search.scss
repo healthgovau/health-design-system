@@ -127,6 +127,7 @@
     }
 
     // For Notes
+    // @todo Move into health theme.
     &--notes {
       .health-search-result__link-title {
         &:after {
@@ -150,19 +151,6 @@
 form[class*='col-'].health-search__form {
   .health-search__form__submit {
     right: 12px;
-  }
-}
-
-// In-page/view search
-.au-grid {
-  // @todo Drupal specific, use semantic class instead.
-  .page-content {
-    .search-api-page-results {
-      .search-performance {
-        @include health-fontgrid( md );
-        @include AU-space( margin-bottom, 1.5unit );
-      }
-    }
   }
 }
 

@@ -44,13 +44,3 @@
   }
 
 }
-
-// Hack to make our filter list checkboxes not have a margin at the top because they don't have a label.
-.au-link-list li:first-of-type .au-control-input {
-  margin-top: 0;
-}
-
-// No borders on buttons plz.
-button {
-  border: none;
-}

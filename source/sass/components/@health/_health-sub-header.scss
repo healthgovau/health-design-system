@@ -48,18 +48,5 @@
       padding-top: 0;
     }
 
-    // Program logo - CHECK
-    // @todo Revisit this.
-    .field-name-field-image-featured .field-item {
-      display: none; // Hide for mobile
-      @include AU-media(sm) {
-        display: block;
-        @include AU-space('padding', 2unit 0 0 0);
-        text-align: center;
-        img {
-          max-width: 75%;
-        }
-      }
-    }
   }
 }

@@ -62,57 +62,6 @@
     }
   }
 
-  // Prevent the contextual links wrapper from creating a margin above the following element.
-  .contextual-links-wrapper + * {
-    margin-top: 0;
-  }
-
-  // Override external link icon with font awesome.
-  a[rel~='external'], &.au-body--dark a[rel~='external']{
-    &:after, &:hover:after {
-      display: inline-block;
-      background-image: none;
-      content: "\f08e";
-      font-family: FontAwesome;
-      font-size: small;
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: none;
-      z-index: 1;
-      margin-left: 5px;
-    }
-  }
-
-  // Blockquote.
-  blockquote {
-
-    * + & {
-      @include AU-space('margin-top', 1.5unit);
-    }
-
-    @include AU-space('padding', .75unit .75unit .75unit 1.25unit);
-    background-size: 22px;
-    background-position: 0px 16px;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-image: AU-svguri('<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#{$AU-color-foreground-text}" d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"></path></svg>');
-
-    font-size: 1.1em;
-
-    @include AU-media(sm) {
-      @include AU-space('padding', .75unit .75unit .75unit 3unit);
-      background-size: 25px;
-    }
-  }
-
-  // Fieldsets.
-  fieldset {
-    .fieldset-legend {
-      @include AU-space('margin', .25unit);
-      @include AU-fontgrid('md');
-    }
-  }
-
   // Hide fields when printing.
   .print--hide {
     @media print {
@@ -138,10 +87,6 @@
   // IE 11.
   main, aside {
     display: block;
-  }
-
-  i {
-    font-style: normal;
   }
 
 }

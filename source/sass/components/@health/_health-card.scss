@@ -179,17 +179,6 @@
     p {
       max-width: 75%;
     }
-
-    // Add external icon to field-link-internal if the link is external.
-    &[rel~='external'] {
-      &:after {
-        content: '' !important;
-        display: none !important;
-      }
-      .health-card__title {
-        @extend a[rel~='external'];
-      }
-    }
   }
 
   // Resource.

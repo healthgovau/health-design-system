@@ -41,14 +41,6 @@
       padding: 0;
     }
   }
-  .region-header {
-    width: 100%;
-    @include AU-media(sm) {
-      max-width: 420px;
-      @include AU-space('margin-top', -.5unit);
-      float: right;
-    }
-  }
 
   &--dark {
     background-color: $colour-primary-blue;

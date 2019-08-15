@@ -105,16 +105,6 @@ ul {
   }
 }
 
-// List items shouldn't be 100% as it is too long and hard to read, just like p tags.
-.region-content {
-  ol,
-  ul:not(.health-listing){
-    li {
-      max-width: $AU-maxwidth;
-    }
-  }
-}
-
 .au-body {  
   ul.health-card-list {
     li {

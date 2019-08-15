@@ -1,0 +1,7 @@
+.health-separator {
+  border-top: $health-borderize--very-thin;
+  @include AU-space('margin-top', 3unit);
+  @include AU-media(sm){
+    @include AU-space('margin-top', 4unit);
+  }
+}
