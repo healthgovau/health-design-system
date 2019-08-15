@@ -7,6 +7,8 @@ Design System for Australian Government Department of Health is built on top of 
 ## Style Guide
 View the [Style Guide](https://healthgovau.github.io/health-design-system/) for documentation on how to use the Health Design System components.
 
+The style guide is built using [Fractal](https://github.com/frctl/fractal).
+
 ## Dependencies
 * [jQuery v3+](https://jquery.com/)
 
