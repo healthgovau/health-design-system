@@ -4,12 +4,13 @@
 
 Design System for Australian Government Department of Health is built on top of the [DTA Design System](https://designsystem.gov.au/).
 
-## Style guide
-View the [style guide](https://healthgovau.github.io/health-design-system/) for documentation on how to use the Health Design System components.
+## Style Guide
+View the [Style Guide](https://healthgovau.github.io/health-design-system/) for documentation on how to use the Health Design System components.
 
-## Optional dependencies
-Javascript:
+## Dependencies
 * [jQuery v3+](https://jquery.com/)
+
+### Optional
 * [jQuery UI autocomplete](https://jqueryui.com/download/#!version=1.12.1&components=110000010001000000100000100000000000000000000000)
 * [LazyLoad](https://github.com/verlok/lazyload)
 * [FancyBox](http://fancyapps.com/fancybox/3/)
@@ -17,7 +18,8 @@ Javascript:
 
 These are included in the [javascript library](js/libraries) folder for convenience.
 
-Disable any of the libraries functionality by simply not including the library.
+Disable any of the optional libraries and related functionality by simply not including the library.
+You can find information on what functionality is provided by each library in the relevant component of the [Style Guide](https://healthgovau.github.io/health-design-system/).
 
 ## Installation
 
