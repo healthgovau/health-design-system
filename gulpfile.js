@@ -6,7 +6,6 @@ const concat        = require("gulp-concat");
 const minify        = require('gulp-minify');
 const cleanCss      = require('gulp-clean-css');
 const header        = require('gulp-header');
-const filelist      = require('gulp-filelist');
 const autoprefixer  = require('gulp-autoprefixer');
 
 const pkg         = require('./package.json');
