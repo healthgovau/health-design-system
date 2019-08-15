@@ -1,3 +1,4 @@
+var health = health || {};
 
 (function ($) {
 
@@ -11,7 +12,7 @@
    *
    * @see https://api.jqueryui.com/autocomplete/
    */
-  function healthSearchAutocomplete(selector, source) {
+  health.searchAutocomplete = function (selector, source) {
     $(selector).once('healthSearchAutocomplete').autocomplete({
       source: source,
       minLength: 2,
@@ -32,7 +33,7 @@
         $(event.target).parents('form').find('.health-loading').toggleClass('health-loading--active');
       }
     });
-  }
+  };
 
   /**
    * Move the search box depending on if we are looking at mobile or desktop.
@@ -57,7 +58,7 @@
    * @param selector
    * @param limit
    */
-  function healthFacetShowMore(selector, limit) {
+  health.facetShowMore = function(selector, limit) {
     $(selector).once('healthFacetShowMore').each(function() {
       var
         limit_css = limit - 1,
@@ -83,7 +84,7 @@
         }).insertAfter(facet.find('.health-facet__list'));
       });
     });
-  }
+  };
 
   $(document).ready(function () {
 
@@ -97,7 +98,7 @@
 
     // Copy across the elements from the sub menu into the main nav.
     // Only show them in the mobile menu.
-    $('.health-sub-nav li').clone().insertAfter('.au-main-nav ul li:last-of-type').addClass('au-main-nav--mobile-only');
+    $('.health-sub-nav ul.au-link-list li').clone().insertAfter('.au-main-nav ul li:last-of-type').addClass('au-main-nav--mobile-only');
 
     // Search button handler.
     $('.au-main-nav__toggle--search').click(function(e) {
@@ -115,5 +116,5 @@
     $('.region-navigation #search-api-page-search-form-default-search--2').addClass('col-xs-12');
 
   });
-  
+
 })(jQuery);
