@@ -186,9 +186,9 @@
     border-top-width: 6px;
     border-top-style: solid;
     border-top-color: $colour-light-dark;
-    @include AU-space(padding, 1unit 0);
+    @include AU-space(padding, 1unit 0 0 0);
     @include AU-media(sm) {
-      @include AU-space(padding, 2unit 0);
+      @include AU-space(padding, 2unit 0 0 0);
     }
     display: inline-block;
   }
