@@ -1,0 +1,80 @@
+{{ render '@skip' }}
+
+{{ render '@release-status--launch' }}
+
+<div class="au-body">
+
+  {{ render '@header' }}
+  {{> @sub-header }}
+  {{ render '@toolbar' }}
+
+  <div class="container not-full-width">
+
+    <div class="row">
+
+      <div class="col-sm-4 au-side-nav--right">
+        {{ render '@side-nav' }}
+      </div>
+
+      <div class="col-sm-8">
+
+        <p>
+          Call us day or night for all your dinosaur escaping problems.
+        </p>
+
+        <div class="health-field__label">
+          Phone number:
+        </div>
+        <div class="health-field__item">
+          <a href="#">1300 123 456</a>
+        </div>
+
+        <div class="health-field__label">
+          Email address:
+        </div>
+        <div class="health-field__item">
+          <a href="#">info@dinosaurs-r-us.com.au</a>
+        </div>
+
+        <div class="health-field__label">
+          Website:
+        </div>
+        <div class="health-field__item">
+          <a href="#">www.dinosaurs-r-us.com.au</a>
+        </div>
+
+        <div class="health-field__label">Postal addresses:</div>
+        <div class="health-field__item">
+          <div>GPO Box 1234</div>
+          <div>Sydney NSW 2001</div>
+        </div>
+
+        <div class="health-field__label">Street addresses:</div>
+        <div class="health-field__item">
+          <div>1 Dinosaur Lane</div>
+          <div>Sydney NSW 2001</div>
+        </div>
+
+        {{ render '@separator' }}
+
+        {{> @field--inline---aligned }}
+
+        <div class="health-field__label health-field__label--inline">Tags:</div>
+        <div class="health-field__item">
+          <ul class="au-tags au-tags--inline">
+            <li><a href="#">Dinosaurs</a></li>
+            <li><a href="#">Theropod</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {{ render '@something-wrong' }}
+
+  {{> @back-to-top }}
+
+</div>
+
+{{ render '@footer' }}

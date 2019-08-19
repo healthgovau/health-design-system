@@ -1,0 +1,37 @@
+{
+  "title": "Field",
+  "context": {
+    "field": {
+      "label": "Genus",
+      "item": "Tyranasuarus Rex"
+    }
+  },
+  "variants": [
+    {
+      "name": "Label light",
+      "context": {
+        "field": {
+          "modifier": "health-field__label--light"
+        }
+      }
+    },
+    {
+      "name": "Inline",
+      "context": {
+        "field": {
+          "modifier": "health-field__label--inline"
+        }
+      }
+    },
+    {
+      "name": "Inline - Wide",
+      "context": {
+        "field": {
+          "label": "Last updated and reviewed",
+          "item": "20 June 2019",
+          "modifier": "health-field__label--inline--wide"
+        }
+      }
+    }
+  ]
+}

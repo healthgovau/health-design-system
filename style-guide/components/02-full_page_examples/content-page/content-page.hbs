@@ -118,14 +118,11 @@
 
         {{ render '@separator' }}
 
-        <div class="field row">
-          <div class="field__label col-sm-3">Last updated:</div>
-          <div class="field__item col-sm-9">16 May 2019</div>
-        </div>
+        {{> @field--inline---aligned }}
 
-        <div class="field row">
-          <div class="field__label col-sm-3">Tags:</div>
-          <ul class="field__item col-sm-9 au-tags au-tags--inline">
+        <div class="health-field__label health-field__label--inline-aligned">Tags:</div>
+        <div class="health-field__item">
+          <ul class="au-tags au-tags--inline">
             <li><a href="#">Dinosaurs</a></li>
             <li><a href="#">Theropod</a></li>
           </ul>

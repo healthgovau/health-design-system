@@ -1,59 +1,51 @@
-// Fields
-.field {
-
-  // Provide margin on top.
+.health-field__label {
   * + & {
     @include AU-space(margin-top, 1.5unit);
   }
+  font-weight: bold;
 
-  .field + &.field-label-hidden,
-  .metadata + &.field-label-hidden
-  {
-    @include AU-space(margin-top, .5unit);
+  &--light {
+    font-weight: normal;
   }
-
-  @include AU-clearfix();
-
-  .field__label, .field-label, &.field__label {
-    font-weight: bold;
-    &--light {
-      font-weight: normal;
-    }
-  }
-
-  &__item + &__label {
-    @include AU-space(margin-top, .5unit);
-  }
-
-  // Special case of multiple addresses in one field.
-  .health-maps--google + .field__label {
-    @include AU-space(margin-top, 1.5unit);
-  }
-}
-
-// Metadata, such as dates and types, used mainly in listings.
-.metadata {
 
   &--inline {
-
-    @include AU-space(margin-top, .5unit);
-
-    .field {
-      @include AU-space(margin-top, 0);
+    @include AU-media(sm) {
+      float: left;
+      width: 10em;
     }
-
-    > div, > span {
-      color: $colour-minorText;
-      display: inline-block;
-      border-left: 1px solid $colour-minorText;
-      @include AU-space(margin-left, .5unit);
-      @include AU-space(padding-left, .5unit);
-    }
-
-    > :first-child {
-      border-left: none;
-      margin-left: 0;
-      padding-left: 0;
+  }
+  &--inline--wide {
+    @include AU-media(sm) {
+      float: left;
+      width: 15em;
     }
   }
 }
+
+.health-field__item {
+  * + .health-field__label + & {
+    margin-top: 0;
+  }
+  * + .health-field__label--inline + &,
+  * + .health-field__label--inline--wide + &
+  {
+    @include AU-media(sm) {
+      @include AU-space(margin-top, 1.5unit);
+    }
+  }
+  & + & {
+    @include AU-space(margin-top, .5unit);
+  }
+  p + & {
+    @include AU-space(margin-top, 1unit);
+  }
+  .health-metadata + & {
+    @include AU-space(margin-top, .5unit);
+  }
+}
+
+// Special case of multiple addresses in one field.
+.health-maps--google + .health-field__label {
+  @include AU-space(margin-top, 1.5unit);
+}
+
