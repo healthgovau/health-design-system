@@ -11,7 +11,7 @@
       "name": "Label light",
       "context": {
         "field": {
-          "modifier": "health-field__label--light"
+          "modifier": "health-field--light"
         }
       }
     },
@@ -19,7 +19,7 @@
       "name": "Inline",
       "context": {
         "field": {
-          "modifier": "health-field__label--inline"
+          "modifier": "health-field--inline"
         }
       }
     },
@@ -29,7 +29,7 @@
         "field": {
           "label": "Last updated and reviewed",
           "item": "20 June 2019",
-          "modifier": "health-field__label--inline--wide"
+          "modifier": "health-field--inline--wide"
         }
       }
     }

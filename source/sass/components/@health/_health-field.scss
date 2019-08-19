@@ -1,46 +1,50 @@
-.health-field__label {
+.health-field {
+  clear: both;
+
   * + & {
     @include AU-space(margin-top, 1.5unit);
   }
-  font-weight: bold;
 
-  &--light {
-    font-weight: normal;
+  &--label-hidden {
+    * + & {
+      @include AU-space(margin-top, .5unit);
+    }
   }
 
   &--inline {
-    @include AU-media(sm) {
-      float: left;
-      width: 10em;
+    .health-field__label {
+      @include AU-media(sm) {
+        float: left;
+        width: 10em;
+      }
     }
   }
   &--inline--wide {
-    @include AU-media(sm) {
-      float: left;
-      width: 15em;
+    .health-field__label {
+      @include AU-media(sm) {
+        float: left;
+        width: 15em;
+      }
     }
   }
-}
 
-.health-field__item {
-  * + .health-field__label + & {
-    margin-top: 0;
+  .health-field__label {
+    font-weight: bold;
   }
-  * + .health-field__label--inline + &,
-  * + .health-field__label--inline--wide + &
-  {
-    @include AU-media(sm) {
-      @include AU-space(margin-top, 1.5unit);
+
+  &.health-field--light {
+    .health-field__label {
+      font-weight: normal;
     }
   }
-  & + & {
-    @include AU-space(margin-top, .5unit);
-  }
-  p + & {
-    @include AU-space(margin-top, 1unit);
-  }
-  .health-metadata + & {
-    @include AU-space(margin-top, .5unit);
+
+  .health-field__item {
+    display: table;
+
+    .health-field__label + & {
+      margin-top: 0;
+    }
+
   }
 }
 

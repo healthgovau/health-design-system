@@ -12,7 +12,7 @@
     "field": {
       "label": "Last updated",
       "item": "20 June 2019",
-      "modifier": "health-field__label--inline"
+      "modifier": "health-field--inline"
     }
   }
 }
