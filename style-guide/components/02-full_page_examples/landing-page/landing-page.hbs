@@ -1,3 +1,5 @@
+{{ render '@skip' }}
+
 {{ render '@release-status--launch' }}
 
 <div class="au-body">
@@ -6,9 +8,13 @@
   {{ render '@toolbar' }}
 
   <div class="container-fluid full-width">
-    <div class="row">
-      <div class="container health-band">
-        {{ render '@callout--simple' }}
+    <div class="row standard-gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            {{ render '@callout--simple' }}
+          </div>
+        </div>
       </div>
       {{ render '@band--cards-call-to-action' }}
       {{ render '@band--cards-image' }}

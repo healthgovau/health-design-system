@@ -2,12 +2,6 @@
   "title": "Callout",
   "variants": [
     {
-      "name": "Simple",
-      "context": {
-        "modifier": "simple"
-      }
-    },
-    {
       "name": "Colour - Secondary",
       "context": {
         "modifier": "secondary"
@@ -23,6 +17,12 @@
       "name": "Colour - Success",
       "context": {
         "modifier": "success"
+      }
+    },
+    {
+      "name": "Simple",
+      "context": {
+        "modifier": "simple"
       }
     }
   ]
