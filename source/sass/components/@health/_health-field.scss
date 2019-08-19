@@ -1,5 +1,4 @@
 .health-field {
-  clear: both;
 
   * + & {
     @include AU-space(margin-top, 1.5unit);
@@ -11,25 +10,32 @@
     }
   }
 
-  &--inline {
-    .health-field__label {
-      @include AU-media(sm) {
-        float: left;
-        width: 10em;
-      }
-    }
-  }
+  &--inline,
   &--inline--wide {
     .health-field__label {
       @include AU-media(sm) {
         float: left;
-        width: 15em;
+      }
+    }
+    .health-field__item {
+      display: table;
+    }
+  }
+
+  &--inline {
+    .health-field__label {
+      @include AU-media(sm) {
+        width: 10em;
       }
     }
   }
 
-  .health-field__label {
-    font-weight: bold;
+  &--inline--wide {
+    .health-field__label {
+      @include AU-media(sm) {
+        width: 15em;
+      }
+    }
   }
 
   &.health-field--light {
@@ -38,13 +44,12 @@
     }
   }
 
-  .health-field__item {
-    display: table;
+  .health-field__label {
+    font-weight: bold;
+  }
 
-    .health-field__label + & {
-      margin-top: 0;
-    }
-
+  .health-metadata + & {
+    @include AU-space(margin-top, .5unit);
   }
 }
 

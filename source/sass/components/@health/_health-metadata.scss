@@ -8,13 +8,16 @@
     }
   }
 
-  &--inline {
+  &.health-metadata--inline {
 
-    .health-metadata__item {
+    .health-field {
       display: inline;
       border-left: 1px solid $colour-minorText;
       @include AU-space(margin-left, .5unit);
       @include AU-space(padding-left, .5unit);
+      .health-field__item {
+        display: inline;
+      }
     }
 
     > :first-child {
