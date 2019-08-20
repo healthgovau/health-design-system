@@ -8,8 +8,8 @@
           $(el).parents('.image-wrapper')
             .removeClass('image-loading')
             .removeClass('image-wrapper');
-
-          bottomAlignImage($(el), $(el).parents('.health-image-text__image'));
+          // Fire off an event to listeners that this image has loaded.
+          $(el).trigger('lazyLoad_loaded', el);
         }
       });
     }
