@@ -1,0 +1,41 @@
+{
+  "title": "Page alerts",
+  "context": {
+    "pageAlert": {
+      "title": "Notice",
+      "text": "Remember to always tie up your dinosaur when you leave the house."
+    }
+  },
+  "variants": [
+    {
+      "name": "Success",
+      "context": {
+        "pageAlert": {
+          "title": "Submission successful",
+          "text": "Thanks for sending us information on your favourite dinosaur.",
+          "modifier": "au-page-alerts--success"
+        }
+      }
+    },
+    {
+      "name": "Warning",
+      "context": {
+        "pageAlert": {
+          "title": "Warning",
+          "text": "Dinosaurs are on the loose in Canberra!",
+          "modifier": "au-page-alerts--warning"
+        }
+      }
+    },
+    {
+      "name": "Error",
+      "context": {
+        "pageAlert": {
+          "title": "Error",
+          "text": "You cannot register your dinosaur as it is too big.",
+          "modifier": "au-page-alerts--error"
+        }
+      }
+    }
+  ]
+}
