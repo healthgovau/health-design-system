@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v0.1.0 */
+/*! @health.gov.au/health-design-system v1.0.0 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
@@ -5089,15 +5089,17 @@ ul.list--large--checklist > li {
       margin-top: 12px;
       margin-top: 0.75rem; } }
 
-.health-metadata--inline .health-metadata__item {
+.health-metadata.health-metadata--inline .health-field {
   display: inline;
   border-left: 1px solid #414141;
   margin-left: 8px;
   margin-left: 0.5rem;
   padding-left: 8px;
   padding-left: 0.5rem; }
+  .health-metadata.health-metadata--inline .health-field .health-field__item {
+    display: inline; }
 
-.health-metadata--inline > :first-child {
+.health-metadata.health-metadata--inline > :first-child {
   border-left: none;
   margin-left: 0;
   padding-left: 0; }

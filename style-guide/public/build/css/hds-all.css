@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v0.1.0 */
+/*! @health.gov.au/health-design-system v1.0.0 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
@@ -4090,7 +4090,8 @@ textarea.au-text-input {
   opacity: 0;
   filter: alpha(opacity=0);
   z-index: -1;
-  padding: 0; }
+  padding: 0;
+  border: 0; }
   @media print {
     .health-back-to-top {
       display: none; } }
@@ -4333,13 +4334,13 @@ textarea.au-text-input {
     border-top-width: 6px;
     border-top-style: solid;
     border-top-color: #e5e5e5;
-    padding: 16px 0;
-    padding: 1rem 0;
+    padding: 16px 0 0 0;
+    padding: 1rem 0 0 0;
     display: inline-block; }
     @media (min-width: 768px) {
       .health-card.health-card--resource {
-        padding: 32px 0;
-        padding: 2rem 0; } }
+        padding: 32px 0 0 0;
+        padding: 2rem 0 0 0; } }
   .health-card--solid {
     -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -4642,52 +4643,42 @@ ul.health-card-list {
   .health-facet__more {
     font-size: 0.8em; }
 
-* + .field {
+* + .health-field {
   margin-top: 24px;
   margin-top: 1.5rem; }
 
-.field + .field.field-label-hidden,
-.metadata + .field.field-label-hidden {
+* + .health-field--label-hidden {
   margin-top: 8px;
   margin-top: 0.5rem; }
 
-.field:before, .field:after {
-  content: " ";
+@media (min-width: 768px) {
+  .health-field--inline .health-field__label, .health-field--inline--wide .health-field__label {
+    float: left; } }
+
+.health-field--inline .health-field__item, .health-field--inline--wide .health-field__item {
   display: table; }
 
-.field:after {
-  clear: both; }
+@media (min-width: 768px) {
+  .health-field--inline .health-field__label {
+    width: 10em; } }
 
-.field .field__label, .field .field-label, .field.field__label {
+@media (min-width: 768px) {
+  .health-field--inline--wide .health-field__label {
+    width: 15em; } }
+
+.health-field.health-field--light .health-field__label {
+  font-weight: normal; }
+
+.health-field .health-field__label {
   font-weight: bold; }
-  .field .field__label--light, .field .field-label--light, .field.field__label--light {
-    font-weight: normal; }
 
-.field__item + .field__label {
+.health-metadata + .health-field {
   margin-top: 8px;
   margin-top: 0.5rem; }
 
-.field .health-maps--google + .field__label {
+.health-maps--google + .health-field__label {
   margin-top: 24px;
   margin-top: 1.5rem; }
-
-.metadata--inline {
-  margin-top: 8px;
-  margin-top: 0.5rem; }
-  .metadata--inline .field {
-    margin-top: 0; }
-  .metadata--inline > div, .metadata--inline > span {
-    color: #414141;
-    display: inline-block;
-    border-left: 1px solid #414141;
-    margin-left: 8px;
-    margin-left: 0.5rem;
-    padding-left: 8px;
-    padding-left: 0.5rem; }
-  .metadata--inline > :first-child {
-    border-left: none;
-    margin-left: 0;
-    padding-left: 0; }
 
 .au-body .health-file__icon {
   margin-right: 8px;
@@ -5089,6 +5080,29 @@ ul.list--large--checklist > li {
   height: 500px; }
   .au-body .health-maps--google * + img {
     margin-top: 0; }
+
+* + .health-metadata {
+  margin-top: 8px;
+  margin-top: 0.5rem; }
+  @media (min-width: 768px) {
+    * + .health-metadata {
+      margin-top: 12px;
+      margin-top: 0.75rem; } }
+
+.health-metadata.health-metadata--inline .health-field {
+  display: inline;
+  border-left: 1px solid #414141;
+  margin-left: 8px;
+  margin-left: 0.5rem;
+  padding-left: 8px;
+  padding-left: 0.5rem; }
+  .health-metadata.health-metadata--inline .health-field .health-field__item {
+    display: inline; }
+
+.health-metadata.health-metadata--inline > :first-child {
+  border-left: none;
+  margin-left: 0;
+  padding-left: 0; }
 
 .health-pager {
   text-align: center;
