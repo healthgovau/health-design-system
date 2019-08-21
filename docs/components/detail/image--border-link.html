@@ -139,14 +139,19 @@
     <div class="Prose Prose--condensed">
         
         <h1 id="lazy-load">Lazy load</h1>
-<p>Images should be lazy loaded to increase <a href="https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive">time to interactive</a>.</p>
+<p>Images should be lazy loaded to improve <a href="https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive">time to interactive</a>.</p>
 <p>Images should use width and height attributes.</p>
 <h2 id="reserving-space">Reserving space</h2>
 <p>To make sure the page doesn’t jump around as images are loaded, we reserve the space initially.</p>
 <p><code>max-width</code> is the original image width</p>
 <p><code>padding-top</code> is calculated as a percentage of height width <code>height / width * 100</code></p>
 <p>Requires <a href="https://github.com/verlok/lazyload">LazyLoad</a>, jQuery and <a href="/js/health/health.lazyload.js">health.lazyload.js</a>.</p>
-
+<h2 id="image-loaded-event">Image loaded event</h2>
+<p>When an image is loaded <code>lazyLoad_loaded</code> is fired on the image.</p>
+<p>To listen for this event, register an event listener to the image, for example</p>
+<code class="lang-javascript"><pre>$(<span class="hljs-string">'img[data-src]'</span>).on(<span class="hljs-string">'lazyLoad_loaded'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, element</span>) </span>{
+  <span class="hljs-comment">// do something</span>
+});</pre></code>
         
     </div>
 </div>
@@ -2477,6 +2482,118 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-page-alerts">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Page Alerts</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-alerts--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-alerts--success.html" data-pjax>
+                <span>Success</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-alerts--warning.html" data-pjax>
+                <span>Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-alerts--error.html" data-pjax>
+                <span>Error</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
