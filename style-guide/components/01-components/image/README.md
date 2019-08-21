@@ -1,6 +1,6 @@
 # Lazy load
 
-Images should be lazy loaded to increase [time to interactive](https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive).
+Images should be lazy loaded to improve [time to interactive](https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive).
 
 Images should use width and height attributes.
 
@@ -14,3 +14,14 @@ To make sure the page doesn't jump around as images are loaded, we reserve the s
 
 Requires [LazyLoad](https://github.com/verlok/lazyload), jQuery and [health.lazyload.js](/js/health/health.lazyload.js).
 
+## Image loaded event
+
+When an image is loaded `lazyLoad_loaded` is fired on the image.
+
+To listen for this event, register an event listener to the image, for example
+
+```javascript
+$('img[data-src]').on('lazyLoad_loaded', function(event, element) {
+  // do something
+});
+```
