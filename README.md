@@ -1,7 +1,5 @@
 # Health Design System
 
-**This a work in progress and is not yet ready for use outside health.gov.au.**
-
 Design System for Australian Government Department of Health is built on top of the [DTA Design System](https://designsystem.gov.au/).
 
 ## Style Guide
