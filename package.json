@@ -69,13 +69,13 @@
     },
     "sass": {
       "modules": false,
-      "location": "sass/vendors/",
+      "location": "source/sass/vendors/",
       "name": "govau-ds.scss"
     },
     "js": {
       "minified": true,
       "modules": false,
-      "location": "js/src",
+      "location": "source/js/src",
       "name": "govau-ds.js"
     },
     "react": {
