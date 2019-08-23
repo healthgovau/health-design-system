@@ -127,16 +127,22 @@ var health = health || {};
    * Move the search box depending on if we are looking at mobile or desktop.
    */
   function healthSearchResize() {
+    // Desktop
     if ($(window).width() > 769) {
       if ($('.au-main-nav .health-search--global').length !== 0) {
         $('.health-search--global').insertAfter('.health-sub-nav').show();
       }
       $('.health-facet').removeClass('health-facet--mobile-hidden');
-    } else {
+    }
+    // Mobile
+    else {
       if ($('.au-main-nav .health-search--global').length === 0) {
         $('.health-search--global').insertAfter('#main-nav-default').hide();
       }
-      $('.health-facet').addClass('health-facet--mobile-hidden');
+      // If mobile filters are closed, then hide the facets.
+      if (!$('.health-filter').hasClass('health-filter--open')) {
+        $('.health-facet').addClass('health-facet--mobile-hidden');
+      }
     }
   }
 
@@ -195,7 +201,7 @@ var health = health || {};
     });
 
     // Filter toggles.
-    $('.health-filter__title').click(function (e) {
+    $('.health-filter').click(function (e) {
       $('.health-facet').toggleClass('health-facet--mobile-hidden');
       $(this).toggleClass('health-filter--open');
     });
