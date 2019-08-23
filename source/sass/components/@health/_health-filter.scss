@@ -3,16 +3,16 @@
   @include AU-media(sm) {
     display: none;
   }
+
+  &.health-filter--open {
+    @include AU-space(margin-bottom, 1unit)
+  }
+
   .health-filter__title {
-
     background: $colour-lighter;
-
     @include AU-space('padding', .5unit);
     @include AU-media(sm) {
       display: none;
-    }
-    &.health-filter--open {
-      @include AU-space(margin-bottom, 1unit)
     }
   }
 }
