@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.0.2 */
+/*! @health.gov.au/health-design-system v1.0.3 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
@@ -4335,8 +4335,7 @@ textarea.au-text-input {
     border-top-style: solid;
     border-top-color: #e5e5e5;
     padding: 16px 0 0 0;
-    padding: 1rem 0 0 0;
-    display: inline-block; }
+    padding: 1rem 0 0 0; }
     @media (min-width: 768px) {
       .health-card.health-card--resource {
         padding: 32px 0 0 0;
