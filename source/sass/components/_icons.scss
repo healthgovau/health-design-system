@@ -4,21 +4,29 @@
  */
 
 .svg-inline--fa {
+  display: inline-block;
+
   svg {
-    display: inline-block;
     font-size: inherit;
     height: 1em;
     overflow: visible;
     vertical-align: -.125em;
     fill: currentColor;
   }
+
   &.fa-fw svg {
     width: 1.25em;
   }
+
   &.fa-2x svg {
     font-size: 2em;
   }
+
   &.fa-3x svg {
     font-size: 3em;
+  }
+
+  &.fa-left {
+    @include AU-space(margin-right, .35unit);
   }
 }
