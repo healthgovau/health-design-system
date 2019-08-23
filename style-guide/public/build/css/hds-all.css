@@ -4647,6 +4647,9 @@ ul.health-card-list {
   margin-top: 24px;
   margin-top: 1.5rem; }
 
+.health-field + * {
+  clear: both; }
+
 * + .health-field--label-hidden {
   margin-top: 8px;
   margin-top: 0.5rem; }
@@ -4676,6 +4679,9 @@ ul.health-card-list {
   margin-top: 8px;
   margin-top: 0.5rem; }
 
+.health-field__item + .health-field__item {
+  clear: both; }
+
 .health-maps--google + .health-field__label {
   margin-top: 24px;
   margin-top: 1.5rem; }
@@ -4699,6 +4705,9 @@ ul.health-card-list {
   @media (min-width: 768px) {
     .health-filter {
       display: none; } }
+  .health-filter.health-filter--open {
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
   .health-filter .health-filter__title {
     background: #f1f1f2;
     padding: 8px;
@@ -4706,9 +4715,6 @@ ul.health-card-list {
     @media (min-width: 768px) {
       .health-filter .health-filter__title {
         display: none; } }
-    .health-filter .health-filter__title.health-filter--open {
-      margin-bottom: 16px;
-      margin-bottom: 1rem; }
 
 * + .health-figure {
   margin-top: 24px;
