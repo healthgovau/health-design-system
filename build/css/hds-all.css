@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.0.3 */
+/*! @health.gov.au/health-design-system v1.0.4 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
@@ -4726,7 +4726,7 @@ ul.health-card-list {
 .health-figure__image-link {
   display: block;
   position: relative; }
-  .health-figure__image-link__icon {
+  .health-figure__image-link .health-figure__image-link__icon {
     display: none; }
   .health-figure__image-link:hover .health-figure__image-link__icon, .health-figure__image-link:focus .health-figure__image-link__icon {
     display: block;
