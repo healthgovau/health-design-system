@@ -13,7 +13,7 @@ const fractal = module.exports = require('@frctl/fractal').create();
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'Health Design System (v1.0.4)');
+fractal.set('project.title', 'Health Design System (v1.0.5)');
 
 /*
  * Tell Fractal where to look for components.
