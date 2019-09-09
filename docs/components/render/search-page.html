@@ -193,6 +193,15 @@
   </div>
 </div>
 
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.tooltip('#health-toolbar__share', {
+      html: document.getElementById("health-share-menu"),
+      trigger: 'click',
+      appendTo: $("#health-toolbar__share").parent('li')[0]
+    });
+  });
+</script>
 
   <div class="container not-full-width">
     <div class="row">

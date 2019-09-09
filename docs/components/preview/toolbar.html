@@ -12,6 +12,7 @@
   <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
   <script src="../../build/js/libraries/jquery.once.min.js"></script>
   <script src="../../build/js/libraries/lazyload.min.js"></script>
+  <script src="../../build/js/libraries/tippy.all.min.js"></script>
   <script src="../../data.js"></script>
   <script src="../../build/js/hds.js"></script>
   <title>Preview Layout</title>
@@ -66,6 +67,15 @@
   </div>
 </div>
 
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.tooltip('#health-toolbar__share', {
+      html: document.getElementById("health-share-menu"),
+      trigger: 'click',
+      appendTo: $("#health-toolbar__share").parent('li')[0]
+    });
+  });
+</script>
     </div>
   </div>
 </div>
