@@ -69,16 +69,7 @@
     }
   }
 
-  // For survey only - Uncomment when implmenting
-  // #owInviteSnippet {
-  //   font-family: $AU-font-system;
-  //   a[rel~='external'] svg {
-  //     margin-left: 5px;
-  //   }
-  // }
-
   @media print {
-
     a[href]:after {
       content: '' !important;
     }
