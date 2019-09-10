@@ -7,8 +7,12 @@
 
   @include AU-space(padding, 1unit);
 
+  // Spacing.
   * + & {
     @include AU-space(margin-top, 1unit);
+  }
+  .health-filter + & {
+    margin-top: 0;
   }
 
   &--mobile-hidden {
