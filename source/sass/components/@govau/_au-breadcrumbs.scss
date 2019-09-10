@@ -14,10 +14,5 @@
 
   @media print {
     display: block;
-    ol {
-      li:last-of-type {
-        display: none;
-      }
-    }
   }
 }

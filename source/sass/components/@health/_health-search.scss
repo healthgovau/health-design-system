@@ -32,6 +32,10 @@
       padding-bottom: 0;
       margin-top: 0;
     }
+
+    @media print {
+      display: none;
+    }
   }
 
   // Listing search
