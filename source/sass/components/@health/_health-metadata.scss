@@ -3,9 +3,6 @@
 
   * + & {
     @include AU-space(margin-top, .5unit);
-    @include AU-media(sm) {
-      @include AU-space(margin-top, .75unit);
-    }
   }
 
   &.health-metadata--inline {
