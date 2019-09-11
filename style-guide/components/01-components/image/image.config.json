@@ -13,21 +13,27 @@
     {
       "name": "Border",
       "context": {
-        "modifier": "image--border"
+        "image": {
+          "modifier": "image--border"
+        }
       }
     },
     {
       "name": "Link",
       "context": {
-        "modifier": "image--link",
-        "link": true
+        "image": {
+          "modifier": "image--link",
+          "link": true
+        }
       }
     },
     {
       "name": "Border link",
       "context": {
-        "modifier": "image--link image--border",
-        "link": true
+        "image": {
+          "modifier": "image--link image--border",
+          "link": true
+        }
       }
     }
   ]

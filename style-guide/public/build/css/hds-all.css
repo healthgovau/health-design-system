@@ -6276,15 +6276,13 @@ table {
     margin: 0; }
 
 .health-video {
-  max-width: 768px; }
+  display: inline-block; }
   * + .health-video {
     margin-top: 48px;
     margin-top: 3rem; }
   .health-video__preview {
     position: relative;
     line-height: 0; }
-    .health-video__preview__link {
-      display: inline-block; }
     .health-video__preview .health-video__preview__play-button {
       display: none;
       position: absolute;

@@ -56,7 +56,15 @@
     {
       "name": "Video listing",
       "context": {
-        "title": "Your stories"
+        "title": "Your stories",
+        "image": {
+          "link": true,
+          "url": "/images/trex_16x9.jpg",
+          "width": 800,
+          "height": 450,
+          "ratio": 56.25,
+          "modifier": "image--link image--border"
+        }
       }
     }
   ]

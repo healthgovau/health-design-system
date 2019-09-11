@@ -1,8 +1,8 @@
 
-{{#if modifier}}
-  <div class="{{modifier}}">
+{{#if image.modifier}}
+  <div class="{{image.modifier}}">
 {{/if}}
-{{#if link}}
+{{#if image.link}}
   <a href="#">
 {{/if}}
   <div class="image-outer">
@@ -16,9 +16,9 @@
     </div>
   </div>
 
-{{#if link}}
+{{#if image.link}}
   </a>
 {{/if}}
-{{#if modifier}}
+{{#if image.modifier}}
   </div>
 {{/if}}
