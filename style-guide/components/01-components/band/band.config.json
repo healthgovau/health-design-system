@@ -52,6 +52,12 @@
       "context": {
         "title": "Featured resource"
       }
+    },
+    {
+      "name": "Video listing",
+      "context": {
+        "title": "Your stories"
+      }
     }
   ]
 }
