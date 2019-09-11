@@ -1,0 +1,11 @@
+{
+  "title": "Tabs",
+  "variants": [
+    {
+      "name": "Simple",
+      "context": {
+        "modifier": "health-tabs--simple"
+      }
+    }
+  ]
+}

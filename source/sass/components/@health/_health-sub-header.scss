@@ -1,8 +1,14 @@
-// Sub header variation. This includes our title and HP switcher.
+// Sub header.
+
 .health-sub-header {
   @include AU-space('padding', 12px 0);
   @include AU-media(sm){
     @include AU-space('padding', 1.5unit 0 1unit 0);
+  }
+
+  &--tabs {
+    @include AU-space(padding-bottom, 0);
+    @extend %bg-neutral;
   }
 
   // Title.

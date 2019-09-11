@@ -1,20 +1,8 @@
 // Tabs
-//
-// The primary and secondary tabs.
-//
-// Markup: tabs.twig
-//
-// .tabs--secondary - Secondary tabs
-//
-// Style guide: navigation.tabs
-
 .au-body {
-
   ul.health-tabs {
 
     padding: 0;
-    border-bottom: $health-borderize--thin;
-    @include AU-space(margin-bottom, 1.5unit);
     @include AU-space(margin-top, 1.5unit);
     width: 100%;
 
@@ -22,7 +10,6 @@
       margin: 0;
       @include AU-space('margin-right', .5unit);
       padding: 0;
-      transition: none;
 
       &:first-of-type {
         a {
@@ -30,35 +17,64 @@
         }
       }
 
+      box-shadow: 0px 0px 8px 1px $colour-Shadow;
+      clip-path: polygon(-100% -100%,200% -200%,200% 100%,-100% 100%);
+
       a {
+        color: white;
         @include AU-space('padding', .75unit 1unit);
         display: inline-block;
-        background-color: $colour-lighter;
         text-decoration: none;
-        &:hover, &:active {
-          background-color: $colour-light-darker;
+        font-weight: bold;
+        background-color: $colour-primary-blue-gradient;
+        &.health-tabs__tab--colour1 {
+          background-color: $colour-primary-blue-gradient;
+        }
+        &.health-tabs__tab--colour2 {
+          background-color: $colour-primary-teal;
+        }
+        &.health-tabs__tab--colour3 {
+          background-color: $colour-darker;
         }
 
+        &:hover, &:active {
+          color: $AU-color-foreground-text;
+          background-color: white;
+        }
       }
 
       &.active {
         a {
-          font-weight: bold;
-          background-color: $AU-color-foreground-action;
-          color: white;
+          background-color: white;
+          color: $AU-color-foreground-text;
         }
       }
     }
 
+
+    &--simple {
+      border-bottom: $health-borderize--thin;
+      li {
+        a {
+          color: $AU-color-foreground-text;
+          background-color: $colour-lighter;
+          &:hover, &:active {
+            background-color: $colour-light-darker;
+          }
+        }
+
+        &.active {
+          a {
+            font-weight: bold;
+            background-color: $AU-color-foreground-action;
+            color: white;
+          }
+        }
+      }
+    }
   }
 
   .not-full-width ul.health-tabs {
     margin-top: 0;
-  }
-
-  @media print {
-    .health-tabs {
-      display: none;
-    }
   }
 }

@@ -1,4 +1,4 @@
-<div class="health-sub-header">
+<div class="health-sub-header health-sub-header--tabs">
   <div class="container">
     <div class="row">
       <div class="col-sm-9">
@@ -10,6 +10,9 @@
         <p class="au-introduction au-introduction--dark">
           {{ subheader.summary }}
         </p>
+      </div>
+      <div class="col-xs-12">
+        {{> @tabs }}
       </div>
     </div>
   </div>
