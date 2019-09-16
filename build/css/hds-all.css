@@ -3625,6 +3625,14 @@ ul.list--large--checklist > li .au-body strong {
 .au-body .au-display--inline {
   display: inline; }
 
+.au-body .au-subtitle + h1, .au-body .au-subtitle + h2, .au-body .au-subtitle + h3 {
+  margin-top: 8px;
+  margin-top: 0.5rem; }
+
+.au-body h1 + .au-subtitle {
+  margin-top: 8px;
+  margin-top: 0.5rem; }
+
 .au-accordion.au-accordion--small {
   border: 0; }
   .au-accordion.au-accordion--small .au-accordion__title {
@@ -3718,9 +3726,7 @@ ul.list--large--checklist > li .au-body strong {
       display: block; } }
   @media print {
     .au-breadcrumbs {
-      display: block; }
-      .au-breadcrumbs ol li:last-of-type {
-        display: none; } }
+      display: block; } }
 
 .au-btn--tertiary {
   padding: 0; }
@@ -3943,8 +3949,8 @@ ul.list--large--checklist > li .au-body strong {
 .au-inpage-nav-links {
   border-color: #0077C8; }
   @media print {
-    .au-inpage-nav-links + h2 {
-      margin-top: 0; } }
+    .au-inpage-nav-links {
+      display: none; } }
 
 .au-link-list--flush > li {
   margin: 0; }
@@ -5031,7 +5037,8 @@ ul.list--large--checklist > li {
 
 .list--remove {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+  margin-bottom: 0; }
   .list--remove > li {
     margin-top: 8px;
     margin-top: 0.5rem; }
@@ -5091,10 +5098,6 @@ ul.list--large--checklist > li {
 * + .health-metadata {
   margin-top: 8px;
   margin-top: 0.5rem; }
-  @media (min-width: 768px) {
-    * + .health-metadata {
-      margin-top: 12px;
-      margin-top: 0.75rem; } }
 
 .health-metadata.health-metadata--inline .health-field {
   display: inline;
@@ -5254,6 +5257,9 @@ ul.list--large--checklist > li {
         display: block;
         padding-bottom: 0;
         margin-top: 0; } }
+    @media print {
+      .health-search--global {
+        display: none; } }
   .health-search--listing {
     width: auto; }
     @media print {
@@ -5477,6 +5483,9 @@ form[class*='col-'].health-search__form .health-search__form__submit {
   @media (min-width: 768px) {
     .health-sub-nav {
       display: block; } }
+  @media print {
+    .health-sub-nav {
+      display: none; } }
 
 table {
   border-collapse: collapse;
@@ -5514,6 +5523,12 @@ table {
   @media (min-width: 768px) {
     table {
       min-width: inherit; } }
+  @media print {
+    table td,
+    table th,
+    table thead {
+      border-color: #000 !important;
+      background: #fff !important; } }
 
 .health-table__responsive {
   overflow: scroll; }
@@ -6266,15 +6281,13 @@ table {
     margin: 0; }
 
 .health-video {
-  max-width: 768px; }
+  display: inline-block; }
   * + .health-video {
     margin-top: 48px;
     margin-top: 3rem; }
   .health-video__preview {
     position: relative;
     line-height: 0; }
-    .health-video__preview__link {
-      display: inline-block; }
     .health-video__preview .health-video__preview__play-button {
       display: none;
       position: absolute;
@@ -6343,25 +6356,4 @@ table {
   .svg-inline--fa.fa-left {
     margin-right: 6px;
     margin-right: 0.35rem; }
-
-@media print {
-  #backtotop {
-    display: none; }
-  .au-workbench {
-    display: none; }
-  div.contextual-links-region {
-    display: none; }
-  #readspeaker {
-    display: none; }
-  table td,
-  table th,
-  table thead {
-    border-color: #000 !important;
-    background: #fff !important; }
-  .page a:after {
-    display: none; }
-  .page-title__core .section-header {
-    display: none; }
-  .page-title__supp {
-    display: none; } }
 /*# sourceMappingURL=hds-all.css.map */
