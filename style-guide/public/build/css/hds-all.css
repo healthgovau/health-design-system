@@ -3625,6 +3625,14 @@ ul.list--large--checklist > li .au-body strong {
 .au-body .au-display--inline {
   display: inline; }
 
+.au-body .au-subtitle + h1, .au-body .au-subtitle + h2, .au-body .au-subtitle + h3 {
+  margin-top: 8px;
+  margin-top: 0.5rem; }
+
+.au-body h1 + .au-subtitle {
+  margin-top: 8px;
+  margin-top: 0.5rem; }
+
 .au-accordion.au-accordion--small {
   border: 0; }
   .au-accordion.au-accordion--small .au-accordion__title {
@@ -5029,7 +5037,8 @@ ul.list--large--checklist > li {
 
 .list--remove {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+  margin-bottom: 0; }
   .list--remove > li {
     margin-top: 8px;
     margin-top: 0.5rem; }
@@ -5089,10 +5098,6 @@ ul.list--large--checklist > li {
 * + .health-metadata {
   margin-top: 8px;
   margin-top: 0.5rem; }
-  @media (min-width: 768px) {
-    * + .health-metadata {
-      margin-top: 12px;
-      margin-top: 0.75rem; } }
 
 .health-metadata.health-metadata--inline .health-field {
   display: inline;
