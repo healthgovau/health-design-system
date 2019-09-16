@@ -62,6 +62,15 @@ table {
   @include AU-media(sm) {
     min-width: inherit;
   }
+
+  @media print {
+    td,
+    th,
+    thead {
+      border-color: #000 !important;
+      background: #fff !important;
+    }
+  }
 }
 
 .health-table__responsive {
@@ -77,3 +86,4 @@ table {
     }
   }
 }
+

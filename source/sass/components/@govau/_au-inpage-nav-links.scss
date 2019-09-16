@@ -1,8 +1,6 @@
 .au-inpage-nav-links {
   border-color: $colour-complementary-skyblue;
   @media print {
-    & + h2 {
-      margin-top: 0;
-    }
+    display: none;
   }
 }

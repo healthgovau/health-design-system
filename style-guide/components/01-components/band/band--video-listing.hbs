@@ -1,0 +1,25 @@
+<div class="health-band{{#if modifier}} health-band--{{ modifier }}{{/if}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>{{ title }}</h2>
+      </div>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-sm-4">
+        {{> @video--preview }}
+      </div>
+      <div class="col-sm-4">
+        {{> @video--preview }}
+      </div>
+      <div class="col-sm-4">
+        {{> @video--preview }}
+      </div>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-xs-12 text--align-right">
+        <a href="#" class="au-cta-link">View more videos</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,4 +3,8 @@
   @include AU-media($AU-main-nav-breakpoint) {
     display: block;
   }
+
+  @media print {
+    display: none;
+  }
 }

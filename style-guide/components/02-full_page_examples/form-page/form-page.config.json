@@ -12,6 +12,9 @@
     "button": {
       "title": "Submit"
     },
+    "select": {
+      "label": "My least favourite animal is:"
+    },
     "textArea": {
       "label": "Feedback"
     },
@@ -22,7 +25,7 @@
       "label": "Is this feedback for:"
     },
     "checkboxes": {
-      "label": "My favourite animals are"
+      "label": "My favourite animals are:"
     },
     "error": false
   },

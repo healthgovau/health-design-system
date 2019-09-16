@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.0.1 */
+/*! @health.gov.au/health-design-system v1.0.6 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
@@ -3718,9 +3718,7 @@ ul.list--large--checklist > li .au-body strong {
       display: block; } }
   @media print {
     .au-breadcrumbs {
-      display: block; }
-      .au-breadcrumbs ol li:last-of-type {
-        display: none; } }
+      display: block; } }
 
 .au-btn--tertiary {
   padding: 0; }
@@ -3943,8 +3941,8 @@ ul.list--large--checklist > li .au-body strong {
 .au-inpage-nav-links {
   border-color: #0077C8; }
   @media print {
-    .au-inpage-nav-links + h2 {
-      margin-top: 0; } }
+    .au-inpage-nav-links {
+      display: none; } }
 
 .au-link-list--flush > li {
   margin: 0; }
@@ -4335,8 +4333,7 @@ textarea.au-text-input {
     border-top-style: solid;
     border-top-color: #e5e5e5;
     padding: 16px 0 0 0;
-    padding: 1rem 0 0 0;
-    display: inline-block; }
+    padding: 1rem 0 0 0; }
     @media (min-width: 768px) {
       .health-card.health-card--resource {
         padding: 32px 0 0 0;
@@ -4633,6 +4630,8 @@ ul.health-card-list {
   * + .health-facet {
     margin-top: 16px;
     margin-top: 1rem; }
+  .health-filter + .health-facet {
+    margin-top: 0; }
   .health-facet--mobile-hidden {
     margin: 0;
     padding: 0;
@@ -4727,7 +4726,7 @@ ul.health-card-list {
 .health-figure__image-link {
   display: block;
   position: relative; }
-  .health-figure__image-link__icon {
+  .health-figure__image-link .health-figure__image-link__icon {
     display: none; }
   .health-figure__image-link:hover .health-figure__image-link__icon, .health-figure__image-link:focus .health-figure__image-link__icon {
     display: block;
@@ -5253,6 +5252,9 @@ ul.list--large--checklist > li {
         display: block;
         padding-bottom: 0;
         margin-top: 0; } }
+    @media print {
+      .health-search--global {
+        display: none; } }
   .health-search--listing {
     width: auto; }
     @media print {
@@ -5476,6 +5478,9 @@ form[class*='col-'].health-search__form .health-search__form__submit {
   @media (min-width: 768px) {
     .health-sub-nav {
       display: block; } }
+  @media print {
+    .health-sub-nav {
+      display: none; } }
 
 table {
   border-collapse: collapse;
@@ -5513,6 +5518,12 @@ table {
   @media (min-width: 768px) {
     table {
       min-width: inherit; } }
+  @media print {
+    table td,
+    table th,
+    table thead {
+      border-color: #000 !important;
+      background: #fff !important; } }
 
 .health-table__responsive {
   overflow: scroll; }
@@ -6342,25 +6353,4 @@ table {
   .svg-inline--fa.fa-left {
     margin-right: 6px;
     margin-right: 0.35rem; }
-
-@media print {
-  #backtotop {
-    display: none; }
-  .au-workbench {
-    display: none; }
-  div.contextual-links-region {
-    display: none; }
-  #readspeaker {
-    display: none; }
-  table td,
-  table th,
-  table thead {
-    border-color: #000 !important;
-    background: #fff !important; }
-  .page a:after {
-    display: none; }
-  .page-title__core .section-header {
-    display: none; }
-  .page-title__supp {
-    display: none; } }
 /*# sourceMappingURL=hds-all.css.map */

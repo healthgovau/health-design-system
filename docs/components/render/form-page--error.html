@@ -193,6 +193,15 @@
   </div>
 </div>
 
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.tooltip('#health-toolbar__share', {
+      html: document.getElementById("health-share-menu"),
+      trigger: 'click',
+      appendTo: $("#health-toolbar__share").parent('li')[0]
+    });
+  });
+</script>
 
   <div class="container not-full-width">
 
@@ -206,7 +215,7 @@
             <div class="au-page-alerts au-page-alerts--error">
               <h2 class="au-display-md">Please fix the following errors</h2>
               <ul>
-                <li>My favourite animals are field is required.</li>
+                <li>My favourite animals are: field is required.</li>
                 <li>Feedback field is required.</li>
                 <li>Email address field is required.</li>
               </ul>
@@ -243,7 +252,7 @@
           </div>
           <div class="au-form__item">
             <label for="is-this-feedback-for">
-              My favourite animals are
+              My favourite animals are:
               <span class="form-required">(mandatory)</span>  </label>
             <div class="au-form__item-description">
               Check all that apply
@@ -285,6 +294,16 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="au-form__item">
+            <label for="favourite">
+              My least favourite animal is:
+              <span class="form-required">(mandatory)</span>  </label>
+            <select class="au-select error" id="favourite">
+              <option>Dinosaurs</option>
+              <option>Birds</option>
+              <option>Mammals</option>
+            </select>
           </div>
           <div class="au-form__item">
             <label for="email">

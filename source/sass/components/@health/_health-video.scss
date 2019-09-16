@@ -6,20 +6,17 @@
 
 .health-video {
 
+  display: inline-block;
+
   * + & {
     @include AU-space(margin-top, 3unit);
   }
 
-  max-width: 768px;
-
   &__preview {
+
 
     position: relative;
     line-height: 0;
-
-    &__link {
-      display: inline-block;
-    }
 
     .health-video__preview__play-button {
       display: none;
