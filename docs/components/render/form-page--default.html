@@ -302,11 +302,17 @@
               Feedback
               <span class="form-required">(mandatory)</span>  </label>
             <div class="au-form__item-description">
-              Please do not include any personal or financial information - limit is 1200 characters
+              Please do not include any personal or financial information
             </div>
-            <textarea class="au-text-input au-text-input--block" id="email" name="email"></textarea>
-            <p class="form-element-length-counter text--minor">1200 characters remaining</p>
+            <textarea class="au-text-input au-text-input--block" id="description" name="description" maxlength="1200"></textarea>
           </div>
+          
+          <script language="JavaScript">
+            $(document).ready(function () {
+              health.fieldLengthCounter('#description');
+            });
+          </script>
+
           <div class="au-form__item">
             <label for="email">
               Email address
@@ -314,8 +320,15 @@
             <div class="au-form__item-description">
               Health will not share this email. It will only be used to contact you regarding your feedback.
             </div>
-            <input class="au-text-input au-text-input--block" type="email" id="email" name="email">
+            <input class="au-text-input au-text-input--block" type="email" id="email" name="email" maxlength="50">
           </div>
+          
+          <script language="JavaScript">
+            $(document).ready(function () {
+              health.fieldLengthCounter('#email');
+            });
+          </script>
+
           <div class="au-form__item">
             <button class="au-btn">Submit</button>          </div>
 
