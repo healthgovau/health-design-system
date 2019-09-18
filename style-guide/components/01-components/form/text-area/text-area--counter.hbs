@@ -1,0 +1,16 @@
+<div class="au-form__item">
+  <label for="email">
+    {{textArea.label}}
+    {{> @label-mandatory }}
+  </label>
+  <div class="au-form__item-description">
+    Please do not include any personal or financial information
+  </div>
+  <textarea class="au-text-input au-text-input--block{{#if error}} error{{/if}}" id="description" name="description" maxlength="1200"></textarea>
+</div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.fieldLengthCounter('#description');
+  });
+</script>
