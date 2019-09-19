@@ -22,7 +22,7 @@ The guiding principles behind the Health Design System are:
   3. Provide a centralised resource of usable components, patterns and templates
   4. Prevent duplication, fragmentation and *reinvention of the digital wheel*
   5. Be platform agnostic
-  6. Eat own our dogfood - build the system and use the system!
+  6. Eat our own dogfood - build the system and use the system!
    
 The [Department of Health website](https://www.health.gov.au/) uses this system.
 
