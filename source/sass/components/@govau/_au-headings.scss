@@ -127,4 +127,13 @@
     display: inline;
   }
 
+  // Sub title
+  .au-subtitle {
+    & + h1, & + h2, & + h3 {
+      @include AU-space(margin-top, .5unit);
+    }
+  }
+   h1 + .au-subtitle {
+     @include AU-space(margin-top, .5unit);
+   }
 }
