@@ -1,11 +1,9 @@
 ---
-title: Health Design System
+title: Introduction
 label: Introduction
 ---
 
-# ALPHA notice
-
-This resource is currently in ALPHA. This means that it is a work-in-progress and is subject to breaking changes.
+![Health Design System across devices]({{ path 'images/devices.png' }})
 
 ## About the Design System
 

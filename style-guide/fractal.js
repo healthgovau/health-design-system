@@ -19,10 +19,10 @@ const pkg = require('../package.json');
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'Health Design System (v' + pkg.version + ')');
+fractal.set('project.title', 'Health Design System');
 fractal.set('project.version', pkg.version);
 fractal.set('project.author', 'Australian Government Department of Health');
-
+fractal.set('project.repo','https://github.com/healthgovau/health-design-system');
 /*
  * Tell Fractal where to look for components.
  */
@@ -54,5 +54,9 @@ const myCustomisedTheme = mandelbrot({
     // "/themes/custom/css/theme.css"
   ]
 });
+//fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
 
-fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
+const healthTheme = require('./theme');
+fractal.web.theme(healthTheme);
+
+
