@@ -2,21 +2,28 @@
 title: Introduction
 label: Introduction
 ---
+# Health Design System
+
+> This is a work-in-progress but we're frequently adding to it.
+
+<p class="highlight">The Health Design System allows designers and developers to provide a unified experience for users of [Australian Government Department of Health](https://www.health.gov.au/) products.</p>
 
 ![Health Design System across devices]({{ path 'images/devices.png' }})
 
-## About the Design System
+## About the Health Design System
 
-The Health Design System exists is an [Australian Government Department of Health](https://www.health.gov.au) resource to allow designers and developers to build digital products in a consistent and repeatable way.
+It uses the [Australian Government Design System](https://designsystem.gov.au/) as its foundation and provides a set of open-source building blocks that can be used to build government products and services more easily.
 
-The system is built on top of the [Australian Government Design System](https://designsystem.gov.au/).
+### Guiding principles
+The guiding principles behind the Health Design System are:
 
-## Installation
+  1. Build upon and document how Health uses the [Australian Government Design System](https://designsystem.gov.au/)
+  2. Support the delivery of a unified experience for users of Health products
+  3. Provide a centralised resource of usable components, patterns and templates
+  4. Prevent duplication, fragmentation and *reinvention of the digital wheel*
+  5. Be platform agnostic
+  6. Eat own our dogfood - build the system and use the system!
+   
+The [Department of Health website](https://www.health.gov.au/) uses this system.
 
-Instructions are available in the 
-[Health Design System repository](https://github.com/healthgovau/health-design-system#installation).
 
-## Version history
-
-Version history is available in the 
-[Health Design System releases](https://github.com/healthgovau/health-design-system/releases).

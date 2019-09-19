@@ -1,3 +1,7 @@
+<div class="pillar">
+  <div class="pillar-image">
+  </div>
+</div>
 <div class="Header">
   <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
     {% include 'icons/close-nav.svg' %}

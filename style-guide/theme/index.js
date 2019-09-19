@@ -6,11 +6,11 @@ const mandelbrot = require('@frctl/mandelbrot');
  * Configure the theme
  */
 const subTheme = mandelbrot({
-  styles: ['/subtheme/css/style.css'],
+  skin: "navy",
+  styles: ['default','/subtheme/css/style.css'],
   format: 'yaml',
   nav: ['docs', 'components'],
-  panels: ["notes", "html", "info", "resources"],
-  favicon: '/subtheme/favicon.ico'
+  panels: ["notes", "html", "info", "resources"]
 });
 
 /*
