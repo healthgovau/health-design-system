@@ -11,10 +11,18 @@ const path = require('path');
 const fractal = module.exports = require('@frctl/fractal').create();
 
 /*
+ * Get the release verson from package.json
+ */
+//const pkg = require(path.join(__dirname, 'package.json'));
+const pkg = require('../package.json');
+
+/*
  * Give your project a title.
  */
-fractal.set('project.title', 'Health Design System (v1.0.6)');
-
+fractal.set('project.title', 'Health Design System');
+fractal.set('project.version', pkg.version);
+fractal.set('project.author', 'Australian Government Department of Health');
+fractal.set('project.repo','https://github.com/healthgovau/health-design-system');
 /*
  * Tell Fractal where to look for components.
  */
@@ -30,6 +38,7 @@ fractal.docs.set('path', path.join(__dirname, 'docs'));
  */
 fractal.web.set('static.path', path.join(__dirname, 'public'));
 
+/* Generated HTML export destination */
 fractal.web.set('builder.dest', __dirname + '/../docs');
 
 
@@ -41,5 +50,9 @@ const myCustomisedTheme = mandelbrot({
   nav: ["docs", "components"],
   panels: ["notes", "html", "info", "resources"]
 });
+//fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
 
-fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
+const healthTheme = require('./theme');
+fractal.web.theme(healthTheme);
+
+
