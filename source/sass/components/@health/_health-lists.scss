@@ -67,10 +67,11 @@ ul.list--large {
   @extend %list--large;
   counter-reset: none;
   > li {
+    @include AU-space('padding-left', 3unit);
     &::before {
-      top: 0;
       content: '■';
       counter-increment: none;
+
     }
   }
 }
