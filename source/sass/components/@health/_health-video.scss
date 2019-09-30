@@ -7,7 +7,7 @@
 .health-video {
 
   * + & {
-    @include AU-space(margin-top, 3unit);
+    @include AU-space(margin-top, 1.5unit);
   }
 
   &__preview {
