@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.1.0 */
+/*! @health.gov.au/health-design-system v1.1.2 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
@@ -3406,11 +3406,11 @@ body {
 .cke_editable {
   padding: 20px; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .au-body dl.health-dl:before, .clearfix:after, .au-body dl.health-dl:after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .au-body dl.health-dl:after {
   clear: both; }
 
 .visually-hidden,
@@ -4103,11 +4103,11 @@ textarea.au-text-input {
       display: none; } }
   .health-back-to-top .au-btn.au-btn--secondary {
     line-height: 1.2;
-    font-size: 0.9rem;
-    width: 80px;
-    width: 5rem;
-    padding: 4px 0 8px;
-    padding: 0.25rem 0 0.5rem;
+    font-size: 0.85rem;
+    width: 64px;
+    width: 4rem;
+    padding: 4px 12px 8px 12px;
+    padding: 0.25rem 0.75rem 0.5rem 0.75rem;
     background: #f1f1f2;
     border: none;
     color: #313131; }
@@ -4769,13 +4769,6 @@ figure {
     border-top: none;
     padding-top: 0;
     margin-top: 0; }
-  .health-footnotes__footnote {
-    padding-left: 48px;
-    padding-left: 3rem; }
-    .health-footnotes__footnote-number {
-      position: absolute;
-      margin-left: -48px;
-      margin-left: -3rem; }
 
 .health-footnotes__link {
   border-bottom: 1px dotted #CCC;
@@ -4885,6 +4878,9 @@ img {
 
 .image-outer {
   line-height: 0; }
+  * + .image-outer {
+    margin-top: 24px;
+    margin-top: 1.5rem; }
   @media print {
     .image-outer .image-placeholder {
       border: 1px solid black; }
@@ -5015,10 +5011,12 @@ ol.list--large > li {
 
 ul.list--large {
   counter-reset: none; }
-  ul.list--large > li::before {
-    top: 0;
-    content: '■';
-    counter-increment: none; }
+  ul.list--large > li {
+    padding-left: 48px;
+    padding-left: 3rem; }
+    ul.list--large > li::before {
+      content: '■';
+      counter-increment: none; }
 
 ul.list--large--plain > li:before, ol.list--large--plain > li:before {
   display: none; }
@@ -6279,60 +6277,63 @@ table {
     padding: 0;
     margin: 0; }
 
-.health-video {
-  display: inline-block; }
-  * + .health-video {
-    margin-top: 48px;
-    margin-top: 3rem; }
-  .health-video__preview {
-    position: relative;
-    line-height: 0; }
-    .health-video__preview .health-video__preview__play-button {
-      display: none;
-      position: absolute;
-      font-size: 6em;
-      opacity: 0.8;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-          -ms-transform: translateX(-50%) translateY(-50%);
-              transform: translateX(-50%) translateY(-50%); }
-      .health-video__preview .health-video__preview__play-button svg {
-        fill: white;
-        -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75));
-                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75)); }
-    .health-video__preview:hover .health-video__preview__play-button, .health-video__preview:active .health-video__preview__play-button, .health-video__preview:focus .health-video__preview__play-button {
+* + .health-video {
+  margin-top: 24px;
+  margin-top: 1.5rem; }
+
+.health-video__preview {
+  display: inline-block;
+  position: relative;
+  line-height: 0; }
+  .health-video__preview .health-video__preview__play-button {
+    display: none;
+    position: absolute;
+    font-size: 6em;
+    opacity: 0.8;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%); }
+    .health-video__preview .health-video__preview__play-button svg {
+      fill: white;
+      -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75));
+              filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75)); }
+  .health-video__preview__link {
+    display: inline-block; }
+    .health-video__preview__link:hover .health-video__preview__play-button, .health-video__preview__link:active .health-video__preview__play-button, .health-video__preview__link:focus .health-video__preview__play-button {
       display: block;
       cursor: pointer; }
-    .health-video__preview__length {
-      padding: 12px;
-      padding: 0.75rem;
-      background-color: #000;
-      color: #fff;
-      opacity: 0.75;
-      filter: alpha(opacity=75);
-      vertical-align: top;
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      bottom: 0; }
-      .health-video__preview__length--small {
-        display: none; }
-        @media (min-width: 768px) {
-          .health-video__preview__length--small {
-            display: inline-block;
-            padding: 8px;
-            padding: 0.5rem;
-            font-size: 0.85em;
-            right: 3px;
-            bottom: 3px; } }
-  .health-video--inline {
-    border: 2px solid #ccc;
-    padding: 16px;
-    padding: 1rem; }
-    * + .health-video--inline {
-      margin-top: 24px;
-      margin-top: 1.5rem; }
+  .health-video__preview__length {
+    padding: 12px;
+    padding: 0.75rem;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    vertical-align: top;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .health-video__preview__length--small {
+      display: none; }
+      @media (min-width: 768px) {
+        .health-video__preview__length--small {
+          display: inline-block;
+          padding: 8px;
+          padding: 0.5rem;
+          font-size: 0.85em;
+          right: 3px;
+          bottom: 3px; } }
+
+.health-video--inline {
+  border: 2px solid #ccc;
+  padding: 16px;
+  padding: 1rem; }
+  * + .health-video--inline {
+    margin-top: 24px;
+    margin-top: 1.5rem; }
 
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
