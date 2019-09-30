@@ -6,15 +6,13 @@
 
 .health-video {
 
-  display: inline-block;
-
   * + & {
     @include AU-space(margin-top, 3unit);
   }
 
   &__preview {
 
-
+    display: inline-block;
     position: relative;
     line-height: 0;
 
@@ -32,12 +30,15 @@
       }
     }
 
-    &:hover,
-    &:active,
-    &:focus {
-      .health-video__preview__play-button {
-        display: block;
-        cursor: pointer;
+    &__link {
+      display: inline-block;
+      &:hover,
+      &:active,
+      &:focus {
+        .health-video__preview__play-button {
+          display: block;
+          cursor: pointer;
+        }
       }
     }
 

@@ -24,7 +24,7 @@
 
       // Replace the YouTube thumbnail with YouTube HTML5 Player
       $video.append($iframe);
-      $(this).replaceWith($video);
+      $(this).parent('.health-video__preview').replaceWith($video);
 
       // Hide the length.
       $('.health-video__preview__length').hide();
