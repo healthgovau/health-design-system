@@ -15,9 +15,9 @@
 
   .au-btn.au-btn--secondary {
     line-height: 1.2;
-    font-size: 0.9rem;
-    @include AU-space( width, 5unit );
-    @include AU-space( padding, 0.25unit 0 .5unit);
+    font-size: 0.85rem;
+    @include AU-space( width, 4unit );
+    @include AU-space( padding, 0.25unit .75unit .5unit .75unit);
     @include AU-media(md) {
       @include AU-space( width, 6unit );
       @include AU-space( padding, 0.5unit 1unit 1unit);
