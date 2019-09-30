@@ -68,6 +68,10 @@ img {
 
   line-height: 0;
 
+  * + & {
+    @include AU-space(margin-top, 1.5unit);
+  }
+
   .image-placeholder {
     @media print {
       border: 1px solid black;
