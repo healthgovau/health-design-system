@@ -7,9 +7,6 @@
       "title": "Resources",
       "summary": "Find all of our publications, videos, reports and more"
     },
-    "backToTop": {
-      "isVisible": false
-    },
     "search": {
       "placeholder": "Search this list",
       "global": false,
