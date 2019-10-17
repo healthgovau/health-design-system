@@ -10,7 +10,7 @@
   },
   "variants": [
     {
-      "name": "Campaign default",
+      "name": "Campaign",
       "view": "sub-header--campaign.hbs",
       "context": {
         "subheader": {

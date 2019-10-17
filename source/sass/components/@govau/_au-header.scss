@@ -3,6 +3,7 @@
 
   margin-bottom: 0;
   padding: 0;
+  border-top: 12px solid $colour-primary-blue-dark;
 
   @include AU-media(sm){
     @include AU-space('padding', 1unit 0 .5unit);

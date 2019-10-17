@@ -12,14 +12,14 @@
     position: relative;
     #pillars {
         position: absolute;
+        top: -12px;
         left: 0;
-        bottom: -12px;
         height: 12px;
         width: 288px;
         background-size: cover;
         @extend %pillars;
         @include AU-media('sm'){
-            left: 12px;
+            left: auto;
         }
     }
 }

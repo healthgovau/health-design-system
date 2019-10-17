@@ -2412,7 +2412,7 @@ ul.list--large--checklist > li .au-body * + strong,
   .au-keyword-list--dark .au-keyword-list__small {
     color: #FFF; }
 
-/*! @gov.au/main-nav v1.0.7 */
+/*! @gov.au/main-nav v1.0.8 */
 @media print {
   .au-main-nav {
     background: transparent !important;
@@ -3895,7 +3895,8 @@ ul.list--large--checklist > li .au-body strong {
 
 .au-header.au-header {
   margin-bottom: 0;
-  padding: 0; }
+  padding: 0;
+  border-top: 12px solid #001d52; }
   @media (min-width: 768px) {
     .au-header.au-header {
       padding: 16px 0 8px;
@@ -4184,14 +4185,14 @@ textarea.au-text-input {
   position: relative; }
   .pillars-container #pillars {
     position: absolute;
+    top: -12px;
     left: 0;
-    bottom: -12px;
     height: 12px;
     width: 288px;
     background-size: cover; }
     @media (min-width: 768px) {
       .pillars-container #pillars {
-        left: 12px; } }
+        left: auto; } }
 
 .health-card {
   padding: 16px;
