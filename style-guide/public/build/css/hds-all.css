@@ -1,12 +1,12 @@
 /*! @health.gov.au/health-design-system v1.1.4 */
 @charset "UTF-8";
-.au-body .health-band.health-band--tertiary-2 {
+.au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
   background: -webkit-gradient(linear, left top, right top, from(#00205B), to(#004181));
   background: -o-linear-gradient(left, #00205B, #004181);
   background: linear-gradient(to right, #00205B, #004181); }
 
-.au-body .health-band.health-band--secondary, .taskbar .taskbar__item, .taskbar.view ul > .views-row .node,
+.au-body .health-band.health-band--secondary, .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary, .taskbar .taskbar__item, .taskbar.view ul > .views-row .node,
 .taskbar--tiled--2 .taskbar__item,
 .taskbar--2 .taskbar__item,
 .taskbar--tiled--3 .taskbar__item,
@@ -27,7 +27,7 @@
   background: -o-linear-gradient(left, #055a61, #007680);
   background: linear-gradient(to right, #055a61, #007680); }
 
-.au-body .health-band.health-band--primary {
+.au-body .health-band.health-band--primary, .health-sub-header.health-sub-header--campaign .health-sub-header__content--tertiary {
   background-color: #004693;
   background: -webkit-gradient(linear, left top, right top, from(#004693), to(#16477d));
   background: -o-linear-gradient(left, #004693, #16477d);
@@ -4807,6 +4807,9 @@ figure {
       .au-body .health-image-text .text--minor {
         display: block; } }
 
+.au-body.au-body--dark .au-introduction {
+  color: #FFF; }
+
 .au-body .media div,
 .au-body .au-responsive-media-img div,
 .au-body img div,
@@ -5474,6 +5477,20 @@ form[class*='col-'].health-search__form .health-search__form__submit {
     @media (min-width: 768px) {
       .health-sub-header__supp {
         padding-top: 0; } }
+  .health-sub-header.health-sub-header--campaign {
+    padding: 0;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: none; }
+    .health-sub-header.health-sub-header--campaign .health-sub-header__content {
+      padding: 48px;
+      padding: 3rem; }
+      .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary {
+        padding: 48px;
+        padding: 3rem; }
+      .health-sub-header.health-sub-header--campaign .health-sub-header__content--tertiary {
+        padding: 48px;
+        padding: 3rem; }
 
 .health-sub-nav {
   display: none; }

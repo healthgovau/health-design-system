@@ -47,6 +47,32 @@
     @include AU-media(sm) {
       padding-top: 0;
     }
-
   }
+
+  // Campaign variant
+  &.health-sub-header--campaign {
+    padding: 0;
+
+    // Hero image
+    background-size: cover;
+    background-position: top center;
+    background-repeat: none;
+
+    // Hero content
+    .health-sub-header__content {
+      @include AU-space(padding, 3unit);
+      @extend %bg-primary-blue;
+
+      &--secondary {
+        @include AU-space(padding, 3unit);
+        @extend %bg-primary-teal;
+      }
+
+      &--tertiary {
+        @include AU-space(padding, 3unit);
+        @extend %bg-complementary-blue;
+      }
+    }
+  }
+
 }
