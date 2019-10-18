@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 
 .au-main-nav {
-  border-bottom-width: 12px; //override to better display Health pillars
   &.au-main-nav--dark {
     border-bottom-color: $colour-primary-blue-darker;
     background-color: $colour-primary-blue;
@@ -11,7 +10,6 @@
     .active a {
       border-color: $colour-primary-blue-darker;
       background: $colour-primary-blue-darker;
-      border-width: 12px; //override to better display Health pillars
     }
     a {
       border-color: $colour-primary-blue;
@@ -58,13 +56,6 @@
       font-weight: bold;
     }
     color: $AU-color-foreground-text;
-
-    @include AU-media($AU-main-nav-breakpoint) {
-      &:hover, &:focus {
-        border-bottom: 0;
-        @include AU-space(margin-bottom, -.5unit);
-      }
-    }
   }
 
   .au-link-list {
@@ -73,10 +64,14 @@
       &.active, &.active-trail {
         a {
           font-weight: bold;
+          border-bottom-color: #fff;
+          &:hover, &:focus {
+            border-bottom-color: #fff;
+          }
           @include AU-media($AU-main-nav-breakpoint) {
-            @include AU-space(margin-bottom, -12px); //override to better display Health pillars
             @include AU-space(padding, 1unit);
           }
+
         }
       }
 

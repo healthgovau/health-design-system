@@ -1,10 +1,54 @@
 {
   "title": "Sub header",
   "preview": "@preview-full-width",
+  "default": "Content",
   "context": {
     "subheader": {
       "title": "Page title",
       "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor."
     }
-  }
+  },
+  "variants": [
+    {
+      "name": "Campaign",
+      "view": "sub-header--campaign.hbs",
+      "context": {
+        "subheader": {
+          "title": "Campaign title",
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "callout": "Callout button",
+          "image": "https://loremflickr.com/1400/400/health",
+          "color": ""
+        }
+      }
+    },
+    {
+      "name": "Campaign secondary",
+      "view": "sub-header--campaign.hbs",
+      "hidden": true,
+      "context": {
+        "subheader": {
+          "title": "Campaign title",
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "callout": "Callout button",
+          "image": "https://loremflickr.com/1400/400/health",
+          "color": "--secondary"
+        }
+      }
+    },
+    {
+      "name": "Campaign tertiary",
+      "view": "sub-header--campaign.hbs",
+      "hidden": true,
+      "context": {
+        "subheader": {
+          "title": "Campaign title",
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "callout": "Callout button",
+          "image": "https://loremflickr.com/1400/400/health",
+          "color": "--tertiary"
+        }
+      }
+    }
+  ]
 }

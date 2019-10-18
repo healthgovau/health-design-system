@@ -40,6 +40,12 @@
         display: block;
       }
     }
+  }
 
+  // Dark background variant
+  &.au-body--dark {
+    .au-introduction {
+      color: $AU-colordark-foreground-text;
+    }
   }
 }

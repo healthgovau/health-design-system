@@ -27,8 +27,9 @@
 
 <div class="au-body">
 
-  <header class="au-header au-header--dark" role="banner">
+  <header class="au-header au-header--dark pillars-container" role="banner">
   <div class="container">
+    <div id="pillars"></div>
     <div class="row">
       <div class="col-sm-5">
         <a href="/" title="Home" rel="home" class="au-header__logo">
@@ -76,12 +77,11 @@
   </div>
 </header>
 
-<nav class="au-main-nav au-main-nav--dark pillars-container" aria-label="main">
+<nav class="au-main-nav au-main-nav--dark" aria-label="main">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div id="main-nav-default" class="au-main-nav__content">
-          <div id="pillars"></div>
           <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--open" onclick="return AU.mainNav.Toggle( this )">
             <span class="svg-inline--fa fa-fw">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
@@ -108,7 +108,7 @@
                 Close
               </button>
               <ul class="au-link-list">
-                <li><a href="#" class="active-trail">Home</a></li>
+                <li class="active"><a href="#" aria-current="page">Home</a></li>
                 <li><a href="#">Dinosaurs</a></li>
                 <li><a href="#">Interesting facts</a></li>
                 <li><a href="#">Resources</a></li>
@@ -124,10 +124,10 @@
   </div>
 </nav>
   
-  <div class="health-sub-header health-sub-header--light">
+  <div class="health-sub-header">
     <div class="container">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-12">
           <nav class="au-breadcrumbs" aria-label="Breadcrumb">
   <h2 class="au-sronly">You are here</h2>
   <ol class="au-link-list au-link-list--inline">
@@ -141,7 +141,7 @@
             <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
           </div>
           <h1>Dinosaur containment contact</h1>
-          <p class="au-introduction au-introduction--dark">
+          <p class="au-introduction">
             Call us if you spot a dinosaur on the loose.
           </p>
         </div>
