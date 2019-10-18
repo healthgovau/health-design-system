@@ -1,5 +1,6 @@
 // Button.
-.au-btn {
+.au-btn,
+a.au-btn  {
 
   // Convert tertiary button to look like a link.
   &--tertiary {
@@ -10,5 +11,13 @@
   &.au-btn--large {
     font-size: 1.3em;
     font-weight: 700;
+  }
+
+  // Dark button
+  &.au-btn--dark {
+    &:hover:not(:disabled) {
+      background-color: $colour-light-dark;
+      border-color: $colour-light-dark;
+    }
   }
 }
