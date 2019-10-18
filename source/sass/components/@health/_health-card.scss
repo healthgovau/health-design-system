@@ -44,8 +44,10 @@
     display: block;
     svg {
       height: 3em;
+      width: 3em;
       @include AU-media(sm) {
         height: 5em;
+        width: 5em;
       }
     }
 
