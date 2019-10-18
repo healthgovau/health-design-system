@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.1.4 */
+/*! @health.gov.au/health-design-system v1.2.0 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -2412,7 +2412,7 @@ ul.list--large--checklist > li .au-body * + strong,
   .au-keyword-list--dark .au-keyword-list__small {
     color: #FFF; }
 
-/*! @gov.au/main-nav v1.0.7 */
+/*! @gov.au/main-nav v1.0.8 */
 @media print {
   .au-main-nav {
     background: transparent !important;
@@ -3728,12 +3728,19 @@ ul.list--large--checklist > li .au-body strong {
     .au-breadcrumbs {
       display: block; } }
 
-.au-btn--tertiary {
+.au-btn--tertiary,
+a.au-btn--tertiary {
   padding: 0; }
 
-.au-btn.au-btn--large {
+.au-btn.au-btn--large,
+a.au-btn.au-btn--large {
   font-size: 1.3em;
   font-weight: 700; }
+
+.au-btn.au-btn--dark:hover:not(:disabled),
+a.au-btn.au-btn--dark:hover:not(:disabled) {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5; }
 
 .au-body .au-callout {
   background-color: #f1f1f2;
@@ -3895,7 +3902,8 @@ ul.list--large--checklist > li .au-body strong {
 
 .au-header.au-header {
   margin-bottom: 0;
-  padding: 0; }
+  padding: 0;
+  border-top: 12px solid #001d52; }
   @media (min-width: 768px) {
     .au-header.au-header {
       padding: 16px 0 8px;
@@ -3904,6 +3912,17 @@ ul.list--large--checklist > li .au-body strong {
     .au-header.au-header {
       padding: 24px 0;
       padding: 1.5rem 0; } }
+  .au-header.au-header--simple {
+    padding-bottom: 16px;
+    padding-bottom: 1rem; }
+    @media (min-width: 768px) {
+      .au-header.au-header--simple {
+        padding-bottom: 24px;
+        padding-bottom: 1.5rem; } }
+    @media (min-width: 992px) {
+      .au-header.au-header--simple {
+        padding-bottom: 32px;
+        padding-bottom: 2rem; } }
   .au-header.au-header .au-header__logo {
     display: block;
     padding: 12px 12px 12px 0;
@@ -3955,69 +3974,67 @@ ul.list--large--checklist > li .au-body strong {
 .au-link-list--flush > li {
   margin: 0; }
 
-.au-main-nav {
-  border-bottom-width: 12px; }
-  .au-main-nav.au-main-nav--dark {
-    border-bottom-color: #001a49;
-    background-color: #00205B;
-    background: -webkit-gradient(linear, left top, right top, from(#00205B), to(#004181));
-    background: -o-linear-gradient(left, #00205B, #004181);
-    background: linear-gradient(to right, #00205B, #004181); }
-    .au-main-nav.au-main-nav--dark .active a {
-      border-color: #001a49;
-      background: #001a49;
-      border-width: 12px; }
-    .au-main-nav.au-main-nav--dark a {
-      border-color: #00205B; }
-      .au-main-nav.au-main-nav--dark a:hover, .au-main-nav.au-main-nav--dark a:focus {
-        background: #00205B; }
-    .au-main-nav.au-main-nav--dark .au-main-nav__menu {
-      background-color: #00205B; }
+.au-main-nav.au-main-nav--dark {
+  border-bottom-color: #001a49;
+  background-color: #00205B;
+  background: -webkit-gradient(linear, left top, right top, from(#00205B), to(#004181));
+  background: -o-linear-gradient(left, #00205B, #004181);
+  background: linear-gradient(to right, #00205B, #004181); }
+  .au-main-nav.au-main-nav--dark .active a {
+    border-color: #001a49;
+    background: #001a49; }
+  .au-main-nav.au-main-nav--dark a {
+    border-color: #00205B; }
+    .au-main-nav.au-main-nav--dark a:hover, .au-main-nav.au-main-nav--dark a:focus {
+      background: #00205B; }
+  .au-main-nav.au-main-nav--dark .au-main-nav__menu {
+    background-color: #00205B; }
+    @media (min-width: 768px) {
+      .au-main-nav.au-main-nav--dark .au-main-nav__menu {
+        background: none; } }
+  .au-main-nav.au-main-nav--dark .au-main-nav__toggle {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 8px 0;
+    padding: 0.5rem 0; }
+    .au-main-nav.au-main-nav--dark .au-main-nav__toggle:hover, .au-main-nav.au-main-nav--dark .au-main-nav__toggle:focus {
+      background-color: transparent; }
+    .au-main-nav.au-main-nav--dark .au-main-nav__toggle:before {
+      content: ""; }
+    .au-main-nav.au-main-nav--dark .au-main-nav__toggle i {
+      font-size: 1.25rem; }
+    .au-main-nav.au-main-nav--dark .au-main-nav__toggle--search {
+      float: right; }
       @media (min-width: 768px) {
-        .au-main-nav.au-main-nav--dark .au-main-nav__menu {
-          background: none; } }
-    .au-main-nav.au-main-nav--dark .au-main-nav__toggle {
-      color: #FFF;
-      font-weight: bold;
-      font-size: 1.25rem;
-      padding: 8px 0;
-      padding: 0.5rem 0; }
-      .au-main-nav.au-main-nav--dark .au-main-nav__toggle:hover, .au-main-nav.au-main-nav--dark .au-main-nav__toggle:focus {
-        background-color: transparent; }
-      .au-main-nav.au-main-nav--dark .au-main-nav__toggle:before {
-        content: ""; }
-      .au-main-nav.au-main-nav--dark .au-main-nav__toggle i {
-        font-size: 1.25rem; }
-      .au-main-nav.au-main-nav--dark .au-main-nav__toggle--search {
-        float: right; }
-        @media (min-width: 768px) {
-          .au-main-nav.au-main-nav--dark .au-main-nav__toggle--search {
-            display: none; } }
-        .au-main-nav.au-main-nav--dark .au-main-nav__toggle--search__open {
-          display: none; }
-  .au-main-nav a {
-    color: #313131; }
-    @media (min-width: 768px) {
-      .au-main-nav a {
-        font-weight: bold; } }
-    @media (min-width: 768px) {
-      .au-main-nav a:hover, .au-main-nav a:focus {
-        border-bottom: 0;
-        margin-bottom: -8px;
-        margin-bottom: -0.5rem; } }
-  .au-main-nav .au-link-list > li.active a, .au-main-nav .au-link-list > li.active-trail a {
-    font-weight: bold; }
-    @media (min-width: 768px) {
-      .au-main-nav .au-link-list > li.active a, .au-main-nav .au-link-list > li.active-trail a {
-        margin-bottom: -12px;
-        padding: 16px;
-        padding: 1rem; } }
+        .au-main-nav.au-main-nav--dark .au-main-nav__toggle--search {
+          display: none; } }
+      .au-main-nav.au-main-nav--dark .au-main-nav__toggle--search__open {
+        display: none; }
+
+.au-main-nav a {
+  color: #313131; }
   @media (min-width: 768px) {
-    .au-main-nav .au-link-list > li.au-main-nav--mobile-only {
-      display: none; } }
-  @media print {
-    .au-main-nav {
-      display: none; } }
+    .au-main-nav a {
+      font-weight: bold; } }
+
+.au-main-nav .au-link-list > li.active a, .au-main-nav .au-link-list > li.active-trail a {
+  font-weight: bold;
+  border-bottom-color: #fff; }
+  .au-main-nav .au-link-list > li.active a:hover, .au-main-nav .au-link-list > li.active a:focus, .au-main-nav .au-link-list > li.active-trail a:hover, .au-main-nav .au-link-list > li.active-trail a:focus {
+    border-bottom-color: #fff; }
+  @media (min-width: 768px) {
+    .au-main-nav .au-link-list > li.active a, .au-main-nav .au-link-list > li.active-trail a {
+      padding: 16px;
+      padding: 1rem; } }
+
+@media (min-width: 768px) {
+  .au-main-nav .au-link-list > li.au-main-nav--mobile-only {
+    display: none; } }
+
+@media print {
+  .au-main-nav {
+    display: none; } }
 
 .au-page-alerts {
   max-width: 42rem; }
@@ -4184,14 +4201,14 @@ textarea.au-text-input {
   position: relative; }
   .pillars-container #pillars {
     position: absolute;
+    top: -12px;
     left: 0;
-    bottom: -12px;
     height: 12px;
     width: 288px;
     background-size: cover; }
     @media (min-width: 768px) {
       .pillars-container #pillars {
-        left: 12px; } }
+        left: auto; } }
 
 .health-card {
   padding: 16px;
@@ -5483,8 +5500,12 @@ form[class*='col-'].health-search__form .health-search__form__submit {
     background-position: top center;
     background-repeat: none; }
     .health-sub-header.health-sub-header--campaign .health-sub-header__content {
-      padding: 48px;
-      padding: 3rem; }
+      padding: 24px 12px;
+      padding: 1.5rem 12px; }
+      @media (min-width: 768px) {
+        .health-sub-header.health-sub-header--campaign .health-sub-header__content {
+          padding: 48px;
+          padding: 3rem; } }
       .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary {
         padding: 48px;
         padding: 3rem; }

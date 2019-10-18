@@ -5,30 +5,12 @@
   <a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
 </nav>
 
-<div class="health-release-status au-body au-body--dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <span class="health-release-status__icon health-release-status__icon--launch">
-          New
-        </span>
-        <div class="health-release-status--desktop">
-          Welcome to our new website. <a href="#">Learn more about it</a>. This
-          is still a work in progress, so please <a href="#">let us know what you
-          think</a>.
-        </div>
-        <div class="health-release-status--mobile">
-          Welcome to Health’s new website. <a href="#">Learn more about it</a>.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="au-body">
 
-  <header class="au-header au-header--dark" role="banner">
+  <header class="au-header au-header--dark pillars-container" role="banner">
   <div class="container">
+    <div id="pillars"></div>
     <div class="row">
       <div class="col-sm-5">
         <a href="/" title="Home" rel="home" class="au-header__logo">
@@ -76,12 +58,11 @@
   </div>
 </header>
 
-<nav class="au-main-nav au-main-nav--dark pillars-container" aria-label="main">
+<nav class="au-main-nav au-main-nav--dark" aria-label="main">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div id="main-nav-default" class="au-main-nav__content">
-          <div id="pillars"></div>
           <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--open" onclick="return AU.mainNav.Toggle( this )">
             <span class="svg-inline--fa fa-fw">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
@@ -108,7 +89,7 @@
                 Close
               </button>
               <ul class="au-link-list">
-                <li><a href="#" class="active-trail">Home</a></li>
+                <li class="active"><a href="#" aria-current="page">Home</a></li>
                 <li><a href="#">Dinosaurs</a></li>
                 <li><a href="#">Interesting facts</a></li>
                 <li><a href="#">Resources</a></li>

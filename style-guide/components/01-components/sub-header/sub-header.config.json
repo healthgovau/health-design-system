@@ -17,6 +17,7 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
+          "image": "https://loremflickr.com/1400/400/health",
           "color": ""
         }
       }
@@ -30,6 +31,7 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
+          "image": "https://loremflickr.com/1400/400/health",
           "color": "--secondary"
         }
       }
@@ -43,6 +45,7 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
+          "image": "https://loremflickr.com/1400/400/health",
           "color": "--tertiary"
         }
       }

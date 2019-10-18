@@ -1,0 +1,16 @@
+{
+  "title": "Campaign landing page",
+  "preview": "@preview-page",
+  "context": {
+    "subheader": {
+      "title": "Save the Tyrannosaurus",
+      "summary": "Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning \"king\" in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods.",
+      "image": "https://loremflickr.com/1400/400/dinosaur",
+      "callout": "Help save the T-Rex"
+    
+    },
+    "backToTop": {
+      "isVisible": false
+    }
+  }
+}

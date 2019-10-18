@@ -11,6 +11,18 @@
   @include AU-media(md){
     @include AU-space('padding', 1.5unit 0);
   }
+
+  // Simple for no-nav campaigns
+  &--simple {
+    @include AU-space('padding-bottom', 1unit);
+    @include AU-media(sm){
+      @include AU-space('padding-bottom', 1.5unit);
+    }
+    @include AU-media(md){
+      @include AU-space('padding-bottom', 2unit);
+    }
+  }
+
   .au-header__logo {
     display: block;
     @include AU-space('padding', .75unit .75unit .75unit 0);

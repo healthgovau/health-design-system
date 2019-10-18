@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.1.4 */
+/*! @health.gov.au/health-design-system v1.2.0 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -3728,12 +3728,19 @@ ul.list--large--checklist > li .au-body strong {
     .au-breadcrumbs {
       display: block; } }
 
-.au-btn--tertiary {
+.au-btn--tertiary,
+a.au-btn--tertiary {
   padding: 0; }
 
-.au-btn.au-btn--large {
+.au-btn.au-btn--large,
+a.au-btn.au-btn--large {
   font-size: 1.3em;
   font-weight: 700; }
+
+.au-btn.au-btn--dark:hover:not(:disabled),
+a.au-btn.au-btn--dark:hover:not(:disabled) {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5; }
 
 .au-body .au-callout {
   background-color: #f1f1f2;
@@ -3905,6 +3912,17 @@ ul.list--large--checklist > li .au-body strong {
     .au-header.au-header {
       padding: 24px 0;
       padding: 1.5rem 0; } }
+  .au-header.au-header--simple {
+    padding-bottom: 16px;
+    padding-bottom: 1rem; }
+    @media (min-width: 768px) {
+      .au-header.au-header--simple {
+        padding-bottom: 24px;
+        padding-bottom: 1.5rem; } }
+    @media (min-width: 992px) {
+      .au-header.au-header--simple {
+        padding-bottom: 32px;
+        padding-bottom: 2rem; } }
   .au-header.au-header .au-header__logo {
     display: block;
     padding: 12px 12px 12px 0;
@@ -5482,8 +5500,12 @@ form[class*='col-'].health-search__form .health-search__form__submit {
     background-position: top center;
     background-repeat: none; }
     .health-sub-header.health-sub-header--campaign .health-sub-header__content {
-      padding: 48px;
-      padding: 3rem; }
+      padding: 24px 12px;
+      padding: 1.5rem 12px; }
+      @media (min-width: 768px) {
+        .health-sub-header.health-sub-header--campaign .health-sub-header__content {
+          padding: 48px;
+          padding: 3rem; } }
       .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary {
         padding: 48px;
         padding: 3rem; }
