@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.2.0 */
+/*! @health.gov.au/health-design-system v1.2.1 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -4248,10 +4248,12 @@ textarea.au-text-input {
   .health-card .health-card__image {
     display: block; }
     .health-card .health-card__image svg {
-      height: 3em; }
+      height: 3em;
+      width: 3em; }
       @media (min-width: 768px) {
         .health-card .health-card__image svg {
-          height: 5em; } }
+          height: 5em;
+          width: 5em; } }
     .health-card .health-card__image.health-card__image--full-width {
       margin: -16px -16px 16px -16px;
       margin: -1rem -1rem 1rem -1rem;
