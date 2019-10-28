@@ -4174,6 +4174,15 @@ textarea.au-text-input {
   .au-body .health-band.health-band--secondary .health-band__title--light {
     color: #99d4de; }
 
+.health-band__image--image-text-horizontal {
+  display: none;
+  fill: #313131;
+  stroke: #313131; }
+  @media (min-width: 768px) {
+    .health-band__image--image-text-horizontal {
+      display: inline-block;
+      width: 70%; } }
+
 .health-book-nav {
   border-top: 1px solid #ccc;
   padding-top: 24px;

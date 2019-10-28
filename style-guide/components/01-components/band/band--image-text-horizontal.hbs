@@ -1,0 +1,14 @@
+<div class="health-band{{#if modifier}} health-band--{{ modifier }}{{/if}}">
+  <div class="container">
+    <div class="row standard-gap">
+      <div class="col-sm-2">
+        <div class="health-band__image {{#if modifier}} health-band__image--{{ modifier }}{{/if}}">
+          {{{ image }}}
+        </div>
+      </div>
+      <div class="col-sm-10 standard-gap--mobile-only">
+        {{{ content }}}
+      </div>
+    </div>
+  </div>
+</div>
