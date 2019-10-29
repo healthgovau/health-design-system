@@ -8,7 +8,11 @@
     }
   }
 
-  //// TEXT ////
+  //// SVG images ////
+  &.au-body--dark {
+    fill: $AU-colordark-foreground-text;
+    stroke: $AU-colordark-foreground-text;
+  }
 
   // Minor text.
   .text--minor,

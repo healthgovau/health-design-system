@@ -3652,6 +3652,10 @@ ul.list--large--checklist > li .au-body strong {
   .au-body.au-body--dark-tertiary {
     background: #00205B; }
 
+.au-body.au-body--dark {
+  fill: #FFF;
+  stroke: #FFF; }
+
 .au-body .text--minor {
   color: #414141;
   font-size: 0.8em; }
