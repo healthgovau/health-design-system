@@ -1,4 +1,7 @@
 .au-body {
+  // SVG images.
+  fill: $AU-color-foreground-text;
+  stroke: $AU-color-foreground-text;
 
   // BACKGROUND //
   &.au-body--dark {

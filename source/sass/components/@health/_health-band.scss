@@ -42,8 +42,6 @@
 
 .health-band__image--image-text-horizontal {
   display: none;
-  fill: $AU-color-foreground-text;
-  stroke: $AU-color-foreground-text;
   @include AU-media(sm) {
     display: inline-block;
     width: 70%;
