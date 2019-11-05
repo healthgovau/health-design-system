@@ -5500,10 +5500,16 @@ form[class*='col-'].health-search__form .health-search__form__submit {
       .health-sub-header__supp {
         padding-top: 0; } }
   .health-sub-header.health-sub-header--campaign {
-    padding: 0;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: none; }
+    padding: 35% 0 0 0;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media (min-width: 768px) {
+      .health-sub-header.health-sub-header--campaign {
+        padding-top: 0;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: none;
+        min-height: 500px; } }
     .health-sub-header.health-sub-header--campaign .health-sub-header__content {
       padding: 24px 12px;
       padding: 1.5rem 12px; }

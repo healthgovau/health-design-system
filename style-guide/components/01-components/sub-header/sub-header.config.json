@@ -17,10 +17,11 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
-          "image": "https://loremflickr.com/1400/400/health",
+          "image": "https://loremflickr.com/1920/700/health",
           "color": ""
         }
-      }
+      },
+      "notes": "The hero image should be 1920x700 pixels to provide the optimal responsive experience. A min-height: 500px is applied to the hero at the largest breakpoint but the sub-header grows and shrinks according the text contained within it."
     },
     {
       "name": "Campaign secondary",
@@ -31,10 +32,11 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
-          "image": "https://loremflickr.com/1400/400/health",
+          "image": "https://loremflickr.com/1920/700/health",
           "color": "--secondary"
         }
-      }
+      },
+      "notes": "The hero image should be 1920x700 pixels to provide the optimal responsive experience. A min-height: 500px is applied to the hero at the largest breakpoint but the sub-header grows and shrinks according the text contained within it."
     },
     {
       "name": "Campaign tertiary",
@@ -45,10 +47,11 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
-          "image": "https://loremflickr.com/1400/400/health",
+          "image": "https://loremflickr.com/1920/700/health",
           "color": "--tertiary"
         }
-      }
+      },
+      "notes": "The hero image should be 1920x700 pixels to provide the optimal responsive experience. A min-height: 500px is applied to the hero at the largest breakpoint but the sub-header grows and shrinks according the text contained within it."
     }
   ]
 }
