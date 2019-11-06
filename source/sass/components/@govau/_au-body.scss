@@ -1,7 +1,6 @@
 .au-body {
   // SVG images.
   fill: $AU-color-foreground-text;
-  stroke: $AU-color-foreground-text;
 
   // BACKGROUND //
   &.au-body--dark {
@@ -14,7 +13,6 @@
   //// SVG images ////
   &.au-body--dark {
     fill: $AU-colordark-foreground-text;
-    stroke: $AU-colordark-foreground-text;
   }
 
   // Minor text.
