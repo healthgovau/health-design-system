@@ -1,0 +1,41 @@
+
+<style>
+  .colour__swatches {
+    list-style: none;
+    padding: 0;
+  }
+  .colour__swatch {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 200px;
+    width: 200px;
+  }
+  .colour__info {
+    background-color: #f1f1f2;
+    border: 1px solid #87888A;
+    color: black;
+    font-size: 1rem;
+    padding: 0.4rem;
+    text-align: center;
+  }
+  .colour__hex {
+
+  }
+  .colour__sass-variable-name {
+
+  }
+</style>
+{{#each swatches}}
+<h2>{{ title }}</h2>
+<ul class="colour__swatches">
+  {{#each colours}}
+  <li class="colour__swatch" style="background-color: {{ hex }};">
+    <div class="colour__info">
+      <div class="colour__sass-variable-name">{{ variable_name }}</div>
+      <div class="colour__hex">{{ hex }}</div>
+    </div>
+  </li>
+  {{/each}}
+</ul>
+{{/each}}
