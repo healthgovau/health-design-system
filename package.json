@@ -40,6 +40,8 @@
     "@gov.au/text-inputs": "2.1.1"
   },
   "devDependencies": {
+    "@frctl/fractal": "^1.2.0",
+    "@frctl/mandelbrot": "^1.2.1",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -58,7 +60,9 @@
   },
   "scripts": {
     "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "fractal:start": "cd style-guide && fractal start --sync",
+    "fractal:build": "cd style-guide && fractal build"
   },
   "pancake": {
     "auto-save": false,
