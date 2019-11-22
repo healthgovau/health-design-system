@@ -60,7 +60,7 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
+    "postinstall": "npm rebuild node-sass",
     "gulp": "gulp",
     "fractal:start": "cd style-guide && fractal start --sync",
     "fractal:build": "cd style-guide && fractal build"
