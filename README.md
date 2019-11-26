@@ -1,6 +1,6 @@
 # Health Design System
 
-Design System for Australian Government Department of Health is built on top of the [DTA Design System](https://designsystem.gov.au/).
+The Health Design System (HDS) is a design system for Australian Government Department of Health which is built on top of the [DTA Design System](https://designsystem.gov.au/).
 
 ## Style Guide
 View the [Style Guide](https://healthgovau.github.io/health-design-system/) for documentation on how to use the Health Design System components.
@@ -39,8 +39,56 @@ Build using the built in Gulp tasks:
 `npm install` and then run:
   * `npm run gulp`: Builds development and production ready CSS and JS files.
   * `npm run gulp watch`: Watches for changes and rebuilds.
-  
+
 Or you can import the core sass file into your pipeline `@import "health-design-system/source/sass/all.scss"`
 
 Source javascript files are available in `health-design-system/source/js/src`.
 
+#### Option 3: install as NPM package
+
+The HDS can be added to a project as an npm package.
+
+```
+npm install @health.gov.au/health-design-system
+```
+
+## Project structure
+
+The following is a description of important directories used in the project.
+
+| Directory | Description |
+| --- | --- |
+| `build/` | Compiled CSS and JavaScript files. |
+| `docs/` | Compiled HTML version of the HDS component library (aka. the Style Guide). Guide can be access by opening `docs/index.html` in a browser.  |
+| `node_modules/` | Project dependencies added by NPM. |
+| `source/js/` | JavaScript source files. Include JavaScript libraries as well as custom code. |
+| `source/sass/` | SASS source files |
+| `source/sass/components/@gov.au` | Overrides to styles provided by the DTA Design System should be placed in this directory. Overrides should be placed in a SASS partial file with the same name as the file in which the style is defined within the DTA Design System. |
+| `source/sass/components/@health` | Styling for custom HDS components. These are components which are not a part of the DTA Design System. |
+| `style-guide/` | Source template and configuration files for components included in the HDS component library (aka. the Style Guide). The Style Guide is created using [Fractal](https://fractal.build/).  |
+
+## Health Design System development
+
+Install dependencies:
+
+```
+npm install
+```
+
+Start Fractal development server. This will generate a local link to view the Style Guide. The style guide will be automatically updated when changes are made to the component source files.
+
+```
+npm run fractal:start
+```
+
+To build a static HTML version of the Style Guide use the following command. After building the Style Guide can be accessed by opening `docs/index.html` file in a browser.
+
+```
+npm run fractal:build
+```
+
+The HDS uses [Gulp](https://gulpjs.com) to create compiled versions of the HDS CSS and JavaScript assets. The compiled files will be created in the `build/` directory:
+
+```
+npm run gulp
+```
