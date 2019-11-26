@@ -57,7 +57,7 @@ $colour-foreground-text--dark: #000000;
 
 // New visual identity palette
 // Primaries
-$colour-primary-blue: rgb(238, 0, 247);
+$colour-primary-blue: #00205B;
 $colour-primary-blue-dark: shade($colour-primary-blue, 10%);
 $colour-primary-blue-darker: shade($colour-primary-blue, 20%);
 $colour-primary-blue-alt: #041E42;
@@ -102,7 +102,7 @@ $colour-light-dark: #e5e5e5;
 $colour-light-darker: #cdcdcd;
 
 // Tints from print guide - not used in lieu of shade() and desaturate() functions
-// $colour-primary-blue-1: #133a6f;
+// $colour-primary-blue-1: #133a6f; 
 // $colour-primary-blue-2: #2b4679;
 // $colour-primary-blue-3: #204c8b;
 // $colour-primary-blue-4: #395994;
