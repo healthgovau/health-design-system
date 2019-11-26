@@ -62,8 +62,8 @@
   "scripts": {
     "postinstall": "npm rebuild node-sass",
     "gulp": "gulp",
-    "fractal:start": "cd style-guide && fractal start --sync",
-    "fractal:build": "cd style-guide && fractal build"
+    "fractal:start": "npm run gulp && cd style-guide && fractal start --sync",
+    "fractal:build": "npm run gulp && cd style-guide && fractal build"
   },
   "pancake": {
     "auto-save": false,
