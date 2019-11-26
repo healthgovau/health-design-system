@@ -52,6 +52,12 @@ The HDS can be added to a project as an npm package.
 npm install @health.gov.au/health-design-system
 ```
 
+You can import the HDS core sass file into your project using `@import "@health.gov.au/health-design-system/source/sass/all"`.
+
+JavaScript source files are available in `@health.gov.au/health-design-system/health-design-system/source/js/src/`.
+
+Compiled version of CSS and JavaScript assets can be found in `@health.gov.au/health-design-system/build/css/` and `@health.gov.au/health-design-system/build/js/` respectively.
+
 ## Project structure
 
 The following is a description of important directories used in the project.
@@ -63,8 +69,8 @@ The following is a description of important directories used in the project.
 | `node_modules/` | Project dependencies added by NPM. |
 | `source/js/` | JavaScript source files. Include JavaScript libraries as well as custom code. |
 | `source/sass/` | SASS source files |
-| `source/sass/components/@gov.au` | Overrides to styles provided by the DTA Design System should be placed in this directory. Overrides should be placed in a SASS partial file with the same name as the file in which the style is defined within the DTA Design System. |
-| `source/sass/components/@health` | Styling for custom HDS components. These are components which are not a part of the DTA Design System. |
+| `source/sass/components/@gov.au/` | Overrides to styles provided by the DTA Design System should be placed in this directory. Overrides should be placed in a SASS partial file with the same name as the file in which the style is defined within the DTA Design System. |
+| `source/sass/components/@health/` | Styling for custom HDS components. These are components which are not a part of the DTA Design System. |
 | `style-guide/` | Source template and configuration files for components included in the HDS component library (aka. the Style Guide). The Style Guide is created using [Fractal](https://fractal.build/).  |
 
 ## Health Design System development
