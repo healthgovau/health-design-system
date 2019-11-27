@@ -81,7 +81,7 @@ Install dependencies:
 npm install
 ```
 
-Start Fractal development server. This will generate a local link to view the Style Guide. The style guide will be automatically updated when changes are made to the component source files.
+Start Fractal development server. This will generate a local link to view the Style Guide. The style guide will be automatically updated when changes are made to the component source files. Note that to see any SASS related styling changes you will need to compile any SASS changes using either `npm run gulp` or `npm run gulp:watch`.
 
 ```
 npm run fractal:start
