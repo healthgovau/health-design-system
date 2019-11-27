@@ -62,6 +62,7 @@
   "scripts": {
     "postinstall": "npm rebuild node-sass",
     "gulp": "gulp",
+    "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
     "fractal:build": "npm run gulp && cd style-guide && fractal build"
   },
