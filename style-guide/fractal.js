@@ -41,18 +41,8 @@ fractal.web.set('static.path', path.join(__dirname, 'public'));
 /* Generated HTML export destination */
 fractal.web.set('builder.dest', __dirname + '/../docs');
 
-
-const mandelbrot = require('@frctl/mandelbrot'); // require the Mandelbrot theme module
-
-// create a new instance with custom config options
-const myCustomisedTheme = mandelbrot({
-  skin: "navy",
-  nav: ["docs", "components"],
-  panels: ["notes", "html", "info", "resources"]
-});
-//fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
-
-const healthTheme = require('./theme');
+/*
+ * Set Fractal theme.
+ */
+const healthTheme = require('mandelbrot-healthgovau');
 fractal.web.theme(healthTheme);
-
-
