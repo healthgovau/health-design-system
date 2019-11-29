@@ -25,11 +25,35 @@ You can find information on what functionality is provided by each library in th
 
 ### Usage
 
-#### Option 1: Out of the box
+#### Option 1: install as NPM package
+
+The HDS can be added to a project as an npm package.
+
+```
+npm install @health.gov.au/health-design-system
+```
+
+You can generate a HTML version of Health Design System style guide in a project using the following cli command. The Style Guide will be located in the generated `hds_style_guide` directory and can be viewed by openning the `./style-guide/index.html` file in a browser.
+
+```sh
+npx healthds build-guide
+```
+
+You can import the HDS core sass file into your project using `@import "@health.gov.au/health-design-system/source/sass/all"`. This assumes the `node_modules` directory is included in you SASS build path.
+
+JavaScript source files are available in `@health.gov.au/health-design-system/health-design-system/source/js/src/`.
+
+Compiled version of CSS and JavaScript assets can be found in `@health.gov.au/health-design-system/build/css/` and `@health.gov.au/health-design-system/build/js/` respectively.
+
+
+
+#### Option 2: Out of the box
+
 Simply download and include the css and js files from the [build](build) folder.
 Include any [library scripts](build/js/libraries).
 
-#### Option 2: Build yourself
+#### Option 3: Build yourself
+
 Clone, git submodule or download the repository.
 
 Requires [Node.js](https://nodejs.org/)
@@ -44,19 +68,14 @@ Or you can import the core sass file into your pipeline `@import "health-design-
 
 Source javascript files are available in `health-design-system/source/js/src`.
 
-#### Option 3: install as NPM package
+## Command line tool
 
-The HDS can be added to a project as an npm package.
+A command line tool is available if you installed the HDS as a npm package.
 
-```
-npm install @health.gov.au/health-design-system
-```
-
-You can import the HDS core sass file into your project using `@import "@health.gov.au/health-design-system/source/sass/all"`.
-
-JavaScript source files are available in `@health.gov.au/health-design-system/health-design-system/source/js/src/`.
-
-Compiled version of CSS and JavaScript assets can be found in `@health.gov.au/health-design-system/build/css/` and `@health.gov.au/health-design-system/build/js/` respectively.
+| Command | Description |
+| --- | --- |
+| `npx healthsd build-guide` | Generates a statice HTML version of the HDS Style Guide in the current working directory. The Style Guide is create within the `health-style-guide` directory. |
+| `npx healthsd help` | Displays information on command usage. |
 
 ## Project structure
 
