@@ -1,0 +1,15 @@
+<article class="health-card health-card--shadow">
+  <div class="wrapper">
+    <div class="health-card__image health-card__image--full-width image--link">
+      <a href="#">
+        {% render '@image' %}
+      </a>
+    </div>
+    <h3 class="health-card__title au-display-md">
+      <a href="#">{{ title }}</a>
+    </h3>
+    <footer class="metadata metadata--inline">
+      {{ "now"|date("d M Y") }}
+    </footer>
+  </div>
+</article>

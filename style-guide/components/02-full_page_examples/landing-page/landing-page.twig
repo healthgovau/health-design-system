@@ -1,0 +1,37 @@
+{% render '@skip' %}
+
+{% render '@release-status--launch' %}
+
+<div class="au-body">
+  {% render '@header' %}
+  {% render "@sub-header" %}
+  {% render '@toolbar' %}
+
+  <div class="container-fluid full-width">
+    <div class="row standard-gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            {% render '@callout--simple' %}
+          </div>
+        </div>
+      </div>
+      {% render '@band--cards-call-to-action' %}
+      {% render '@band--cards-image' %}
+      {% render '@band--featured' %}
+      {% render '@band--cards-audience' %}
+      {% render '@band--hotline' %}
+      {% render '@band--cards-resources' %}
+      {% render '@band--statistics' %}
+      {% render '@band--cards-image-vertical' %}
+      {% render '@band--video-listing' %}
+    </div>
+  </div>
+
+  {% render '@something-wrong' %}
+
+</div>
+
+{% render '@footer' %}
+
+{% render "@back-to-top" %}

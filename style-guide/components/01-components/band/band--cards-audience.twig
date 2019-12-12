@@ -1,0 +1,25 @@
+<div class="health-band{% if modifier %} health-band--{{ modifier }}{% endif %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>{{ title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="health-card-list health-card-list--matchheight">
+        <li class="col-sm-6">
+          {% render "@card--audience" %}
+        </li>
+        <li class="col-sm-6">
+          {% render "@card--audience---colour-2" %}
+        </li>
+        <li class="col-sm-6">
+          {% render "@card--audience---colour-3" %}
+        </li>
+        <li class="col-sm-6">
+          {% render "@card--audience---colour-4" %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

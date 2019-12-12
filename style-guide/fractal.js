@@ -1,9 +1,7 @@
 'use strict';
 
-/*
-* Require the path module
-*/
 const path = require('path');
+const twigAdapter = require('@frctl/twig')();
 
 /*
  * Require the Fractal module
@@ -40,6 +38,10 @@ fractal.web.set('static.path', path.join(__dirname, 'public'));
 
 /* Generated HTML export destination */
 fractal.web.set('builder.dest', __dirname + '/../docs');
+
+/* Set templating engine. */
+fractal.components.engine(twigAdapter);
+fractal.components.set('ext', '.twig');
 
 /*
  * Set Fractal theme.

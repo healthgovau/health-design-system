@@ -46,6 +46,7 @@
   "devDependencies": {
     "@frctl/fractal": "^1.2.0",
     "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/twig": "git+https://github.com/frctl/twig.git#0345ffe2d9d10cd098cebf5fafb52745f9038fb9",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
