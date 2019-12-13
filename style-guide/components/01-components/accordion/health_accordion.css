@@ -1,0 +1,348 @@
+@charset "UTF-8";
+/*! @gov.au/core v3.4.2 */
+/**
+ * AU-replace - Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string  - The haystack string to be manipulated
+ * @param  {string} $search  - The needle to be replace
+ * @param  {string} $replace - The replacement
+ *
+ * @return {string}          - The manipulated string with replaced values
+ */
+/**
+ * AU-svguri - Generate an optimized SVG data-uri
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * AU-factorial - Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * AU-pow - Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * AU-color-luminance - Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $color - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * AU-color-contrast - Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}   $foreground - Color one
+ * @param  {string}   $background - Color two
+ * @param  {boolean}  $silent     - If the logs get printed in the terminal
+ * @param  {boolean}  $rounded    - If the value is rounded or not
+ *
+ * @return {integer}              - The contrast ratio
+ */
+/**
+ * AU-color-a11y - The function to find the nearest accessible color
+ *
+ * https://github.com/alex-page/sass-a11ycolor
+ *
+ * @author Alex Page @aalexpaage <http://alexpage.com.au>
+ *
+ * @param  {Color}           $toMakeA11y           - The color that is to be changed
+ * @param  {Color}           $background           - The background color to compare against toMakeA11y for the contrast
+ * @param  {'small'|'large'} $ratioKey   ['small'] - The keyword 'small' or 'large' to set the WCAG 2.1 contrast ration or 3.0 or 4.5
+ * @param  {Number}          $steps      [0.1]     - The step size our function is searching for a new color in. The bigger the number the faster the process
+ *                                                    the rougher the found color.
+ *
+ * @return {Color}                                 - Returns the nearest accessible color
+ */
+/**
+ * AU-color-lowest-contrast - Find the lowest contrast color
+ *
+ * @param  {Colors}          $colors     - The color to find the lowest contrast
+ * @param  {Color}           $background - The background color to compare the colors against
+ *
+ * @return {Color}                       - Returns the lowest contrast color
+ */
+/**
+ * AU-space - Mixin for setting a properties value to snap to the grid, with a fallback for REM.
+ *
+ * @param  {string} $property - The css property to apply the spacing ( padding, margin )
+ * @param  {number} $values   - The values of the property ( 0, 20px, 1unit, 5% )
+ *
+ * @return {number}           - The space in px and rems
+ */
+/**
+ * AU-clearfix - Clearing floats
+ */
+/**
+ * AU-media - Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * AU-sronly - Hide an element from the screen but not a screen reader
+ */
+/**
+ * AU-outline - Create outline based on the theme the user is using.
+ *
+ * @param  {keywords} $theme - `dark` or default ( `light` )
+ *
+ * @return {string}          - The code
+ */
+/**
+ * AU-focus - Add the outline to focus
+ */
+/**
+ * AU-fontgrid Mixin for setting font-size and line-height that snaps to the grid.
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ * @param  {keywords} $lineheight-key -  Either one of the following keywords: heading, nospace, default
+ *
+ * @return {string}                   - The code; fontsize in REM, with PX fallback, and unitless line-height which matches vertical grid
+*/
+/**
+ * AU-pixelfallback enable pixel fallbacks
+ */
+/**
+ * AU-media Breakpoints
+ */
+/**
+ * AU-rem value used for REM calculation
+ */
+/**
+ * AU-unit used for all type and grid calculations
+ */
+/**
+ * AU-font stack
+ * AU-font-monospace stack
+ */
+/**
+ * AU-fontsize-map
+ *
+ * Predetermined pixel sizes from a 1.25 typescale rounded to the nearest $AU-unit (vertical grid)
+ */
+/**
+ * AU-lineheight-map
+ *
+ * Predetermined lineheight mapped to keyword
+ */
+/**
+ * AU-maxwidth for line lengths (the ‘measure’)
+ */
+/**
+ * Colors light theme
+ */
+/**
+ * Colors dark theme
+ */
+/**
+ * Colors system messages
+ */
+/**
+ * AU-border-radius styles
+ */
+/*! @gov.au/accordion v7.0.8 */
+@media print {
+  .au-accordion {
+    border-color: #000 !important;
+    color: #000 !important; }
+  .au-accordion__title {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px !important; }
+    .au-accordion__title:after {
+      display: none; }
+  .au-accordion__body-wrapper {
+    border-color: #000 !important; }
+  .au-accordion__body {
+    height: auto !important;
+    display: block !important; } }
+
+.au-accordion {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  border: 1px solid gray;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #313131;
+  padding: 0; }
+  * + .au-accordion {
+    margin-top: 16px;
+    margin-top: 1rem; }
+  .au-accordion .au-accordion__title {
+    background-color: whitesmoke; }
+  .au-accordion.au-accordion--dark {
+    border-color: #89afb8;
+    color: #ffffff; }
+    .au-accordion.au-accordion--dark .au-accordion__title {
+      background-color: #104f5f; }
+
+.au-accordion + .au-accordion {
+  margin-top: 0;
+  border-top: 0; }
+
+.au-body .au-accordion__title,
+.au-accordion__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  padding: 16px 40px 16px 16px;
+  padding: 1rem 2.5rem 1rem 1rem;
+  width: 100%;
+  display: block;
+  color: #00698f;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-family: inherit; }
+  .au-body .au-accordion__title:hover,
+  .au-accordion__title:hover {
+    text-decoration: none;
+    color: #313131; }
+    .au-body .au-accordion__title:hover:after,
+    .au-accordion__title:hover:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23313131' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E"); }
+  .au-body .au-accordion__title:focus,
+  .au-accordion__title:focus {
+    outline: 3px solid #9263DE;
+    outline-offset: 2px; }
+  .au-body .au-accordion__title::-moz-focus-inner,
+  .au-accordion__title::-moz-focus-inner {
+    border: 0; }
+  .au-body .au-accordion__title:focus,
+  .au-accordion__title:focus {
+    z-index: 100; }
+  .au-body .au-accordion__title::-webkit-details-marker,
+  .au-accordion__title::-webkit-details-marker {
+    display: none; }
+  .au-body .au-accordion__title:after,
+  .au-accordion__title:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    margin-top: -0.5rem;
+    right: 16px;
+    right: 1rem;
+    width: 16px;
+    width: 1rem;
+    height: 16px;
+    height: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%2300698f' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%2300698f' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 101;
+    transition: transform 0.25s ease-in; }
+  .au-body .au-accordion__title.au-accordion--closed:after,
+  .au-accordion__title.au-accordion--closed:after {
+    transform: rotate(-180deg); }
+  .ie8 .au-body .au-accordion__title:after,
+  .lt-ie8 .au-body .au-accordion__title:after, .ie8
+  .au-accordion__title:after,
+  .lt-ie8
+  .au-accordion__title:after {
+    content: ' ▼ '; }
+  .ie8 .au-body .au-accordion__title.au-accordion--open:after,
+  .lt-ie8 .au-body .au-accordion__title.au-accordion--open:after, .ie8
+  .au-accordion__title.au-accordion--open:after,
+  .lt-ie8
+  .au-accordion__title.au-accordion--open:after {
+    content: ' ▲ '; }
+
+.au-body.au-body--dark .au-accordion__title,
+.au-accordion.au-accordion--dark .au-accordion__title {
+  color: #61daff; }
+  .au-body.au-body--dark .au-accordion__title:hover,
+  .au-accordion.au-accordion--dark .au-accordion__title:hover {
+    color: #ffffff; }
+    .au-body.au-body--dark .au-accordion__title:hover:after,
+    .au-accordion.au-accordion--dark .au-accordion__title:hover:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E %3Cpath fill='%23ffffff' d='M64 0l64 64-16 16-64-64'/%3E %3Cpath fill='%23ffffff' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E"); }
+  .au-body.au-body--dark .au-accordion__title:focus,
+  .au-accordion.au-accordion--dark .au-accordion__title:focus {
+    outline: 3px solid #C390F9; }
+  .au-body.au-body--dark .au-accordion__title::-moz-focus-inner,
+  .au-accordion.au-accordion--dark .au-accordion__title::-moz-focus-inner {
+    border: 0; }
+  .au-body.au-body--dark .au-accordion__title:after,
+  .au-accordion.au-accordion--dark .au-accordion__title:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E %3Cpath fill='%2361daff' d='M64 0l64 64-16 16-64-64'/%3E %3Cpath fill='%2361daff' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E"); }
+
+.au-accordion__body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: hidden; }
+  .js .au-accordion__body.au-accordion--open {
+    display: block;
+    height: auto; }
+  .js .au-accordion__body.au-accordion--closed {
+    display: none;
+    height: 0; }
+
+.au-accordion__body-wrapper {
+  padding: 16px;
+  padding: 1rem;
+  border-top: 1px solid gray; }
+  .au-accordion--dark .au-accordion__body-wrapper {
+    border-top: 1px solid #89afb8; }
+
+.au-accordion-group {
+  list-style: none;
+  padding: 0; }
+
+.au-accordion.au-accordion--small {
+  border: 0; }
+  .au-accordion.au-accordion--small .au-accordion__title {
+    font-weight: 400;
+    font-size: inherit; }
+
+.au-accordion.au-accordion--light .au-accordion__title {
+  font-weight: 400;
+  font-size: inherit; }
+
+.au-accordion.au-accordion--light .au-accordion__body-wrapper {
+  padding: 8px;
+  padding: 0.5rem; }

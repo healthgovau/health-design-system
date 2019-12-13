@@ -12,6 +12,7 @@ const pkg         = require('./package.json');
 
 const options = {
   paths : {
+    components: 'style-guide/components/01-components/',
     sass: 'source/sass/',
     js: 'source/js/',
     dist: 'build/',
@@ -33,6 +34,20 @@ function cssClean() {
     options.paths.dist + '*.css',
     options.paths.dist + 'maps'
   ]);
+}
+
+/**
+ * Build component CSS file.
+ */
+function cssComponents() {
+  return gulp.src(options.paths.components + "**/*.scss", { base: "." })
+    .pipe(sass({
+      includePaths: [
+        "./node_modules",
+        "./source/sass"
+      ]
+    }).on("error", sass.logError))
+    .pipe(gulp.dest("."));
 }
 
 function cssDev() {
@@ -124,3 +139,4 @@ exports.default = gulp.series(
 );
 
 exports.watch = watching;
+exports.build_components = gulp.series(cssComponents);
