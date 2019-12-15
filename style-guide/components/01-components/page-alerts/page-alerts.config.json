@@ -13,7 +13,39 @@
         "pageAlert": {
           "title": "Submission successful",
           "text": "Thanks for sending us information on your favourite dinosaur.",
-          "modifier": "au-page-alerts--success"
+          "modifier": [
+            "au-page-alerts--success"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Success--alt",
+      "context": {
+        "pageAlert": {
+          "title": "Submission successful",
+          "text": "Thanks for sending us information on your favourite dinosaur.",
+          "modifier": [
+            "au-body",
+            "au-body--alt",
+            "au-page-alerts--success",
+            "au-page-alerts--alt"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Success--dark",
+      "context": {
+        "pageAlert": {
+          "title": "Submission successful",
+          "text": "Thanks for sending us information on your favourite dinosaur.",
+          "modifier": [
+            "au-body",
+            "au-body--dark",
+            "au-page-alerts--success",
+            "au-page-alerts--dark"
+          ]
         }
       }
     },
@@ -23,7 +55,39 @@
         "pageAlert": {
           "title": "Warning",
           "text": "Dinosaurs are on the loose in Canberra!",
-          "modifier": "au-page-alerts--warning"
+          "modifier": [
+            "au-page-alerts--warning"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Warning--alt",
+      "context": {
+        "pageAlert": {
+          "title": "Warning",
+          "text": "Dinosaurs are on the loose in Canberra!",
+          "modifier": [
+            "au-body",
+            "au-body--alt",
+            "au-page-alerts--warning",
+            "au-page-alerts--alt"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Warning--dark",
+      "context": {
+        "pageAlert": {
+          "title": "Warning",
+          "text": "Dinosaurs are on the loose in Canberra!",
+          "modifier": [
+            "au-body",
+            "au-body--dark",
+            "au-page-alerts--warning",
+            "au-page-alerts--dark"
+          ]
         }
       }
     },
@@ -33,7 +97,39 @@
         "pageAlert": {
           "title": "Error",
           "text": "You cannot register your dinosaur as it is too big.",
-          "modifier": "au-page-alerts--error"
+          "modifier": [
+            "au-page-alerts--error"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Error--alt",
+      "context": {
+        "pageAlert": {
+          "title": "Error",
+          "text": "Dinosaurs are on the loose in Canberra!",
+          "modifier": [
+            "au-body",
+            "au-body--alt",
+            "au-page-alerts--error",
+            "au-page-alerts--alt"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Error--dark",
+      "context": {
+        "pageAlert": {
+          "title": "Error",
+          "text": "Dinosaurs are on the loose in Canberra!",
+          "modifier": [
+            "au-body",
+            "au-body--dark",
+            "au-page-alerts--error",
+            "au-page-alerts--dark"
+          ]
         }
       }
     }
