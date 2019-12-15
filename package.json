@@ -65,7 +65,7 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "build:components": "gulp build_components",
+    "components:build": "gulp build_components",
     "postinstall": "npm rebuild node-sass",
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
