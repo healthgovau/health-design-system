@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.2.1 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.4 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -3648,15 +3648,13 @@ ul.list--large--checklist > li .au-body strong {
   padding: 0.5rem; }
 
 .au-body {
-  fill: #313131;
-  stroke: #313131; }
+  fill: #313131; }
   .au-body.au-body--dark {
     background: #000; }
     .au-body.au-body--dark-tertiary {
       background: #00205B; }
   .au-body.au-body--dark {
-    fill: #FFF;
-    stroke: #FFF; }
+    fill: #FFF; }
   .au-body .text--minor {
     color: #414141;
     font-size: 0.8em; }
