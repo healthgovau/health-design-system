@@ -25,7 +25,7 @@
     {
       "name": "Call to action - Colour 2",
       "hidden": true,
-      "view": "card--call-to-action.hbs",
+      "view": "card--call-to-action.twig",
       "context": {
         "colour": "health-card--colour2",
         "icon": "envelope",
@@ -35,7 +35,7 @@
     {
       "name": "Call to action - Colour 3",
       "hidden": true,
-      "view": "card--call-to-action.hbs",
+      "view": "card--call-to-action.twig",
       "context": {
         "colour": "health-card--colour3",
         "icon": "youtube",
@@ -45,7 +45,7 @@
     {
       "name": "Call to action - Colour 4",
       "hidden": true,
-      "view": "card--call-to-action.hbs",
+      "view": "card--call-to-action.twig",
       "context": {
         "colour": "health-card--colour4",
         "icon": "search",
@@ -62,7 +62,7 @@
     {
       "name": "Audience - Colour 2",
       "hidden": true,
-      "view": "card--audience.hbs",
+      "view": "card--audience.twig",
       "context": {
         "colour": "colour2",
         "title": "Teenages",
@@ -72,7 +72,7 @@
     {
       "name": "Audience - Colour 3",
       "hidden": true,
-      "view": "card--audience.hbs",
+      "view": "card--audience.twig",
       "context": {
         "colour": "colour3",
         "title": "Adults",
@@ -82,7 +82,7 @@
     {
       "name": "Audience - Colour 4",
       "hidden": true,
-      "view": "card--audience.hbs",
+      "view": "card--audience.twig",
       "context": {
         "colour": "colour4",
         "title": "Seniors",
