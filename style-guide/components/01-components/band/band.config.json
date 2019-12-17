@@ -1,6 +1,6 @@
 {
   "title": "Band",
-  "preview": "@preview-full-width",
+  "preview": "@preview-band",
   "context": {
     "title": "Band title",
     "content": "Plain text band. "

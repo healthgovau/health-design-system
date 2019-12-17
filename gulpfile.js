@@ -47,7 +47,7 @@ function cssComponents() {
         "./source/sass"
       ]
     }).on("error", sass.logError))
-    .pipe(gulp.dest("."));
+    .pipe(gulp.dest(options.paths.styleGuide + "public/build/components"));
 }
 
 function cssDev() {

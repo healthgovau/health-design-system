@@ -1,0 +1,33 @@
+@import "themes/health/colors";
+@import "themes/health/variables";
+
+// DTA Design System.
+@import "@gov.au/core/lib/sass/module";
+@import "@gov.au/headings/lib/sass/module";
+@import "@gov.au/body/lib/sass/module";
+@import "@gov.au/grid-12/lib/sass/module";
+@import "@gov.au/responsive-media/lib/sass/module";
+
+// Base.
+@import 'base/normalize';
+
+// Abstractions.
+@import "abstracts/clearfix";
+@import "abstracts/visually-hidden";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+// DTA Design System overrides.
+@import "components/@govau/au-headings";
+@import "components/@govau/au-body";
+@import "components/@govau/au-grid";
+
+// Health Design System component customisations.
+@import "components/@health/health-band";
+@import "components/@health/health-card";
+@import "components/@health/health-images";
+@import "components/@health/health-lists";
+@import "components/@health/health-video";
+
+// Icons must be last.
+@import "components/icons";
