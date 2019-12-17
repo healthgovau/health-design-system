@@ -39,7 +39,7 @@ function cssClean() {
 /**
  * Build component CSS file.
  */
-function cssComponents() {
+function buildComponentCss() {
   return gulp.src(options.paths.components + "**/*.scss", { base: "." })
     .pipe(sass({
       includePaths: [
@@ -48,6 +48,22 @@ function cssComponents() {
       ]
     }).on("error", sass.logError))
     .pipe(gulp.dest(options.paths.styleGuide + "public/build/components"));
+}
+
+/**
+ * Build sample CSS for component library item.
+ */
+function buildComponentSampleCss() {
+  return gulp.src(options.paths.components + "**/*.scss", {
+      base: "."
+    })
+    .pipe(sass({
+      includePaths: [
+        "./node_modules",
+        "./source/sass"
+      ]
+    }).on("error", sass.logError))
+    .pipe(gulp.dest("."));
 }
 
 function cssDev() {
@@ -139,4 +155,7 @@ exports.default = gulp.series(
 );
 
 exports.watch = watching;
-exports.build_components = gulp.series(cssComponents);
+exports.build_components = gulp.series(
+  buildComponentCss,
+  buildComponentSampleCss
+);
