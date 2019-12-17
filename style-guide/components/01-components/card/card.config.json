@@ -1,6 +1,7 @@
 {
   "title": "Card",
   "default": "Image",
+  "preview": "@preview-card",
   "context": {
     "title": "Dinosaurs to be crowned the earths greatest extinct animal",
     "date": "20 July 2019",
