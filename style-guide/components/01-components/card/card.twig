@@ -1,15 +1,30 @@
+{# Set default card values for Fractal library. #}
+{% set default_image = {
+    "image": {
+      "link": false,
+      "url": "http://placekitten.com/800/450",
+      "width": 800,
+      "height": 450,
+      "ratio": 56.25
+    }
+  }
+%}
+
 <article class="health-card health-card--shadow">
-  <div class="wrapper">
-    <div class="health-card__image health-card__image--full-width image--link">
-      <a href="#">
-        {% render '@image' %}
-      </a>
-    </div>
-    <h3 class="health-card__title au-display-md">
-      <a href="#">{{ title }}</a>
-    </h3>
-    <footer class="metadata metadata--inline">
-      {{ "now"|date("d M Y") }}
-    </footer>
-  </div>
+	<div class="wrapper">
+		<div class="health-card__image health-card__image--full-width image--link">
+			<a href="#">
+				{# Render Card component using Fractal. #}
+        {% include '@image' ignore missing with default_image %}
+				{# Render Card component using Drupal. #}
+        {% include '@hdscomponent/image/image.twig' ignore missing with image %}
+			</a>
+		</div>
+		<h3 class="health-card__title au-display-md">
+			<a href="#">{{ title }}</a>
+		</h3>
+		<footer class="metadata metadata--inline">
+			{{ "now"|date("d M Y") }}
+		</footer>
+	</div>
 </article>
