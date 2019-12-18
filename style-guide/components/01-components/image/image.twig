@@ -1,24 +1,23 @@
-
 {% if image.modifier %}
   <div class="{{ image.modifier }}">
-{% endif %}
-{% if image.link %}
-  <a href="#">
-{% endif %}
-  <div class="image-outer">
-    <div class="image-placeholder" style="max-width: {{ image.width }}px;">
-      <div style="padding-top: {{ image.ratio }}%;"></div>
-    </div>
-    <div class="image-wrapper image-loading">
-      <div class="image">
-        <img width="{{ image.width }}" height="{{ image.height }}" data-src="{{ image.url|path }}">
+  {% endif %}
+  {% if image.link %}
+    <a href="#">
+    {% endif %}
+    <div class="image-outer">
+      <div class="image-placeholder" style="max-width: {{ image.width }}px;">
+        <div style="padding-top: {{ image.ratio }}%;"></div>
+      </div>
+      <div class="image-wrapper image-loading">
+        <div class="image">
+          <img width="{{ image.width }}" height="{{ image.height }}" data-src="{{ image.url }}">
+        </div>
       </div>
     </div>
-  </div>
 
-{%if image.link %}
-  </a>
-{% endif %}
-{% if image.modifier %}
+    {%if image.link %}
+    </a>
+  {% endif %}
+  {% if image.modifier %}
   </div>
 {% endif %}
