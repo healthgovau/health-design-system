@@ -7,7 +7,14 @@
     "date": "20 July 2019",
     "icon": "phone",
     "colour": "colour1",
-    "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+    "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy.",
+    "image": {
+      "link": false,
+      "url": "http://placekitten.com/800/450",
+      "width": 800,
+      "height": 450,
+      "ratio": 56.25
+    }
   },
   "variants": [
     {
@@ -25,7 +32,6 @@
     },
     {
       "name": "Call to action - Colour 2",
-      "hidden": true,
       "view": "card--call-to-action.twig",
       "context": {
         "colour": "health-card--colour2",
@@ -35,7 +41,6 @@
     },
     {
       "name": "Call to action - Colour 3",
-      "hidden": true,
       "view": "card--call-to-action.twig",
       "context": {
         "colour": "health-card--colour3",
@@ -45,7 +50,6 @@
     },
     {
       "name": "Call to action - Colour 4",
-      "hidden": true,
       "view": "card--call-to-action.twig",
       "context": {
         "colour": "health-card--colour4",
