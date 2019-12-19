@@ -4,7 +4,7 @@
       {# Fractal compatiable. #}
       {% include "@" ~ item ignore missing %}
       {# Drupal compatiable. #}
-      {% if _env.server == false %}
+      {% if _env.server == false and _env.build == false %}
         {{ item }}
       {% endif %}
     </li>
