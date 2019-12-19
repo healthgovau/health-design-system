@@ -1,32 +1,12 @@
 <ul class="health-listing">
-  <li>
-    {% render '@listing-video' %}
-  </li>
-  <li>
-    {% render '@listing-publication' %}
-  </li>
-  <li>
-    {% render '@listing-video' %}
-  </li>
-  <li>
-    {% render '@listing-publication' %}
-  </li>
-  <li>
-    {% render '@listing-video' %}
-  </li>
-  <li>
-    {% render '@listing-publication' %}
-  </li>
-  <li>
-    {% render '@listing-video' %}
-  </li>
-  <li>
-    {% render '@listing-publication' %}
-  </li>
-  <li>
-    {% render '@listing-video' %}
-  </li>
-  <li>
-    {% render '@listing-publication' %}
-  </li>
+  {% for item in items  %}
+    <li>
+      {# Fractal compatiable. #}
+      {% include "@" ~ item ignore missing %}
+      {# Drupal compatiable. #}
+      {% if _env.server == false %}
+        {{ item }}
+      {% endif %}
+    </li>
+  {% endfor %}
 </ul>
