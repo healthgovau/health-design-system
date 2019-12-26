@@ -2,7 +2,9 @@
   {% for item in items  %}
     <li>
       {# Fractal compatiable. #}
-      {% include "@" ~ item ignore missing %}
+      {% if _env.server == true or _env.build == true %}
+        {% include "@" ~ item ignore missing %}
+      {% endif %}
       {# Drupal compatiable. #}
       {% if _env.server == false and _env.build == false %}
         {{ item }}

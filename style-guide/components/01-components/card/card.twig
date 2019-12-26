@@ -3,7 +3,9 @@
     <div class="health-card__image health-card__image--full-width image--link">
       <a href="#">
         {# Render Card component using Fractal. #}
-        {% include '@image' ignore missing %}
+        {% if _env.server == true or _env.build == true %}
+          {% include '@image' ignore missing %}
+        {% endif %}
         {# Drupal compatiable. Expects image render array. #}
         {% if _env.server == false and _env.build == false %}
           {{ image }}
