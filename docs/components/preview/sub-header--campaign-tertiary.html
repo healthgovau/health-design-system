@@ -5,50 +5,49 @@
 <head class="no-js">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link media="all" rel="stylesheet" href="../../build/css/hds-all.css">
-  <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
-  <script src="../../build/js/libraries/jquery.min.js"></script>
-  <script src="../../build/js/libraries/jquery-ui.min.js"></script>
-  <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
-  <script src="../../build/js/libraries/jquery.once.min.js"></script>
-  <script src="../../build/js/libraries/lazyload.min.js"></script>
-  <script src="../../build/js/libraries/tippy.all.min.js"></script>
-  <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
-  <title>Preview Layout</title>
+      <link media="all" rel="stylesheet" href="../../build/css/hds-all.css">
+    <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
+        <script src="../../build/js/libraries/jquery.min.js"></script>
+    <script src="../../build/js/libraries/jquery-ui.min.js"></script>
+    <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
+    <script src="../../build/js/libraries/jquery.once.min.js"></script>
+    <script src="../../build/js/libraries/lazyload.min.js"></script>
+    <script src="../../build/js/libraries/tippy.all.min.js"></script>
+    <script src="../../build/js/libraries/anchorific.min.js"></script>
+    <script src="/data.js"></script>
+    <script src="/build/js/hds.js"></script>
+    <title>Preview Layout</title>
 </head>
 <body class="au-body au-grid">
   <div class="container-fluid full-width">
     <div class="row">
-     <!--
-   Output inline style for image for more granular control
-   Preferably add to CSS but this depends on the implementation
--->
-<style>
-  .health-sub-header--campaign {
-    background-image: url('https://loremflickr.com/1920/700/health') !important; // reqd to override .au-body--dark bg
-  }
-</style>
-
-<div class="health-sub-header health-sub-header--campaign au-body au-body--dark">
+    
+<div class="health-sub-header">
   <div class="container">
     <div class="row">
-      <div class="health-sub-header__content--tertiary col-sm-7">
+      <div class="col-sm-12">
+        <nav class="au-breadcrumbs" aria-label="Breadcrumb">
+  <h2 class="au-sronly">You are here</h2>
+  <ol class="au-link-list au-link-list--inline">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Dinosaurs</a></li>
+    <li><a href="#">Theropods</a></li>
+  </ol>
+</nav>
+        <div class="health-sub-header__section-title">
+          <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
+        </div>
         <h1>Campaign title</h1>
         <p class="au-introduction">
           Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.
-        </p>
-        <p>
-          <a class="au-btn au-btn--dark au-btn--large" href="#">
-            Callout button
-          </a>
         </p>
       </div>
     </div>
   </div>
 </div>
+
     </div>
   </div>
 </body>
 </html>
+

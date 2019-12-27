@@ -14,8 +14,8 @@
   <script src="../../build/js/libraries/lazyload.min.js"></script>
   <script src="../../build/js/libraries/tippy.all.min.js"></script>
   <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
+  <script src="/data.js"></script>
+  <script src="/build/js/hds.js"></script>
   <title>Preview Layout</title>
 </head>
 <body class="au-grid">
@@ -23,7 +23,6 @@
   <a class="au-skip-link__link" href="#content">Skip to main content</a>
   <a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
 </nav>
-
 <div class="health-release-status au-body au-body--dark">
   <div class="container">
     <div class="row">
@@ -52,7 +51,7 @@
     <div class="row">
       <div class="col-sm-5">
         <a href="/" title="Home" rel="home" class="au-header__logo">
-          <img src="../../images/DoHCrest-white.png"
+          <img src="/images/DoHCrest-white.png"
                alt="Australia Government Department of Health"
                class="au-header__logo-image au-responsive-media-img"
                width="600" height="146">
@@ -70,8 +69,7 @@
     <li><a href="#">News</a></li>
     <li><a href="#">Contact us</a></li>
   </ul>
-</div>
-        <div class="health-search health-search--global">
+</div>        <div class="health-search health-search--global">
   <form class="au-form">
     <div class="health-search__form__input-wrapper">
       <div class="au-form__item">
@@ -81,7 +79,8 @@
                size="30" type="text" id="search-field" name="funnelback_search_field" value=""
                maxlength="128" autocomplete="off">
       </div>
-      <div class="health-loading"></div>    </div>
+      <div class="health-loading health-loading--active health-loading--small health-loading--search"></div>
+    </div>
     <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
   </form>
 </div>
@@ -141,13 +140,12 @@
       </div>
     </div>
   </div>
-</nav>
-  
-  <div class="health-sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <nav class="au-breadcrumbs" aria-label="Breadcrumb">
+</nav>  
+<div class="health-sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="au-breadcrumbs" aria-label="Breadcrumb">
   <h2 class="au-sronly">You are here</h2>
   <ol class="au-link-list au-link-list--inline">
     <li><a href="#">Home</a></li>
@@ -155,18 +153,18 @@
     <li><a href="#">Theropods</a></li>
   </ol>
 </nav>
-
-          <div class="health-sub-header__section-title">
-            <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
-          </div>
-          <h1>Provide feedback</h1>
-          <p class="au-introduction">
-            Use this form to give us thoughts or feedback on how we can improve the website
-          </p>
+        <div class="health-sub-header__section-title">
+          <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
         </div>
+        <h1>Page title</h1>
+        <p class="au-introduction">
+          Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.
+        </p>
       </div>
     </div>
-  </div>  <div class="health-toolbar">
+  </div>
+</div>
+  <div class="health-toolbar">
   <div class="container">
     <div class="row">
       <ul class="col-xs-12 health-toolbar__items au-link-list au-link-list--inline">
@@ -221,7 +219,6 @@
     });
   });
 </script>
-
   <div class="container not-full-width">
 
     <div class="row">
@@ -231,7 +228,7 @@
 
         <form class="au-form">
 
-            <div class="au-page-alerts au-page-alerts--error">
+                      <div class="au-page-alerts au-page-alerts--error">
               <h2 class="au-display-md">Please fix the following errors</h2>
               <ul>
                 <li>My favourite animals are: field is required.</li>
@@ -239,125 +236,129 @@
                 <li>Email address field is required.</li>
               </ul>
             </div>
+          
+          <div class="au-form__item">
+  <label for="is-this-feedback-for">
+    Is this feedback for:
+    <span class="form-required">(mandatory)</span>  </label>
+  <div id="is-this-feedback-for" class="form-radios">
+    <div class="au-form__item-type--radio">
+      <div class="au-control-input">
+        <input required="required" type="radio" id="is-this-feedback-for-1"
+               name="submitted[is_this_feedback_for]"
+               value="The whole website"
+               class="au-control-input__input"/>
+        <label class="au-control-input__text" for="is-this-feedback-for-1">
+          The whole website
+        </label>
+      </div>
+    </div>
+    <div class="au-form__item-type--radio">
+      <div class="au-control-input">
+        <input required="required" type="radio" id="is-this-feedback-for-2"
+               name="submitted[is_this_feedback_for]"
+               value="The page you were just on"
+               class="au-control-input__input"/>
+        <label class="au-control-input__text" for="is-this-feedback-for-2">
+          The page you were just on
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
 
           <div class="au-form__item">
-            <label for="is-this-feedback-for">
-              Is this feedback for:
-              <span class="form-required">(mandatory)</span>  </label>
-            <div id="is-this-feedback-for" class="form-radios">
-              <div class="au-form__item-type--radio">
-                <div class="au-control-input">
-                  <input required="required" type="radio" id="is-this-feedback-for-1"
-                         name="submitted[is_this_feedback_for]"
-                         value="The whole website"
-                         class="au-control-input__input error"/>
-                  <label class="au-control-input__text" for="is-this-feedback-for-1">
-                    The whole website
-                  </label>
-                </div>
-              </div>
-              <div class="au-form__item-type--radio">
-                <div class="au-control-input">
-                  <input required="required" type="radio" id="is-this-feedback-for-2"
-                         name="submitted[is_this_feedback_for]"
-                         value="The page you were just on"
-                         class="au-control-input__input error"/>
-                  <label class="au-control-input__text" for="is-this-feedback-for-2">
-                    The page you were just on
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="au-form__item">
-            <label for="is-this-feedback-for">
-              My favourite animals are:
-              <span class="form-required">(mandatory)</span>  </label>
-            <div class="au-form__item-description">
-              Check all that apply
-            </div>
-            <div id="interested-in" class="form-checkboxes">
-              <div class="au-form__item-type--checkbox">
-                <div class="au-control-input">
-                  <input required="required" type="checkbox" id="interested-in-1"
-                         name="submitted[is_this_feedback_for]"
-                         value="Dinosaurs"
-                         class="au-control-input__input error"/>
-                  <label class="au-control-input__text" for="interested-in-1">
-                    Dinosaurs
-                  </label>
-                </div>
-              </div>
-          
-              <div class="au-form__item-type--checkbox">
-                <div class="au-control-input">
-                  <input required="required" type="checkbox" id="interested-in-2"
-                         name="submitted[is_this_feedback_for]"
-                         value="Birds"
-                         class="au-control-input__input error"/>
-                  <label class="au-control-input__text" for="interested-in-2">
-                    Birds
-                  </label>
-                </div>
-              </div>
-          
-              <div class="au-form__item-type--checkbox">
-                <div class="au-control-input">
-                  <input required="required" type="checkbox" id="interested-in-2"
-                         name="submitted[is_this_feedback_for]"
-                         value="Mammals"
-                         class="au-control-input__input error"/>
-                  <label class="au-control-input__text" for="interested-in-2">
-                    Mammals
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="au-form__item">
-            <label for="favourite">
-              My least favourite animal is:
-              <span class="form-required">(mandatory)</span>  </label>
-            <select class="au-select error" id="favourite">
-              <option>Dinosaurs</option>
-              <option>Birds</option>
-              <option>Mammals</option>
-            </select>
-          </div>
-          <div class="au-form__item">
-            <label for="email">
-              Feedback
-              <span class="form-required">(mandatory)</span>  </label>
-            <div class="au-form__item-description">
-              Please do not include any personal or financial information
-            </div>
-            <textarea class="au-text-input au-text-input--block error" id="description" name="description" maxlength="1200"></textarea>
-          </div>
-          
-          <script language="JavaScript">
-            $(document).ready(function () {
-              health.fieldLengthCounter('#description');
-            });
-          </script>
+  <label for="is-this-feedback-for">
+    My favourite animals are
+    <span class="form-required">(mandatory)</span>  </label>
+  <div class="au-form__item-description">
+    Check all that apply
+  </div>
+  <div id="interested-in" class="form-checkboxes">
+    <div class="au-form__item-type--checkbox">
+      <div class="au-control-input">
+        <input required="required" type="checkbox" id="interested-in-1"
+               name="submitted[is_this_feedback_for]"
+               value="Dinosaurs"
+               class="au-control-input__input"/>
+        <label class="au-control-input__text" for="interested-in-1">
+          Dinosaurs
+        </label>
+      </div>
+    </div>
+
+    <div class="au-form__item-type--checkbox">
+      <div class="au-control-input">
+        <input required="required" type="checkbox" id="interested-in-2"
+               name="submitted[is_this_feedback_for]"
+               value="Birds"
+               class="au-control-input__input"/>
+        <label class="au-control-input__text" for="interested-in-2">
+          Birds
+        </label>
+      </div>
+    </div>
+
+    <div class="au-form__item-type--checkbox">
+      <div class="au-control-input">
+        <input required="required" type="checkbox" id="interested-in-3"
+               name="submitted[is_this_feedback_for]"
+               value="Mammals"
+               class="au-control-input__input"/>
+        <label class="au-control-input__text" for="interested-in-3">
+          Mammals
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
 
           <div class="au-form__item">
-            <label for="email">
-              Email address
-              <span class="form-required">(mandatory)</span>  </label>
-            <div class="au-form__item-description">
-              Health will not share this email. It will only be used to contact you regarding your feedback.
-            </div>
-            <input class="au-text-input au-text-input--block error" type="email" id="email" name="email" maxlength="50">
-          </div>
-          
-          <script language="JavaScript">
-            $(document).ready(function () {
-              health.fieldLengthCounter('#email');
-            });
-          </script>
+  <label for="favourite">
+    Favourite animal
+    <span class="form-required">(mandatory)</span>  </label>
+  <select class="au-select" id="favourite">
+    <option>Dinosaurs</option>
+    <option>Birds</option>
+    <option>Mammals</option>
+  </select>
+</div>
 
           <div class="au-form__item">
-            <button class="au-btn">Submit</button>          </div>
+  <label for="email">
+    Feedback
+    <span class="form-required">(mandatory)</span>  </label>
+  <div class="au-form__item-description">
+    Please do not include any personal or financial information
+  </div>
+  <textarea class="au-text-input au-text-input--block" id="description" name="description" maxlength="1200"></textarea>
+</div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.fieldLengthCounter('#description');
+  });
+</script>
+
+          <div class="au-form__item">
+  <label for="email">
+    Email address
+    <span class="form-required">(mandatory)</span>  </label>
+  <div class="au-form__item-description">
+    Health will not share this email. It will only be used to contact you regarding your feedback.
+  </div>
+  <input class="au-text-input au-text-input--block" type="email" id="email" name="email" maxlength="50">
+</div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.fieldLengthCounter('#email');
+  });
+</script>
+
+          <div class="au-form__item">
+            <button class="au-btn">Primary</button>
+          </div>
 
         </form>
       </div>
@@ -417,8 +418,7 @@
     </div>
   </div>
 </footer>
-
-<button class="health-back-to-top ">
+<button class="health-back-to-top isVisible">
   <a class="au-btn au-btn--secondary" href="#">
     <span class="svg-inline--fa fa-fw">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg>
@@ -426,5 +426,7 @@
     Back to top
   </a>
 </button>
+
 </body>
 </html>
+

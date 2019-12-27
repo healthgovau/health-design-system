@@ -14,8 +14,8 @@
   <script src="../../build/js/libraries/lazyload.min.js"></script>
   <script src="../../build/js/libraries/tippy.all.min.js"></script>
   <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
+  <script src="/data.js"></script>
+  <script src="/build/js/hds.js"></script>
   <title>Preview Layout</title>
 </head>
 <body class="au-grid">
@@ -23,7 +23,6 @@
   <a class="au-skip-link__link" href="#content">Skip to main content</a>
   <a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
 </nav>
-
 <div class="health-release-status au-body au-body--dark">
   <div class="container">
     <div class="row">
@@ -52,7 +51,7 @@
     <div class="row">
       <div class="col-sm-5">
         <a href="/" title="Home" rel="home" class="au-header__logo">
-          <img src="../../images/DoHCrest-white.png"
+          <img src="/images/DoHCrest-white.png"
                alt="Australia Government Department of Health"
                class="au-header__logo-image au-responsive-media-img"
                width="600" height="146">
@@ -70,8 +69,7 @@
     <li><a href="#">News</a></li>
     <li><a href="#">Contact us</a></li>
   </ul>
-</div>
-        <div class="health-search health-search--global">
+</div>        <div class="health-search health-search--global">
   <form class="au-form">
     <div class="health-search__form__input-wrapper">
       <div class="au-form__item">
@@ -81,7 +79,8 @@
                size="30" type="text" id="search-field" name="funnelback_search_field" value=""
                maxlength="128" autocomplete="off">
       </div>
-      <div class="health-loading"></div>    </div>
+      <div class="health-loading health-loading--active health-loading--small health-loading--search"></div>
+    </div>
     <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
   </form>
 </div>
@@ -141,13 +140,12 @@
       </div>
     </div>
   </div>
-</nav>
-  
-  <div class="health-sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <nav class="au-breadcrumbs" aria-label="Breadcrumb">
+</nav>  
+<div class="health-sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="au-breadcrumbs" aria-label="Breadcrumb">
   <h2 class="au-sronly">You are here</h2>
   <ol class="au-link-list au-link-list--inline">
     <li><a href="#">Home</a></li>
@@ -155,18 +153,18 @@
     <li><a href="#">Theropods</a></li>
   </ol>
 </nav>
-
-          <div class="health-sub-header__section-title">
-            <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
-          </div>
-          <h1>Dinosaur containment contact</h1>
-          <p class="au-introduction">
-            Call us if you spot a dinosaur on the loose.
-          </p>
+        <div class="health-sub-header__section-title">
+          <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
         </div>
+        <h1>Page title</h1>
+        <p class="au-introduction">
+          Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.
+        </p>
       </div>
     </div>
-  </div>  <div class="health-toolbar">
+  </div>
+</div>
+  <div class="health-toolbar">
   <div class="container">
     <div class="row">
       <ul class="col-xs-12 health-toolbar__items au-link-list au-link-list--inline">
@@ -221,7 +219,6 @@
     });
   });
 </script>
-
   <div class="container not-full-width">
 
     <div class="row">
@@ -254,8 +251,7 @@
       <li><a href="#">Birds</a></li>
     </ul>
   </div>
-</aside>
-      </div>
+</aside>      </div>
 
       <div class="col-sm-8">
 
@@ -336,11 +332,11 @@
         </div>
 
         <div class="health-separator"></div>
-
         <div class="health-field health-field--inline">
-          <div class="health-field__label">Last updated:</div>
-          <div class="health-field__item">20 June 2019</div>
-        </div>
+  <div class="health-field__label">Genus:</div>
+  <div class="health-field__item">Tyranasuarus Rex</div>
+</div>
+
         <div class="health-field health-field--inline">
           <div class="health-field__label">Tags:</div>
           <div class="health-field__item">
@@ -376,7 +372,6 @@
     </p>
   </div>
 </div>
-
 </div>
 
 <footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
@@ -430,8 +425,7 @@
     </div>
   </div>
 </footer>
-
-<button class="health-back-to-top ">
+<button class="health-back-to-top isVisible">
   <a class="au-btn au-btn--secondary" href="#">
     <span class="svg-inline--fa fa-fw">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg>
@@ -439,5 +433,7 @@
     Back to top
   </a>
 </button>
+
 </body>
 </html>
+

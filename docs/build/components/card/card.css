@@ -1,0 +1,726 @@
+@charset "UTF-8";
+/*! @gov.au/core v3.4.2 */
+/**
+ * AU-replace - Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string  - The haystack string to be manipulated
+ * @param  {string} $search  - The needle to be replace
+ * @param  {string} $replace - The replacement
+ *
+ * @return {string}          - The manipulated string with replaced values
+ */
+/**
+ * AU-svguri - Generate an optimized SVG data-uri
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * AU-factorial - Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * AU-pow - Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * AU-color-luminance - Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $color - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * AU-color-contrast - Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}   $foreground - Color one
+ * @param  {string}   $background - Color two
+ * @param  {boolean}  $silent     - If the logs get printed in the terminal
+ * @param  {boolean}  $rounded    - If the value is rounded or not
+ *
+ * @return {integer}              - The contrast ratio
+ */
+/**
+ * AU-color-a11y - The function to find the nearest accessible color
+ *
+ * https://github.com/alex-page/sass-a11ycolor
+ *
+ * @author Alex Page @aalexpaage <http://alexpage.com.au>
+ *
+ * @param  {Color}           $toMakeA11y           - The color that is to be changed
+ * @param  {Color}           $background           - The background color to compare against toMakeA11y for the contrast
+ * @param  {'small'|'large'} $ratioKey   ['small'] - The keyword 'small' or 'large' to set the WCAG 2.1 contrast ration or 3.0 or 4.5
+ * @param  {Number}          $steps      [0.1]     - The step size our function is searching for a new color in. The bigger the number the faster the process
+ *                                                    the rougher the found color.
+ *
+ * @return {Color}                                 - Returns the nearest accessible color
+ */
+/**
+ * AU-color-lowest-contrast - Find the lowest contrast color
+ *
+ * @param  {Colors}          $colors     - The color to find the lowest contrast
+ * @param  {Color}           $background - The background color to compare the colors against
+ *
+ * @return {Color}                       - Returns the lowest contrast color
+ */
+/**
+ * AU-space - Mixin for setting a properties value to snap to the grid, with a fallback for REM.
+ *
+ * @param  {string} $property - The css property to apply the spacing ( padding, margin )
+ * @param  {number} $values   - The values of the property ( 0, 20px, 1unit, 5% )
+ *
+ * @return {number}           - The space in px and rems
+ */
+/**
+ * AU-clearfix - Clearing floats
+ */
+/**
+ * AU-media - Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * AU-sronly - Hide an element from the screen but not a screen reader
+ */
+/**
+ * AU-outline - Create outline based on the theme the user is using.
+ *
+ * @param  {keywords} $theme - `dark` or default ( `light` )
+ *
+ * @return {string}          - The code
+ */
+/**
+ * AU-focus - Add the outline to focus
+ */
+/**
+ * AU-fontgrid Mixin for setting font-size and line-height that snaps to the grid.
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ * @param  {keywords} $lineheight-key -  Either one of the following keywords: heading, nospace, default
+ *
+ * @return {string}                   - The code; fontsize in REM, with PX fallback, and unitless line-height which matches vertical grid
+*/
+/**
+ * AU-pixelfallback enable pixel fallbacks
+ */
+/**
+ * AU-media Breakpoints
+ */
+/**
+ * AU-rem value used for REM calculation
+ */
+/**
+ * AU-unit used for all type and grid calculations
+ */
+/**
+ * AU-font stack
+ * AU-font-monospace stack
+ */
+/**
+ * AU-fontsize-map
+ *
+ * Predetermined pixel sizes from a 1.25 typescale rounded to the nearest $AU-unit (vertical grid)
+ */
+/**
+ * AU-lineheight-map
+ *
+ * Predetermined lineheight mapped to keyword
+ */
+/**
+ * AU-maxwidth for line lengths (the ‘measure’)
+ */
+/**
+ * Colors light theme
+ */
+/**
+ * Colors dark theme
+ */
+/**
+ * Colors system messages
+ */
+/**
+ * AU-border-radius styles
+ */
+/**
+ * Health-fontgrid Mixin for setting font-size and line-height that snaps to the grid, and also includes mobile :)
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ * @param  {keywords} $lineheight-key -  Either one of the following keywords: heading, nospace, default
+ *
+ * @return {string}                   - The code; fontsize in REM, with PX fallback, and unitless line-height which matches vertical grid
+*/
+/**
+ * Get the next size down.
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ *
+ * @return {string}                   -  One of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+*/
+.au-body .au-display-xxxl {
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .au-body .au-display-xxxl {
+      font-size: 48px;
+      font-size: 3rem;
+      line-height: 1.25; } }
+  .au-body .au-display-xxxl--text {
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .au-body .au-display-xxxl--text {
+        font-size: 48px;
+        font-size: 3rem;
+        line-height: 1.5; } }
+
+.au-body h1,
+.au-body .au-display-xxl {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .au-body h1,
+    .au-body .au-display-xxl {
+      font-size: 40px;
+      font-size: 2.5rem;
+      line-height: 1.3; } }
+  .au-body h1--text,
+  .au-body .au-display-xxl--text {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .au-body h1--text,
+      .au-body .au-display-xxl--text {
+        font-size: 40px;
+        font-size: 2.5rem;
+        line-height: 1.5; } }
+
+.au-body h2,
+.au-body .au-display-xl {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.33333;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .au-body h2,
+    .au-body .au-display-xl {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.25; } }
+  .au-body h2--text,
+  .au-body .au-display-xl--text {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .au-body h2--text,
+      .au-body .au-display-xl--text {
+        font-size: 32px;
+        font-size: 2rem;
+        line-height: 1.5; } }
+
+.au-body h3,
+.au-body .au-display-lg {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .au-body h3,
+    .au-body .au-display-lg {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.33333; } }
+  .au-body h3--text,
+  .au-body .au-display-lg--text {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .au-body h3--text,
+      .au-body .au-display-lg--text {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.5; } }
+
+.au-body h4,
+.au-body .au-display-md {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .au-body h4,
+    .au-body .au-display-md {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.2; } }
+  .au-body h4--text,
+  .au-body .au-display-md--text {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .au-body h4--text,
+      .au-body .au-display-md--text {
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.6; } }
+
+.au-body h5,
+.au-body .au-display-sm {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .au-body h5,
+    .au-body .au-display-sm {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.25; } }
+  .au-body h5--text,
+  .au-body .au-display-sm--text {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .au-body h5--text,
+      .au-body .au-display-sm--text {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5; } }
+
+.au-body h6,
+.au-body .au-display-xs {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .au-body h6,
+    .au-body .au-display-xs {
+      font-size: 14px;
+      font-size: 0.875rem;
+      line-height: 1.14286; } }
+  .au-body h6--text,
+  .au-body .au-display-xs--text {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .au-body h6--text,
+      .au-body .au-display-xs--text {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.42857; } }
+
+.au-body .au-display--light {
+  font-weight: normal; }
+
+.au-body .au-display--heavy {
+  font-weight: bold; }
+
+.au-body .au-display--inline {
+  display: inline; }
+
+.au-body .au-subtitle + h1, .au-body .au-subtitle + h2, .au-body .au-subtitle + h3 {
+  margin-top: 8px;
+  margin-top: 0.5rem; }
+
+.au-body h1 + .au-subtitle {
+  margin-top: 8px;
+  margin-top: 0.5rem; }
+
+.health-card {
+  padding: 16px;
+  padding: 1rem;
+  margin-top: 0;
+  width: 100%;
+  font-weight: normal;
+  display: block;
+  box-sizing: border-box; }
+  @media (min-width: 992px) {
+    .health-card {
+      padding: 32px;
+      padding: 2rem; } }
+  .health-card * + hr,
+  .health-card * + p,
+  .health-card * + .health-card__title,
+  .health-card * + .health-card__cta {
+    margin-top: 0; }
+  .health-card__title + .metadata--inline {
+    margin-top: 8px;
+    margin-top: 0.5rem; }
+    @media (min-width: 768px) {
+      .health-card__title + .metadata--inline {
+        margin-top: 16px;
+        margin-top: 1rem; } }
+  .health-card__image + .health-card__title {
+    margin-top: 8px;
+    margin-top: 0.5rem; }
+    @media (min-width: 768px) {
+      .health-card__image + .health-card__title {
+        margin-top: 16px;
+        margin-top: 1rem; } }
+  .health-card__text {
+    margin-top: 16px;
+    margin-top: 1rem; }
+  .health-card .health-card__image {
+    display: block; }
+    .health-card .health-card__image svg {
+      height: 3em;
+      width: 3em; }
+      @media (min-width: 768px) {
+        .health-card .health-card__image svg {
+          height: 5em;
+          width: 5em; } }
+    .health-card .health-card__image.health-card__image--full-width {
+      margin: -16px -16px 16px -16px;
+      margin: -1rem -1rem 1rem -1rem;
+      height: auto; }
+      @media (min-width: 768px) {
+        .health-card .health-card__image.health-card__image--full-width {
+          margin: -32px -32px 32px -32px;
+          margin: -2rem -2rem 2rem -2rem; } }
+  .health-card__bg {
+    padding: 16px;
+    padding: 1rem;
+    background-color: black; }
+    .health-card__bg:not(:first-child) {
+      margin-top: 16px;
+      margin-top: 1rem; }
+  .health-card img {
+    display: block;
+    min-width: 100%;
+    height: auto; }
+  .health-card--shadow {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: #ffffff; }
+    .lt-ie9 .health-card--shadow {
+      border: solid 1px gray; }
+  .health-card--light {
+    background: #ffffff;
+    overflow: hidden; }
+  .health-card--centered {
+    text-align: center; }
+    .health-card--centered img,
+    .health-card--centered svg,
+    .health-card--centered .health-card__image,
+    .health-card--centered p {
+      margin: auto; }
+    .health-card--centered .health-card__image {
+      margin-bottom: 8px;
+      margin-bottom: 0.5rem; }
+  .health-card--contact {
+    background: #f9f9f9;
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
+    .health-card--contact .image--circle img {
+      width: 200px;
+      min-width: 0;
+      margin-bottom: -16px;
+      margin-bottom: -1rem; }
+    @media (min-width: 768px) {
+      .health-card--contact {
+        padding-top: 80px;
+        padding-top: 5rem;
+        margin-top: 5rem !important; }
+        .health-card--contact .image--circle .image {
+          position: absolute;
+          left: 0;
+          top: -20px;
+          width: 100%;
+          height: 10px;
+          z-index: 999; } }
+  .health-card.health-card--selector {
+    padding: 8px;
+    padding: 0.5rem;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    overflow: hidden;
+    background: #f9f9f9;
+    border-top: 10px solid #e5e5e5; }
+    @media (min-width: 992px) {
+      .health-card.health-card--selector {
+        padding: 16px;
+        padding: 1rem; } }
+    @media print {
+      .health-card.health-card--selector {
+        display: none; } }
+    .health-card.health-card--selector:hover, .health-card.health-card--selector:focus, .health-card.health-card--selector.health-card--active {
+      background: white;
+      border-top-color: #007680; }
+    .health-card.health-card--selector .health-card__title {
+      margin-top: 8px;
+      margin-top: 0.5rem;
+      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
+      font-size: 14px;
+      font-size: 0.875rem;
+      line-height: 1.14286;
+      font-weight: bold;
+      max-width: 100%; }
+      @media (min-width: 768px) {
+        .health-card.health-card--selector .health-card__title {
+          font-size: 16px;
+          font-size: 1rem;
+          line-height: 1.25; } }
+    .health-card.health-card--selector .health-card__image svg {
+      max-width: 3em;
+      max-height: 3em; }
+    .health-card.health-card--selector p {
+      max-width: 75%; }
+  .health-card.health-card--resource {
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #e5e5e5;
+    padding: 16px 0 0 0;
+    padding: 1rem 0 0 0; }
+    @media (min-width: 768px) {
+      .health-card.health-card--resource {
+        padding: 32px 0 0 0;
+        padding: 2rem 0 0 0; } }
+  .health-card--solid {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background: #005fa0;
+    color: white; }
+    .health-card--solid:hover {
+      background: #0077C8;
+      color: white; }
+    a.health-card.health-card--solid {
+      color: white; }
+    .health-card--solid.health-card--colour1 {
+      background: #005fa0; }
+      .health-card--solid.health-card--colour1:hover {
+        background: #0077C8;
+        color: white; }
+    .health-card--solid.health-card--colour2 {
+      background: #006269; }
+      .health-card--solid.health-card--colour2:hover {
+        background: #007680; }
+    .health-card--solid.health-card--colour3 {
+      background: #006a73; }
+      .health-card--solid.health-card--colour3:hover {
+        background: #007680; }
+    .health-card--solid.health-card--colour4 {
+      background: #004693; }
+      .health-card--solid.health-card--colour4:hover {
+        background: #0057B8; }
+  .health-card--solid-half {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 0; }
+    .health-card--solid-half .health-card__title {
+      float: left;
+      width: 35%;
+      height: 100%;
+      color: #fff;
+      padding: 24px;
+      padding: 1.5rem; }
+    .health-card--solid-half .health-card__text {
+      display: block;
+      margin-left: 35%;
+      margin-top: 0;
+      background: #fff;
+      height: 100%;
+      padding: 24px;
+      padding: 1.5rem; }
+    .health-card--solid-half.health-card--colour1 {
+      background-color: #005fa0;
+      background: linear-gradient(to right, #005fa0 0%, #005fa0 35%, #fff 35%, white 100%); }
+      .health-card--solid-half.health-card--colour1:hover {
+        background-color: #185b88;
+        background: linear-gradient(to right, #185b88 0%, #185b88 35%, #fff 35%, #fff 100%); }
+    .health-card--solid-half.health-card--colour2 {
+      background-color: #006a73;
+      background: linear-gradient(to right, #006a73 0%, #006a73 35%, #fff 35%, white 100%); }
+      .health-card--solid-half.health-card--colour2:hover {
+        background-color: #005e66;
+        background: linear-gradient(to right, #005e66 0%, #005e66 35%, #fff 35%, #fff 100%); }
+    .health-card--solid-half.health-card--colour3 {
+      background-color: #005fa0;
+      background: linear-gradient(to right, #005fa0 0%, #005fa0 35%, #fff 35%, white 100%); }
+      .health-card--solid-half.health-card--colour3:hover {
+        background-color: #185b88;
+        background: linear-gradient(to right, #185b88 0%, #185b88 35%, #fff 35%, #fff 100%); }
+      @media (min-width: 992px) {
+        .health-card--solid-half.health-card--colour3 {
+          background-color: #006a73;
+          background: linear-gradient(to right, #006a73 0%, #006a73 35%, #fff 35%, white 100%); }
+          .health-card--solid-half.health-card--colour3:hover {
+            background-color: #005e66;
+            background: linear-gradient(to right, #005e66 0%, #005e66 35%, #fff 35%, #fff 100%); } }
+    .health-card--solid-half.health-card--colour4 {
+      background-color: #006a73;
+      background: linear-gradient(to right, #006a73 0%, #006a73 35%, #fff 35%, white 100%); }
+      .health-card--solid-half.health-card--colour4:hover {
+        background-color: #005e66;
+        background: linear-gradient(to right, #005e66 0%, #005e66 35%, #fff 35%, #fff 100%); }
+      @media (min-width: 992px) {
+        .health-card--solid-half.health-card--colour4 {
+          background-color: #005fa0;
+          background: linear-gradient(to right, #005fa0 0%, #005fa0 35%, #fff 35%, white 100%); }
+          .health-card--solid-half.health-card--colour4:hover {
+            background-color: #185b88;
+            background: linear-gradient(to right, #185b88 0%, #185b88 35%, #fff 35%, #fff 100%); } }
+  .health-card--top-highlight {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-top: 6px solid #0077C8; }
+    .health-card--top-highlight:hover, .health-card--top-highlight:focus {
+      background-color: #f1f1f2; }
+    .health-card--top-highlight.health-card--colour2 {
+      border-top-color: #910048; }
+    .health-card--top-highlight.health-card--colour3 {
+      border-top-color: #B5BD00; }
+    .health-card--top-highlight.health-card--colour4 {
+      border-top-color: #007680; }
+    .health-card--top-highlight.health-card--colour5 {
+      border-top-color: #0093B2; }
+  .health-card--cta:after {
+    content: ' ';
+    width: 16px;
+    width: 1rem;
+    height: 16px;
+    height: 1rem;
+    margin: 0 4px 0 3px;
+    margin: 0 0.25rem 0 0.2rem;
+    transition: margin 0.2s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23313131' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+    display: block;
+    position: absolute;
+    right: 16px;
+    right: 1rem;
+    bottom: 8px;
+    bottom: 0.5rem;
+    transition-property: right; }
+    .ie8 .health-card--cta:after,
+    .lt-ie8 .health-card--cta:after {
+      content: ' > '; }
+    @media (min-width: 768px) {
+      .health-card--cta:after {
+        right: 32px;
+        right: 2rem;
+        bottom: 32px;
+        bottom: 2rem; } }
+  .health-card--cta:hover {
+    color: #313131;
+    text-decoration: none; }
+    .health-card--cta:hover:after {
+      margin-left: 6px;
+      margin-left: 0.4rem;
+      right: 24px;
+      right: 1.5rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23313131' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
+  .health-card.health-card--horizontal {
+    width: inherit; }
+    .health-card.health-card--horizontal div[class*="col-"] {
+      padding-left: 0;
+      padding-right: 0; }
+    .health-card.health-card--horizontal .health-card__image.health-card__image--full-width {
+      margin: -16px -16px 0 -16px;
+      margin: -1rem -1rem 0 -1rem; }
+      @media (min-width: 768px) {
+        .health-card.health-card--horizontal .health-card__image.health-card__image--full-width {
+          margin: -32px 0 -32px -32px;
+          margin: -2rem 0 -2rem -2rem; } }
+    .health-card.health-card--horizontal div[class*="col-"]:last-of-type {
+      padding-top: 16px;
+      padding-top: 1rem; }
+      @media (min-width: 768px) {
+        .health-card.health-card--horizontal div[class*="col-"]:last-of-type {
+          padding-left: 32px;
+          padding-left: 2rem;
+          padding-top: 0; } }
+    .health-card.health-card--horizontal.row {
+      margin-left: 0;
+      margin-right: 0; }
+  a.health-card {
+    color: #313131;
+    text-decoration: none; }
+    .au-body a.health-card {
+      text-decoration: none; }
+    a.health-card .health-card__title {
+      text-decoration: underline; }
+    a.health-card:hover .health-card__title {
+      text-decoration: none; }
+    a.health-card.health-card--shadow:focus {
+      border-radius: 0; }
+    a.health-card.health-card--shadow:hover {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+    a.health-card .health-card__link,
+    a.health-card .health-card__cta {
+      color: #006FB0;
+      text-decoration: underline;
+      text-decoration-skip: ink; }
+
+ul.health-card-list {
+  padding: 0;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 0; }
+  ul.health-card-list li {
+    list-style: none;
+    margin-top: 16px;
+    margin-top: 1rem; }
+    @media (min-width: 768px) {
+      ul.health-card-list li {
+        margin-top: 24px;
+        margin-top: 1.5rem; } }
+  ul.health-card-list--flush {
+    margin-top: -16px;
+    margin-top: -1rem; }
+    @media (min-width: 768px) {
+      ul.health-card-list--flush {
+        margin-top: -24px;
+        margin-top: -1.5rem; } }

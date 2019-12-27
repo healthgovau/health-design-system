@@ -1,0 +1,9 @@
+@import "themes/health/colors";
+
+// DTA Design System.
+@import "@gov.au/core/lib/sass/module";
+@import "@gov.au/body/lib/sass/module";
+@import "@gov.au/page-alerts/lib/sass/module";
+
+// Health Design System component customisations.
+@import "components/@govau/au-page-alerts";
