@@ -4172,8 +4172,8 @@ textarea.au-text-input {
   display: none; }
   @media (min-width: 768px) {
     .health-band__image--image-text-horizontal {
-      display: inline-block;
-      width: 70%; } }
+      display: block;
+      width: 100%; } }
 
 .health-book-nav {
   border-top: 1px solid #ccc;

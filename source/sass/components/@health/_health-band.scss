@@ -43,7 +43,7 @@
 .health-band__image--image-text-horizontal {
   display: none;
   @include AU-media(sm) {
-    display: inline-block;
-    width: 70%;
+    display: block;
+    width: 100%;
   }
 }
