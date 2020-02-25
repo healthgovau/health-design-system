@@ -1,0 +1,16 @@
+{
+  "title": "Listing page",
+  "label": "Listing page",
+  "preview": "@preview-page",
+  "context": {
+    "subheader": {
+      "title": "Resources",
+      "summary": "Find all of our publications, videos, reports and more"
+    },
+    "search": {
+      "placeholder": "Search this list",
+      "global": false,
+      "id": "search-field"
+    }
+  }
+}
