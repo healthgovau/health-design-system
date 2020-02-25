@@ -1,0 +1,18 @@
+{
+  "title": "Content page",
+  "preview": "@preview-page",
+  "context": {
+    "subheader": {
+      "title": "Tyrannosaurus",
+      "summary": "Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning \"king\" in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods."
+    },
+    "backToTop": {
+      "isVisible": false
+    },
+    "field": {
+      "label": "Last updated",
+      "item": "20 June 2019",
+      "modifier": "health-field--inline"
+    }
+  }
+}
