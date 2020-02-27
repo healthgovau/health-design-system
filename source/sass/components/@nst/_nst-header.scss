@@ -1,0 +1,21 @@
+// Health variation on the au-header.
+.au-header.au-header {
+  border-top: 0;
+
+  .au-header__logo {
+    @include AU-media(md) {
+      max-width: 400px;
+    }
+  }
+
+  &--dark {
+    background: $AU-colordark-background;
+    a {
+      color: $AU-colordark-foreground-text;
+      &:hover {
+        color: $AU-colordark-foreground-text;
+        text-decoration: none;
+      }
+    }
+  }
+}

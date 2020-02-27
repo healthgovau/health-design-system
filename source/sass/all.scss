@@ -18,6 +18,7 @@
 //
 // Style guide: sass
 @import 'themes/health/colors';
+@import 'themes/nst/colors';
 
 // 3rd party libraries
 //
@@ -40,7 +41,7 @@
 // Style guide: base
 
 // Ensure fonts get loaded first to minimize front-end performance impact
-@import 'base/fonts';
+
 @import 'base/normalize';
 
 // Mixins 
