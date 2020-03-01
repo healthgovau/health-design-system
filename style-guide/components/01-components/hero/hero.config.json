@@ -3,7 +3,15 @@
   "preview": "@preview-full-width",
   "context": {
     "title": "National Sports Tribunal",
-    "summary": "The National Sports Tribunal will provide independent, cost effective, transparent and consistent dispute resolution services to athletes, sporting organisations and support personnel.",
-    "call-to-action": "Call to action"
-  }
+    "summary": "The National Sports Tribunal will provide independent, cost effective, transparent and consistent dispute resolution services to athletes, sporting organisations and support personnel."
+  },
+  "variants": [
+    {
+      "name": "Call to action",
+      "context": {
+        "title": "Dinosaur escape hotline",
+        "summary": "This hero is the same as the default one but has a call-to-action.",
+        "call-to-action": "Call to action"}
+    }
+  ]
 }

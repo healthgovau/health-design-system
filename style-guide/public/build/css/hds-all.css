@@ -1,6 +1,6 @@
 /*! @health.gov.au/health-design-system v1.2.1 */
 @charset "UTF-8";
-.au-body .health-band.health-band--tertiary-2, .health-hero .health-sub-header__content {
+.au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
   background: -webkit-gradient(linear, left top, right top, from(#00205B), to(#004181));
   background: -o-linear-gradient(left, #00205B, #004181);
@@ -21,13 +21,13 @@
 .taskbar--tiled--3.view ul > .views-row .node,
 .taskbar--tiled--4.view ul > .views-row .node,
 .taskbar--tiled--5.view ul > .views-row .node,
-.taskbar--tiled--6.view ul > .views-row .node, .health-hero .health-sub-header__content--secondary {
+.taskbar--tiled--6.view ul > .views-row .node {
   background-color: #007680;
   background: -webkit-gradient(linear, left top, right top, from(#055a61), to(#007680));
   background: -o-linear-gradient(left, #055a61, #007680);
   background: linear-gradient(to right, #055a61, #007680); }
 
-.au-body .health-band.health-band--primary, .health-hero .health-sub-header__content--tertiary {
+.au-body .health-band.health-band--primary {
   background-color: #004693;
   background: -webkit-gradient(linear, left top, right top, from(#004693), to(#16477d));
   background: -o-linear-gradient(left, #004693, #16477d);
@@ -6441,29 +6441,51 @@ table {
     background-color: #000000; }
 
 .health-hero {
-  padding: 35% 0 0 0;
-  background-size: contain;
-  background-repeat: no-repeat; }
+  background: none;
+  position: relative; }
   @media (min-width: 768px) {
     .health-hero {
-      padding-top: 0;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: none;
-      min-height: 500px; } }
-  .health-hero .health-sub-header__content {
-    padding: 24px 12px;
-    padding: 1.5rem 12px; }
+      height: 380px;
+      overflow: hidden; } }
+  @media (min-width: 768px) {
+    .health-hero__image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; } }
+  .health-hero__image {
+    height: auto;
+    display: block; }
     @media (min-width: 768px) {
-      .health-hero .health-sub-header__content {
-        padding: 48px;
-        padding: 3rem; } }
-    .health-hero .health-sub-header__content--secondary {
-      padding: 48px;
-      padding: 3rem; }
-    .health-hero .health-sub-header__content--tertiary {
-      padding: 48px;
-      padding: 3rem; }
+      .health-hero__image {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        border-bottom: 0; } }
+  .health-hero__content {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    padding: 48px;
+    padding: 3rem;
+    width: 50%; }
+  .health-hero__summary {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .health-hero__summary {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.5; } }
+  .health-hero.health-hero--dark .health-hero__content {
+    color: white; }
+
+.au-footer.au-body.au-body--dark.au-footer--dark {
+  background: #333333; }
 
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com

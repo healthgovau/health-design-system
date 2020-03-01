@@ -1,35 +1,61 @@
-
-
 .health-hero {
-    padding: 35% 0 0 0; // Based on 1920x700 image
-    background-size: contain;
-    background-repeat: no-repeat;
 
-    @include AU-media(sm){
-        padding-top: 0;
-        // Hero image
-        background-size: cover;
-        background-position: center center;
-        background-repeat: none;
-        min-height: 500px; // Based on 1920x700 image to prevent narrow image
+  $parent: &; // more readable than &#{&}
+  background: none;
+  position: relative;
+
+  @include AU-media('sm') {
+    height: 380px;
+    overflow: hidden;
+  }
+
+  &__image-container {
+    @include AU-media('sm') {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
     }
+  }
 
-    // Hero content
-    .health-sub-header__content {
-        @include AU-space(padding, 1.5unit 12px);
-        @include AU-media(sm){
-        @include AU-space(padding, 3unit);
-        }
-        @extend %bg-primary-blue;
+  &__image {
+    height: auto;
+    display: block;
 
-        &--secondary {
-        @include AU-space(padding, 3unit);
-        @extend %bg-primary-teal;
-        }
-
-        &--tertiary {
-        @include AU-space(padding, 3unit);
-        @extend %bg-complementary-blue;
-        }
+    @include AU-media('sm') {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-bottom: 0;
     }
+  }
+
+
+
+
+
+
+  &__content {
+    @include rgba-background(black, .8);
+    position: relative;
+    @include AU-space('padding', 3unit);
+    width: 50%; //temp
+  }
+
+  &__title {}
+
+  &__summary {
+    @include health-fontgrid( lg , default, light);
+  }
+
+  &__call-to-action {}
+
+
+  // Dark modifier
+  &#{$parent}--dark {
+    #{$parent}__content {
+      color: white;
+    }
+  }
 }
