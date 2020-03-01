@@ -1,6 +1,9 @@
+// When called via @include name(), the mixin will render CSS selectors
+
 @mixin opacity( $opacity ) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity-ie+")";
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
@@ -8,4 +11,8 @@
   -webkit-transition: $transition;
   -o-transition: $transition;
   transition: $transition;
+}
+
+@mixin rgba-background( $color, $opacity: 1 ) {
+  background-color: rgba($color, $opacity); 
 }

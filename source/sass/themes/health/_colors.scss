@@ -1,26 +1,4 @@
-// Colors
-//
-// Markup: colors.twig
-//
-// Weight: -1
-//
-// Style guide: sass.colors
-
-// AU vars for reference
-// $AU-media-xs: 576px !default; // media query breakpoints
-// $AU-media-sm: 768px !default;
-// $AU-media-md: 992px !default;
-// $AU-media-lg: 1200px !default;
-
-// $AU-fontsize-map: (
-// 	xs:   14,
-// 	sm:   16,
-// 	md:   20,
-// 	lg:   24,
-// 	xl:   32,
-// 	xxl:  40,
-// 	xxxl: 48
-// ) !default;
+// DTA Design System colours
 
 // $AU-color-foreground-text:   #313131 !default;
 // $AU-color-foreground-action: #00698f !default;
@@ -36,18 +14,6 @@
 // $AU-color-success: #0cac78 !default;
 // $AU-color-warning: #f69900 !default;
 // $AU-color-info:    #00bfe9 !default;
-
-// SASS colour functions to use
-// Increase brightness (mixes white)
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}
-// Decrease brightness (mixes black)
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
-}
-// desaturate($color, $percentage) - to decrease saturation (good for backgrounds) - built-in
-// Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
 
 // HEALTH COLOURS ===========================
 $colour-Shadow: rgba(0,0,0,0.1);
