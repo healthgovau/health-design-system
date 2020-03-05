@@ -1,0 +1,29 @@
+.au-body {
+    .health-band {
+        // Add margins to grid items for mobile
+        .row>[class*="col-xs"]{
+            @include AU-space('margin-top',1unit);
+            @include AU-space('margin-bottom',1unit);
+        }
+        @include AU-media(sm){
+            .row>[class*="col-xs"]{
+                @include AU-space('margin-top',0);
+                @include AU-space('margin-bottom',0);
+            }
+        }
+
+        // TODO $parent: &;
+        &.health-band--primary {
+            @extend %bg-primary--nst;
+        }
+
+        &.health-band--secondary {
+            @extend %bg-secondary--nst;
+        }
+        
+        // Dark variant
+        &.health-band--dark {
+            color: #fff;
+        }
+    }
+}

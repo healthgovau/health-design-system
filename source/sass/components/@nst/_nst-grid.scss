@@ -1,0 +1,7 @@
+.au-grid {
+    .not-full-width {
+        @include AU-media(sm) {
+            @include AU-space(margin-top, 2.5unit);
+        }
+    }
+}

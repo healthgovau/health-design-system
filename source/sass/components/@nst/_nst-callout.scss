@@ -1,0 +1,11 @@
+.au-body {
+  .au-callout {
+    background-color: $colour-lighter;
+    border-left-color: $primary-gold;
+    // Colours.
+    &--secondary,
+    &--tertiary {
+      border-left-color: $primary-gold;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 {
   "title": "National Sports Tribunal",
   "preview": "@preview-page",
+  "deafult": "home-page",
   "context": {
     "subheader": {
       "title": "National Sports Tribunal",

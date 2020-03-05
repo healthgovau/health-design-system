@@ -2,6 +2,9 @@
 .health-search {
   // The search form.
   &__form {
+    &__input {
+      border-color: #FFF; //$primary-gold;
+    }
     &__submit {
       background-color: $primary-gold;
       background-image: AU-svguri('<svg viewBox="-5 -5 32 32" fill="#{ $gravitas-grey }" xmlns="http://www.w3.org/2000/svg">

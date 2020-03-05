@@ -24,6 +24,13 @@
       }
     },
     {
+      "name": "Cards image no bg",
+      "context": {
+        "title": "Latest news",
+        "modifier": ""
+      }
+    },
+    {
       "name": "Cards image",
       "context": {
         "title": "Latest news",

@@ -1,7 +1,8 @@
 <div class="health-band {{#if modifier}}health-band--{{ modifier }}{{/if}}">
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
+
+      <div class="col-xs-12 col-sm-3">
         <h2>
           {{{ title }}}
         </h2>
@@ -9,20 +10,23 @@
           {{{ content }}}
         </p>
       </div>
-      <div class="col-sm-9">
+
+      <div class="col-xs-12 col-sm-9">
         <div class="row">
-          <div class="col-xs-6">
-            {{ render '@card--call-to-action' }}
-          </div>          
-          <div class="col-xs-6">
-            {{ render '@card--call-to-action' }}
-          </div>
-          <div class="col-xs-6">
-            {{ render '@card--call-to-action' }}
-          </div>          
-          <div class="col-xs-6">
-            {{ render '@card--call-to-action' }}
-          </div>
+          <ul class="health-card-list">
+            <li class="col-xs-12 col-sm-6">
+              {{ render '@card--simple' }}
+            </li>          
+            <li class="col-xs-12 col-sm-6">
+              {{ render '@card--simple' }}
+            </li>     
+            <li class="col-xs-12 col-sm-6">
+              {{ render '@card--simple' }}
+            </li>     
+            <li class="col-xs-12 col-sm-6">
+              {{ render '@card--simple' }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>

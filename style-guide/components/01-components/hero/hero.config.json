@@ -1,6 +1,7 @@
 {
-  "title": "Header",
+  "title": "Hero",
   "preview": "@preview-full-width",
+  "deafult": "hero",
   "context": {
     "title": "National Sports Tribunal",
     "summary": "The National Sports Tribunal will provide independent, cost effective, transparent and consistent dispute resolution services to athletes, sporting organisations and support personnel."
