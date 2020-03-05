@@ -44,7 +44,7 @@
     "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.0",
+    "@frctl/fractal": "^1.2.1",
     "@frctl/mandelbrot": "^1.2.1",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
