@@ -1,8 +1,12 @@
 // Health variation on the au-header.
 .au-header.au-header {
   border-top: 0;
-
   .au-header__logo {
+    max-width: 320px;
+    @include AU-space('margin',1unit auto 0);
+    @include AU-media(sm) {
+      @include AU-space('margin', 0);
+    }
     @include AU-media(md) {
       max-width: 400px;
     }

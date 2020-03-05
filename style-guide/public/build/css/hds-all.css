@@ -6402,9 +6402,16 @@ table {
 
 .au-header.au-header {
   border-top: 0; }
-  @media (min-width: 992px) {
-    .au-header.au-header .au-header__logo {
-      max-width: 400px; } }
+  .au-header.au-header .au-header__logo {
+    max-width: 320px;
+    margin: 16px auto 0;
+    margin: 1rem auto 0; }
+    @media (min-width: 768px) {
+      .au-header.au-header .au-header__logo {
+        margin: 0; } }
+    @media (min-width: 992px) {
+      .au-header.au-header .au-header__logo {
+        max-width: 400px; } }
   .au-header.au-header--dark {
     background: #333333; }
     .au-header.au-header--dark a {
@@ -6468,22 +6475,26 @@ table {
     background-color: #000000; }
 
 .health-hero {
-  background: none;
+  background: #ececec;
   position: relative; }
   @media (min-width: 768px) {
     .health-hero {
-      height: 380px;
       overflow: hidden; } }
-  @media (min-width: 768px) {
-    .health-hero__image-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0; } }
+  .health-hero__image-container {
+    max-height: 200px;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      .health-hero__image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-height: none; } }
   .health-hero__image {
     height: auto;
-    display: block; }
+    display: block;
+    width: 100%; }
     @media (min-width: 768px) {
       .health-hero__image {
         position: absolute;
@@ -6493,11 +6504,25 @@ table {
                 transform: translateY(-50%);
         border-bottom: 0; } }
   .health-hero__content {
-    background-color: rgba(0, 0, 0, 0.8);
+    background: #333333;
     position: relative;
-    padding: 48px;
-    padding: 3rem;
-    width: 50%; }
+    padding: 32px;
+    padding: 2rem;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .health-hero__content {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 48px;
+        padding: 3rem;
+        width: 60%; } }
+    @media (min-width: 1200px) {
+      .health-hero__content {
+        padding: 64px;
+        padding: 4rem;
+        min-height: 500px;
+        width: 50%; } }
+  .health-hero__title {
+    color: #E9AD74; }
   .health-hero__summary {
     font-size: 20px;
     font-size: 1.25rem;
@@ -6508,8 +6533,10 @@ table {
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 1.5; } }
-  .health-hero.health-hero--dark .health-hero__content {
-    color: white; }
+  .health-hero.health-hero--dark {
+    background: #333333; }
+    .health-hero.health-hero--dark .health-hero__content {
+      color: white; }
 
 .au-footer.au-body.au-body--dark.au-footer--dark {
   background: #333333; }
