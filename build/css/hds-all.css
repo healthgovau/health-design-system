@@ -4039,8 +4039,11 @@ svg {
   height: auto; }
 
 .au-body .au-side-nav {
-  margin-top: -16px;
-  margin-top: -1rem; }
+  margin-top: 16px;
+  margin-top: 1rem; }
+  @media (min-width: 768px) {
+    .au-body .au-side-nav {
+      margin-top: 0; } }
   @media (min-width: 768px) {
     .au-body .au-side-nav {
       background: #ffffff; } }
@@ -4591,7 +4594,7 @@ ul.health-card-list {
         margin-top: -1.5rem; } }
 
 .health-compare {
-  border: 1px solid #0077C8;
+  border: 1px solid #ccc;
   margin-top: 16px;
   margin-top: 1rem;
   padding-bottom: 16px;
@@ -6360,8 +6363,13 @@ table {
     margin-top: 24px;
     margin-top: 1.5rem; }
 
+@media (min-width: 768px) {
+  .au-grid .not-full-width {
+    margin-top: 40px;
+    margin-top: 2.5rem; } }
+
 .au-main-nav.au-main-nav--dark {
-  border-bottom-color: #000;
+  border-bottom-color: #BA8A58;
   background: #333333; }
   .au-main-nav.au-main-nav--dark .active a {
     border-color: #000;
@@ -6370,6 +6378,8 @@ table {
     border-color: #000; }
     .au-main-nav.au-main-nav--dark a:hover, .au-main-nav.au-main-nav--dark a:focus {
       background: #000; }
+  .au-main-nav.au-main-nav--dark .au-main-nav__menu {
+    background-color: #333333; }
 
 .au-main-nav .au-link-list > li.active a, .au-main-nav .au-link-list > li.active-trail a {
   border-bottom-color: #fff; }
@@ -6434,6 +6444,9 @@ table {
 .au-inpage-nav-links {
   border-color: #BA8A58; }
 
+.health-search__form__input {
+  border-color: #FFF; }
+
 .health-search__form__submit {
   background-color: #BA8A58;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='-5 -5 32 32' fill='%23333333' xmlns='http://www.w3.org/2000/svg'%3E   %3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); }
@@ -6486,6 +6499,23 @@ table {
 
 .au-footer.au-body.au-body--dark.au-footer--dark {
   background: #333333; }
+
+.au-body .au-side-nav a:hover, .au-body .au-side-nav a:focus {
+  background-color: #f4d6ba; }
+
+.au-body .au-side-nav a.active {
+  background-color: #f4d6ba; }
+
+.health-compare {
+  border: 1px solid #ccc; }
+  .health-compare__title {
+    background: #f4d6ba; }
+
+.au-body .au-callout {
+  background-color: #f1f1f2;
+  border-left-color: #BA8A58; }
+  .au-body .au-callout--secondary, .au-body .au-callout--tertiary {
+    border-left-color: #BA8A58; }
 
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com

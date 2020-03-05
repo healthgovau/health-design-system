@@ -1,0 +1,15 @@
+.au-body {
+  .au-side-nav {
+
+    // Add nst colours.
+    a {
+      &:hover,
+      &:focus {
+        background-color: $lighter-gold;
+      }
+      &.active {
+        background-color: $lighter-gold;
+      }
+    }
+  }
+}
