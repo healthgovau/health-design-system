@@ -16,6 +16,14 @@
       }
     },
     {
+      "name": "dispute resolution",
+      "context": {
+        "title": "Our resolution methods",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci minima ut corrupti eveniet quod fugiat assumenda alias libero.",
+        "modifier": "neutral-1"
+      }
+    },
+    {
       "name": "Cards image",
       "context": {
         "title": "Latest news",

@@ -1,0 +1,7 @@
+.au-footer {
+
+    // Apply our colour scheme on the background.
+    &.au-body.au-body--dark.au-footer--dark {
+      background: $health-footer-background;
+    }
+  }

@@ -1,0 +1,37 @@
+//--------------------------------------------------------------
+// Main nav
+//--------------------------------------------------------------
+
+.au-main-nav {
+  &.au-main-nav--dark {
+    border-bottom-color: #000;
+    background: $AU-colordark-background;
+  .active a {
+      border-color: #000;
+      background: #000;
+    }
+    a {
+      border-color: #000;
+      &:hover, &:focus {
+        background: #000;
+      }
+    }
+    // .au-main-nav__menu {
+    //   background-color: #000;
+    // }
+  }
+  
+  .au-link-list {
+    > li {
+
+      &.active, &.active-trail {
+        a {
+          border-bottom-color: #fff;
+          &:hover, &:focus {
+            border-bottom-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
