@@ -17,6 +17,13 @@
       }
     },
     {
+      "name": "Simple",
+      "context": {
+        "title": "Title with a few words",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis repellendus ipsum quisquam, omnis fugit sed dolore eos numquam rem temporibus nihil quibusdam possimus earum commodi aliquid perferendis itaque pariatur incidunt?"
+      }
+    },
+    {
       "name": "Call to action",
       "context": {
         "title": "Find your favourite dinosaur"
