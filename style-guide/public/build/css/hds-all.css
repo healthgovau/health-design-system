@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.2.0 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.4 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -3647,77 +3647,71 @@ ul.list--large--checklist > li .au-body strong {
   padding: 8px;
   padding: 0.5rem; }
 
-.au-body.au-body--dark {
-  background: #000; }
-  .au-body.au-body--dark-tertiary {
-    background: #00205B; }
-
-.au-body .text--minor {
-  color: #414141;
-  font-size: 0.8em; }
-
-.au-body .text--align-right {
-  text-align: right; }
-
-.au-body .text--align-center {
-  text-align: center; }
-
-.au-body .au-introduction {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  font-weight: normal;
-  color: #414141; }
-  @media (min-width: 768px) {
-    .au-body .au-introduction {
-      font-size: 24px;
-      font-size: 1.5rem;
-      line-height: 1.5; } }
-  .au-body .au-introduction--dark {
-    color: #313131; }
-
-.au-body abbr, .au-body abbr[title], .au-body .definition {
-  border-bottom: 1px dotted #CCC !important;
-  text-decoration: none !important;
-  cursor: help; }
-
-.au-body .au-sronly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
-
-
-.au-body .standard-gap {
-  margin-top: 24px;
-  margin-top: 1.5rem; }
+.au-body {
+  fill: #313131; }
+  .au-body.au-body--dark {
+    background: #000; }
+    .au-body.au-body--dark-tertiary {
+      background: #00205B; }
+  .au-body.au-body--dark {
+    fill: #FFF; }
+  .au-body .text--minor {
+    color: #414141;
+    font-size: 0.8em; }
+  .au-body .text--align-right {
+    text-align: right; }
+  .au-body .text--align-center {
+    text-align: center; }
+  .au-body .au-introduction {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: normal;
+    color: #414141; }
+    @media (min-width: 768px) {
+      .au-body .au-introduction {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.5; } }
+    .au-body .au-introduction--dark {
+      color: #313131; }
+  .au-body abbr, .au-body abbr[title], .au-body .definition {
+    border-bottom: 1px dotted #CCC !important;
+    text-decoration: none !important;
+    cursor: help; }
+  .au-body .au-sronly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0; }
   
-  .au-body .standard-gap--mobile-only {
+  .au-body .standard-gap {
     margin-top: 24px;
     margin-top: 1.5rem; }
-    @media (min-width: 768px) {
-      
-      .au-body .standard-gap--mobile-only {
-        margin-top: 0; } }
-  
-  .au-body .standard-gap--bottom {
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem; }
-
-@media print {
-  .au-body .print--hide {
-    display: none; } }
-
-@media print {
-  .au-body a[href]:after {
-    content: '' !important; } }
-
-.au-body main, .au-body aside {
-  display: block; }
+    
+    .au-body .standard-gap--mobile-only {
+      margin-top: 24px;
+      margin-top: 1.5rem; }
+      @media (min-width: 768px) {
+        
+        .au-body .standard-gap--mobile-only {
+          margin-top: 0; } }
+    
+    .au-body .standard-gap--bottom {
+      margin-bottom: 24px;
+      margin-bottom: 1.5rem; }
+  @media print {
+    .au-body .print--hide {
+      display: none; } }
+  @media print {
+    .au-body a[href]:after {
+      content: '' !important; } }
+  .au-body main, .au-body aside {
+    display: block; }
 
 .au-breadcrumbs {
   display: none; }
@@ -4174,6 +4168,13 @@ textarea.au-text-input {
   .au-body .health-band.health-band--secondary .health-band__title--light {
     color: #99d4de; }
 
+.health-band__image--image-text-horizontal {
+  display: none; }
+  @media (min-width: 768px) {
+    .health-band__image--image-text-horizontal {
+      display: block;
+      width: 100%; } }
+
 .health-book-nav {
   border-top: 1px solid #ccc;
   padding-top: 24px;
@@ -4248,10 +4249,12 @@ textarea.au-text-input {
   .health-card .health-card__image {
     display: block; }
     .health-card .health-card__image svg {
-      height: 3em; }
+      height: 3em;
+      width: 3em; }
       @media (min-width: 768px) {
         .health-card .health-card__image svg {
-          height: 5em; } }
+          height: 5em;
+          width: 5em; } }
     .health-card .health-card__image.health-card__image--full-width {
       margin: -16px -16px 16px -16px;
       margin: -1rem -1rem 1rem -1rem;
@@ -5495,10 +5498,16 @@ form[class*='col-'].health-search__form .health-search__form__submit {
       .health-sub-header__supp {
         padding-top: 0; } }
   .health-sub-header.health-sub-header--campaign {
-    padding: 0;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: none; }
+    padding: 35% 0 0 0;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media (min-width: 768px) {
+      .health-sub-header.health-sub-header--campaign {
+        padding-top: 0;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: none;
+        min-height: 500px; } }
     .health-sub-header.health-sub-header--campaign .health-sub-header__content {
       padding: 24px 12px;
       padding: 1.5rem 12px; }

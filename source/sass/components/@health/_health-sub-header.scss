@@ -51,12 +51,18 @@
 
   // Campaign variant
   &.health-sub-header--campaign {
-    padding: 0;
+    padding: 35% 0 0 0; // Based on 1920x700 image
+    background-size: contain;
+    background-repeat: no-repeat;
 
-    // Hero image
-    background-size: cover;
-    background-position: top center;
-    background-repeat: none;
+    @include AU-media(sm){
+      padding-top: 0;
+      // Hero image
+      background-size: cover;
+      background-position: center center;
+      background-repeat: none;
+      min-height: 500px; // Based on 1920x700 image to prevent narrow image
+    }
 
     // Hero content
     .health-sub-header__content {

@@ -1,8 +1,0 @@
-{
-  "name": "health-design-system",
-  "version": "0.1.0",
-  "dependencies": {
-    "@frctl/fractal": "v1.1.7",
-    "@frctl/mandelbrot": "^1.2.1"
-  }
-}

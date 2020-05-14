@@ -8,7 +8,7 @@
 
   svg {
     font-size: inherit;
-    height: 1em;
+    height: 1em; // IE fix.
     width: 1em;
     overflow: visible;
     vertical-align: -.125em;

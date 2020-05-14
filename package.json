@@ -2,7 +2,7 @@
   "name": "@health.gov.au/health-design-system",
   "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
   "description": "Design system for health.gov.au and related products.",
-  "version": "1.2.0",
+  "version": "1.4.0-alpha.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/healthgovau/health-design-system.git"
@@ -12,6 +12,9 @@
     "url": "https://github.com/healthgovau/health-design-system/issues"
   },
   "main": "index.js",
+  "bin": {
+    "healthds": "./bin/cli.js"
+  },
   "dependencies": {
     "@gov.au/accordion": "7.0.8",
     "@gov.au/body": "2.2.0",
@@ -37,9 +40,12 @@
     "@gov.au/side-nav": "5.0.7",
     "@gov.au/skip-link": "2.0.16",
     "@gov.au/tags": "3.1.7",
-    "@gov.au/text-inputs": "2.1.1"
+    "@gov.au/text-inputs": "2.1.1",
+    "copy": "^0.3.2"
   },
   "devDependencies": {
+    "@frctl/fractal": "^1.2.0",
+    "@frctl/mandelbrot": "^1.2.1",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -51,14 +57,18 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "mandelbrot-healthgovau": "git+ssh://git@github.com/healthgovau/mandelbrot-healthgovau.git#1.0.0",
     "sass-versioning": "^0.4.0"
   },
   "engines": {
     "node": ">=4.0.0"
   },
   "scripts": {
-    "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
-    "gulp": "gulp"
+    "postinstall": "npm rebuild node-sass",
+    "gulp": "gulp",
+    "gulp:watch": "gulp watch",
+    "fractal:start": "cd style-guide && fractal start --sync",
+    "fractal:build": "npm run gulp && cd style-guide && fractal build"
   },
   "pancake": {
     "auto-save": false,
@@ -69,13 +79,13 @@
     },
     "sass": {
       "modules": false,
-      "location": "source/sass/vendors/",
+      "location": "./source/sass/vendors/",
       "name": "govau-ds.scss"
     },
     "js": {
       "minified": true,
       "modules": false,
-      "location": "source/js/src",
+      "location": "./source/js/src",
       "name": "govau-ds.js"
     },
     "react": {
