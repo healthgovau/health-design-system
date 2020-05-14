@@ -48,7 +48,7 @@
   </a>
   <ul class="Header-menu">
     
-      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 1.2.1</a></li>
+      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 1.4.0-alpha.4</a></li>
     
     <li>
       <a href="https://github.com/healthgovau/health-design-system">
@@ -168,12 +168,32 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-52a222b99a47727413ea2854aeb72ab6-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-card health-card--solid-half health-card--shadow health-card--colour4"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-card__title au-display-md"</span>&gt;</span>Seniors<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-card__text"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Dinosaurs are for people of all ages.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-card health-card--shadow"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrapper"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-card__image health-card__image--full-width image--link"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image-outer"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image-placeholder"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width: 800px;"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding-top: 56.25%;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image-wrapper image-loading"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"450"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"../../images/trex_16x9.jpg"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-card__title au-display-md"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Seniors<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"metadata metadata--inline"</span>&gt;</span>
+            20 July 2019
+        <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -260,8 +280,17 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">components/01-components/card/card--audience.hbs</span>
+            <span class="Meta-value">components/01-components/card/card--audience.twig</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="image.html">@<span>image</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
         <li class="Meta-item">
@@ -1395,6 +1424,78 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--call-to-action.html" data-pjax>
                 <span>Call To Action</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--call-to-action---colour-2.html" data-pjax>
+                <span>Call To Action Colour 2</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--call-to-action---colour-3.html" data-pjax>
+                <span>Call To Action Colour 3</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--call-to-action---colour-4.html" data-pjax>
+                <span>Call To Action Colour 4</span>
                 
 
 <div class="Status Status--unlabelled">
