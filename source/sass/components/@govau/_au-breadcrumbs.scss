@@ -15,4 +15,8 @@
   @media print {
     display: block;
   }
+
+  * + &--flush {
+    margin-top: 0
+  }
 }
