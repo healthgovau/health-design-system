@@ -115,8 +115,16 @@
     }
     &__link-path {
       color: $colour-path;
+      a {
+        color: $colour-path;
+      }
       font-size: 0.9em;
       word-break: break-all;
+    }
+    & ol.health-search-result__link-path {
+      li:after {
+        margin: 0;
+      }
     }
 
     &__summary {
