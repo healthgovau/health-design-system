@@ -1,3 +1,9 @@
 .Pen {
   background-color: #e8ebee;
+  overflow: auto;
+}
+
+.Pen-preview {
+    flex: none;
+    height: auto;
 }
