@@ -1,7 +1,3 @@
-# Header
-
-**⭐ [Design System - Header](https://designsystem.gov.au/components/header/)**
-
 The header component uses and requires the
  * [Main navigation](main-nav)
  * [Sub navigation](sub-nav)
