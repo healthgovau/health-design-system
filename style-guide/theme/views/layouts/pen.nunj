@@ -38,8 +38,68 @@
         </div>
     </div>
 
-    <h2>Preview</h2>
+    <h2>Component</h2>
     {% include "partials/pen/preview.nunj" %}
+
+    <div class="Browser-panel" data-role="tab-panel" id="browser-{{ entity.id }}-panel-info">
+    <h2>Info<h2>
+        <ul class="Meta">
+            {% if entity.config.govau %}
+            <li class="Meta-item">
+                <strong class="Meta-key">Extends GovAU:</strong>
+                <span class="Meta-value">
+                    <a href="{{ entity.config.govau.link }}">{{ entity.config.govau.name }}</a> | v{{ entity.config.govau.version }}
+                </span>
+            </li>
+            {% endif %}
+            {% if entity.tags.length > 1 %}
+            <li class="Meta-item">
+                <strong class="Meta-key">Tags:</strong>
+                <span class="Meta-value">
+                    {% for tag in entity.tags %}
+                        <span>{% if tag %}{{ tag }}</span>{% if not loop.last %}, {% endif %}{% endif %}
+                    {% endfor %}
+                </span>
+            </li>
+            {% endif %}
+            {% if entity.isComponent %}
+            {% set variants = entity.variants() %}
+            {% else %}
+            {% set variants = entity.parent.variants() %}
+            {% endif %}
+            {% if variants.size > 1 %}
+            <li class="Meta-item">
+                <strong class="Meta-key">Variants <em class="Meta-count">({{ variants.size }})</em>:</strong>
+                <span class="Meta-value Meta-value--linkList">
+                {% for variant in variants.items() %}
+                    <a href="{{ path(frctl.theme.urlFromRoute('component', { handle: variant.handle })) }}">
+                        <span>{{ variant.label }}</span>
+                    </a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                </span>
+            </li>
+            {% endif %}
+           
+            {% if entity.references.length %}
+            <li class="Meta-item">
+                <strong class="Meta-key">Dependencies <em class="Meta-count">({{ entity.references.length }})</em>:</strong>
+                <span class="Meta-value Meta-value--linkList">
+                {% for ref in entity.references %}
+                    <a href="{{ path(frctl.theme.urlFromRoute('component', { handle: ref.handle })) }}">@<span>{{ ref.handle }}</span></a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                </span>
+            </li class="Meta-item">
+            {% endif %}
+        </ul>
+    </div>
+
+    <h2>Twig</h2>
+    <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-{{ entity.id }}-panel-html">
+        <code class="Code Code--lang-html">
+            <pre>{{ entity.content  | highlight('twig') }}</pre>
+        </code>
+    </div>
+    {% endblock %}
 
     <h2>HTML</h2>
     {% import "macros/render.nunj" as render %}
@@ -58,13 +118,7 @@
         </code>
     </div>
 
-    <h2>Twig</h2>
-    <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-{{ entity.id }}-panel-html">
-        <code class="Code Code--lang-html">
-            <pre>{{ entity.content  | highlight('twig') }}</pre>
-        </code>
-    </div>
-    {% endblock %}
+    
 </div>
 
 

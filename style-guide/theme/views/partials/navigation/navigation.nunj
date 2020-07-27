@@ -1,0 +1,11 @@
+{% if doc %}
+<nav class="Navigation">
+    {% include 'partials/navigation/docs.nunj' %}
+</nav>
+{% endif %}
+
+{% if entity or request.path == '/' %}
+<nav class="Navigation">
+    {% include 'partials/navigation/components.nunj' %}
+</nav>
+{% endif %}
