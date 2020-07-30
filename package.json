@@ -58,7 +58,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "mandelbrot-healthgovau": "git+ssh://git@github.com/healthgovau/mandelbrot-healthgovau.git#1.0.0",
+    "mandelbrot-healthgovau": "git+ssh://git@github.com/healthgovau/mandelbrot-healthgovau.git#healthv2",
     "sass-versioning": "^0.4.0"
   },
   "engines": {
