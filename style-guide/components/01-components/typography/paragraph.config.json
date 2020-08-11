@@ -1,5 +1,6 @@
 {
   "title": "Paragraph",
+  "preview": "@preview_au-body",
   "variants": [
     {
       "name": "Introduction",

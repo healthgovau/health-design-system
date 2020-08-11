@@ -1,5 +1,6 @@
 {
   "title": "Button",
+  "default": "Primary",
   "context": {
     "button": {
       "title": "Primary"
@@ -8,6 +9,7 @@
   "variants": [
     {
       "name": "Secondary",
+      "notes": "This is a test",
       "context": {
         "modifier": "secondary",
         "button": {
