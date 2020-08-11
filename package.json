@@ -16,6 +16,7 @@
     "healthds": "./bin/cli.js"
   },
   "dependencies": {
+    "@frctl/handlebars": "^1.2.0",
     "@gov.au/accordion": "7.0.8",
     "@gov.au/body": "2.2.0",
     "@gov.au/breadcrumbs": "3.0.5",
@@ -45,7 +46,7 @@
   },
   "devDependencies": {
     "@frctl/fractal": "^1.3.0",
-    "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/mandelbrot": "^1.4.0",
     "@frctl/twig": "git+https://github.com/frctl/twig.git#0345ffe2d9d10cd098cebf5fafb52745f9038fb9",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
