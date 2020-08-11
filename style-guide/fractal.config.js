@@ -25,7 +25,8 @@ fractal.set('project.repo','https://github.com/healthgovau/health-design-system'
  * Tell Fractal where to look for components.
  */
 fractal.components.set('path', path.join(__dirname, 'components'));
-fractal.components.set('default.preview', '@preview-not-full-width');
+fractal.components.set('default.preview', '@preview');
+fractal.components.set('default.collated', true);
 /*
  * Tell Fractal where to look for documentation pages.
  */
@@ -48,3 +49,22 @@ fractal.components.set('ext', '.twig');
  */
 const healthTheme = require('mandelbrot-healthgovau');
 fractal.web.theme(healthTheme);
+
+/* Handlebar helpers for docs */
+const hbs = require('@frctl/handlebars')({
+    helpers: {
+        // Generate a list of full template files (components/templates).
+        templateList: function() {
+            let ret = "<ul>";
+            const options = Array.from(arguments).pop();
+            for (let component of fractal.components.flatten()) {
+                if (component.parent.name == 'templates') {
+                    ret = ret + "<li>" + options.fn(component.toJSON()) + "</li>";
+                }
+            }
+            return ret + "</ul>";
+        }
+    }
+});
+
+fractal.docs.engine(hbs);
