@@ -1,6 +1,6 @@
 {
   "title": "Content page",
-  "preview": "@preview-page",
+  "preview": "@preview-full-width",
   "context": {
     "subheader": {
       "title": "Tyrannosaurus",

@@ -1,6 +1,6 @@
 {
   "title": "Form",
-  "preview": "@preview-page",
+  "preview": "@preview-full-width",
   "context": {
     "subheader": {
       "title": "Provide feedback",
@@ -28,13 +28,5 @@
       "label": "My favourite animals are:"
     },
     "error": false
-  },
-  "variants": [
-    {
-      "name": "Error",
-      "context": {
-        "error": true
-      }
-    }
-  ]
+  }
 }

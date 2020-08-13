@@ -1,6 +1,6 @@
 {
   "title": "Landing page",
-  "preview": "@preview-page",
+  "preview": "@preview-full-width",
   "context": {
     "subheader": {
       "title": "Dinosaurs",
