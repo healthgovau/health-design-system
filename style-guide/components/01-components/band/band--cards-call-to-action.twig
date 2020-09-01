@@ -8,16 +8,44 @@
     <div class="row">
       <ul class="health-card-list health-card-list--matchheight">
         <li class="col-sm-3">
-          {% render "@card--call-to-action" %}
+          {# {% render "@card--call-to-action" %} #}
+          {%
+            include '@hds/01-components/card/card--call-to-action.twig' with {
+              "icon": "phone",
+              "colour": "colour1",
+              "title": "Dinosaurs to be crowned the earths greatest extinct animal"
+            }
+          %}
         </li>
         <li class="col-sm-3">
-          {% render "@card--call-to-action---colour-2" %}
+          {# {% render "@card--call-to-action---colour-2" %} #}
+          {%
+            include '@hds/01-components/card/card--call-to-action.twig' with {
+              "colour": "health-card--colour2",
+              "icon": "envelope",
+              "title": "Compare yourself to the largest dinosaur"
+            }
+          %}
         </li>
         <li class="col-sm-3">
-          {% render "@card--call-to-action---colour-3" %}
+          {# {% render "@card--call-to-action---colour-3" %} #}
+          {%
+            include '@hds/01-components/card/card--call-to-action.twig' with {
+              "colour": "health-card--colour3",
+              "icon": "youtube",
+              "title": "Take our dinosaur quiz"
+            }
+          %}
         </li>
         <li class="col-sm-3">
-          {% render "@card--call-to-action---colour-4" %}
+          {# {% render "@card--call-to-action---colour-4" %} #}
+          {%
+            include '@hds/01-components/card/card--call-to-action.twig' with {
+              "colour": "health-card--colour4",
+              "icon": "search",
+              "title": "Learn more about dinosaurs"
+            }
+          %}
         </li>
       </ul>
     </div>
