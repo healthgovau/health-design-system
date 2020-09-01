@@ -1,7 +1,14 @@
 'use strict';
 
 const path = require('path');
-const twigAdapter = require('@frctl/twig')();
+const twigAdapterOptions = {
+  importContext: true,
+  method: 'fs',
+  namespaces: {
+    "hds": path.join(__dirname, "components")
+  }
+};
+const twigAdapter = require('@frctl/twig')(twigAdapterOptions);
 
 /*
  * Require the Fractal module
