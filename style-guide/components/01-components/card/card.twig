@@ -2,15 +2,17 @@
   <div class="wrapper">
     <div class="health-card__image health-card__image--full-width image--link">
       <a href="#">
-        {% include '@hds/01-components/image/image.twig' with {
-          "image": {
-            "link": false,
-            "url": "/images/trex_16x9.jpg",
-            "width": 800,
-            "height": 450,
-            "ratio": 56.25
-          }
-        } %}
+        {% block image %}
+          {% include '@hds/01-components/image/image.twig' with {
+            "image": {
+              "link": false,
+              "url": "/images/trex_16x9.jpg",
+              "width": 800,
+              "height": 450,
+              "ratio": 56.25
+            }
+          } %}
+        {% endblock %}
       </a>
     </div>
     <h3 class="health-card__title au-display-md">
