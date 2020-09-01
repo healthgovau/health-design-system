@@ -1,6 +1,16 @@
 <div class=" health-card health-card--light">
   <div class="health-card__image health-card__image--full-width">
-    {% render '@image' %}
+    {% block image %}
+      {% include '@hds/01-components/image/image.twig' with {
+        "image": {
+          "link": false,
+          "url": "/images/trex_16x9.jpg",
+          "width": 800,
+          "height": 450,
+          "ratio": 56.25
+        }
+      } %}
+    {% endblock %}
   </div>
   <h3 id="ageing-and-aged-care">Tyrannosaurus</h3>
   <div class="au-display-md--text standard-gap">
