@@ -8,13 +8,42 @@
     <div class="row">
       <ul class="health-card-list">
         <li class="col-sm-4">
-          {% render "@card" %}
+          {# {% render "@card" %} #}
+          {% block card %}
+            {%
+              include '@hds/01-components/card/card.twig' with {
+                "title": "Dinosaurs to be crowned the earths greatest extinct animal",
+                "date": "20 July 2019",
+                "icon": "phone",
+                "colour": "colour1",
+                "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+              }
+            %}
+          {% endblock %}
         </li>
         <li class="col-sm-4">
-          {% render "@card" %}
+          {# {% render "@card" %} #}
+          {%
+            include '@hds/01-components/card/card.twig' with {
+              "title": "Dinosaurs to be crowned the earths greatest extinct animal",
+              "date": "20 July 2019",
+              "icon": "phone",
+              "colour": "colour1",
+              "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+            }
+          %}
         </li>
         <li class="col-sm-4">
-          {% render "@card" %}
+          {# {% render "@card" %} #}
+          {%
+            include '@hds/01-components/card/card.twig' with {
+              "title": "Dinosaurs to be crowned the earths greatest extinct animal",
+              "date": "20 July 2019",
+              "icon": "phone",
+              "colour": "colour1",
+              "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+            }
+          %}
         </li>
       </ul>
     </div>
