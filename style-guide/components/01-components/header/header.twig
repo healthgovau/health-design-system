@@ -14,11 +14,21 @@
         </div>
       </div>
       <div class="col-sm-7">
-        {% render '@sub-nav' %}
-        {% render '@search' %}
+        {# Include sub-navigation component. #}
+        {% include "@hds/01-components/sub-nav/sub-nav.twig" %}
+
+        {# Include search component. #}
+        {% include "@hds/01-components/search/search.twig" with {
+          "search": {
+            "placeholder": "Search this website",
+            "id": "search-field",
+            "global": true
+          }
+        } %}
       </div>
     </div>
   </div>
 </header>
 
-{% render '@main-nav' %}
+{# Include main navigation component. #}
+{% include "@hds/01-components/main-nav/main-nav.twig" %}
