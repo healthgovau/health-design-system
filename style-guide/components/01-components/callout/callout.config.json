@@ -2,19 +2,19 @@
   "title": "Callout",
   "variants": [
     {
-      "name": "Colour - Secondary",
+      "name": "Secondary",
       "context": {
         "modifier": "secondary"
       }
     },
     {
-      "name": "Colour - Tertiary",
+      "name": "Tertiary",
       "context": {
         "modifier": "tertiary"
       }
     },
     {
-      "name": "Colour - Success",
+      "name": "Success",
       "context": {
         "modifier": "success"
       }

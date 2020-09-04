@@ -1,3 +1,1 @@
-# Accordion
-
-⭐ [Design System Accordion](https://designsystem.gov.au/components/accordion/)
+Accordions help users see only the content they need. Accordions expand and collapse sections of content.

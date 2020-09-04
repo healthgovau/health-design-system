@@ -1,0 +1,17 @@
+<div class="health-band{% if modifier %} health-band--{{ modifier }}{% endif %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>{{ title }}</h2>
+      </div>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-sm-6">
+        {% render "@card--image-vertical" %}
+      </div>
+      <div class="col-sm-6 standard-gap--mobile-only">
+        {% render "@card--image-vertical" %}
+      </div>
+    </div>
+  </div>
+</div>

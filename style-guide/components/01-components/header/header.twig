@@ -1,0 +1,34 @@
+<header class="au-header au-header--dark pillars-container" role="banner">
+  <div class="container">
+    <div id="pillars"></div>
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="/" title="Home" rel="home" class="au-header__logo">
+          <img src="{{ 'https://placekitten.com/600/146' }}"
+               alt="Australia Government Department of Health"
+               class="au-header__logo-image au-responsive-media-img"
+               width="600" height="146">
+        </a>
+        <div class="au-sronly">
+          <p>Australian Government Department of Health</p>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        {# Include sub-navigation component. #}
+        {% include "@hds/01-components/sub-nav/sub-nav.twig" %}
+
+        {# Include search component. #}
+        {% include "@hds/01-components/search/search.twig" with {
+          "search": {
+            "placeholder": "Search this website",
+            "id": "search-field",
+            "global": true
+          }
+        } %}
+      </div>
+    </div>
+  </div>
+</header>
+
+{# Include main navigation component. #}
+{% include "@hds/01-components/main-nav/main-nav.twig" %}

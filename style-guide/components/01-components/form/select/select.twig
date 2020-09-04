@@ -1,0 +1,11 @@
+<div class="au-form__item">
+  <label for="favourite">
+    {{ select.label }}
+    {% render "@label-mandatory" %}
+  </label>
+  <select class="au-select{% if error %} error{% endif %}" id="favourite">
+    <option>Dinosaurs</option>
+    <option>Birds</option>
+    <option>Mammals</option>
+  </select>
+</div>

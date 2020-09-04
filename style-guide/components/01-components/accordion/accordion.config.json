@@ -1,9 +1,16 @@
 {
   "title": "Accordion",
+  "meta": {
+    "govau": {
+      "version": "1.2.3",
+      "link": "https://designsystem.gov.au/components/accordion/"
+    }
+  },
+  "tags": ["Testing", "Another test"],
   "context": {
     "accordion": {
       "title": "Accordion title",
-      "content": "Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra."
+      "body": "Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra."
     }
   },
   "variants": [

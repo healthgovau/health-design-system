@@ -1,0 +1,56 @@
+<div class="health-band{% if modifier %} health-band--{{ modifier }}{% endif %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>{{ title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="health-card-list">
+        <li class="col-sm-4">
+          {# {% render "@card" %} #}
+          {% block card %}
+            {%
+              include '@hds/01-components/card/card.twig' with {
+                "title": "Dinosaurs to be crowned the earths greatest extinct animal",
+                "date": "20 July 2019",
+                "icon": "phone",
+                "colour": "colour1",
+                "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+              }
+            %}
+          {% endblock %}
+        </li>
+        <li class="col-sm-4">
+          {# {% render "@card" %} #}
+          {%
+            include '@hds/01-components/card/card.twig' with {
+              "title": "Dinosaurs to be crowned the earths greatest extinct animal",
+              "date": "20 July 2019",
+              "icon": "phone",
+              "colour": "colour1",
+              "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+            }
+          %}
+        </li>
+        <li class="col-sm-4">
+          {# {% render "@card" %} #}
+          {%
+            include '@hds/01-components/card/card.twig' with {
+              "title": "Dinosaurs to be crowned the earths greatest extinct animal",
+              "date": "20 July 2019",
+              "icon": "phone",
+              "colour": "colour1",
+              "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+            }
+          %}
+        </li>
+      </ul>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-xs-12 text--align-right">
+        <a href="#" class="au-cta-link">All news</a>
+      </div>
+    </div>
+  </div>
+</div>
