@@ -1,0 +1,1 @@
+A standard button style used to highlight an important action such as a Save button on a form. (A secondary button assumes there is already a primary button.)

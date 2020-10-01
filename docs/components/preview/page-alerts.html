@@ -14,20 +14,41 @@
   <script src="../../build/js/libraries/lazyload.min.js"></script>
   <script src="../../build/js/libraries/tippy.all.min.js"></script>
   <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
+  <script src="/data.js"></script>
+  <script src="/build/js/hds.js"></script>
+  <script src="/subtheme/js/iframeResizer.contentWindow.min.js"></script>
   <title>Preview Layout</title>
 </head>
-<body class="au-body au-grid">
-<div class="container not-full-width">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="au-page-alerts">
+<body class="au-body au-grid" style="padding: 10px 20px 10px 10px;">
+  <!-- Start: @page-alerts--default -->
+<div class="au-page-alerts">
   <h2 class="au-display-md">Notice</h2>
   <p>Remember to always tie up your dinosaur when you leave the house.</p>
 </div>
-    </div>
-  </div>
+<!-- End: @page-alerts--default -->
+
+<!-- Start: @page-alerts--success -->
+<div class="au-page-alerts au-page-alerts--success">
+  <h2 class="au-display-md">Submission successful</h2>
+  <p>Thanks for sending us information on your favourite dinosaur.</p>
 </div>
+<!-- End: @page-alerts--success -->
+
+<!-- Start: @page-alerts--warning -->
+<div class="au-page-alerts au-page-alerts--warning">
+  <h2 class="au-display-md">Warning</h2>
+  <p>Dinosaurs are on the loose in Canberra!</p>
+</div>
+<!-- End: @page-alerts--warning -->
+
+<!-- Start: @page-alerts--error -->
+<div class="au-page-alerts au-page-alerts--error">
+  <h2 class="au-display-md">Error</h2>
+  <p>You cannot register your dinosaur as it is too big.</p>
+</div>
+<!-- End: @page-alerts--error -->
+
+  <div style="height: 30px;"></div>
 </body>
 </html>
+

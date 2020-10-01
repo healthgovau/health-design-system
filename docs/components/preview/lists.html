@@ -14,15 +14,14 @@
   <script src="../../build/js/libraries/lazyload.min.js"></script>
   <script src="../../build/js/libraries/tippy.all.min.js"></script>
   <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
+  <script src="/data.js"></script>
+  <script src="/build/js/hds.js"></script>
+  <script src="/subtheme/js/iframeResizer.contentWindow.min.js"></script>
   <title>Preview Layout</title>
 </head>
-<body class="au-body au-grid">
-<div class="container not-full-width">
-  <div class="row">
-    <div class="col-xs-12">
-      <p><strong>Unordered</strong></p>
+<body class="au-body au-grid" style="padding: 10px 20px 10px 10px;">
+  <!-- Start: @lists--default -->
+<p><strong>Unordered</strong></p>
 <ul>
   <li> One.</li>
   <li> Two.</li>
@@ -46,8 +45,90 @@
 
   </li>
 </ol>
-    </div>
-  </div>
-</div>
+<!-- End: @lists--default -->
+
+<!-- Start: @lists--large -->
+<p><strong>Unordered</strong></p>
+<ul class="list--large">
+  <li> One.</li>
+  <li> Two.</li>
+  <li> Three. Well, probably this list item should be longer. Note that
+    for short items lists look better if they are compactly presented,
+    whereas for long items, it would be better to have more vertical spacing between items.</li>
+  <li> Four. This is the last item in this list.
+    Let us terminate the list now without making any more fuss about it.
+  </li>
+</ul>
+
+<p><strong>Ordered</strong></p>
+<ol class="list--large">
+  <li> One.</li>
+  <li> Two.</li>
+  <li> Three. Well, probably this list item should be longer. Note that
+    for short items lists look better if they are compactly presented,
+    whereas for long items, it would be better to have more vertical spacing between items.</li>
+  <li> Four. This is the last item in this list.
+  Let us terminate the list now without making any more fuss about it.
+
+  </li>
+</ol>
+<!-- End: @lists--large -->
+
+<!-- Start: @lists--large-plain -->
+<p><strong>Unordered</strong></p>
+<ul class="list--large--plain">
+  <li> One.</li>
+  <li> Two.</li>
+  <li> Three. Well, probably this list item should be longer. Note that
+    for short items lists look better if they are compactly presented,
+    whereas for long items, it would be better to have more vertical spacing between items.</li>
+  <li> Four. This is the last item in this list.
+    Let us terminate the list now without making any more fuss about it.
+  </li>
+</ul>
+
+<p><strong>Ordered</strong></p>
+<ol class="list--large--plain">
+  <li> One.</li>
+  <li> Two.</li>
+  <li> Three. Well, probably this list item should be longer. Note that
+    for short items lists look better if they are compactly presented,
+    whereas for long items, it would be better to have more vertical spacing between items.</li>
+  <li> Four. This is the last item in this list.
+  Let us terminate the list now without making any more fuss about it.
+
+  </li>
+</ol>
+<!-- End: @lists--large-plain -->
+
+<!-- Start: @lists--checklist -->
+<p><strong>Unordered</strong></p>
+<ul class="list--large--checklist">
+  <li> One.</li>
+  <li> Two.</li>
+  <li> Three. Well, probably this list item should be longer. Note that
+    for short items lists look better if they are compactly presented,
+    whereas for long items, it would be better to have more vertical spacing between items.</li>
+  <li> Four. This is the last item in this list.
+    Let us terminate the list now without making any more fuss about it.
+  </li>
+</ul>
+
+<p><strong>Ordered</strong></p>
+<ol class="list--large--checklist">
+  <li> One.</li>
+  <li> Two.</li>
+  <li> Three. Well, probably this list item should be longer. Note that
+    for short items lists look better if they are compactly presented,
+    whereas for long items, it would be better to have more vertical spacing between items.</li>
+  <li> Four. This is the last item in this list.
+  Let us terminate the list now without making any more fuss about it.
+
+  </li>
+</ol>
+<!-- End: @lists--checklist -->
+
+  <div style="height: 30px;"></div>
 </body>
 </html>
+

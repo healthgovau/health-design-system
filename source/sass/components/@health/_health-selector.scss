@@ -1,0 +1,51 @@
+$nav-border-color: #dedede;
+$nav-border-color--active: #055da0;
+
+.au-body {
+  .h-nav-selector {
+
+    ul,
+    ol {
+      list-style-type: none;
+      display: block;
+      clear: both;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid $nav-border-color;
+      overflow: auto;
+    }
+    
+
+    &__item {
+      float: left;
+      @include AU-space('margin', 0 1unit);
+    }
+
+    &__link {
+      float: left;
+      display: inline-block;
+      color: #464646;
+      text-decoration: none;
+      border-bottom: 4px solid transparent;
+      @include AU-space('padding', .5unit 0);
+
+      @include AU-media(sm){
+        @include AU-space('padding', .75unit 0);
+      }
+
+      &:hover,
+      &:active {
+        border-bottom-color: $nav-border-color--active;
+      }
+
+
+      &--active {
+        border-bottom-color: $nav-border-color--active;
+        font-weight: bold;
+      }
+
+    }
+    
+  }
+
+}

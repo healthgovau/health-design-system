@@ -22,4 +22,29 @@
             left: auto;
         }
     }
+};
+
+// New implementation
+$brand-primary-color: rgb(230, 82, 107);
+$brand-primary-color-keyline: $brand-primary-color;
+
+$brand-color-1: shade($brand-primary-color,30%);
+$brand-color-2: shade($brand-primary-color,70%);
+$brand-color-3: tint($brand-primary-color,30%);
+$brand-color-4: tint($brand-primary-color,70%);
+
+// Pillars
+$pillars--pink: 
+$brand-primary-color 0%,$brand-primary-color 15%,
+$brand-color-1 15%,$brand-color-1 35%,
+$brand-color-2 35%,$brand-color-2 45%,
+$brand-color-3 45%,$brand-color-3 80%, 
+$brand-color-4 80%,$brand-color-4 100%; 
+
+.pillars-container--pink {
+    border-top: 12px solid $brand-primary-color-keyline !important;
+}
+
+.pillars--pink {
+    background: linear-gradient(to right,$pillars--pink) !important;
 }

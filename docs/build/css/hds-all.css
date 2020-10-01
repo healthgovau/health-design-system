@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.5 */
+/*! @health.gov.au/health-design-system v2.0.0-alpha.0 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -4213,6 +4213,14 @@ textarea.au-text-input {
       .pillars-container #pillars {
         left: auto; } }
 
+.pillars-container--pink {
+  border-top: 12px solid #e6526b !important; }
+
+.pillars--pink {
+  background: -webkit-gradient(linear, left top, right top, from(#e6526b), color-stop(15%, #e6526b), color-stop(15%, #a1394b), color-stop(35%, #a1394b), color-stop(35%, #451920), color-stop(45%, #451920), color-stop(45%, #ee8697), color-stop(80%, #ee8697), color-stop(80%, #f8cbd3), to(#f8cbd3)) !important;
+  background: -o-linear-gradient(left, #e6526b 0%, #e6526b 15%, #a1394b 15%, #a1394b 35%, #451920 35%, #451920 45%, #ee8697 45%, #ee8697 80%, #f8cbd3 80%, #f8cbd3 100%) !important;
+  background: linear-gradient(to right, #e6526b 0%, #e6526b 15%, #a1394b 15%, #a1394b 35%, #451920 35%, #451920 45%, #ee8697 45%, #ee8697 80%, #f8cbd3 80%, #f8cbd3 100%) !important; }
+
 .health-card {
   padding: 16px;
   padding: 1rem;
@@ -4675,10 +4683,6 @@ ul.health-card-list {
 * + .health-field {
   margin-top: 24px;
   margin-top: 1.5rem; }
-
-* + .health-field--compact {
-  margin-top: 8px;
-  margin-top: 0.5rem; }
 
 .health-field + * {
   clear: both; }
@@ -6335,62 +6339,32 @@ table {
     padding: 0;
     margin: 0; }
 
-* + .health-video {
-  margin-top: 24px;
-  margin-top: 1.5rem; }
-
-.health-video__preview {
-  position: relative;
-  line-height: 0; }
-  .health-video__preview .health-video__preview__play-button {
-    display: none;
-    position: absolute;
-    font-size: 6em;
-    opacity: 0.8;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%); }
-    .health-video__preview .health-video__preview__play-button svg {
-      fill: white;
-      -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75));
-              filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.75)); }
-  .health-video__preview__link {
-    display: block; }
-    .health-video__preview__link:hover .health-video__preview__play-button, .health-video__preview__link:active .health-video__preview__play-button, .health-video__preview__link:focus .health-video__preview__play-button {
-      display: block;
-      cursor: pointer; }
-  .health-video__preview__length {
-    padding: 12px;
-    padding: 0.75rem;
-    background-color: #000;
-    color: #fff;
-    opacity: 0.75;
-    filter: alpha(opacity=75);
-    vertical-align: top;
+.au-body .health-selector {
+  list-style-type: none;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #dedede;
+  overflow: auto; }
+  .au-body .health-selector__item {
+    float: left; }
+  .au-body .health-selector__link {
+    float: left;
     display: inline-block;
-    position: absolute;
-    right: 0;
-    bottom: 0; }
-    .health-video__preview__length--small {
-      display: none; }
-      @media (min-width: 768px) {
-        .health-video__preview__length--small {
-          display: inline-block;
-          padding: 8px;
-          padding: 0.5rem;
-          font-size: 0.85em;
-          right: 3px;
-          bottom: 3px; } }
-
-.health-video--inline {
-  border: 2px solid #ccc;
-  padding: 16px;
-  padding: 1rem; }
-  * + .health-video--inline {
-    margin-top: 24px;
-    margin-top: 1.5rem; }
+    padding: 12px 0;
+    padding: 0.75rem 0;
+    margin: 0 32px;
+    margin: 0 2rem;
+    color: #464646;
+    text-decoration: none; }
+    .au-body .health-selector__link:first-of-type {
+      margin-left: 0; }
+    .au-body .health-selector__link:hover, .au-body .health-selector__link:active {
+      border-bottom: 4px solid #055da0; }
+    .au-body .health-selector__link--active {
+      border-bottom: 4px solid #055da0;
+      font-weight: bold; }
 
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com

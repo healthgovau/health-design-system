@@ -14,15 +14,14 @@
   <script src="../../build/js/libraries/lazyload.min.js"></script>
   <script src="../../build/js/libraries/tippy.all.min.js"></script>
   <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
+  <script src="/data.js"></script>
+  <script src="/build/js/hds.js"></script>
+  <script src="/subtheme/js/iframeResizer.contentWindow.min.js"></script>
   <title>Preview Layout</title>
 </head>
-<body class="au-body au-grid">
-<div class="container not-full-width">
-  <div class="row">
-    <div class="col-xs-12">
-      <div style="background: lightblue">
+<body class="au-body au-grid" style="padding: 10px 20px 10px 10px;">
+  <!-- Start: @spacing--default -->
+<div style="background: lightblue">
   <p>Content above</p>
 </div>
 <div class="" style="background: lightpink">
@@ -31,8 +30,45 @@
 <div style="background: lightgreen">
   <p>Content below</p>
 </div>
-    </div>
-  </div>
+<!-- End: @spacing--default -->
+
+<!-- Start: @spacing--standard-gap -->
+<div style="background: lightblue">
+  <p>Content above</p>
 </div>
+<div class="standard-gap" style="background: lightpink">
+  <p>Content</p>
+</div>
+<div style="background: lightgreen">
+  <p>Content below</p>
+</div>
+<!-- End: @spacing--standard-gap -->
+
+<!-- Start: @spacing--standard-gap---mobile-only -->
+<div style="background: lightblue">
+  <p>Content above</p>
+</div>
+<div class="standard-gap--mobile-only" style="background: lightpink">
+  <p>Content</p>
+</div>
+<div style="background: lightgreen">
+  <p>Content below</p>
+</div>
+<!-- End: @spacing--standard-gap---mobile-only -->
+
+<!-- Start: @spacing--standard-gap---bottom -->
+<div style="background: lightblue">
+  <p>Content above</p>
+</div>
+<div class="standard-gap--bottom" style="background: lightpink">
+  <p>Content</p>
+</div>
+<div style="background: lightgreen">
+  <p>Content below</p>
+</div>
+<!-- End: @spacing--standard-gap---bottom -->
+
+  <div style="height: 30px;"></div>
 </body>
 </html>
+
