@@ -11,7 +11,6 @@
   "variants": [
     {
       "name": "Campaign",
-      "view": "sub-header--campaign.hbs",
       "context": {
         "subheader": {
           "title": "Campaign title",
@@ -25,7 +24,6 @@
     },
     {
       "name": "Campaign secondary",
-      "view": "sub-header--campaign.hbs",
       "hidden": true,
       "context": {
         "subheader": {
@@ -40,7 +38,6 @@
     },
     {
       "name": "Campaign tertiary",
-      "view": "sub-header--campaign.hbs",
       "hidden": true,
       "context": {
         "subheader": {

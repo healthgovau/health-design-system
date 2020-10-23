@@ -8,7 +8,7 @@
     <div class="row">
       <ul class="health-card-list">
         <li class="col-sm-4">
-          {# {% render "@card" %} #}
+          {# {% include '@hds/01-components/card/card.twig' %} #}
           {% block card %}
             {%
               include '@hds/01-components/card/card.twig' with {
@@ -22,7 +22,7 @@
           {% endblock %}
         </li>
         <li class="col-sm-4">
-          {# {% render "@card" %} #}
+          {# {% include '@hds/01-components/card/card.twig' %} #}
           {%
             include '@hds/01-components/card/card.twig' with {
               "title": "Dinosaurs to be crowned the earths greatest extinct animal",
@@ -34,7 +34,7 @@
           %}
         </li>
         <li class="col-sm-4">
-          {# {% render "@card" %} #}
+          {# {% include '@hds/01-components/card/card.twig' %} #}
           {%
             include '@hds/01-components/card/card.twig' with {
               "title": "Dinosaurs to be crowned the earths greatest extinct animal",

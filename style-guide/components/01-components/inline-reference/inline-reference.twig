@@ -1,6 +1,15 @@
 <div class="row au-callout au-callout--secondary au-callout--grid-row ">
   <div class=" col-xs-3 col-md-2">
-    {% render '@image--border-link' %}
+    {% include '@hds/01-components/image/image.twig' with {
+      "image": {
+        "link": false,
+        "url": "https://placekitten.com/800/450",
+        "width": 800,
+        "height": 450,
+        "ratio": 56.25,
+        "modifier": "image--border"
+      }
+    }%}
   </div>
   <div class=" col-xs-9 col-md-10">
     <p class="au-display-md"><a href="#">Tyrannosaurus factsheet</a></p>

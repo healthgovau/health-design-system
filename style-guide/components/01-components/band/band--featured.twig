@@ -7,7 +7,16 @@
     </div>
     <div class="row standard-gap">
       <div class="col-sm-3 col-xs-4">
-        {% render "@image--border-link" %}
+        {% include '@hds/01-components/image/image.twig' with {
+          "image": {
+            "link": false,
+            "url": "https://placekitten.com/800/450",
+            "width": 800,
+            "height": 450,
+            "ratio": 56.25,
+            "modifier": "image--border"
+          }
+        }%}
       </div>
       <div class="col-sm-9 col-xs-8">
         <h3><a href="#">Tyrannosaurus</a></h3>

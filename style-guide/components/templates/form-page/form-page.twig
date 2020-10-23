@@ -1,12 +1,16 @@
-{% render '@skip' %}
+{% include '@hds/templates/extra/skip.twig' %}
 
-{% render '@release-status--launch' %}
+{% include '@hds/01-components/release-status/release-status.twig' with {
+    "status": "New",
+    "modifier": "launch"
+  }
+%}
 
 <div class="au-body">
 
-  {% render '@header' %}
-  {% render "@sub-header" %}
-  {% render '@toolbar' %}
+  {% include '@hds/01-components/header/header.twig' %}
+  {% include '@hds/01-components/sub-header/sub-header.twig' %}
+  {% include '@hds/01-components/toolbar/toolbar.twig' %}
 
   <div class="container not-full-width">
 
@@ -28,18 +32,18 @@
             </div>
           {% endif %}
 
-          {% render "@radios" %}
+          {% include '@hds/01-components/form/radios/radios.twig' %}
 
-          {% render "@checkboxes" %}
+          {% include '@hds/01-components/form/checkboxes/checkboxes.twig' %}
 
-          {% render "@select" %}
+          {% include '@hds/01-components/form/select/select.twig' %}
 
-          {% render "@text-area--counter" %}
+          {% include '@hds/01-components/form/text-area/text-area.twig' %}
 
-          {% render "@text--counter" %}
+          {% include '@hds/01-components/form/text/text.twig' %}
 
           <div class="au-form__item">
-            {% render "@button" %}
+            {% include '@hds/01-components/form/button/button.twig' %}
           </div>
 
         </form>
@@ -49,6 +53,6 @@
   </div>
 </div>
 
-{% render '@footer' %}
+{% include '@hds/01-components/footer/footer.twig' %}
 
-{% render "@back-to-top" %}
+{% include '@hds/01-components/back-to-top/back-to-top.twig' %}

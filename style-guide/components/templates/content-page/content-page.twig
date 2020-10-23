@@ -1,24 +1,24 @@
-{% render '@skip' %}
+{% include '@hds/templates/extra/skip.twig' %}
 
-{# {% render '@release-status--launch' %} #}
+{# {% include '@hds/01-components/release-status--launch' %} #}
 
 <div class="au-body">
 
-  {% render '@header' %}
-  {% render '@sub-header' %}
-  {% render '@toolbar' %}
+  {% include '@hds/01-components/header/header.twig' %}
+  {% include '@hds/01-components/sub-header/sub-header.twig' %}
+  {% include '@hds/01-components/toolbar/toolbar.twig' %}
 
   <div class="container not-full-width">
 
     <div class="row">
 
       <div class="col-sm-4 au-side-nav--right">
-        {% render '@side-nav' %}
+        {% include '@hds/01-components/side-nav/side-nav.twig' %}
       </div>
 
       <div class="col-sm-8">
 
-        {% render '@inpage-nav' %}
+        {% include '@hds/01-components/inpage-nav/inpage-nav.twig' %}
 
         <h2 id="description">Description</h2>
         <h3>Size</h3>
@@ -30,7 +30,7 @@
           metric tons (15.4 short tons).
         </p>
 
-        {% render '@compare' %}
+        {% include '@hds/01-components/compare/compare.twig' %}
 
         <p>
           A specimen nicknamed Scotty (RSM P2523.8), located at the Royal
@@ -42,7 +42,7 @@
           </span>.
         </p>
 
-        {% render '@figure' %}
+        {% include '@hds/01-components/figure/figure.twig' %}
 
         <p>
           The discovery of feathered dinosaurs led to debates if, and to what extent, Tyrannosaurus might have been
@@ -53,7 +53,7 @@
           been lost by larger species due to their smaller surface-to-volume ratio.
         </p>
 
-        {% render '@table' %}
+        {% include '@hds/01-components/table/table.twig' %}
 
         <h3>Get the factsheet on how awesome the Tyrannosaurus is</h3>
 
@@ -62,11 +62,11 @@
           feathered.
         </p>
 
-        {% render '@file' %}
+        {% include '@hds/01-components/file/file.twig' %}
 
         <h3>Skeleton</h3>
 
-        {% render '@recommendation--grade-a'%}
+        {% include '@hds/01-components/recommendation/recommendation.twig'%}
 
         <p>
           The largest known Tyrannosaurus rex skull measures up to 1.52 meters (5 ft) in length. Large fenestrae
@@ -74,18 +74,18 @@
           was significantly different from those of large non-tyrannosaurid theropods.
         </p>
 
-        {% render '@image' %}
+        {% include '@hds/01-components/image/image.twig' %}
 
         <h2 id="history">History of research</h2>
 
-        {% render '@callout' %}
+        {% include '@hds/01-components/callout/callout.twig' %}
 
         <p>Teeth from what is now documented as a Tyrannosaurus rex were found in 1874 by Arthur Lakes near Golden,
           Colorado. In the early 1890s, John Bell Hatcher collected postcranial elements in eastern Wyoming. The fossils
           were believed to be from a large species of Ornithomimus (O. grandis, now Deinodon grandis) but are now
           considered Tyrannosaurus rex remains.</p>
 
-        {% render '@video' %}
+        {% include '@hds/01-components/video/video.twig' %}
 
         <p>
           The largest known Tyrannosaurus rex skull measures up to 1.52 meters (5 ft) in length. Large fenestrae
@@ -93,8 +93,8 @@
           was significantly different from those of large non-tyrannosaurid theropods.
         </p>
 
-        {% render '@inline-reference' %}
-        {% render '@inline-reference--video' %}
+        {% include '@hds/01-components/inline-reference/inline-reference.twig' %}
+        {% include '@hds/01-components/inline-reference/inline-reference--video.twig' %}
 
         <h2 id="facts">Amazing facts</h2>
 
@@ -117,23 +117,23 @@
 
         <h2>Contacts</h2>
 
-        {% render '@inline-reference--contact' %}
+        {% include '@hds/01-components/inline-reference/inline-reference--contact.twig' %}
 
         <h2>Glossary</h2>
 
-        {% render '@definition-list' %}
+        {% include '@hds/01-components/typography/definition-list.twig' %}
 
         <h2>References</h2>
 
-        {% render '@references' %}
+        {% include '@hds/01-components/references/references.twig' %}
 
-        {% render '@footnotes' %}
+        {% include '@hds/01-components/footnotes/footnotes.twig' %}
 
-        {% render '@book-nav' %}
+        {% include '@hds/01-components/book-nav/book-nav.twig' %}
 
-        {% render '@separator' %}
+        {% include '@hds/01-components/separator/separator.twig' %}
 
-        {% render '@field--inline' %}
+        {% include '@hds/01-components/field/field.twig' %}
 
         <div class="health-field health-field--inline">
           <div class="health-field__label">Tags:</div>
@@ -150,10 +150,10 @@
     </div>
   </div>
 
-  {% render '@something-wrong' %}
+  {% include '@hds/templates/extra/something-wrong.twig' %}
 
 </div>
 
-{% render '@footer' %}
+{% include '@hds/01-components/footer/footer.twig' %}
 
-{% render "@back-to-top" %}
+{% include '@hds/01-components/back-to-top/back-to-top.twig' %}

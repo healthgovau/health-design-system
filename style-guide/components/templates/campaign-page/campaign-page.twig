@@ -1,21 +1,27 @@
-{% render '@skip' %}
+{% include '@hds/templates/extra/skip.twig' %}
 
 <div class="au-body">
-  {% render '@header--campaign' %}
-  {% render "@sub-header--campaign" %}
+  {% include '@hds/01-components/header/header--campaign.twig' %}
+  {% include '@hds/01-components/sub-header/sub-header--campaign.twig' %}
 
   <div class="container-fluid full-width">
     <div class="row">
-      {% render '@band--featured' %}
-      {% render '@band--hotline' %}
-      {% render '@band--video-listing' %}
+      {% include '@hds/01-components/band/band--featured.twig' %}
+      {% include '@hds/01-components/band/band--hotline.twig' with {
+          "modifier": "primary",
+          "title": "Dinosaur escape hotline",
+          "number": "1800 671 811",
+          "text": "Call us on 1800 671 811 if you spot a dinosaur on the loose."
+        }
+      %}
+      {% include '@hds/01-components/band/band--video-listing.twig' %}
     </div>
   </div>
 
-  {% render '@something-wrong' %}
+  {% include '@hds/templates/extra/something-wrong.twig' %}
 
 </div>
 
-{% render '@footer' %}
+{% include '@hds/01-components/footer/footer.twig' %}
 
-{% render "@back-to-top" %}
+{% include '@hds/01-components/back-to-top/back-to-top.twig' %}

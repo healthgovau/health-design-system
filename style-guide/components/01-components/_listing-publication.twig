@@ -1,11 +1,20 @@
 <div class="row">
   <div class=" col-xs-3">
-    {% render '@image--border-link' %}
+    {% include '@hds/01-components/image/image.twig' with {
+      "image": {
+        "link": false,
+        "url": "https://placekitten.com/800/450",
+        "width": 800,
+        "height": 450,
+        "ratio": 56.25,
+        "modifier": "image--border"
+      }}
+    %}
   </div>
 
   <div class="col-xs-9">
     <h2 class="au-display-lg"><a href="#">Why the Tyrannosaurus is the best</a></h2>
-    {% render '@metadata' %}
+    {% include '@hds/01-components/metadata/metadata.twig' %}
     <div class="health-field health-field--label-hidden">
       <div class="health-field__item">
         Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning
