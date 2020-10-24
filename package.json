@@ -48,6 +48,7 @@
     "@frctl/fractal": "^1.3.0",
     "@frctl/mandelbrot": "^1.4.0",
     "@frctl/twig": "^1.2.0",
+    "@xerox/fractal-theme": "^1.7.6",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",

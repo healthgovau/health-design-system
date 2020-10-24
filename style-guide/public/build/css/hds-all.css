@@ -4099,6 +4099,7 @@ svg {
 textarea.au-text-input {
   max-width: 42em; }
 
+/* No styles needed. Let the browser style <audio> */
 .health-back-to-top {
   background-color: transparent;
   position: fixed;
@@ -4197,29 +4198,22 @@ textarea.au-text-input {
     .health-book-nav {
       display: none; } }
 
-.pillars-container #pillars {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjEAAABCCAYAAAAWn/QwAAAACXBIWXMAABcRAAAXEQHKJvM/AAAC70lEQVR42u3ZMWpUYRiG0W+G0ZGQQlDQLuAG7AOCa3JrllZau4VgpkkEQS2SZmQmNq5heHI9ZwnvvfD98Kzm46eHgcfmy7fdfL29MAT88+79zIuXdmC53tzY4JT2f3Zzde3OZt49P3dzf/A9gGX5cGmDU/r1ezfff7glwDKtn888eWuHJX9iEwAAAAAAAEUiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQtJmZz2bg0Xm62c/MtSH4r52dvZ7t9tXMzKxWVzNzZxQW67g+n/XRP34qh4M7W7Jd7+f+4HsAy/Fsc+7teuq31NFtBxbswV1ZuL8eRi4+Ju/52gAAAABJRU5ErkJggg=="); }
-
 .pillars-container {
-  position: relative; }
-  .pillars-container #pillars {
+  position: relative;
+  border-top: 12px solid #1d6301 !important; }
+  .pillars-container .pillars {
     position: absolute;
     top: -12px;
     left: 0;
     height: 12px;
-    width: 288px;
+    width: 300px;
+    background: -webkit-gradient(linear, left top, right top, from(#d2e0cc), color-stop(9%, #d2e0cc), color-stop(9%, #61924d), color-stop(21%, #61924d), color-stop(21%, #bbd0b3), color-stop(33%, #bbd0b3), color-stop(33%, #d2e0cc), color-stop(39%, #d2e0cc), color-stop(39%, #8eb180), color-stop(46%, #8eb180), color-stop(46%, #61924d), color-stop(66%, #61924d), color-stop(66%, #d2e0cc), color-stop(72%, #d2e0cc), color-stop(72%, #8eb180), color-stop(92%, #8eb180), color-stop(92%, #bbd0b3), to(#bbd0b3)) !important;
+    background: -o-linear-gradient(left, #d2e0cc 0%, #d2e0cc 9%, #61924d 9%, #61924d 21%, #bbd0b3 21%, #bbd0b3 33%, #d2e0cc 33%, #d2e0cc 39%, #8eb180 39%, #8eb180 46%, #61924d 46%, #61924d 66%, #d2e0cc 66%, #d2e0cc 72%, #8eb180 72%, #8eb180 92%, #bbd0b3 92%, #bbd0b3 100%) !important;
+    background: linear-gradient(to right, #d2e0cc 0%, #d2e0cc 9%, #61924d 9%, #61924d 21%, #bbd0b3 21%, #bbd0b3 33%, #d2e0cc 33%, #d2e0cc 39%, #8eb180 39%, #8eb180 46%, #61924d 46%, #61924d 66%, #d2e0cc 66%, #d2e0cc 72%, #8eb180 72%, #8eb180 92%, #bbd0b3 92%, #bbd0b3 100%) !important;
     background-size: cover; }
     @media (min-width: 768px) {
-      .pillars-container #pillars {
+      .pillars-container .pillars {
         left: auto; } }
-
-.pillars-container--pink {
-  border-top: 12px solid #e6526b !important; }
-
-.pillars--pink {
-  background: -webkit-gradient(linear, left top, right top, from(#e6526b), color-stop(15%, #e6526b), color-stop(15%, #a1394b), color-stop(35%, #a1394b), color-stop(35%, #451920), color-stop(45%, #451920), color-stop(45%, #ee8697), color-stop(80%, #ee8697), color-stop(80%, #f8cbd3), to(#f8cbd3)) !important;
-  background: -o-linear-gradient(left, #e6526b 0%, #e6526b 15%, #a1394b 15%, #a1394b 35%, #451920 35%, #451920 45%, #ee8697 45%, #ee8697 80%, #f8cbd3 80%, #f8cbd3 100%) !important;
-  background: linear-gradient(to right, #e6526b 0%, #e6526b 15%, #a1394b 15%, #a1394b 35%, #451920 35%, #451920 45%, #ee8697 45%, #ee8697 80%, #f8cbd3 80%, #f8cbd3 100%) !important; }
 
 .health-card {
   padding: 16px;

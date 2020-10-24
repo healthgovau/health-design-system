@@ -8,7 +8,8 @@ const twigAdapterOptions = {
     "hds": path.join(__dirname, "components")
   }
 };
-const twigAdapter = require('@frctl/twig')(twigAdapterOptions);
+// const twigAdapter = require('@frctl/twig')(twigAdapterOptions);
+const twigAdapter = require('@frctl/twig')();
 
 /*
  * Require the Fractal module
@@ -56,6 +57,18 @@ fractal.components.set('ext', '.twig');
  */
 const healthTheme = require('mandelbrot-healthgovau');
 fractal.web.theme(healthTheme);
+
+/*
+ * Test Fractal theme.
+ */
+// const xeroxTheme = require('npm install');
+
+// const myCustomisedTheme = xeroxTheme({
+//     panels: ['html', 'info', 'resources']
+// });
+
+// fractal.web.theme(myCustomisedTheme);
+
 
 /* Handlebar helpers for docs */
 const hbs = require('@frctl/handlebars')({

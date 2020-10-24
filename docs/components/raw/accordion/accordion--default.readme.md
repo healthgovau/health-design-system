@@ -1,1 +1,0 @@
-A singular method of expanding and collapsing a piece of content with a title. These are best used for transcripts of videos.
