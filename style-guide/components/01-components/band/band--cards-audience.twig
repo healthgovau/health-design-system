@@ -8,16 +8,32 @@
     <div class="row">
       <ul class="health-card-list health-card-list--matchheight">
         <li class="col-sm-6">
-          {% render "@card--audience" %}
+          {% include '@hds/01-components/card/card--audience.twig' with {
+            title: 'Children',
+            content: 'Activities for children to learn about dinosaurs.',
+            colour: 'colour1'
+          }%}
         </li>
         <li class="col-sm-6">
-          {% render "@card--audience---colour-2" %}
+          {% include '@hds/01-components/card/card--audience.twig' with {
+            title: 'Children',
+            content: 'Activities for children to learn about dinosaurs.',
+            colour: 'colour2'
+          }%}
         </li>
         <li class="col-sm-6">
-          {% render "@card--audience---colour-3" %}
+          {% include '@hds/01-components/card/card--audience.twig' with {
+            title: 'Children',
+            content: 'Activities for children to learn about dinosaurs.',
+            colour: 'colour3'
+          }%}
         </li>
         <li class="col-sm-6">
-          {% render "@card--audience---colour-4" %}
+          {% include '@hds/01-components/card/card--audience.twig' with {
+            title: 'Children',
+            content: 'Activities for children to learn about dinosaurs.',
+            colour: 'colour4'
+          }%}
         </li>
       </ul>
     </div>

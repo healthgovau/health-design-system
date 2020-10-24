@@ -1,7 +1,7 @@
 <div class="au-form__item">
   <label for="favourite">
     {{ select.label }}
-    {% render "@label-mandatory" %}
+    {% include '@hds/01-components/form/label-mandatory/label-mandatory.twig' %}
   </label>
   <select class="au-select{% if error %} error{% endif %}" id="favourite">
     <option>Dinosaurs</option>
