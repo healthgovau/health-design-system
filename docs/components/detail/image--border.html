@@ -41,7 +41,7 @@
 
 
 <header class="au-grid au-header" role="banner">
-  <div class="container">
+  <div class="container"> 
     <div class="row">
       <div class="col-md-9">
         <a class="au-header__brand" href="/">
@@ -71,7 +71,7 @@
 
     
 
-<nav class="au-main-nav au-main-nav--dark" aria-label="main">
+<nav class="au-main-nav" aria-label="main">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -112,6 +112,8 @@
                                     
                                         
                                         <li class="">
+                                            
+                                                
                                             
                                                 
                                             
@@ -178,7 +180,7 @@
     <div class="container" data-role="body">
 
         <div class="row">
-            <aside class="col-sm-3" data-role="sidebar">
+            <aside class="col-sm-2" data-role="sidebar">
                 
 
 
@@ -672,6 +674,30 @@
         <li class="">
             <a class="Tree-entityLink" href="filter.html">
                 <span>Filter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="">
+            <a class="Tree-entityLink" href="flex.html">
+                <span>Flex</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1627,7 +1653,7 @@
 
             </aside>
 
-            <main class="col-sm-9" data-role="main">
+            <main class="col-sm-10" data-role="main">
                 <div class="au-body" id="pjax-container">
                     
 
@@ -1648,20 +1674,8 @@
     </h1>
 
     
-    <h1 id="lazy-load">Lazy load</h1>
-<p>Images should be lazy loaded to improve <a href="https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive">time to interactive</a>.</p>
-<p>Images should use width and height attributes.</p>
-<h2 id="reserving-space">Reserving space</h2>
-<p>To make sure the page doesn’t jump around as images are loaded, we reserve the space initially.</p>
-<p><code>max-width</code> is the original image width</p>
-<p><code>padding-top</code> is calculated as a percentage of height width <code>height / width * 100</code></p>
-<p>Requires <a href="https://github.com/verlok/lazyload">LazyLoad</a>, jQuery and <a href="/js/health/health.lazyload.js">health.lazyload.js</a>.</p>
-<h2 id="image-loaded-event">Image loaded event</h2>
-<p>When an image is loaded <code>lazyLoad_loaded</code> is fired on the image.</p>
-<p>To listen for this event, register an event listener to the image, for example</p>
-<pre><code class="hljs language-javascript">$(<span class="hljs-string">'img[data-src]'</span>).on(<span class="hljs-string">'lazyLoad_loaded'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, element</span>) </span>{
-  <span class="hljs-comment">// do something</span>
-});</code></pre>
+    <p>This context comes from a README modifier <code>image--border.readme.md</code></p>
+
     
 </div>
 <div class="col-xs-5">

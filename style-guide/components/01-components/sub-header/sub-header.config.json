@@ -24,7 +24,6 @@
     },
     {
       "name": "Campaign secondary",
-      "hidden": true,
       "context": {
         "subheader": {
           "title": "Campaign title",

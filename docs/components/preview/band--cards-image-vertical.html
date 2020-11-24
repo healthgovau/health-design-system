@@ -1,75 +1,93 @@
+
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="no-js">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-    window.frctl = {
-        env: 'static'
-    };
-    </script>
-    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/ico">
-
-<link rel="stylesheet" href="../../subtheme/css/style.css?cachebust=1.4.0" type="text/css">
-
-<link rel="stylesheet" href="../../build/css/hds-all.min.css?cachebust=1.4.0" type="text/css">
-
-<link rel="stylesheet" href="../../subtheme/js/jquery-ui.min.css?cachebust=1.4.0" type="text/css">
-
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
-
-
-
-<script src="../../subtheme/js/jquery-3.5.1.min.js?cachebust=1.4.0"></script>
-
-<script src="../../subtheme/js/jquery-ui.min.js?cachebust=1.4.0"></script>
-
-
-<title>Error rendering component band--cards-image-vertical | Health Design System</title>
-
+<html>
+<head class="no-js">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link media="all" rel="stylesheet" href="../../build/css/hds-all.css">
+  <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
+  <script src="../../build/js/libraries/jquery.min.js"></script>
+  <script src="../../build/js/libraries/jquery-ui.min.js"></script>
+  <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
+  <script src="../../build/js/libraries/jquery.once.min.js"></script>
+  <script src="../../build/js/libraries/lazyload.min.js"></script>
+  <script src="../../build/js/libraries/tippy.all.min.js"></script>
+  <script src="../../build/js/libraries/anchorific.min.js"></script>
+  <script src="/data.js"></script>
+  <script src="/build/js/hds.js"></script>
+  <script src="/subtheme/js/iframeResizer.contentWindow.min.js"></script>
+  <title>Preview Layout</title>
 </head>
-<body>
+<body class="au-body au-grid">
+  <div class="container-fluid full-width">
+    <div class="row">
+    <div class="health-band health-band--neutral-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>The best dinosaurs</h2>
+      </div>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-sm-6">
+        <div class=" health-card health-card--light">
+  <div class="health-card__image health-card__image--full-width">
+            <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="/images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
 
+      </div>
+  <h3 id="ageing-and-aged-care">Tyrannosaurus</h3>
+  <div class="au-display-md--text standard-gap">
+    <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning "king"
+      in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods.
+    </p>
+  </div>
+  <div class="au-cta-link">
+    <a href="#">Learn more</a>
+  </div>
+</div>
+      </div>
+      <div class="col-sm-6 standard-gap--mobile-only">
+        <div class=" health-card health-card--light">
+  <div class="health-card__image health-card__image--full-width">
+            <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="/images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
 
-
-<div class="Frame Frame--full" id="frame">
-
-
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>Error: Template @hds/01-components/image/image.twig not found</p>
+      </div>
+  <h3 id="ageing-and-aged-care">Tyrannosaurus</h3>
+  <div class="au-display-md--text standard-gap">
+    <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning "king"
+      in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods.
+    </p>
+  </div>
+  <div class="au-cta-link">
+    <a href="#">Learn more</a>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
-    
-    <code class="Error-stack">
-        <pre>Error: Error: Template @hds/01-components/image/image.twig not found
-    at /Users/danny/Sites/health-design-system/node_modules/@frctl/twig/src/adapter.js:158:24
-    at new Promise (<anonymous>)
-    at TwigAdapter.render (/Users/danny/Sites/health-design-system/node_modules/@frctl/twig/src/adapter.js:140:16)
-    at ComponentSource._renderVariant (/Users/danny/Sites/health-design-system/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
-    at _renderVariant.next (<anonymous>)
-    at onFulfilled (/Users/danny/Sites/health-design-system/node_modules/co/index.js:65:19)
-    at tryCatcher (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/util.js:16:23)
-    at Promise._settlePromiseFromHandler (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:547:31)
-    at Promise._settlePromise (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:649:10)
-    at Promise._settlePromises (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:729:18)
-    at Promise._fulfill (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:673:18)
-    at Promise._resolveCallback (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:466:57)
-    at Promise._settlePromiseFromHandler (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:559:17)
-    at Promise._settlePromise (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:649:10)</pre>
-    </code>
-    
-</div>
-
-
-</div>
-
-
-
-
+  </div>
 </body>
 </html>
+

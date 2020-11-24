@@ -41,7 +41,7 @@
 
 
 <header class="au-grid au-header" role="banner">
-  <div class="container">
+  <div class="container"> 
     <div class="row">
       <div class="col-md-9">
         <a class="au-header__brand" href="/">
@@ -71,7 +71,7 @@
 
     
 
-<nav class="au-main-nav au-main-nav--dark" aria-label="main">
+<nav class="au-main-nav" aria-label="main">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -112,6 +112,8 @@
                                     
                                         
                                         <li class="">
+                                            
+                                                
                                             
                                                 
                                             
@@ -178,7 +180,7 @@
     <div class="container" data-role="body">
 
         <div class="row">
-            <aside class="col-sm-3" data-role="sidebar">
+            <aside class="col-sm-2" data-role="sidebar">
                 
 
 
@@ -672,6 +674,30 @@
         <li class="">
             <a class="Tree-entityLink" href="filter.html">
                 <span>Filter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="">
+            <a class="Tree-entityLink" href="flex.html">
+                <span>Flex</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1627,7 +1653,7 @@
 
             </aside>
 
-            <main class="col-sm-9" data-role="main">
+            <main class="col-sm-10" data-role="main">
                 <div class="au-body" id="pjax-container">
                     
 
@@ -1793,6 +1819,84 @@
             <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-79084575f3a39145dcd187d61f81f965-panel-html">
                 <code class="Code Code--lang-html">
                     
+                        <pre><span class="hljs-comment">&lt;!--
+   Output inline style for image for more granular control
+   Preferably add to CSS but this depends on the implementation
+--&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>
+     .health-sub-header--campaign {
+         background-image: url('https://loremflickr.com/1920/700/health') !important; // reqd to override .au-body--dark bg
+     }
+ <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-sub-header health-sub-header--campaign au-body au-body--dark"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-sub-header__content col-sm-7"</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Campaign title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"au-introduction"</span>&gt;</span>
+                     Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.
+                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"au-btn au-btn--dark au-btn--large"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+                         Callout button
+                     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+                    
+                </code>
+            </div>
+        
+    
+        
+            <h2>Campaign Secondary</h2>
+            
+                <p>The hero image should be 1920x700 pixels to provide the optimal responsive experience. A min-height: 500px is applied to the hero at the largest breakpoint but the sub-header grows and shrinks according the text contained within it.</p>
+
+            
+
+            <div class="Preview-wrapper" data-role="resizer">
+                <div id="iframe-resizer-sub-header--campaign-secondary">
+                    
+
+                    <iframe
+                        id="iframe-sub-header--campaign-secondary"
+                        data-role="window"
+                        src="/components/preview/sub-header--campaign-secondary"
+                        marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes" style="">
+                    </iframe>
+                    <script>
+                        $('#iframe-sub-header--campaign-secondary').iFrameResize();
+                        $(document).ready(function() {
+                            $( "#iframe-resizer-sub-header--campaign-secondary" ).resizable({
+                                handles: {e: ".Preview-handle"},
+                                containment: "parent",
+                                minWidth: 300,
+                                resize: function( event, ui ) {
+                                    $('#iframe-sub-header--campaign-secondary')[0].iFrameResizer.resize();
+                                }
+                            });
+                        });
+                    </script>
+                    <div class="Preview-handle ui-resizable-e" data-role="resize-handle"></div>
+                </div>
+
+
+            </div>
+
+            <a href="/components/preview/sub-header--campaign-secondary" title="Component preview"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+ Full screen</a>
+
+            
+            <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-79084575f3a39145dcd187d61f81f965-panel-html">
+                <code class="Code Code--lang-html">
+                    
                         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-sub-header"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
@@ -1821,83 +1925,6 @@
             </div>
         
     
-        
-    
-        
-    
-        
-            <h2>Campaign</h2>
-            
-
-            <div class="Preview-wrapper" data-role="resizer">
-                <div id="iframe-resizer-sub-header--campaign">
-                    
-
-                    <iframe
-                        id="iframe-sub-header--campaign"
-                        data-role="window"
-                        src="/components/preview/sub-header--campaign"
-                        marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes" style="">
-                    </iframe>
-                    <script>
-                        $('#iframe-sub-header--campaign').iFrameResize();
-                        $(document).ready(function() {
-                            $( "#iframe-resizer-sub-header--campaign" ).resizable({
-                                handles: {e: ".Preview-handle"},
-                                containment: "parent",
-                                minWidth: 300,
-                                resize: function( event, ui ) {
-                                    $('#iframe-sub-header--campaign')[0].iFrameResizer.resize();
-                                }
-                            });
-                        });
-                    </script>
-                    <div class="Preview-handle ui-resizable-e" data-role="resize-handle"></div>
-                </div>
-
-
-            </div>
-
-            <a href="/components/preview/sub-header--campaign" title="Component preview"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
- Full screen</a>
-
-            
-            <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-79084575f3a39145dcd187d61f81f965-panel-html">
-                <code class="Code Code--lang-html">
-                    
-                        <pre><span class="hljs-comment">&lt;!--
-   Output inline style for image for more granular control
-   Preferably add to CSS but this depends on the implementation
---&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>
-     .health-sub-header--campaign {
-         background-image: url('') !important; // reqd to override .au-body--dark bg
-     }
- <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-sub-header health-sub-header--campaign au-body au-body--dark"</span>&gt;</span>
-     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-sub-header__content col-sm-7"</span>&gt;</span>
-                 <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Page title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"au-introduction"</span>&gt;</span>
-                     Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.
-                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"au-btn au-btn--dark au-btn--large"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
-
-                     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-                    
-                </code>
-            </div>
         
     
 

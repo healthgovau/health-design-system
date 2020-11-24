@@ -10,8 +10,15 @@
   },
   "variants": [
     {
+      "name": "Dark",
+        "view": "card--dark.hbs",
+        "context": {
+          "title": "Dark card"
+        }
+      }
+    },
+    {
       "name": "Resource",
-      "context": {
         "title": "Dinosaur factsheet",
         "type": "Publication"
       }

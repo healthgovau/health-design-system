@@ -1,0 +1,19 @@
+.flex-container {
+    display: flex;
+    @include AU-space('margin-right', -1unit);
+    + .flex-container {
+        @include AU-space('margin-right', -2unit);
+    }
+
+    > * {
+        flex: 1 1 0;
+        @include AU-space('margin-right', 1unit);
+    }
+
+    &.flex-container-promo1 > *:nth-of-type(1){
+        flex-grow: 2;
+    }
+    &.flex-container-promo2 > *:nth-of-type(2){
+        flex-grow: 2;
+    }
+}

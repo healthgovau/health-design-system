@@ -41,7 +41,7 @@
 
 
 <header class="au-grid au-header" role="banner">
-  <div class="container">
+  <div class="container"> 
     <div class="row">
       <div class="col-md-9">
         <a class="au-header__brand" href="/">
@@ -71,7 +71,7 @@
 
     
 
-<nav class="au-main-nav au-main-nav--dark" aria-label="main">
+<nav class="au-main-nav" aria-label="main">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -112,6 +112,8 @@
                                     
                                         
                                         <li class="">
+                                            
+                                                
                                             
                                                 
                                             
@@ -178,7 +180,7 @@
     <div class="container" data-role="body">
 
         <div class="row">
-            <aside class="col-sm-3" data-role="sidebar">
+            <aside class="col-sm-2" data-role="sidebar">
                 
 
 
@@ -672,6 +674,30 @@
         <li class="">
             <a class="Tree-entityLink" href="filter.html">
                 <span>Filter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="">
+            <a class="Tree-entityLink" href="flex.html">
+                <span>Flex</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1627,16 +1653,12 @@
 
             </aside>
 
-            <main class="col-sm-9" data-role="main">
+            <main class="col-sm-10" data-role="main">
                 <div class="au-body" id="pjax-container">
                     
 
 
     
-    
-        
-        
-        
     
 
 <script src="/subtheme/js/iframeResizer.min.js"></script>
@@ -1684,16 +1706,25 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div id="iframe-resizer-card--image-vertical">
             
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>Error: Template @hds/01-components/image/image.twig not found</p>
-
-    </div>
-    
-</div>
-
-            
+                <iframe
+                id="iframe-card--image-vertical"
+                data-role="window"
+                src="../preview/card--image-vertical.html"
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+            <script>
+                iFrameResize({}, "#iframe-card--image-vertical")
+                $(document).ready(function() {
+                    $( "#iframe-resizer-card--image-vertical" ).resizable({
+                        handles: {e: ".Preview-handle"},
+                        containment: "parent",
+                        minWidth: 300,
+                        resize: function( event, ui ) {
+                            $('#iframe-card--image-vertical')[0].iFrameResizer.resize();
+                        }
+                    });
+                });
+            </script>
             <div class="Preview-handle ui-resizable-e" data-role="resize-handle"></div>
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
@@ -1711,25 +1742,30 @@
     <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-66e9cb3aa31c6369430ecbd1ebaf83fc-panel-html">
         <code class="Code Code--lang-html">
             
-                <pre><span class="hljs-comment">&lt;!-- Error rendering component --&gt;</span>
-<span class="hljs-comment">&lt;!-- Error: Template @hds/01-components/image/image.twig not found --&gt;</span>
-<span class="hljs-comment">&lt;!-- Error: Error: Template @hds/01-components/image/image.twig not found
-    at /Users/danny/Sites/health-design-system/node_modules/@frctl/twig/src/adapter.js:158:24
-    at new Promise (&lt;anonymous&gt;)
-    at TwigAdapter.render (/Users/danny/Sites/health-design-system/node_modules/@frctl/twig/src/adapter.js:140:16)
-    at ComponentSource._renderVariant (/Users/danny/Sites/health-design-system/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
-    at _renderVariant.next (&lt;anonymous&gt;)
-    at onFulfilled (/Users/danny/Sites/health-design-system/node_modules/co/index.js:65:19)
-    at tryCatcher (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/util.js:16:23)
-    at Promise._settlePromiseFromHandler (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:547:31)
-    at Promise._settlePromise (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:649:10)
-    at Promise._settlePromises (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:729:18)
-    at Promise._fulfill (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:673:18)
-    at Promise._resolveCallback (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:466:57)
-    at Promise._settlePromiseFromHandler (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:559:17)
-    at Promise._settlePromise (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/promise.js:649:10) --&gt;</span></pre>
+                <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" health-card health-card--light"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"health-card__image health-card__image--full-width"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image-outer"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image-placeholder"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width: 800px;"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding-top: 56.25%;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image-wrapper image-loading"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"image"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"450"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"/images/trex_16x9.jpg"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ageing-and-aged-care"</span>&gt;</span>Tyrannosaurus<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"au-display-md--text standard-gap"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning "king"
+            in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"au-cta-link"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Learn more<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
             
         </code>
     </div>

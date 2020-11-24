@@ -8,8 +8,8 @@ const twigAdapterOptions = {
     "hds": path.join(__dirname, "components")
   }
 };
-// const twigAdapter = require('@frctl/twig')(twigAdapterOptions);
-const twigAdapter = require('@frctl/twig')();
+const twigAdapter = require('@frctl/twig')(twigAdapterOptions);
+//const twigAdapter = require('@frctl/twig')();
 
 /*
  * Require the Fractal module

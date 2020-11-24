@@ -41,7 +41,7 @@
 
 
 <header class="au-grid au-header" role="banner">
-  <div class="container">
+  <div class="container"> 
     <div class="row">
       <div class="col-md-9">
         <a class="au-header__brand" href="/">
@@ -71,7 +71,7 @@
 
     
 
-<nav class="au-main-nav au-main-nav--dark" aria-label="main">
+<nav class="au-main-nav" aria-label="main">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -112,6 +112,8 @@
                                     
                                         
                                         <li class="">
+                                            
+                                                
                                             
                                                 
                                             
@@ -178,7 +180,7 @@
     <div class="container" data-role="body">
 
         <div class="row">
-            <aside class="col-sm-3" data-role="sidebar">
+            <aside class="col-sm-2" data-role="sidebar">
                 
 
 
@@ -672,6 +674,30 @@
         <li class="">
             <a class="Tree-entityLink" href="filter.html">
                 <span>Filter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="">
+            <a class="Tree-entityLink" href="flex.html">
+                <span>Flex</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1627,7 +1653,7 @@
 
             </aside>
 
-            <main class="col-sm-9" data-role="main">
+            <main class="col-sm-10" data-role="main">
                 <div class="au-body" id="pjax-container">
                     
 
@@ -1685,7 +1711,7 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>Error: Template @hds/01-components/sub-nav/sub-nav.twig not found</p>
+        <p>TwigException: Unable to find template file /Users/danny/Sites/health-design-system/style-guide/components/01-components/side-nav/side-nav.twig. Error: ENOENT: no such file or directory, stat &#39;/Users/danny/Sites/health-design-system/style-guide/components/01-components/side-nav/side-nav.twig&#39;</p>
 
     </div>
     
@@ -1710,12 +1736,12 @@
         <code class="Code Code--lang-html">
             
                 <pre><span class="hljs-comment">&lt;!-- Error rendering component --&gt;</span>
-<span class="hljs-comment">&lt;!-- Error: Template @hds/01-components/sub-nav/sub-nav.twig not found --&gt;</span>
-<span class="hljs-comment">&lt;!-- Error: Error: Template @hds/01-components/sub-nav/sub-nav.twig not found
+<span class="hljs-comment">&lt;!-- TwigException: Unable to find template file /Users/danny/Sites/health-design-system/style-guide/components/01-components/side-nav/side-nav.twig. Error: ENOENT: no such file or directory, stat '/Users/danny/Sites/health-design-system/style-guide/components/01-components/side-nav/side-nav.twig' --&gt;</span>
+<span class="hljs-comment">&lt;!-- Error: TwigException: Unable to find template file /Users/danny/Sites/health-design-system/style-guide/components/01-components/side-nav/side-nav.twig. Error: ENOENT: no such file or directory, stat '/Users/danny/Sites/health-design-system/style-guide/components/01-components/side-nav/side-nav.twig'
     at /Users/danny/Sites/health-design-system/node_modules/@frctl/twig/src/adapter.js:158:24
     at new Promise (&lt;anonymous&gt;)
     at TwigAdapter.render (/Users/danny/Sites/health-design-system/node_modules/@frctl/twig/src/adapter.js:140:16)
-    at ComponentSource._renderVariant (/Users/danny/Sites/health-design-system/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
+    at ComponentSource._renderVariant (/Users/danny/Sites/health-design-system/node_modules/@frctl/fractal/src/api/components/source.js:206:30)
     at _renderVariant.next (&lt;anonymous&gt;)
     at onFulfilled (/Users/danny/Sites/health-design-system/node_modules/co/index.js:65:19)
     at tryCatcher (/Users/danny/Sites/health-design-system/node_modules/bluebird/js/release/util.js:16:23)
