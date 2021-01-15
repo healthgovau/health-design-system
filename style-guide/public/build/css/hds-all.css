@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.6 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.7 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -3876,10 +3876,11 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
     border-left-width: 10px;
     padding: 1rem 1.5rem; }
 
-/* Card overrides */
+/* DTA card overrides */
 .au-card.au-card--fullimg {
   position: relative;
   height: 100%;
+  min-width: 300px;
   border-bottom: 6px solid #7bdaec; }
   .au-card.au-card--fullimg .au-card__inner {
     width: 85%;
@@ -3892,6 +3893,11 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
   .au-card.au-card--fullimg .au-card__title a {
     text-decoration: none;
     color: #000; }
+  .au-card.au-card--fullimg img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 .au-control-input.au-control-input--compact.au-control-input--block {
   margin-top: 8px;
