@@ -19,7 +19,10 @@ $card-border-colour: #4ebdcc;
         }
 
         .au-card__title {
-            @include health-fontgrid('md', 'heading');
+            @include health-fontgrid('xl', 'heading');
+            @include AU-media(sm){
+                @include health-fontgrid('md', 'heading');
+            }
             a {
                 text-decoration: none;
                 color: #000;
