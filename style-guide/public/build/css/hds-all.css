@@ -3884,32 +3884,22 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
   .au-card.au-card--fullimg .au-card__inner {
     width: 85%;
     height: 50%;
+    height: 5.5rem;
     min-height: 80px;
     position: absolute;
     border-radius: 0px 6px 0px 0px;
     background: rgba(255, 255, 255, 0.9);
     bottom: 0px; }
   .au-card.au-card--fullimg .au-card__title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
     font-weight: bold; }
     @media (min-width: 768px) {
       .au-card.au-card--fullimg .au-card__title {
-        font-size: 32px;
-        font-size: 2rem;
-        line-height: 1.25; } }
-    @media (min-width: 768px) {
-      .au-card.au-card--fullimg .au-card__title {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: bold; } }
-  @media (min-width: 768px) and (min-width: 768px) {
-    .au-card.au-card--fullimg .au-card__title {
-      font-size: 20px;
-      font-size: 1.25rem;
-      line-height: 1.2; } }
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.2; } }
     .au-card.au-card--fullimg .au-card__title a {
       text-decoration: none;
       color: #000; }
