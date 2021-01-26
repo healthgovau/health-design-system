@@ -5100,27 +5100,27 @@ a .image-wrapper.image-loading {
   * + .health-listing {
     margin: 32px 0 0 0;
     margin: 2rem 0 0 0; }
-  * + .row .health-listing--embedded li:first-of-type, * + .health-listing--embedded li:first-of-type {
+  * + .row .health-listing--embedded > li:first-of-type, * + .health-listing--embedded > li:first-of-type {
     border-top: 1px solid #ccc;
     padding-top: 32px;
     padding-top: 2rem;
     margin-top: 32px;
     margin-top: 2rem; }
-  * + .row .health-listing--embedded li:last-of-type, * + .health-listing--embedded li:last-of-type {
+  * + .row .health-listing--embedded > li:last-of-type, * + .health-listing--embedded > li:last-of-type {
     border-bottom: 1px solid #ccc;
     padding-bottom: 32px;
     padding-bottom: 2rem; }
-  .health-listing li {
+  .health-listing > li {
     list-style: none;
     max-width: inherit;
     clear: both; }
-  .health-listing li + li {
+  .health-listing > li + li {
     margin-top: 32px;
     margin-top: 2rem;
     border-top: 1px solid #ccc;
     padding-top: 32px;
     padding-top: 2rem; }
-  .health-listing--compact li + li {
+  .health-listing--compact > li + li {
     margin-top: 16px;
     margin-top: 1rem;
     padding-top: 16px;
