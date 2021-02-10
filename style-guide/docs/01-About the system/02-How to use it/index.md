@@ -1,6 +1,6 @@
 ---
-title: Getting started
-label: Getting started
+title: How to use it
+label: How to use it
 ---
 
 ## How to use the system

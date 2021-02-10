@@ -1,6 +1,6 @@
 ---
 title: Health Design System
-label: Introduction
+label: Home
 ---
 
 
@@ -10,21 +10,4 @@ The Health Design System allows designers and developers to provide a unified ex
 
 ![Health Design System across devices]({{ path 'images/devices.png' }})
 
-## About the Health Design System
-
-It uses the [Australian Government Design System](https://designsystem.gov.au/) as its foundation and provides a set of open-source building blocks that can be used to build government products and services more easily.
-
-### Guiding principles
-The guiding principles behind the Health Design System are:
-
-  1. Build upon and document how Health uses the [Australian Government Design System](https://designsystem.gov.au/)
-  2. Support the delivery of a unified experience for users of Health products
-  3. Provide a centralised resource of usable components, patterns and templates
-  4. Prevent duplication, fragmentation and *reinvention of the digital wheel*
-  5. Be platform agnostic
-  6. Eat our own dogfood - build the system and use the system!
-
-
-The [Department of Health website](https://www.health.gov.au/) uses this system.
-
-
+[Learn about the system](/docs/about-the-system)
