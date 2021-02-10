@@ -15,13 +15,11 @@
         "context": {
           "title": "Dark card"
         }
-      }
     },
     {
       "name": "Resource",
         "title": "Dinosaur factsheet",
         "type": "Publication"
-      }
     },
     {
       "name": "Call to action",

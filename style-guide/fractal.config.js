@@ -39,6 +39,7 @@ fractal.components.set('default.collated', true);
  * Tell Fractal where to look for documentation pages.
  */
 fractal.docs.set('path', path.join(__dirname, 'docs'));
+//fractal.docs.set('markdown', false); // defaults to true
 
 /*
  * Tell the Fractal web preview plugin where to look for static assets.
