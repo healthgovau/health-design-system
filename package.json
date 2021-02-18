@@ -16,7 +16,7 @@
     "healthds": "./bin/cli.js"
   },
   "dependencies": {
-    "@frctl/handlebars": "^1.2.0",
+    "@frctl/handlebars": "^1.2.7",
     "@gov.au/accordion": "7.0.8",
     "@gov.au/body": "2.2.0",
     "@gov.au/breadcrumbs": "3.0.5",
@@ -43,13 +43,12 @@
     "@gov.au/skip-link": "2.0.16",
     "@gov.au/tags": "3.1.7",
     "@gov.au/text-inputs": "2.1.1",
-    "copy": "^0.3.2",
-    "fractal": "0.0.3"
+    "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.4.1",
-    "@frctl/mandelbrot": "^1.4.0",
-    "@frctl/twig": "^1.2.0",
+    "@frctl/fractal": "^1.5.4",
+    "@frctl/mandelbrot": "^1.8.1",
+    "@frctl/twig": "^1.2.6",
     "@xerox/fractal-theme": "^1.7.6",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
