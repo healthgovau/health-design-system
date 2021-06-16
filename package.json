@@ -45,8 +45,8 @@
     "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.1",
-    "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/fractal": "^1.5.8",
+    "@frctl/mandelbrot": "^1.9.2",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
