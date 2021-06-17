@@ -11,6 +11,7 @@ $card-border-colour: #4ebdcc;
         .au-card__inner {
             width: 85%;
             height: 50%;
+            height: 5.5rem;
             min-height: 80px;
             position: absolute;
             border-radius: 0px 6px 0px 0px;
@@ -19,10 +20,7 @@ $card-border-colour: #4ebdcc;
         }
 
         .au-card__title {
-            @include health-fontgrid('xl', 'heading');
-            @include AU-media(sm){
-                @include health-fontgrid('md', 'heading');
-            }
+            @include health-fontgrid('md', 'heading');
             a {
                 text-decoration: none;
                 color: #000;

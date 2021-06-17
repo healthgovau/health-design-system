@@ -2,7 +2,7 @@
   "name": "@health.gov.au/health-design-system",
   "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
   "description": "Design system for health.gov.au and related products.",
-  "version": "1.4.0-alpha.8",
+  "version": "1.4.0-alpha.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/healthgovau/health-design-system.git"
@@ -45,8 +45,8 @@
     "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.1",
-    "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/fractal": "^1.5.8",
+    "@frctl/mandelbrot": "^1.9.2",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",

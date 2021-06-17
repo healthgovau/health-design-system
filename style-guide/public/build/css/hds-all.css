@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.8 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.9 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -294,8 +294,7 @@
   display: block;
   color: #006FB0;
   text-decoration: underline;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
   font-weight: bold;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -457,10 +456,8 @@
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #313131;
   background-color: #ffffff;
@@ -524,8 +521,7 @@
   .au-body a {
     color: #006FB0;
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto; }
+    text-decoration-skip-ink: auto; }
     .au-body a:hover {
       color: #313131;
       text-decoration: none; }
@@ -615,20 +611,16 @@
   .au-body del {
     text-decoration: line-through; }
   .au-body ins {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-    -webkit-text-decoration-style: dashed;
-            text-decoration-style: dashed;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto; }
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-skip-ink: auto; }
   .au-body dfn {
     font-style: normal; }
   .au-body abbr,
   .au-body abbr[title] {
     border-bottom: none;
     text-decoration: underline;
-    -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted; }
+    text-decoration: underline dotted; }
   .au-body abbr[title] {
     cursor: help; }
   .au-body a abbr {
@@ -1075,6 +1067,124 @@ a.au-btn {
   margin-top: 8px;
   margin-top: 0.5rem; }
 
+/*! @gov.au/card v0.3.2 */
+.au-card {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  position: relative;
+  background: #ffffff;
+  overflow: hidden; }
+  .au-card.au-card--shadow {
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+    .au-card.au-card--shadow:hover {
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+  .au-card.au-card--clickable:focus-within {
+    outline: 3px solid #9263DE;
+    outline-offset: 2px; }
+  .au-card.au-card--clickable .au-card--clickable__link:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .au-card.au-card--clickable .au-card--clickable__link:focus {
+    outline: none; }
+  .lt-ie9 .au-card.au-card--clickable .au-card--clickable__link:focus {
+    outline: 3px solid #9263DE;
+    outline-offset: 2px; }
+  .au-card * + .au-card__divider,
+  .au-card * + .au-card__body,
+  .au-card * + .au-card__footer {
+    margin-top: 16px;
+    margin-top: 1rem; }
+  .au-card .au-card__divider {
+    border: lightgray 0.5px solid;
+    margin-bottom: 0; }
+  .au-card .au-card__title {
+    margin: 0 0 16px 0;
+    margin: 0 0 1rem 0; }
+  .au-card .au-card__header {
+    font-weight: bold;
+    margin: 0;
+    border-bottom: solid 1px lightgray;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 16px;
+    padding: 1rem; }
+  .au-card .au-card__footer {
+    padding: 16px;
+    padding: 1rem;
+    margin: 0;
+    border-top: solid 1px lightgray;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
+  .au-card .au-card__inner {
+    padding: 16px;
+    padding: 1rem; }
+  .lt-ie9 .au-card {
+    border: solid 1px gray; }
+  .au-card.au-card--centred, .au-card .au-card--centred {
+    text-align: center; }
+
+a.au-card {
+  color: #313131;
+  cursor: pointer;
+  text-decoration: none; }
+  a.au-card .au-card__title {
+    color: #006FB0;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto; }
+  a.au-card:hover .au-card__title {
+    text-decoration: none;
+    color: #313131; }
+  a.au-card:focus {
+    outline: 3px solid #9263DE;
+    outline-offset: 2px; }
+  a.au-card.au-card--shadow:focus {
+    border-radius: 0; }
+  a.au-card.au-card--shadow:hover {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+
+.au-card-list {
+  list-style: none;
+  padding: 0; }
+  .au-card-list:before, .au-card-list:after {
+    content: " ";
+    display: table; }
+  .au-card-list:after {
+    clear: both; }
+  .au-card-list:before {
+    display: none; }
+  .au-card-list li {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+    margin-top: 1.5rem; }
+  .au-card-list.au-card-list--matchheight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .au-card-list.au-card-list--matchheight li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .au-card-list.au-card-list--matchheight .au-card {
+      display: block;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+
 /*! @gov.au/control-input v3.0.1 */
 /**
  * Return the right SVG shape for fore- and background
@@ -1327,8 +1437,7 @@ a.au-btn {
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto; }
+  text-decoration-skip-ink: auto; }
   .au-cta-link:focus {
     outline: 3px solid #9263DE;
     outline-offset: 2px; }
@@ -1398,8 +1507,7 @@ a.au-btn {
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto; }
+  text-decoration-skip-ink: auto; }
   .au-direction-link:hover {
     text-decoration: none;
     color: #313131; }
@@ -2160,8 +2268,7 @@ a.au-header__brand {
     border: 0; }
   a.au-header__brand:hover .au-header__text {
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto; }
+    text-decoration-skip-ink: auto; }
   .au-header--dark a.au-header__brand {
     color: #FFF; }
     .au-header--dark a.au-header__brand:focus {
@@ -2475,8 +2582,7 @@ ul.list--large--checklist > li .au-body * + strong,
     .au-main-nav a:hover,
     .au-main-nav .au-main-nav__toggle:hover {
       text-decoration: underline;
-      -webkit-text-decoration-skip: ink;
-              text-decoration-skip-ink: auto;
+      text-decoration-skip-ink: auto;
       color: #313131;
       background-color: whitesmoke; }
   .au-main-nav a {
@@ -2998,8 +3104,7 @@ html > body .au-select, x:-moz-any-link, x:default {
     text-decoration: none; }
     .au-side-nav a:hover {
       text-decoration: underline;
-      -webkit-text-decoration-skip: ink;
-              text-decoration-skip-ink: auto;
+      text-decoration-skip-ink: auto;
       background-color: #e0e0e0; }
     .au-side-nav a:focus {
       outline: 3px solid #9263DE;
@@ -3020,8 +3125,7 @@ html > body .au-select, x:-moz-any-link, x:default {
     color: #006FB0;
     font-weight: normal;
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
     background-color: inherit; }
     .au-side-nav .au-accordion__title:hover {
       text-decoration: none; }
@@ -3189,8 +3293,7 @@ html > body .au-select, x:-moz-any-link, x:default {
     color: #ffffff;
     background-color: #006FB0;
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
     z-index: 600; }
   .au-body .au-skip-link__link:hover, .au-skip-link__link:hover {
     text-decoration: none;
@@ -3765,32 +3868,22 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
   .au-card.au-card--fullimg .au-card__inner {
     width: 85%;
     height: 50%;
+    height: 5.5rem;
     min-height: 80px;
     position: absolute;
     border-radius: 0px 6px 0px 0px;
     background: rgba(255, 255, 255, 0.9);
     bottom: 0px; }
   .au-card.au-card--fullimg .au-card__title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
     font-weight: bold; }
     @media (min-width: 768px) {
       .au-card.au-card--fullimg .au-card__title {
-        font-size: 32px;
-        font-size: 2rem;
-        line-height: 1.25; } }
-    @media (min-width: 768px) {
-      .au-card.au-card--fullimg .au-card__title {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: bold; } }
-  @media (min-width: 768px) and (min-width: 768px) {
-    .au-card.au-card--fullimg .au-card__title {
-      font-size: 20px;
-      font-size: 1.25rem;
-      line-height: 1.2; } }
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.2; } }
     .au-card.au-card--fullimg .au-card__title a {
       text-decoration: none;
       color: #000; }
@@ -4616,8 +4709,7 @@ textarea.au-text-input {
     a.health-card .health-card__cta {
       color: #006FB0;
       text-decoration: underline;
-      -webkit-text-decoration-skip: ink;
-              text-decoration-skip: ink; }
+      text-decoration-skip: ink; }
 
 ul.health-card-list {
   padding: 0;
