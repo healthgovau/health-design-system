@@ -269,7 +269,8 @@ var health = health || {};
 
     // Filter toggles.
     $('.health-filter').click(function (e) {
-      $('.health-facet').toggleClass('health-facet--mobile-hidden');
+      $(this).children('.health-facet').toggleClass('health-facet--mobile-hidden');
+
       $(this).toggleClass('health-filter--open');
     });
 
