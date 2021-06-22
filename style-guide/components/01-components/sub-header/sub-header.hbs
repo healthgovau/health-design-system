@@ -2,7 +2,7 @@
 <div class="health-sub-header">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-xs-12 col-md-8">
         {{ render '@breadcrumb' }}
         <div class="health-sub-header__section-title">
           <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
@@ -11,6 +11,9 @@
         <p class="au-introduction">
           {{ subheader.summary }}
         </p>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        {{ render '@toolbar' }}
       </div>
     </div>
   </div>

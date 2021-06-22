@@ -2,7 +2,7 @@
 title: Introduction
 label: Introduction
 ---
-# Health Design System
+# Health Design System v2.0.0
 
 > This is a work-in-progress but we're frequently adding to it.
 

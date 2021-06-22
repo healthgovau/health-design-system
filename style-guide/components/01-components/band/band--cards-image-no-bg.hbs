@@ -1,0 +1,27 @@
+<div class="health-band{{#if modifier}} health-band--{{ modifier }}{{/if}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>{{ title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="health-card-list">
+        <li class="col-sm-4">
+          {{ render '@card' }}
+        </li>
+        <li class="col-sm-4">
+          {{ render '@card' }}
+        </li>
+        <li class="col-sm-4">
+          {{ render '@card' }}
+        </li>
+      </ul>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-xs-12 text--align-right">
+        <a href="#" class="au-cta-link">All news</a>
+      </div>
+    </div>
+  </div>
+</div>

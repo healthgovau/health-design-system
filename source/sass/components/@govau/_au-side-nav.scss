@@ -2,7 +2,10 @@
   .au-side-nav {
 
     // Make our version flush with the sub-header above.
-    @include AU-space('margin-top', -1unit);
+    @include AU-space('margin-top', 1unit);
+    @include AU-media(sm) {
+      @include AU-space('margin-top', 0);
+    }
 
     // Add our colours.
     @extend %bg-neutral;

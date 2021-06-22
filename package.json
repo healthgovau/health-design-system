@@ -45,8 +45,8 @@
     "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.1",
-    "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/fractal": "^1.5.8",
+    "@frctl/mandelbrot": "^1.9.2",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -58,7 +58,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "mandelbrot-healthgovau": "git+ssh://git@github.com/healthgovau/mandelbrot-healthgovau.git#1.0.0",
+    "mandelbrot-healthgovau": "https://github.com/healthgovau/mandelbrot-healthgovau.git#1.0.0",
     "sass-versioning": "^0.4.0"
   },
   "engines": {
