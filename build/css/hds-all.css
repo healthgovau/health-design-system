@@ -1,12 +1,12 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.8 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.5 */
 @charset "UTF-8";
-.au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
+.au-body .health-band.health-band--tertiary-2 {
   background-color: #00205B;
   background: -webkit-gradient(linear, left top, right top, from(#00205B), to(#004181));
   background: -o-linear-gradient(left, #00205B, #004181);
   background: linear-gradient(to right, #00205B, #004181); }
 
-.au-body .health-band.health-band--secondary, .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary, .taskbar .taskbar__item, .taskbar.view ul > .views-row .node,
+.au-body .health-band.health-band--secondary, .taskbar .taskbar__item, .taskbar.view ul > .views-row .node,
 .taskbar--tiled--2 .taskbar__item,
 .taskbar--2 .taskbar__item,
 .taskbar--tiled--3 .taskbar__item,
@@ -27,7 +27,7 @@
   background: -o-linear-gradient(left, #055a61, #007680);
   background: linear-gradient(to right, #055a61, #007680); }
 
-.au-body .health-band.health-band--primary, .health-sub-header.health-sub-header--campaign .health-sub-header__content--tertiary {
+.au-body .health-band.health-band--primary {
   background-color: #004693;
   background: -webkit-gradient(linear, left top, right top, from(#004693), to(#16477d));
   background: -o-linear-gradient(left, #004693, #16477d);
@@ -294,8 +294,7 @@
   display: block;
   color: #006FB0;
   text-decoration: underline;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
   font-weight: bold;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -457,10 +456,8 @@
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #313131;
   background-color: #ffffff;
@@ -524,8 +521,7 @@
   .au-body a {
     color: #006FB0;
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto; }
+    text-decoration-skip-ink: auto; }
     .au-body a:hover {
       color: #313131;
       text-decoration: none; }
@@ -615,20 +611,16 @@
   .au-body del {
     text-decoration: line-through; }
   .au-body ins {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-    -webkit-text-decoration-style: dashed;
-            text-decoration-style: dashed;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto; }
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-skip-ink: auto; }
   .au-body dfn {
     font-style: normal; }
   .au-body abbr,
   .au-body abbr[title] {
     border-bottom: none;
     text-decoration: underline;
-    -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted; }
+    text-decoration: underline dotted; }
   .au-body abbr[title] {
     cursor: help; }
   .au-body a abbr {
@@ -1148,8 +1140,7 @@ a.au-card {
   a.au-card .au-card__title {
     color: #006FB0;
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto; }
+    text-decoration-skip-ink: auto; }
   a.au-card:hover .au-card__title {
     text-decoration: none;
     color: #313131; }
@@ -1446,8 +1437,7 @@ a.au-card {
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto; }
+  text-decoration-skip-ink: auto; }
   .au-cta-link:focus {
     outline: 3px solid #9263DE;
     outline-offset: 2px; }
@@ -1517,8 +1507,7 @@ a.au-card {
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto; }
+  text-decoration-skip-ink: auto; }
   .au-direction-link:hover {
     text-decoration: none;
     color: #313131; }
@@ -2279,8 +2268,7 @@ a.au-header__brand {
     border: 0; }
   a.au-header__brand:hover .au-header__text {
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto; }
+    text-decoration-skip-ink: auto; }
   .au-header--dark a.au-header__brand {
     color: #FFF; }
     .au-header--dark a.au-header__brand:focus {
@@ -2594,8 +2582,7 @@ ul.list--large--checklist > li .au-body * + strong,
     .au-main-nav a:hover,
     .au-main-nav .au-main-nav__toggle:hover {
       text-decoration: underline;
-      -webkit-text-decoration-skip: ink;
-              text-decoration-skip-ink: auto;
+      text-decoration-skip-ink: auto;
       color: #313131;
       background-color: whitesmoke; }
   .au-main-nav a {
@@ -3117,8 +3104,7 @@ html > body .au-select, x:-moz-any-link, x:default {
     text-decoration: none; }
     .au-side-nav a:hover {
       text-decoration: underline;
-      -webkit-text-decoration-skip: ink;
-              text-decoration-skip-ink: auto;
+      text-decoration-skip-ink: auto;
       background-color: #e0e0e0; }
     .au-side-nav a:focus {
       outline: 3px solid #9263DE;
@@ -3139,8 +3125,7 @@ html > body .au-select, x:-moz-any-link, x:default {
     color: #006FB0;
     font-weight: normal;
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
     background-color: inherit; }
     .au-side-nav .au-accordion__title:hover {
       text-decoration: none; }
@@ -3308,8 +3293,7 @@ html > body .au-select, x:-moz-any-link, x:default {
     color: #ffffff;
     background-color: #006FB0;
     text-decoration: underline;
-    -webkit-text-decoration-skip: ink;
-            text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
     z-index: 600; }
   .au-body .au-skip-link__link:hover, .au-skip-link__link:hover {
     text-decoration: none;
@@ -3509,6 +3493,19 @@ textarea.au-text-input {
   height: auto;
   min-height: 6em; }
 
+.visually-hidden,
+.sr-only,
+.element-invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  position: absolute !important; }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -3524,26 +3521,6 @@ body {
 
 .cke_editable {
   padding: 20px; }
-
-.clearfix:before, .au-body dl.health-dl:before, .clearfix:after, .au-body dl.health-dl:after {
-  content: " ";
-  display: table; }
-
-.clearfix:after, .au-body dl.health-dl:after {
-  clear: both; }
-
-.visually-hidden,
-.sr-only,
-.element-invisible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  position: absolute !important; }
 
 /**
  * Health-fontgrid Mixin for setting font-size and line-height that snaps to the grid, and also includes mobile :)
@@ -3840,8 +3817,6 @@ ul.list--large--checklist > li .au-body strong {
   @media print {
     .au-breadcrumbs {
       display: block; } }
-  * + .au-breadcrumbs--flush {
-    margin-top: 0; }
 
 .au-btn--tertiary,
 a.au-btn--tertiary {
@@ -3875,39 +3850,6 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
     background: transparent;
     border-left-width: 10px;
     padding: 1rem 1.5rem; }
-
-/* DTA card overrides */
-.au-card.au-card--fullimg {
-  position: relative;
-  height: 100%;
-  border-bottom: 6px solid #4ebdcc; }
-  .au-card.au-card--fullimg .au-card__inner {
-    width: 85%;
-    height: 50%;
-    height: 5.5rem;
-    min-height: 80px;
-    position: absolute;
-    border-radius: 0px 6px 0px 0px;
-    background: rgba(255, 255, 255, 0.9);
-    bottom: 0px; }
-  .au-card.au-card--fullimg .au-card__title {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-    font-weight: bold; }
-    @media (min-width: 768px) {
-      .au-card.au-card--fullimg .au-card__title {
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 1.2; } }
-    .au-card.au-card--fullimg .au-card__title a {
-      text-decoration: none;
-      color: #000; }
-  .au-card.au-card--fullimg img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
 
 .au-control-input.au-control-input--compact.au-control-input--block {
   margin-top: 8px;
@@ -4200,8 +4142,11 @@ svg {
   height: auto; }
 
 .au-body .au-side-nav {
-  margin-top: -16px;
-  margin-top: -1rem; }
+  margin-top: 16px;
+  margin-top: 1rem; }
+  @media (min-width: 768px) {
+    .au-body .au-side-nav {
+      margin-top: 0; } }
   @media (min-width: 768px) {
     .au-body .au-side-nav {
       background: #ffffff; } }
@@ -4259,6 +4204,7 @@ textarea.au-text-input {
   right: 1rem;
   bottom: -4px;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   z-index: -1;
   padding: 0;
@@ -4297,6 +4243,7 @@ textarea.au-text-input {
       display: block; }
   .health-back-to-top.isVisible {
     opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     filter: alpha(opacity=80);
     z-index: 9999;
     -webkit-transition: all .4s ease-in;
@@ -4431,8 +4378,8 @@ textarea.au-text-input {
   .health-card--shadow {
     border-radius: 4px;
     overflow: hidden;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     background: #ffffff; }
     .lt-ie9 .health-card--shadow {
       border: solid 1px gray; }
@@ -4635,8 +4582,6 @@ textarea.au-text-input {
     -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     border-top: 6px solid #0077C8; }
-    .health-card--top-highlight:hover, .health-card--top-highlight:focus {
-      background-color: #f1f1f2; }
     .health-card--top-highlight.health-card--colour2 {
       border-top-color: #910048; }
     .health-card--top-highlight.health-card--colour3 {
@@ -4719,35 +4664,36 @@ textarea.au-text-input {
     a.health-card.health-card--shadow:focus {
       border-radius: 0; }
     a.health-card.health-card--shadow:hover {
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+      -webkit-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2); }
     a.health-card .health-card__link,
     a.health-card .health-card__cta {
       color: #006FB0;
       text-decoration: underline;
-      -webkit-text-decoration-skip: ink;
-              text-decoration-skip: ink; }
+      text-decoration-skip: ink; }
 
 ul.health-card-list {
   padding: 0;
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 0; }
+  margin-top: 0; }
   ul.health-card-list li {
     list-style: none;
-    margin-top: 16px;
-    margin-top: 1rem; }
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
     @media (min-width: 768px) {
       ul.health-card-list li {
-        margin-top: 24px;
-        margin-top: 1.5rem; } }
+        margin-bottom: 24px;
+        margin-bottom: 1.5rem; } }
   ul.health-card-list--flush {
-    margin-top: -16px;
-    margin-top: -1rem; }
+    margin-bottom: -16px;
+    margin-bottom: -1rem; }
     @media (min-width: 768px) {
       ul.health-card-list--flush {
-        margin-top: -24px;
-        margin-top: -1.5rem; } }
+        margin-bottom: -24px;
+        margin-bottom: -1.5rem; } }
+
+.au-body .health-card__text {
+  margin-top: 16px;
+  margin-top: 1rem; }
 
 .health-compare {
   border: 1px solid #0077C8;
@@ -4797,10 +4743,16 @@ ul.health-card-list {
         padding-top: 1rem;
         float: left;
         width: 75%; } }
+  .au-body dl.health-dl:before, .au-body dl.health-dl:after {
+    content: " ";
+    display: table; }
+  .au-body dl.health-dl:after {
+    clear: both; }
 
 .health-facet {
   visibility: visible;
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   height: auto;
   -webkit-transition: opacity 1s;
@@ -4819,6 +4771,7 @@ ul.health-card-list {
     padding: 0;
     visibility: hidden;
     opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     height: 0; }
   .health-facet__more {
@@ -5100,27 +5053,27 @@ a .image-wrapper.image-loading {
   * + .health-listing {
     margin: 32px 0 0 0;
     margin: 2rem 0 0 0; }
-  * + .row .health-listing--embedded > li:first-of-type, * + .health-listing--embedded > li:first-of-type {
+  * + .row .health-listing--embedded li:first-of-type, * + .health-listing--embedded li:first-of-type {
     border-top: 1px solid #ccc;
     padding-top: 32px;
     padding-top: 2rem;
     margin-top: 32px;
     margin-top: 2rem; }
-  * + .row .health-listing--embedded > li:last-of-type, * + .health-listing--embedded > li:last-of-type {
+  * + .row .health-listing--embedded li:last-of-type, * + .health-listing--embedded li:last-of-type {
     border-bottom: 1px solid #ccc;
     padding-bottom: 32px;
     padding-bottom: 2rem; }
-  .health-listing > li {
+  .health-listing li {
     list-style: none;
     max-width: inherit;
     clear: both; }
-  .health-listing > li + li {
+  .health-listing li + li {
     margin-top: 32px;
     margin-top: 2rem;
     border-top: 1px solid #ccc;
     padding-top: 32px;
     padding-top: 2rem; }
-  .health-listing--compact > li + li {
+  .health-listing--compact li + li {
     margin-top: 16px;
     margin-top: 1rem;
     padding-top: 16px;
@@ -5500,11 +5453,6 @@ ul.list--large--checklist > li {
   color: #006621;
   font-size: 0.9em;
   word-break: break-all; }
-  .au-body .health-search-result__link-path a {
-    color: #006621; }
-
-.au-body .health-search-result ol.health-search-result__link-path li:after {
-  margin: 0; }
 
 .au-body .health-search-result__summary {
   margin-top: 8px;
@@ -5656,30 +5604,6 @@ form[class*='col-'].health-search__form .health-search__form__submit {
     @media (min-width: 768px) {
       .health-sub-header__supp {
         padding-top: 0; } }
-  .health-sub-header.health-sub-header--campaign {
-    padding: 35% 0 0 0;
-    background-size: contain;
-    background-repeat: no-repeat; }
-    @media (min-width: 768px) {
-      .health-sub-header.health-sub-header--campaign {
-        padding-top: 0;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: none;
-        min-height: 500px; } }
-    .health-sub-header.health-sub-header--campaign .health-sub-header__content {
-      padding: 24px 12px;
-      padding: 1.5rem 12px; }
-      @media (min-width: 768px) {
-        .health-sub-header.health-sub-header--campaign .health-sub-header__content {
-          padding: 48px;
-          padding: 3rem; } }
-      .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary {
-        padding: 48px;
-        padding: 3rem; }
-      .health-sub-header.health-sub-header--campaign .health-sub-header__content--tertiary {
-        padding: 48px;
-        padding: 3rem; }
 
 .health-sub-nav {
   display: none; }
@@ -6515,6 +6439,7 @@ table {
     background-color: #000;
     color: #fff;
     opacity: 0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
     filter: alpha(opacity=75);
     vertical-align: top;
     display: inline-block;
@@ -6539,43 +6464,6 @@ table {
   * + .health-video--inline {
     margin-top: 24px;
     margin-top: 1.5rem; }
-
-.sub-brand.sub-brand--covid-vaccine .health-sub-header h1, .sub-brand.sub-brand--covid-vaccine .health-sub-header p, .sub-brand.sub-brand--covid-vaccine .health-sub-header .au-introduction {
-  color: #000; }
-
-.sub-brand.sub-brand--covid-vaccine .health-sub-header a {
-  color: #000; }
-
-.sub-brand.sub-brand--covid-vaccine .health-sub-header .health-toolbar .au-btn.au-btn--tertiary {
-  color: #000; }
-  .sub-brand.sub-brand--covid-vaccine .health-sub-header .health-toolbar .au-btn.au-btn--tertiary:hover:not(:disabled) {
-    color: #000; }
-
-.sub-brand.sub-brand--covid-vaccine .au-main-nav {
-  border-bottom-color: #28808c; }
-
-.sub-brand.sub-brand--covid-vaccine .health-sub-header {
-  background: #4EBDCC; }
-  .sub-brand.sub-brand--covid-vaccine .health-sub-header .image {
-    text-align: center; }
-    .sub-brand.sub-brand--covid-vaccine .health-sub-header .image img {
-      width: 80%;
-      margin: 0.5rem auto; }
-  @media (min-width: 768px) {
-    .sub-brand.sub-brand--covid-vaccine .health-sub-header {
-      background-image: -o-linear-gradient(350deg, #4EBDCC 58%, #84D1D8 58%);
-      background-image: linear-gradient(100deg, #4EBDCC 58%, #84D1D8 58%); }
-      .sub-brand.sub-brand--covid-vaccine .health-sub-header .image img {
-        width: 100%;
-        margin: 2.5rem auto; } }
-  @media (min-width: 992px) {
-    .sub-brand.sub-brand--covid-vaccine .health-sub-header {
-      background-image: -o-linear-gradient(345deg, #4EBDCC 59%, #84D1D8 59%);
-      background-image: linear-gradient(105deg, #4EBDCC 59%, #84D1D8 59%); } }
-  @media (min-width: 1200px) {
-    .sub-brand.sub-brand--covid-vaccine .health-sub-header {
-      background-image: -o-linear-gradient(345deg, #4EBDCC 56%, #84D1D8 56%);
-      background-image: linear-gradient(105deg, #4EBDCC 56%, #84D1D8 56%); } }
 
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com

@@ -1,5 +1,5 @@
-// Global functions
-//
+// When called directly in SASS (e.g. width: width: width-decimal(1)), the function will
+// render the returned value
 
 @function width-decimal( $column-count) {
   $width: (1 / $column-count);
