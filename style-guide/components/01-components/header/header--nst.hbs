@@ -1,0 +1,24 @@
+<header class="au-header au-header--simple au-header--dark" role="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <a href="/" title="Home" rel="home" class="au-header__logo">
+          <img src="{{path '/images/nst-crest.png'}}"
+               alt="National Sports Tribunal"
+               class="au-header__logo-image au-responsive-media-img"
+               width="600" height="146">
+        </a>
+        <div class="au-sronly">
+          <p>National Sports Tribunal</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        {{ render '@sub-nav' }}
+        {{ render '@search' }}
+      </div>
+    </div>
+  </div>
+</header>
+
+
+{{ render '@main-nav--nst' }}
