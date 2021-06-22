@@ -1,0 +1,29 @@
+{{ render '@skip' }}
+
+<div class="au-body">
+
+  {{ render '@header--nst' }}
+  {{> @sub-header }}
+
+  <div class="container not-full-width">
+    <div class="row">
+
+      <div class="col-sm-8">
+        {{ render '@listing' }}
+        {{ render '@pager' }}
+      </div>
+
+      <div class="col-sm-4 au-side-nav--right">
+        {{ render '@side-nav' }}
+      </div>
+
+    </div>
+  </div>
+
+  {{ render '@something-wrong' }}
+
+</div>
+
+{{ render '@footer' }}
+
+{{> @back-to-top }}

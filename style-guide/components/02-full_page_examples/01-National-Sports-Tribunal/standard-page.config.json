@@ -1,0 +1,18 @@
+{
+  "title": "Content page",
+  "preview": "@preview-page",
+  "context": {
+    "subheader": {
+      "title": "Page title",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, iusto similique dolore eaque obcaecati sunt quam sapiente quaerat veritatis consequatur aliquam ea quidem dolorem corrupti, voluptates minima impedit magnam nam!"
+    },
+    "backToTop": {
+      "isVisible": true
+    },
+    "field": {
+      "label": "Last updated",
+      "item": "25 February 2020",
+      "modifier": "health-field--inline"
+    }
+  }
+}

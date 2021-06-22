@@ -38,7 +38,7 @@
       }
     }
 
-    @extend .clearfix;
+    @include AU-clearfix;
 
   }
 }
