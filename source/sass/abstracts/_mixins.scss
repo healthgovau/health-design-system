@@ -1,9 +1,6 @@
-// When called via @include name(), the mixin will render CSS selectors
-
 @mixin opacity( $opacity ) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity-ie+")";
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
@@ -11,35 +8,4 @@
   -webkit-transition: $transition;
   -o-transition: $transition;
   transition: $transition;
-}
-
-@mixin rgba-background( $color, $opacity: 1 ) {
-  background-color: rgba($color, $opacity); 
-}
-
-// TODO
-// flexbox layout generation with grid failover
-// separate card from layout so that the dom might be class="health-card health-flex-thirds col-xs-4"
-
-
-// From NSW Design System
-@mixin pseudo-clickable-block {
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    // z-index: map-get($z-index, low);
-  }
-}
-
-// generates modifer classes in the bem syntax
-@mixin helper-classes($attribute, $map) {
-  @each $modifier, $value in $map {
-    &--#{$modifier} {
-      #{$attribute}: get-mapped-value($modifier, $map) !important;
-    }
-  }
 }

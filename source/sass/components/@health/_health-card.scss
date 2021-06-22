@@ -1,4 +1,3 @@
-
 .health-card {
   @include AU-space( padding, 1unit );
   @include AU-media( md ) {
@@ -36,7 +35,7 @@
       }
     }
   }
-  
+
   &__text {
     @include AU-space(margin-top, 1unit);
   }
@@ -84,7 +83,7 @@
   &--shadow {
     border-radius: 4px;
     overflow:hidden;
-    box-shadow: $card-shadow;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     background: $AU-color-background;
     .lt-ie9 & {
       border: solid 1px $AU-colordark-foreground-border;
@@ -315,6 +314,11 @@
   // Use colour as a keyline on top of the card.
   &--top-highlight {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+      background-color: $colour-lighter;
+    }
+
     border-top: 6px solid $colour-complementary-skyblue;
 
     &.health-card--colour2  {
@@ -344,9 +348,9 @@
       @include AU-space( margin, 0 0.25unit 0 0.2unit );
       transition: margin 0.2s ease;
       background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-        '<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
-        '<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
-      '</svg>');
+				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
+				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
+			'</svg>');
 
       .ie8 &,
       .lt-ie8 & {
@@ -372,9 +376,9 @@
         @include AU-space( margin-left, 0.4unit );
         @include AU-space( right, 1.5unit );
         background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-        '<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
-        '<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
-      '</svg>');
+				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
+				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
+			'</svg>');
       }
     }
   }
@@ -442,7 +446,7 @@
       }
 
       &:hover {
-        box-shadow: $card-shadow-hover;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
       }
     }
 
@@ -458,28 +462,21 @@
 // Card listing.
 ul.health-card-list {
   padding: 0;
-  @include AU-space( margin-top, 0 );
-
+  @include AU-space( margin-top, 0unit );
+  @include AU-space( margin-bottom, 0 );
   li {
     list-style: none;
-    @include AU-space( margin-bottom, 1unit );
+    @include AU-space( margin-top, 1unit );
     @include AU-media(sm) {
-      @include AU-space( margin-bottom, 1.5unit );
+      @include AU-space( margin-top, 1.5unit );
     }
   }
 
   &--flush {
-    @include AU-space( margin-bottom, -1unit );
+    @include AU-space( margin-top, -1unit );
     @include AU-media(sm) {
-      @include AU-space( margin-bottom, -1.5unit );
+      @include AU-space( margin-top, -1.5unit );
     }
   }
 
-}
-
-// TODO fix nesting/override
-.au-body {
-  .health-card__text {
-    @include AU-space(margin-top, 1unit);
-  }
 }
