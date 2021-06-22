@@ -175,16 +175,16 @@ var health = health || {};
         "ui-autocomplete": "au-body au-link-list"
       },
       // When the user selects a value, submit the form.
-      select: function( event, ui ) {
+      select: function (event, ui) {
         $(this).val(ui.item.value);
         $(event.target).parents('form').submit();
       },
       // Show loading spinner.
-      search: function( event, ui ) {
+      search: function (event, ui) {
         $(event.target).parents('form').find('.health-loading').toggleClass('health-loading--active');
       },
       // Hide loading spinner.
-      response: function( event, ui ) {
+      response: function (event, ui) {
         $(event.target).parents('form').find('.health-loading').toggleClass('health-loading--active');
       }
     });
@@ -219,8 +219,8 @@ var health = health || {};
    * @param selector
    * @param limit
    */
-  health.facetShowMore = function(selector, limit) {
-    $(selector).once('healthFacetShowMore').each(function() {
+  health.facetShowMore = function (selector, limit) {
+    $(selector).once('healthFacetShowMore').each(function () {
       var
         limit_css = limit - 1,
         facet = $(this);
@@ -229,15 +229,14 @@ var health = health || {};
       facet.find('.au-control-input:gt(' + limit_css + ')').hide();
 
       // Add a 'Show more' button if the facet has more than the limit.
-      facet.filter(function() {
+      facet.filter(function () {
         return facet.find('.au-control-input').length > limit;
-      }).each(function() {
+      }).each(function () {
         $('<button aria-controls="' + facet.attr('id') + '" class="health-facet__more au-btn au-btn--tertiary">').text('Show more').click(function () {
           if (facet.find('.au-control-input:hidden').length > 0) {
             facet.find('.au-control-input:gt(' + limit_css + ')').show();
             $(this).addClass('open').text('Show less');
-          }
-          else {
+          } else {
             facet.find('.au-control-input:gt(' + limit_css + ')').hide();
             $(this).removeClass('open').text('Show more');
           }
@@ -251,7 +250,7 @@ var health = health || {};
 
     var resizeTimer; // Set resizeTimer to empty so it resets on page load
     // On resize, run the function and reset the timeout
-    $(window).resize(function() {
+    $(window).resize(function () {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(healthSearchResize, 250);
     });
@@ -262,16 +261,16 @@ var health = health || {};
     $('.health-sub-nav ul.au-link-list li').clone().insertAfter('.au-main-nav ul li:last-of-type').addClass('au-main-nav--mobile-only');
 
     // Search button handler.
-    $('.au-main-nav__toggle--search').click(function(e) {
+    $('.au-main-nav__toggle--search').click(function (e) {
       $('.health-search--global').toggle();
       $(this).find('span.svg-inline--fa').toggle();
     });
 
     // Filter toggles.
     $('.health-filter').click(function (e) {
-      $(this).children('.health-facet').toggleClass('health-facet--mobile-hidden');
-
-      $(this).toggleClass('health-filter--open');
+      let healthfilter = $(this);
+      healthfilter.children('.health-facet').toggleClass('health-facet--mobile-hidden');
+      healthfilter.toggleClass('health-filter--open');
     });
 
     // Add correct grid class to second refine search in listings.
