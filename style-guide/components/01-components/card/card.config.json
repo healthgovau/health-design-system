@@ -2,11 +2,11 @@
   "title": "Card",
   "default": "Image",
   "context": {
-    "title": "Dinosaurs to be crowned the earths greatest extinct animal",
+    "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
     "date": "20 July 2019",
     "icon": "phone",
     "colour": "colour1",
-    "content": "Protect yourself and your baby by getting the right vaccines before and during your pregnancy."
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   },
   "variants": [
     {
@@ -17,10 +17,10 @@
       }
     },
     {
-      "name": "Simple",
+      "name": "Full image",
       "context": {
-        "title": "Title with a few words",
-        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis repellendus ipsum quisquam, omnis fugit sed dolore eos numquam rem temporibus nihil quibusdam possimus earum commodi aliquid perferendis itaque pariatur incidunt?"
+        "title": "DTA Design System card with AusGov styling",
+        "type": "Publication"
       }
     },
     {

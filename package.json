@@ -2,7 +2,7 @@
   "name": "@health.gov.au/health-design-system",
   "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
   "description": "Design system for health.gov.au and related products.",
-  "version": "1.4.0-alpha.5",
+  "version": "1.4.0-alpha.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/healthgovau/health-design-system.git"
@@ -21,6 +21,7 @@
     "@gov.au/breadcrumbs": "3.0.5",
     "@gov.au/buttons": "3.0.7",
     "@gov.au/callout": "3.0.2",
+    "@gov.au/card": "^0.3.2",
     "@gov.au/control-input": "3.0.1",
     "@gov.au/core": "3.4.2",
     "@gov.au/cta-link": "2.2.0",
@@ -44,8 +45,8 @@
     "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.1",
-    "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/fractal": "^1.5.8",
+    "@frctl/mandelbrot": "^1.9.2",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -57,7 +58,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "mandelbrot-healthgovau": "git+ssh://git@github.com/healthgovau/mandelbrot-healthgovau.git#1.0.0",
+    "mandelbrot-healthgovau": "https://github.com/healthgovau/mandelbrot-healthgovau.git#1.0.0",
     "sass-versioning": "^0.4.0"
   },
   "engines": {
