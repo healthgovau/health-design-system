@@ -1,12 +1,12 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.8 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.9 */
 @charset "UTF-8";
-.au-body .health-band.health-band--tertiary-2 {
+.au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
   background: -webkit-gradient(linear, left top, right top, from(#00205B), to(#004181));
   background: -o-linear-gradient(left, #00205B, #004181);
   background: linear-gradient(to right, #00205B, #004181); }
 
-.au-body .health-band.health-band--secondary, .taskbar .taskbar__item, .taskbar.view ul > .views-row .node,
+.au-body .health-band.health-band--secondary, .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary, .taskbar .taskbar__item, .taskbar.view ul > .views-row .node,
 .taskbar--tiled--2 .taskbar__item,
 .taskbar--2 .taskbar__item,
 .taskbar--tiled--3 .taskbar__item,
@@ -27,7 +27,7 @@
   background: -o-linear-gradient(left, #055a61, #007680);
   background: linear-gradient(to right, #055a61, #007680); }
 
-.au-body .health-band.health-band--primary {
+.au-body .health-band.health-band--primary, .health-sub-header.health-sub-header--campaign .health-sub-header__content--tertiary {
   background-color: #004693;
   background: -webkit-gradient(linear, left top, right top, from(#004693), to(#16477d));
   background: -o-linear-gradient(left, #004693, #16477d);
@@ -294,7 +294,8 @@
   display: block;
   color: #006FB0;
   text-decoration: underline;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   font-weight: bold;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -456,8 +457,10 @@
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  -ms-text-size-adjust: 100%;
-      text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #313131;
   background-color: #ffffff;
@@ -521,7 +524,8 @@
   .au-body a {
     color: #006FB0;
     text-decoration: underline;
-    text-decoration-skip-ink: auto; }
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto; }
     .au-body a:hover {
       color: #313131;
       text-decoration: none; }
@@ -611,16 +615,20 @@
   .au-body del {
     text-decoration: line-through; }
   .au-body ins {
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-decoration-skip-ink: auto; }
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    -webkit-text-decoration-style: dashed;
+            text-decoration-style: dashed;
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto; }
   .au-body dfn {
     font-style: normal; }
   .au-body abbr,
   .au-body abbr[title] {
     border-bottom: none;
     text-decoration: underline;
-    text-decoration: underline dotted; }
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted; }
   .au-body abbr[title] {
     cursor: help; }
   .au-body a abbr {
@@ -1140,12 +1148,8 @@ a.au-card {
   a.au-card .au-card__title {
     color: #006FB0;
     text-decoration: underline;
-<<<<<<< HEAD
     -webkit-text-decoration-skip: ink;
             text-decoration-skip-ink: auto; }
-=======
-    text-decoration-skip-ink: auto; }
->>>>>>> 53aa8a1... Changed variable name to indicate it is a jQuery object
   a.au-card:hover .au-card__title {
     text-decoration: none;
     color: #313131; }
@@ -1442,7 +1446,8 @@ a.au-card {
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-skip-ink: auto; }
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; }
   .au-cta-link:focus {
     outline: 3px solid #9263DE;
     outline-offset: 2px; }
@@ -1512,7 +1517,8 @@ a.au-card {
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-skip-ink: auto; }
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; }
   .au-direction-link:hover {
     text-decoration: none;
     color: #313131; }
@@ -2273,7 +2279,8 @@ a.au-header__brand {
     border: 0; }
   a.au-header__brand:hover .au-header__text {
     text-decoration: underline;
-    text-decoration-skip-ink: auto; }
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto; }
   .au-header--dark a.au-header__brand {
     color: #FFF; }
     .au-header--dark a.au-header__brand:focus {
@@ -2587,7 +2594,8 @@ ul.list--large--checklist > li .au-body * + strong,
     .au-main-nav a:hover,
     .au-main-nav .au-main-nav__toggle:hover {
       text-decoration: underline;
-      text-decoration-skip-ink: auto;
+      -webkit-text-decoration-skip: ink;
+              text-decoration-skip-ink: auto;
       color: #313131;
       background-color: whitesmoke; }
   .au-main-nav a {
@@ -3109,7 +3117,8 @@ html > body .au-select, x:-moz-any-link, x:default {
     text-decoration: none; }
     .au-side-nav a:hover {
       text-decoration: underline;
-      text-decoration-skip-ink: auto;
+      -webkit-text-decoration-skip: ink;
+              text-decoration-skip-ink: auto;
       background-color: #e0e0e0; }
     .au-side-nav a:focus {
       outline: 3px solid #9263DE;
@@ -3130,7 +3139,8 @@ html > body .au-select, x:-moz-any-link, x:default {
     color: #006FB0;
     font-weight: normal;
     text-decoration: underline;
-    text-decoration-skip-ink: auto;
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto;
     background-color: inherit; }
     .au-side-nav .au-accordion__title:hover {
       text-decoration: none; }
@@ -3298,7 +3308,8 @@ html > body .au-select, x:-moz-any-link, x:default {
     color: #ffffff;
     background-color: #006FB0;
     text-decoration: underline;
-    text-decoration-skip-ink: auto;
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto;
     z-index: 600; }
   .au-body .au-skip-link__link:hover, .au-skip-link__link:hover {
     text-decoration: none;
@@ -4709,7 +4720,8 @@ textarea.au-text-input {
     a.health-card .health-card__cta {
       color: #006FB0;
       text-decoration: underline;
-      text-decoration-skip: ink; }
+      -webkit-text-decoration-skip: ink;
+              text-decoration-skip: ink; }
 
 ul.health-card-list {
   padding: 0;
@@ -4937,6 +4949,70 @@ figure {
 .health-footnotes__link {
   border-bottom: 1px dotted #CCC;
   cursor: help; }
+
+.health-hero {
+  background: #ececec;
+  position: relative; }
+  @media (min-width: 768px) {
+    .health-hero {
+      overflow: hidden; } }
+  .health-hero__image-container {
+    max-height: 200px;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      .health-hero__image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-height: none; } }
+  .health-hero__image {
+    height: auto;
+    display: block;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .health-hero__image {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        border-bottom: 0; } }
+  .health-hero__content {
+    background: #313131;
+    position: relative;
+    padding: 32px;
+    padding: 2rem;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .health-hero__content {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 48px;
+        padding: 3rem;
+        width: 60%; } }
+    @media (min-width: 1200px) {
+      .health-hero__content {
+        padding: 64px;
+        padding: 4rem;
+        min-height: 500px;
+        width: 50%; } }
+  .health-hero__title {
+    color: white; }
+  .health-hero__summary {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .health-hero__summary {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.5; } }
+  .health-hero.health-hero--dark {
+    background: #313131; }
+    .health-hero.health-hero--dark .health-hero__content {
+      color: white; }
 
 .au-body .health-image-text {
   margin-top: 24px;
@@ -5646,6 +5722,30 @@ form[class*='col-'].health-search__form .health-search__form__submit {
     @media (min-width: 768px) {
       .health-sub-header__supp {
         padding-top: 0; } }
+  .health-sub-header.health-sub-header--campaign {
+    padding: 35% 0 0 0;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media (min-width: 768px) {
+      .health-sub-header.health-sub-header--campaign {
+        padding-top: 0;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: none;
+        min-height: 500px; } }
+    .health-sub-header.health-sub-header--campaign .health-sub-header__content {
+      padding: 24px 12px;
+      padding: 1.5rem 12px; }
+      @media (min-width: 768px) {
+        .health-sub-header.health-sub-header--campaign .health-sub-header__content {
+          padding: 48px;
+          padding: 3rem; } }
+      .health-sub-header.health-sub-header--campaign .health-sub-header__content--secondary {
+        padding: 48px;
+        padding: 3rem; }
+      .health-sub-header.health-sub-header--campaign .health-sub-header__content--tertiary {
+        padding: 48px;
+        padding: 3rem; }
 
 .health-sub-nav {
   display: none; }
@@ -6507,8 +6607,6 @@ table {
     margin-top: 24px;
     margin-top: 1.5rem; }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .sub-brand.sub-brand--covid-vaccine .health-sub-header h1, .sub-brand.sub-brand--covid-vaccine .health-sub-header p, .sub-brand.sub-brand--covid-vaccine .health-sub-header .au-introduction {
   color: #000; }
 
@@ -6545,149 +6643,7 @@ table {
     .sub-brand.sub-brand--covid-vaccine .health-sub-header {
       background-image: -o-linear-gradient(345deg, #4EBDCC 56%, #84D1D8 56%);
       background-image: linear-gradient(105deg, #4EBDCC 56%, #84D1D8 56%); } }
-=======
-.au-main-nav.au-main-nav--dark {
-  border-bottom-color: #000;
-  background: #333333; }
-  .au-main-nav.au-main-nav--dark .active a {
-    border-color: #000;
-    background: #000; }
-  .au-main-nav.au-main-nav--dark a {
-    border-color: #000; }
-    .au-main-nav.au-main-nav--dark a:hover, .au-main-nav.au-main-nav--dark a:focus {
-      background: #000; }
 
-.au-main-nav .au-link-list > li.active a, .au-main-nav .au-link-list > li.active-trail a {
-  border-bottom-color: #fff; }
-  .au-main-nav .au-link-list > li.active a:hover, .au-main-nav .au-link-list > li.active a:focus, .au-main-nav .au-link-list > li.active-trail a:hover, .au-main-nav .au-link-list > li.active-trail a:focus {
-    border-bottom-color: #fff; }
-
-.au-header.au-header {
-  border-top: 0; }
-  @media (min-width: 992px) {
-    .au-header.au-header .au-header__logo {
-      max-width: 400px; } }
-  .au-header.au-header--dark {
-    background: #333333; }
-    .au-header.au-header--dark a {
-      color: #FFF; }
-      .au-header.au-header--dark a:hover {
-        color: #FFF;
-        text-decoration: none; }
-
-.health-sub-header {
-  padding: 12px 0;
-  background: #f1f1f2; }
-  @media (min-width: 768px) {
-    .health-sub-header {
-      padding: 32px 0 48px 0;
-      padding: 2rem 0 3rem 0; } }
-  .health-sub-header h1 {
-    margin-top: 0; }
-  .health-sub-header .au-introduction {
-    margin-top: 8px;
-    margin-top: 0.5rem; }
-    @media (min-width: 768px) {
-      .health-sub-header .au-introduction {
-        margin-top: 16px;
-        margin-top: 1rem; } }
-  .health-sub-header__section-title {
-    margin-bottom: 10px;
-    margin-bottom: 0.65rem; }
-    @media (min-width: 768px) {
-      .health-sub-header__section-title {
-        display: none; } }
-    @media print {
-      .health-sub-header__section-title {
-        display: none; } }
-  .health-sub-header__supp {
-    padding-top: 24px;
-    padding-top: 1.5rem; }
-    @media print {
-      .health-sub-header__supp {
-        display: none; } }
-    @media (min-width: 768px) {
-      .health-sub-header__supp--center {
-        position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%); } }
-    @media (min-width: 768px) {
-      .health-sub-header__supp {
-        padding-top: 0; } }
-
-.au-inpage-nav-links {
-  border-color: #BA8A58; }
-
-.health-search__form__submit {
-  background-color: #BA8A58;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='-5 -5 32 32' fill='%23333333' xmlns='http://www.w3.org/2000/svg'%3E   %3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); }
-  .health-search__form__submit:hover:not(:disabled), .health-search__form__submit:focus:not(:disabled) {
-    background-color: #000000; }
-
-.health-hero {
-  background: none;
-  position: relative; }
-  @media (min-width: 768px) {
-    .health-hero {
-      height: 380px;
-      overflow: hidden; } }
-  @media (min-width: 768px) {
-    .health-hero__image-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0; } }
-  .health-hero__image {
-    height: auto;
-    display: block; }
-    @media (min-width: 768px) {
-<<<<<<< HEAD
-      .health-hero .health-sub-header__content {
-        padding: 48px;
-        padding: 3rem; } }
-    .health-hero .health-sub-header__content--secondary {
-      padding: 48px;
-      padding: 3rem; }
-    .health-hero .health-sub-header__content--tertiary {
-      padding: 48px;
-      padding: 3rem; }
->>>>>>> 459783a... NST dev
-=======
-      .health-hero__image {
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-        border-bottom: 0; } }
-  .health-hero__content {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: relative;
-    padding: 48px;
-    padding: 3rem;
-    width: 50%; }
-  .health-hero__summary {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.6;
-    font-weight: normal; }
-    @media (min-width: 768px) {
-      .health-hero__summary {
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 1.5; } }
-  .health-hero.health-hero--dark .health-hero__content {
-    color: white; }
-
-.au-footer.au-body.au-body--dark.au-footer--dark {
-  background: #333333; }
->>>>>>> 4dae587... Development of hero
-
-=======
->>>>>>> 53aa8a1... Changed variable name to indicate it is a jQuery object
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
