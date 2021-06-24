@@ -1,0 +1,35 @@
+
+
+.health-hero {
+    padding: 35% 0 0 0; // Based on 1920x700 image
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include AU-media(sm){
+        padding-top: 0;
+        // Hero image
+        background-size: cover;
+        background-position: center center;
+        background-repeat: none;
+        min-height: 500px; // Based on 1920x700 image to prevent narrow image
+    }
+
+    // Hero content
+    .health-sub-header__content {
+        @include AU-space(padding, 1.5unit 12px);
+        @include AU-media(sm){
+        @include AU-space(padding, 3unit);
+        }
+        @extend %bg-primary-blue;
+
+        &--secondary {
+        @include AU-space(padding, 3unit);
+        @extend %bg-primary-teal;
+        }
+
+        &--tertiary {
+        @include AU-space(padding, 3unit);
+        @extend %bg-complementary-blue;
+        }
+    }
+}
