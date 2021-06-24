@@ -2,7 +2,7 @@
 title: Introduction
 label: Introduction
 ---
-# Health Design System v2.0.0
+# Health Design System
 
 > This is a work-in-progress but we're frequently adding to it.
 
@@ -23,7 +23,7 @@ The guiding principles behind the Health Design System are:
   4. Prevent duplication, fragmentation and *reinvention of the digital wheel*
   5. Be platform agnostic
   6. Eat our own dogfood - build the system and use the system!
-   
+
 The [Department of Health website](https://www.health.gov.au/) uses this system.
 
 
