@@ -1,0 +1,11 @@
+// SASS colour functions
+// Increase brightness (mixes white)
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+  }
+  // Decrease brightness (mixes black)
+  @function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+  }
+  // desaturate($color, $percentage) - to decrease saturation (good for backgrounds) - built-in
+  // Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
