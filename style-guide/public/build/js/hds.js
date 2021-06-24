@@ -268,9 +268,9 @@ var health = health || {};
 
     // Filter toggles.
     $('.health-filter').click(function (e) {
-      let healthfilter = $(this);
-      healthfilter.children('.health-facet').toggleClass('health-facet--mobile-hidden');
-      healthfilter.toggleClass('health-filter--open');
+      let $healthfilter = $(this);
+      $healthfilter.children('.health-facet').toggleClass('health-facet--mobile-hidden');
+      $healthfilter.toggleClass('health-filter--open');
     });
 
     // Add correct grid class to second refine search in listings.
