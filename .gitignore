@@ -1,5 +1,25 @@
 .sass-cache/
 *.css.map
 .idea
-node_modules/
+
 source/sass/vendors/govau-ds.scss
+
+# Dependencies.
+/node_modules
+/vendor
+
+# Backstop.js.
+backstop_data/*
+!backstop_data/engine_scripts
+!backstop_data/bitmaps_reference
+
+# Git merge conflict files.
+*.orig
+*.rej
+
+# OS related files.
+.DS_Store
+.idea/
+
+# IDE related files.
+/.vscode
