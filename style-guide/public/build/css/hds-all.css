@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.8 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.9 */
 @charset "UTF-8";
 .au-body .health-band.health-band--tertiary-2, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #00205B;
@@ -3509,6 +3509,19 @@ textarea.au-text-input {
   height: auto;
   min-height: 6em; }
 
+.visually-hidden,
+.sr-only,
+.element-invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  position: absolute !important; }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -3524,26 +3537,6 @@ body {
 
 .cke_editable {
   padding: 20px; }
-
-.clearfix:before, .au-body dl.health-dl:before, .clearfix:after, .au-body dl.health-dl:after {
-  content: " ";
-  display: table; }
-
-.clearfix:after, .au-body dl.health-dl:after {
-  clear: both; }
-
-.visually-hidden,
-.sr-only,
-.element-invisible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  position: absolute !important; }
 
 /**
  * Health-fontgrid Mixin for setting font-size and line-height that snaps to the grid, and also includes mobile :)
@@ -4259,6 +4252,7 @@ textarea.au-text-input {
   right: 1rem;
   bottom: -4px;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   z-index: -1;
   padding: 0;
@@ -4297,6 +4291,7 @@ textarea.au-text-input {
       display: block; }
   .health-back-to-top.isVisible {
     opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     filter: alpha(opacity=80);
     z-index: 9999;
     -webkit-transition: all .4s ease-in;
@@ -4797,10 +4792,16 @@ ul.health-card-list {
         padding-top: 1rem;
         float: left;
         width: 75%; } }
+  .au-body dl.health-dl:before, .au-body dl.health-dl:after {
+    content: " ";
+    display: table; }
+  .au-body dl.health-dl:after {
+    clear: both; }
 
 .health-facet {
   visibility: visible;
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   height: auto;
   -webkit-transition: opacity 1s;
@@ -4819,6 +4820,7 @@ ul.health-card-list {
     padding: 0;
     visibility: hidden;
     opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     height: 0; }
   .health-facet__more {
@@ -4947,6 +4949,70 @@ figure {
 .health-footnotes__link {
   border-bottom: 1px dotted #CCC;
   cursor: help; }
+
+.health-hero {
+  background: #ececec;
+  position: relative; }
+  @media (min-width: 768px) {
+    .health-hero {
+      overflow: hidden; } }
+  .health-hero__image-container {
+    max-height: 200px;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      .health-hero__image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-height: none; } }
+  .health-hero__image {
+    height: auto;
+    display: block;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .health-hero__image {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        border-bottom: 0; } }
+  .health-hero__content {
+    background: #313131;
+    position: relative;
+    padding: 32px;
+    padding: 2rem;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .health-hero__content {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 48px;
+        padding: 3rem;
+        width: 60%; } }
+    @media (min-width: 1200px) {
+      .health-hero__content {
+        padding: 64px;
+        padding: 4rem;
+        min-height: 500px;
+        width: 50%; } }
+  .health-hero__title {
+    color: white; }
+  .health-hero__summary {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: normal; }
+    @media (min-width: 768px) {
+      .health-hero__summary {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.5; } }
+  .health-hero.health-hero--dark {
+    background: #313131; }
+    .health-hero.health-hero--dark .health-hero__content {
+      color: white; }
 
 .au-body .health-image-text {
   margin-top: 24px;
@@ -6515,6 +6581,7 @@ table {
     background-color: #000;
     color: #fff;
     opacity: 0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
     filter: alpha(opacity=75);
     vertical-align: top;
     display: inline-block;
