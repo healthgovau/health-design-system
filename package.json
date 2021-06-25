@@ -47,6 +47,7 @@
   "devDependencies": {
     "@frctl/fractal": "^1.2.1",
     "@frctl/mandelbrot": "^1.2.1",
+    "backstopjs": "^5.3.4",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -66,6 +67,10 @@
   },
   "scripts": {
     "postinstall": "npm rebuild node-sass",
+    "backstop:accept": "backstop approve --config=backstop.config.js",
+    "backstop:approve": "backstop approve --config=backstop.config.js",
+    "backstop:open": "backstop openReport --config=backstop.config.js",
+    "backstop:run": "backstop test --config=backstop.config.js",
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
