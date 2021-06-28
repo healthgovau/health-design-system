@@ -1,0 +1,22 @@
+name: Pull request
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - 1.x
+      - 2.x
+      - master
+jobs:
+  cname_exists:
+    name: CNAME exists
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout codebase
+        uses: actions/checkout@v2
+      -
+        name: Check Drupal coding standards
+        run: sh scripts/cname.sh
