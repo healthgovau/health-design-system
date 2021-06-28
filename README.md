@@ -94,6 +94,12 @@ The following is a description of important directories used in the project.
 
 ## Health Design System development
 
+Activate Git pre-commit hook.
+
+```
+npm start
+```
+
 Install dependencies:
 
 ```
