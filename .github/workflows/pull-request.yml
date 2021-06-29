@@ -18,5 +18,5 @@ jobs:
         name: Checkout codebase
         uses: actions/checkout@v2
       -
-        name: Check Drupal coding standards
+        name: Check the CNAME file used by Github pages exists
         run: sh scripts/cname.sh
