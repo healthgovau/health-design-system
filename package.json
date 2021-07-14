@@ -70,7 +70,7 @@
     "backstop:accept": "backstop approve --config=backstop.config.js",
     "backstop:approve": "backstop approve --config=backstop.config.js",
     "backstop:open": "backstop openReport --config=backstop.config.js",
-    "backstop:run": "backstop test --config=backstop.config.js",
+    "backstop:run": "sh scripts/visual_regression_tests.sh",
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
