@@ -547,9 +547,7 @@
   .au-body ::selection {
     color: #ffffff;
     background-color: rgba(0, 111, 176, 0.99); }
-  .au-body img::-moz-selection,
-  .au-body video::-moz-selection,
-  .au-body iframe::-moz-selection {
+  .au-body img::-moz-selection, .au-body video::-moz-selection, .au-body iframe::-moz-selection {
     background-color: rgba(0, 111, 176, 0.75); }
   .au-body img::selection,
   .au-body video::selection,
@@ -702,9 +700,7 @@
     .au-body.au-body--dark ::selection {
       color: #000;
       background-color: rgba(255, 255, 255, 0.99); }
-    .au-body.au-body--dark img::-moz-selection,
-    .au-body.au-body--dark video::-moz-selection,
-    .au-body.au-body--dark iframe::-moz-selection {
+    .au-body.au-body--dark img::-moz-selection, .au-body.au-body--dark video::-moz-selection, .au-body.au-body--dark iframe::-moz-selection {
       background-color: rgba(255, 255, 255, 0.75); }
     .au-body.au-body--dark img::selection,
     .au-body.au-body--dark video::selection,
@@ -4044,7 +4040,7 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
 .au-header.au-header {
   margin-bottom: 0;
   padding: 0;
-  border-top: 12px solid #001d52; }
+  border-top: 12px solid #005ea0; }
   @media (min-width: 768px) {
     .au-header.au-header {
       padding: 16px 0 8px;
@@ -4344,17 +4340,18 @@ textarea.au-text-input {
     .health-book-nav {
       display: none; } }
 
-.pillars-container #pillars {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjEAAABCCAYAAAAWn/QwAAAACXBIWXMAABcRAAAXEQHKJvM/AAAC70lEQVR42u3ZMWpUYRiG0W+G0ZGQQlDQLuAG7AOCa3JrllZau4VgpkkEQS2SZmQmNq5heHI9ZwnvvfD98Kzm46eHgcfmy7fdfL29MAT88+79zIuXdmC53tzY4JT2f3Zzde3OZt49P3dzf/A9gGX5cGmDU/r1ezfff7glwDKtn888eWuHJX9iEwAAAAAAAEUiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQtJmZz2bg0Xm62c/MtSH4r52dvZ7t9tXMzKxWVzNzZxQW67g+n/XRP34qh4M7W7Jd7+f+4HsAy/Fsc+7teuq31NFtBxbswV1ZuL8eRi4+Ju/52gAAAABJRU5ErkJggg=="); }
-
 .pillars-container {
-  position: relative; }
+  position: relative;
+  border-top: 12px solid #005ea0 !important; }
   .pillars-container #pillars {
     position: absolute;
     top: -12px;
     left: 0;
     height: 12px;
-    width: 288px;
+    width: 300px;
+    background: -webkit-gradient(linear, left top, right top, from(#27b3bb), color-stop(9%, #27b3bb), color-stop(9%, #004181), color-stop(21%, #004181), color-stop(21%, #0091d5), color-stop(33%, #0091d5), color-stop(33%, #27b3bb), color-stop(39%, #27b3bb), color-stop(39%, #1a8a96), color-stop(46%, #1a8a96), color-stop(46%, #004181), color-stop(66%, #004181), color-stop(66%, #27b3bb), color-stop(72%, #27b3bb), color-stop(72%, #1a8a96), color-stop(92%, #1a8a96), color-stop(92%, #0091d5), to(#0091d5)) !important;
+    background: -o-linear-gradient(left, #27b3bb 0%, #27b3bb 9%, #004181 9%, #004181 21%, #0091d5 21%, #0091d5 33%, #27b3bb 33%, #27b3bb 39%, #1a8a96 39%, #1a8a96 46%, #004181 46%, #004181 66%, #27b3bb 66%, #27b3bb 72%, #1a8a96 72%, #1a8a96 92%, #0091d5 92%, #0091d5 100%) !important;
+    background: linear-gradient(to right, #27b3bb 0%, #27b3bb 9%, #004181 9%, #004181 21%, #0091d5 21%, #0091d5 33%, #27b3bb 33%, #27b3bb 39%, #1a8a96 39%, #1a8a96 46%, #004181 46%, #004181 66%, #27b3bb 66%, #27b3bb 72%, #1a8a96 72%, #1a8a96 92%, #0091d5 92%, #0091d5 100%) !important;
     background-size: cover; }
     @media (min-width: 768px) {
       .pillars-container #pillars {
@@ -5686,8 +5683,8 @@ form[class*='col-'].health-search__form .health-search__form__submit {
   padding: 12px 0; }
   @media (min-width: 768px) {
     .health-sub-header {
-      padding: 24px 0 16px 0;
-      padding: 1.5rem 0 1rem 0; } }
+      padding: 24px 0 40px 0;
+      padding: 1.5rem 0 2.5rem 0; } }
   .health-sub-header h1 {
     margin-top: 0; }
   .health-sub-header .au-introduction {
@@ -5696,7 +5693,9 @@ form[class*='col-'].health-search__form .health-search__form__submit {
     @media (min-width: 768px) {
       .health-sub-header .au-introduction {
         margin-top: 16px;
-        margin-top: 1rem; } }
+        margin-top: 1rem;
+        margin-bottom: 16px;
+        margin-bottom: 1rem; } }
   .health-sub-header__section-title {
     margin-bottom: 10px;
     margin-bottom: 0.65rem; }
@@ -6643,6 +6642,83 @@ table {
     .sub-brand.sub-brand--covid-vaccine .health-sub-header {
       background-image: -o-linear-gradient(345deg, #4EBDCC 56%, #84D1D8 56%);
       background-image: linear-gradient(105deg, #4EBDCC 56%, #84D1D8 56%); } }
+
+.ogtr .pillars-container {
+  position: relative;
+  border-top: 12px solid #20639b !important; }
+  .ogtr .pillars-container #pillars {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    height: 12px;
+    width: 400px;
+    background: -webkit-gradient(linear, left top, right top, from(#4d82af), color-stop(9%, #4d82af), color-stop(9%, #bcd0e1), color-stop(21%, #bcd0e1), color-stop(21%, #6392b9), color-stop(33%, #6392b9), color-stop(33%, #4d82af), color-stop(39%, #4d82af), color-stop(39%, #90b1cd), color-stop(46%, #90b1cd), color-stop(46%, #bcd0e1), color-stop(66%, #bcd0e1), color-stop(66%, #4d82af), color-stop(72%, #4d82af), color-stop(72%, #90b1cd), color-stop(92%, #90b1cd), color-stop(92%, #6392b9), to(#6392b9)) !important;
+    background: -o-linear-gradient(left, #4d82af 0%, #4d82af 9%, #bcd0e1 9%, #bcd0e1 21%, #6392b9 21%, #6392b9 33%, #4d82af 33%, #4d82af 39%, #90b1cd 39%, #90b1cd 46%, #bcd0e1 46%, #bcd0e1 66%, #4d82af 66%, #4d82af 72%, #90b1cd 72%, #90b1cd 92%, #6392b9 92%, #6392b9 100%) !important;
+    background: linear-gradient(to right, #4d82af 0%, #4d82af 9%, #bcd0e1 9%, #bcd0e1 21%, #6392b9 21%, #6392b9 33%, #4d82af 33%, #4d82af 39%, #90b1cd 39%, #90b1cd 46%, #bcd0e1 46%, #bcd0e1 66%, #4d82af 66%, #4d82af 72%, #90b1cd 72%, #90b1cd 92%, #6392b9 92%, #6392b9 100%) !important;
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .ogtr .pillars-container #pillars {
+        left: auto; } }
+
+.ogtr .au-header.au-header .au-header__logo {
+  max-width: 300px; }
+  @media (min-width: 992px) {
+    .ogtr .au-header.au-header .au-header__logo {
+      max-width: 400px; } }
+
+.ogtr .health-sub-header {
+  background-color: #20639b;
+  background: -o-linear-gradient(10deg, #20639b, #4d82af);
+  background: linear-gradient(80deg, #20639b, #4d82af); }
+
+.ogtr .au-main-nav {
+  border-bottom-color: #1d598c; }
+
+.ogtr .au-body .au-side-nav {
+  background: #e9eff5; }
+  @media (min-width: 768px) {
+    .ogtr .au-body .au-side-nav {
+      background: none; } }
+  .ogtr .au-body .au-side-nav a:hover, .ogtr .au-body .au-side-nav a:focus {
+    background-color: #c6d6e5; }
+  .ogtr .au-body .au-side-nav a.active {
+    color: #000;
+    background-color: #c6d6e5; }
+  @media (min-width: 768px) {
+    .ogtr .au-body .au-side-nav a:hover, .ogtr .au-body .au-side-nav a:focus {
+      background-color: #e9eff5; }
+    .ogtr .au-body .au-side-nav a.active {
+      background-color: #e9eff5;
+      border-left: 4px solid #20639b; } }
+
+@media (min-width: 768px) {
+  .ogtr .au-body .au-sidenav__title a {
+    background: #20639b;
+    color: #FFF; }
+    .ogtr .au-body .au-sidenav__title a:hover, .ogtr .au-body .au-sidenav__title a:focus {
+      background-color: #1d598c; } }
+
+.ogtr .au-body .au-callout {
+  border-left-color: #615e9b; }
+  .ogtr .au-body .au-callout--secondary {
+    border-left-color: #ed553b; }
+  .ogtr .au-body .au-callout--tertiary {
+    border-left-color: #f6d55c; }
+
+.ogtr .au-inpage-nav-links {
+  border-left-color: #ed553b; }
+
+.ogtr .health-card--top-highlight {
+  border-top-color: #20639b; }
+  .ogtr .health-card--top-highlight:nth-of-type(2) {
+    border-top-color: #f6d55c; }
+  .ogtr .health-card--top-highlight:nth-of-type(3) {
+    border-top-color: #ed553b; }
+  .ogtr .health-card--top-highlight:nth-of-type(4) {
+    border-top-color: #615e9b; }
+
+.ogtr .au-footer {
+  background: #2a2c45 !important; }
 
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com

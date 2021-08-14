@@ -547,9 +547,7 @@
   .au-body ::selection {
     color: #ffffff;
     background-color: rgba(0, 111, 176, 0.99); }
-  .au-body img::-moz-selection,
-  .au-body video::-moz-selection,
-  .au-body iframe::-moz-selection {
+  .au-body img::-moz-selection, .au-body video::-moz-selection, .au-body iframe::-moz-selection {
     background-color: rgba(0, 111, 176, 0.75); }
   .au-body img::selection,
   .au-body video::selection,
@@ -702,9 +700,7 @@
     .au-body.au-body--dark ::selection {
       color: #000;
       background-color: rgba(255, 255, 255, 0.99); }
-    .au-body.au-body--dark img::-moz-selection,
-    .au-body.au-body--dark video::-moz-selection,
-    .au-body.au-body--dark iframe::-moz-selection {
+    .au-body.au-body--dark img::-moz-selection, .au-body.au-body--dark video::-moz-selection, .au-body.au-body--dark iframe::-moz-selection {
       background-color: rgba(255, 255, 255, 0.75); }
     .au-body.au-body--dark img::selection,
     .au-body.au-body--dark video::selection,
@@ -4044,7 +4040,7 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
 .au-header.au-header {
   margin-bottom: 0;
   padding: 0;
-  border-top: 12px solid #001d52; }
+  border-top: 12px solid #005ea0; }
   @media (min-width: 768px) {
     .au-header.au-header {
       padding: 16px 0 8px;

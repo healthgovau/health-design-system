@@ -42,7 +42,8 @@
     "@gov.au/skip-link": "2.0.16",
     "@gov.au/tags": "3.1.7",
     "@gov.au/text-inputs": "2.1.1",
-    "copy": "^0.3.2"
+    "copy": "^0.3.2",
+    "lazy-cache": "^2.0.2"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.2.1",

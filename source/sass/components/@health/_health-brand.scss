@@ -1,23 +1,44 @@
-// @todo Refactor to .health-pillars
-
 // Application of the Health 'pillars' brand element
 
-// Pillars var as base64
-%pillars {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjEAAABCCAYAAAAWn/QwAAAACXBIWXMAABcRAAAXEQHKJvM/AAAC70lEQVR42u3ZMWpUYRiG0W+G0ZGQQlDQLuAG7AOCa3JrllZau4VgpkkEQS2SZmQmNq5heHI9ZwnvvfD98Kzm46eHgcfmy7fdfL29MAT88+79zIuXdmC53tzY4JT2f3Zzde3OZt49P3dzf/A9gGX5cGmDU/r1ezfff7glwDKtn888eWuHJX9iEwAAAAAAAEUiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQtJmZz2bg0Xm62c/MtSH4r52dvZ7t9tXMzKxWVzNzZxQW67g+n/XRP34qh4M7W7Jd7+f+4HsAy/Fsc+7teuq31NFtBxbswV1ZuL8eRi4+Ju/52gAAAABJRU5ErkJggg==");
-}
+// Health primary
+$brand-primary-color: #005ea0 !default;
+$brand-color-1: #27b3bb !default;
+$brand-color-2: #0091d5 !default;
+$brand-color-3: #1a8a96 !default;
+$brand-color-4: #004181 !default;//
+
+// Sub-brand implementation - to override Health's primary palette
+// $brand-color-1: tint($brand-primary-color,20%);
+// $brand-color-2: tint($brand-primary-color,30%);
+// $brand-color-3: tint($brand-primary-color,50%);
+// $brand-color-4: tint($brand-primary-color,70%); 
+
+// Pillars
+$pillars-pattern: 
+    $brand-color-1 0%,$brand-color-1 9%,
+    $brand-color-4 9%,$brand-color-4 21%,
+    $brand-color-2 21%,$brand-color-2 33%,
+    $brand-color-1 33%,$brand-color-1 39%, 
+    $brand-color-3 39%,$brand-color-3 46%,
+    $brand-color-4 46%,$brand-color-4 66%,  
+    $brand-color-1 66%,$brand-color-1 72%, 
+    $brand-color-3 72%,$brand-color-3 92%,  
+    $brand-color-2 92%,$brand-color-2 100%; 
+
 
 // Apply to appropriate element
 .pillars-container {
     position: relative;
+    border-top: 12px solid $brand-primary-color !important;
+
     #pillars {
         position: absolute;
         top: -12px;
         left: 0;
         height: 12px;
-        width: 288px;
+        width: 300px;
+        background: linear-gradient(to right,$pillars-pattern) !important;
         background-size: cover;
-        @extend %pillars;
         @include AU-media('sm'){
             left: auto;
         }

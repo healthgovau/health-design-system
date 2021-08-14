@@ -1,0 +1,39 @@
+// Application of the Health 'pillars' brand element
+
+// Pillar colours
+$brand-colour-80: tint($primary-colour,20%);
+$brand-colour-70: tint($primary-colour,30%);
+$brand-colour-50: tint($primary-colour,50%);
+$brand-colour-30: tint($primary-colour,70%); 
+
+// Pillar widths
+$pillars-pattern: 
+    $brand-colour-80 0%,$brand-colour-80 9%,
+    $brand-colour-30 9%,$brand-colour-30 21%,
+    $brand-colour-70 21%,$brand-colour-70 33%,
+    $brand-colour-80 33%,$brand-colour-80 39%, 
+    $brand-colour-50 39%,$brand-colour-50 46%,
+    $brand-colour-30 46%,$brand-colour-30 66%,  
+    $brand-colour-80 66%,$brand-colour-80 72%, 
+    $brand-colour-50 72%,$brand-colour-50 92%,  
+    $brand-colour-70 92%,$brand-colour-70 100%; 
+
+
+// Apply to appropriate element
+.pillars-container {
+    position: relative;
+    border-top: 12px solid $primary-colour !important;
+
+    #pillars {
+        position: absolute;
+        top: -12px;
+        left: 0;
+        height: 12px;
+        width: 400px;
+        background: linear-gradient(to right,$pillars-pattern) !important;
+        background-size: cover;
+        @include AU-media('sm'){
+            left: auto;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "OGTR standard page",
+  "preview": "@preview-page",
+  "context": {
+    "subheader": {
+      "title": "What are genetically modified organisms (GMOs)?​",
+      "summary": "When gene technology is used to create a GMO, we regulate working with that organism. Learn about GMOs, the GMO Record and GMO dealings."
+    },
+    "backToTop": {
+      "isVisible": false
+    },
+    "field": {
+      "label": "Last updated",
+      "item": "20 June 2019",
+      "modifier": "health-field--inline"
+    }
+  }
+}

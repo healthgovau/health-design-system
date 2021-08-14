@@ -1,0 +1,30 @@
+{{ render '@skip' }}
+<div class="ogtr">
+<div class="au-body">
+
+  {{ render '@header--ogtr' }}
+
+  <div class="health-hero health-hero--dark">
+    <div class="health-hero__image-container">
+      <img class="health-hero__image" src="{{ path "/images/ogtr-hero.png" }}" loading="lazy" typeof="foaf:Image">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="health-hero__content">
+            <h1 class="health-hero__title">Office of the Gene Technology Regulator</h1>
+            <p class="health-hero__summary">We protect the health and safety of people and the environment from risks posed by gene technology</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ render '@something-wrong' }}
+
+</div>
+
+{{ render '@footer' }}
+
+{{> @back-to-top }}
+</div>

@@ -1,0 +1,16 @@
+.au-body {
+    .au-callout {
+      border-left-color: $callout-border-colour;
+      &--secondary {
+        border-left-color: $callout-border-colour--secondary;
+      }
+      &--tertiary {
+        border-left-color: $callout-border-colour--tertiary;
+      }
+    }
+  }
+  
+// and in-page
+.au-inpage-nav-links {
+    border-left-color: $inpage-border-colour;
+}

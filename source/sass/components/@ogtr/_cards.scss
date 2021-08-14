@@ -1,0 +1,12 @@
+.health-card--top-highlight {
+    border-top-color: $card-top-colour-1;
+    &:nth-of-type(2) {
+        border-top-color: $card-top-colour-2;
+    }    
+    &:nth-of-type(3) {
+        border-top-color: $card-top-colour-3;
+    }
+    &:nth-of-type(4) {
+        border-top-color: $card-top-colour-4;
+    }
+}

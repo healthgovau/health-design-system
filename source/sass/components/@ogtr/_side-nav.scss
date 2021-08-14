@@ -1,0 +1,47 @@
+.au-body {
+    .au-side-nav {
+  
+      background: $nav-active-bg-colour;
+      @include AU-media(sm) {
+        background: none;
+      }
+  
+      a {
+        &:hover,
+        &:focus {
+            background-color: darken($nav-active-bg-colour, 10%);
+        }
+        &.active {
+            color: #000;
+            background-color: darken($nav-active-bg-colour, 10%);
+        }
+      }
+      @include AU-media(sm) {
+        a {
+            &:hover,
+            &:focus {
+                background-color: $nav-active-bg-colour;
+            }
+            &.active {
+                background-color: $nav-active-bg-colour;
+                border-left: 4px solid $nav-header-bg-colour;
+            }
+        }
+      }
+    }
+
+    // Override for incorrectly named class 'sidenav, not side-nav'
+    @include AU-media(sm) {
+        .au-sidenav {
+            &__title a {
+                background: $nav-header-bg-colour;
+                color: #FFF;
+                &:hover,
+                &:focus {
+                    background-color: shade($nav-header-bg-colour, 10%);
+                }
+            }
+        }
+    }
+}
+  

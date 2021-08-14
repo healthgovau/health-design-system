@@ -1,0 +1,10 @@
+
+.au-header.au-header {
+    .au-header__logo {
+        max-width: 300px;
+        @include AU-media(md) {
+            max-width: 400px;
+        }
+    }
+}
+  
