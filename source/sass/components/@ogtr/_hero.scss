@@ -1,0 +1,29 @@
+.health-hero {
+
+  &.health-hero--dark {
+    background: none;
+  }
+
+  &__image-container {
+    max-height: none;
+    @include AU-media('sm') {
+      top: 0;
+      right: -350px;
+    }
+  }
+
+  &__content {
+    background: $hero-block-colour;
+    margin-top: -75px;
+    @include AU-media(sm){
+      @include rgba-background($hero-transparent-colour, $hero-transparency);
+      width: 60%;
+      margin-top: 0;
+    }
+    @include AU-media(lg){
+      min-height: 400px; // so that image is a sliver at most popular desktop width 1920
+      width: 50%;
+    }
+  }
+
+}

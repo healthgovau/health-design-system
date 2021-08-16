@@ -6666,6 +6666,29 @@ table {
     .ogtr .au-header.au-header .au-header__logo {
       max-width: 400px; } }
 
+.ogtr .health-hero.health-hero--dark {
+  background: none; }
+
+.ogtr .health-hero__image-container {
+  max-height: none; }
+  @media (min-width: 768px) {
+    .ogtr .health-hero__image-container {
+      top: 0;
+      right: -350px; } }
+
+.ogtr .health-hero__content {
+  background: #20639b;
+  margin-top: -75px; }
+  @media (min-width: 768px) {
+    .ogtr .health-hero__content {
+      background-color: rgba(28, 48, 76, 0.8);
+      width: 60%;
+      margin-top: 0; } }
+  @media (min-width: 1200px) {
+    .ogtr .health-hero__content {
+      min-height: 400px;
+      width: 50%; } }
+
 .ogtr .health-sub-header {
   background-color: #20639b;
   background: -o-linear-gradient(10deg, #20639b, #4d82af);
