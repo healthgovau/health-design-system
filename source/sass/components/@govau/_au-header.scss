@@ -3,7 +3,7 @@
 
   margin-bottom: 0;
   padding: 0;
-  border-top: 12px solid $colour-primary-blue-dark;
+  border-top: 12px solid $header-border-colour;
 
   @include AU-media(sm){
     @include AU-space('padding', 1unit 0 .5unit);
@@ -56,8 +56,8 @@
   }
 
   &--dark {
-    background-color: $colour-primary-blue;
-    background: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-gradient);
+    background-color: $header-bg-colour--dark;
+    background: $header-bg-gradient--dark;
 
     a {
       color: $AU-colordark-foreground-text;

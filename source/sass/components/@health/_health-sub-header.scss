@@ -2,7 +2,7 @@
 .health-sub-header {
   @include AU-space('padding', 12px 0);
   @include AU-media(sm){
-    @include AU-space('padding', 1.5unit 0 1unit 0);
+    @include AU-space('padding', 1.5unit 0 2.5unit 0);
   }
 
   // Title.
@@ -14,6 +14,7 @@
     @include AU-space(margin-top, .5unit);
     @include AU-media(sm) {
       @include AU-space(margin-top, 1unit);
+      @include AU-space(margin-bottom, 1unit);
     }
   }
 
