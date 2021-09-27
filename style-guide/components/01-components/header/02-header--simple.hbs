@@ -1,10 +1,10 @@
-<header class="au-header au-header--dark pillars-container" role="banner">
+<header class="au-header au-header--simple pillars-container" role="banner">
   <div class="container">
     <div id="pillars"></div>
     <div class="row">
       <div class="col-sm-5">
         <a href="/" title="Home" rel="home" class="au-header__logo">
-          <img src="{{path '/images/DoHCrest-white.png'}}"
+          <img src="{{path '/images/{{ image }}'}}"
                alt="Australia Government Department of Health"
                class="au-header__logo-image au-responsive-media-img"
                width="600" height="146">
@@ -13,12 +13,6 @@
           <p>Australian Government Department of Health</p>
         </div>
       </div>
-      <div class="col-sm-7">
-        {{ render '@sub-nav' }}
-        {{ render '@search' }}
-      </div>
     </div>
   </div>
 </header>
-
-{{ render '@main-nav--dark' }}
