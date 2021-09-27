@@ -1,0 +1,7 @@
+// This file maps Health colours variables to variables used throughout the HDS
+// It decouples the colours from their use and provides more control
+
+// Header
+$header-border-colour: $colour-primary-blue-dark;
+$header-bg-colour--dark: $colour-primary-blue;
+$header-bg-gradient--dark: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-bg);

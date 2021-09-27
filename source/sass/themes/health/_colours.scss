@@ -1,81 +1,56 @@
-// DTA Design System colours
-
-// $AU-color-foreground-text:   #313131 !default;
-// $AU-color-foreground-action: #00698f !default;
-// $AU-color-foreground-focus:  #9263DE !default;
-// $AU-color-background:        #ffffff !default;
-
-// $AU-colordark-foreground-text:   #ffffff !default;
-// $AU-colordark-foreground-action: #61daff !default;
-// $AU-colordark-foreground-focus:  #C390F9 !default;
-// $AU-colordark-background:        #135E70 !default;
-
-// $AU-color-error:   #ff635c !default;
-// $AU-color-success: #0cac78 !default;
-// $AU-color-warning: #f69900 !default;
-// $AU-color-info:    #00bfe9 !default;
-
-// HEALTH COLOURS ===========================
+// HEALTH COLOURS
 $colour-Shadow: rgba(0,0,0,0.1);
 $colour-card: #fff;
 $colour-Error-light: #ffe7ea;
 $colour-foreground-text--dark: #000000;
 
-// New visual identity palette
+// Visual identity palette
 // Primaries
-$colour-primary-blue: #00205B;
-$colour-primary-blue-dark: shade($colour-primary-blue, 10%);
-$colour-primary-blue-darker: shade($colour-primary-blue, 20%);
+$colour-primary-blue: #002058;
 $colour-primary-blue-alt: #041E42;
+$colour-primary-teal: #007680;
+$colour-primary-teal-alt: #006269;
+
+// Primaries - tints/shades
+$colour-primary-blue-dark: #005ea0;
 $colour-primary-blue-gradient: #004181; // to be used with $color-primary-blue
 $colour-primary-blue-bg: $colour-primary-blue-gradient; // for backgrounds
-
-$colour-primary-teal: #007680;
+$colour-primary-blue-darker: shade($colour-primary-blue, 20%);
 $colour-primary-teal-dark: shade($colour-primary-teal,10%);
 $colour-primary-teal-darker: shade($colour-primary-teal,20%);
 $colour-primary-teal-light: tint($colour-primary-teal,20%);
-$colour-primary-teal-alt: #006269;
 $colour-primary-teal-bg: desaturate($colour-primary-teal-darker, 10%); // for backgrounds
 
 // Complementaries
-// Darker shades for hover
 $colour-complementary-skyblue: #0077C8;
+$colour-complementary-ruby: #910048;
+$colour-complementary-lime: #B5BD00;
+$colour-complementary-blue: #0057B8;
+$colour-complementary-cyan: #0093B2;
+
+// Complemantaries - tints/shades
 $colour-complementary-skyblue-dark: shade($colour-complementary-skyblue, 20%);
 $colour-complementary-skyblue-bg: desaturate($colour-complementary-skyblue-dark, 30%); // for backgrounds
-$colour-complementary-ruby: #910048;
 $colour-complementary-ruby-dark: shade($colour-complementary-ruby, 10%);
-$colour-complementary-lime: #B5BD00;
 $colour-complementary-lime-dark: shade($colour-complementary-lime, 10%);
-$colour-complementary-blue: #0057B8;
 $colour-complementary-blue-dark: shade($colour-complementary-blue, 20%);
 $colour-complementary-blue-bg: desaturate($colour-complementary-blue-dark, 30%); // for backgrounds
-$colour-complementary-cyan: #0093B2;
 $colour-complementary-cyan-dark: shade($colour-complementary-cyan, 10%);
 
 // Accents
 $colour-accent-red: #D50032;
 $colour-accent-orange: #FFB500;
 
+// Neutrals
 $colour-dark: #87888A; // core
 $colour-darker: #626366;
 $colour-darkest: #58585b;
 $colour-dark-hover: #313131;
-
 $colour-lightest: #f9f9f9;
 $colour-lighter: #f1f1f2;
 $colour-light: #ececec;
 $colour-light-dark: #e5e5e5;
 $colour-light-darker: #cdcdcd;
-
-// Tints from print guide - not used in lieu of shade() and desaturate() functions
-// $colour-primary-blue-1: #133a6f; 
-// $colour-primary-blue-2: #2b4679;
-// $colour-primary-blue-3: #204c8b;
-// $colour-primary-blue-4: #395994;
-// $colour-primary-teal-1: #00737e;
-// $colour-primary-teal-2: #008692;
-// $colour-primary-teal-3: #00929e;
-// $colour-primary-teal-4: #1ba4af;
 
 // Backgrounds - uses desaturated versions of primaries
 // Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
@@ -130,10 +105,6 @@ $beta-background: #d34600;
 $beta-text: #FFF;
 $live-background: #158839; // WCAG compliant with #FFF
 
-// Main nav.
-$AU-main-nav-breakpoint: sm;
-$AU-main-nav-z-index: 600;
-
 // Unpublished
 $colour-unpublished-foreground: #e42622; //#ff6562;
 $colour-unpublished-background: #ffe5e5;
@@ -148,6 +119,3 @@ $AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.
 $AU-colordark-foreground-action: #FFF;
 $AU-colordark-foreground-text: #FFF;
 $AU-colordark-background: #000;
-
-// Background from exemplar
-// #f2f4f6
