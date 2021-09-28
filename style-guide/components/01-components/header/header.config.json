@@ -13,6 +13,10 @@
       "context": {
         "image": "DoHCrest-white.png"
       }
+    },
+    {
+      "name": "With Site Title",
+      "hidden": "true"
     }
   ]
 }
