@@ -4,7 +4,7 @@
   @include AU-space(padding-bottom, 1unit);
 
   &__title {
-    background: lighten($colour-complementary-skyblue, 45%); // FIX
+    background: $compare-bg-colour; // FIX
     font-weight: bold;
     @include AU-space(padding-top, 1unit);
     @include AU-space(padding-bottom, 1unit);

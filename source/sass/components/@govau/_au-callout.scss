@@ -8,14 +8,14 @@
       padding-left: 12px;
       padding-right: 12px;
     }
-    background-color: $colour-lighter;
-    border-left-color: $colour-complementary-cyan;
+    background-color: $callout-bg-colour;
+    border-left-color: $callout-border-colour;
     // Colours.
     &--secondary {
-      border-left-color: $colour-complementary-skyblue;
+      border-left-color: $callout-border-colour--secondary;
     }
     &--tertiary {
-      border-left-color: $colour-primary-teal-light;
+      border-left-color: $callout-border-colour--tertiary;
     }
     &--success {
       border-left-color: $AU-color-success;

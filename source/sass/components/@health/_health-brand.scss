@@ -1,15 +1,7 @@
 // Application of the Health 'pillars' brand element
 
-// Health primary
-$brand-primary-colour: #005ea0;
-$brand-colour-1: #27b3bb;
-$brand-colour-2: #0091d5;
-$brand-colour-3: #1a8a96;
-$brand-colour-4: #004181;
-
 // Sub-brand implementation - to override Health's primary palette
-// Simply add your colour below and uncomment the following 5 lines to generate an approved aligned pillar band
-// $brand-primary-colour: YOUR COLOUR HERE;
+// Simply map your colour ($brand-primary-colour in _colours-map.scss) and uncomment the following 4 lines to generate an approved aligned pillar band
 // $brand-colour-1: tint($brand-primary-colour,20%);
 // $brand-colour-2: tint($brand-primary-colour,30%);
 // $brand-colour-3: tint($brand-primary-colour,50%);

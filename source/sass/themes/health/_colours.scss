@@ -52,37 +52,11 @@ $colour-light: #ececec;
 $colour-light-dark: #e5e5e5;
 $colour-light-darker: #cdcdcd;
 
-// Backgrounds - uses desaturated versions of primaries
-// Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
-%bg-primary-blue {
-  background-color: $colour-primary-blue;
-  background: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-bg);
-}
-
-%bg-primary-teal {
-  background-color: $colour-primary-teal;
-  background: linear-gradient(to right, $colour-primary-teal-bg, $colour-primary-teal);
-}
-
-%bg-complementary-blue {
-  background-color: $colour-complementary-blue-dark;
-  background: linear-gradient(to right, $colour-complementary-blue-dark, $colour-complementary-blue-bg);
-}
-
-%bg-complementary-skyblue {
-  background-color: $colour-complementary-skyblue-dark;
-  background: linear-gradient(to left, $colour-complementary-skyblue-dark, $colour-complementary-skyblue-bg);
-}
-
-%bg-neutral {
-  background-color: $colour-light;
-  background: linear-gradient(to right, $colour-light, $colour-lightest);
-}
-
-%bg-neutral-reverse {
-  background-color: $colour-lightest;
-  background: linear-gradient(to right, $colour-lightest, $colour-light);
-}
+// Pillars
+$brand-colour-1: #27b3bb;
+$brand-colour-2: #0091d5;
+$brand-colour-3: #1a8a96;
+$brand-colour-4: #004181;
 
 // TYPOGRAPHY ================================
 // Colours
@@ -119,3 +93,6 @@ $AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.
 $AU-colordark-foreground-action: #FFF;
 $AU-colordark-foreground-text: #FFF;
 $AU-colordark-background: #000;
+
+// COVID
+$covid-cyan: #4ebdcc;

@@ -71,16 +71,16 @@
       @include AU-media(sm){
         @include AU-space(padding, 3unit);
       }
-      @extend %bg-primary-blue;
+      @extend %bg-gradient--primary;
 
       &--secondary {
         @include AU-space(padding, 3unit);
-        @extend %bg-primary-teal;
+        @extend %bg-gradient--secondary;
       }
 
       &--tertiary {
         @include AU-space(padding, 3unit);
-        @extend %bg-complementary-blue;
+        @extend %bg-gradient--tertiary;
       }
     }
   }

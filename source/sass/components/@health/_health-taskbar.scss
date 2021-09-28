@@ -47,7 +47,7 @@
     @include AU-media('xs') {
       min-height: $minHeight-Taskbar;
     }
-    @extend %bg-primary-teal;
+    @extend %bg-gradient--secondary;
     &:hover,
     &:active,
     &:focus {

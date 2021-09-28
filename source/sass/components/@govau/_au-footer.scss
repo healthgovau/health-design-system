@@ -9,8 +9,8 @@
 
   // Apply our colour scheme on the background.
   &.au-body.au-body--dark.au-footer--dark {
-    background: $colour-darkest;
-    background: linear-gradient(to right,$colour-dark-hover,$colour-darkest)
+    background: $footer-bg-colour--dark;
+    background: $footer-bg-gradient--dark;
   }
 
   // Add a gap on mobile between the menus.
@@ -25,7 +25,7 @@
   }
 
   .au-footer__end {
-    border-top-color: $colour-dark;
+    border-top-color: $footer-border-colour;
   }
 
   // Don't print the footer.

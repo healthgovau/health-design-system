@@ -1,7 +1,89 @@
 // This file maps Health colours variables to variables used throughout the HDS
 // It decouples the colours from their use and provides more control
 
+// Background gradients
+// Uses desaturated versions of primaries
+// Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
+%bg-gradient--primary {
+    background-color: $colour-complementary-blue-dark;
+    background: linear-gradient(to right, $colour-complementary-blue-dark, $colour-complementary-blue-bg);
+}
+%bg-gradient--secondary {
+    background-color: $colour-primary-teal;
+    background: linear-gradient(to right, $colour-primary-teal-bg, $colour-primary-teal);
+}
+%bg-gradient--tertiary {
+    background-color: $colour-complementary-skyblue-dark;
+    background: linear-gradient(to left, $colour-complementary-skyblue-dark, $colour-complementary-skyblue-bg);
+}
+%bg-gradient--tertiary-2 {
+    background-color: $colour-primary-blue;
+    background: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-bg);
+}
+%bg-gradient--neutral {
+    background-color: $colour-light;
+    background: linear-gradient(to right, $colour-light, $colour-lightest);
+}
+%bg-gradient--neutral-reverse {
+    background-color: $colour-lightest;
+    background: linear-gradient(to right, $colour-lightest, $colour-light);
+}
+
+// Body
+$body-bg-colour--dark-tertiary: $colour-primary-blue;
+
+// Brand/pillars
+$brand-primary-colour: $colour-primary-blue-dark;
+
+// Buttons
+$button-bg-colour--secondary: $colour-lighter;
+$button-bg-colour--secondary-hover: $colour-light-dark;
+$button-bg-colour--dark-hover: $colour-light-dark;
+$button-border-colour--dark-hover: $colour-light-dark;
+
+// Callouts
+$callout-bg-colour: $colour-lighter;
+$callout-border-colour: $colour-complementary-cyan;
+$callout-border-colour--secondary: $colour-complementary-skyblue;
+$callout-border-colour--tertiary: $colour-primary-teal-light;
+
+// Cards
+$card-border-colour---fullimg: $covid-cyan;
+$card-bg-colour--contact: $colour-lightest;
+$card-border-colour--selector: $colour-light-dark; // Todo review need
+$card-bg-colour--selector: $colour-lightest; // Todo review need
+$card-bg-colour--active: #FFF;
+$card-border-colour--active: $colour-primary-teal;
+$card-border-colour--resource: $colour-light-dark;
+// Todo variables from _health-card.scss
+
+// Compare
+$compare-bg-colour: lighten($colour-complementary-skyblue, 45%);
+
+// Footer
+$footer-bg-colour--dark: $colour-darkest;
+$footer-bg-gradient--dark: linear-gradient(to right,$colour-dark-hover,$colour-darkest);
+$footer-border-colour: $colour-dark;
+
 // Header
 $header-border-colour: $colour-primary-blue-dark;
 $header-bg-colour--dark: $colour-primary-blue;
 $header-bg-gradient--dark: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-bg);
+
+// In-page nav
+$inpage-nav-border-colour: $colour-complementary-skyblue;
+
+// Main-nav
+$main-nav-border-colour: $colour-primary-blue-dark;
+$main-nav-border-colour--dark: $colour-primary-blue-darker;
+$main-nav-bg-colour--dark: $colour-primary-blue;
+$main-nav-bg-gradient--dark: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-gradient);
+$main-nav-link-bg-colour--dark: $colour-primary-blue;
+$main-nav-link-border-colour--dark: $colour-primary-blue;
+$main-nav-link-bg-colour-active--dark: $colour-primary-blue-darker;
+$main-nav-link-border-colour-active--dark: $colour-primary-blue-darker;
+$main-nav-menu-bg-colour: $colour-primary-blue;
+
+// Side-nav
+$side-nav-link-bg-colour--active: $colour-lighter;
+$side-nav-link-bg-colour--hover: $colour-lighter;

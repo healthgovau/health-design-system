@@ -5,7 +5,7 @@
     @include AU-space('margin-top', -1unit);
 
     // Add our colours.
-    @extend %bg-neutral;
+    @extend %bg-gradient--neutral;
     @include AU-media(sm) {
       background: $AU-color-background;
     }
@@ -14,12 +14,12 @@
       background: transparent;
       &:hover,
       &:focus {
-        background-color: $colour-lighter;
+        background-color: $side-nav-link-bg-colour--hover;
       }
       &.active {
         font-weight: bold;
         color: $AU-color-foreground-text;
-        background-color: $colour-lighter;
+        background-color: $side-nav-link-bg-colour--active;
       }
     }
 

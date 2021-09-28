@@ -113,7 +113,7 @@
 
   // Contact icon
   &--contact {
-    background: $colour-lightest;
+    background: $card-bg-colour--contact;
     @include AU-space( margin-bottom, 1unit );
     .image--circle {
       img {
@@ -149,20 +149,20 @@
       display: none;
     }
 
-    border-left: 1px solid $colour-light-dark;
-    border-right: 1px solid $colour-light-dark;
-    border-bottom: 1px solid $colour-light-dark;
+    border-left: 1px solid $card-border-colour--selector;
+    border-right: 1px solid $card-border-colour--selector;
+    border-bottom: 1px solid $card-border-colour--selector;
+    border-top: 10px solid $card-border-colour--selector;
     display: block;
     overflow: hidden;
-    background: $colour-lightest;
-    border-top: 10px solid $colour-light-dark;
+    background: $card-bg-colour--selector;
 
     &:hover,
     &:focus,
     &.health-card--active
     {
-      background: white;
-      border-top-color: $colour-primary-teal;
+      background: $card-bg-colour--active;
+      border-top-color: $card-border-colour--active;
     }
 
     .health-card__title {
@@ -187,7 +187,7 @@
   &.health-card--resource {
     border-top-width: 6px;
     border-top-style: solid;
-    border-top-color: $colour-light-dark;
+    border-top-color: $card-border-colour--resource;
     @include AU-space(padding, 1unit 0 0 0);
     @include AU-media(sm) {
       @include AU-space(padding, 2unit 0 0 0);

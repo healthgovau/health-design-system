@@ -16,8 +16,8 @@ a.au-btn  {
   // Dark button
   &.au-btn--dark {
     &:hover:not(:disabled) {
-      background-color: $colour-light-dark;
-      border-color: $colour-light-dark;
+      background-color: $button-bg-colour--dark-hover;
+      border-color: $button-border-colour--dark-hover;
     }
   }
 }
