@@ -18,7 +18,7 @@
     &.health-band--secondary {
       @extend %bg-gradient--secondary;
       .health-band__title--light {
-        color: $colour-primary-teal-text;
+        color: $text-colour--light;
       }
     }
 

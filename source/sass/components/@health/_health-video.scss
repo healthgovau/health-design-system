@@ -10,13 +10,18 @@
     @include AU-space(margin-top, 1.5unit);
   }
 
+  &__transcript {
+    margin-top: 0;
+    border: 0;
+  }
+
   &__preview {
 
     position: relative;
     line-height: 0;
 
     .health-video__preview__play-button {
-      display: none;
+      display: block;
       position: absolute;
       font-size: 6em;
       opacity: 0.8;
@@ -31,14 +36,14 @@
 
     &__link {
       display: block;
-      &:hover,
-      &:active,
-      &:focus {
-        .health-video__preview__play-button {
-          display: block;
-          cursor: pointer;
-        }
-      }
+      // &:hover,
+      // &:active,
+      // &:focus {
+      //   .health-video__preview__play-button {
+      //     display: block;
+      //     cursor: pointer;
+      //   }
+      // }
     }
 
     &__length {

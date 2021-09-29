@@ -103,17 +103,12 @@ img {
 
 // An image inside a link.
 .image--link {
-
   a {
     border-bottom: 0;
     line-height: 0;
     @include AU-media(sm) {
       display: block;
     }
-    &:focus {
-      border: 3px solid $colour-primary-teal-darker;
-    }
-
     &:hover {
       img {
         opacity: 0.5;

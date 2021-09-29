@@ -11,7 +11,7 @@ ul {
   li {
     transition: background-color 1s;
     &.highlight {
-      background-color: #ffffc6;
+      background-color: $list-bg-colour--highlight;
     }
   }
 }
@@ -33,7 +33,7 @@ ul {
     @include AU-space('margin', 0 0 1unit);
     @include AU-space('padding', 1.5unit);
     
-    background: $colour-lighter;
+    background: $list-bg-colour--large;
     &::before {
       content: counter(standard-counter, decimal);
       counter-increment: standard-counter;
@@ -95,7 +95,7 @@ ul {
     > li {
       @include AU-space('padding-left', 4unit);
       @include AU-space('padding-top', 1unit);
-      background: $colour-lighter url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23313131' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23fff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E") no-repeat 13px 13px/30px 30px;
+      background: $list-bg-colour--large url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23313131' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23fff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E") no-repeat 13px 13px/30px 30px;
       &::before {
         content: '';
       }

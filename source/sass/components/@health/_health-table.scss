@@ -8,7 +8,7 @@
 //
 // Style guide: base.table
 
-// @todo We shouldn't need to import this here, but it won't compile without it.
+// todo - we shouldn't need to import this here, but it won't compile without it.
 @import '../../abstracts/mixins';
 
 table {
@@ -51,7 +51,7 @@ table {
   }
 
   th {
-    background-color: $colour-lightest;
+    background-color: $table-bg-colour--header;
   }
 
   thead {

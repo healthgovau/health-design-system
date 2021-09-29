@@ -1,0 +1,11 @@
+// 1. Override existing colour variables or create new ones
+$my-colour: #ca1d90;
+
+// 2. Then assign in /themes/health/_colours.map.scss
+
+// 3. Brand implementation - to override Health 'pillars'
+// Simply map your colour ($brand-primary-colour in _colours-map.scss) and uncomment the following 4 lines to generate an approved aligned pillar band
+// $brand-colour-1: tint($brand-primary-colour,20%);
+// $brand-colour-2: tint($brand-primary-colour,30%);
+// $brand-colour-3: tint($brand-primary-colour,50%);
+// $brand-colour-4: tint($brand-primary-colour,70%); 

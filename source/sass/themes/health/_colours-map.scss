@@ -2,7 +2,6 @@
 // It decouples the colours from their use and provides more control
 
 // Background gradients
-// Uses desaturated versions of primaries
 // Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
 %bg-gradient--primary {
     background-color: $colour-complementary-blue-dark;
@@ -55,10 +54,31 @@ $card-bg-colour--selector: $colour-lightest; // Todo review need
 $card-bg-colour--active: #FFF;
 $card-border-colour--active: $colour-primary-teal;
 $card-border-colour--resource: $colour-light-dark;
-// Todo variables from _health-card.scss
+$card-bg-colour: $colour-complementary-skyblue-dark;
+$card-bg-colour-hover: $colour-complementary-skyblue;
+$card-bg-colour-1: $colour-complementary-skyblue-dark;
+$card-bg-colour-1-hover: $colour-complementary-skyblue;
+$card-bg-colour-2: $colour-primary-teal-alt;
+$card-bg-colour-2-hover: $colour-primary-teal;
+$card-bg-colour-3: $colour-primary-teal-dark;
+$card-bg-colour-3-hover: $colour-primary-teal;
+$card-bg-colour-4: $colour-complementary-blue-dark;
+$card-bg-colour-4-hover: $colour-complementary-blue;
+$card-bg-colour--highlight-hover: $colour-lighter;
+$card-border-colour--highlight-1: $colour-complementary-skyblue;
+$card-border-colour--highlight-2: $colour-complementary-ruby;
+$card-border-colour--highlight-3: $colour-complementary-lime;
+$card-border-colour--highlight-4: $colour-primary-teal;
+$card-border-colour--highlight-5: $colour-complementary-cyan;
 
 // Compare
 $compare-bg-colour: lighten($colour-complementary-skyblue, 45%);
+
+// Facets
+$facet-bg-colour: $colour-lighter;
+
+// Filter
+$filter-bg-colour: $colour-lighter;
 
 // Footer
 $footer-bg-colour--dark: $colour-darkest;
@@ -70,8 +90,17 @@ $header-border-colour: $colour-primary-blue-dark;
 $header-bg-colour--dark: $colour-primary-blue;
 $header-bg-gradient--dark: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-bg);
 
+// Hero
+$hero-bg-colour: $colour-light;
+$hero-bg-colour--dark: $colour-dark-hover;
+$hero-bg-colour--content: $colour-dark-hover;
+
 // In-page nav
 $inpage-nav-border-colour: $colour-complementary-skyblue;
+
+// Lists
+$list-bg-colour--highlight: $colour-lightest;
+$list-bg-colour--large: $colour-lighter;
 
 // Main-nav
 $main-nav-border-colour: $colour-primary-blue-dark;
@@ -84,6 +113,33 @@ $main-nav-link-bg-colour-active--dark: $colour-primary-blue-darker;
 $main-nav-link-border-colour-active--dark: $colour-primary-blue-darker;
 $main-nav-menu-bg-colour: $colour-primary-blue;
 
+// Reference
+$reference-bg-colour: $colour-lightest;
+$reference-border-colour: $colour-light-darker;
+
+// Search
+$search-text-colour--path: $colour-path;
+$search-text-colour--date: $colour-dark;
+
 // Side-nav
 $side-nav-link-bg-colour--active: $colour-lighter;
 $side-nav-link-bg-colour--hover: $colour-lighter;
+
+// Statistic
+$stat-border-colour: $colour-primary-teal-text;
+
+// Tabs
+$tab-border-colour: $colour-light-darker;
+$tab-border-colour--active: $colour-primary-blue-dark;
+
+// Table
+$table-bg-colour--header: $colour-lightest;
+
+// Taskbar
+$taskbar-bg-colour--hover: $colour-primary-blue-darker;
+
+// Text
+$text-colour--light: $colour-primary-teal-text;
+
+// Tooltip
+$tooltip-bg-colour: $colour-dark;

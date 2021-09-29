@@ -40,54 +40,20 @@
     }
 }
 
-// Vars
-// Default (dummy)
-// $sub-brand-colour--primary: #004181;
-// $sub-brand-colour--secondary:#0056aa;
-
-// Refactor to use CSS variables when IE11 no longer supported
-// DEFAULT
-// .sub-brand {
-
-//     // Nav
-//     .au-main-nav {
-//         border-bottom-color: darken($sub-brand-colour--primary, 20%);
-//     }
-
-//     // Sub-header
-//     .health-sub-header {
-//         @extend %sub-brand--dark;
-//         background: $sub-brand-colour--primary;
-//         background-image: linear-gradient(105deg, $sub-brand-colour--primary 56%, $sub-brand-colour--secondary 56%);
-//         // linear-gradient(110deg, #004181, #025ab1 55%, transparent 55%, #0091d5 100%),linear-gradient(119deg,transparent 0, transparent 73%, #0091d59e 70%, #0253a49e 100%),url(https://www.paho.org/sites/default/files/styles/flexslider_full/public/2020-03/blue-covid-19-1400x693_0.jpg?h=96546727&itok=Wr-p2p5u);
-//         @include AU-media(sm){
-//             background-image: linear-gradient(100deg, $sub-brand-colour--primary 58%, $sub-brand-colour--secondary 58%);
-//         }
-//         @include AU-media(md){
-//             background-image: linear-gradient(105deg, $sub-brand-colour--primary 59%, $sub-brand-colour--secondary 59%);
-//         }
-//         @include AU-media(lg){
-//             background-image: linear-gradient(105deg, $sub-brand-colour--primary 56%, $sub-brand-colour--secondary 56%);
-//         }
-//     }
-// }
-
 // COVID vaccine
-$sub-brand-colour--primary: #4EBDCC;
-$sub-brand-colour--secondary: #84D1D8;
-
+// todo - move into health.gov.au
 .sub-brand {
     &.sub-brand--covid-vaccine {
 
         // Nav
         .au-main-nav {
-            border-bottom-color: darken($sub-brand-colour--primary, 20%);
+            border-bottom-color: darken($covid-cyan, 20%);
         }
 
         // Sub-header
         .health-sub-header {
             @extend %sub-brand--light;
-            background: $sub-brand-colour--primary;
+            background: $covid-cyan;
             .image {
                 text-align: center;
                 img {
@@ -97,7 +63,7 @@ $sub-brand-colour--secondary: #84D1D8;
             }
             // linear-gradient(110deg, #004181, #025ab1 55%, transparent 55%, #0091d5 100%),linear-gradient(119deg,transparent 0, transparent 73%, #0091d59e 70%, #0253a49e 100%),url(https://www.paho.org/sites/default/files/styles/flexslider_full/public/2020-03/blue-covid-19-1400x693_0.jpg?h=96546727&itok=Wr-p2p5u);
             @include AU-media(sm){
-                background-image: linear-gradient(100deg, $sub-brand-colour--primary 58%, $sub-brand-colour--secondary 58%);
+                background-image: linear-gradient(100deg, $covid-cyan 58%, $covid-cyan-2 58%);
                 .image {
                     img {
                         width: 100%;
@@ -106,10 +72,10 @@ $sub-brand-colour--secondary: #84D1D8;
                 }
             }
             @include AU-media(md){
-                background-image: linear-gradient(105deg, $sub-brand-colour--primary 59%, $sub-brand-colour--secondary 59%);
+                background-image: linear-gradient(105deg, $covid-cyan 59%, $covid-cyan-2 59%);
             }
             @include AU-media(lg){
-                background-image: linear-gradient(105deg, $sub-brand-colour--primary 56%, $sub-brand-colour--secondary 56%);
+                background-image: linear-gradient(105deg, $covid-cyan 56%, $covid-cyan-2 56%);
             }
         }
     }

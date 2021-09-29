@@ -6,7 +6,7 @@
     transition: background-color 1s;
 
     &.highlight {
-      background-color: #ffffc6;
+      background-color: $reference-bg-colour;
     }
   }
 }
@@ -16,7 +16,7 @@
  */
 .health-references__links {
   .health-references__link {
-    border-bottom: 1px dotted #CCC;
+    border-bottom: 1px dotted $reference-border-colour;
     cursor: help;
   }
 }
