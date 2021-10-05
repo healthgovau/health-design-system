@@ -113,7 +113,7 @@
 
   // Contact icon
   &--contact {
-    background: $colour-lightest;
+    background: $card-bg-colour--contact;
     @include AU-space( margin-bottom, 1unit );
     .image--circle {
       img {
@@ -149,20 +149,20 @@
       display: none;
     }
 
-    border-left: 1px solid $colour-light-dark;
-    border-right: 1px solid $colour-light-dark;
-    border-bottom: 1px solid $colour-light-dark;
+    border-left: 1px solid $card-border-colour--selector;
+    border-right: 1px solid $card-border-colour--selector;
+    border-bottom: 1px solid $card-border-colour--selector;
+    border-top: 10px solid $card-border-colour--selector;
     display: block;
     overflow: hidden;
-    background: $colour-lightest;
-    border-top: 10px solid $colour-light-dark;
+    background: $card-bg-colour--selector;
 
     &:hover,
     &:focus,
     &.health-card--active
     {
-      background: white;
-      border-top-color: $colour-primary-teal;
+      background: $card-bg-colour--active;
+      border-top-color: $card-border-colour--active;
     }
 
     .health-card__title {
@@ -187,7 +187,7 @@
   &.health-card--resource {
     border-top-width: 6px;
     border-top-style: solid;
-    border-top-color: $colour-light-dark;
+    border-top-color: $card-border-colour--resource;
     @include AU-space(padding, 1unit 0 0 0);
     @include AU-media(sm) {
       @include AU-space(padding, 2unit 0 0 0);
@@ -197,10 +197,10 @@
   // Solid
   &--solid {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    background: $colour-complementary-skyblue-dark;
+    background: $card-bg-colour;
     color: white;
     &:hover {
-      background: $colour-complementary-skyblue;
+      background: $card-bg-colour-hover;
       color: white;
     }
     @at-root a.health-card#{&} {
@@ -208,29 +208,30 @@
     }
 
     // Colours
+    // todo - refactor as a function
     &.health-card--colour1 {
-      background: $colour-complementary-skyblue-dark;
+      background: $card-bg-colour-1;
       &:hover {
-        background: $colour-complementary-skyblue;
+        background: $card-bg-colour-1-hover;
         color: white;
       }
     }
     &.health-card--colour2 {
-      background: $colour-primary-teal-alt;
+      background: $card-bg-colour-2;
       &:hover {
-        background: $colour-primary-teal;
+        background: $card-bg-colour-2-hover;
       }
     }
     &.health-card--colour3 {
-      background: $colour-primary-teal-dark;
+      background: $card-bg-colour-3;
       &:hover {
-        background: $colour-primary-teal;
+        background: $card-bg-colour-3-hover;
       }
     }
     &.health-card--colour4 {
-      background: $colour-complementary-blue-dark;
+      background: $card-bg-colour-4;
       &:hover {
-        background: $colour-complementary-blue;
+        background: $card-bg-colour-4-hover;
       }
     }
     
@@ -260,50 +261,44 @@
 
     // Colours
     &.health-card--colour1 {
-      background-color: $colour-complementary-skyblue-dark;
-      background: linear-gradient(to right,$colour-complementary-skyblue-dark 0%,$colour-complementary-skyblue-dark 35%, #fff 35%,white 100%);
+      background-color: $card-bg-colour-1;
+      background: linear-gradient(to right,$card-bg-colour-1 0%,$card-bg-colour-1 35%, #fff 35%,white 100%);
       &:hover {
-        background-color: $colour-complementary-skyblue-bg;
-        background: linear-gradient(to right,$colour-complementary-skyblue-bg 0%,$colour-complementary-skyblue-bg 35%, #fff 35%,#fff 100%);
+        background-color: $card-bg-colour-1-hover;
       }  
     }
     &.health-card--colour2 {
-      background-color: $colour-primary-teal-dark;
-      background: linear-gradient(to right,$colour-primary-teal-dark 0%,$colour-primary-teal-dark 35%, #fff 35%,white 100%);
+      background-color: $card-bg-colour-3;
+      background: linear-gradient(to right,$card-bg-colour-3 0%,$card-bg-colour-3 35%, #fff 35%,white 100%);
       &:hover {
-        background-color: $colour-primary-teal-darker;
-        background: linear-gradient(to right,$colour-primary-teal-darker 0%,$colour-primary-teal-darker 35%, #fff 35%,#fff 100%);
+        background-color: $card-bg-colour-3-hover;
       }  
     }
     &.health-card--colour3 {
-      background-color: $colour-complementary-skyblue-dark;
-      background: linear-gradient(to right,$colour-complementary-skyblue-dark 0%,$colour-complementary-skyblue-dark 35%, #fff 35%,white 100%);
+      background-color: $card-bg-colour-1;
+      background: linear-gradient(to right,$card-bg-colour-1 0%,$card-bg-colour-1 35%, #fff 35%,white 100%);
       &:hover {
-        background-color: $colour-complementary-skyblue-bg;
-        background: linear-gradient(to right,$colour-complementary-skyblue-bg 0%,$colour-complementary-skyblue-bg 35%, #fff 35%,#fff 100%);
+        background-color: $card-bg-colour-1-hover;
       }  
       @include AU-media(md) {
-        background-color: $colour-primary-teal-dark;
-        background: linear-gradient(to right,$colour-primary-teal-dark 0%,$colour-primary-teal-dark 35%, #fff 35%,white 100%);
+        background-color: $card-bg-colour-3;
+        background: linear-gradient(to right,$card-bg-colour-3 0%,$card-bg-colour-3 35%, #fff 35%,white 100%);
         &:hover {
-          background-color: $colour-primary-teal-darker;
-          background: linear-gradient(to right,$colour-primary-teal-darker 0%,$colour-primary-teal-darker 35%, #fff 35%,#fff 100%);
-        }  
+          background-color: $card-bg-colour-3-hover;
+        } 
       }
     }
     &.health-card--colour4 {
-      background-color: $colour-primary-teal-dark;
-      background: linear-gradient(to right,$colour-primary-teal-dark 0%,$colour-primary-teal-dark 35%, #fff 35%,white 100%);
+      background-color: $card-bg-colour-3;
+      background: linear-gradient(to right,$card-bg-colour-3 0%,$card-bg-colour-3 35%, #fff 35%,white 100%);
       &:hover {
-        background-color: $colour-primary-teal-darker;
-        background: linear-gradient(to right,$colour-primary-teal-darker 0%,$colour-primary-teal-darker 35%, #fff 35%,#fff 100%);
+        background-color: $card-bg-colour-3-hover;
       }  
       @include AU-media(md) {
-        background-color: $colour-complementary-skyblue-dark;
-        background: linear-gradient(to right,$colour-complementary-skyblue-dark 0%,$colour-complementary-skyblue-dark 35%, #fff 35%,white 100%);
+        background-color: $card-bg-colour-1;
+        background: linear-gradient(to right,$card-bg-colour-1 0%,$card-bg-colour-1 35%, #fff 35%,white 100%);
         &:hover {
-          background-color: $colour-complementary-skyblue-bg;
-          background: linear-gradient(to right,$colour-complementary-skyblue-bg 0%,$colour-complementary-skyblue-bg 35%, #fff 35%,#fff 100%);
+          background-color: $card-bg-colour-1-hover;
         }  
       }
     }
@@ -312,29 +307,30 @@
 
   // Top highlight.
   // Use colour as a keyline on top of the card.
+  // todo - refactor as a function
   &--top-highlight {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     &:hover,
     &:focus {
-      background-color: $colour-lighter;
+      background-color: $card-bg-colour--highlight-hover;
     }
 
-    border-top: 6px solid $colour-complementary-skyblue;
+    border-top: 6px solid $card-border-colour--highlight-1;
 
     &.health-card--colour2  {
-      border-top-color: $colour-complementary-ruby;
+      border-top-color: $card-border-colour--highlight-2;
     }
 
     &.health-card--colour3  {
-      border-top-color: $colour-complementary-lime;
+      border-top-color: $card-border-colour--highlight-3;
     }
 
     &.health-card--colour4  {
-      border-top-color: $colour-primary-teal;
+      border-top-color: $card-border-colour--highlight-4;
     }
 
     &.health-card--colour5  {
-      border-top-color: $colour-complementary-cyan;
+      border-top-color: $card-border-colour--highlight-5;
     }
   }
 

@@ -1,0 +1,25 @@
+<h1>Applying to components</h1>
+<p>Health's colour palette is applied to components of the Health Design System by default.</p>
+<p>However Health-aligned products such as applications or portfolio agencies can override the colour palette to achieve co-branding.</p>
+<h2>How to override colours</h2>
+<p>To simply applying an alternative colour palette, all colours in the Health Design System are provided as SASS variables in <code>sass/themes</code> and are mapped to specific applications.</p>
+<h3>Variable and mappings</h3>
+<p>By using SASS variables, colours can be change in one place to be updated globally.</p>
+<p>By mapping variable names to applications, users of the system are no stuck with a variable called <code>$blue</code> every though they have changed it to red!</p>
+<h4>Example</h4>
+<p>Health's primary blue colour uses the variable <code>$colour-primary-blue</code> and is used in many places in the HDS. Instead of using directly against components, the following SASS variable mapping is used:
+<code><pre>
+$header-border-colour: $colour-primary-blue
+$footer-bg-colour: $colour-primary-blue;
+$callout-primary-border-colour: $colour-primary-blue;
+</pre></code>
+<p>To predictably apply new colours, new variables can be created and assigned like this:
+<code><pre>
+$my-product-red: #FF0000; 
+$my-product-yellow: #FFFF0;
+$header-border-colour: $my-product-red;
+$footer-bg-colour: $my-product-yellow;
+$callout-primary-border-colour: $my-product-red;
+</pre></code>
+</p>
+<p class="au-callout">More information coming soon about default SASS colour variables and their overrides for 'aligned' Health products</p>

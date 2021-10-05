@@ -1,7 +1,13 @@
 
 // Health theme colours
 @import 'themes/theme-functions'; // Support theme development with out relying on DTA DS functions
-@import 'themes/health/colors';
+@import 'themes/health/colours';
+
+// My theme colours and mappings
+@import 'themes/my-theme/colours';
+
+// Map colours to components
+@import 'themes/health/colours-map';
 
 // DTA Design System
 // Must come after themes to ensure that defaults are overridden

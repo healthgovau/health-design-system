@@ -9,7 +9,7 @@
   }
 
   .health-filter__title {
-    background: $colour-lighter;
+    background: $filter-bg-colour;
     @include AU-space('padding', .5unit);
     @include AU-media(sm) {
       display: none;

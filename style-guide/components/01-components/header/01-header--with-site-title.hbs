@@ -1,0 +1,22 @@
+<header class="au-header pillars-container" role="banner">
+  <div class="container">
+    <div id="pillars"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <a class="au-header__brand" href="#">
+          <img class="au-header__brand-image" alt="Insert alternate text here" src="{{path '/images/{{ image }}'}}">
+          <div class="au-header__text">
+            <h1 class="au-header__heading">Site title</h1>
+            <div class="au-header__subline">Service description that could be a little longer</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6">
+        {{ render '@sub-nav' }}
+        {{ render '@search' }}
+      </div>
+    </div>
+  </div>
+</header>
+
+{{ render '@main-nav' }}

@@ -1,0 +1,56 @@
+
+<style>
+  .colour__swatches {
+    list-style: none;
+    padding: 0;
+  }
+  .colour__swatch {
+    display: inline-block;
+    width: 10rem;
+    height: 5rem;
+    position: relative;
+    text-align: center;
+    font-weight;
+  }
+  .colour__info {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+  }
+  .colour__info--dark {
+    color: #fff;
+  }
+  .colour__info--light {
+    color: #000;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Health colour palette</h1>
+      <p>The health brand has a range of colours in the palette which enable users to create clear and accessible colour schemes. Any of these colours can be de-saturated or tinted to create lighter colours.
+      Helper SASS functions <code>tint($colour, $percent)</code> and <code>shade($colour, $percent)</code> make this easy.</p>
+      <div class="au-callout">
+        <h2 class="au-display-md">Scope of application</h2>
+        <p>This colour palette applies to primary Health products, such as www.health.gov.au.</p><p>Aligned products, such as Health applications or portfolio agencies can use their own pallete to co-brand. All colours are provided as SASS variables to allow simple override</p>
+        <p><strong>More information about aligned products coming soon.</strong></p>
+      </div>
+      {{#each swatches}}
+      <h2>{{ title }}</h2>
+      <ul class="colour__swatches">
+        {{#each colours}}
+        <li class="colour__swatch" style="background-color: {{ hex }};">
+          <p class="colour__info colour__info--{{ type }}">{{ hex }}</p>
+          {{!-- <div class="colour__info"> --}}
+            {{!-- <div class="colour__sass-variable-name">{{ variable_name }}</div> --}}
+            {{!-- <div class="colour__hex">{{ hex }}</div> --}}
+        </li>
+        {{/each}}
+      </ul>
+      {{/each}}
+
+    </div>
+  </div>
+</div>

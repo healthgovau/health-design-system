@@ -3,7 +3,7 @@
 .stat {
   @include AU-space('margin', 1.5unit 0 2unit);
   @include AU-media('sm') {
-    border-right: 1px dotted $colour-primary-teal-text;
+    border-right: 1px dotted $stat-border-colour;
     &:last-of-type {
       border-right: none;
     }

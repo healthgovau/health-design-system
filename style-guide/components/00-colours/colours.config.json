@@ -1,0 +1,96 @@
+{
+  "title": "Health colours",
+  "status": "wip",
+  "context": {
+    "swatches": [
+      {
+        "title": "Primary colours",
+        "colours": [
+          {
+            "hex": "#002058",
+            "type": "dark"
+          },
+          {
+            "hex": "#041E42",
+            "type": "dark"
+          },
+          {
+            "hex": "#007680",
+            "type": "dark"
+          },
+          {
+            "hex": "#006269",
+            "type": "dark"
+          }
+        ]
+      },
+      {
+        "title": "Complementary colours",
+        "colours": [
+          {
+            "hex": "#0077C8",
+            "type": "dark"
+          },
+          {
+            "hex": "#910048",
+            "type": "dark"
+          },
+          {
+            "hex": "#B5BD00",
+            "type": "light"
+          },
+          {
+            "hex": "#0057B8",
+            "type": "dark"
+          },
+          {
+            "hex": "#0093B2",
+            "type": "dark"
+          }
+        ]
+      },
+      {
+        "title": "Accent colours",
+        "colours": [
+          {
+            "hex": "#D50032",
+            "type": "dark"
+          },
+          {
+            "hex": "#E86335",
+            "type": "dark"
+          },
+          {
+            "hex": "#CFB5000",
+            "type": "dark"
+          }
+        ]
+      },
+      {
+        "title": "Neutral colours",
+        "colours": [
+          {
+            "hex": "#5B6770",
+            "type": "dark"
+          },
+          {
+            "hex": "#A2AAAD",
+            "type": "dark"
+          },
+          {
+            "hex": "#C1C6C8",
+            "type": "dalightk"
+          },
+          {
+            "hex": "#C7C9C7",
+            "type": "light"
+          },
+          {
+            "hex": "#F5F5F5",
+            "type": "light"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 .health-hero {
 
   $parent: &; // more readable than &#{&}
-  background: $colour-light;
+  background: $hero-bg-colour;
   position: relative;
 
   @include AU-media('sm') {
@@ -36,7 +36,7 @@
   }
 
   &__content {
-    background: $colour-dark-hover;
+    background: $hero-bg-colour--content;
     position: relative;
     @include AU-space('padding', 2unit);
     width: 100%;
@@ -64,7 +64,7 @@
 
   // Dark modifier
   &#{$parent}--dark {
-    background: $colour-dark-hover;
+    background: $hero-bg-colour--dark;
     #{$parent}__content {
       color: white;
     }

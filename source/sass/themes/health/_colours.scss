@@ -1,0 +1,100 @@
+// HEALTH COLOURS
+$colour-Shadow: rgba(0,0,0,0.1);
+$colour-card: #fff;
+$colour-Error-light: #ffe7ea;
+$colour-foreground-text--dark: #000000;
+
+// Visual identity palette
+// Primaries
+$colour-primary-blue: #002058;
+$colour-primary-blue-alt: #041E42;
+$colour-primary-teal: #007680;
+$colour-primary-teal-alt: #006269;
+
+// Primaries - tints/shades
+$colour-primary-blue-dark: #005ea0;
+$colour-primary-blue-gradient: #004181; // to be used with $color-primary-blue
+$colour-primary-blue-bg: $colour-primary-blue-gradient; // for backgrounds
+$colour-primary-blue-darker: shade($colour-primary-blue, 20%);
+$colour-primary-teal-dark: shade($colour-primary-teal,10%);
+$colour-primary-teal-darker: shade($colour-primary-teal,20%);
+$colour-primary-teal-light: tint($colour-primary-teal,20%);
+$colour-primary-teal-bg: desaturate($colour-primary-teal-darker, 10%); // for backgrounds
+
+// Complementaries
+$colour-complementary-skyblue: #0077C8;
+$colour-complementary-ruby: #910048;
+$colour-complementary-lime: #B5BD00;
+$colour-complementary-blue: #0057B8;
+$colour-complementary-cyan: #0093B2;
+
+// Complemantaries - tints/shades
+$colour-complementary-skyblue-dark: shade($colour-complementary-skyblue, 20%);
+$colour-complementary-skyblue-bg: desaturate($colour-complementary-skyblue-dark, 30%); // for backgrounds
+$colour-complementary-ruby-dark: shade($colour-complementary-ruby, 10%);
+$colour-complementary-lime-dark: shade($colour-complementary-lime, 10%);
+$colour-complementary-blue-dark: shade($colour-complementary-blue, 20%);
+$colour-complementary-blue-bg: desaturate($colour-complementary-blue-dark, 30%); // for backgrounds
+$colour-complementary-cyan-dark: shade($colour-complementary-cyan, 10%);
+
+// Accents
+$colour-accent-red: #D50032;
+$colour-accent-orange: #FFB500;
+
+// Neutrals
+$colour-dark: #87888A; // core
+$colour-darker: #626366;
+$colour-darkest: #58585b;
+$colour-dark-hover: #313131;
+$colour-lightest: #f9f9f9;
+$colour-lighter: #f1f1f2;
+$colour-light: #ececec;
+$colour-light-dark: #e5e5e5;
+$colour-light-darker: #cdcdcd;
+
+// Health pillars
+// These get generate automatically for aligned sites in _health-brand.scss
+$brand-colour-1: #27b3bb;
+$brand-colour-2: #0091d5;
+$brand-colour-3: #1a8a96;
+$brand-colour-4: #004181;
+
+// TYPOGRAPHY ================================
+// Colours
+%colour-text-inverse {
+  color: white;
+  h1,h2,h3,h4,h5,h6,a {
+    color: white;
+  }
+  a {
+    border-bottom-color: white;
+  }
+}
+$colour-minorText: #414141;
+$colour-primary-teal-text: #99d4de;
+
+// Service delivery
+$alpha-background: #c22f73;
+$alpha-text: #FFF;
+$beta-background: #d34600;
+$beta-text: #FFF;
+$live-background: #158839; // WCAG compliant with #FFF
+
+// Unpublished
+$colour-unpublished-foreground: #e42622; //#ff6562;
+$colour-unpublished-background: #ffe5e5;
+
+// Statistics
+$colour-positive: #a5ffa5;
+$colour-negative: #ffaaaa;
+$colour-path: #006621;
+
+// Design System default overrides
+$AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.0 compliant on backgrounds up to $colour-light (#ECECEC)
+$AU-colordark-foreground-action: #FFF;
+$AU-colordark-foreground-text: #FFF;
+$AU-colordark-background: #000;
+
+// COVID
+$covid-cyan: #4ebdcc;
+$covid-cyan-2: #84D1D8;

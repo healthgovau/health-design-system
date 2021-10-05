@@ -4,5 +4,13 @@
   "preview": "@preview-full-width",
   "context": {
     "title": "Search this website"
-  }
+  },
+  "variants": [
+    {
+      "name": "Dark",
+      "context": {
+        "modifier": "au-main-nav--dark"
+      }
+    }
+  ]
 }

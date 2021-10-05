@@ -47,11 +47,11 @@
     @include AU-media('xs') {
       min-height: $minHeight-Taskbar;
     }
-    @extend %bg-primary-teal;
+    @extend %bg-gradient--secondary;
     &:hover,
     &:active,
     &:focus {
-      background-color: $colour-primary-blue-darker;
+      background-color: $taskbar-bg-colour--hover;
     }
   }
 

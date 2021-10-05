@@ -95,7 +95,7 @@
     <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
       &:hover:not(:disabled),
       &:focus:not(:disabled) {
-        background-color: $colour-foreground-text--dark;
+        background-color: #000;
       }
       border-radius: 0px 4px 4px 0;
     }
@@ -114,9 +114,9 @@
       display: inline-block;
     }
     &__link-path {
-      color: $colour-path;
+      color: $search-text-colour--path;
       a {
-        color: $colour-path;
+        color: $search-text-colour--path;
       }
       font-size: 0.9em;
       word-break: break-all;
@@ -131,7 +131,7 @@
       @include AU-space(margin-top, 0.5unit);
     }
     &__summary-date {
-      color: $colour-dark;
+      color: $search-text-colour--date;
     }
 
     &__tag {
@@ -139,7 +139,7 @@
     }
 
     // For Notes
-    // @todo Move into health theme.
+    // todo - move into health theme.
     &--notes {
       .health-search-result__link-title {
         &:after {
@@ -151,8 +151,8 @@
           padding: 3px 5px;
           border-radius: 4px;
           display: inline-block;
-          border: 1px solid $colour-light;
-          background: $colour-lighter;
+          border: 1px solid #ececec;
+          background: #f1f1f2;
           margin-left: 5px;
         }
       }

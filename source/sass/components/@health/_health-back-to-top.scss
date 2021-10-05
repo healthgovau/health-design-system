@@ -22,7 +22,7 @@
       @include AU-space( width, 6unit );
       @include AU-space( padding, 0.5unit 1unit 1unit);
     }
-    background: $colour-lighter;
+    background: $button-bg-colour--secondary;
     border: none;
     color: $AU-color-foreground-text;
 
@@ -36,7 +36,7 @@
     // Hover
     &:hover,
     &:hover:not(:disabled) {
-      background-color: $colour-light-dark;
+      background-color: $button-bg-colour--secondary-hover;
       color: darken($AU-color-foreground-text, 10%);
       border: none;
       i {

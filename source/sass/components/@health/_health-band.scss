@@ -10,33 +10,34 @@
     }
 
     // Background colours.
-    &.health-band--neutral-1 {
-      @extend %bg-neutral;
-    }
-
-    &.health-band--neutral-2 {
-      @extend %bg-neutral-reverse;
-    }
-
     // Use au-body au-body--dark with these backgrounds.
     &.health-band--primary {
-      @extend %bg-complementary-blue;
+      @extend %bg-gradient--primary;
     }
 
     &.health-band--secondary {
-      @extend %bg-primary-teal;
+      @extend %bg-gradient--secondary;
       .health-band__title--light {
-        color: $colour-primary-teal-text;
+        color: $text-colour--light;
       }
     }
 
     &.health-band--tertiary {
-      @extend %bg-complementary-skyblue;
+      @extend %bg-gradient--tertiary;
     }
 
     &.health-band--tertiary-2 {
-      @extend %bg-primary-blue;
+      @extend %bg-gradient--tertiary-2;
     }
+
+    &.health-band--neutral-1 {
+      @extend %bg-gradient--neutral;
+    }
+
+    &.health-band--neutral-2 {
+      @extend %bg-gradient--neutral-reverse;
+    }
+    
   }
 }
 

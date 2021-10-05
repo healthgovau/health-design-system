@@ -1,23 +1,29 @@
-// @todo Refactor to .health-pillars
-
 // Application of the Health 'pillars' brand element
+$pillars-pattern: 
+    $brand-colour-1 0%,$brand-colour-1 9%,
+    $brand-colour-4 9%,$brand-colour-4 21%,
+    $brand-colour-2 21%,$brand-colour-2 33%,
+    $brand-colour-1 33%,$brand-colour-1 39%, 
+    $brand-colour-3 39%,$brand-colour-3 46%,
+    $brand-colour-4 46%,$brand-colour-4 66%,  
+    $brand-colour-1 66%,$brand-colour-1 72%, 
+    $brand-colour-3 72%,$brand-colour-3 92%,  
+    $brand-colour-2 92%,$brand-colour-2 100%; 
 
-// Pillars var as base64
-%pillars {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjEAAABCCAYAAAAWn/QwAAAACXBIWXMAABcRAAAXEQHKJvM/AAAC70lEQVR42u3ZMWpUYRiG0W+G0ZGQQlDQLuAG7AOCa3JrllZau4VgpkkEQS2SZmQmNq5heHI9ZwnvvfD98Kzm46eHgcfmy7fdfL29MAT88+79zIuXdmC53tzY4JT2f3Zzde3OZt49P3dzf/A9gGX5cGmDU/r1ezfff7glwDKtn888eWuHJX9iEwAAAAAAAEUiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQJGIAAAAAAABJIgYAAAAAAJAkYgAAAAAAAEkiBgAAAAAAkCRiAAAAAAAASSIGAAAAAACQtJmZz2bg0Xm62c/MtSH4r52dvZ7t9tXMzKxWVzNzZxQW67g+n/XRP34qh4M7W7Jd7+f+4HsAy/Fsc+7teuq31NFtBxbswV1ZuL8eRi4+Ju/52gAAAABJRU5ErkJggg==");
-}
 
 // Apply to appropriate element
 .pillars-container {
     position: relative;
+    border-top: 12px solid $brand-primary-colour !important;
+
     #pillars {
         position: absolute;
         top: -12px;
         left: 0;
         height: 12px;
-        width: 288px;
+        width: 300px;
+        background: linear-gradient(to right, $pillars-pattern) !important;
         background-size: cover;
-        @extend %pillars;
         @include AU-media('sm'){
             left: auto;
         }
