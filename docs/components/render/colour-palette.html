@@ -1,0 +1,109 @@
+
+
+
+<style>
+  .colour__swatches {
+    list-style: none;
+    padding: 0;
+  }
+  .colour__swatch {
+    display: inline-block;
+    width: 10rem;
+    height: 5rem;
+    position: relative;
+    text-align: center;
+    font-weight;
+  }
+  .colour__info {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+  }
+  .colour__info--dark {
+    color: #fff;
+  }
+  .colour__info--light {
+    color: #000;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Health colour palette</h1>
+      <p>The health brand has a range of colours in the palette which enable users to create clear and accessible colour schemes. Any of these colours can be de-saturated or tinted to create lighter colours.
+      Helper SASS functions <code>tint($colour, $percent)</code> and <code>shade($colour, $percent)</code> make this easy.</p>
+      <div class="au-callout">
+        <h2 class="au-display-md">Scope of application</h2>
+        <p>This colour palette applies to primary Health products, such as www.health.gov.au.</p><p>Aligned products, such as Health applications or portfolio agencies can use their own pallete to co-brand. All colours are provided as SASS variables to allow simple override</p>
+        <p><strong>More information about aligned products coming soon.</strong></p>
+      </div>
+      <h2>Primary colours</h2>
+      <ul class="colour__swatches">
+        <li class="colour__swatch" style="background-color: #002058;">
+          <p class="colour__info colour__info--dark">#002058</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #041E42;">
+          <p class="colour__info colour__info--dark">#041E42</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #007680;">
+          <p class="colour__info colour__info--dark">#007680</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #006269;">
+          <p class="colour__info colour__info--dark">#006269</p>
+        </li>
+      </ul>
+      <h2>Complementary colours</h2>
+      <ul class="colour__swatches">
+        <li class="colour__swatch" style="background-color: #0077C8;">
+          <p class="colour__info colour__info--dark">#0077C8</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #910048;">
+          <p class="colour__info colour__info--dark">#910048</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #B5BD00;">
+          <p class="colour__info colour__info--light">#B5BD00</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #0057B8;">
+          <p class="colour__info colour__info--dark">#0057B8</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #0093B2;">
+          <p class="colour__info colour__info--dark">#0093B2</p>
+        </li>
+      </ul>
+      <h2>Accent colours</h2>
+      <ul class="colour__swatches">
+        <li class="colour__swatch" style="background-color: #D50032;">
+          <p class="colour__info colour__info--dark">#D50032</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #E86335;">
+          <p class="colour__info colour__info--dark">#E86335</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #CFB5000;">
+          <p class="colour__info colour__info--dark">#CFB5000</p>
+        </li>
+      </ul>
+      <h2>Neutral colours</h2>
+      <ul class="colour__swatches">
+        <li class="colour__swatch" style="background-color: #5B6770;">
+          <p class="colour__info colour__info--dark">#5B6770</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #A2AAAD;">
+          <p class="colour__info colour__info--dark">#A2AAAD</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #C1C6C8;">
+          <p class="colour__info colour__info--dalightk">#C1C6C8</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #C7C9C7;">
+          <p class="colour__info colour__info--light">#C7C9C7</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #F5F5F5;">
+          <p class="colour__info colour__info--light">#F5F5F5</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
