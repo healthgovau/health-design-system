@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head class="no-js">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link media="all" rel="stylesheet" href="../../build/css/hds-all.css">
+  <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
+  <script src="../../build/js/libraries/jquery.min.js"></script>
+  <script src="../../build/js/libraries/jquery-ui.min.js"></script>
+  <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
+  <script src="../../build/js/libraries/jquery.once.min.js"></script>
+  <script src="../../build/js/libraries/lazyload.min.js"></script>
+  <script src="../../build/js/libraries/tippy.all.min.js"></script>
+  <script src="../../build/js/libraries/anchorific.min.js"></script>
+  <script src="../../data.js"></script>
+  <script src="../../build/js/hds.js"></script>
+  <title>Preview Layout</title>
+</head>
+<body class="au-body au-grid">
+  <div class="container-fluid full-width">
+    <div class="row">
+    <header class="au-header au-header--dark pillars-container" role="banner">
+  <div class="container">
+    <div id="pillars"></div>
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="/" title="Home" rel="home" class="au-header__logo">
+          <img src="../../images/DoHCrest-white.png"
+               alt="Australia Government Department of Health"
+               class="au-header__logo-image au-responsive-media-img"
+               width="600" height="146">
+        </a>
+        <div class="au-sronly">
+          <p>Australian Government Department of Health</p>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="health-sub-nav text--align-right">
+  <h3 class="au-sronly">Sub menu</h3>
+  <ul class="au-link-list au-link-list--inline">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</div>
+        <div class="health-search health-search--global">
+  <form class="au-form">
+    <div class="health-search__form__input-wrapper">
+      <div class="au-form__item">
+        <label class="au-sronly" for="search-field">Search</label>
+        <input placeholder="Search this website"
+               class="health-search__form__input au-text-input au-text-input au-text-input--block ui-autocomplete-input"
+               size="30" type="text" id="search-field" name="funnelback_search_field" value=""
+               maxlength="128" autocomplete="off">
+      </div>
+      <div class="health-loading"></div>    </div>
+    <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
+  </form>
+</div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.searchAutocomplete('#search-field', dinosaurData);
+  });
+</script>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="au-main-nav  au-main-nav--dark" aria-label="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="main-nav-default" class="au-main-nav__content">
+          <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--open" onclick="return AU.mainNav.Toggle( this )">
+            <span class="svg-inline--fa fa-fw">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+            </span>
+            Menu
+          </button>
+          <button class="au-main-nav__toggle au-main-nav__toggle--search au-main-nav__toggle--open">
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__closed">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+            </span>
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__open">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+            </span>
+            Search
+          </button>
+          <div class="au-main-nav__menu">
+            <div class="au-main-nav__menu-inner">
+              <div class="au-main-nav__focus-trap-top"></div>
+              <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--close"
+                onclick="return AU.mainNav.Toggle( this )">
+                <span class="svg-inline--fa fa-fw">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                </span>
+                Close
+              </button>
+              <ul class="au-link-list">
+                <li class="active"><a href="#" aria-current="page">Home</a></li>
+                <li><a href="#">Dinosaurs</a></li>
+                <li><a href="#">Interesting facts</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+              <div class="au-main-nav__focus-trap-bottom"></div>
+            </div>
+          </div>
+          <div class="au-main-nav__overlay" aria-controls="main-nav-default" onclick="return AU.mainNav.Toggle( this )">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </div>
+  </div>
+</body>
+</html>
