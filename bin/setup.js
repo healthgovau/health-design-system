@@ -27,8 +27,11 @@ try {
 }
 
 //Check if assets/scss/main.scss exists, if not create it with reference.
+if (!fs.existsSync(base_path + '/assets/scss')){
+  fs.mkdirSync(base_path + '/assets/scss');
+}
 if (fs.existsSync(base_path + '/assets/scss/main.scss')) {
- console.log("/assets/scss/main.scss exists, ensure that it contains:\n  @import '../hds/sass/all.scss';\nto utilise HDS");
+  console.log("/assets/scss/main.scss exists, ensure that it contains:\n  @import '../hds/sass/all.scss';\nto utilise HDS");
 } else{
   fs.writeFile(base_path + '/assets/scss/main.scss', "@import '../hds/sass/all.scss';", function(err) {
     if(err) {
@@ -37,7 +40,6 @@ if (fs.existsSync(base_path + '/assets/scss/main.scss')) {
     console.log("■ Created /assets/scss/main.scss and added import statement for HDS");
   });
 }
-
 
 //Add GOLD dependencies
 getDeps.getByFile(hds + '/package.json')
