@@ -14,8 +14,6 @@ const srcDir = hds + '/source';
 const destDir = process.cwd() + `/assets/hds`;
 
 
-
-
 //Copy files to assets folder
 try {
   fs.copySync(srcDir, destDir, {overwrite: true})
@@ -25,14 +23,14 @@ try {
 }
 
 //Check if assets/scss/main.scss exists, if not create it with reference.
-if (!fs.existsSync(base_path + '/assets/scss')){
+if (!fs.existsSync(base_path + '/assets/scss')) {
   fs.mkdirSync(base_path + '/assets/scss');
 }
 if (fs.existsSync(base_path + '/assets/scss/main.scss')) {
   console.log("/assets/scss/main.scss exists, ensure that it contains:\n  @import '../hds/sass/all.scss';\nto utilise HDS");
-} else{
-  fs.writeFile(base_path + '/assets/scss/main.scss', "@import '../hds/sass/all.scss';", function(err) {
-    if(err) {
+} else {
+  fs.writeFile(base_path + '/assets/scss/main.scss', "@import '../hds/sass/all.scss';", function (err) {
+    if (err) {
       return console.log(err);
     }
     console.log("■ Created /assets/scss/main.scss and added import statement for HDS");
@@ -53,13 +51,15 @@ getDeps.getByFile(hds + '/package.json')
   });
 
 //Copy and rename pancake ref file
-if (!fs.existsSync(base_path + '/assets/hds/sass/vendor')){
+if (!fs.existsSync(base_path + '/assets/hds/sass/vendor')) {
   fs.mkdirSync(base_path + '/assets/hds/sass/vendor');
 }
-fs.copyFile(base_path + '/pancake/sass/pancake.scss', base_path + '/assets/hds/sass/vendor/govau-ds.scss', (err) => {
-  if (err) throw err;
-  console.log('■ Pancake reference file copied and renamed.');
-});
+if (fs.existsSync(base_path + '/pancake/sass/pancake.scss')) {
+  fs.copyFile(base_path + '/pancake/sass/pancake.scss', base_path + '/assets/hds/sass/vendor/govau-ds.scss', (err) => {
+    if (err) throw err;
+    console.log('■ Pancake reference file copied and renamed.');
+  });
+}
 
 
 //Remove pancake folder
