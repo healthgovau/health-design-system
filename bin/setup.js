@@ -63,5 +63,5 @@ if (fs.existsSync(base_path + '/pancake/sass/pancake.scss')) {
 
 
 //Remove pancake folder
-// fs.rmdirSync(base_path + '/pancake', {recursive: true});
+fs.rmdirSync(base_path + '/pancake', {recursive: true});
 console.log("■ Removed pancake folder");
