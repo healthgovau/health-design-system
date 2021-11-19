@@ -14,9 +14,7 @@ const srcDir = hds + '/source';
 const destDir = process.cwd() + `/assets/hds`;
 
 
-//Remove pancake folder
-fs.rmdirSync(base_path + '/pancake', {recursive: true});
-console.log("■ Removed pancake folder");
+
 
 //Copy files to assets folder
 try {
@@ -53,3 +51,17 @@ getDeps.getByFile(hds + '/package.json')
       console.log('■ GOLD references written to scss file.');
     });
   });
+
+//Copy and rename pancake ref file
+if (!fs.existsSync(base_path + '/assets/hds/sass/vendor')){
+  fs.mkdirSync(base_path + '/assets/hds/sass/vendor');
+}
+fs.copyFile(base_path + '/pancake/sass/pancake.scss', base_path + '/assets/hds/sass/vendor/govau-ds.scss', (err) => {
+  if (err) throw err;
+  console.log('■ Pancake reference file copied and renamed.');
+});
+
+
+//Remove pancake folder
+// fs.rmdirSync(base_path + '/pancake', {recursive: true});
+console.log("■ Removed pancake folder");
