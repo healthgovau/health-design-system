@@ -59,6 +59,8 @@ if (fs.existsSync(base_path + '/pancake/sass/pancake.scss')) {
     if (err) throw err;
     console.log('■ Pancake reference file copied and renamed.');
   });
+} else {
+  console.log('\x1b[31m%s\x1b[0m','■ WARNING! No pancace folder found, cannot copy file. Delete the node_modules folder and try again.');
 }
 
 
