@@ -51,11 +51,11 @@ getDeps.getByFile(hds + '/package.json')
   });
 
 //Copy and rename pancake ref file
-if (!fs.existsSync(base_path + '/assets/hds/sass/vendor')) {
-  fs.mkdirSync(base_path + '/assets/hds/sass/vendor');
+if (!fs.existsSync(base_path + '/assets/hds/sass/vendors')) {
+  fs.mkdirSync(base_path + '/assets/hds/sass/vendosr');
 }
 if (fs.existsSync(base_path + '/pancake/sass/pancake.scss')) {
-  fs.copyFile(base_path + '/pancake/sass/pancake.scss', base_path + '/assets/hds/sass/vendor/govau-ds.scss', (err) => {
+  fs.copyFile(base_path + '/pancake/sass/pancake.scss', base_path + '/assets/hds/sass/vendors/govau-ds.scss', (err) => {
     if (err) throw err;
     console.log('■ Pancake reference file copied and renamed.');
   });
