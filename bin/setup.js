@@ -52,7 +52,7 @@ getDeps.getByFile(hds + '/package.json')
 
 //Copy and rename pancake ref file
 if (!fs.existsSync(base_path + '/assets/hds/sass/vendors')) {
-  fs.mkdirSync(base_path + '/assets/hds/sass/vendosr');
+  fs.mkdirSync(base_path + '/assets/hds/sass/vendors');
 }
 if (fs.existsSync(base_path + '/pancake/sass/pancake.scss')) {
   fs.copyFile(base_path + '/pancake/sass/pancake.scss', base_path + '/assets/hds/sass/vendors/govau-ds.scss', (err) => {
