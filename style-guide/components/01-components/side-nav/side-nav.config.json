@@ -1,0 +1,14 @@
+{
+  "title": "Side nav",
+  "context": {
+    "class": "au-side-nav"
+  },
+  "variants": [
+    {
+      "name": "Alternative",
+      "context": {
+        "class": "au-side-nav au-side-nav--alt"
+      }
+    }
+  ]
+}

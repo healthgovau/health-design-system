@@ -14,7 +14,7 @@
 }
 
 @mixin rgba-background( $color, $opacity: 1 ) {
-  background-color: rgba($color, $opacity); 
+  background-color: rgba($color, $opacity);
 }
 
 // TODO
@@ -42,4 +42,41 @@
       #{$attribute}: get-mapped-value($modifier, $map) !important;
     }
   }
+}
+
+// When called via @include name(), the mixin will render CSS selectors
+
+// The "chevron" mixin is based on the CSS for the chevron of the HDS "figure".
+// @see https://designsystem.health.gov.au/components/detail/figure.html .
+@mixin chevron($left-or-right-side, $colour) {
+  content: ' ';
+  position: absolute;
+  @include AU-space(margin-top, 0);
+  @include AU-space($left-or-right-side, 1unit);
+  @include AU-space(width, 1unit);
+  @include AU-space(height, 1unit);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns= 'http://www.w3.org/2000/svg' viewBox= '0 0 128 128' %3E%3Cpath fill= '%23" + $colour + "' d= 'M64 0l64 64-8 8-64-64' /%3E%3Cpath fill= '%23" + $colour + "' d= 'M64 0l8 8-64 64L0 64' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 101;
+}
+
+@mixin chevron-down($left-or-right-side, $colour) {
+  @include chevron($left-or-right-side, $colour);
+  @include AU-space(margin-top, 0.3unit);
+  transform: rotate(180deg);
+}
+
+@mixin chevron-right($left-or-right-side, $colour) {
+  @include chevron($left-or-right-side, $colour);
+  @include AU-space(margin-top, 0.3unit);
+  @include AU-space($left-or-right-side, 1.25unit);
+  transform: rotate(90deg);
+}
+
+@mixin chevron-left($left-or-right-side, $colour) {
+  @include chevron($left-or-right-side, $colour);
+  @include AU-space(margin-top, 0.3unit);
+  @include AU-space($left-or-right-side, 1.25unit);
+  transform: rotate(-90deg);
 }

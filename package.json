@@ -36,6 +36,7 @@
     "@gov.au/main-nav": "1.0.8",
     "@gov.au/page-alerts": "2.1.3",
     "@gov.au/pancake-js": "1.2.1",
+    "@gov.au/pancake-sass": "^2.3.7",
     "@gov.au/responsive-media": "2.0.14",
     "@gov.au/select": "2.0.11",
     "@gov.au/side-nav": "5.0.7",
