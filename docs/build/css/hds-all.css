@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.17 */
+/*! @health.gov.au/health-design-system v1.4.0-alpha.18 */
 @charset "UTF-8";
 .au-body .health-band.health-band--primary, .health-sub-header.health-sub-header--campaign .health-sub-header__content {
   background-color: #004693;
@@ -4116,6 +4116,8 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
 
 .au-main-nav {
   border-bottom-color: #005ea0; }
+  .au-main-nav .au-main-nav__toggle {
+    color: #000000; }
   .au-main-nav.au-main-nav--dark {
     border-bottom-color: #001a46;
     background-color: #002058;
@@ -4173,6 +4175,16 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
   @media print {
     .au-main-nav {
       display: none; } }
+
+.au-main-nav__toggle.au-main-nav__toggle--open:before,
+.au-main-nav__toggle.au-main-nav__toggle--close:before {
+  content: ""; }
+
+.au-main-nav__toggle--search {
+  float: right; }
+
+.au-main-nav__toggle--search__open.svg-inline--fa {
+  display: none; }
 
 .au-page-alerts {
   max-width: 42rem; }
