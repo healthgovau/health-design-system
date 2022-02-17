@@ -4,6 +4,11 @@
 
 .au-main-nav {
   border-bottom-color: $main-nav-border-colour;
+
+  .au-main-nav__toggle {
+    color: $colour-foreground-text--dark;
+  }
+
   &.au-main-nav--dark {
     border-bottom-color: $main-nav-border-colour--dark;
     background-color: $main-nav-bg-colour--dark;

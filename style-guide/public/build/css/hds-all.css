@@ -4116,6 +4116,8 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
 
 .au-main-nav {
   border-bottom-color: #005ea0; }
+  .au-main-nav .au-main-nav__toggle {
+    color: #000000; }
   .au-main-nav.au-main-nav--dark {
     border-bottom-color: #001a46;
     background-color: #002058;
