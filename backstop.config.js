@@ -3,7 +3,7 @@ let scenarios = [];
 const components = [
   {
     label: "Colours",
-    url: "http://localhost:3000/components/preview/colours/"
+    url: "http://localhost:3000/components/preview/colour-palette/"
   },
   {
     label: "Typograph - Abbreviations",
@@ -286,8 +286,12 @@ const components = [
     url: "http://localhost:3000/components/preview/header--default/"
   },
   {
-    label: "Header - Campaign",
-    url: "http://localhost:3000/components/preview/header--campaign/"
+    label: "Header - Aligned",
+    url: "http://localhost:3000/components/preview/header--aligned/"
+  },
+  {
+    label: "Header - Simple",
+    url: "http://localhost:3000/components/preview/header--simple/"
   },
   {
     label: "Hero - Default",
@@ -380,38 +384,6 @@ const components = [
   {
     label: "Pager",
     url: "http://localhost:3000/components/preview/pager/"
-  },
-  {
-    label: "Recommendation - Default",
-    url: "http://localhost:3000/components/preview/recommendation--default/"
-  },
-  {
-    label: "Recommendation - Grade A",
-    url: "http://localhost:3000/components/preview/recommendation--grade-a/"
-  },
-  {
-    label: "Recommendation - Grade B",
-    url: "http://localhost:3000/components/preview/recommendation--grade-b/"
-  },
-  {
-    label: "Recommendation - Grade C",
-    url: "http://localhost:3000/components/preview/recommendation--grade-c/"
-  },
-  {
-    label: "Recommendation - Grade D",
-    url: "http://localhost:3000/components/preview/recommendation--grade-d/"
-  },
-  {
-    label: "Recommendation - Grade evidence based",
-    url: "http://localhost:3000/components/preview/recommendation--grade---evidence-based/"
-  },
-  {
-    label: "Recommendation - Grade qualified evidence based",
-    url: "http://localhost:3000/components/preview/recommendation--grade---qualified-evidence-based/"
-  },
-  {
-    label: "Recommendation - Grade consensus based",
-    url: "http://localhost:3000/components/preview/recommendation--grade---consensus-based/"
   },
   {
     label: "References",

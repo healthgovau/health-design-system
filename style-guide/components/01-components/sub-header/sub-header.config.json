@@ -17,7 +17,7 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
-          "image": "https://loremflickr.com/1920/700/health",
+          "image": "https://picsum.photos/id/867/1920/700",
           "color": ""
         }
       },
@@ -32,7 +32,7 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
-          "image": "https://loremflickr.com/1920/700/health",
+          "image": "https://picsum.photos/id/867/1920/700",
           "color": "--secondary"
         }
       },
@@ -47,7 +47,7 @@
           "title": "Campaign title",
           "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
           "callout": "Callout button",
-          "image": "https://loremflickr.com/1920/700/health",
+          "image": "https://picsum.photos/id/867/1920/700",
           "color": "--tertiary"
         }
       },
