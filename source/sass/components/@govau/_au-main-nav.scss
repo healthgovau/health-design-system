@@ -51,7 +51,7 @@
     }
 
   }
-  
+
   a {
     @include AU-media($AU-main-nav-breakpoint) {
       font-weight: bold;
@@ -87,4 +87,18 @@
   @media print {
     display: none;
   }
+}
+
+// Remove duplicate hamburger menu icon.
+.au-main-nav__toggle.au-main-nav__toggle--open:before,
+.au-main-nav__toggle.au-main-nav__toggle--close:before {
+  content: "";
+}
+
+.au-main-nav__toggle--search {
+  float: right;
+}
+
+.au-main-nav__toggle--search__open.svg-inline--fa {
+  display: none;
 }

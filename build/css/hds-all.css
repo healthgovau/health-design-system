@@ -4174,6 +4174,16 @@ a.au-btn.au-btn--dark:hover:not(:disabled) {
     .au-main-nav {
       display: none; } }
 
+.au-main-nav__toggle.au-main-nav__toggle--open:before,
+.au-main-nav__toggle.au-main-nav__toggle--close:before {
+  content: ""; }
+
+.au-main-nav__toggle--search {
+  float: right; }
+
+.au-main-nav__toggle--search__open.svg-inline--fa {
+  display: none; }
+
 .au-page-alerts {
   max-width: 42rem; }
   .au-page-alerts--hidden {
