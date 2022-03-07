@@ -53,6 +53,8 @@
     "@frctl/mandelbrot": "^1.2.1",
     "backstopjs": "^5.3.4",
     "del": "^5.0.0",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
