@@ -123,3 +123,8 @@ The HDS uses [Gulp](https://gulpjs.com) to create compiled versions of the HDS C
 ```
 npm run gulp
 ```
+### HDS Starter Kit
+
+setup.js is a file which is used to configure the HDS Starter kit.
+It is used to create a base fiel structure for instant development.
+More information about the HDS Starter kit can be found here: https://github.com/healthgovau/health-design-system-starter-kit
