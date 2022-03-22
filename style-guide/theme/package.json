@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.4.1",
     "node-sass": "^4.9.3",
     "normalize.css": "^7.0.0",
     "onchange": "^3.3.0",
