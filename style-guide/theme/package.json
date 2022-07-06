@@ -23,7 +23,7 @@
     "onchange": "^3.3.0",
     "postcss-cli": "^4.1.1",
     "sass-mq": "^3.3.2",
-    "select2": "^4.0.5"
+    "select2": "^4.0.6"
   },
   "browserslist": [
     "last 2 versions",
