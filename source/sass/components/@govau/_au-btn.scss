@@ -1,6 +1,6 @@
 // Button.
 .au-btn,
-a.au-btn  {
+a.au-btn {
 
   // Convert tertiary button to look like a link.
   &--tertiary {
@@ -19,5 +19,9 @@ a.au-btn  {
       background-color: $button-bg-colour--dark-hover;
       border-color: $button-border-colour--dark-hover;
     }
+  }
+
+  &+.au-btn {
+    @include AU-space(margin-left, 1unit);
   }
 }

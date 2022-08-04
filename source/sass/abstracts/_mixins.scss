@@ -1,6 +1,6 @@
 // When called via @include name(), the mixin will render CSS selectors
 
-@mixin opacity( $opacity ) {
+@mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity-ie+")";
@@ -13,7 +13,7 @@
   transition: $transition;
 }
 
-@mixin rgba-background( $color, $opacity: 1 ) {
+@mixin rgba-background($color, $opacity: 1) {
   background-color: rgba($color, $opacity);
 }
 
@@ -37,7 +37,9 @@
 
 // generates modifer classes in the bem syntax
 @mixin helper-classes($attribute, $map) {
-  @each $modifier, $value in $map {
+
+  @each $modifier,
+  $value in $map {
     &--#{$modifier} {
       #{$attribute}: get-mapped-value($modifier, $map) !important;
     }
@@ -55,7 +57,7 @@
   @include AU-space($left-or-right-side, 1unit);
   @include AU-space(width, 1unit);
   @include AU-space(height, 1unit);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns= 'http://www.w3.org/2000/svg' viewBox= '0 0 128 128' %3E%3Cpath fill= '%23" + $colour + "' d= 'M64 0l64 64-8 8-64-64' /%3E%3Cpath fill= '%23" + $colour + "' d= 'M64 0l8 8-64 64L0 64' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns= 'http://www.w3.org/2000/svg' viewBox= '0 0 128 128' %3E%3Cpath fill= '%23"+ $colour + "' d= 'M64 0l64 64-8 8-64-64' /%3E%3Cpath fill= '%23"+ $colour + "' d= 'M64 0l8 8-64 64L0 64' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   z-index: 101;
@@ -79,4 +81,24 @@
   @include AU-space(margin-top, 0.3unit);
   @include AU-space($left-or-right-side, 1.25unit);
   transform: rotate(-90deg);
+}
+
+/// Generate coloured background.
+/// Supports single colour and bicolour gradient backgrounds.
+/// @param {string} $colour_a - A colour value (e.g. white, #ffffff, rgb(255, 255, 255)).
+/// @param {string} $colour_b - A colour value (e.g. black, #000, rgb(0, 0, 0)).
+/// @param {string} $angle - Gradient angle expressed either in degrees (e.g. 105deg) or as texts (e.g. to right, to bottom).
+@mixin background-style($colour_a: null, $colour_b: null, $angle: to right) {
+  @if $colour_a and $colour_b {
+    background-color: $colour_a;
+    background: linear-gradient($angle, $colour_a, $colour_b);
+  }
+
+  @else if $colour_a {
+    background: $colour_a;
+  }
+
+  @else {
+    @error "Something went wrong with the background-style mixin. Check the mixin arguments and try again.";
+  }
 }

@@ -1,48 +1,106 @@
-// Bands.
-.au-body {
-  .health-band {
-    @include AU-clearfix;
-    @include AU-space('padding-top', 1.25unit);
-    @include AU-space('padding-bottom', 1.25unit);
-    @include AU-media(md) {
-      @include AU-space('padding-top', 2.5unit);
-      @include AU-space('padding-bottom', 2.5unit);
-    }
+// Band types and colours
 
-    // Background colours.
-    // Use au-body au-body--dark with these backgrounds.
-    &.health-band--primary {
-      @extend %bg-gradient--primary;
-    }
+/**
+ * Markup:
+ * <div class="health-band health-band--MODIFIERS"> - This div doesn't style the band.
+ *   <div class="health-band__container"> - This div styles the contained band. This is included to permit stacking.
+ *     BAND CONTENT
+ *   </div>::before - This pseudo-class styles the full width band.
+ * </div>
+ */
 
-    &.health-band--secondary {
-      @extend %bg-gradient--secondary;
-      .health-band__title--light {
-        color: $text-colour--light;
+// Make band mixin
+@mixin make-band($variant, $colour1: null, $colour2: null, $dark: null) {
+  &.health-band--#{$variant} {
+
+    .health-band__container,
+    &.health-band--full-width-bg::before {
+      @if $colour1 and $colour2 {
+        @include background-style(var(--#{$colour1}), var(--#{$colour2}));
+      }
+
+      @else {
+        @include background-style(var(--#{$colour1}));
       }
     }
 
-    &.health-band--tertiary {
-      @extend %bg-gradient--tertiary;
+    &.health-band--full-width-bg {
+      .health-band__container {
+        background: none;
+      }
     }
 
-    &.health-band--tertiary-2 {
-      @extend %bg-gradient--tertiary-2;
+    // Invert text if background is dark
+    @if $dark=="dark" {
+      @extend %colour-text-inverse;
+    }
+  }
+}
+
+.au-body {
+  .health-band {
+    // TODO Add adjacent selector handling so that stacked bands don't double the margin
+    @include AU-clearfix;
+    position: relative; // reqd for inner container behaviour
+    isolation: isolate;
+    background: none !important; // Remove as applies to container to allow layer management
+    background-color: none !important;
+    padding: 0 !important;
+    @include AU-space(margin, 2unit 0);
+
+    // Types/layouts
+    // Contained band (default)
+    &[class*="health-band--"] {
+      .health-band__container {
+        @include AU-space(padding, 2unit);
+        border-radius: 6px;
+      }
     }
 
-    &.health-band--neutral-1 {
-      @extend %bg-gradient--neutral;
+    // Full width background setup
+    &.health-band--full-width-bg {
+      @include AU-space(margin, 0);
+
+      // Apply full width background
+      // No default colour specified. Do it for each band colour.
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        margin-inline-start: 50%;
+        transform: translatex(-50%);
+        display: inherit;
+        z-index: -1;
+      }
+
+      .health-band__container {
+        @include AU-space(padding, 2unit 0);
+      }
     }
 
-    &.health-band--neutral-2 {
-      @extend %bg-gradient--neutral-reverse;
+    // Everything goes full-width
+    &.health-band--full-width {
+      @include AU-space(margin, 0);
+      width: 100vw;
+      margin-inline-start: 50%;
+      transform: translateX(-50%);
     }
-    
+
+    // Colours are declared in _colours-map.scss as CSS vars
+    // Make band variants via mixin args: variant-name, start colour, end colour (opt)
+    @include make-band("primary", "primary-gradient-bg--start", "primary-gradient-bg--end", "dark");
+    @include make-band("secondary", "secondary-gradient-bg--start", "secondary-gradient-bg--end", "dark");
+    @include make-band("tertiary", "tertiary-gradient-bg--start", "tertiary-gradient-bg--end", "dark");
+    @include make-band("neutral", "neutral-bg");
+    @include make-band("neutral--darker", "neutral-bg--darker");
+
   }
 }
 
 .health-band__image--image-text-horizontal {
   display: none;
+
   @include AU-media(sm) {
     display: block;
     width: 100%;

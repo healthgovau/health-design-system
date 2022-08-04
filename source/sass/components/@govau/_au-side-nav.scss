@@ -5,17 +5,20 @@
     @include AU-space('margin-top', -1unit);
 
     // Add our colours.
-    @extend %bg-gradient--neutral;
+    @include background-style(var(--neutral-bg));
+
     @include AU-media(sm) {
       background: $AU-color-background;
     }
 
     a {
       background: transparent;
+
       &:hover,
       &:focus {
         background-color: $side-nav-link-bg-colour--hover;
       }
+
       &.active {
         font-weight: bold;
         color: $AU-color-foreground-text;
@@ -23,7 +26,8 @@
       }
     }
 
-    li, ul {
+    li,
+    ul {
       position: relative;
     }
 
@@ -39,165 +43,11 @@
     padding-left: 0;
     padding-right: 0;
     @include AU-space(padding-bottom, 2unit);
-    @include AU-media(sm){
+
+    @include AU-media(sm) {
       float: right;
       padding-left: 12px;
       padding-right: 12px;
-    }
-  }
-
-  .au-side-nav--alt {
-
-    // General side-nav attributes.
-    background: white;
-
-    @include AU-space('margin-top', 1 unit);
-    @include AU-media('sm') {
-      @include AU-space('margin-top', 0);
-    }
-
-    &--right {
-      @include AU-space('padding-bottom', 0);
-    }
-
-    .au-side-nav__header {
-      @include AU-space('margin', 1 unit);
-      @include AU-media('sm') {
-        display: none;
-      }
-    }
-
-    // Menu Levels:  "level-2", "level-3", "level-4" and "level-5".
-    .au-side-nav__content {
-
-      // Level-2 menu item.
-      // There is only 1 level-2 item in a side-nav menu (top-most element).
-      .au-sidenav__title {
-        a,
-        a.active {
-          color: white;
-
-          // The background colour is also the selected menu item left border.
-          background: $side-nav-alt-border-colour;
-          border-bottom: 0;
-        }
-
-        // On hover, use a darker shade of the same background colour.
-        a:hover,
-        a.active:hover {
-          background: shade($side-nav-alt-border-colour, 10%);
-        }
-      }
-
-      // Level 3 menu items.
-      > ul.au-link-list > li {
-        // Make space possibly for a chevron in each level-3 menu list item.
-        > a {
-          @include AU-space(padding-right, 2.5 unit);
-
-          // Keep background colour of hover consistent in level-3 items.
-          &:hover,
-          &:active {
-            background: $side-nav-alt-active-colour;
-          }
-        }
-
-        // The "expanded" level-3 menu item to which this page belongs.
-        &.expanded {
-          > a:first-child {
-            background-color: white;
-            color: black;
-            font-weight: bold;
-
-            &:hover,
-            &.active,
-            &.active:hover,
-            &.active:active {
-              // If the expanded level-3 item is also this page's menu item
-              // then its background colour is the set.
-              background: $side-nav-alt-active-colour;
-            }
-          }
-
-          // Put a blue down arrow on the right side of the expanded menu's item.
-          > a:first-child:after {
-            @include chevron-down(right, "00205B");
-          }
-        }
-
-        // A level-3 menu item that's "collapsed" indicates a deeper menu list.
-        &.collapsed {
-          // Put a blue right arrow on the right side of a collapsed menu title.
-          a:after {
-            @include chevron-right(right, "00205B");
-          }
-        }
-
-        // The "active" link identifies the current page's location in the menu.
-        a.active {
-          border-left: 0.25rem solid $side-nav-alt-active-colour;
-          background: $side-nav-alt-active-colour;
-          font-weight: bold;
-        }
-      }
-
-      // Level-4 menu items.
-      ul.au-link-list > li.expanded ul.au-link-list > li {
-        @include AU-space(margin-left, 1.5 unit);
-
-        > a {
-          @include AU-space(padding-left, 0.5 unit);
-          @include AU-space(padding-right, 0);
-
-          // For simplicity, do not put a chevron on menu items at level-4.
-          &:after {
-            background-image: none;
-          }
-
-          // Keep background colour of hover consistent in level-4 items.
-          &:hover,
-          &:active {
-            background: $side-nav-alt-active-colour;
-          }
-
-          // Level-4 menu item is active if it offers the current page.
-          &.active {
-            font-weight: bold;
-            background: $side-nav-alt-active-colour;
-          }
-        }
-
-        // A level-4 menu item that is expanded has child menu items.
-        &.expanded > a {
-          font-weight: bold;
-
-          // The current page's level-4 menu item may have child menu items.
-          &.active {
-            background: $side-nav-alt-active-colour;
-          }
-        }
-      }
-
-      // Level 5 menu items.
-      // Business rule: Level-5 is the deepest level in the side-nav.
-      ul.au-link-list > li.expanded ul.au-link-list > li.expanded ul.au-link-list li {
-        @include AU-space(margin-left, 3.5 unit);
-
-        // Keep spacing during hover consistent in level-5 items.
-        a,
-        a:hover,
-        a:active {
-          @include AU-space(padding-left, 0.5 unit);
-        }
-
-        // A level-5 menu item may point at the current page.
-        &.expanded {
-          a.active {
-            font-weight: bold;
-            background: $side-nav-alt-active-colour;
-          }
-        }
-      }
     }
   }
 }

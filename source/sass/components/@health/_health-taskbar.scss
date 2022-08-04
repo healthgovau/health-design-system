@@ -22,15 +22,18 @@
 %taskbar {
   color: #000;
   @include AU-clearfix;
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
     >li {
       display: inline;
       float: left;
       text-align: center;
       margin-bottom: 0;
+
       .taskbar__item:last {
         margin-right: 0;
       }
@@ -44,10 +47,13 @@
     display: block;
     border: 0;
     min-height: 0;
+
     @include AU-media('xs') {
       min-height: $minHeight-Taskbar;
     }
-    @extend %bg-gradient--secondary;
+
+    @include background-style(var(--subheader-gradient-bg--start), var(--subheader-gradient-end));
+
     &:hover,
     &:active,
     &:focus {
@@ -79,20 +85,27 @@
 @for $i from 2 through 6 {
   .taskbar--tiled--#{$i} {
     @extend %taskbar;
+
     ul {
       >li {
         width: width-decimal(1);
-      } // Responsive
+      }
+
+      // Responsive
       @include AU-media('xs') {
         >li {
           width: width-decimal(2);
         }
-      } // Responsive
+      }
+
+      // Responsive
       @include AU-media('sm') {
         >li {
           width: width-decimal(3);
         }
-      } // Responsive
+      }
+
+      // Responsive
       @include AU-media('md') {
         >li {
           width: width-decimal($i);
@@ -103,26 +116,34 @@
 
   .taskbar--#{$i} {
     @extend %taskbar;
+
     ul {
       >li {
         width: width-decimal(1);
-      } // Responsive
+      }
+
+      // Responsive
       @include AU-media('xs') {
         >li {
           width: width-decimal(2);
         }
-      } // Responsive
+      }
+
+      // Responsive
       @include AU-media('sm') {
         >li {
           width: width-decimal(3);
         }
-      } // Responsive
+      }
+
+      // Responsive
       @include AU-media('md') {
         >li {
           width: width-decimal($i);
         }
       }
     }
+
     .taskbar__item {
       margin: 0;
       background-color: transparent;
@@ -136,14 +157,15 @@
 .taskbar--tiled--3,
 .taskbar--tiled--4,
 .taskbar--tiled--5,
-.taskbar--tiled--6
-{
+.taskbar--tiled--6 {
 
-  &.view ul > .views-row {
+  &.view ul>.views-row {
     &:hover {
       cursor: pointer;
     }
+
     margin: 0;
+
     .node {
       @extend %taskbar__item;
     }

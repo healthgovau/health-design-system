@@ -3,52 +3,62 @@
 //--------------------------------------------------------------
 
 .au-main-nav {
-  border-bottom-color: $main-nav-border-colour;
+  border-bottom-color: var(--main-nav-border) !important;
 
-  .au-main-nav__toggle {
-    color: $colour-foreground-text--dark;
-  }
-
+  // TODO Deprecate in v2
   &.au-main-nav--dark {
-    border-bottom-color: $main-nav-border-colour--dark;
-    background-color: $main-nav-bg-colour--dark;
-    background: $main-nav-bg-gradient--dark;
+    border-bottom-color: var(--main-nav-border);
+    @include background-style(var(--main-nav-gradient-bg--start), var(--main-nav-gradient-bg--end));
+
+
     .active a {
       border-color: $main-nav-link-border-colour-active--dark;
       background: $main-nav-link-bg-colour-active--dark;
     }
+
     a {
       border-color: $main-nav-link-border-colour--dark;
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         background: $main-nav-link-bg-colour--dark;
       }
     }
+
     .au-main-nav__menu {
       background-color: $main-nav-menu-bg-colour;
+
       @include AU-media('sm') {
         background: none;
       }
     }
+
     .au-main-nav__toggle {
       color: $AU-colordark-foreground-text;
       font-weight: bold;
       font-size: 1.25rem;
       @include AU-space(padding, .5unit 0);
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         background-color: transparent;
       }
+
       &:before {
         content: ""
       }
+
       i {
         font-size: 1.25rem;
       }
 
       &--search {
         float: right;
+
         @include AU-media($AU-main-nav-breakpoint) {
           display: none;
         }
+
         &__open {
           display: none;
         }
@@ -61,19 +71,24 @@
     @include AU-media($AU-main-nav-breakpoint) {
       font-weight: bold;
     }
+
     color: $AU-color-foreground-text;
   }
 
   .au-link-list {
-    > li {
+    >li {
 
-      &.active, &.active-trail {
+      &.active,
+      &.active-trail {
         a {
           font-weight: bold;
           border-bottom-color: #fff;
-          &:hover, &:focus {
+
+          &:hover,
+          &:focus {
             border-bottom-color: #fff;
           }
+
           @include AU-media($AU-main-nav-breakpoint) {
             @include AU-space(padding, 1unit);
           }
@@ -92,18 +107,4 @@
   @media print {
     display: none;
   }
-}
-
-// Remove duplicate hamburger menu icon.
-.au-main-nav__toggle.au-main-nav__toggle--open:before,
-.au-main-nav__toggle.au-main-nav__toggle--close:before {
-  content: "";
-}
-
-.au-main-nav__toggle--search {
-  float: right;
-}
-
-.au-main-nav__toggle--search__open.svg-inline--fa {
-  display: none;
 }

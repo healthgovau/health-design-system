@@ -1,8 +1,56 @@
-
 // Visually hide (screen reader accessible)
 .visually-hidden,
 .sr-only,
 .element-invisible {
   @include AU-sronly();
   position: absolute !important;
+}
+
+
+// Debug in-browser
+html.debug {
+  * {
+    outline: 1px solid #006565 !important; // applied outlines
+    background: rgb(0 134 134 / 10%) !important; // applies BGs to elements
+  }
+
+  &:before {
+    $debug-bg: #2ab3c1;
+    font-family: $AU-font;
+    @include AU-space('padding', .5unit);
+    display: block;
+    text-align: center;
+
+    @include AU-media(xs) {
+      content: 'Breakpoint $AU-media-xs (min-width: #{$AU-media-xs})';
+      background: $debug-bg;
+    }
+
+    @include AU-media(sm) {
+      content: 'Breakpoint $AU-media-sm (min-width: #{$AU-media-sm})';
+      background: lighten($debug-bg, 10%);
+    }
+
+    @include AU-media(md) {
+      content: 'Breakpoint $AU-media-md (min-width: #{$AU-media-md})';
+      background: lighten($debug-bg, 20%);
+    }
+
+    @include AU-media(lg) {
+      content: 'Breakpoint $AU-media-lg (min-width: #{$AU-media-lg})';
+      background: lighten($debug-bg, 30%);
+    }
+
+    @include AU-media(xl) {
+      content: 'Breakpoint $AU-media-xl (min-width: #{$AU-media-xl})';
+      background: lighten($debug-bg, 40%);
+    }
+  }
+}
+
+// Remove DOM elements when empty
+// Be careful with empty nodes that exist to show background images like <div id="pillars"></div>
+p:empty,
+.health-card__text:empty {
+  display: none;
 }

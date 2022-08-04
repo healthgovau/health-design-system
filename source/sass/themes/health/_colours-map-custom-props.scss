@@ -1,0 +1,61 @@
+// --------------------------
+// Convert SCSS colour variables to CSS custom properties
+// for colours that can be changed across products
+// This permits much easier overrides (doesn't require full SCSS redeclaration)
+// and suuports client-side use
+// --------------------------
+// Add SCSS colours to map
+$colours: (primary-gradient-bg--start: $primary-bg-gradient-colour--start,
+    primary-gradient-bg--end: $primary-bg-gradient-colour--end,
+    secondary-gradient-bg--start: $secondary-bg-gradient-colour--start,
+    secondary-gradient-bg--end: $secondary-bg-gradient-colour--end,
+    tertiary-gradient-bg--start: $tertiary-bg-gradient-colour--start,
+    tertiary-gradient-bg--end: $tertiary-bg-gradient-colour--end,
+    neutral-bg: $colour-lightest,
+    neutral-bg--darker: $colour-light,
+    footer-gradient-bg--start: $footer-gradient-colour--start,
+    footer-gradient-bg--end: $footer-gradient-colour--end,
+    footer-border: $footer-border-colour,
+    subheader-gradient-bg--start: $subheader-gradient-bg--start,
+    subheader-gradient-bg--end: $subheader-gradient-bg--end,
+    subheader-gradient-content-bg--start: $subheader-gradient-content-bg--start,
+    subheader-gradient-content-bg--end: $subheader-gradient-content-bg--end,
+    main-nav-gradient-bg--start: $main-nav-bg-gradient--start,
+    main-nav-gradient-bg--end: $main-nav-bg-gradient--end,
+    main-nav-border: $main-nav-border-colour);
+
+
+// TODO Custom properties to add 
+// button-bg--primary
+// button-bg--primary--hover
+// button-text--primary
+// button-bg--secondary
+// button-bg--secondary--hover
+// button-text--secondary
+
+// card-highlight--primary
+// card-highlight--secondary
+// card-highlight--tertiary
+// card-highlight--quaternary
+
+// card-audience-bg--primary
+// card-audience-bg--secondary
+// card-audience-bg--tertiary
+// card-audience-bg--quaternary
+
+// callout-highlight--primary
+// callout-highlight--secondary
+// callout-highlight--tertiary
+// callout-highlight--quaternary
+
+// primary-nav--keyline
+
+
+// Output CSS custom properties
+:root {
+
+    @each $key_name,
+    $value in $colours {
+        --#{$key_name}: #{$value};
+    }
+}

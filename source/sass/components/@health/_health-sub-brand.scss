@@ -6,76 +6,48 @@
 
 // Ghost class to override text colours
 // @extend onto specific brand class
-%sub-brand--dark {
-    h1, p, .au-introduction {
-        color: #FFF;
+%sub-brand--dark,
+%subheader--dark {
+
+    h1,
+    p,
+    .au-introduction {
+        color: $AU-colordark-foreground-text;
     }
+
     a {
-        color: #fff;
+        color: $AU-colordark-foreground-text;
     }
+
     .health-toolbar {
         .au-btn.au-btn--tertiary {
-            color: #fff;
+            color: $AU-colordark-foreground-text;
+
             &:hover:not(:disabled) {
-                color: #fff;
+                color: $AU-colordark-foreground-text;
             }
         }
     }
 }
 
 %sub-brand--light {
-    h1, p, .au-introduction {
+
+    h1,
+    p,
+    .au-introduction {
         color: #000;
     }
+
     a {
         color: #000;
     }
+
     .health-toolbar {
         .au-btn.au-btn--tertiary {
             color: #000;
+
             &:hover:not(:disabled) {
                 color: #000;
-            }
-        }
-    }
-}
-
-// COVID vaccine
-// todo - move into health.gov.au
-.sub-brand {
-    &.sub-brand--covid-vaccine {
-
-        // Nav
-        .au-main-nav {
-            border-bottom-color: darken($covid-cyan, 20%);
-        }
-
-        // Sub-header
-        .health-sub-header {
-            @extend %sub-brand--light;
-            background: $covid-cyan;
-            .image {
-                text-align: center;
-                img {
-                    width: 80%;
-                    margin: 0.5rem auto;
-                }
-            }
-            // linear-gradient(110deg, #004181, #025ab1 55%, transparent 55%, #0091d5 100%),linear-gradient(119deg,transparent 0, transparent 73%, #0091d59e 70%, #0253a49e 100%),url(https://www.paho.org/sites/default/files/styles/flexslider_full/public/2020-03/blue-covid-19-1400x693_0.jpg?h=96546727&itok=Wr-p2p5u);
-            @include AU-media(sm){
-                background-image: linear-gradient(100deg, $covid-cyan 58%, $covid-cyan-2 58%);
-                .image {
-                    img {
-                        width: 100%;
-                        margin: 2.5rem auto;
-                    }
-                }
-            }
-            @include AU-media(md){
-                background-image: linear-gradient(105deg, $covid-cyan 59%, $covid-cyan-2 59%);
-            }
-            @include AU-media(lg){
-                background-image: linear-gradient(105deg, $covid-cyan 56%, $covid-cyan-2 56%);
             }
         }
     }
