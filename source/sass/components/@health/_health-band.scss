@@ -46,7 +46,11 @@
     background: none !important; // Remove as applies to container to allow layer management
     background-color: none !important;
     padding: 0 !important;
-    @include AU-space(margin, 2unit 0);
+    @include AU-space(margin, 1unit 0);
+
+    @include AU-media('md') {
+      @include AU-space(margin, 2unit 0);
+    }
 
     // Types/layouts
     // Contained band (default)

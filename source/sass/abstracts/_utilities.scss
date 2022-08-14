@@ -11,7 +11,7 @@
 html.debug {
   * {
     outline: 1px solid #006565 !important; // applied outlines
-    background: rgb(0 134 134 / 10%) !important; // applies BGs to elements
+    background: rgba(0, 134, 134, 0.1) !important; // applies BGs to elements
   }
 
   &:before {
@@ -53,4 +53,37 @@ html.debug {
 p:empty,
 .health-card__text:empty {
   display: none;
+}
+
+// Empty class to allow SASS-level text colour inversion.
+// Although not required in the HDS, is means that .component--dark variants aren't required as part of product administration
+// This is a generic utility but can extend .component--dark classes, too.
+%light-text-on-dark {
+  color: $AU-colordark-foreground-text;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $AU-colordark-foreground-text;
+  }
+
+  a {
+    color: $AU-colordark-foreground-text;
+    border-bottom-color: white;
+
+    &:hover {
+      color: $AU-colordark-foreground-text;
+      text-decoration: none;
+    }
+  }
+
+  .au-cta-link {
+    @extend .au-cta-link--dark;
+  }
+
+  //TODO add button extension
 }

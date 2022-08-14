@@ -1,6 +1,3 @@
-// DTA Design System
-@import 'vendors/govau-ds';
-
 // Health theme colours
 @import 'themes/theme-functions'; // Support theme development with out relying on DTA DS functions
 @import 'themes/health/colours';
@@ -8,15 +5,20 @@
 // My theme colours and mappings
 @import 'themes/my-theme/colours';
 
+// Map colours to components
+@import 'themes/health/colours-map';
+
+// DTA Design System
+@import 'vendors/govau-ds';
+
 // Utilities, functions and mixins
 @import 'abstracts/abstracts';
 
-// Map colours to components
-@import 'themes/health/colours-map';
-@import 'themes/health/colours-map-custom-props';
-
 // Health variables
 @import 'themes/health/variables';
+
+// Map SASS colours to CSS custom properties
+@import 'themes/health/colours-map-custom-props';
 
 // Resets
 @import 'base/normalize';

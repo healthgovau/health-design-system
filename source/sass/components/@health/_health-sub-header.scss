@@ -11,7 +11,7 @@
   // Dark variant
   &#{&}--dark {
     @include background-style(var(--subheader-gradient-bg--start), var(--subheader-gradient-bg--end));
-    @extend %colour-text-inverse;
+    @extend %light-text-on-dark;
   }
 
   // Title.

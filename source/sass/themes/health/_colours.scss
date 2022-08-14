@@ -1,8 +1,13 @@
+// GOLD Design System default overrides
+$AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.0 compliant on backgrounds up to $colour-light (#ECECEC)
+$AU-colordark-foreground-action: #FFF;
+$AU-colordark-foreground-text: #FFF;
+$AU-colordark-background: #000;
+
 // HEALTH COLOURS
 $colour-Shadow: rgba(0, 0, 0, 0.1);
 $colour-card: #fff;
 $colour-Error-light: #ffe7ea;
-$colour-foreground-text--dark: #000000;
 
 // HEALTH VISUAL IDENTITY
 // Primaries with variants
@@ -111,9 +116,3 @@ $colour-unpublished-background: #ffe5e5;
 $colour-positive: #a5ffa5;
 $colour-negative: #ffaaaa;
 $colour-path: #006621;
-
-// Design System default overrides
-$AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.0 compliant on backgrounds up to $colour-light (#ECECEC)
-$AU-colordark-foreground-action: #FFF;
-$AU-colordark-foreground-text: #FFF;
-$AU-colordark-background: #000;
