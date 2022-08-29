@@ -22,7 +22,7 @@
 // separate card from layout so that the dom might be class="health-card health-flex-thirds col-xs-4"
 
 
-// From NSW Design System
+// Thank you NSW Design System
 @mixin pseudo-clickable-block {
   &::after {
     content: '';
@@ -101,4 +101,14 @@
   @else {
     @error "Something went wrong with the background-style mixin. Check the mixin arguments and try again.";
   }
+}
+
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin box-shadow($colour: $colour-shadow) {
+  box-shadow: 0px 0.125em 0.375em $colour;
 }

@@ -39,7 +39,6 @@
 
 .au-body {
   .health-band {
-    // TODO Add adjacent selector handling so that stacked bands don't double the margin
     @include AU-clearfix;
     position: relative; // reqd for inner container behaviour
     isolation: isolate;
@@ -57,7 +56,8 @@
     &[class*="health-band--"] {
       .health-band__container {
         @include AU-space(padding, 2unit);
-        border-radius: 6px;
+        @include border-radius();
+        @include box-shadow();
       }
     }
 
@@ -80,6 +80,7 @@
 
       .health-band__container {
         @include AU-space(padding, 2unit 0);
+        box-shadow: none;
       }
     }
 
@@ -89,6 +90,10 @@
       width: 100vw;
       margin-inline-start: 50%;
       transform: translateX(-50%);
+
+      .health-band__container {
+        box-shadow: none;
+      }
     }
 
     // Colours are declared in _colours-map.scss as CSS vars

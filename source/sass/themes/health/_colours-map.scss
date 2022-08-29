@@ -19,31 +19,6 @@ $callout-border-colour: $colour-complementary-cyan;
 $callout-border-colour--secondary: $colour-complementary-skyblue;
 $callout-border-colour--tertiary: $colour-primary-teal-lighter-1;
 
-// Cards
-$card-border-colour---fullimg: $colour-light-dark;
-$card-bg-colour--contact: $colour-lightest;
-$card-border-colour--selector: $colour-light-dark; // Todo review need
-$card-bg-colour--selector: $colour-lightest; // Todo review need
-$card-bg-colour--active: #FFF;
-$card-border-colour--active: $colour-primary-teal;
-$card-border-colour--resource: $colour-light-dark;
-$card-bg-colour: $colour-complementary-skyblue-darker-1;
-$card-bg-colour-hover: $colour-complementary-skyblue;
-$card-bg-colour-1: $colour-complementary-skyblue-darker-1;
-$card-bg-colour-1-hover: $colour-complementary-skyblue;
-$card-bg-colour-2: $colour-primary-teal;
-$card-bg-colour-2-hover: $colour-primary-teal;
-$card-bg-colour-3: $colour-primary-teal-darker-1;
-$card-bg-colour-3-hover: $colour-primary-teal;
-$card-bg-colour-4: $colour-complementary-blue-dark;
-$card-bg-colour-4-hover: $colour-complementary-blue;
-$card-bg-colour--highlight-hover: $colour-lighter;
-$card-border-colour--highlight-1: $colour-complementary-skyblue;
-$card-border-colour--highlight-2: $colour-complementary-ruby;
-$card-border-colour--highlight-3: $colour-complementary-lime;
-$card-border-colour--highlight-4: $colour-primary-teal;
-$card-border-colour--highlight-5: $colour-complementary-cyan;
-
 // Compare
 $compare-bg-colour: $colour-complementary-skyblue-lighter-2;
 
@@ -57,25 +32,6 @@ $filter-bg-colour: $colour-lighter;
 $header-border-colour: $colour-primary-blue;
 $header-bg-colour--dark: $colour-primary-blue-darker-1;
 
-// Sub-header
-$subheader-gradient-bg--start: $colour-primary-blue;
-$subheader-gradient-bg--end: $colour-primary-blue-lighter-1;
-$subheader-gradient-content-bg--start: $colour-primary-blue;
-$subheader-gradient-content-bg--end: $colour-primary-blue-lighter-1;
-
-// Footer
-$footer-gradient-colour--start: $colour-dark-hover;
-$footer-gradient-colour--end: $colour-darkest;
-$footer-border-colour: $colour-dark;
-
-// Gradients
-$primary-bg-gradient-colour--start: $colour-primary-blue;
-$primary-bg-gradient-colour--end: $colour-primary-blue-lighter-1;
-$secondary-bg-gradient-colour--start: $colour-primary-teal-darker-1;
-$secondary-bg-gradient-colour--end: $colour-primary-teal-lighter-1;
-$tertiary-bg-gradient-colour--start: $colour-complementary-skyblue-darker-1;
-$tertiary-bg-gradient-colour--end: $colour-complementary-skyblue-lighter-1;
-
 // Hero
 $hero-bg-colour: $colour-light;
 $hero-bg-colour--dark: $colour-dark-hover;
@@ -88,14 +44,9 @@ $inpage-nav-border-colour: $colour-complementary-skyblue;
 $list-bg-colour--highlight: $colour-lightest;
 $list-bg-colour--large: $colour-lighter;
 
-// Main-nav
-$main-nav-border-colour: $colour-primary-blue;
-
 // Main-nav dark variant
 $main-nav-border-colour--dark: $colour-primary-blue-darker-1;
 $main-nav-bg-colour--dark: $colour-primary-blue;
-$main-nav-bg-gradient--start: $colour-primary-blue;
-$main-nav-bg-gradient--end: $colour-primary-blue-lighter-1;
 $main-nav-link-bg-colour--dark: $colour-primary-blue;
 $main-nav-link-border-colour--dark: $colour-primary-blue;
 $main-nav-link-bg-colour-active--dark: $colour-primary-blue-darker-1;
@@ -115,7 +66,7 @@ $side-nav-link-bg-colour--active: $colour-lighter;
 $side-nav-link-bg-colour--hover: $colour-lighter;
 
 // Statistic
-$stat-border-colour: $colour-primary-teal-text;
+$stat-border-colour: $colour-light;
 
 // Tabs
 $tab-border-colour: $colour-light-darker;
@@ -128,7 +79,16 @@ $table-bg-colour--header: $colour-lightest;
 $taskbar-bg-colour--hover: $colour-primary-blue-darker-1;
 
 // Text
-$text-colour--light: $colour-primary-teal-text;
+$text-colour--light: $AU-colordark-foreground-text;
 
 // Tooltip
 $tooltip-bg-colour: $colour-dark;
+
+// =============================
+// Moved to _colours-map-custom-props.scss as custom properties:
+//
+// Footer
+// Gradients
+// Cards
+// Sub-header
+// Main-nav (partial) // TODO the rest

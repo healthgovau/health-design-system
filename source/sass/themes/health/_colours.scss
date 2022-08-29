@@ -5,8 +5,9 @@ $AU-colordark-foreground-text: #FFF;
 $AU-colordark-background: #000;
 
 // HEALTH COLOURS
-$colour-Shadow: rgba(0, 0, 0, 0.1);
-$colour-card: #fff;
+$colour-shadow: rgba(0, 0, 0, 0.2);
+$colour-shadow-hover: rgba(0, 0, 0, 0.4);
+$colour-bg-light: #fff;
 $colour-Error-light: #ffe7ea;
 
 // HEALTH VISUAL IDENTITY
@@ -51,6 +52,7 @@ $colour-accent-red: #D50032;
 $colour-accent-orange: #FFB500;
 
 // Neutrals
+$colour-black: #000000;
 $colour-dark: #87888A; // core
 $colour-darker: #626366;
 $colour-darkest: #58585b;
@@ -60,6 +62,7 @@ $colour-lighter: #f1f1f2;
 $colour-light: #ececec;
 $colour-light-dark: #e5e5e5;
 $colour-light-darker: #cdcdcd;
+$colour-white: #ffffff;
 
 // Health pillar colours
 // These get generated automatically for aligned sites in _health-brand.scss
@@ -99,7 +102,6 @@ $brand-colour-4: #004181;
 }
 
 $colour-minorText: #414141;
-$colour-primary-teal-text: #99d4de;
 
 // Service delivery
 $alpha-background: #c22f73;
