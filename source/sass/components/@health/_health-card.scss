@@ -4,7 +4,6 @@
     @include border-radius;
     position: relative;
     overflow: hidden;
-    height: 100%;
     display: flex;
     flex-direction: column;
     transition: all ease 0.2s;
@@ -93,6 +92,10 @@
       .health-card__link {
         color: var(--card-text);
         text-decoration: none;
+      }
+
+      .health-card__body {
+        @include AU-space(padding-right, 3.5unit);
       }
 
       &:after {
