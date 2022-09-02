@@ -4,10 +4,10 @@
     @include border-radius;
     position: relative;
     overflow: hidden;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     transition: all ease 0.2s;
-    padding: 0;
 
     // ========================================================
     // Elements
@@ -95,10 +95,6 @@
         text-decoration: none;
       }
 
-      .health-card__body {
-        @include AU-space(padding-right, 3.5unit);
-      }
-
       &:after {
         content: ' ';
         display: block;
@@ -138,6 +134,7 @@
       align-items: stretch;
 
       .health-card__image {
+        /* Three values: flex-grow | flex-shrink | flex-basis */
         flex: 1 1 30%;
         position: relative;
         height: auto;
@@ -244,6 +241,53 @@
 
       .health-card__icon {
         margin: 0 auto;
+      }
+    }
+
+    // Profile image (requires square image)
+    &--contact {
+      text-align: center;
+
+      .health-card__image {
+        img {
+          width: 50%;
+          height: auto;
+          max-width: 200px;
+          border-radius: 50%;
+          @include AU-space(margin, 2unit auto -1unit auto);
+        }
+      }
+
+      // Profile image horizontal (requires square image)
+      &-horizontal {
+        flex-direction: row;
+        align-items: stretch;
+        text-align: left;
+
+        .health-card__body {
+          flex: 1 1 70%;
+          height: auto;
+        }
+
+        .health-card__title {
+          @extend h4;
+        }
+
+        .health-card__image {
+          flex: 1 1 30%;
+          position: relative;
+          height: auto;
+          text-align: center;
+          @include background-style(var(--neutral-bg--darker));
+
+          img {
+            width: 60%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 50%;
+            @include AU-space(margin, 2unit auto);
+          }
+        }
       }
     }
 
