@@ -253,8 +253,13 @@
           width: 50%;
           height: auto;
           max-width: 200px;
-          border-radius: 50%;
           @include AU-space(margin, 2unit auto -1unit auto);
+        }
+
+        &.health-card__image--circle {
+          img {
+            border-radius: 50%;
+          }
         }
       }
 
@@ -284,8 +289,13 @@
             width: 60%;
             height: auto;
             max-width: 200px;
-            border-radius: 50%;
             @include AU-space(margin, 2unit auto);
+          }
+
+          &.health-card__image--circle {
+            img {
+              border-radius: 50%;
+            }
           }
         }
       }

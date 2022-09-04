@@ -35,14 +35,30 @@
       }
     },
     {
-      "name": " Horizontal",
+      "name": "Horizontal",
       "context": {
         "class": "health-card--horizontal",
         "content": "This card presents image and body side-by-side."
       }
     },
     {
-      "name": "Full colour - primary",
+      "name": "Contact",
+      "view": "card--contact.hbs",
+      "context": {
+        "class": "health-card--contact",
+        "content": "This card presents a contact."
+      }
+    },
+    {
+      "name": "Contact (horizontal)",
+      "view": "card--contact.hbs",
+      "context": {
+        "class": "health-card--contact-horizontal",
+        "content": "This card presents a contact in a horizontal layout."
+      }
+    },
+    {
+      "name": "Full colour (primary)",
       "view": "card--no-image.hbs",
       "context": {
         "class": "health-card--colour-primary",
@@ -50,7 +66,7 @@
       }
     },
     {
-      "name": "Full colour - secondary",
+      "name": "Full colour (secondary)",
       "view": "card--no-image.hbs",
       "context": {
         "class": "health-card--colour-secondary",
@@ -58,7 +74,7 @@
       }
     },
     {
-      "name": "Full colour - tertiary",
+      "name": "Full colour (tertiary)",
       "view": "card--no-image.hbs",
       "context": {
         "class": "health-card--colour-tertiary",
