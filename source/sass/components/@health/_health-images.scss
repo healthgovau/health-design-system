@@ -26,19 +26,6 @@ img {
   }
 }
 
-// Add a border to the image.
-// .image--border {
-//   img {
-//     border: $health-borderize;
-//   }
-//   div {
-//     line-height: 0;
-//   }
-//   @media print {
-//     border: none;
-//   }
-// }
-
 .image--circle {
   img {
     border-radius: 50%;
