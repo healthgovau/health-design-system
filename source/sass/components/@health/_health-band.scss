@@ -58,6 +58,7 @@
         @include AU-space(padding, 2unit);
         @include border-radius();
         @include box-shadow();
+        overflow: hidden;
       }
     }
 
