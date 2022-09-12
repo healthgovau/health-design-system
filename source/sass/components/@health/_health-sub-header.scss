@@ -84,7 +84,7 @@
 
     // Hero content
     .health-sub-header__content {
-      @include AU-space(padding, 1.5unit 12px);
+      @include AU-space(padding, 1.5unit $AU-grid-12-gutter-width/2);
 
       @include AU-media(sm) {
         @include AU-space(padding, 3unit);

@@ -6,8 +6,8 @@
     &.row {
       margin-left: 0;
       margin-right: 0;
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-left: $AU-grid-12-gutter-width/2;
+      padding-right: $AU-grid-12-gutter-width/2;
     }
 
     background-color: $callout-bg-colour;
