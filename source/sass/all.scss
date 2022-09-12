@@ -5,6 +5,9 @@
 // My theme colours and mappings
 @import 'themes/my-theme/colours';
 
+// Overrides of Design System variables
+@import 'themes/health/govau-variable-overrides';
+
 // DTA Design System
 @import 'vendors/govau-ds';
 
