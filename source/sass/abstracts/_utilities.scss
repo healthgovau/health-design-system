@@ -6,6 +6,11 @@
   position: absolute !important;
 }
 
+// Clearfix
+.clearfix {
+  @include AU-clearfix;
+}
+
 
 // Debug in-browser
 html.debug {
@@ -45,6 +50,14 @@ html.debug {
       content: 'Breakpoint $AU-media-xl (min-width: #{$AU-media-xl})';
       background: lighten($debug-bg, 40%);
     }
+
+    // Health added without AU-media() support.
+    // Simply uses the existing grid and widens the container.
+    @media (min-width: 1441px) {
+      content: 'Breakpoint $AU-media-xxl (min-width: 1441px)';
+      background: lighten($debug-bg, 50%);
+    }
+
   }
 }
 
