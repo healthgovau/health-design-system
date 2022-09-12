@@ -55,7 +55,12 @@
     // Contained band (default)
     &[class*="health-band--"] {
       .health-band__container {
-        @include AU-space(padding, 2unit);
+        @include AU-space(padding, $component-padding--mobile);
+
+        @include AU-media('sm') {
+          @include AU-space(padding, $component-padding);
+        }
+
         @include border-radius();
         @include box-shadow();
         overflow: hidden;
@@ -80,7 +85,12 @@
       }
 
       .health-band__container {
-        @include AU-space(padding, 2unit 0);
+        @include AU-space(padding, $component-padding--mobile 0);
+
+        @include AU-media('sm') {
+          @include AU-space(padding, $component-padding 0);
+        }
+
         box-shadow: none;
       }
     }

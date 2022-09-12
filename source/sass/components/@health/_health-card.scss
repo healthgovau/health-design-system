@@ -1,3 +1,7 @@
+// Space/pad cards from global vars in _variables.scss
+$card-padding: ($component-padding/3)*2;
+$card-padding--mobile: $component-padding--mobile;
+
 .au-body {
   .health-card {
     background: var(--card-bg);
@@ -19,7 +23,12 @@
     }
 
     &__body {
-      @include AU-space(padding, 2unit);
+      @include AU-space(padding, $card-padding--mobile);
+
+      @include AU-media('sm') {
+        @include AU-space(padding, $card-padding);
+      }
+
       display: flex;
       flex-direction: column;
     }
