@@ -39,7 +39,8 @@
       @include AU-space(margin-left, 0);
       @include AU-space(margin-right, 0);
 
-      ul>li {
+      >ul>li,
+      >nav>ul>li {
         border-bottom: 1px solid var(--side-nav-link-border--bottom);
       }
     }
