@@ -16,7 +16,7 @@
 
   // Title.
   h1 {
-    margin-top: 0;
+    @include AU-space(margin-top, 1unit);
   }
 
   .au-introduction {

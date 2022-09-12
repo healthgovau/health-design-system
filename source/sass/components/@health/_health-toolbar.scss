@@ -1,15 +1,19 @@
 .health-toolbar {
+  @include AU-media(sm) {
+    @include AU-space(margin-top, 1unit);
+  }
 
-  // @include AU-space(margin-top, .5unit);
   @include AU-space(padding-bottom, .5unit);
 
   &__items {
-    > li {
+    >li {
       margin: 0;
       @include AU-space(margin-right, 1.1unit);
+
       @include AU-media(sm) {
         @include AU-space(margin-right, 1unit);
       }
+
       float: left;
       display: block;
     }
@@ -22,6 +26,7 @@
   #health-share-menu {
     display: none;
   }
+
   .health-tooltip-theme {
     #health-share-menu {
       display: block;

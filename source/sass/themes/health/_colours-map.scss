@@ -1,5 +1,14 @@
-// This file maps Health colours variables to variables used throughout the HDS
+// This file maps Health colour variables to variables used throughout the HDS
 // It decouples the colours from their use and provides more control
+// It is broken into:
+// 1. SCSS variables; and
+// 2. CSS custom properties
+
+// =============================
+// 1. SCSS VARIABLES
+// SCSS variables are accessible from the HDS and @GOLD design system (dependency).
+// They can be transformed with @mixins and @functions but are not accessible in the DOM.
+// =============================
 
 // Body
 $body-bg-colour--dark-tertiary: $colour-primary-blue;
@@ -15,9 +24,6 @@ $button-border-colour--dark-hover: $colour-light-dark;
 
 // Callouts
 $callout-bg-colour: $colour-lighter;
-$callout-border-colour: $colour-complementary-cyan;
-$callout-border-colour--secondary: $colour-complementary-skyblue;
-$callout-border-colour--tertiary: $colour-primary-teal-lighter-1;
 
 // Compare
 $compare-bg-colour: $colour-complementary-skyblue-lighter-2;
@@ -36,9 +42,6 @@ $header-bg-colour--dark: $colour-primary-blue-darker-1;
 $hero-bg-colour: $colour-light;
 $hero-bg-colour--dark: $colour-dark-hover;
 $hero-bg-colour--content: $colour-dark-hover;
-
-// In-page nav
-$inpage-nav-border-colour: $colour-complementary-skyblue;
 
 // Lists
 $list-bg-colour--highlight: $colour-lightest;
@@ -61,19 +64,14 @@ $reference-border-colour: $colour-light-darker;
 $search-text-colour--path: $colour-path;
 $search-text-colour--date: $colour-dark;
 
-// Side-nav
-$side-nav-link-bg-colour--active: $colour-lighter;
-$side-nav-link-bg-colour--hover: $colour-lighter;
-
 // Statistic
 $stat-border-colour: $colour-light;
 
-// Tabs
-$tab-border-colour: $colour-light-darker;
-$tab-border-colour--active: $colour-primary-blue-darker-1;
-
 // Table
 $table-bg-colour--header: $colour-lightest;
+
+// Tabs
+$tab-border-colour: $colour-light-darker;
 
 // Taskbar
 $taskbar-bg-colour--hover: $colour-primary-blue-darker-1;
@@ -85,10 +83,69 @@ $text-colour--light: $AU-colordark-foreground-text;
 $tooltip-bg-colour: $colour-dark;
 
 // =============================
-// Moved to _colours-map-custom-props.scss as custom properties:
-//
-// Footer
-// Gradients
-// Cards
-// Sub-header
-// Main-nav (partial) // TODO the rest
+// 2. CSS CUSTOM PROPERTIES
+// Custom properties are preferred for variables that are commonly changed across sites and are not embedded in the @GOLD design system.
+// Custom properties can be accessed and altered in the DOM.
+// =============================
+
+// Two ways to define:
+// 1. SCSS variable interpolation from vars declared above
+//    e.g. --custom-property-name: #{$scss-variable-name};
+// 2. Direct colour declaration
+//    e.g. --custom-property-name: #123456;
+
+:root {
+    // Gradients
+    --primary-gradient-bg--start: #{$colour-primary-blue};
+    --primary-gradient-bg--end: #{$colour-primary-blue-lighter-1};
+    --secondary-gradient-bg--start: #{$colour-primary-teal-darker-1};
+    --secondary-gradient-bg--end: #{$colour-primary-teal-lighter-1};
+    --tertiary-gradient-bg--start: #{$colour-complementary-skyblue-darker-1};
+    --tertiary-gradient-bg--end: #{$colour-complementary-skyblue-lighter-1};
+    --neutral-bg: #{$colour-lightest};
+    --neutral-bg--darker: #{$colour-light};
+    // Sub-header
+    --subheader-gradient-bg--start: #{$colour-primary-blue};
+    --subheader-gradient-bg--end: #{$colour-primary-blue-lighter-1};
+    --subheader-gradient-content-bg--start: #{$colour-primary-blue};
+    --subheader-gradient-content-bg--end: #{$colour-primary-blue-lighter-1};
+    // Main-nav
+    --main-nav-border: #{$colour-primary-blue};
+    --main-nav-active-link-bg--hover: #{$colour-primary-blue-very-pale};
+    --main-nav-active-link-border: #{$colour-bg-light};
+    // Cards
+    --card-bg: #{$colour-white};
+    --card-text: #{$AU-color-foreground-text};
+    --card-text--primary: #{$AU-colordark-foreground-text};
+    --card-text--secondary: #{$AU-colordark-foreground-text};
+    --card-text--tertiary: #{$AU-colordark-foreground-text};
+    --card-text--neutral: #{$AU-color-foreground-text};
+    --card-highlight-border: #{$colour-complementary-skyblue-lighter-1};
+    --card-clickable-icon: #{$colour-black};
+    --card-clickable-icon--primary: #{$colour-white};
+    --card-clickable-icon--secondary: #{$colour-white};
+    --card-clickable-icon--tertiary: #{$colour-white};
+    --card-clickable-icon--neutral: #{$colour-black};
+    --card-text-minor: #{$colour-minorText};
+    --card-text-minor--primary: #{$colour-white};
+    --card-text-minor--secondary: #{$colour-white};
+    --card-text-minor--tertiary: #{$colour-white};
+    --card-text-minor--neutral: #{$colour-minorText};
+    // Callouts
+    --callout-border--primary: #{$colour-complementary-skyblue-lighter-1};
+    --callout-border--secondary:#{ $colour-primary-teal-lighter-1};
+    --callout-border--tertiary: #{$colour-primary-blue-lighter-1};
+    // Tabbed navigation
+    --tab-border--active: #{$colour-primary-blue-lighter-2};
+    // Side navigation
+    --side-nav-link-bg--active: #{$colour-primary-blue-very-pale};
+    --side-nav-link-border: #{$colour-primary-blue-lighter-1};
+    --side-nav-link-border--bottom: #{$colour-primary-blue-very-pale-2};
+    --side-nav-parent-bg: #{$colour-primary-blue-lighter-2-5};
+    // On this page
+    --inpage-nav-border: #{$colour-complementary-skyblue-lighter-1};
+    // Footer
+    --footer-gradient-bg--start: #{$colour-dark-hover};
+    --footer-gradient-bg--end: #{$colour-darkest};
+    --footer-border: #{$colour-dark};
+}

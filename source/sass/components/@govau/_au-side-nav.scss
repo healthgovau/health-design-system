@@ -1,12 +1,14 @@
 .au-body {
   .au-side-nav {
 
-    // Make our version flush with the sub-header above.
-    @include AU-space('margin-top', -1unit);
+    background: none;
+    @include AU-space('margin-top', 1unit);
+
+    @include AU-media('sm') {
+      @include AU-space('margin-top', 0);
+    }
 
     // Add our colours.
-    @include background-style(var(--neutral-bg));
-
     @include AU-media(sm) {
       background: $AU-color-background;
     }
@@ -16,13 +18,29 @@
 
       &:hover,
       &:focus {
-        background-color: $side-nav-link-bg-colour--hover;
+        background-color: var(--side-nav-link-bg--active);
       }
 
-      &.active {
+      &.active,
+      &.is-active {
         font-weight: bold;
         color: $AU-color-foreground-text;
-        background-color: $side-nav-link-bg-colour--active;
+        background-color: var(--side-nav-link-bg--active);
+      }
+    }
+
+    .au-sidenav__title a {
+      background: var(--side-nav-parent-bg);
+      color: #fff;
+      border-bottom: 0;
+    }
+
+    .au-side-nav__content {
+      @include AU-space(margin-left, 0);
+      @include AU-space(margin-right, 0);
+
+      ul>li {
+        border-bottom: 1px solid var(--side-nav-link-border--bottom);
       }
     }
 

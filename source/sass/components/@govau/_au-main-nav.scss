@@ -5,89 +5,31 @@
 .au-main-nav {
   border-bottom-color: var(--main-nav-border) !important;
 
-  // TODO Deprecate in v2
-  &.au-main-nav--dark {
-    border-bottom-color: var(--main-nav-border);
-    @include background-style(var(--main-nav-gradient-bg--start), var(--main-nav-gradient-bg--end));
-
-
-    .active a {
-      border-color: $main-nav-link-border-colour-active--dark;
-      background: $main-nav-link-bg-colour-active--dark;
-    }
-
-    a {
-      border-color: $main-nav-link-border-colour--dark;
-
-      &:hover,
-      &:focus {
-        background: $main-nav-link-bg-colour--dark;
-      }
-    }
-
-    .au-main-nav__menu {
-      background-color: $main-nav-menu-bg-colour;
-
-      @include AU-media('sm') {
-        background: none;
-      }
-    }
-
-    .au-main-nav__toggle {
-      color: $AU-colordark-foreground-text;
-      font-weight: bold;
-      font-size: 1.25rem;
-      @include AU-space(padding, .5unit 0);
-
-      &:hover,
-      &:focus {
-        background-color: transparent;
-      }
-
-      &:before {
-        content: ""
-      }
-
-      i {
-        font-size: 1.25rem;
-      }
-
-      &--search {
-        float: right;
-
-        @include AU-media($AU-main-nav-breakpoint) {
-          display: none;
-        }
-
-        &__open {
-          display: none;
-        }
-      }
-    }
-
-  }
-
-  a {
-    @include AU-media($AU-main-nav-breakpoint) {
-      font-weight: bold;
-    }
-
-    color: $AU-color-foreground-text;
-  }
-
   .au-link-list {
     >li {
+
+      a {
+
+        color: $AU-color-foreground-text;
+        border-bottom-color: var(--main-nav-active-link-border);
+        background: var(--main-nav-active-link-bg);
+
+        @include AU-media($AU-main-nav-breakpoint) {
+          font-weight: bold;
+        }
+
+        &:hover,
+        &:focus {
+          background: var(--main-nav-active-link-bg--hover);
+        }
+
+      }
 
       &.active,
       &.active-trail {
         a {
+          border-bottom-color: var(--main-nav-active-link-border);
           font-weight: bold;
-          border-bottom-color: #fff;
-
-          &:hover,
-          &:focus {
-            border-bottom-color: #fff;
-          }
 
           @include AU-media($AU-main-nav-breakpoint) {
             @include AU-space(padding, 1unit);
@@ -100,6 +42,46 @@
         @include AU-media($AU-main-nav-breakpoint) {
           display: none;
         }
+      }
+    }
+  }
+
+  &__menu {
+    background-color: var(--main-nav-menu-bg-colour);
+
+    @include AU-media('sm') {
+      background: none;
+    }
+  }
+
+  &__toggle {
+    color: $AU-color-foreground-text;
+    font-weight: bold;
+    font-size: 1.25rem;
+    @include AU-space(padding, .5unit 0);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    &:before {
+      content: ""
+    }
+
+    i {
+      font-size: 1.25rem;
+    }
+
+    &--search {
+      float: right;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        display: none;
+      }
+
+      &__open {
+        display: none;
       }
     }
   }
