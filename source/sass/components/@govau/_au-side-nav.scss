@@ -26,6 +26,7 @@
         font-weight: bold;
         color: $AU-color-foreground-text;
         background-color: var(--side-nav-link-bg--active);
+        border-left: 4px solid var(--side-nav-link-border);
       }
     }
 
@@ -33,6 +34,13 @@
       background: var(--side-nav-parent-bg);
       color: #fff;
       border-bottom: 0;
+      border-left: 0;
+
+      &.active,
+      &.is-active {
+        color: #fff;
+        background-color: var(--side-nav-parent-bg);
+      }
     }
 
     .au-side-nav__content {
