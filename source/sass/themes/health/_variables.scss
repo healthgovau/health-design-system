@@ -1,8 +1,16 @@
 // AU vars for reference
-// $AU-media-xs: 576px !default; // media query breakpoints
-// $AU-media-sm: 768px !default;
-// $AU-media-md: 992px !default;
-// $AU-media-lg: 1200px !default;
+// min-width: breakpoint
+// $AU-media-xs: 0;
+// $AU-media-sm: 576px; // media query breakpoints
+// $AU-media-md: 768px;
+// $AU-media-lg: 992px;
+// $AU-media-xl: 1200px;
+$AU-media-xxl: 1441px; // Added for Health to accommodate most used desktop resolution
+// Most popular desktop resolutions:
+// 1. 1920x1080
+// 2. 1440x900
+// 3. 1280x720
+// 4. 1366x768
 
 // $AU-fontsize-map: (
 // 	xs:   14,
@@ -41,7 +49,8 @@ $border-radius: 6px;
 // Sub-header (for campaigns)
 $subheader-minheight--desktop: 500px;
 
-// TODO
-// - transitions/animations
-// - opacities
-// - borders 
+// Component spacing
+$component-padding: 3rem;
+$component-padding--mobile: $component-padding/2;
+$component-margin: 2rem;
+$component-margin--mobile: $component-margin/2;

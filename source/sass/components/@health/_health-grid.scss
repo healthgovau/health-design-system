@@ -1,0 +1,7 @@
+// 1359px allows the 8-column content area width to be an integer (882px)
+
+@media (min-width: #{$AU-media-xxl}) {
+    .au-grid .container {
+        width: 1360px;
+    }
+}
