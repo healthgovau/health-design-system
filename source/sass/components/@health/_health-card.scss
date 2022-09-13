@@ -35,7 +35,7 @@ $card-padding--mobile: $component-padding--mobile;
 
     &__title {
       @extend h3; // TODO responsive typography
-      color: var(--card-text);
+      color: var(--card-text) !important;
     }
 
     &__link {}
@@ -99,6 +99,14 @@ $card-padding--mobile: $component-padding--mobile;
         @include pseudo-clickable-block;
       }
 
+      .health-card__body {
+        @include AU-space(padding-bottom, ($card-padding--mobile+1));
+
+        @include AU-media('sm') {
+          @include AU-space(padding-bottom, ($card-padding+1));
+        }
+      }
+
       .health-card__link {
         color: var(--card-text);
         text-decoration: none;
@@ -110,7 +118,7 @@ $card-padding--mobile: $component-padding--mobile;
         position: absolute;
         height: 24px;
         width: 20px;
-        @include AU-space(bottom, 2unit);
+        @include AU-space(bottom, 1.5unit);
         @include AU-space(right, 2unit);
         transition: margin 0.2s ease;
         transition-property: right;
