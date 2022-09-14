@@ -32,7 +32,10 @@
 
     // Invert text if background is dark
     @if $dark=="dark" {
-      @extend %colour-text-inverse;
+
+      > {
+        @extend %colour-text-inverse;
+      }
     }
   }
 }
@@ -45,10 +48,10 @@
     background: none !important; // Remove as applies to container to allow layer management
     background-color: none !important;
     padding: 0 !important;
-    @include AU-space(margin, 1unit 0);
+    @include AU-space(margin, $component-margin--mobile 0);
 
     @include AU-media('md') {
-      @include AU-space(margin, 2unit 0);
+      @include AU-space(margin, $component-margin 0);
     }
 
     // Types/layouts
