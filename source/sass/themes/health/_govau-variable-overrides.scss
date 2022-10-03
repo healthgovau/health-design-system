@@ -2,3 +2,12 @@
 // Overide as required
 
 $AU-grid-12-gutter-width: 36px; // Orig 24px is too tight, particularly on mobile
+
+$AU-fontsize-map: (xs: 14,
+    sm: 16,
+    sm2: 18,
+    md: 20,
+    lg: 24,
+    xl: 32,
+    xxl: 46,
+    xxxl: 52);
