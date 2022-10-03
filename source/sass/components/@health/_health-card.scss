@@ -34,7 +34,7 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     &__title {
-      @extend h3; // TODO responsive typography
+      @include health-fontgrid('lg', 'heading');
       color: var(--card-text) !important;
     }
 
