@@ -1,9 +1,39 @@
+// TODO - ref https://design.gs.com/components/tag#types
+
 // Add modifier for au-tags
-.au-tags {
-  &.au-tags--inline {
-    display: inline;
-    > li {
-      @include AU-space('margin', 0unit .25unit .5unit 0unit);
+.au-body {
+
+  .au-tags {
+
+    // No link tag
+    >li {
+      color: $AU-color-foreground-text;
+      border: 1px solid $AU-color-foreground-text;
+      @include AU-space(padding, 0.1em 0.5rem);
+
+      &:has(a) {
+        border: 1px solid var(--tag-link-border);
+        background: var(--tag-link-bg);
+      }
+
+      // Linked tag
+      a {
+        text-decoration: none;
+        color: var(--tag-link-text);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.au-tags--inline {
+      display: inline;
+
+      >li {
+        @include AU-space('margin', 0unit .25unit .5unit 0unit);
+      }
     }
   }
+
 }

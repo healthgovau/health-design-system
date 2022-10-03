@@ -70,6 +70,11 @@ $stat-border-colour: $colour-light;
 // Table
 $table-bg-colour--header: $colour-lightest;
 
+// Tags
+$tag-link-bg: $colour-primary-blue-very-pale;
+$tag-link-border: darken($colour-primary-blue-very-pale, 10%);
+$tag-link-text: $AU-color-foreground-action;
+
 // Tabs
 $tab-border-colour: $colour-light-darker;
 
@@ -137,6 +142,10 @@ $tooltip-bg-colour: $colour-dark;
     --callout-border--tertiary: #{$colour-primary-blue-lighter-1};
     // Tabbed navigation
     --tab-border--active: #{$colour-primary-blue-lighter-2};
+    // Tags
+    --tag-link-bg: #{$tag-link-bg};
+    --tag-link-border: #{$tag-link-border};
+    --tag-link-text: #{$tag-link-text};
     // Side navigation
     --side-nav-link-bg--active: #{$colour-primary-blue-very-pale};
     --side-nav-link-border: #{$colour-primary-blue-lighter-1};
