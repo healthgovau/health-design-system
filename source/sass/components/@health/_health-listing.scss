@@ -85,3 +85,28 @@
     @include AU-space(margin-top, .5unit);
   }
 }
+
+// Applied filters
+.health-listing__filters--inline> {
+
+  *,
+  .au-tags {
+    display: inline-block;
+    @include AU-space(margin-right, 1unit);
+  }
+}
+
+// Resource page content padding
+.content-region-gap {
+  &--left {
+    @include AU-media(sm) {
+      @include AU-space(padding-left, 3unit);
+    }
+  }
+
+  &--right {
+    @include AU-media(sm) {
+      @include AU-space(padding-right, 3unit);
+    }
+  }
+}
