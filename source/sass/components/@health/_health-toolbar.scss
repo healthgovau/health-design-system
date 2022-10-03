@@ -1,9 +1,10 @@
 .health-toolbar {
+  @include AU-space(padding-bottom, .5unit);
+  @include AU-space(margin-top, 0);
+
   @include AU-media(sm) {
     @include AU-space(margin-top, 1unit);
   }
-
-  @include AU-space(padding-bottom, .5unit);
 
   &__items {
     >li {
