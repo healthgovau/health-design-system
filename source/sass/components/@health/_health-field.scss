@@ -1,15 +1,15 @@
 .health-field {
 
-  * + & {
+  *+& {
     @include AU-space(margin-top, 1.5unit);
   }
 
-  & + * {
+  &+* {
     clear: both;
   }
 
   &--label-hidden {
-    * + & {
+    *+& {
       @include AU-space(margin-top, .5unit);
     }
   }
@@ -21,6 +21,7 @@
         float: left;
       }
     }
+
     .health-field__item {
       display: table;
     }
@@ -52,16 +53,21 @@
     font-weight: bold;
   }
 
-  .health-metadata + & {
+  .health-metadata+& {
     @include AU-space(margin-top, .5unit);
   }
 }
 
-.health-field__item + .health-field__item {
+.health-field__item+.health-field__item {
   clear: both;
 }
 
 // Special case of multiple addresses in one field.
-.health-maps--google + .health-field__label {
+.health-maps--google+.health-field__label {
   @include AU-space(margin-top, 1.5unit);
+}
+
+// Margin for tags
+.health-field--tags .health-field__label {
+  @include AU-space(margin-bottom, 0.5unit);
 }
