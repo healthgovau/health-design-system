@@ -33,4 +33,9 @@
   &__more {
     font-size: 0.8em;
   }
+
+  &__list {
+    @include AU-space(margin-top, 1unit);
+    @include AU-space(margin-bottom, 1unit);
+  }
 }
