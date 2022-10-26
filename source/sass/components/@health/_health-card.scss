@@ -229,7 +229,7 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     &--colour-neutral {
-      @include background-style(var(--neutral-bg--darker));
+      @include background-style(var(--neutral--darker-bg));
       color: var(--card-text--neutral);
 
       .health-card__title {
@@ -300,7 +300,7 @@ $card-padding--mobile: $component-padding--mobile;
           position: relative;
           height: auto;
           text-align: center;
-          @include background-style(var(--neutral-bg--darker));
+          @include background-style(var(--neutral--darker-bg));
 
           img {
             width: 60%;
@@ -324,4 +324,11 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
   }
+}
+
+// Cards interacting with other elements
+
+// Add margin if any content precedes the card
+.au-body *:not(.health-card)+.health-card {
+  @include AU-space(margin-top, 2unit)
 }
