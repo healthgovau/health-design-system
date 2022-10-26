@@ -1,9 +1,9 @@
 // @todo: Refactor to .health-stat
 
 .stat {
-  @include AU-space('margin', 1.5unit 0 2unit);
   @include AU-media('sm') {
     border-right: 1px dotted $stat-border-colour;
+
     &:last-of-type {
       border-right: none;
     }
@@ -14,6 +14,7 @@
 .stat__text {
   //@include health-fontgrid('md', 'default', 'light');
   @include AU-space('padding', 0 0 .25unit 0);
+
   @include AU-media('md') {
     @include AU-space('padding-bottom', 1unit);
   }
@@ -34,6 +35,7 @@
 .stat__trend-icon {
   margin-right: 5px;
   color: white;
+
   &:before {
     @include AU-space('margin-top', -1unit);
   }
@@ -50,6 +52,7 @@
   .stat__value {
     border-bottom: 0;
   }
+
   .stat__trend {
     display: none;
   }
