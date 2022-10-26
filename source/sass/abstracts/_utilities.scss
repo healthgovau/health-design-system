@@ -86,7 +86,6 @@ p:empty,
 
   a {
     color: $AU-colordark-foreground-text;
-    border-bottom-color: white;
 
     &:hover {
       color: $AU-colordark-foreground-text;
@@ -94,9 +93,38 @@ p:empty,
     }
   }
 
+  // CTA link
   .au-cta-link {
     @extend .au-cta-link--dark;
   }
 
-  //TODO add button extension
+  // Fix callout text
+  .au-callout {
+    color: $AU-color-foreground-text;
+  }
+
+  // Buttons
+  .au-btn {
+    &.au-btn--primary {
+      background-color: $AU-colordark-foreground-action;
+      color: $AU-color-foreground-text;
+      border-color: $AU-colordark-foreground-action;
+
+      &:hover:not(:disabled) {
+        text-decoration: underline;
+        border-color: $button-bg-colour--dark-hover;
+        background-color: $button-bg-colour--dark-hover;
+      }
+    }
+
+    &.au-btn--secondary {
+      border-color: $AU-colordark-foreground-action;
+
+      &:hover:not(:disabled) {
+        text-decoration: underline;
+        border-color: $button-bg-colour--dark-hover;
+        color: $button-bg-colour--dark-hover;
+      }
+    }
+  }
 }
