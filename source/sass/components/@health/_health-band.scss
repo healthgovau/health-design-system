@@ -10,7 +10,12 @@
  */
 
 // Make band mixin
-@mixin make-band($variant, $colour1: null, $colour2: null, $dark: null) {
+// This generates the correct band variants based on the above markup.
+// Variant variables are:
+//  - band width
+//  - band colour
+//  - band content colours
+@mixin make-band($variant, $colour1: null, $colour2: null) {
   &.health-band--#{$variant} {
 
     .health-band__container,
@@ -30,11 +35,80 @@
       }
     }
 
-    // Invert text if background is dark
-    @if $dark=="dark" {
+    // Colours for band body contents
+    // Needs to use CSS custom properties given that sub-branded partials use this mixin 
+    color: var(--#{$variant}-body-text);
 
-      > {
-        @extend %colour-text-inverse;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: var(--#{$variant}-body-text);
+    }
+
+    a {
+      color: var(--#{$variant}-link-text);
+
+      &:hover {
+        // color: var(--#{$variant}-body-text);
+        text-decoration: none;
+      }
+    }
+
+    // CTA link
+    // TODO refactor as bonefide .health-cta-link variant
+    .au-cta-link {
+      color: var(--#{$variant}-link-text);
+
+      &:after {
+        background: var(--#{$variant}-link-text);
+        mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+        -webkit-mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+        ;
+      }
+
+      &:hover {
+        color: var(--#{$variant}-link-text);
+
+        &:after {
+          background: var(--#{$variant}-link-text);
+          mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+          -webkit-mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+        }
+      }
+    }
+
+    // Fix callout text
+    .au-callout {
+      color: $AU-color-foreground-text;
+    }
+
+    // Buttons
+    .au-btn {
+      &.au-btn--primary {
+        background-color: var(--#{$variant}-btn-bg);
+        color: var(--#{$variant}-btn-text);
+        border-color: var(--#{$variant}-btn-bg);
+
+        &:hover:not(:disabled) {
+          text-decoration: underline;
+          border-color: var(--#{$variant}-btn-bg--hover);
+          background-color: var(--#{$variant}-btn-bg--hover);
+        }
+      }
+
+      &.au-btn--secondary {
+        border-color: var(--#{$variant}-btn-bg);
+        color: var(--#{$variant}-btn-bg);
+
+        &:hover:not(:disabled) {
+          text-decoration: underline;
+          border-color: var(--#{$variant}-btn-bg--hover);
+          color: var(--#{$variant}-btn-bg--hover);
+        }
       }
     }
   }
@@ -110,13 +184,15 @@
       }
     }
 
-    // Colours are declared in _colours-map.scss as CSS vars
+    // Colours are declared in themes/health/health_design_system/source/sass/themes/health/_colours-map.scss as CSS vars
     // Make band variants via mixin args: variant-name, start colour, end colour (opt)
-    @include make-band("primary", "primary-gradient-bg--start", "primary-gradient-bg--end", "dark");
-    @include make-band("secondary", "secondary-gradient-bg--start", "secondary-gradient-bg--end", "dark");
-    @include make-band("tertiary", "tertiary-gradient-bg--start", "tertiary-gradient-bg--end", "dark");
+    // The variant name is used to construct the CSS custom proper names.
+    // e.g. primary -> --primary-body-text, --primary-btn-text, etc
+    @include make-band("primary", "primary-gradient-bg--start", "primary-gradient-bg--end");
+    @include make-band("secondary", "secondary-gradient-bg--start", "secondary-gradient-bg--end");
+    @include make-band("tertiary", "tertiary-gradient-bg--start", "tertiary-gradient-bg--end");
     @include make-band("neutral", "neutral-bg");
-    @include make-band("neutral--darker", "neutral-bg--darker");
+    @include make-band("neutral--darker", "neutral--darker-bg");
 
   }
 }
