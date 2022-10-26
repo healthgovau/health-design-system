@@ -1,7 +1,9 @@
 // GOLD Design System default overrides
 $AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.0 compliant on backgrounds up to $colour-light (#ECECEC)
+$AU-color-foreground-action--active: darken($AU-color-foreground-action, 10%);
 $AU-color-foreground-text: #313131;
 $AU-colordark-foreground-action: #FFF;
+$AU-colordark-foreground-action--active: darken($AU-colordark-foreground-action, 10%);
 $AU-colordark-foreground-text: #FFF;
 $AU-colordark-background: #000;
 
@@ -77,34 +79,6 @@ $brand-colour-4: #004181;
 
 // TYPOGRAPHY ================================
 // Colours
-%colour-text-inverse {
-  color: $AU-colordark-foreground-text;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: $AU-colordark-foreground-text;
-  }
-
-  a {
-    color: $AU-colordark-foreground-text;
-    border-bottom-color: white;
-
-    &:hover {
-      color: $AU-colordark-foreground-text;
-      text-decoration: none;
-    }
-  }
-
-  .au-cta-link {
-    @extend .au-cta-link--dark;
-  }
-}
-
 $colour-minorText: #414141;
 
 // Service delivery
