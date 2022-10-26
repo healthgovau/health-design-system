@@ -89,12 +89,12 @@ $card-padding--mobile: $component-padding--mobile;
     // ========================================================
 
     // Shadow
-    &--shadow {
+    &.health-card--shadow {
       @include box-shadow;
     }
 
     // Shadow
-    &--clickable {
+    &.health-card--clickable {
       a {
         @include pseudo-clickable-block;
       }
@@ -146,7 +146,7 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     // Horizontal
-    &--horizontal {
+    &.health-card--horizontal {
       flex-direction: row;
       align-items: stretch;
 
@@ -168,7 +168,7 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     // Solid colour cards
-    &--colour-primary {
+    &.health-card--colour-primary {
       @include background-style(var(--primary-gradient-bg--start), var(--primary-gradient-bg--end));
       color: var(--card-text--primary);
 
@@ -188,7 +188,7 @@ $card-padding--mobile: $component-padding--mobile;
       }
     }
 
-    &--colour-secondary {
+    &.health-card--colour-secondary {
       @include background-style(var(--secondary-gradient-bg--start), var(--secondary-gradient-bg--end));
       color: var(--card-text--secondary);
 
@@ -208,7 +208,7 @@ $card-padding--mobile: $component-padding--mobile;
       }
     }
 
-    &--colour-tertiary {
+    &.health-card--colour-tertiary {
       @include background-style(var(--tertiary-gradient-bg--start), var(--tertiary-gradient-bg--end));
       color: var(--card-text--tertiary);
 
@@ -228,7 +228,7 @@ $card-padding--mobile: $component-padding--mobile;
       }
     }
 
-    &--colour-neutral {
+    &.health-card--colour-neutral {
       @include background-style(var(--neutral--darker-bg));
       color: var(--card-text--neutral);
 
@@ -248,12 +248,12 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     // Highlight cards
-    &--highlight {
+    &.health-card--highlight {
       border-top: 6px solid var(--card-highlight-border);
     }
 
     // Centered
-    &--centered {
+    &.health-card--centered {
       text-align: center;
 
       .health-card__icon {
@@ -262,7 +262,7 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     // Profile image (requires square image)
-    &--contact {
+    &.health-card--contact {
       text-align: center;
 
       .health-card__image {
@@ -319,7 +319,7 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     // Full-image card
-    &--image-full {
+    &.health-card--image-full {
       // TBC
     }
 
