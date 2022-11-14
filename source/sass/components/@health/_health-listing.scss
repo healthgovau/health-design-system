@@ -97,16 +97,18 @@
 }
 
 // Resource page content padding
-.content-region-gap {
-  &--left {
-    @include AU-media(sm) {
-      @include AU-space(padding-left, 3unit);
+.au-body {
+  .content-region-gap {
+    &--left {
+      @include AU-media(sm) {
+        @include AU-space(padding-left, 3unit);
+      }
     }
-  }
 
-  &--right {
-    @include AU-media(sm) {
-      @include AU-space(padding-right, 3unit);
+    &--right {
+      @include AU-media(sm) {
+        @include AU-space(padding-right, 3unit);
+      }
     }
   }
 }
