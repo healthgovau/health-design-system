@@ -88,9 +88,9 @@
 
       @include AU-media(sm) {
         @include AU-space(padding, 3unit);
+        border-radius: 6px;
       }
 
-      border-radius: 6px;
       @include background-style(var(--subheader-gradient-content-bg--start), var(--subheader-gradient-content-bg--end));
     }
   }
