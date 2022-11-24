@@ -59,6 +59,15 @@ html.debug {
     }
 
   }
+
+  // Admin
+  .adminimal-admin-toolbar {
+    padding-top: 0 !important;
+  }
+
+  .toolbar-fixed .toolbar-oriented .toolbar-bar {
+    position: relative;
+  }
 }
 
 // Remove DOM elements when empty
