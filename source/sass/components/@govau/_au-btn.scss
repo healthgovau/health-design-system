@@ -26,10 +26,6 @@ a.au-btn {
     }
   }
 
-  &+.au-btn {
-    @include AU-space(margin-left, 1unit);
-  }
-
   // Override to return au-btn--block to normal for upper breakpoints
   &.au-btn--inline {
     display: inline-block;
