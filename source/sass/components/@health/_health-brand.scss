@@ -1,20 +1,32 @@
 // Application of the Health 'pillars' brand element
-$pillars-pattern: 
-    $brand-colour-1 0%,$brand-colour-1 9%,
-    $brand-colour-4 9%,$brand-colour-4 21%,
-    $brand-colour-2 21%,$brand-colour-2 33%,
-    $brand-colour-1 33%,$brand-colour-1 39%, 
-    $brand-colour-3 39%,$brand-colour-3 46%,
-    $brand-colour-4 46%,$brand-colour-4 66%,  
-    $brand-colour-1 66%,$brand-colour-1 72%, 
-    $brand-colour-3 72%,$brand-colour-3 92%,  
-    $brand-colour-2 92%,$brand-colour-2 100%; 
+$pillars-pattern: $brand-colour-1 0%,
+$brand-colour-1 9%,
+$brand-colour-4 9%,
+$brand-colour-4 21%,
+$brand-colour-2 21%,
+$brand-colour-2 33%,
+$brand-colour-1 33%,
+$brand-colour-1 39%,
+$brand-colour-3 39%,
+$brand-colour-3 46%,
+$brand-colour-4 46%,
+$brand-colour-4 66%,
+$brand-colour-1 66%,
+$brand-colour-1 72%,
+$brand-colour-3 72%,
+$brand-colour-3 92%,
+$brand-colour-2 92%,
+$brand-colour-2 100%;
 
 
 // Apply to appropriate element
 .pillars-container {
     position: relative;
     border-top: 12px solid $brand-primary-colour !important;
+
+    @media print {
+        border-top: 0 !important;
+    }
 
     #pillars {
         position: absolute;
@@ -24,8 +36,13 @@ $pillars-pattern:
         width: 300px;
         background: linear-gradient(to right, $pillars-pattern) !important;
         background-size: cover;
-        @include AU-media('sm'){
+
+        @include AU-media('sm') {
             left: auto;
+        }
+
+        @media print {
+            display: none;
         }
     }
 }
