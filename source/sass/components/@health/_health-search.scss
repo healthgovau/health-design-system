@@ -29,7 +29,7 @@
     @include AU-space(margin-top, .5unit);
     @include AU-space(padding-bottom, 1unit);
 
-    @include AU-media(sm) {
+    @include AU-media(md) {
       display: block;
       padding-bottom: 0;
       margin-top: 0;
