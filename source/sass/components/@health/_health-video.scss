@@ -59,12 +59,12 @@
       bottom: 0;
 
       &--small {
-        @include AU-space('padding', 0.75unit 0.5unit);
+        @include AU-space('padding', .75rem .5rem);
         font-size: 0.75em;
 
         @include AU-media(sm) {
+          @include AU-space('padding', .5rem);
           display: inline-block;
-          font-size: 0.85em;
         }
 
         .svg-inline--fa {
