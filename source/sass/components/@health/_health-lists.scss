@@ -116,3 +116,9 @@ ul {
     }
   }
 }
+
+// Fix aligment of CTA in a list
+// Markup <ul><li><a href="#" class="au-cta-link">Link</a></li></ul>
+ul:has(.au-cta-link) {
+  padding-left: 20px;
+}
