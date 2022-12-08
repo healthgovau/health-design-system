@@ -5671,6 +5671,9 @@ ul.list--large--checklist > li {
   ul.list--large--checklist > li::before {
     content: ''; }
 
+ul:has(.au-cta-link) {
+  padding-left: 20px; }
+
 .health-loading,
 .health-loading:after {
   border-radius: 50%;
@@ -5933,12 +5936,14 @@ ul.list--large--checklist > li {
       position: absolute;
       right: 0;
       top: 0;
+      left: -3px;
       background-color: #313131;
       border: none;
       width: 46px;
       height: 46px;
       text-indent: -999px;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='-5 -5 32 32' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+      margin: 0 !important;
       border-radius: 0px 4px 4px 0; }
       .health-search__form__submit:hover:not(:disabled), .health-search__form__submit:focus:not(:disabled) {
         background-color: #000; }
@@ -6937,14 +6942,10 @@ table {
       margin-top: 0; } }
   .health-toolbar__items > li {
     margin: 0;
-    margin-right: 18px;
-    margin-right: 1.1rem;
     float: left;
     display: block; }
-    @media (min-width: 576px) {
-      .health-toolbar__items > li {
-        margin-right: 16px;
-        margin-right: 1rem; } }
+    .health-toolbar__items > li .au-btn {
+      margin-bottom: 0; }
   @media print {
     .health-toolbar {
       display: none; } }
@@ -7018,13 +7019,12 @@ table {
     right: 0;
     bottom: 0; }
     .health-video__preview__length--small {
-      padding: 12px 8px;
       padding: 0.75rem 0.5rem;
       font-size: 0.75em; }
       @media (min-width: 576px) {
         .health-video__preview__length--small {
-          display: inline-block;
-          font-size: 0.85em; } }
+          padding: 0.5rem;
+          display: inline-block; } }
       .health-video__preview__length--small .svg-inline--fa {
         display: none; }
         @media (min-width: 576px) {
