@@ -82,7 +82,10 @@ function jsClean() {
   ]);
 }
 
-function js() {
+/**
+ * Process JavaScript files into a single aggregate file.
+ */
+function jsAggregate() {
   return gulp.src(options.paths.js + 'src/*.js')
     .pipe(concat(options.name + '.js'))
     .pipe(header(banner, { pkg : pkg } ))
@@ -95,6 +98,20 @@ function js() {
     .pipe(gulp.dest(options.paths.dist + 'js'));
 }
 
+/**
+ * Process individual JavaScript files.
+ */
+function js() {
+  return gulp.src(options.paths.js + 'src/*.js')
+    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(minify({
+      ext:{
+        min:'.min.js'
+      },
+      preserveComments: 'some'
+    }))
+    .pipe(gulp.dest(options.paths.dist + 'js/modules'));
+}
 
 function styleGuide() {
   return gulp.src(options.paths.dist + '**')
@@ -116,7 +133,7 @@ function watching() {
 
 exports.default = gulp.series(
   gulp.parallel(
-    gulp.series(jsClean, js),
+    gulp.series(jsClean, jsAggregate, js),
     gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
     libraries
   ),
