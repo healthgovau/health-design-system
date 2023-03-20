@@ -146,7 +146,6 @@ $tooltip-bg-colour: $colour-dark;
     --neutral--darker-btn-bg: #{$button-neutral--darker};
     --neutral--darker-btn-bg--hover: #{darken($button-neutral--darker, 10%)};
     --neutral--darker-btn-text: #{$AU-colordark-foreground-text};
-
     // Sub-header
     --subheader-gradient-bg--start: #{$colour-primary-blue};
     --subheader-gradient-bg--end: #{$colour-primary-blue-lighter-1};
@@ -156,8 +155,18 @@ $tooltip-bg-colour: $colour-dark;
     --main-nav-border: #{$colour-primary-blue};
     --main-nav-active-link-bg--hover: #{$colour-primary-blue-very-pale};
     --main-nav-active-link-border: #{$colour-white};
+    // Accordion
+    --accordion-title-bg: #{$colour-lightest};
+    --accordion-title-bg--active: #{$colour-light};
+    --accordion-title-text: #{$AU-color-foreground-text};
+    --accordion-border: #{$colour-light-darker};
+    --accordion-body-bg: #{$colour-bg-light};
+    --accordion-body-text: #{$AU-color-foreground-text};
+    --accordion-control-link-text: #{$AU-color-foreground-action;};
+    // TO DO - chevron colour which use a SASS variable
     // Cards
     --card-bg: #{$colour-white};
+    --card-border: #{$colour-light-darker};
     --card-text: #{$AU-color-foreground-text};
     --card-text--primary: #{$AU-colordark-foreground-text};
     --card-text--secondary: #{$AU-colordark-foreground-text};
