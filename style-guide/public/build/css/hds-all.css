@@ -3679,7 +3679,15 @@ p:empty,
   --main-nav-border: #072e7e;
   --main-nav-active-link-bg--hover: #e6f3ff;
   --main-nav-active-link-border: #ffffff;
+  --accordion-title-bg: #f8f8f8;
+  --accordion-title-bg--active: #ececec;
+  --accordion-title-text: #313131;
+  --accordion-border: #cdcdcd;
+  --accordion-body-bg: #fff;
+  --accordion-body-text: #313131;
+  --accordion-control-link-text: #006FB0;
   --card-bg: #ffffff;
+  --card-border: #cdcdcd;
   --card-text: #313131;
   --card-text--primary: #FFF;
   --card-text--secondary: #FFF;
@@ -3942,19 +3950,125 @@ ul.list--large--checklist > li .au-body strong {
   margin-top: 8px;
   margin-top: 0.5rem; }
 
-.au-accordion.au-accordion--small {
-  border: 0; }
-  .au-accordion.au-accordion--small .au-accordion__title {
-    font-weight: 400;
-    font-size: inherit; }
+.au-body .au-accordion {
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--accordion-border);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  overflow: hidden; }
+  .au-body .au-accordion__title:focus {
+    outline: none; }
+  .au-body .au-accordion__title {
+    color: var(--accordion-title-text);
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.55556;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    background-color: var(--accordion-title-bg); }
+    @media (min-width: 576px) {
+      .au-body .au-accordion__title {
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.6; } }
+    .au-body .au-accordion__title:hover {
+      background-color: var(--accordion-title-bg--active); }
+      .au-body .au-accordion__title:hover:after {
+        display: block;
+        background-color: var(--accordion-title-text);
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+        background-image: none; }
+    .au-body .au-accordion__title:after {
+      display: block;
+      background-color: var(--accordion-title-text);
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+              mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+      background-image: none; }
+  .au-body .au-accordion__body-wrapper {
+    border: 0; }
+  .au-body .au-accordion__body {
+    background-color: var(--accordion-body-bg);
+    color: var(--accordion-body-text); }
+  .au-body .au-accordion.au-accordion--small .au-accordion__title, .au-body .au-accordion.au-accordion--compact .au-accordion__title {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+    font-weight: bold;
+    font-weight: normal;
+    padding-top: 12px;
+    padding-top: 0.75rem;
+    padding-bottom: 12px;
+    padding-bottom: 0.75rem;
+    padding-left: 12px;
+    padding-left: 0.75rem; }
+    @media (min-width: 576px) {
+      .au-body .au-accordion.au-accordion--small .au-accordion__title, .au-body .au-accordion.au-accordion--compact .au-accordion__title {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5; } }
+    .au-body .au-accordion.au-accordion--small .au-accordion__title:after, .au-body .au-accordion.au-accordion--compact .au-accordion__title:after {
+      height: 0.75rem;
+      width: 0.75rem; }
+  .au-body .au-accordion.au-accordion--small .au-accordion__body, .au-body .au-accordion.au-accordion--compact .au-accordion__body {
+    font-size: 0.9rem; }
+  .au-body .au-accordion.au-accordion--small .au-accordion__body-wrapper, .au-body .au-accordion.au-accordion--compact .au-accordion__body-wrapper {
+    padding: 12px;
+    padding: 0.75rem; }
+  .au-body .au-accordion.au-accordion--block .au-accordion__title {
+    background-color: #fff; }
+  .au-body .au-accordion.au-accordion--block .au-accordion__body-wrapper {
+    padding-top: 0; }
+  .au-body .au-accordion.au-accordion--block .au-accordion__body {
+    background-color: #fff; }
+  .au-body .au-accordion.au-accordion--shadow {
+    -webkit-box-shadow: 0px 0.125em 0.375em rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0.125em 0.375em rgba(0, 0, 0, 0.2); }
+  .au-body .au-accordion.au-accordion--light .au-accordion__title {
+    font-weight: 400; }
+  .au-body .au-accordion.au-accordion--light .au-accordion__body-wrapper {
+    padding: 8px;
+    padding: 0.5rem; }
 
-.au-accordion.au-accordion--light .au-accordion__title {
-  font-weight: 400;
-  font-size: inherit; }
+.au-body .au-accordion-group__controls {
+  text-align: right;
+  margin-bottom: 0.5rem; }
 
-.au-accordion.au-accordion--light .au-accordion__body-wrapper {
-  padding: 8px;
-  padding: 0.5rem; }
+.au-body .au-accordion-group__control {
+  color: var(--accordion-control-link-text);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  margin-left: 0.25rem;
+  padding: 0;
+  cursor: pointer; }
+
+.au-body .au-accordion-group.au-accordion-group--flush {
+  border: 1px solid var(--accordion-border);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px; }
+  .au-body .au-accordion-group.au-accordion-group--flush .au-accordion {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid var(--accordion-border); }
+    .au-body .au-accordion-group.au-accordion-group--flush .au-accordion__title {
+      border-radius: 0; }
+  .au-body .au-accordion-group.au-accordion-group--flush li:first-of-type .au-accordion__title {
+    border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0; }
+  .au-body .au-accordion-group.au-accordion-group--flush li:last-of-type .au-accordion {
+    border-bottom: 0;
+    border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px; }
 
 .au-body {
   fill: #313131; }
@@ -4902,6 +5016,7 @@ textarea.au-text-input {
 
 .au-body .health-card {
   background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
