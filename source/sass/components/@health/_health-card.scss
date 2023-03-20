@@ -5,6 +5,7 @@ $card-padding--mobile: $component-padding--mobile;
 .au-body {
   .health-card {
     background: var(--card-bg);
+    border: 1px solid var(--card-border);
     @include border-radius;
     position: relative;
     overflow: hidden;
