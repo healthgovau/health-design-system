@@ -11,7 +11,8 @@
   }
 
   &__transcript {
-    margin-top: 0;
+    @extend .au-accordion--compact;
+    @include AU-space(margin-top, 0.75units);
     border: 0;
   }
 

@@ -6,9 +6,9 @@
     @include border-radius($border-radius);
     overflow: hidden;
 
-    // Fix truncated border
+    // Fix truncated border due to overflow: hidden
     &__title:focus {
-      outline: none;
+      outline-offset: -3px;
     }
 
     // Accordion elements
@@ -123,6 +123,11 @@
       margin-left: 0.25rem;
       padding: 0;
       cursor: pointer;
+
+      &:focus {
+        @include AU-outline();
+        outline-offset: 2px;
+      }
     }
 
     // Flush - defined in the group as per <ul class="au-accordion-group au-accordion-group--flush">
