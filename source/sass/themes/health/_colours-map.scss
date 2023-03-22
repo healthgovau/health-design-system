@@ -108,6 +108,12 @@ $tooltip-bg-colour: $colour-dark;
 //    e.g. --custom-property-name: #123456;
 
 :root {
+    // FOR SITE PILLAR
+    --brand-primary-colour: #{$brand-primary-colour};
+    --brand-colour-1: #{$brand-colour-1};
+    --brand-colour-2: #{$brand-colour-2};
+    --brand-colour-3: #{$brand-colour-3};
+    --brand-colour-4: #{$brand-colour-4};
     // FOR COLOURED BANDS
     // 1. Gradients
     --primary-gradient-bg--start: #{$colour-primary-blue};

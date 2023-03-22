@@ -1,28 +1,25 @@
-// Application of the Health 'pillars' brand element
-$pillars-pattern: $brand-colour-1 0%,
-$brand-colour-1 9%,
-$brand-colour-4 9%,
-$brand-colour-4 21%,
-$brand-colour-2 21%,
-$brand-colour-2 33%,
-$brand-colour-1 33%,
-$brand-colour-1 39%,
-$brand-colour-3 39%,
-$brand-colour-3 46%,
-$brand-colour-4 46%,
-$brand-colour-4 66%,
-$brand-colour-1 66%,
-$brand-colour-1 72%,
-$brand-colour-3 72%,
-$brand-colour-3 92%,
-$brand-colour-2 92%,
-$brand-colour-2 100%;
-
-
-// Apply to appropriate element
 .pillars-container {
+    --pillars-pattern: var(--brand-colour-1) 0%,
+        var(--brand-colour-1) 9%,
+        var(--brand-colour-4) 9%,
+        var(--brand-colour-4) 21%,
+        var(--brand-colour-2) 21%,
+        var(--brand-colour-2) 33%,
+        var(--brand-colour-1) 33%,
+        var(--brand-colour-1) 39%,
+        var(--brand-colour-3) 39%,
+        var(--brand-colour-3) 46%,
+        var(--brand-colour-4) 46%,
+        var(--brand-colour-4) 66%,
+        var(--brand-colour-1) 66%,
+        var(--brand-colour-1) 72%,
+        var(--brand-colour-3) 72%,
+        var(--brand-colour-3) 92%,
+        var(--brand-colour-2) 92%,
+        var(--brand-colour-2) 100%;
+
     position: relative;
-    border-top: 12px solid $brand-primary-colour !important;
+    border-top: 12px solid var(--brand-primary-colour) !important;
 
     @media print {
         border-top: 0 !important;
@@ -34,7 +31,7 @@ $brand-colour-2 100%;
         left: 0;
         height: 12px;
         width: 300px;
-        background: linear-gradient(to right, $pillars-pattern) !important;
+        background: linear-gradient(to right, var(--pillars-pattern)) !important;
         background-size: cover;
 
         @include AU-media('sm') {
