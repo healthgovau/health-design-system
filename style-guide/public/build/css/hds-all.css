@@ -3639,6 +3639,11 @@ p:empty,
       color: #ececec; }
 
 :root {
+  --brand-primary-colour: #072e7e;
+  --brand-colour-1: #27b3bb;
+  --brand-colour-2: #0091d5;
+  --brand-colour-3: #1a8a96;
+  --brand-colour-4: #004181;
   --primary-gradient-bg--start: #072e7e;
   --primary-gradient-bg--end: #005ab0;
   --secondary-gradient-bg--start: #006972;
@@ -4996,8 +5001,26 @@ textarea.au-text-input {
       display: none; } }
 
 .pillars-container {
+  --pillars-pattern: var(--brand-colour-1) 0%,
+        var(--brand-colour-1) 9%,
+        var(--brand-colour-4) 9%,
+        var(--brand-colour-4) 21%,
+        var(--brand-colour-2) 21%,
+        var(--brand-colour-2) 33%,
+        var(--brand-colour-1) 33%,
+        var(--brand-colour-1) 39%,
+        var(--brand-colour-3) 39%,
+        var(--brand-colour-3) 46%,
+        var(--brand-colour-4) 46%,
+        var(--brand-colour-4) 66%,
+        var(--brand-colour-1) 66%,
+        var(--brand-colour-1) 72%,
+        var(--brand-colour-3) 72%,
+        var(--brand-colour-3) 92%,
+        var(--brand-colour-2) 92%,
+        var(--brand-colour-2) 100%;
   position: relative;
-  border-top: 12px solid #072e7e !important; }
+  border-top: 12px solid var(--brand-primary-colour) !important; }
   @media print {
     .pillars-container {
       border-top: 0 !important; } }
@@ -5007,9 +5030,9 @@ textarea.au-text-input {
     left: 0;
     height: 12px;
     width: 300px;
-    background: -webkit-gradient(linear, left top, right top, from(#27b3bb), color-stop(9%, #27b3bb), color-stop(9%, #004181), color-stop(21%, #004181), color-stop(21%, #0091d5), color-stop(33%, #0091d5), color-stop(33%, #27b3bb), color-stop(39%, #27b3bb), color-stop(39%, #1a8a96), color-stop(46%, #1a8a96), color-stop(46%, #004181), color-stop(66%, #004181), color-stop(66%, #27b3bb), color-stop(72%, #27b3bb), color-stop(72%, #1a8a96), color-stop(92%, #1a8a96), color-stop(92%, #0091d5), to(#0091d5)) !important;
-    background: -o-linear-gradient(left, #27b3bb 0%, #27b3bb 9%, #004181 9%, #004181 21%, #0091d5 21%, #0091d5 33%, #27b3bb 33%, #27b3bb 39%, #1a8a96 39%, #1a8a96 46%, #004181 46%, #004181 66%, #27b3bb 66%, #27b3bb 72%, #1a8a96 72%, #1a8a96 92%, #0091d5 92%, #0091d5 100%) !important;
-    background: linear-gradient(to right, #27b3bb 0%, #27b3bb 9%, #004181 9%, #004181 21%, #0091d5 21%, #0091d5 33%, #27b3bb 33%, #27b3bb 39%, #1a8a96 39%, #1a8a96 46%, #004181 46%, #004181 66%, #27b3bb 66%, #27b3bb 72%, #1a8a96 72%, #1a8a96 92%, #0091d5 92%, #0091d5 100%) !important;
+    background: -webkit-gradient(linear, left top, right top, from(var(--pillars-pattern))) !important;
+    background: -o-linear-gradient(left, var(--pillars-pattern)) !important;
+    background: linear-gradient(to right, var(--pillars-pattern)) !important;
     background-size: cover; }
     @media (min-width: 576px) {
       .pillars-container #pillars {
