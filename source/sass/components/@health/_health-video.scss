@@ -12,7 +12,7 @@
 
   &__transcript {
     @extend .au-accordion--compact;
-    @include AU-space(margin-top, 0.75units);
+    @include AU-space(margin-top, 0.75unit);
     border: 0;
   }
 
