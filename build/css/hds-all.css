@@ -7172,7 +7172,8 @@ table {
   margin-top: 1.5rem; }
 
 .health-video__transcript {
-  margin-top: 0.75units;
+  margin-top: 12px;
+  margin-top: 0.75rem;
   border: 0; }
 
 .health-video__preview {
