@@ -1,78 +1,40 @@
-// This file maps Health colours variables to variables used throughout the HDS
+// This file maps Health colour variables to variables used throughout the HDS
 // It decouples the colours from their use and provides more control
+// It is broken into:
+// 1. SCSS variables; and
+// 2. CSS custom properties
 
-// Background gradients
-// Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
-%bg-gradient--primary {
-    background-color: $colour-complementary-blue-dark;
-    background: linear-gradient(to right, $colour-complementary-blue-dark, $colour-complementary-blue-bg);
-}
-%bg-gradient--secondary {
-    background-color: $colour-primary-teal;
-    background: linear-gradient(to right, $colour-primary-teal-bg, $colour-primary-teal);
-}
-%bg-gradient--tertiary {
-    background-color: $colour-complementary-skyblue-dark;
-    background: linear-gradient(to left, $colour-complementary-skyblue-dark, $colour-complementary-skyblue-bg);
-}
-%bg-gradient--tertiary-2 {
-    background-color: $colour-primary-blue;
-    background: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-bg);
-}
-%bg-gradient--neutral {
-    background-color: $colour-light;
-    background: linear-gradient(to right, $colour-light, $colour-lightest);
-}
-%bg-gradient--neutral-reverse {
-    background-color: $colour-lightest;
-    background: linear-gradient(to right, $colour-lightest, $colour-light);
-}
+// =============================
+// 1. SCSS VARIABLES
+// SCSS variables are accessible from the HDS and @GOLD design system (dependency).
+// They can be transformed with @mixins and @functions but are not accessible in the DOM.
+// =============================
 
 // Body
 $body-bg-colour--dark-tertiary: $colour-primary-blue;
 
 // Brand/pillars
-$brand-primary-colour: $colour-primary-blue-dark;
+$brand-primary-colour: $colour-primary-blue;
 
-// Buttons
+// Back to top
 $button-bg-colour--secondary: $colour-lighter;
-$button-bg-colour--secondary-hover: $colour-light-dark;
-$button-bg-colour--dark-hover: $colour-light-dark;
-$button-border-colour--dark-hover: $colour-light-dark;
+$button-bg-colour--secondary-hover: $colour-light;
+$button-bg-colour--dark-hover: $colour-light;
+$button-border-colour--dark-hover: $colour-light;
+
+// Button for bands, not states
+// Declared here to permit SASS calculation using mix()
+$button-primary: mix($colour-bg-light, $colour-primary-blue, 80%);
+$button-secondary: mix($colour-bg-light, $colour-primary-teal-darker-1, 80%);
+$button-tertiary: mix($colour-bg-light, $colour-complementary-skyblue-darker-1, 80%);
+$button-neutral: $AU-color-foreground-action;
+$button-neutral--darker: $AU-color-foreground-action;
 
 // Callouts
 $callout-bg-colour: $colour-lighter;
-$callout-border-colour: $colour-complementary-cyan;
-$callout-border-colour--secondary: $colour-complementary-skyblue;
-$callout-border-colour--tertiary: $colour-primary-teal-light;
-
-// Cards
-$card-border-colour---fullimg: $covid-cyan;
-$card-bg-colour--contact: $colour-lightest;
-$card-border-colour--selector: $colour-light-dark; // Todo review need
-$card-bg-colour--selector: $colour-lightest; // Todo review need
-$card-bg-colour--active: #FFF;
-$card-border-colour--active: $colour-primary-teal;
-$card-border-colour--resource: $colour-light-dark;
-$card-bg-colour: $colour-complementary-skyblue-dark;
-$card-bg-colour-hover: $colour-complementary-skyblue;
-$card-bg-colour-1: $colour-complementary-skyblue-dark;
-$card-bg-colour-1-hover: $colour-complementary-skyblue;
-$card-bg-colour-2: $colour-primary-teal-alt;
-$card-bg-colour-2-hover: $colour-primary-teal;
-$card-bg-colour-3: $colour-primary-teal-dark;
-$card-bg-colour-3-hover: $colour-primary-teal;
-$card-bg-colour-4: $colour-complementary-blue-dark;
-$card-bg-colour-4-hover: $colour-complementary-blue;
-$card-bg-colour--highlight-hover: $colour-lighter;
-$card-border-colour--highlight-1: $colour-complementary-skyblue;
-$card-border-colour--highlight-2: $colour-complementary-ruby;
-$card-border-colour--highlight-3: $colour-complementary-lime;
-$card-border-colour--highlight-4: $colour-primary-teal;
-$card-border-colour--highlight-5: $colour-complementary-cyan;
 
 // Compare
-$compare-bg-colour: lighten($colour-complementary-skyblue, 45%);
+$compare-bg-colour: $colour-complementary-skyblue-lighter-2;
 
 // Facets
 $facet-bg-colour: $colour-lighter;
@@ -80,37 +42,26 @@ $facet-bg-colour: $colour-lighter;
 // Filter
 $filter-bg-colour: $colour-lighter;
 
-// Footer
-$footer-bg-colour--dark: $colour-darkest;
-$footer-bg-gradient--dark: linear-gradient(to right,$colour-dark-hover,$colour-darkest);
-$footer-border-colour: $colour-dark;
-
 // Header
-$header-border-colour: $colour-primary-blue-dark;
-$header-bg-colour--dark: $colour-primary-blue;
-$header-bg-gradient--dark: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-bg);
+$header-border-colour: $colour-primary-blue;
+$header-bg-colour--dark: $colour-primary-blue-darker-1;
 
 // Hero
 $hero-bg-colour: $colour-light;
 $hero-bg-colour--dark: $colour-dark-hover;
 $hero-bg-colour--content: $colour-dark-hover;
 
-// In-page nav
-$inpage-nav-border-colour: $colour-complementary-skyblue;
-
 // Lists
 $list-bg-colour--highlight: $colour-lightest;
 $list-bg-colour--large: $colour-lighter;
 
-// Main-nav
-$main-nav-border-colour: $colour-primary-blue-dark;
-$main-nav-border-colour--dark: $colour-primary-blue-darker;
+// Main-nav dark variant
+$main-nav-border-colour--dark: $colour-primary-blue-darker-1;
 $main-nav-bg-colour--dark: $colour-primary-blue;
-$main-nav-bg-gradient--dark: linear-gradient(to right, $colour-primary-blue, $colour-primary-blue-gradient);
 $main-nav-link-bg-colour--dark: $colour-primary-blue;
 $main-nav-link-border-colour--dark: $colour-primary-blue;
-$main-nav-link-bg-colour-active--dark: $colour-primary-blue-darker;
-$main-nav-link-border-colour-active--dark: $colour-primary-blue-darker;
+$main-nav-link-bg-colour-active--dark: $colour-primary-blue-darker-1;
+$main-nav-link-border-colour-active--dark: $colour-primary-blue-darker-1;
 $main-nav-menu-bg-colour: $colour-primary-blue;
 
 // Reference
@@ -121,29 +72,142 @@ $reference-border-colour: $colour-light-darker;
 $search-text-colour--path: $colour-path;
 $search-text-colour--date: $colour-dark;
 
-// Side-nav
-$side-nav-link-bg-colour--active: $colour-lighter;
-$side-nav-link-bg-colour--hover: $colour-lighter;
-
-//Side Nav Alt.
-$side-nav-alt-border-colour: $colour-primary-blue-dark;
-$side-nav-alt-active-colour: #e6f3ff;
-
 // Statistic
-$stat-border-colour: $colour-primary-teal-text;
-
-// Tabs
-$tab-border-colour: $colour-light-darker;
-$tab-border-colour--active: $colour-primary-blue-dark;
+$stat-border-colour: $colour-light;
 
 // Table
 $table-bg-colour--header: $colour-lightest;
 
+// Tags
+$tag-link-bg: $colour-primary-blue-very-pale;
+$tag-link-border: darken($colour-primary-blue-very-pale, 10%);
+$tag-link-text: $AU-color-foreground-action;
+
+// Tabs
+$tab-border-colour: $colour-light-darker;
+
 // Taskbar
-$taskbar-bg-colour--hover: $colour-primary-blue-darker;
+$taskbar-bg-colour--hover: $colour-primary-blue-darker-1;
 
 // Text
-$text-colour--light: $colour-primary-teal-text;
+$text-colour--light: $AU-colordark-foreground-text;
 
 // Tooltip
 $tooltip-bg-colour: $colour-dark;
+
+// =============================
+// 2. CSS CUSTOM PROPERTIES
+// Custom properties are preferred for variables that are commonly changed across sites and are not embedded in the @GOLD design system.
+// Custom properties can be accessed and altered in the DOM.
+// =============================
+
+// Two ways to define:
+// 1. SCSS variable interpolation from vars declared above
+//    e.g. --custom-property-name: #{$scss-variable-name};
+// 2. Direct colour declaration
+//    e.g. --custom-property-name: #123456;
+
+:root {
+    // FOR SITE PILLAR
+    --brand-primary-colour: #{$brand-primary-colour};
+    --brand-colour-1: #{$brand-colour-1};
+    --brand-colour-2: #{$brand-colour-2};
+    --brand-colour-3: #{$brand-colour-3};
+    --brand-colour-4: #{$brand-colour-4};
+    // FOR COLOURED BANDS
+    // 1. Gradients
+    --primary-gradient-bg--start: #{$colour-primary-blue};
+    --primary-gradient-bg--end: #{$colour-primary-blue-lighter-1};
+    --secondary-gradient-bg--start: #{$colour-primary-teal-darker-1};
+    --secondary-gradient-bg--end: #{$colour-primary-teal-lighter-1};
+    --tertiary-gradient-bg--start: #{$colour-complementary-skyblue-darker-1};
+    --tertiary-gradient-bg--end: #{$colour-complementary-skyblue-lighter-1};
+    --neutral-bg: #{$colour-lightest};
+    --neutral--darker-bg: #{$colour-light};
+    // 2. Content
+    --primary-body-text: #{$AU-colordark-foreground-text};
+    --secondary-body-text: #{$AU-colordark-foreground-text};
+    --tertiary-body-text: #{$AU-colordark-foreground-text};
+    --neutral-body-text: #{$AU-color-foreground-text};
+    --neutral--darker-body-text: #{$AU-color-foreground-text};
+    // 3. Links, incl. CTAs
+    --primary-link-text: #{$AU-colordark-foreground-text};
+    --secondary-link-text: #{$AU-colordark-foreground-text};
+    --tertiary-link-text: #{$AU-colordark-foreground-text};
+    --neutral-link-text: #{$AU-color-foreground-action};
+    --neutral--darker-link-text: #{$AU-color-foreground-action};
+    // 3. Buttons - redo vars based on text/background/border/hover
+    --primary-btn-bg: #{$AU-colordark-foreground-action};
+    --primary-btn-bg--hover: #{$button-primary};
+    --primary-btn-text: #{$AU-color-foreground-text};
+    --secondary-btn-bg: #{$AU-colordark-foreground-action};
+    --secondary-btn-bg--hover: #{$button-secondary};
+    --secondary-btn-text: #{$AU-color-foreground-text};
+    --tertiary-btn-bg: #{$AU-colordark-foreground-action};
+    --tertiary-btn-bg--hover: #{$button-tertiary};
+    --tertiary-btn-text: #{$AU-color-foreground-text};
+    --neutral-btn-bg: #{$button-neutral};
+    --neutral-btn-bg--hover: #{darken($button-neutral, 10%)};
+    --neutral-btn-text: #{$AU-colordark-foreground-text};
+    --neutral--darker-btn-bg: #{$button-neutral--darker};
+    --neutral--darker-btn-bg--hover: #{darken($button-neutral--darker, 10%)};
+    --neutral--darker-btn-text: #{$AU-colordark-foreground-text};
+    // Sub-header
+    --subheader-gradient-bg--start: #{$colour-primary-blue};
+    --subheader-gradient-bg--end: #{$colour-primary-blue-lighter-1};
+    --subheader-gradient-content-bg--start: #{$colour-primary-blue};
+    --subheader-gradient-content-bg--end: #{$colour-primary-blue-lighter-1};
+    // Main-nav
+    --main-nav-border: #{$colour-primary-blue};
+    --main-nav-active-link-bg--hover: #{$colour-primary-blue-very-pale};
+    --main-nav-active-link-border: #{$colour-white};
+    // Accordion
+    --accordion-title-bg: #{$colour-lightest};
+    --accordion-title-bg--active: #{$colour-light};
+    --accordion-title-text: #{$AU-color-foreground-text};
+    --accordion-border: #{$colour-light-darker};
+    --accordion-body-bg: #{$colour-bg-light};
+    --accordion-body-text: #{$AU-color-foreground-text};
+    --accordion-control-link-text: #{$AU-color-foreground-action;};
+    // TO DO - chevron colour which use a SASS variable
+    // Cards
+    --card-bg: #{$colour-white};
+    --card-border: #{$colour-light-darker};
+    --card-text: #{$AU-color-foreground-text};
+    --card-text--primary: #{$AU-colordark-foreground-text};
+    --card-text--secondary: #{$AU-colordark-foreground-text};
+    --card-text--tertiary: #{$AU-colordark-foreground-text};
+    --card-text--neutral: #{$AU-color-foreground-text};
+    --card-highlight-border: #{$colour-complementary-skyblue-lighter-1};
+    --card-clickable-icon: #{$colour-black};
+    --card-clickable-icon--primary: #{$colour-white};
+    --card-clickable-icon--secondary: #{$colour-white};
+    --card-clickable-icon--tertiary: #{$colour-white};
+    --card-clickable-icon--neutral: #{$colour-black};
+    --card-text-minor: #{$colour-minorText};
+    --card-text-minor--primary: #{$colour-white};
+    --card-text-minor--secondary: #{$colour-white};
+    --card-text-minor--tertiary: #{$colour-white};
+    --card-text-minor--neutral: #{$colour-minorText};
+    // Callouts
+    --callout-border--primary: #{$colour-complementary-skyblue-lighter-1};
+    --callout-border--secondary:#{ $colour-primary-teal-lighter-1};
+    --callout-border--tertiary: #{$colour-primary-blue-lighter-1};
+    // Tabbed navigation
+    --tab-border--active: #{$colour-primary-blue-lighter-2};
+    // Tags
+    --tag-link-bg: #{$tag-link-bg};
+    --tag-link-border: #{$tag-link-border};
+    --tag-link-text: #{$tag-link-text};
+    // Side navigation
+    --side-nav-link-bg--active: #{$colour-primary-blue-very-pale};
+    --side-nav-link-border: #{$colour-primary-blue-lighter-1};
+    --side-nav-link-border--bottom: #{$colour-primary-blue-very-pale-2};
+    --side-nav-parent-bg: #{$colour-primary-blue-lighter-2-5};
+    // On this page
+    --inpage-nav-border: #{$colour-complementary-skyblue-lighter-1};
+    // Footer
+    --footer-gradient-bg--start: #{$colour-dark-hover};
+    --footer-gradient-bg--end: #{$colour-darkest};
+    --footer-border: #{$colour-dark};
+}

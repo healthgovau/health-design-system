@@ -5,53 +5,67 @@
 // Markup: figure.twig
 //
 // Style guide: Components.figure
+.au-body {
+  .health-figure {
 
-.health-figure {
-
-  * + & {
-    @include AU-space(margin-top, 1.5unit);
-  }
-
-  &--border {
-    border: $health-borderize--thin;
-    padding: 1rem;
-  }
-
-  &__image-link {
-    display: block;
-    position: relative;
-
-    .health-figure__image-link__icon {
-      display: none;
+    *+& {
+      @include AU-space(margin-top, 1.5unit);
     }
 
-    &:hover, &:focus {
+    &--border {
+      border: $health-borderize--very-thin;
+      padding: 1rem;
+    }
+
+    &__image-link {
+      display: block;
+      position: relative;
+
       .health-figure__image-link__icon {
-        display: block;
-        position: absolute;
-        background: white;
-        @include AU-space(padding, .5unit);
-        left: 5px;
-        top: 5px;
-        border: $health-borderize--very-thin;
+        display: none;
+      }
+
+      &:hover,
+      &:focus {
+        .health-figure__image-link__icon {
+          display: block;
+          position: absolute;
+          background: white;
+          @include AU-space(padding, .5unit);
+          left: 5px;
+          top: 5px;
+          border: $health-borderize--very-thin;
+        }
+      }
+    }
+
+    // Override accordion border
+    .au-accordion {
+      border: 0;
+
+      &__title {
+        @include border-radius;
       }
     }
   }
-}
 
-figure {
-  margin: 0;
-  img {
+  figure {
     margin: 0;
-  }
-  * + & {
-    @include AU-space(margin-top, 1.5unit);
-  }
-}
 
-.fancybox-button {
-  width: 46px;
-  i:before {
-    margin-right: 0;
+    img {
+      margin: 0;
+    }
+
+    *+& {
+      @include AU-space(margin-top, 1.5unit);
+    }
+  }
+
+  .fancybox-button {
+    width: 46px;
+
+    i:before {
+      margin-right: 0;
+    }
   }
 }

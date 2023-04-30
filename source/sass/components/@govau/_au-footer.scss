@@ -4,28 +4,30 @@
   // Not sure why this isn't in the @gov.au/footer.
   @include AU-space(margin-top, 2unit);
 
-  // Remove the top border.
-  border-top: none;
+  &.au-footer--dark {
+    border-color: var(--footer-border) !important;
+  }
 
   // Apply our colour scheme on the background.
   &.au-body.au-body--dark.au-footer--dark {
-    background: $footer-bg-colour--dark;
-    background: $footer-bg-gradient--dark;
+    @include background-style(var(--footer-gradient-bg--start), var(--footer-gradient-bg--end));
+
+    .au-footer__end {
+      border-top-color: var(--footer-border); // To do fix dark class specificity. This is horrendous!
+    }
   }
 
   // Add a gap on mobile between the menus.
   &__navigation-section {
     @include AU-space(margin-top, 1.5unit);
+
     @include AU-media(sm) {
       margin-top: 0;
     }
+
     &:first-of-type {
       margin-top: 0;
     }
-  }
-
-  .au-footer__end {
-    border-top-color: $footer-border-colour;
   }
 
   // Don't print the footer.

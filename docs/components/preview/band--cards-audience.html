@@ -1,77 +1,76 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-<head class="no-js">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link media="all" rel="stylesheet" href="../../build/css/hds-all.css">
-  <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
-  <script src="../../build/js/libraries/jquery.min.js"></script>
-  <script src="../../build/js/libraries/jquery-ui.min.js"></script>
-  <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
-  <script src="../../build/js/libraries/jquery.once.min.js"></script>
-  <script src="../../build/js/libraries/lazyload.min.js"></script>
-  <script src="../../build/js/libraries/tippy.all.min.js"></script>
-  <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
-  <title>Preview Layout</title>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.10.1" type="text/css">
+
+<link rel="stylesheet" href="../../subtheme/css/style.css?cachebust=1.10.1" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.10.1" type="text/css">
+
+
+<title>Error rendering component band--cards-audience | Health Design System</title>
+
 </head>
-<body class="au-body au-grid">
-  <div class="container-fluid full-width">
-    <div class="row">
-    <div class="health-band">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Browse topic for</h2>
-      </div>
+<body>
+
+
+
+<div class="Frame Frame--full" id="frame">
+
+
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>Could not render component &#39;@card--no-image&#39; - component not found.</p>
+
     </div>
-    <div class="row">
-      <ul class="health-card-list health-card-list--matchheight">
-        <li class="col-sm-6">
-          <a class="health-card health-card--solid-half health-card--shadow health-card--colour1" href="#">
-  <h3 class="health-card__title au-display-md">Children</h3>
-  <div class="health-card__text">
-    <p>Activities for children to learn about dinosaurs.</p>
-  </div>
-</a>
-
-        </li>
-        <li class="col-sm-6">
-          <a class="health-card health-card--solid-half health-card--shadow health-card--colour2" href="#">
-  <h3 class="health-card__title au-display-md">Teenages</h3>
-  <div class="health-card__text">
-    <p>Get your teenager out of the house with a trip to your local dinosaur museum</p>
-  </div>
-</a>
-
-        </li>
-        <li class="col-sm-6">
-          <a class="health-card health-card--solid-half health-card--shadow health-card--colour3" href="#">
-  <h3 class="health-card__title au-display-md">Adults</h3>
-  <div class="health-card__text">
-    <p>When was the last time you watched Jurrasic Park?</p>
-  </div>
-</a>
-
-        </li>
-        <li class="col-sm-6">
-          <a class="health-card health-card--solid-half health-card--shadow health-card--colour4" href="#">
-  <h3 class="health-card__title au-display-md">Seniors</h3>
-  <div class="health-card__text">
-    <p>Dinosaurs are for people of all ages.</p>
-  </div>
-</a>
-
-        </li>
-      </ul>
-    </div>
-  </div>
+    
+    <code class="Error-stack">
+        <pre>Error: Could not render component '@card--no-image' - component not found.
+    at Object.render (/Users/danny/Sites/health-design-system/node_modules/@frctl/handlebars/src/helpers/render.js:23:19)
+    at Object.helperWrapper (/Users/danny/Sites/health-design-system/node_modules/promised-handlebars/index.js:130:23)
+    at Object.<anonymous> (/Users/danny/Sites/health-design-system/node_modules/promised-handlebars/lib/utils.js:29:28)
+    at Object.wrapper (/Users/danny/Sites/health-design-system/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (/Users/danny/Sites/health-design-system/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:262:23), <anonymous>:13:102)
+    at main (/Users/danny/Sites/health-design-system/node_modules/handlebars/dist/cjs/handlebars/runtime.js:208:32)
+    at ret (/Users/danny/Sites/health-design-system/node_modules/handlebars/dist/cjs/handlebars/runtime.js:212:12)
+    at ret (/Users/danny/Sites/health-design-system/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:519:21)
+    at prepareAndResolveMarkers (/Users/danny/Sites/health-design-system/node_modules/promised-handlebars/index.js:99:39)
+    at /Users/danny/Sites/health-design-system/node_modules/promised-handlebars/lib/utils.js:29:28
+    at HandlebarsAdapter.render (/Users/danny/Sites/health-design-system/node_modules/@frctl/handlebars/src/adapter.js:37:30)
+    at ComponentSource._renderVariant (/Users/danny/Sites/health-design-system/node_modules/@frctl/fractal/src/api/components/source.js:212:30)
+    at _renderVariant.next (<anonymous>)
+    at onFulfilled (/Users/danny/Sites/health-design-system/node_modules/co/index.js:65:19)</pre>
+    </code>
+    
 </div>
 
-    </div>
-  </div>
+
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.1"></script>
+
+
+
 </body>
 </html>

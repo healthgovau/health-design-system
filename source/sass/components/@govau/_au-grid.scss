@@ -5,12 +5,15 @@
   .not-full-width {
     // Top margin for content area
     @include AU-space(margin-top, 1unit);
-    @include AU-media(sm ) {
+
+    @include AU-media(sm) {
       @include AU-space(margin-top, 1.5unit);
     }
+
     @media print {
       @include AU-space(margin-top, 1unit);
     }
+
     .container {
       width: auto;
       clear: both;
@@ -21,7 +24,7 @@
   // This allows us to nest containers in other elements and for them to still work.
   .full-width .container .container {
     width: auto;
-    clear:both;
+    clear: both;
   }
 
 
@@ -31,11 +34,13 @@
       @include AU-media(sm) {
         padding-left: 0;
         padding-right: 0;
+
         &:first-of-type {
-          padding-left: 12px;
+          padding-left: $AU-grid-12-gutter-width/2;
         }
+
         &:last-of-type {
-          padding-right: 12px;
+          padding-right: $AU-grid-12-gutter-width/2;
         }
       }
     }
@@ -57,25 +62,24 @@
     float: left;
   }
 
-  @include AU-media( sm ) {
+  @include AU-media(sm) {
     .col-sm-5ths {
       width: 20%;
       float: left;
     }
   }
 
-  @include AU-media( md ) {
+  @include AU-media(md) {
     .col-md-5ths {
       width: 20%;
       float: left;
     }
   }
 
-  @include AU-media( lg ) {
+  @include AU-media(lg) {
     .col-lg-5ths {
       width: 20%;
       float: left;
     }
   }
 }
-

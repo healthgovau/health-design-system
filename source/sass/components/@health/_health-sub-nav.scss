@@ -1,7 +1,13 @@
 .health-sub-nav {
   display: none;
+
   @include AU-media($AU-main-nav-breakpoint) {
     display: block;
+
+    // Ensure search box clears links
+    .au-link-list.au-link-list--inline {
+      display: block;
+    }
   }
 
   @media print {

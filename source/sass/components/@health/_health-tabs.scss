@@ -43,7 +43,7 @@
         border-bottom: 4px solid transparent;
         @include AU-space('padding', .5unit 0);
 
-        @include AU-media(sm){
+        @include AU-media(sm) {
           @include AU-space('padding', .75unit 0);
         }
 
@@ -53,28 +53,29 @@
 
         &:hover,
         &:active {
-          border-bottom-color: $tab-border-colour--active;
+          border-bottom-color: var(--tab-border--active);
         }
       }
 
       &.active {
         a {
-          border-bottom-color: $tab-border-colour--active;
-          font-weight: bold;
+          border-bottom-color: var(--tab-border--active);
         }
+
+        font-weight: bold;
       }
     }
   }
+}
 
-  .not-full-width {
-    .health-tabs {
-      margin-top: 0;
-    }
+.not-full-width {
+  .health-tabs {
+    margin-top: 0;
   }
+}
 
-  @media print {
-    .health-tabs {
-      display: none;
-    }
+@media print {
+  .health-tabs {
+    display: none;
   }
 }

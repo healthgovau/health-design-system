@@ -1,478 +1,335 @@
-.health-card {
-  @include AU-space( padding, 1unit );
-  @include AU-media( md ) {
-    @include AU-space( padding, 2unit );
-  }
-  @include AU-space( margin-top, 0 );
-  width: 100%;
-  font-weight: normal;
-  display:block;
-  box-sizing: border-box;
+// Space/pad cards from global vars in _variables.scss
+$card-padding: ($component-padding/3)*2;
+$card-padding--mobile: $component-padding--mobile;
 
-  // Spacing.
-  * + hr,
-  * + p,
-  * + .health-card__title,
-  * + .health-card__cta {
-    margin-top: 0;
-  }
-
-  //
-  // COMPONENTS
-  //
-
-  &__title {
-    & + .metadata--inline {
-      @include AU-space(margin-top, .5unit);
-      @include AU-media(sm) {
-        @include AU-space(margin-top, 1unit);
-      }
-    }
-    @at-root .health-card__image + & {
-      @include AU-space(margin-top, .5unit);
-      @include AU-media(sm) {
-        @include AU-space(margin-top, 1unit);
-      }
-    }
-  }
-
-  &__text {
-    @include AU-space(margin-top, 1unit);
-  }
-
-  .health-card__image {
-    display: block;
-    svg {
-      height: 3em;
-      width: 3em;
-      @include AU-media(sm) {
-        height: 5em;
-        width: 5em;
-      }
-    }
-
-    &.health-card__image--full-width {
-      @include AU-space(margin, -1unit -1unit 1unit -1unit);
-      @include AU-media(sm) {
-        @include AU-space(margin, -2unit -2unit 2unit -2unit);
-      }
-      height: auto;
-    }
-  }
-
-  &__bg {
-    @include AU-space( padding, 1unit );
-    background-color: $AU-colordark-background-shade;
-
-    &:not(:first-child) {
-      @include AU-space( margin-top, 1unit );
-    }
-  }
-
-  img {
-    display: block;
-    min-width: 100%;
-    height: auto;
-  }
-
-  //
-  // VARIATIONS
-  //
-
-  // Shadow.
-  &--shadow {
-    border-radius: 4px;
-    overflow:hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    background: $AU-color-background;
-    .lt-ie9 & {
-      border: solid 1px $AU-colordark-foreground-border;
-    }
-  }
-
-  // Light.
-  &--light {
-    background: $AU-color-background;
+.au-body {
+  .health-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    @include border-radius;
+    position: relative;
     overflow: hidden;
-  }
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all ease 0.2s;
 
-  // Centered.
-  &--centered {
-    text-align: center;
-    img,
-    svg,
-    .health-card__image,
-    p {
-      margin: auto;
-    }
+    // ========================================================
+    // Elements
+    // ========================================================
 
-    .health-card__image {
-      @include AU-space( margin-bottom, .5unit);
-    }
-  }
-
-  // Contact icon
-  &--contact {
-    background: $card-bg-colour--contact;
-    @include AU-space( margin-bottom, 1unit );
-    .image--circle {
-      img {
-        width: 200px;
-        min-width: 0;
-        @include AU-space( margin-bottom, -1unit );
-      }
-    }
-    @include AU-media( sm ) {
-      @include AU-space( padding-top, 5unit );
-      margin-top: 5rem !important;
-      .image--circle {
-        .image {
-          position: absolute;
-          left: 0;
-          top: -20px;    
-          width: 100%;
-          height: 10px;
-          z-index: 999;
-        }
-      }
-    }
-  }
-
-  // Selector.
-  &.health-card--selector {
-    @include AU-space('padding', 0.5unit);
-    @include AU-media(md) {
-      @include AU-space('padding', 1unit);
-    }
-
-    @media print {
+    &__header {
+      // To be developed
       display: none;
     }
 
-    border-left: 1px solid $card-border-colour--selector;
-    border-right: 1px solid $card-border-colour--selector;
-    border-bottom: 1px solid $card-border-colour--selector;
-    border-top: 10px solid $card-border-colour--selector;
-    display: block;
-    overflow: hidden;
-    background: $card-bg-colour--selector;
+    &__body {
+      @include AU-space(padding, $card-padding--mobile);
 
-    &:hover,
-    &:focus,
-    &.health-card--active
-    {
-      background: $card-bg-colour--active;
-      border-top-color: $card-border-colour--active;
+      @include AU-media('sm') {
+        @include AU-space(padding, $card-padding);
+      }
+
+      display: flex;
+      flex-direction: column;
     }
 
-    .health-card__title {
-      @include AU-space(margin-top, .5unit);
-      @include AU-space(margin-bottom, .5unit);
-      @include health-fontgrid( sm , heading);
-      max-width: 100%;
+    &__title {
+      @include health-fontgrid('lg', 'heading');
+      color: var(--card-text) !important;
     }
-    .health-card__image {
+
+    &__link {}
+
+    &__text {
+      @include AU-space(margin-top, 1unit);
+    }
+
+    &__tag {
+      font-size: 0.9rem;
+      @include AU-space(margin-top, 0.2unit); // TODO Review
+    }
+
+    &__date {
+      font-size: 0.9rem;
+      @include AU-space(margin-top, 1unit); // TODO Review
+      color: var(--card-text-minor);
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      // For icons only
       svg {
-        max-width: 3em;
-        max-height: 3em;
-      }
-    }
+        height: 3em;
+        width: 3em;
 
-    p {
-      max-width: 75%;
-    }
-  }
-
-  // Resource.
-  &.health-card--resource {
-    border-top-width: 6px;
-    border-top-style: solid;
-    border-top-color: $card-border-colour--resource;
-    @include AU-space(padding, 1unit 0 0 0);
-    @include AU-media(sm) {
-      @include AU-space(padding, 2unit 0 0 0);
-    }
-  }
-
-  // Solid
-  &--solid {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    background: $card-bg-colour;
-    color: white;
-    &:hover {
-      background: $card-bg-colour-hover;
-      color: white;
-    }
-    @at-root a.health-card#{&} {
-      color: white;
-    }
-
-    // Colours
-    // todo - refactor as a function
-    &.health-card--colour1 {
-      background: $card-bg-colour-1;
-      &:hover {
-        background: $card-bg-colour-1-hover;
-        color: white;
-      }
-    }
-    &.health-card--colour2 {
-      background: $card-bg-colour-2;
-      &:hover {
-        background: $card-bg-colour-2-hover;
-      }
-    }
-    &.health-card--colour3 {
-      background: $card-bg-colour-3;
-      &:hover {
-        background: $card-bg-colour-3-hover;
-      }
-    }
-    &.health-card--colour4 {
-      background: $card-bg-colour-4;
-      &:hover {
-        background: $card-bg-colour-4-hover;
-      }
-    }
-    
-  }
-
-  // Solid half - used for audience tiles 
-  &--solid-half {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    @include AU-space(padding, 0);
-
-    // Layout
-    .health-card__title {
-      float: left;
-      width: 35%;
-      height: 100%;
-      color: #fff;
-      @include AU-space(padding, 1.5unit);
-    }
-    .health-card__text {
-      display: block;
-      margin-left: 35%;
-      margin-top: 0;
-      background: #fff;
-      height: 100%;
-      @include AU-space(padding, 1.5unit);
-    }
-
-    // Colours
-    &.health-card--colour1 {
-      background-color: $card-bg-colour-1;
-      background: linear-gradient(to right,$card-bg-colour-1 0%,$card-bg-colour-1 35%, #fff 35%,white 100%);
-      &:hover {
-        background-color: $card-bg-colour-1-hover;
-      }  
-    }
-    &.health-card--colour2 {
-      background-color: $card-bg-colour-3;
-      background: linear-gradient(to right,$card-bg-colour-3 0%,$card-bg-colour-3 35%, #fff 35%,white 100%);
-      &:hover {
-        background-color: $card-bg-colour-3-hover;
-      }  
-    }
-    &.health-card--colour3 {
-      background-color: $card-bg-colour-1;
-      background: linear-gradient(to right,$card-bg-colour-1 0%,$card-bg-colour-1 35%, #fff 35%,white 100%);
-      &:hover {
-        background-color: $card-bg-colour-1-hover;
-      }  
-      @include AU-media(md) {
-        background-color: $card-bg-colour-3;
-        background: linear-gradient(to right,$card-bg-colour-3 0%,$card-bg-colour-3 35%, #fff 35%,white 100%);
-        &:hover {
-          background-color: $card-bg-colour-3-hover;
-        } 
-      }
-    }
-    &.health-card--colour4 {
-      background-color: $card-bg-colour-3;
-      background: linear-gradient(to right,$card-bg-colour-3 0%,$card-bg-colour-3 35%, #fff 35%,white 100%);
-      &:hover {
-        background-color: $card-bg-colour-3-hover;
-      }  
-      @include AU-media(md) {
-        background-color: $card-bg-colour-1;
-        background: linear-gradient(to right,$card-bg-colour-1 0%,$card-bg-colour-1 35%, #fff 35%,white 100%);
-        &:hover {
-          background-color: $card-bg-colour-1-hover;
-        }  
-      }
-    }
-  
-  }
-
-  // Top highlight.
-  // Use colour as a keyline on top of the card.
-  // todo - refactor as a function
-  &--top-highlight {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    &:hover,
-    &:focus {
-      background-color: $card-bg-colour--highlight-hover;
-    }
-
-    border-top: 6px solid $card-border-colour--highlight-1;
-
-    &.health-card--colour2  {
-      border-top-color: $card-border-colour--highlight-2;
-    }
-
-    &.health-card--colour3  {
-      border-top-color: $card-border-colour--highlight-3;
-    }
-
-    &.health-card--colour4  {
-      border-top-color: $card-border-colour--highlight-4;
-    }
-
-    &.health-card--colour5  {
-      border-top-color: $card-border-colour--highlight-5;
-    }
-  }
-
-  // Call to action card.
-  &--cta {
-
-    &:after {
-      content: ' ';
-      @include AU-space( width, 1unit );
-      @include AU-space( height, 1unit );
-      @include AU-space( margin, 0 0.25unit 0 0.2unit );
-      transition: margin 0.2s ease;
-      background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
-				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
-			'</svg>');
-
-      .ie8 &,
-      .lt-ie8 & {
-        content: ' > ';
-      }
-
-      display: block;
-      position: absolute;
-      @include AU-space( right, 1unit );
-      @include AU-space( bottom, .5unit );
-      @include AU-media(sm) {
-        @include AU-space( right, 2unit );
-        @include AU-space( bottom, 2unit );
-      }
-      transition-property: right;
-    }
-
-    &:hover {
-      color: $AU-color-foreground-text;
-      text-decoration: none;
-
-      &:after {
-        @include AU-space( margin-left, 0.4unit );
-        @include AU-space( right, 1.5unit );
-        background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
-				'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
-			'</svg>');
-      }
-    }
-  }
-
-  // Horizontal.
-  // Image on left, text on right.
-  &.health-card--horizontal {
-
-    width: inherit;
-
-    // Get rid of the gap between columns.
-    div[class*="col-"] {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .health-card__image {
-      &.health-card__image--full-width {
-        @include AU-space(margin, -1unit -1unit 0 -1unit);
         @include AU-media(sm) {
-          @include AU-space(margin, -2unit 0 -2unit -2unit);
+          height: 5em;
+          width: 5em;
         }
       }
     }
 
-    // @todo Probably should be replaced by health-card__left and health-card__right.
-    div[class*="col-"]:last-of-type {
-      @include AU-space(padding-top, 1unit);
-      @include AU-media(sm) {
-        @include AU-space(padding-left, 2unit);
-        padding-top: 0;
+    &__icon {
+      max-width: 75px;
+    }
+
+
+    &__footer {
+      // To be developed
+      display: none;
+    }
+
+    // ========================================================
+    // Variants
+    // ========================================================
+
+    // Shadow
+    &.health-card--shadow {
+      @include box-shadow;
+    }
+
+    // Shadow
+    &.health-card--clickable {
+      a {
+        @include pseudo-clickable-block;
       }
-    }
 
-    // Reduce the margins so the white background fits correctly.
-    &.row {
-      margin-left: 0;
-      margin-right: 0;
-    }
+      .health-card__body {
+        @include AU-space(padding-bottom, ($card-padding--mobile+1));
 
-  }
+        @include AU-media('sm') {
+          @include AU-space(padding-bottom, ($card-padding+1));
+        }
+      }
 
-  // Links on the card.
-  @at-root a#{&}{
-    color: $AU-color-foreground-text;
-    text-decoration: none;
-
-    .au-body & {
-      text-decoration: none;
-    }
-
-    .health-card__title {
-      text-decoration: underline;
-    }
-
-    &:hover {
-      .health-card__title {
+      .health-card__link {
+        color: var(--card-text);
         text-decoration: none;
       }
-    }
 
-    &.health-card--shadow {
-      &:focus {
-        border-radius: 0;
+      &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        height: 24px;
+        width: 20px;
+        @include AU-space(bottom, 1.5unit);
+        @include AU-space(right, 2unit);
+        transition: margin 0.2s ease;
+        transition-property: right;
+        background: var(--card-clickable-icon);
+        mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+        -webkit-mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+
       }
 
-      &:hover {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+      &:hover,
+      &:focus,
+      &:active {
+        @include box-shadow($colour-shadow-hover);
+        @include opacity(0.9);
+
+        a {
+          text-decoration: underline;
+        }
+
+        &:after {
+          @include AU-space(margin-left, 0.4unit);
+          @include AU-space(right, 1.5unit);
+        }
       }
     }
 
-    .health-card__link,
-    .health-card__cta {
-      color: $AU-color-foreground-action;
-      text-decoration: underline;
-      text-decoration-skip: ink;
+    // Horizontal
+    &.health-card--horizontal {
+      flex-direction: row;
+      align-items: stretch;
+
+      .health-card__image {
+        /* Three values: flex-grow | flex-shrink | flex-basis */
+        flex: 1 1 30%;
+        position: relative;
+        height: auto;
+      }
+
+      .health-card__body {
+        flex: 1 1 70%;
+        height: auto;
+      }
+
+      &--reverse {
+        flex-direction: row-reverse;
+      }
     }
+
+    // Solid colour cards
+    &.health-card--colour-primary {
+      @include background-style(var(--primary-gradient-bg--start), var(--primary-gradient-bg--end));
+      color: var(--card-text--primary);
+
+      .health-card__title,
+      .health-card__link {
+        color: var(--card-text--primary);
+      }
+
+      .health-card__date {
+        color: var(--card-text-minor--primary);
+      }
+
+      &.health-card--clickable {
+        &:after {
+          background: var(--card-clickable-icon--primary);
+        }
+      }
+    }
+
+    &.health-card--colour-secondary {
+      @include background-style(var(--secondary-gradient-bg--start), var(--secondary-gradient-bg--end));
+      color: var(--card-text--secondary);
+
+      .health-card__title,
+      .health-card__link {
+        color: var(--card-text--secondary);
+      }
+
+      .health-card__date {
+        color: var(--card-text-minor--secondary);
+      }
+
+      &.health-card--clickable {
+        &:after {
+          background: var(--card-clickable-icon--secondary);
+        }
+      }
+    }
+
+    &.health-card--colour-tertiary {
+      @include background-style(var(--tertiary-gradient-bg--start), var(--tertiary-gradient-bg--end));
+      color: var(--card-text--tertiary);
+
+      .health-card__title,
+      .health-card__link {
+        color: var(--card-text--tertiary);
+      }
+
+      .health-card__date {
+        color: var(--card-text-minor--tertiary);
+      }
+
+      &.health-card--clickable {
+        &:after {
+          background: var(--card-clickable-icon--tertiary);
+        }
+      }
+    }
+
+    &.health-card--colour-neutral {
+      @include background-style(var(--neutral--darker-bg));
+      color: var(--card-text--neutral);
+
+      .health-card__title {
+        color: var(--card-text--neutral);
+      }
+
+      .health-card__date {
+        color: var(--card-text-minor--neutral);
+      }
+
+      &.health-card--clickable {
+        &:after {
+          background: var(--card-clickable-icon--neutral);
+        }
+      }
+    }
+
+    // Highlight cards
+    &.health-card--highlight {
+      border-top: 6px solid var(--card-highlight-border);
+    }
+
+    // Centered
+    &.health-card--centered {
+      text-align: center;
+
+      .health-card__icon {
+        margin: 0 auto;
+      }
+    }
+
+    // Profile image (requires square image)
+    &.health-card--contact {
+      text-align: center;
+
+      .health-card__image {
+        img {
+          width: 50%;
+          height: auto;
+          max-width: 200px;
+          @include AU-space(margin, 2unit auto -1unit auto);
+        }
+
+        &.health-card__image--circle {
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+
+      // Profile image horizontal (requires square image)
+      &-horizontal {
+        flex-direction: row;
+        align-items: stretch;
+        text-align: left;
+
+        .health-card__body {
+          flex: 1 1 70%;
+          height: auto;
+        }
+
+        .health-card__title {
+          @extend h4;
+        }
+
+        .health-card__image {
+          flex: 1 1 30%;
+          position: relative;
+          height: auto;
+          text-align: center;
+          @include background-style(var(--neutral--darker-bg));
+
+          img {
+            width: 60%;
+            height: auto;
+            max-width: 200px;
+            @include AU-space(margin, 2unit auto);
+          }
+
+          &.health-card__image--circle {
+            img {
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+
+    // Full-image card
+    &.health-card--image-full {
+      // TBC
+    }
+
   }
 }
 
-// Card listing.
-ul.health-card-list {
-  padding: 0;
-  @include AU-space( margin-top, 0unit );
-  @include AU-space( margin-bottom, 0 );
-  li {
-    list-style: none;
-    @include AU-space( margin-top, 1unit );
-    @include AU-media(sm) {
-      @include AU-space( margin-top, 1.5unit );
-    }
-  }
+// Cards interacting with other elements
 
-  &--flush {
-    @include AU-space( margin-top, -1unit );
-    @include AU-media(sm) {
-      @include AU-space( margin-top, -1.5unit );
-    }
-  }
-
+// Add margin if any content precedes the card
+.au-body *:not(.health-card)+.health-card {
+  @include AU-space(margin-top, 2unit)
 }

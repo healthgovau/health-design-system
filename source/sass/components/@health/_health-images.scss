@@ -1,5 +1,6 @@
 // Reset the line height on images as this causes gaps at the bottom of some images.
 .au-body {
+
   .media div,
   .au-responsive-media-img div,
   img {
@@ -14,25 +15,14 @@ img {
 .au-body {
   picture {
     display: block;
+
     img {
       margin-top: 0;
     }
-    @at-root * + picture {
+
+    @at-root *+picture {
       @include AU-space(margin-top, 1.5unit);
     }
-  }
-}
-
-// Add a border to the image.
-.image--border {
-  img {
-    border: $health-borderize;
-  }
-  div {
-    line-height: 0;
-  }
-  @media print {
-    border: none;
   }
 }
 
@@ -45,19 +35,23 @@ img {
 
 // Image caption
 .field-name-field-image-caption {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 %image--full {
-    @include AU-space('margin-bottom', 1unit);
-    @include AU-media(sm) {
-      margin-bottom: 0;
-    }
+  @include AU-space('margin-bottom', 1unit);
+
+  @include AU-media(sm) {
+    margin-bottom: 0;
+  }
+
+  width: 100%;
+
+  img {
+    border: $health-borderize;
     width: 100%;
-    img {
-        border: $health-borderize;
-        width: 100%;
-    }
+  }
+
   div {
     line-height: 0;
   }
@@ -68,13 +62,14 @@ img {
 
   line-height: 0;
 
-  * + & {
+  *+& {
     @include AU-space(margin-top, 1.5unit);
   }
 
   .image-placeholder {
     @media print {
       border: 1px solid black;
+
       &:before {
         content: "This image hasn't loaded yet. Close the print dialog and try again.";
       }
@@ -93,6 +88,7 @@ img {
 
     .image {
       width: 100%;
+
       img {
         // Hide initially, until loaded.
         visibility: hidden;
@@ -106,9 +102,11 @@ img {
   a {
     border-bottom: 0;
     line-height: 0;
+
     @include AU-media(sm) {
       display: block;
     }
+
     &:hover {
       img {
         opacity: 0.5;

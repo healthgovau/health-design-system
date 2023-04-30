@@ -1,15 +1,21 @@
-<article class="health-card health-card--shadow">
-  <div class="wrapper">
-    <div class="health-card__image health-card__image--full-width image--link">
-      <a href="#">
-        {{ render '@image' }}
-      </a>
-    </div>
-    <h3 class="health-card__title au-display-md">
-      <a href="#">{{ title }}</a>
-    </h3>
-    <footer class="metadata metadata--inline">
-      {{ date }}
-    </footer>
+<div class="health-card health-card--clickable health-card--shadow {{class}}">
+  {{! <div class="health-card__header">
+    <p>Header</p>
+  </div> }}
+  <div class="health-card__image">
+    <img src="https://picsum.photos/800/450" />
   </div>
-</article>
+  <div class="health-card__body">
+    <h2 class="health-card__title">
+      <a class="health-card__link" href="#">{{title}}</a>
+    </h2>
+    <div class="health-card__text">
+      <p>{{content}}</p>
+    </div>
+    <div class="health-card__date">{{date}}</div>
+    <div class="health-card__tag">{{tag}}</div>
+  </div>
+  {{! <div class="health-card__footer">
+    <p>Footer</p>
+  </div> }}
+</div>

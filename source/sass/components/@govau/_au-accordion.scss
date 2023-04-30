@@ -1,22 +1,163 @@
-.au-accordion {
+.au-body {
 
-  // Small variation.
-  &.au-accordion--small {
-    border: 0;
-    .au-accordion__title {
-      font-weight: 400;
-      font-size: inherit;
+  .au-accordion {
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--accordion-border);
+    @include border-radius($border-radius);
+    overflow: hidden;
+
+    // Fix truncated border due to overflow: hidden
+    &__title:focus {
+      outline-offset: -3px;
+    }
+
+    // Accordion elements
+    &__title {
+      color: var(--accordion-title-text);
+      border: none;
+      text-decoration: none;
+      @include health-fontgrid(md);
+      @include border-radius($border-radius $border-radius 0 0);
+      background-color: var(--accordion-title-bg);
+
+      &:hover {
+        background-color: var(--accordion-title-bg--active);
+
+        &:after {
+          display: block;
+          background-color: var(--accordion-title-text);
+          mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64 0l64 64-16 16-64-64"/><path d="M64 0l16 16-64 64L0 64"/></svg>');
+          background-image: none;
+        }
+      }
+
+      &:after {
+        display: block;
+        background-color: var(--accordion-title-text);
+        mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64 0l64 64-16 16-64-64"/><path d="M64 0l16 16-64 64L0 64"/></svg>');
+        background-image: none;
+      }
+    }
+
+    &__body-wrapper {
+      border: 0;
+    }
+
+    &__body {
+      background-color: var(--accordion-body-bg);
+      color: var(--accordion-body-text);
+    }
+
+    // Compact
+    &.au-accordion--small,
+    &.au-accordion--compact {
+      .au-accordion__title {
+        @include health-fontgrid(sm);
+        font-weight: normal;
+        @include AU-space(padding-top, .75unit);
+        @include AU-space(padding-bottom, .75unit);
+        @include AU-space(padding-left, .75unit);
+
+        &:after {
+          height: 0.75rem;
+          width: 0.75rem;
+        }
+      }
+
+      .au-accordion__body {
+        font-size: 0.9rem;
+      }
+
+      .au-accordion__body-wrapper {
+        @include AU-space(padding, .75unit);
+      }
+    }
+
+    // Block
+    // Forces white and doesn't visually separate title and body elements - suitable for apps
+    &.au-accordion--block {
+
+      .au-accordion__title {
+        background-color: $colour-bg-light;
+      }
+
+      .au-accordion__body-wrapper {
+        padding-top: 0;
+      }
+
+      .au-accordion__body {
+        background-color: $colour-bg-light;
+      }
+    }
+
+    // Shadow
+    &.au-accordion--shadow {
+      @include box-shadow;
+    }
+
+    // Light (legacy)
+    &.au-accordion--light {
+      .au-accordion__title {
+        font-weight: 400;
+      }
+
+      .au-accordion__body-wrapper {
+        @include AU-space(padding, .5unit);
+      }
+    }
+
+  }
+
+  // Group elements
+  .au-accordion-group {
+    &__controls {
+      text-align: right;
+      margin-bottom: 0.5rem;
+    }
+
+    &__control {
+      color: var(--accordion-control-link-text);
+      background: none;
+      border: none;
+      text-decoration: underline;
+      margin-left: 0.25rem;
+      padding: 0;
+      cursor: pointer;
+
+      &:focus {
+        @include AU-outline();
+        outline-offset: 2px;
+      }
+    }
+
+    // Flush - defined in the group as per <ul class="au-accordion-group au-accordion-group--flush">
+    &.au-accordion-group--flush {
+      border: 1px solid var(--accordion-border);
+      @include border-radius;
+
+      .au-accordion {
+        margin-bottom: 0;
+        border-radius: 0;
+        border: 0;
+        border-bottom: 1px solid var(--accordion-border);
+
+        &__title {
+          border-radius: 0;
+        }
+
+      }
+
+      li:first-of-type .au-accordion {
+        &__title {
+          @include border-radius($border-radius $border-radius 0 0);
+        }
+      }
+
+      li:last-of-type .au-accordion {
+        border-bottom: 0;
+        @include border-radius(0 0 $border-radius $border-radius);
+      }
     }
   }
 
-  // Light variation.
-  &.au-accordion--light {
-    .au-accordion__title {
-      font-weight: 400;
-      font-size: inherit;
-    }
-    .au-accordion__body-wrapper {
-      @include AU-space(padding, .5unit);
-    }
-  }
 }

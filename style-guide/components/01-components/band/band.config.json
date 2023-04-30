@@ -2,8 +2,7 @@
   "title": "Band",
   "preview": "@preview-full-width",
   "context": {
-    "title": "Band title",
-    "content": "Plain text band. "
+    "title": "Band title"
   },
   "variants": [
     {
@@ -19,7 +18,7 @@
       "name": "Cards image",
       "context": {
         "title": "Latest news",
-        "modifier": "neutral-1"
+        "modifier": "neutral"
       }
     },
     {
@@ -44,7 +43,7 @@
       "name": "Cards image vertical",
       "context": {
         "title": "The best dinosaurs",
-        "modifier": "neutral-1"
+        "modifier": "neutral"
       }
     },
     {

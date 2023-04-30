@@ -1,6 +1,6 @@
 // Lists
 //
-// A collection of list types.
+// A collection of list types (inline content focussed for manual application by authors)
 //
 // Markup: lists.twig
 //
@@ -10,6 +10,7 @@
 ul {
   li {
     transition: background-color 1s;
+
     &.highlight {
       background-color: $list-bg-colour--highlight;
     }
@@ -23,7 +24,7 @@ ul {
   padding: 0;
   margin: 0;
 
-  * + & {
+  *+& {
     @include AU-space(margin-top, 1.5unit);
   }
 
@@ -32,8 +33,9 @@ ul {
     position: relative;
     @include AU-space('margin', 0 0 1unit);
     @include AU-space('padding', 1.5unit);
-    
+
     background: $list-bg-colour--large;
+
     &::before {
       content: counter(standard-counter, decimal);
       counter-increment: standard-counter;
@@ -46,6 +48,7 @@ ul {
       padding-top: 0;
       font-size: 24px;
     }
+
     a {
       font-weight: bold;
       font-size: 1.15rem;
@@ -54,10 +57,11 @@ ul {
   }
 }
 
-  // Apply default to <ol>
+// Apply default to <ol>
 ol.list--large {
   @extend %list--large;
-  > li {
+
+  >li {
     @include AU-space('padding-left', 3unit);
   }
 }
@@ -66,8 +70,10 @@ ol.list--large {
 ul.list--large {
   @extend %list--large;
   counter-reset: none;
-  > li {
+
+  >li {
     @include AU-space('padding-left', 3unit);
+
     &::before {
       content: '■';
       counter-increment: none;
@@ -77,10 +83,12 @@ ul.list--large {
 }
 
 // Plain list
-ul,ol {
+ul,
+ol {
   &.list--large--plain {
     @extend %list--large;
-    > li {
+
+    >li {
       &:before {
         display: none;
       }
@@ -92,13 +100,16 @@ ul,ol {
 ul {
   &.list--large--checklist {
     @extend %list--large;
-    > li {
+
+    >li {
       @include AU-space('padding-left', 4unit);
       @include AU-space('padding-top', 1unit);
       background: $list-bg-colour--large url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23313131' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23fff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E") no-repeat 13px 13px/30px 30px;
+
       &::before {
         content: '';
       }
+
       strong {
         @extend .au-display-md;
       }
@@ -106,18 +117,8 @@ ul {
   }
 }
 
-.au-body {  
-  ul.health-card-list {
-    li {
-      max-width: 100%;
-    }
-  }
-}
-
-.list--remove {
-  list-style: none;
-  padding-left: 0;
-  > li {
-    @include AU-space(margin-top, .5unit);
-  }
+// Fix aligment of CTA in a list
+// Markup <ul><li><a href="#" class="au-cta-link">Link</a></li></ul>
+ul:has(.au-cta-link) {
+  padding-left: 20px;
 }

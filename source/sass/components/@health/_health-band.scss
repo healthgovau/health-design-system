@@ -1,48 +1,205 @@
-// Bands.
-.au-body {
-  .health-band {
-    @include AU-clearfix;
-    @include AU-space('padding-top', 1.25unit);
-    @include AU-space('padding-bottom', 1.25unit);
-    @include AU-media(md) {
-      @include AU-space('padding-top', 2.5unit);
-      @include AU-space('padding-bottom', 2.5unit);
-    }
+// Band types and colours
 
-    // Background colours.
-    // Use au-body au-body--dark with these backgrounds.
-    &.health-band--primary {
-      @extend %bg-gradient--primary;
-    }
+/**
+ * Markup:
+ * <div class="health-band health-band--MODIFIERS"> - This div doesn't style the band.
+ *   <div class="health-band__container"> - This div styles the contained band. This is included to permit stacking.
+ *     BAND CONTENT
+ *   </div>::before - This pseudo-class styles the full width band.
+ * </div>
+ */
 
-    &.health-band--secondary {
-      @extend %bg-gradient--secondary;
-      .health-band__title--light {
-        color: $text-colour--light;
+// Make band mixin
+// This generates the correct band variants based on the above markup.
+// Variant variables are:
+//  - band width
+//  - band colour
+//  - band content colours
+@mixin make-band($variant, $colour1: null, $colour2: null) {
+  &.health-band--#{$variant} {
+
+    .health-band__container,
+    &.health-band--full-width-bg::before {
+      @if $colour1 and $colour2 {
+        @include background-style(var(--#{$colour1}), var(--#{$colour2}));
+      }
+
+      @else {
+        @include background-style(var(--#{$colour1}));
       }
     }
 
-    &.health-band--tertiary {
-      @extend %bg-gradient--tertiary;
+    &.health-band--full-width-bg {
+      .health-band__container {
+        background: none;
+      }
     }
 
-    &.health-band--tertiary-2 {
-      @extend %bg-gradient--tertiary-2;
+    // Colours for band body contents
+    // Needs to use CSS custom properties given that sub-branded partials use this mixin 
+    color: var(--#{$variant}-body-text);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: var(--#{$variant}-body-text);
     }
 
-    &.health-band--neutral-1 {
-      @extend %bg-gradient--neutral;
+    a {
+      color: var(--#{$variant}-link-text);
+
+      &:hover {
+        // color: var(--#{$variant}-body-text);
+        text-decoration: none;
+      }
     }
 
-    &.health-band--neutral-2 {
-      @extend %bg-gradient--neutral-reverse;
+    // CTA link
+    // TODO refactor as bonefide .health-cta-link variant
+    .au-cta-link {
+      color: var(--#{$variant}-link-text);
+
+      &:after {
+        background: var(--#{$variant}-link-text);
+        mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+        -webkit-mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+        ;
+      }
+
+      &:hover {
+        color: var(--#{$variant}-link-text);
+
+        &:after {
+          background: var(--#{$variant}-link-text);
+          mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+          -webkit-mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M128 64l-64 64-16-16 64-64"/><path d="M128 64l-16 16-64-64L64 0"/></svg>');
+        }
+      }
     }
-    
+
+    // Fix callout text
+    .au-callout {
+      color: $AU-color-foreground-text;
+    }
+
+    // Buttons
+    .au-btn {
+      &.au-btn--primary {
+        background-color: var(--#{$variant}-btn-bg);
+        color: var(--#{$variant}-btn-text);
+        border-color: var(--#{$variant}-btn-bg);
+
+        &:hover:not(:disabled) {
+          text-decoration: underline;
+          border-color: var(--#{$variant}-btn-bg--hover);
+          background-color: var(--#{$variant}-btn-bg--hover);
+        }
+      }
+
+      &.au-btn--secondary {
+        border-color: var(--#{$variant}-btn-bg);
+        color: var(--#{$variant}-btn-bg);
+
+        &:hover:not(:disabled) {
+          text-decoration: underline;
+          border-color: var(--#{$variant}-btn-bg--hover);
+          color: var(--#{$variant}-btn-bg--hover);
+        }
+      }
+    }
+  }
+}
+
+.au-body {
+  .health-band {
+    @include AU-clearfix;
+    position: relative; // reqd for inner container behaviour
+    isolation: isolate;
+    background: none !important; // Remove as applies to container to allow layer management
+    background-color: none !important;
+    padding: 0 !important;
+    @include AU-space(margin, $component-margin--mobile 0);
+
+    @include AU-media('md') {
+      @include AU-space(margin, $component-margin 0);
+    }
+
+    // Types/layouts
+    // Contained band (default)
+    &[class*="health-band--"] {
+      .health-band__container {
+        @include AU-space(padding, $component-padding--mobile);
+
+        @include AU-media('sm') {
+          @include AU-space(padding, $component-padding);
+        }
+
+        @include border-radius();
+        @include box-shadow();
+        @include AU-clearfix();
+      }
+    }
+
+    // Full width background setup
+    &.health-band--full-width-bg {
+      @include AU-space(margin, 0);
+
+      // Apply full width background
+      // No default colour specified. Do it for each band colour.
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        margin-inline-start: 50%;
+        transform: translatex(-50%);
+        display: inherit;
+        z-index: -1;
+      }
+
+      .health-band__container {
+        @include AU-space(padding, $component-padding--mobile 0);
+
+        @include AU-media('sm') {
+          @include AU-space(padding, $component-padding 0);
+        }
+
+        box-shadow: none;
+      }
+    }
+
+    // Everything goes full-width
+    &.health-band--full-width {
+      @include AU-space(margin, 0);
+      width: 100vw;
+      margin-inline-start: 50%;
+      transform: translateX(-50%);
+
+      .health-band__container {
+        box-shadow: none;
+      }
+    }
+
+    // Colours are declared in themes/health/health_design_system/source/sass/themes/health/_colours-map.scss as CSS vars
+    // Make band variants via mixin args: variant-name, start colour, end colour (opt)
+    // The variant name is used to construct the CSS custom proper names.
+    // e.g. primary -> --primary-body-text, --primary-btn-text, etc
+    @include make-band("primary", "primary-gradient-bg--start", "primary-gradient-bg--end");
+    @include make-band("secondary", "secondary-gradient-bg--start", "secondary-gradient-bg--end");
+    @include make-band("tertiary", "tertiary-gradient-bg--start", "tertiary-gradient-bg--end");
+    @include make-band("neutral", "neutral-bg");
+    @include make-band("neutral--darker", "neutral--darker-bg");
+
   }
 }
 
 .health-band__image--image-text-horizontal {
   display: none;
+
   @include AU-media(sm) {
     display: block;
     width: 100%;

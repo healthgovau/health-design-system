@@ -1,8 +1,139 @@
-
 // Visually hide (screen reader accessible)
 .visually-hidden,
 .sr-only,
 .element-invisible {
   @include AU-sronly();
   position: absolute !important;
+}
+
+// Clearfix
+.clearfix {
+  @include AU-clearfix;
+}
+
+
+// Debug in-browser
+html.debug {
+  * {
+    outline: 1px solid #006565 !important; // applied outlines
+    background: rgba(0, 134, 134, 0.1) !important; // applies BGs to elements
+  }
+
+  &:before {
+    $debug-bg: #2ab3c1;
+    font-family: $AU-font;
+    @include AU-space('padding', .5unit);
+    display: block;
+    text-align: center;
+
+    @include AU-media(xs) {
+      content: 'Breakpoint $AU-media-xs (min-width: #{$AU-media-xs})';
+      background: $debug-bg;
+    }
+
+    @include AU-media(sm) {
+      content: 'Breakpoint $AU-media-sm (min-width: #{$AU-media-sm})';
+      background: lighten($debug-bg, 10%);
+    }
+
+    @include AU-media(md) {
+      content: 'Breakpoint $AU-media-md (min-width: #{$AU-media-md})';
+      background: lighten($debug-bg, 20%);
+    }
+
+    @include AU-media(lg) {
+      content: 'Breakpoint $AU-media-lg (min-width: #{$AU-media-lg})';
+      background: lighten($debug-bg, 30%);
+    }
+
+    @include AU-media(xl) {
+      content: 'Breakpoint $AU-media-xl (min-width: #{$AU-media-xl})';
+      background: lighten($debug-bg, 40%);
+    }
+
+    // Health added without AU-media() support.
+    // Simply uses the existing grid and widens the container.
+    @media (min-width: 1441px) {
+      content: 'Breakpoint $AU-media-xxl (min-width: 1441px)';
+      background: lighten($debug-bg, 50%);
+    }
+
+  }
+
+  // Admin
+  .adminimal-admin-toolbar {
+    padding-top: 0 !important;
+  }
+
+  .toolbar-fixed .toolbar-oriented .toolbar-bar {
+    position: relative;
+  }
+}
+
+// Remove DOM elements when empty
+// Be careful with empty nodes that exist to show background images like <div id="pillars"></div>
+p:empty,
+.health-card__text:empty {
+  display: none;
+}
+
+// Empty class to allow SASS-level text colour inversion.
+// Although not required in the HDS, is means that .component--dark variants aren't required as part of product administration
+// This is a generic utility but can extend .component--dark classes, too.
+%light-text-on-dark {
+  color: $AU-colordark-foreground-text;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $AU-colordark-foreground-text;
+  }
+
+  a {
+    color: $AU-colordark-foreground-text;
+
+    &:hover {
+      color: $AU-colordark-foreground-text;
+      text-decoration: none;
+    }
+  }
+
+  // CTA link
+  .au-cta-link {
+    @extend .au-cta-link--dark;
+  }
+
+  // Fix callout text
+  .au-callout {
+    color: $AU-color-foreground-text;
+  }
+
+  // Buttons
+  .au-btn {
+    &.au-btn--primary {
+      background-color: $AU-colordark-foreground-action;
+      color: $AU-color-foreground-text;
+      border-color: $AU-colordark-foreground-action;
+
+      &:hover:not(:disabled) {
+        text-decoration: underline;
+        border-color: $button-bg-colour--dark-hover;
+        background-color: $button-bg-colour--dark-hover;
+      }
+    }
+
+    &.au-btn--secondary {
+      border-color: $AU-colordark-foreground-action;
+
+      &:hover:not(:disabled) {
+        text-decoration: underline;
+        border-color: $button-bg-colour--dark-hover;
+        color: $button-bg-colour--dark-hover;
+      }
+    }
+  }
 }

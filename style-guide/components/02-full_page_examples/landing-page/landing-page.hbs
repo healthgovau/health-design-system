@@ -6,20 +6,15 @@
   {{ render '@header' }}
   {{> @sub-header }}
 
-  <div class="container-fluid full-width">
-    <div class="row standard-gap">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            {{ render '@callout--simple' }}
-          </div>
-        </div>
-      </div>
+  <div class="container full-width">
+    <div class="row">
+      {{ render '@callout--simple' }}
       {{ render '@band--cards-call-to-action' }}
-      {{ render '@band--cards-image' }}
-      {{ render '@band--featured' }}
+      {{ render '@band--cards-image'}}
+      {{ render '@accordion-group' }}
       {{ render '@band--cards-audience' }}
       {{ render '@band--hotline' }}
+      {{ render '@band--featured' }}
       {{ render '@band--cards-resources' }}
       {{ render '@band--statistics' }}
       {{ render '@band--cards-image-vertical' }}

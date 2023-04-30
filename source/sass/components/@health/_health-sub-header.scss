@@ -1,17 +1,27 @@
 // Sub header variation. This includes our title and HP switcher.
 .health-sub-header {
+  --subheader-minheight--desktop: #{$subheader-minheight--desktop};
+
   @include AU-space('padding', 12px 0);
-  @include AU-media(sm){
+
+  @include AU-media(sm) {
     @include AU-space('padding', 1.5unit 0 2.5unit 0);
+  }
+
+  // Dark variant
+  &#{&}--dark {
+    @include background-style(var(--subheader-gradient-bg--start), var(--subheader-gradient-bg--end));
+    @extend %light-text-on-dark;
   }
 
   // Title.
   h1 {
-    margin-top: 0;
+    @include AU-space(margin-top, 1unit);
   }
 
   .au-introduction {
     @include AU-space(margin-top, .5unit);
+
     @include AU-media(sm) {
       @include AU-space(margin-top, 1unit);
       @include AU-space(margin-bottom, 1unit);
@@ -20,9 +30,12 @@
 
   &__section-title {
     @include AU-space(margin-bottom, .65unit);
-    @include AU-media(sm) { // Hide on desktop
+
+    @include AU-media(sm) {
+      // Hide on desktop
       display: none;
     }
+
     @media print {
       display: none;
     }
@@ -45,6 +58,7 @@
     }
 
     @include AU-space('padding-top', 1.5unit);
+
     @include AU-media(sm) {
       padding-top: 0;
     }
@@ -55,33 +69,29 @@
     padding: 35% 0 0 0; // Based on 1920x700 image
     background-size: contain;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 
-    @include AU-media(sm){
+    @include AU-media(sm) {
       padding-top: 0;
       // Hero image
       background-size: cover;
       background-position: center center;
       background-repeat: none;
-      min-height: 500px; // Based on 1920x700 image to prevent narrow image
+      min-height: $subheader-minheight--desktop; // Based on 1920x700 image to prevent narrow image
+      min-height: var(--subheader-minheight--desktop);
     }
 
     // Hero content
     .health-sub-header__content {
-      @include AU-space(padding, 1.5unit 12px);
-      @include AU-media(sm){
-        @include AU-space(padding, 3unit);
-      }
-      @extend %bg-gradient--primary;
+      @include AU-space(padding, 1.5unit $AU-grid-12-gutter-width/2);
 
-      &--secondary {
+      @include AU-media(sm) {
         @include AU-space(padding, 3unit);
-        @extend %bg-gradient--secondary;
+        border-radius: 6px;
       }
 
-      &--tertiary {
-        @include AU-space(padding, 3unit);
-        @extend %bg-gradient--tertiary;
-      }
+      @include background-style(var(--subheader-gradient-content-bg--start), var(--subheader-gradient-content-bg--end));
     }
   }
 

@@ -19,6 +19,7 @@
   max-width: 22.75em;
 
   @include AU-space(margin-top, 1.5unit);
+
   @include AU-media(sm) {
     margin-top: 0;
   }
@@ -27,7 +28,8 @@
   &--global {
     @include AU-space(margin-top, .5unit);
     @include AU-space(padding-bottom, 1unit);
-    @include AU-media(sm) {
+
+    @include AU-media(md) {
       display: block;
       padding-bottom: 0;
       margin-top: 0;
@@ -48,7 +50,8 @@
   }
 
   // Remove the spacing applied by au-form.
-  .au-form__item, input {
+  .au-form__item,
+  input {
     margin-top: 0 !important;
   }
 
@@ -70,12 +73,15 @@
       border-color: $AU-color-foreground-text;
       background-color: white;
       width: 100%;
+
       @include AU-media(sm) {
         @include AU-space(width, 15unit);
       }
+
       @include AU-media(md) {
         @include AU-space(width, 20unit);
       }
+
       &-wrapper {
         width: 100%;
         padding-right: 45px;
@@ -86,16 +92,20 @@
       position: absolute;
       right: 0;
       top: 0;
+      left: -3px;
       background-color: $AU-color-foreground-text;
       border: none;
       width: 46px;
       height: 46px;
       text-indent: -999px;
       background-image: AU-svguri('<svg viewBox="-5 -5 32 32" fill="#{ $AU-color-background }" xmlns="http://www.w3.org/2000/svg"> <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+      margin: 0 !important;
+
       &:hover:not(:disabled),
       &:focus:not(:disabled) {
         background-color: #000;
       }
+
       border-radius: 0px 4px 4px 0;
     }
   }
@@ -107,19 +117,24 @@
     &__link {
       text-decoration: none;
     }
+
     &__link-title {
       margin-top: 0;
       text-decoration: underline;
       display: inline-block;
     }
+
     &__link-path {
       color: $search-text-colour--path;
+
       a {
         color: $search-text-colour--path;
       }
+
       font-size: 0.9em;
       word-break: break-all;
     }
+
     & ol.health-search-result__link-path {
       li:after {
         margin: 0;
@@ -129,6 +144,7 @@
     &__summary {
       @include AU-space(margin-top, 0.5unit);
     }
+
     &__summary-date {
       color: $search-text-colour--date;
     }
@@ -161,7 +177,7 @@
 
 form[class*='col-'].health-search__form {
   .health-search__form__submit {
-    right: 12px;
+    right: $AU-grid-12-gutter-width/2;
   }
 }
 
@@ -173,11 +189,14 @@ form[class*='col-'].health-search__form {
   border: 1px solid $AU-colordark-background;
   width: 300px;
   position: absolute;
+
   li.ui-menu-item {
     &:hover {
       cursor: pointer;
     }
+
     margin: 0;
+
     .ui-menu-item-wrapper {
       @include AU-space(padding, 0.25unit 1.2unit);
     }

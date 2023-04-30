@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head class="no-js">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link media="all" rel="stylesheet" href="../../build/css/hds-all.css">
+  <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
+  <script src="../../build/js/libraries/jquery.min.js"></script>
+  <script src="../../build/js/libraries/jquery-ui.min.js"></script>
+  <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
+  <script src="../../build/js/libraries/jquery.once.min.js"></script>
+  <script src="../../build/js/libraries/lazyload.min.js"></script>
+  <script src="../../build/js/libraries/tippy.all.min.js"></script>
+  <script src="../../build/js/libraries/anchorific.min.js"></script>
+  <script src="../../data.js"></script>
+  <script src="../../build/js/hds.js"></script>
+  <title>Preview Layout</title>
+</head>
+<body class="au-body au-grid">
+<div class="container not-full-width">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="au-accordion-group__controls">
+    <button class="au-accordion-group__control" onclick="return AU.accordion.Open(document.querySelector('#accordion-group-1').getElementsByClassName('js-au-accordion'))">Open all</button>
+    <button class="au-accordion-group__control" onclick="return AU.accordion.Close(document.querySelector('#accordion-group-1').getElementsByClassName('js-au-accordion'))">Close all</button>
+</div>
+
+<ul class="au-accordion-group" id="accordion-group-1">
+  <li>
+    <section class="au-accordion">
+      <button class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-1-1"
+        aria-expanded="false" onclick="return AU.accordion.Toggle( this )">
+        Accordion title
+      </button>
+
+      <div class="au-accordion__body au-accordion--closed" id="accordion-1-1">
+        <div class="au-accordion__body-wrapper">
+          Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+        </div>
+      </div>
+    </section>
+  </li>
+  <li>
+    <section class="au-accordion">
+      <button class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-1-2"
+        aria-expanded="false" onclick="return AU.accordion.Toggle( this )">
+        Accordion title
+      </button>
+
+      <div class="au-accordion__body au-accordion--closed" id="accordion-1-2">
+        <div class="au-accordion__body-wrapper">
+          Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+        </div>
+      </div>
+    </section>
+  </li>
+  <li>
+    <section class="au-accordion">
+      <button class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-1-3"
+        aria-expanded="false" onclick="return AU.accordion.Toggle( this )">
+        Accordion title
+      </button>
+
+      <div class="au-accordion__body au-accordion--closed" id="accordion-1-3">
+        <div class="au-accordion__body-wrapper">
+          Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+        </div>
+      </div>
+    </section>
+  </li>
+</ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

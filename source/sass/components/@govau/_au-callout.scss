@@ -1,22 +1,33 @@
 .au-body {
   .au-callout {
+
     // If the callout is on a row, reset the margin so the keyline lines up.
     // eg .container > .row .au-callout > .col-sm-3 | .col-sm-9
     &.row {
       margin-left: 0;
       margin-right: 0;
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-left: $AU-grid-12-gutter-width/2;
+      padding-right: $AU-grid-12-gutter-width/2;
     }
+
     background-color: $callout-bg-colour;
-    border-left-color: $callout-border-colour;
+    border-left-color: var(--callout-border--primary);
+    max-width: 100%;
+
+    // Remove the line wrapping
+    p {
+      max-width: 100%;
+    }
+
     // Colours.
     &--secondary {
-      border-left-color: $callout-border-colour--secondary;
+      border-left-color: var(--callout-border--secondary);
     }
+
     &--tertiary {
-      border-left-color: $callout-border-colour--tertiary;
+      border-left-color: var(--callout-border--tertiary);
     }
+
     &--success {
       border-left-color: $AU-color-success;
     }
@@ -24,7 +35,7 @@
     // Simple variation
     &.au-callout--simple {
       background: transparent;
-      border-left-width: 10px;
+      border-left-width: 8px;
       padding: 1rem 1.5rem;
     }
   }

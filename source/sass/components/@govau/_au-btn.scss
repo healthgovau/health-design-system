@@ -1,6 +1,6 @@
 // Button.
 .au-btn,
-a.au-btn  {
+a.au-btn {
 
   // Convert tertiary button to look like a link.
   &--tertiary {
@@ -13,6 +13,11 @@ a.au-btn  {
     font-weight: 700;
   }
 
+  &:hover:not(:disabled) {
+    background-color: $AU-color-foreground-action--active;
+    border-color: $AU-color-foreground-action--active;
+  }
+
   // Dark button
   &.au-btn--dark {
     &:hover:not(:disabled) {
@@ -20,4 +25,11 @@ a.au-btn  {
       border-color: $button-border-colour--dark-hover;
     }
   }
+
+  // Override to return au-btn--block to normal for upper breakpoints
+  &.au-btn--inline {
+    display: inline-block;
+    width: auto;
+  }
+
 }

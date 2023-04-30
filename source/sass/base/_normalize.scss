@@ -18,6 +18,8 @@ body {
   // Remove default margin and padding.
   margin: 0;
   padding: 0;
+  // Prevent horizontal scrollbars when using 100vw on pages with vertical scrollbars.
+  overflow-x: hidden;
 }
 
 .cke_editable {

@@ -1,99 +1,84 @@
 {
   "title": "Card",
-  "default": "Image",
   "context": {
     "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
     "date": "20 July 2019",
-    "icon": "phone",
-    "colour": "colour1",
+    "tag": "News",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   },
   "variants": [
     {
-      "name": "Resource",
+      "name": "Without image",
+      "view": "card--no-image.hbs"
+    },
+    {
+      "name": "Not clickable",
+      "view": "card--no-click.hbs",
       "context": {
-        "title": "Dinosaur factsheet",
-        "type": "Publication"
+        "content": "The default card is a single clickable element but this one allows individual elements to be clickable. This supports multiple links and actions."
       }
     },
     {
-      "name": "Full image",
+      "name": "Highlight",
+      "view": "card--no-image.hbs",
       "context": {
-        "title": "DTA Design System card with AusGov styling",
-        "type": "Publication"
+        "class": "health-card--highlight",
+        "content": "This card includes a highlight keyline."
       }
     },
     {
-      "name": "Call to action",
+      "name": "Centred",
+      "view": "card--no-click.hbs",
       "context": {
-        "title": "Find your favourite dinosaur"
+        "class": "health-card--centered",
+        "content": "This card centres all content."
       }
     },
     {
-      "name": "Call to action - Colour 2",
-      "hidden": true,
-      "view": "card--call-to-action.hbs",
+      "name": "Horizontal",
       "context": {
-        "colour": "health-card--colour2",
-        "icon": "envelope",
-        "title": "Compare yourself to the largest dinosaur"
+        "class": "health-card--horizontal",
+        "content": "This card presents image and body side-by-side."
       }
     },
     {
-      "name": "Call to action - Colour 3",
-      "hidden": true,
-      "view": "card--call-to-action.hbs",
+      "name": "Contact",
+      "view": "card--contact.hbs",
       "context": {
-        "colour": "health-card--colour3",
-        "icon": "youtube",
-        "title": "Take our dinosaur quiz"
+        "class": "health-card--contact",
+        "content": "This card presents a contact."
       }
     },
     {
-      "name": "Call to action - Colour 4",
-      "hidden": true,
-      "view": "card--call-to-action.hbs",
+      "name": "Contact (horizontal)",
+      "view": "card--contact.hbs",
       "context": {
-        "colour": "health-card--colour4",
-        "icon": "search",
-        "title": "Learn more about dinosaurs"
+        "class": "health-card--contact-horizontal",
+        "content": "This card presents a contact in a horizontal layout."
       }
     },
     {
-      "name": "Audience",
+      "name": "Full colour (primary)",
+      "view": "card--no-image.hbs",
       "context": {
-        "title": "Children",
-        "content": "Activities for children to learn about dinosaurs."
+        "class": "health-card--colour-primary",
+        "content": "This card uses the primary colour as a background."
       }
     },
     {
-      "name": "Audience - Colour 2",
-      "hidden": true,
-      "view": "card--audience.hbs",
+      "name": "Full colour (secondary)",
+      "view": "card--no-image.hbs",
       "context": {
-        "colour": "colour2",
-        "title": "Teenages",
-        "content": "Get your teenager out of the house with a trip to your local dinosaur museum"
+        "class": "health-card--colour-secondary",
+        "content": "This card uses the secondary colour as a background."
       }
     },
     {
-      "name": "Audience - Colour 3",
-      "hidden": true,
-      "view": "card--audience.hbs",
+      "name": "Full colour (tertiary)",
+      "view": "card--no-image.hbs",
       "context": {
-        "colour": "colour3",
-        "title": "Adults",
-        "content": "When was the last time you watched Jurrasic Park?"
-      }
-    },
-    {
-      "name": "Audience - Colour 4",
-      "hidden": true,
-      "view": "card--audience.hbs",
-      "context": {
-        "colour": "colour4",
-        "title": "Seniors",
-        "content": "Dinosaurs are for people of all ages."
+        "class": "health-card--colour-tertiary",
+        "content": "This card uses the tertiary colour as a background."
       }
     }
   ]

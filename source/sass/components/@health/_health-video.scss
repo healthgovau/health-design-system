@@ -6,12 +6,13 @@
 
 .health-video {
 
-  * + & {
+  *+& {
     @include AU-space(margin-top, 1.5unit);
   }
 
   &__transcript {
-    margin-top: 0;
+    @extend .au-accordion--compact;
+    @include AU-space(margin-top, 0.75unit);
     border: 0;
   }
 
@@ -28,6 +29,7 @@
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
+
       svg {
         fill: white;
         filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, .75));
@@ -58,13 +60,20 @@
       bottom: 0;
 
       &--small {
-        display: none;
+        @include AU-space('padding', .75rem .5rem);
+        font-size: 0.75em;
+
         @include AU-media(sm) {
+          @include AU-space('padding', .5rem);
           display: inline-block;
-          @include AU-space('padding', .5unit);
-          font-size: 0.85em;
-          right: 3px;
-          bottom: 3px;
+        }
+
+        .svg-inline--fa {
+          display: none;
+
+          @include AU-media(sm) {
+            display: inline-block;
+          }
         }
       }
     }
@@ -74,7 +83,7 @@
     border: $health-borderize--thin;
     @include AU-space(padding, 1unit);
 
-    * + & {
+    *+& {
       @include AU-space(margin-top, 1.5unit);
     }
   }

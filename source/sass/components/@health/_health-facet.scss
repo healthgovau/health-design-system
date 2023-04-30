@@ -5,13 +5,18 @@
   height: auto;
   transition: opacity 1s;
 
-  @include AU-space(padding, 1unit);
+  @include AU-space(padding, $component-padding--mobile);
+
+  @include AU-media('sm') {
+    @include AU-space(padding, 2unit);
+  }
 
   // Spacing.
-  * + & {
+  *+& {
     @include AU-space(margin-top, 1unit);
   }
-  .health-filter + & {
+
+  .health-filter+& {
     margin-top: 0;
   }
 
@@ -27,5 +32,10 @@
 
   &__more {
     font-size: 0.8em;
+  }
+
+  &__list {
+    @include AU-space(margin-top, 1unit);
+    @include AU-space(margin-bottom, 1unit);
   }
 }
