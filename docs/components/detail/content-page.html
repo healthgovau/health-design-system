@@ -57,7 +57,7 @@
   </a>
   <ul class="Header-menu">
     
-      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 1.4.0-alpha.19</a></li>
+      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 1.5.1</a></li>
     
     <li>
       <a href="https://github.com/healthgovau/health-design-system">
@@ -439,6 +439,55 @@
                     metric tons (15.4 short tons).
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;accordion&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion-group__controls&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion-group__control&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;return AU.accordion.Open(document.querySelector(&#x27;#accordion-group-1&#x27;).getElementsByClassName(&#x27;js-au-accordion&#x27;))&quot;</span>&gt;</span>Open all<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion-group__control&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;return AU.accordion.Close(document.querySelector(&#x27;#accordion-group-1&#x27;).getElementsByClassName(&#x27;js-au-accordion&#x27;))&quot;</span>&gt;</span>Close all<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;accordion-group-1&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__title js-au-accordion au-accordion--closed&quot;</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">&quot;accordion-1-1&quot;</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;return AU.accordion.Toggle( this )&quot;</span>&gt;</span>
+                                Accordion title
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body au-accordion--closed&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;accordion-1-1&quot;</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body-wrapper&quot;</span>&gt;</span>
+                                    Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh, et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__title js-au-accordion au-accordion--closed&quot;</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">&quot;accordion-1-2&quot;</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;return AU.accordion.Toggle( this )&quot;</span>&gt;</span>
+                                Accordion title
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body au-accordion--closed&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;accordion-1-2&quot;</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body-wrapper&quot;</span>&gt;</span>
+                                    Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh, et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__title js-au-accordion au-accordion--closed&quot;</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">&quot;accordion-1-3&quot;</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;return AU.accordion.Toggle( this )&quot;</span>&gt;</span>
+                                Accordion title
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body au-accordion--closed&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;accordion-1-3&quot;</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body-wrapper&quot;</span>&gt;</span>
+                                    Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh, et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;compare&quot;</span>&gt;</span>Compare<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-compare&quot;</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
@@ -1077,7 +1126,7 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(25)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(26)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="./skip.html">@<span>skip</span></a>, 
@@ -1091,6 +1140,8 @@
                 <a href="./side-nav.html">@<span>side-nav</span></a>, 
             
                 <a href="./inpage-nav.html">@<span>inpage-nav</span></a>, 
+            
+                <a href="./accordion-group.html">@<span>accordion-group</span></a>, 
             
                 <a href="./compare.html">@<span>compare</span></a>, 
             

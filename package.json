@@ -49,6 +49,7 @@
     "get-installed-path": "^4.0.8"
   },
   "devDependencies": {
+    "@drupal/once": "^1.0.1",
     "@frctl/fractal": "^1.2.1",
     "@frctl/mandelbrot": "^1.2.1",
     "backstopjs": "^5.3.4",

@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.19 */
+/*! @health.gov.au/health-design-system v1.5.1 */
 @charset "UTF-8";
 /*! PANCAKE v2.0.0 PANCAKE-SASS v3.0.0 */
 /*
@@ -3639,6 +3639,11 @@ p:empty,
       color: #ececec; }
 
 :root {
+  --brand-primary-colour: #072e7e;
+  --brand-colour-1: #27b3bb;
+  --brand-colour-2: #0091d5;
+  --brand-colour-3: #1a8a96;
+  --brand-colour-4: #004181;
   --primary-gradient-bg--start: #072e7e;
   --primary-gradient-bg--end: #005ab0;
   --secondary-gradient-bg--start: #006972;
@@ -3958,7 +3963,7 @@ ul.list--large--checklist > li .au-body strong {
   -moz-border-radius: 6px;
   overflow: hidden; }
   .au-body .au-accordion__title:focus {
-    outline: none; }
+    outline-offset: -3px; }
   .au-body .au-accordion__title {
     color: var(--accordion-title-text);
     border: none;
@@ -3978,14 +3983,24 @@ ul.list--large--checklist > li .au-body strong {
         line-height: 1.6; } }
     .au-body .au-accordion__title:hover {
       background-color: var(--accordion-title-bg--active); }
+      .au-body .au-accordion__title:hover:after {
+        display: block;
+        background-color: var(--accordion-title-text);
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+        background-image: none; }
     .au-body .au-accordion__title:after {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23313131' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E"); }
+      display: block;
+      background-color: var(--accordion-title-text);
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+              mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 0l64 64-16 16-64-64'/%3E%3Cpath d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+      background-image: none; }
   .au-body .au-accordion__body-wrapper {
     border: 0; }
   .au-body .au-accordion__body {
     background-color: var(--accordion-body-bg);
     color: var(--accordion-body-text); }
-  .au-body .au-accordion.au-accordion--small .au-accordion__title, .au-body .au-accordion.au-accordion--compact .au-accordion__title {
+  .au-body .au-accordion.au-accordion--small .au-accordion__title, .au-body .au-accordion.au-accordion--compact .au-accordion__title, .au-body .au-accordion.health-video__transcript .au-accordion__title {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.42857;
@@ -3998,16 +4013,16 @@ ul.list--large--checklist > li .au-body strong {
     padding-left: 12px;
     padding-left: 0.75rem; }
     @media (min-width: 576px) {
-      .au-body .au-accordion.au-accordion--small .au-accordion__title, .au-body .au-accordion.au-accordion--compact .au-accordion__title {
+      .au-body .au-accordion.au-accordion--small .au-accordion__title, .au-body .au-accordion.au-accordion--compact .au-accordion__title, .au-body .au-accordion.health-video__transcript .au-accordion__title {
         font-size: 16px;
         font-size: 1rem;
         line-height: 1.5; } }
-    .au-body .au-accordion.au-accordion--small .au-accordion__title:after, .au-body .au-accordion.au-accordion--compact .au-accordion__title:after {
+    .au-body .au-accordion.au-accordion--small .au-accordion__title:after, .au-body .au-accordion.au-accordion--compact .au-accordion__title:after, .au-body .au-accordion.health-video__transcript .au-accordion__title:after {
       height: 0.75rem;
       width: 0.75rem; }
-  .au-body .au-accordion.au-accordion--small .au-accordion__body, .au-body .au-accordion.au-accordion--compact .au-accordion__body {
+  .au-body .au-accordion.au-accordion--small .au-accordion__body, .au-body .au-accordion.au-accordion--compact .au-accordion__body, .au-body .au-accordion.health-video__transcript .au-accordion__body {
     font-size: 0.9rem; }
-  .au-body .au-accordion.au-accordion--small .au-accordion__body-wrapper, .au-body .au-accordion.au-accordion--compact .au-accordion__body-wrapper {
+  .au-body .au-accordion.au-accordion--small .au-accordion__body-wrapper, .au-body .au-accordion.au-accordion--compact .au-accordion__body-wrapper, .au-body .au-accordion.health-video__transcript .au-accordion__body-wrapper {
     padding: 12px;
     padding: 0.75rem; }
   .au-body .au-accordion.au-accordion--block .au-accordion__title {
@@ -4037,6 +4052,10 @@ ul.list--large--checklist > li .au-body strong {
   margin-left: 0.25rem;
   padding: 0;
   cursor: pointer; }
+  .au-body .au-accordion-group__control:focus {
+    outline: 3px solid #9263DE;
+    outline-offset: 2px;
+    outline-offset: 2px; }
 
 .au-body .au-accordion-group.au-accordion-group--flush {
   border: 1px solid var(--accordion-border);
@@ -4982,8 +5001,26 @@ textarea.au-text-input {
       display: none; } }
 
 .pillars-container {
+  --pillars-pattern: var(--brand-colour-1) 0%,
+        var(--brand-colour-1) 9%,
+        var(--brand-colour-4) 9%,
+        var(--brand-colour-4) 21%,
+        var(--brand-colour-2) 21%,
+        var(--brand-colour-2) 33%,
+        var(--brand-colour-1) 33%,
+        var(--brand-colour-1) 39%,
+        var(--brand-colour-3) 39%,
+        var(--brand-colour-3) 46%,
+        var(--brand-colour-4) 46%,
+        var(--brand-colour-4) 66%,
+        var(--brand-colour-1) 66%,
+        var(--brand-colour-1) 72%,
+        var(--brand-colour-3) 72%,
+        var(--brand-colour-3) 92%,
+        var(--brand-colour-2) 92%,
+        var(--brand-colour-2) 100%;
   position: relative;
-  border-top: 12px solid #072e7e !important; }
+  border-top: 12px solid var(--brand-primary-colour) !important; }
   @media print {
     .pillars-container {
       border-top: 0 !important; } }
@@ -4993,9 +5030,9 @@ textarea.au-text-input {
     left: 0;
     height: 12px;
     width: 300px;
-    background: -webkit-gradient(linear, left top, right top, from(#27b3bb), color-stop(9%, #27b3bb), color-stop(9%, #004181), color-stop(21%, #004181), color-stop(21%, #0091d5), color-stop(33%, #0091d5), color-stop(33%, #27b3bb), color-stop(39%, #27b3bb), color-stop(39%, #1a8a96), color-stop(46%, #1a8a96), color-stop(46%, #004181), color-stop(66%, #004181), color-stop(66%, #27b3bb), color-stop(72%, #27b3bb), color-stop(72%, #1a8a96), color-stop(92%, #1a8a96), color-stop(92%, #0091d5), to(#0091d5)) !important;
-    background: -o-linear-gradient(left, #27b3bb 0%, #27b3bb 9%, #004181 9%, #004181 21%, #0091d5 21%, #0091d5 33%, #27b3bb 33%, #27b3bb 39%, #1a8a96 39%, #1a8a96 46%, #004181 46%, #004181 66%, #27b3bb 66%, #27b3bb 72%, #1a8a96 72%, #1a8a96 92%, #0091d5 92%, #0091d5 100%) !important;
-    background: linear-gradient(to right, #27b3bb 0%, #27b3bb 9%, #004181 9%, #004181 21%, #0091d5 21%, #0091d5 33%, #27b3bb 33%, #27b3bb 39%, #1a8a96 39%, #1a8a96 46%, #004181 46%, #004181 66%, #27b3bb 66%, #27b3bb 72%, #1a8a96 72%, #1a8a96 92%, #0091d5 92%, #0091d5 100%) !important;
+    background: -webkit-gradient(linear, left top, right top, from(var(--pillars-pattern))) !important;
+    background: -o-linear-gradient(left, var(--pillars-pattern)) !important;
+    background: linear-gradient(to right, var(--pillars-pattern)) !important;
     background-size: cover; }
     @media (min-width: 576px) {
       .pillars-container #pillars {
@@ -5417,20 +5454,20 @@ textarea.au-text-input {
       .health-filter .health-filter__title {
         display: none; } }
 
-* + .health-figure {
+* + .au-body .health-figure {
   margin-top: 24px;
   margin-top: 1.5rem; }
 
-.health-figure--border {
-  border: 2px solid #ccc;
+.au-body .health-figure--border {
+  border: 1px solid #ccc;
   padding: 1rem; }
 
-.health-figure__image-link {
+.au-body .health-figure__image-link {
   display: block;
   position: relative; }
-  .health-figure__image-link .health-figure__image-link__icon {
+  .au-body .health-figure__image-link .health-figure__image-link__icon {
     display: none; }
-  .health-figure__image-link:hover .health-figure__image-link__icon, .health-figure__image-link:focus .health-figure__image-link__icon {
+  .au-body .health-figure__image-link:hover .health-figure__image-link__icon, .au-body .health-figure__image-link:focus .health-figure__image-link__icon {
     display: block;
     position: absolute;
     background: white;
@@ -5440,17 +5477,24 @@ textarea.au-text-input {
     top: 5px;
     border: 1px solid #ccc; }
 
-figure {
+.au-body .health-figure .au-accordion {
+  border: 0; }
+  .au-body .health-figure .au-accordion__title {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px; }
+
+.au-body figure {
   margin: 0; }
-  figure img {
+  .au-body figure img {
     margin: 0; }
-  * + figure {
+  * + .au-body figure {
     margin-top: 24px;
     margin-top: 1.5rem; }
 
-.fancybox-button {
+.au-body .fancybox-button {
   width: 46px; }
-  .fancybox-button i:before {
+  .au-body .fancybox-button i:before {
     margin-right: 0; }
 
 .health-footnotes {
@@ -7128,7 +7172,8 @@ table {
   margin-top: 1.5rem; }
 
 .health-video__transcript {
-  margin-top: 0;
+  margin-top: 12px;
+  margin-top: 0.75rem;
   border: 0; }
 
 .health-video__preview {

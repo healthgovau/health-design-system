@@ -57,7 +57,7 @@
   </a>
   <ul class="Header-menu">
     
-      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 1.4.0-alpha.19</a></li>
+      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 1.5.1</a></li>
     
     <li>
       <a href="https://github.com/healthgovau/health-design-system">
@@ -169,7 +169,34 @@
     <div class="Prose Prose--condensed">
         
         <h1 id="accordion">Accordion</h1>
-<p>⭐ <a href="https://gold.designsystemau.org/components/accordion/">GOLD Design System Accordion</a></p>
+<p>The accordion is based on the <a href="https://gold.designsystemau.org/components/accordion/">GOLD Design System Accordion</a>.</p>
+<h2 id="implementation">Implementation</h2>
+<p>Accordions can be implementated:</p>
+<ul>
+<li>Singularly (this component)</li>
+<li>As a group</li>
+</ul>
+<h2 id="variants">Variants</h2>
+<p>Whilst the behaviour of accordions is consistent across types, the following variants exist to suit applications.</p>
+<p>The following should be applied to the <code>.au-accordion</code> as they may be delivered singularly. Variatn must no be mixed within a group.</p>
+<h3 id="default">Default</h3>
+<p>The default accordion including default colour, border and font size.</p>
+<h3 id="block">Block</h3>
+<p>Removes the colour and bottom padding from the accordion title so that the title and body appear as a single unit.</p>
+<h3 id="shadow">Shadow</h3>
+<p>Adds the default shadow.</p>
+<h3 id="compact">Compact</h3>
+<p>Reduces font size and padding.</p>
+<h2 id="tokens">Tokens</h2>
+<p>The following CSS custom variables allow customisation:</p>
+<ol>
+<li><strong>–accordion-title-bg</strong>: title background colour</li>
+<li><strong>–accordion-title-bg–active</strong>: title and chevron hover/focus background colour</li>
+<li><strong>–accordion-title-text</strong>: title text colour</li>
+<li><strong>–accordion-border</strong>: accordion border colour</li>
+<li><strong>–accordion-body-bg</strong>: accordion body background colour</li>
+<li><strong>–accordion-body-text</strong>: accordion body text colour</li>
+</ol>
 
         
     </div>
@@ -182,12 +209,12 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion au-accordion--shadow&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__title js-au-accordion au-accordion--closed&quot;</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">&quot;accordion-1-1&quot;</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;return AU.accordion.Toggle( this )&quot;</span>&gt;</span>
-        Accordion title
+        Accordion shadow variant
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body au-accordion--closed&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;accordion-1-1&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion__body-wrapper&quot;</span>&gt;</span>
-            Contents of the accordion body. Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh, et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+            This accordion add the default shadow to make it more prominent.<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh, et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
