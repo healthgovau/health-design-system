@@ -5,7 +5,7 @@ $card-padding--mobile: $component-padding--mobile;
 .au-body {
   .health-card {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    color: var(--card-text);
     @include border-radius;
     position: relative;
     overflow: hidden;
@@ -36,10 +36,12 @@ $card-padding--mobile: $component-padding--mobile;
 
     &__title {
       @include health-fontgrid('lg', 'heading');
-      color: var(--card-text) !important;
+      color: var(--card-text);
     }
 
-    &__link {}
+    &__link {
+      color: $AU-color-foreground-action;
+    }
 
     &__text {
       @include AU-space(margin-top, 1unit);
@@ -94,6 +96,10 @@ $card-padding--mobile: $component-padding--mobile;
       @include box-shadow;
     }
 
+    &.health-card--border {
+      border: 1px solid var(--card-border);
+    }
+
     // Shadow
     &.health-card--clickable {
       a {
@@ -109,7 +115,7 @@ $card-padding--mobile: $component-padding--mobile;
       }
 
       .health-card__link {
-        color: var(--card-text);
+        color: var(--card-text); // Whole card is clickable so simply to text colour
         text-decoration: none;
       }
 
@@ -168,44 +174,62 @@ $card-padding--mobile: $component-padding--mobile;
       }
     }
 
-    // Solid colour cards
+    // Colour cards
     &.health-card--colour-primary {
       @include background-style(var(--primary-gradient-bg--start), var(--primary-gradient-bg--end));
       color: var(--card-text--primary);
 
-      .health-card__title,
-      .health-card__link {
+      .health-card__title {
         color: var(--card-text--primary);
+
+      }
+
+      .health-card__link {
+        color: var(--card-link--primary);
+      }
+
+      &.health-card--clickable {
+        .health-card__link {
+          color: var(--card-text--primary);
+        }
+
+        &:after {
+          background: var(--card-clickable-icon--primary);
+        }
       }
 
       .health-card__date {
         color: var(--card-text-minor--primary);
       }
 
-      &.health-card--clickable {
-        &:after {
-          background: var(--card-clickable-icon--primary);
-        }
-      }
+
     }
 
     &.health-card--colour-secondary {
       @include background-style(var(--secondary-gradient-bg--start), var(--secondary-gradient-bg--end));
       color: var(--card-text--secondary);
 
-      .health-card__title,
-      .health-card__link {
+      .health-card__title {
         color: var(--card-text--secondary);
+
+      }
+
+      .health-card__link {
+        color: var(--card-link--secondary);
+      }
+
+      &.health-card--clickable {
+        .health-card__link {
+          color: var(--card-text--secondary);
+        }
+
+        &:after {
+          background: var(--card-clickable-icon--secondary);
+        }
       }
 
       .health-card__date {
         color: var(--card-text-minor--secondary);
-      }
-
-      &.health-card--clickable {
-        &:after {
-          background: var(--card-clickable-icon--secondary);
-        }
       }
     }
 
@@ -213,19 +237,27 @@ $card-padding--mobile: $component-padding--mobile;
       @include background-style(var(--tertiary-gradient-bg--start), var(--tertiary-gradient-bg--end));
       color: var(--card-text--tertiary);
 
-      .health-card__title,
-      .health-card__link {
+      .health-card__title {
         color: var(--card-text--tertiary);
+
+      }
+
+      .health-card__link {
+        color: var(--card-link--tertiary);
+      }
+
+      &.health-card--clickable {
+        .health-card__link {
+          color: var(--card-text--tertiary);
+        }
+
+        &:after {
+          background: var(--card-clickable-icon--tertiary);
+        }
       }
 
       .health-card__date {
         color: var(--card-text-minor--tertiary);
-      }
-
-      &.health-card--clickable {
-        &:after {
-          background: var(--card-clickable-icon--tertiary);
-        }
       }
     }
 
@@ -328,6 +360,24 @@ $card-padding--mobile: $component-padding--mobile;
 }
 
 // Cards interacting with other elements
+// If same-on-same, ditch the card gradient and use block colour
+.health-band--primary {
+  .health-card.health-card--colour-primary {
+    background: var(--primary-gradient-bg--end);
+  }
+}
+
+.health-band--secondary {
+  .health-card.health-card--colour-secondary {
+    background: var(--secondary-gradient-bg--end);
+  }
+}
+
+.health-band--tertiary {
+  .health-card.health-card--colour-tertiary {
+    background: var(--tertiary-gradient-bg--end);
+  }
+}
 
 // Add margin if any content precedes the card
 .au-body *:not(.health-card)+.health-card {

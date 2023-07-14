@@ -136,7 +136,10 @@ $tooltip-bg-colour: $colour-dark;
     --tertiary-link-text: #{$AU-colordark-foreground-text};
     --neutral-link-text: #{$AU-color-foreground-action};
     --neutral--darker-link-text: #{$AU-color-foreground-action};
-    // 3. Buttons - redo vars based on text/background/border/hover
+    // 3. Buttons
+    --btn-bg: #{$AU-color-foreground-action};
+    --btn-bg--hover: #{$AU-color-foreground-action--active};
+    --btn-text: #{$AU-colordark-foreground-text};
     --primary-btn-bg: #{$AU-colordark-foreground-action};
     --primary-btn-bg--hover: #{$button-primary};
     --primary-btn-text: #{$AU-color-foreground-text};
@@ -157,6 +160,7 @@ $tooltip-bg-colour: $colour-dark;
     --subheader-gradient-bg--end: #{$colour-primary-blue-lighter-1};
     --subheader-gradient-content-bg--start: #{$colour-primary-blue};
     --subheader-gradient-content-bg--end: #{$colour-primary-blue-lighter-1};
+    --subheader-text: #{$AU-colordark-foreground-text};
     // Main-nav
     --main-nav-border: #{$colour-primary-blue};
     --main-nav-active-link-bg--hover: #{$colour-primary-blue-very-pale};
@@ -178,6 +182,9 @@ $tooltip-bg-colour: $colour-dark;
     --card-text--secondary: #{$AU-colordark-foreground-text};
     --card-text--tertiary: #{$AU-colordark-foreground-text};
     --card-text--neutral: #{$AU-color-foreground-text};
+    --card-link--primary: #{$AU-colordark-foreground-text};
+    --card-link--secondary: #{$AU-colordark-foreground-text};
+    --card-link--tertiary: #{$AU-colordark-foreground-text};
     --card-highlight-border: #{$colour-complementary-skyblue-lighter-1};
     --card-clickable-icon: #{$colour-black};
     --card-clickable-icon--primary: #{$colour-white};
