@@ -170,8 +170,45 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-52f7dfc12a5639fb22e1bda397327bf5-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h1 id="accordion">Accordion</h1>
-<p>⭐ <a href="https://gold.designsystemau.org/components/accordion/">GOLD Design System Accordion</a></p>
+        <h1 id="accordion-group">Accordion group</h1>
+<p>The accordion group permits multiple accordions to be used together, as well as multiple accordion groups on a page.</p>
+<h2 id="implementation">Implementation</h2>
+<p>The accordion component is wrapped in:</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;au-accordion-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;accordion-group-X&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    ACCORDION
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre><h2 id="openclose-all-controls">Open/close all controls</h2>
+<p>The open/close controls are placed before the accordion group and teh JavaScript references the accordion group ID, as described above.</p>
+<pre><code class="hljs">&lt;div <span class="hljs-keyword">class</span>=&quot;au-accordion-group__controls&quot;&gt;
+    &lt;button <span class="hljs-keyword">class</span>=&quot;au-accordion-group__control&quot; onclick=&quot;return AU.accordion.Open(document.querySelector(&#x27;#accordion-group-X&#x27;).getElementsByClassName(&#x27;js-au-accordion&#x27;))&quot;&gt;<span class="hljs-keyword">Open</span> <span class="hljs-keyword">all</span>&lt;/button&gt;
+    &lt;button <span class="hljs-keyword">class</span>=&quot;au-accordion-group__control&quot; onclick=&quot;return AU.accordion.Close(document.querySelector(&#x27;#accordion-group-X&#x27;).getElementsByClassName(&#x27;js-au-accordion&#x27;))&quot;&gt;<span class="hljs-keyword">Close</span> <span class="hljs-keyword">all</span>&lt;/button&gt;
+&lt;/div&gt;</code></pre><h3 id="multiple-accordion-groups">Multiple accordion groups</h3>
+<p>To ensure that controls do not operate the equivalent accordion across groups, use unique IDs on the accordion body and match aria-control references.</p>
+<p>For example <code>accordion-1-1</code> below:</p>
+<pre><code class="hljs">&lt;section <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;au-accordion&quot;</span>&gt;
+    &lt;button <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;au-accordion__title js-au-accordion au-accordion--closed&quot;</span> aria-controls=<span class="hljs-string">&quot;accordion-1-1&quot;</span>
+    aria-expanded=<span class="hljs-string">&quot;false&quot;</span> onclick=<span class="hljs-string">&quot;return AU.accordion.Toggle( this )&quot;</span>&gt;
+        TITLE
+    &lt;/button&gt;
+
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;au-accordion__body au-accordion--closed&quot;</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;accordion-1-1&quot;</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;au-accordion__body-wrapper&quot;</span>&gt;
+            BODY CONTENTS
+        &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/section&gt;</code></pre><h2 id="variants">Variants</h2>
+<p>Whilst the behaviour of accordion groups is consistent across types, the following variants exist to suit applications.</p>
+<p>Note that variant classes should be applied to the <code>.au-accordion-group</code>. Accordion variant classes are applied to the <code>au.accordion</code> elements directly.</p>
+<h3 id="default">Default</h3>
+<p>Standard group behaviours and styles</p>
+<h3 id="flush">Flush</h3>
+<p>The accordions are grouped togther without spacing. This is particularly suited to applications and can be extended to include rows/tablular data or similar.</p>
+<h2 id="tokens">Tokens</h2>
+<p>The following CSS custom variables allow customisation:</p>
+<ol>
+<li><strong>–accordion-control-link-text</strong>: accordion control link colour</li>
+</ol>
 
         
     </div>
@@ -283,6 +320,17 @@
             <span class="Meta-value">components/01-components/accordion-group/accordion-group.hbs</span>
         </li>
         
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="./content-page.html">@<span>content-page</span></a>, 
+            
+                <a href="./landing-page.html">@<span>landing-page</span></a>
+            
+            </span>
+        </li>
         
     </ul>
 </div>
