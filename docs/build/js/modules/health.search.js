@@ -1,7 +1,7 @@
-/*! @health.gov.au/health-design-system v1.4.0-alpha.19 */
+/*! @health.gov.au/health-design-system v1.5.1 */
 var health = health || {};
 
-(function ($) {
+(function ($, once) {
 
   /**
    * Add an autocomplete dropdown to a text input.
@@ -14,7 +14,7 @@ var health = health || {};
    * @see https://api.jqueryui.com/autocomplete/
    */
   health.searchAutocomplete = function (selector, source) {
-    $(selector).once('healthSearchAutocomplete').autocomplete({
+    $(once('healthSearchAutocomplete', selector)).autocomplete({
       source: source,
       minLength: 2,
       classes: {
@@ -66,7 +66,7 @@ var health = health || {};
    * @param limit
    */
   health.facetShowMore = function (selector, limit) {
-    $(selector).once('healthFacetShowMore').each(function () {
+    $(once('healthFacetShowMore', selector)).each(function () {
       var
         limit_css = limit - 1,
         facet = $(this);
@@ -123,4 +123,4 @@ var health = health || {};
 
   });
 
-})(jQuery);
+})(jQuery, once);
