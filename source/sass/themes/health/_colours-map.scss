@@ -217,4 +217,7 @@ $tooltip-bg-colour: $colour-dark;
     --footer-gradient-bg--start: #{$colour-dark-hover};
     --footer-gradient-bg--end: #{$colour-darkest};
     --footer-border: #{$colour-dark};
+    --footer-btn-bg: #{$AU-colordark-foreground-text};
+    --footer-btn-bg--hover: #{darken($AU-colordark-foreground-text, 10%)};
+    --footer-btn-text: #{$AU-color-foreground-text};
 }
