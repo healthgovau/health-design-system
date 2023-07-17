@@ -39,21 +39,11 @@
     // Needs to use CSS custom properties given that sub-branded partials use this mixin 
     color: var(--#{$variant}-body-text);
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: var(--#{$variant}-body-text);
-    }
 
-    a {
+    a:not(.health-card__link) {
       color: var(--#{$variant}-link-text);
 
       &:hover {
-        // color: var(--#{$variant}-body-text);
         text-decoration: none;
       }
     }
@@ -90,7 +80,7 @@
     .au-btn {
       &.au-btn--primary {
         background-color: var(--#{$variant}-btn-bg);
-        color: var(--#{$variant}-btn-text);
+        color: var(--#{$variant}-btn-text) !important;
         border-color: var(--#{$variant}-btn-bg);
 
         &:hover:not(:disabled) {
@@ -102,7 +92,7 @@
 
       &.au-btn--secondary {
         border-color: var(--#{$variant}-btn-bg);
-        color: var(--#{$variant}-btn-bg);
+        color: var(--#{$variant}-btn-bg) !important;
 
         &:hover:not(:disabled) {
           text-decoration: underline;

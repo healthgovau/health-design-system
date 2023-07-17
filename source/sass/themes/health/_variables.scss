@@ -5,7 +5,20 @@
 // $AU-media-md: 768px;
 // $AU-media-lg: 992px;
 // $AU-media-xl: 1200px;
+
+// Breakpoint labels.
+$breakpoint-sizes: xs,
+sm,
+md,
+lg;
+
+$AU-media-xs: 0;
+$AU-media-sm: 576px;
+$AU-media-md: 768px;
+$AU-media-lg: 992px;
+$AU-media-xl: 1200px;
 $AU-media-xxl: 1441px; // Added for Health to accommodate most used desktop resolution
+
 // Most popular desktop resolutions:
 // 1. 1920x1080
 // 2. 1440x900

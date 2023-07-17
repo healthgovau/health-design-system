@@ -5,6 +5,7 @@
   // BACKGROUND //
   &.au-body--dark {
     background: $AU-colordark-background;
+
     &-tertiary {
       background: $body-bg-colour--dark-tertiary;
     }
@@ -26,14 +27,14 @@
   .text--align-right {
     text-align: right;
   }
+
   .text--align-center {
     text-align: center;
   }
 
   // Introduction text.
   .au-introduction {
-    @include health-fontgrid( lg , default, light);
-    color: $colour-minorText;
+    @include health-fontgrid(lg, default, light);
 
     &--dark {
       color: $AU-color-foreground-text;
@@ -41,7 +42,9 @@
   }
 
   //// Abbreviations ////
-  abbr, abbr[title], .definition {
+  abbr,
+  abbr[title],
+  .definition {
     border-bottom: 1px dotted #CCC !important;
     text-decoration: none !important;
     cursor: help;
@@ -56,12 +59,15 @@
   %standard-gap,
   .standard-gap {
     @include AU-space(margin-top, 1.5unit);
+
     &--mobile-only {
       @include AU-space(margin-top, 1.5unit);
+
       @include AU-media(sm) {
         margin-top: 0;
       }
     }
+
     &--bottom {
       @include AU-space(margin-bottom, 1.5unit);
     }
@@ -81,7 +87,8 @@
   }
 
   // IE 11.
-  main, aside {
+  main,
+  aside {
     display: block;
   }
 
