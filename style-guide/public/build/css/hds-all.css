@@ -3730,7 +3730,10 @@ p:empty,
   --inpage-nav-border: #0075c5;
   --footer-gradient-bg--start: #313131;
   --footer-gradient-bg--end: #58585b;
-  --footer-border: #87888A; }
+  --footer-border: #87888A;
+  --footer-btn-bg: #FFF;
+  --footer-btn-bg--hover: #e6e6e6;
+  --footer-btn-text: #313131; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -4268,6 +4271,23 @@ a.au-btn {
     background: -webkit-gradient(linear, left top, right top, from(var(--footer-gradient-bg--start)), to(var(--footer-gradient-bg--end)));
     background: -o-linear-gradient(left, var(--footer-gradient-bg--start), var(--footer-gradient-bg--end));
     background: linear-gradient(to right, var(--footer-gradient-bg--start), var(--footer-gradient-bg--end)); }
+    .au-footer.au-body.au-body--dark.au-footer--dark .au-btn.au-btn.au-btn--primary,
+    .au-footer.au-body.au-body--dark.au-footer--dark a.au-btn.au-btn--primary {
+      background-color: var(--footer-btn-bg);
+      color: var(--footer-btn-text) !important;
+      border-color: var(--footer-btn-bg); }
+      .au-footer.au-body.au-body--dark.au-footer--dark .au-btn.au-btn.au-btn--primary:hover:not(:disabled),
+      .au-footer.au-body.au-body--dark.au-footer--dark a.au-btn.au-btn--primary:hover:not(:disabled) {
+        border-color: var(--footer-btn-bg--hover);
+        background-color: var(--footer-btn-bg--hover); }
+    .au-footer.au-body.au-body--dark.au-footer--dark .au-btn.au-btn.au-btn--secondary,
+    .au-footer.au-body.au-body--dark.au-footer--dark a.au-btn.au-btn--secondary {
+      border-color: var(--footer-btn-bg);
+      color: var(--footer-btn-bg) !important; }
+      .au-footer.au-body.au-body--dark.au-footer--dark .au-btn.au-btn.au-btn--secondary:hover:not(:disabled),
+      .au-footer.au-body.au-body--dark.au-footer--dark a.au-btn.au-btn--secondary:hover:not(:disabled) {
+        border-color: var(--footer-btn-bg--hover);
+        color: var(--footer-btn-bg--hover); }
     .au-footer.au-body.au-body--dark.au-footer--dark .au-footer__end {
       border-top-color: var(--footer-border); }
   .au-footer__navigation-section {
