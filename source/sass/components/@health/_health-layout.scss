@@ -1,0 +1,180 @@
+// $grid-gutter-size logic ensures that the regsult gutter is applied except
+// for mobile ('xs' breakpoint) which halves it to match the page gutter.
+// This ensures that items are evenly spaced and not too 'gappy' on mobiles
+// which have limited screen real estate.
+
+$grid-gutter-size: $AU-grid-12-gutter-width;
+
+.health-grid {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  // Defaults for when no responsive BP classes are specified
+  >* {
+    box-sizing: border-box;
+    flex-basis: 100%;
+    -ms-flex: auto;
+    margin-bottom: $grid-gutter-size/2;
+    padding: 1rem;
+
+    @include AU-media(sm) {
+      margin-bottom: $grid-gutter-size;
+    }
+  }
+
+  >img {
+    padding: 0;
+  }
+
+  // Block responsive classes
+  &--1col-xs {
+
+    >* {
+      @include AU-media(xs) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+        margin-right: 0;
+        margin-bottom: $grid-gutter-size/2;
+      }
+    }
+
+    >img {
+      @include AU-media(xs) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+
+  &--1col-sm {
+
+    >* {
+      @include AU-media(sm) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+        margin-right: 0;
+        margin-bottom: $grid-gutter-size;
+      }
+    }
+
+    >img {
+      @include AU-media(sm) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+
+  &--1col-md {
+
+    >* {
+      @include AU-media(md) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+        margin-right: 0;
+        margin-bottom: $grid-gutter-size;
+      }
+    }
+
+    >img {
+      @include AU-media(md) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+
+  &--1col-lg {
+
+    >* {
+      @include AU-media(lg) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+        margin-right: 0;
+        margin-bottom: $grid-gutter-size;
+      }
+    }
+
+    >img {
+      @include AU-media(lg) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+}
+
+// Responsive BP classes
+@each $bp in $breakpoint-sizes {
+  @for $i from 2 through 8 {
+    .health-grid--#{$i}col-#{$bp} {
+
+      >* {
+        @include AU-media($bp) {
+
+          -ms-flex: auto;
+
+          @if $bp=='xs' {
+            flex-basis: health-grid-item-width($i, $grid-gutter-size/2);
+            margin-bottom: $grid-gutter-size/2;
+          }
+
+          @else {
+            flex-basis: health-grid-item-width($i, $grid-gutter-size);
+            margin-bottom: $grid-gutter-size;
+          }
+        }
+      }
+
+      >*:not(*:nth-child(#{$i}n + #{$i})) {
+        @include AU-media($bp) {
+          @if $bp=='xs' {
+            margin-right: $grid-gutter-size/2;
+          }
+
+          @else {
+            margin-right: $grid-gutter-size;
+          }
+        }
+      }
+
+      >*:nth-child(#{$i}n + #{$i}) {
+        @include AU-media($bp) {
+          margin-right: 0;
+        }
+      }
+
+      >img {
+        @include AU-media($bp) {
+          margin-top: 0;
+          max-width: health-grid-item-width($i, $grid-gutter-size);
+        }
+      }
+    }
+  }
+}
+
+// Spacing between common nested elements (band/layout/component)
+// .paragraph-title+.health-component {
+//   @include AU-space(margin-top, 1.5unit);
+// }
+
+
+.au-body {
+
+  // Anything immediately before layouts and components
+  *+ {
+
+    .health-layout,
+    .health-component {
+      @include AU-space(margin-top, $component-margin--mobile);
+
+      @include AU-media('sm') {
+        @include AU-space(margin-top, $component-margin);
+      }
+    }
+
+    // Paragraph (child and first)
+    .health-grid>*+p {
+      margin-top: 0;
+    }
+  }
+}

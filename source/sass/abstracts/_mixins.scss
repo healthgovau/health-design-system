@@ -112,3 +112,8 @@
 @mixin box-shadow($colour: $colour-shadow) {
   box-shadow: 0px 0.125em 0.375em $colour;
 }
+
+@function health-grid-item-width($items-per-row: 1, $gutter-width: 0rem) {
+  $value: calc((100% / #{$items-per-row}) - ((#{$items-per-row - 1} * #{$gutter-width}))/#{$items-per-row});
+  @return $value;
+}
