@@ -54,7 +54,8 @@
     }
   }
 
-  &__toggle {
+  &__toggle,
+  .au-main-nav__toggle {
     color: $AU-color-foreground-text;
     font-weight: bold;
     font-size: 1.25rem;
@@ -89,4 +90,20 @@
   @media print {
     display: none;
   }
+}
+
+
+
+// Remove duplicate hamburger menu icon.
+.au-main-nav__toggle.au-main-nav__toggle--open:before,
+.au-main-nav__toggle.au-main-nav__toggle--close:before {
+  content: "";
+}
+
+.au-main-nav__toggle--search {
+  float: right;
+}
+
+.au-main-nav__toggle--search__open.svg-inline--fa {
+  display: none;
 }
