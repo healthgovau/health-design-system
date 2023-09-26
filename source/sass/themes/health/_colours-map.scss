@@ -50,6 +50,7 @@ $header-bg-colour--dark: $colour-primary-blue-darker-1;
 $hero-bg-colour: $colour-light;
 $hero-bg-colour--dark: $colour-dark-hover;
 $hero-bg-colour--content: $colour-dark-hover;
+$hero-text: $colour-white;
 
 // Lists
 $list-bg-colour--highlight: $colour-lightest;
@@ -220,4 +221,8 @@ $tooltip-bg-colour: $colour-dark;
     --footer-btn-bg: #{$AU-colordark-foreground-text};
     --footer-btn-bg--hover: #{darken($AU-colordark-foreground-text, 10%)};
     --footer-btn-text: #{$AU-color-foreground-text};
+    // Hero
+    --hero-bg: #{$hero-bg-colour};
+    --hero-bg--trans: #{rgba($hero-bg-colour, 0.9)};
+    --hero-text: #{$hero-text};
 }

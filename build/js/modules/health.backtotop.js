@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.5.1 */
+/*! @health.gov.au/health-design-system v2.0.0-beta.1 */
 (function ($) {
 
   var ignore = false;

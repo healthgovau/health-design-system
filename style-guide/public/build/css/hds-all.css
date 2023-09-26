@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v1.5.1 */
+/*! @health.gov.au/health-design-system v2.0.0-beta.1 */
 @charset "UTF-8";
 /*! PANCAKE v2.0.0 PANCAKE-SASS v3.0.0 */
 /*
@@ -3733,7 +3733,10 @@ p:empty,
   --footer-border: #87888A;
   --footer-btn-bg: #FFF;
   --footer-btn-bg--hover: #e6e6e6;
-  --footer-btn-text: #313131; }
+  --footer-btn-text: #313131;
+  --hero-bg: #ececec;
+  --hero-bg--trans: rgba(236, 236, 236, 0.9);
+  --hero-text: #ffffff; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -5583,7 +5586,7 @@ textarea.au-text-input {
         min-height: 500px;
         width: 50%; } }
   .health-hero__title {
-    color: white; }
+    color: var(--hero-text); }
   .health-hero__summary {
     font-size: 20px;
     font-size: 1.25rem;
