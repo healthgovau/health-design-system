@@ -4,4 +4,37 @@
       margin: 0;
     }
   }
+
+  // Flex layouts - used in main nav dropdown
+  &--flex-halves {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      width: 50%;
+    }
+  }
+
+  &--flex-thirds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      width: 33%;
+    }
+  }
+
+  &--flex-quarters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      width: 25%;
+    }
+  }
+
+  // TODO - responsive behaviour
 }
