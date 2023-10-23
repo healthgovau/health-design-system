@@ -13,7 +13,9 @@
   </div>
   {% endif %}
 
-  <div class="Document-content">
+  <div>test</div>
+
+  <div class="Document-content au-body">
 
     {% block docContent %}{% endblock %}
 

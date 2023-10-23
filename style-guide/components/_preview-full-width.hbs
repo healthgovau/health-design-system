@@ -1,26 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
-<head class="no-js">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link media="all" rel="stylesheet" href="{{ path '/build/css/hds-all.css' }}">
-  <link media="all" rel="stylesheet" href="{{ path '/build/js/libraries/jquery.fancybox.min.css' }}">
-  <script src="{{ path '/build/js/libraries/jquery.min.js' }}"></script>
-  <script src="{{ path '/build/js/libraries/jquery-ui.min.js' }}"></script>
-  <script src="{{ path '/build/js/libraries/jquery.fancybox.min.js' }}"></script>
-  <script src="{{ path '/build/js/libraries/once.min.js' }}"></script>
-  <script src="{{ path '/build/js/libraries/lazyload.min.js' }}"></script>
-  <script src="{{ path '/build/js/libraries/tippy.all.min.js' }}"></script>
-  <script src="{{ path '/build/js/libraries/anchorific.min.js' }}"></script>
-  <script src="{{ path '/data.js' }}"></script>
-  <script src="{{ path '/build/js/hds.js' }}"></script>
-  <title>Preview Layout</title>
-</head>
-<body class="au-body au-grid">
-  <div class="container-fluid full-width">
-    <div class="row">
-    {{{ yield }}}
+  <head class="no-js">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      media="all"
+      rel="stylesheet"
+      href="{{path '/build/css/hds-all.css'}}"
+    />
+    <link
+      media="all"
+      rel="stylesheet"
+      href="{{path '/build/js/libraries/jquery.fancybox.min.css'}}"
+    />
+    <script src="{{path '/build/js/libraries/jquery.min.js'}}"></script>
+    <script src="{{path '/build/js/libraries/jquery-ui.min.js'}}"></script>
+    <script
+      src="{{path '/build/js/libraries/jquery.fancybox.min.js'}}"
+    ></script>
+    <script src="{{path '/build/js/libraries/once.min.js'}}"></script>
+    <script src="{{path '/build/js/libraries/lazyload.min.js'}}"></script>
+    <script src="{{path '/build/js/libraries/tippy.all.min.js'}}"></script>
+    <script src="{{path '/build/js/libraries/anchorific.min.js'}}"></script>
+    <script src="{{path '/data.js'}}"></script>
+    <script src="{{path '/build/js/hds.js'}}"></script>
+    <title>Preview Layout</title>
+  </head>
+  <body class="au-body au-grid">
+    <div class="container">
+      <div class="row">
+        {{{yield}}}
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

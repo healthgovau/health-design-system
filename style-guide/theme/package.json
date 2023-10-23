@@ -26,7 +26,6 @@
     "select2": "^4.0.5"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE > 9"
+    "last 2 versions"
   ]
 }

@@ -1,6 +1,6 @@
 .Header {
   background-color: $color-header-background;
-  background: linear-gradient(to right,#00205b,#004181)
+  color: #000;
 }
 
 .Header-button {
@@ -26,7 +26,7 @@
 
   list-style: none;
 
-  li + li {
+  li+li {
     margin-left: 1rem;
   }
 
@@ -42,9 +42,10 @@
   height: 12px;
   width: 100%;
   position: relative;
-  background: #001a49;
+  background: #072e7e;
   display: block;
 }
+
 .pillar-image {
   position: absolute;
   left: 0;

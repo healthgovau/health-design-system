@@ -1,0 +1,23 @@
+{
+  "title": "Lists",
+  "variants": [
+    {
+      "name": "Large",
+      "context": {
+        "modifier": "list--large"
+      }
+    },
+    {
+      "name": "Large plain",
+      "context": {
+        "modifier": "list--large--plain"
+      }
+    },
+    {
+      "name": "Checklist",
+      "context": {
+        "modifier": "list--large--checklist"
+      }
+    }
+  ]
+}

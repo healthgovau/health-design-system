@@ -1,22 +1,17 @@
-<div class="health-band{{#if modifier}} health-band--{{ modifier }}{{/if}}">
+<div class="health-band health-band--full-width-bg{{#if modifier}} health-band--{{ modifier }}{{/if}}">
   <div class="health-band__container">
     <div class="row">
-      <div class="col-xs-12">
-        <h2>{{ title }}</h2>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-xs-12 col-sm-3">
-        {{ render '@card--no-image' }}
+        {{render "@card--no-image" }}
       </div>
       <div class="col-xs-12 col-sm-3">
-        {{ render '@card--no-image' }}
+        {{render "@card--no-image" }}
       </div>
       <div class="col-xs-12 col-sm-3">
-        {{ render '@card--no-image' }}
+        {{render "@card--no-image" }}
       </div>
       <div class="col-xs-12 col-sm-3">
-        {{ render '@card--no-image' }}
+        {{render "@card--no-image" }}
       </div>
     </div>
   </div>

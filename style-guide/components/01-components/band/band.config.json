@@ -28,12 +28,6 @@
       }
     },
     {
-      "name": "Cards audience",
-      "context": {
-        "title": "Browse topic for"
-      }
-    },
-    {
       "name": "Cards resources",
       "context": {
         "title": "Latest resources"
