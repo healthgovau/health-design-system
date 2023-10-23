@@ -1,17 +1,35 @@
 {
   "title": "Header",
-  "preview": "@preview-full-width",
+  "preview": "@preview-page",
   "context": {
-    "title": "National Sports Tribunal",
-    "summary": "The National Sports Tribunal will provide independent, cost effective, transparent and consistent dispute resolution services to athletes, sporting organisations and support personnel."
+    "title": "Hero title",
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maxime eum, incidunt quisquam corrupti qui. Tempora, iste? Illum, unde. Assumenda incidunt voluptatum.",
+    "image": "/images/hero_1600x900.jpg"
   },
   "variants": [
     {
-      "name": "Call to action",
+      "name": "Hero inset box",
       "context": {
-        "title": "Dinosaur escape hotline",
-        "summary": "This hero is the same as the default one but has a call-to-action.",
-        "call-to-action": "Call to action"}
+        "title": "Hero inset box",
+        "modifer": "inset-box",
+        "image": "/images/hero_1600x900.jpg"
+      }
+    },
+    {
+      "name": "Hero inset box (overlapping)",
+      "context": {
+        "title": "Hero inset box (overlapping)",
+        "modifer": "inset-box-overlap",
+        "image": "/images/hero_1098x898.jpg"
+      }
+    },
+    {
+      "name": "Hero gradient",
+      "context": {
+        "title": "Hero gradient",
+        "modifer": "bg-gradient",
+        "image": "/images/hero_1098x898.jpg"
+      }
     }
   ]
 }

@@ -1,6 +1,5 @@
 // Sub header variation. This includes our title and HP switcher.
 .health-sub-header {
-  --subheader-minheight--desktop: #{$subheader-minheight--desktop};
 
   @include AU-space('padding', 12px 0);
 

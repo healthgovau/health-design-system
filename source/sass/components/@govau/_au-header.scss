@@ -30,12 +30,11 @@
     display: block;
     @include AU-space('padding', .75unit .75unit .75unit 0);
     width: 100%;
-    max-width: 250px;
+    max-width: 400px;
     // For IE 9, 10.
     color: transparent;
 
     @include AU-media(md) {
-      max-width: 300px;
       margin: auto;
       @include AU-space('padding', .75unit);
       float: left;

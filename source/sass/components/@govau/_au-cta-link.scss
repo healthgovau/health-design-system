@@ -1,6 +1,14 @@
 // Health variations on UIKit call to action link.
 .au-body {
   .au-cta-link {
+    // Fix wrapping where only the chevron drops to the next line
+    position: relative;
+
+    &:after {
+      position: absolute;
+      @include AU-space(bottom, 0.2unit);
+    }
+
     // Right align the link.
     &--right {
       text-align: right;

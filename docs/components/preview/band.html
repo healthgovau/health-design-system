@@ -1,44 +1,86 @@
 
 
-<!DOCTYPE html>
 <html lang="en">
-<head class="no-js">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link media="all" rel="stylesheet" href="../../build/css/hds-all.css">
-  <link media="all" rel="stylesheet" href="../../build/js/libraries/jquery.fancybox.min.css">
-  <script src="../../build/js/libraries/jquery.min.js"></script>
-  <script src="../../build/js/libraries/jquery-ui.min.js"></script>
-  <script src="../../build/js/libraries/jquery.fancybox.min.js"></script>
-  <script src="../../build/js/libraries/once.min.js"></script>
-  <script src="../../build/js/libraries/lazyload.min.js"></script>
-  <script src="../../build/js/libraries/tippy.all.min.js"></script>
-  <script src="../../build/js/libraries/anchorific.min.js"></script>
-  <script src="../../data.js"></script>
-  <script src="../../build/js/hds.js"></script>
-  <title>Preview Layout</title>
-</head>
-<body class="au-body au-grid">
-  <div class="container-fluid full-width">
-    <div class="row">
-    <div class="health-band">
+  <head class="no-js">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      media="all"
+      rel="stylesheet"
+      href="../../build/css/hds-all.css"
+    />
+    <link
+      media="all"
+      rel="stylesheet"
+      href="../../build/js/libraries/jquery.fancybox.min.css"
+    />
+    <script src="../../build/js/libraries/jquery.min.js"></script>
+    <script src="../../build/js/libraries/jquery-ui.min.js"></script>
+    <script
+      src="../../build/js/libraries/jquery.fancybox.min.js"
+    ></script>
+    <script src="../../build/js/libraries/once.min.js"></script>
+    <script src="../../build/js/libraries/lazyload.min.js"></script>
+    <script src="../../build/js/libraries/tippy.all.min.js"></script>
+    <script src="../../build/js/libraries/anchorific.min.js"></script>
+    <script src="../../data.js"></script>
+    <script src="../../build/js/hds.js"></script>
+    <title>Preview Layout</title>
+  </head>
+  <body class="au-body au-grid">
+    <div class="container">
+      <div class="row">
+        <div class="health-band health-band--full-width-bg health-band--neutral">
   <div class="health-band__container">
-    <h2>Plain</h2>
+    <h2>Neutral 1 full-width</h2>
+    <p>Full-width band using the default neutral grey colour.</p>
+  </div>
+</div>
+
+<div
+  class="health-band health-band--full-width-bg health-band--neutral--darker"
+>
+  <div class="health-band__container">
+    <h2>Neutral 2 full-width</h2>
+    <p>Full-width band using the darker neutral grey colour.</p>
   </div>
 </div>
 
 <div class="health-band health-band--neutral">
   <div class="health-band__container">
-    <h2>Neutral 1</h2>
+    <h2>Neutral 1 contained</h2>
+    <p>Container-width band using the neutral neutral grey colour.</p>
   </div>
 </div>
 
 <div class="health-band health-band--neutral--darker">
   <div class="health-band__container">
-    <h2>Neutral 2</h2>
+    <h2>Neutral 2 contained</h2>
+    <p>Container-width band using the darker neutral grey colour.</p>
   </div>
 </div>
-    </div>
+
+<div class="health-band health-band--primary">
+  <div class="health-band__container">
+    <h2>Primary contained</h2>
+    <p>Container-width band using the primary colour.</p>
   </div>
-</body>
+</div>
+
+<div class="health-band health-band--secondary">
+  <div class="health-band__container">
+    <h2>Secondary contained</h2>
+    <p>Container-width band using the secondary colour.</p>
+  </div>
+</div>
+
+<div class="health-band health-band--tertiary">
+  <div class="health-band__container">
+    <h2>Tertiary contained</h2>
+    <p>Container-width band using the tertiary colour.</p>
+  </div>
+</div>
+      </div>
+    </div>
+  </body>
 </html>

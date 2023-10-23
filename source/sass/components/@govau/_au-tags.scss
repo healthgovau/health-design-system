@@ -5,11 +5,19 @@
 
   .au-tags {
 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
     // No link tag
     >li {
       color: $AU-color-foreground-text;
       border: 1px solid $AU-color-foreground-text;
-      @include AU-space(padding, 0.1em 0.5rem);
+      border-radius: 4px;
+      @include AU-space(padding, 0 0.5rem);
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 1.5;
 
       &:has(a) {
         border: 1px solid var(--tag-link-border);

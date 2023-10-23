@@ -1,0 +1,33 @@
+{
+  "title": "Link",
+  "variants": [
+    {
+      "name": "Primary",
+      "context": {
+        "type": "Primary",
+        "modifier": "au-btn"
+      }
+    },
+    {
+      "name": "Secondary",
+      "context": {
+        "type": "Secondary",
+        "modifier": "au-btn au-btn--secondary"
+      }
+    },
+    {
+      "name": "Tertiary",
+      "context": {
+        "type": "Tertiary",
+        "modifier": "au-btn au-btn--tertiary"
+      }
+    },
+    {
+      "name": "Call to action",
+      "context": {
+        "type": "Call to action",
+        "modifier": "au-cta-link"
+      }
+    }
+  ]
+}

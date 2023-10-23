@@ -7,7 +7,7 @@
 }
 
 // Search bar.
-.health-search {
+.au-body .health-search {
 
   position: relative;
   display: inline-block;
@@ -92,7 +92,6 @@
       position: absolute;
       right: 0;
       top: 0;
-      left: -3px;
       background-color: $AU-color-foreground-text;
       border: none;
       width: 46px;

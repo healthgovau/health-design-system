@@ -1,72 +1,200 @@
-.health-hero {
+// Hero variables defined in _colours.scss
+// --hero-bg: block BG background colour
+// --hero-text: text colour
+// --hero-bg--trans: semi-transparent version of --hero-bg
+// --hero-content-width--md/lg: width of content box
 
-  $parent: &; // more readable than &#{&}
-  background: $hero-bg-colour;
-  position: relative;
+// Consider:
+// --hero-minheight--desktop
 
-  @include AU-media('sm') {
-    // height: 380px; This can be fixed is reqd
-    overflow: hidden;
-  }
-
-  &__image-container {
-    max-height: 200px;
-    overflow: hidden;
-    @include AU-media('sm') {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      max-height: none;
-    }
-  }
-
-  &__image {
-    height: auto;
-    display: block;
-    width: 100%;
-
-    @include AU-media('sm') {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      border-bottom: 0;
-    }
-  }
-
-  &__content {
-    background: $hero-bg-colour--content;
+// 1 - default boxed content hero
+.au-body {
+  .health-hero {
+    background: none;
+    color: var(--hero-text);
     position: relative;
-    @include AU-space('padding', 2unit);
-    width: 100%;
-    @include AU-media(sm){
-      @include rgba-background(black, .8);
-      @include AU-space('padding', 3unit);
-      width: 60%;
+
+    @include AU-media('md') {
+      overflow: hidden;
+      background: var(--hero-bg);
     }
-    @include AU-media(lg){
-      @include AU-space('padding', 4unit);
-      min-height: 500px; // so that image is a sliver at most popular desktop width 1920
-      width: 50%;
+
+    &__image-container {
+      overflow: hidden;
+
+      @include AU-media('md') {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-height: none;
+      }
     }
-  }
+
+    &__image {
+      display: block;
+
+      @include AU-media(md) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: var(--hero-image-focus);
+      }
+    }
+
+    &__content {
+      background: var(--hero-bg);
+      position: relative;
+      @include AU-space('padding', 1.5unit);
+      @include border-radius(6px);
+      width: 100%;
+      margin-top: calc(var(--hero-overlap-top) * -1);
+
+      @include AU-media(md) {
+        background: var(--hero-bg--trans);
+        backdrop-filter: blur(5px);
+        @include AU-space('padding', 3unit);
+        @include border-radius(0);
+        margin-top: 0;
+        width: var(--hero-content-width--md);
+        min-height: var(--hero-minheight--md);
+      }
+
+      @include AU-media(lg) {
+        @include AU-space('padding', 4unit);
+        width: var(--hero-content-width--lg);
+        min-height: var(--hero-minheight--lg);
+      }
+    }
 
   &__title {
     color: var(--hero-text);
   }
 
-  &__summary {
-    @include health-fontgrid( lg , default, light);
-  }
+    &__summary {
+      @include health-fontgrid(lg, default, light);
+    }
 
-  &__call-to-action {}
+    &__call-to-action {
+      display: flex;
+      flex-direction: column;
+      align-items: center; // cross/vertical
 
-  // Dark modifier
-  &#{$parent}--dark {
-    background: $hero-bg-colour--dark;
-    #{$parent}__content {
-      color: white;
+      @include AU-media(lg) {
+        flex-direction: row;
+      }
+
+      .au-btn,
+      .au-cta-link {
+        @include AU-space(margin, 0 0 1unit 0);
+
+        @include AU-media(lg) {
+          @include AU-space(margin-right, 2unit);
+        }
+      }
+
+      // Make block button on mobile
+      .au-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        @include AU-media(lg) {
+          display: inline-block;
+          width: auto;
+          text-align: left;
+        }
+      }
+
+      .au-cta-link {
+        font-size: 1.3rem;
+        line-height: 1.5;
+
+        &:after {
+          @include AU-space(bottom, 0.5unit);
+        }
+      }
+    }
+
+    // Hero variants
+    // 2 - boxed inset
+    &.health-hero--inset-box {
+
+      .health-hero__content {
+        @include border-radius(6px);
+
+        @include AU-media(md) {
+          @include AU-space('margin', 3unit 0);
+        }
+      }
+    }
+
+    // 3 - boxed inset with overlapping inset box and variable image width
+    &.health-hero--inset-box-overlap {
+
+      .health-hero__content {
+        @include border-radius(6px);
+
+        @include AU-media(md) {
+          background: var(--hero-bg--inset-opaque);
+          backdrop-filter: none;
+          @include AU-space('margin', 3unit 0);
+        }
+      }
+
+      .health-hero__image-container {
+        @include AU-media(md) {
+          left: calc(100% - var(--hero-image-width--md))
+        }
+
+        @include AU-media(lg) {
+          left: calc(100% - var(--hero-image-width--lg))
+        }
+      }
+    }
+
+    // 4 - no box gradient to image
+    &.health-hero--bg-gradient {
+      position: relative;
+
+      .health-hero__content {
+        z-index: 400;
+        backdrop-filter: none;
+
+        @include AU-media(md) {
+          background: none;
+          padding-left: 0;
+
+          *[class^="health-hero__"] {
+            margin-right: 10%;
+          }
+        }
+      }
+
+      .health-hero__image-container {
+        @include AU-media(md) {
+          left: calc(100% - var(--hero-image-width--md))
+        }
+
+        @include AU-media(lg) {
+          left: calc(100% - var(--hero-image-width--lg))
+        }
+      }
+
+      .health-hero__bg {
+        @include AU-media(md) {
+          position: absolute;
+          background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) var(--hero-content-width--md), transparent calc(var(--hero-content-width--md) + 30%), transparent 100%);
+          inset: 0;
+          z-index: 300;
+        }
+
+        @include AU-media(lg) {
+          background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
+        }
+
+      }
     }
   }
 }

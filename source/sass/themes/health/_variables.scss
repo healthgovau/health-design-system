@@ -63,3 +63,13 @@ $component-padding: 3rem;
 $component-padding--mobile: $component-padding/2;
 $component-margin: 3rem;
 $component-margin--mobile: $component-margin/2;
+
+// Hero
+$hero-content-width--md: 60%;
+$hero-content-width--lg: 60%;
+$hero-image-width--md: 100%;
+$hero-image-width--lg: 50%;
+$hero-image-focus: right; // Which region of the image to show when resizing: top, bottom, left, right, center
+$hero-minheight--md: 400px;
+$hero-minheight--lg: 500px;
+$hero-overlap-top: 75px; // Amount to nudge mobile hero content over image

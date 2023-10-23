@@ -4,14 +4,14 @@
   "context": {
     "title": "Site title",
     "tagline": "Optional tagline for the website or product",
-    "image": "DoHCrest.png"
+    "image": "logo.svg"
   },
   "variants": [
     {
       "name": "Dark",
       "hidden": "true",
       "context": {
-        "image": "DoHCrest-white.png"
+        "image": "logo--reverse.svg"
       }
     },
     {
