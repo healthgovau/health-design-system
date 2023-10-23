@@ -122,3 +122,79 @@ ul {
 ul:has(.au-cta-link) {
   padding-left: 20px;
 }
+
+// CTA link list - apply to <ul>
+// Vars:
+
+.au-body {
+  .list--cta-links {
+    padding-left: 0;
+    list-style-type: none;
+    border-top: $health-borderize--very-thin;
+
+    &__link {
+      position: relative;
+      display: block;
+      @include AU-space(padding, 0.75unit 1.5unit 0.75unit 0);
+      border-bottom: $health-borderize--very-thin;
+
+      &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        height: 16px;
+        width: 14px;
+        @include AU-space(bottom, 1unit);
+        @include AU-space(right, 0.5unit);
+        transition: margin .2s ease;
+        transition-property: right;
+        background: #000;
+        mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+        -webkit-mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        &:after {
+          @include AU-space(right, 0);
+        }
+      }
+    }
+  }
+}
+
+// Handle links inside other elements
+// .au-body {
+//   .health-card.health-card--colour-primary
+// }
+
+// Define defaults
+// Define inherited values (reised card and band ones)
+// Default
+// var(-link-text)
+// $health-borderize--very-thin
+// var(--icon)
+
+// In band 
+// var(--primary-body-text)
+// var(--primary-link-text)
+
+// In band X
+
+
+// In card
+// var(--card-text)
+
+// In card X
+
+// var(--card-text--primary)
+// var(--card-text--secondary)
+// var(--card-clickable-icon--secondary)
+
+// Ned to address
+// Dark card link text (broken)
+
+
+// // Add variant for in content
+// $health-borderize--very-thin // var(--card-border);
