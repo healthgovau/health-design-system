@@ -23,6 +23,7 @@ $colour-primary-blue-lighter-2-5: #034295;
 $colour-primary-blue-lighter-3: #072e7e;
 $colour-primary-blue-darker-1: #002058;
 $colour-primary-blue-darker-2: #00153b;
+$colour-primary-blue-pale: #cfe6fb;
 $colour-primary-blue-very-pale: #e6f3ff;
 $colour-primary-blue-very-pale-2: #bacbdb;
 
@@ -102,3 +103,87 @@ $button-bg-colour--secondary: $colour-lighter;
 $button-bg-colour--secondary-hover: $colour-light;
 $button-bg-colour--dark-hover: $colour-light;
 $button-border-colour--dark-hover: $colour-light;
+
+
+// Body
+$body-bg-colour--dark-tertiary: $colour-primary-blue;
+
+// Brand/pillars
+$brand-primary-colour: $colour-primary-blue;
+
+// Back to top
+$button-bg-colour--secondary: $colour-lighter;
+$button-bg-colour--secondary-hover: $colour-light;
+$button-bg-colour--dark-hover: $colour-light;
+$button-border-colour--dark-hover: $colour-light;
+
+// Button for bands, not states
+// Declared here to permit SASS calculation using mix()
+$button-primary: mix($colour-bg-light, $colour-primary-blue, 80%);
+$button-secondary: mix($colour-bg-light, $colour-primary-teal-darker-1, 80%);
+$button-tertiary: mix($colour-bg-light, $colour-complementary-skyblue-darker-1, 80%);
+$button-neutral: $AU-color-foreground-action;
+$button-neutral--darker: $AU-color-foreground-action;
+
+// Callouts
+$callout-bg-colour: $colour-lighter;
+
+// Compare
+$compare-bg-colour: $colour-complementary-skyblue-lighter-2;
+
+// Facets
+$facet-bg-colour: $colour-lighter;
+
+// Filter
+$filter-bg-colour: $colour-lighter;
+
+// Header
+$header-border-colour: $colour-primary-blue;
+$header-bg-colour--dark: $colour-primary-blue-darker-1;
+
+// Hero
+$hero-bg-colour: $colour-primary-blue;
+$hero-text-colour: $AU-colordark-foreground-text;
+
+// Lists
+$list-bg-colour--highlight: $colour-lightest;
+$list-bg-colour--large: $colour-lighter;
+
+// Main-nav dark variant
+$main-nav-border-colour--dark: $colour-primary-blue-darker-1;
+$main-nav-bg-colour--dark: $colour-primary-blue;
+$main-nav-link-bg-colour--dark: $colour-primary-blue;
+$main-nav-link-border-colour--dark: $colour-primary-blue;
+$main-nav-link-bg-colour-active--dark: $colour-primary-blue-darker-1;
+$main-nav-link-border-colour-active--dark: $colour-primary-blue-darker-1;
+
+// Reference
+$reference-bg-colour: $colour-lightest;
+$reference-border-colour: $colour-light-darker;
+
+// Search
+$search-text-colour--path: $colour-path;
+$search-text-colour--date: $colour-dark;
+
+// Statistic
+$stat-border-colour: $colour-light;
+
+// Table
+$table-bg-colour--header: $colour-lightest;
+
+// Tags
+$tag-link-bg: $colour-primary-blue-very-pale;
+$tag-link-border: darken($colour-primary-blue-very-pale, 10%);
+$tag-link-text: $AU-color-foreground-action;
+
+// Tabs
+$tab-border-colour: $colour-light-darker;
+
+// Taskbar
+$taskbar-bg-colour--hover: $colour-primary-blue-darker-1;
+
+// Text
+$text-colour--light: $AU-colordark-foreground-text;
+
+// Tooltip
+$tooltip-bg-colour: $colour-dark;

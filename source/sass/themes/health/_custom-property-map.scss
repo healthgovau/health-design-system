@@ -10,91 +10,6 @@
 // They can be transformed with @mixins and @functions but are not accessible in the DOM.
 // =============================
 
-// Body
-$body-bg-colour--dark-tertiary: $colour-primary-blue;
-
-// Brand/pillars
-$brand-primary-colour: $colour-primary-blue;
-
-// Back to top
-$button-bg-colour--secondary: $colour-lighter;
-$button-bg-colour--secondary-hover: $colour-light;
-$button-bg-colour--dark-hover: $colour-light;
-$button-border-colour--dark-hover: $colour-light;
-
-// Button for bands, not states
-// Declared here to permit SASS calculation using mix()
-$button-primary: mix($colour-bg-light, $colour-primary-blue, 80%);
-$button-secondary: mix($colour-bg-light, $colour-primary-teal-darker-1, 80%);
-$button-tertiary: mix($colour-bg-light, $colour-complementary-skyblue-darker-1, 80%);
-$button-neutral: $AU-color-foreground-action;
-$button-neutral--darker: $AU-color-foreground-action;
-
-// Callouts
-$callout-bg-colour: $colour-lighter;
-
-// Compare
-$compare-bg-colour: $colour-complementary-skyblue-lighter-2;
-
-// Facets
-$facet-bg-colour: $colour-lighter;
-
-// Filter
-$filter-bg-colour: $colour-lighter;
-
-// Header
-$header-border-colour: $colour-primary-blue;
-$header-bg-colour--dark: $colour-primary-blue-darker-1;
-
-// Hero
-$hero-bg-colour: $colour-light;
-$hero-bg-colour--dark: $colour-dark-hover;
-$hero-bg-colour--content: $colour-dark-hover;
-
-// Lists
-$list-bg-colour--highlight: $colour-lightest;
-$list-bg-colour--large: $colour-lighter;
-
-// Main-nav dark variant
-$main-nav-border-colour--dark: $colour-primary-blue-darker-1;
-$main-nav-bg-colour--dark: $colour-primary-blue;
-$main-nav-link-bg-colour--dark: $colour-primary-blue;
-$main-nav-link-border-colour--dark: $colour-primary-blue;
-$main-nav-link-bg-colour-active--dark: $colour-primary-blue-darker-1;
-$main-nav-link-border-colour-active--dark: $colour-primary-blue-darker-1;
-$main-nav-menu-bg-colour: $colour-primary-blue;
-
-// Reference
-$reference-bg-colour: $colour-lightest;
-$reference-border-colour: $colour-light-darker;
-
-// Search
-$search-text-colour--path: $colour-path;
-$search-text-colour--date: $colour-dark;
-
-// Statistic
-$stat-border-colour: $colour-light;
-
-// Table
-$table-bg-colour--header: $colour-lightest;
-
-// Tags
-$tag-link-bg: $colour-primary-blue-very-pale;
-$tag-link-border: darken($colour-primary-blue-very-pale, 10%);
-$tag-link-text: $AU-color-foreground-action;
-
-// Tabs
-$tab-border-colour: $colour-light-darker;
-
-// Taskbar
-$taskbar-bg-colour--hover: $colour-primary-blue-darker-1;
-
-// Text
-$text-colour--light: $AU-colordark-foreground-text;
-
-// Tooltip
-$tooltip-bg-colour: $colour-dark;
-
 // =============================
 // 2. CSS CUSTOM PROPERTIES
 // Custom properties are preferred for variables that are commonly changed across sites and are not embedded in the @GOLD design system.
@@ -161,10 +76,28 @@ $tooltip-bg-colour: $colour-dark;
     --subheader-gradient-content-bg--start: #{$colour-primary-blue};
     --subheader-gradient-content-bg--end: #{$colour-primary-blue-lighter-1};
     --subheader-text: #{$AU-colordark-foreground-text};
+    --subheader-minheight--desktop: #{$subheader-minheight--desktop};
+    // Hero
+    --hero-bg: #{$hero-bg-colour};
+    --hero-bg--inset-opaque: #{darken($hero-bg-colour, 10%)};
+    --hero-bg--trans: #{rgba($hero-bg-colour, 0.8)};
+    --hero-text: #{$hero-text-colour};
+    --hero-content-width--md: #{$hero-content-width--md};
+    --hero-content-width--lg: #{$hero-content-width--lg};
+    --hero-image-width--md: #{$hero-image-width--md};
+    --hero-image-width--lg: #{$hero-image-width--lg};
+    --hero-image-focus: #{$hero-image-focus};
+    --hero-minheight--md: #{$hero-minheight--md};
+    --hero-minheight--lg: #{$hero-minheight--lg};
+    --hero-overlap-top: #{$hero-overlap-top};
     // Main-nav
     --main-nav-border: #{$colour-primary-blue};
     --main-nav-active-link-bg--hover: #{$colour-primary-blue-very-pale};
-    --main-nav-active-link-border: #{$colour-white};
+    --main-nav-active-link-border: #{$colour-primary-blue-very-pale};
+    --main-nav-dropdown-bg: #{$colour-primary-blue-very-pale};
+    --main-nav-active-dropdown-link-bg--hover: #{$colour-primary-blue-pale}; // Drop-down link BG
+    --main-nav-active-dropdown-border: #{$colour-complementary-skyblue-lighter-2};
+
     // Accordion
     --accordion-title-bg: #{$colour-lightest};
     --accordion-title-bg--active: #{$colour-light};
