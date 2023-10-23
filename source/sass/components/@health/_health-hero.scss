@@ -68,7 +68,9 @@
       }
     }
 
-    &__title {}
+  &__title {
+    color: var(--hero-text);
+  }
 
     &__summary {
       @include health-fontgrid(lg, default, light);

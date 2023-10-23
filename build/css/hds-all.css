@@ -5800,6 +5800,8 @@ textarea.au-text-input {
         padding: 4rem;
         width: var(--hero-content-width--lg);
         min-height: var(--hero-minheight--lg); } }
+  .au-body .health-hero__title {
+    color: var(--hero-text); }
   .au-body .health-hero__summary {
     font-size: 20px;
     font-size: 1.25rem;
