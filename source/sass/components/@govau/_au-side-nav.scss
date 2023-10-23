@@ -15,6 +15,7 @@
 
     a {
       background: transparent;
+      position: relative;
 
       &:hover,
       &:focus {
@@ -60,16 +61,18 @@
 
     li {
       &.expanded {
+
         // Put a blue down arrow on the right side of the expanded menu's item.
-        > a:first-child:after {
-          @include chevron-down(right, "00205B");
+        >a:first-child {
+          @include chevron(right, down);
         }
       }
 
       &.collapsed {
+
         // Put a blue right arrow on the right side of a collapsed menu title.
-        a:after {
-          @include chevron-right(right, "00205B");
+        a {
+          @include chevron(right, right);
         }
       }
     }
