@@ -1,36 +1,34 @@
----
-title: Changelog
----
+#v2.0.0-beta2 changes
 
-##v2.0.0-beta2
+## SCSS structure
 
-### Changes
+Restructure and renaming of colour and variable files to better separate colour and variable declarations and assignment to custom properties.
 
-Done
+### Breaking change
 
-- SCSS custom property reference update
-- Updates to chevrons for local navigation and call-to-action links
-- New hero variants
-- Primary navigation interaction update and addition of dropdown variants
+This change requires an update to downstream products referencing them in the SCSS build:
 
-To do
+- Change file references from `_colours-map.scss` to `_custom-property-map.scss`
 
-- New link list component
+## Hero
 
-### SCSS structure
+3 additional hero variants created (using the same DOM):
 
-- Reference to `_colours-map.scss` changed to `_custom-property-map.scss` requires update for downstream build systems
+- Hero inset box (same as campaign sub-header)
+- Hero inset box (overlapping)
+- Hero gradient
 
-### CTA link list
+### Template updates
 
-### Hero
+- Add `health-hero__bg` element to support gradient hero
+- Remove Bootstrap `row` and `col-*` divs
+- Add `health-hero__call-to-action` wrapper around CTA region (update supports all types and multiple instances of CTA)
 
-####CSS variables
+### New CSS variables
 
-Old:
-No CSS vars
+The following CSS variables (and defaults) have been added. Override as required.
 
-New:
+```
 --hero-bg: #072e7e;
 --hero-bg--inset-opaque: #041c4e;
 --hero-bg--trans: rgba(7, 46, 126, 0.8);
@@ -42,17 +40,42 @@ New:
 --hero-image-focus: right;
 --hero-minheight--md: 400px;
 --hero-minheight--lg: 500px;
+```
 
-####Breaking changes
+## Main navigation
 
-- Add `health-hero__bg` element
-- Remove Bootstrap `row` and `col-*` divs
+New drop-down navigation main navigation variant added `au-main-nav--dropdown au-main-nav--dropdown-columns`
 
-#### Primary navigation
+### New CSS variables
 
-Old:
+The following CSS variables (and defaults) have been added. Override as required.
+
+```
 --main-nav-border: #072e7e;
 --main-nav-active-link-bg--hover: #e6f3ff;
---main-nav-active-link-border: #ffffff;
+--main-nav-active-link-border: #e6f3ff;
+--main-nav-dropdown-bg: #e6f3ff;
+--main-nav-active-dropdown-link-bg--hover: #cfe6fb;
+--main-nav-active-dropdown-border: #3291d3;
+```
 
-New:
+## CTA link list
+
+New CTA link list component added.
+
+## Local nav chevron
+
+- Replaced non-standard side-nav chevrons with standard ones.
+- Updated chevron mixins accordingly.
+
+## Misc updates
+
+- --accordion-control-link-text fixed (removed extranous semi-colon)
+- Fixed mobile navigation hamburger double-up
+- Removal of CSS var from sub-header and moved to \_custom-property-map
+- Added link list flex variants
+- Minor style guide updates (more coming in future release)
+
+## Note
+
+This is a beta-release. The official release will include updated documentation via the style guide.
