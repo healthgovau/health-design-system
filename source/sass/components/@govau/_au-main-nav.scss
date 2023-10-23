@@ -2,28 +2,39 @@
 // Main nav
 //--------------------------------------------------------------
 
+
+.js .au-main-nav__menu {
+
+  .au-main-nav__menu-inner {
+    padding: 0;
+  }
+}
+
 .au-main-nav {
   border-bottom-color: var(--main-nav-border) !important;
 
   .au-link-list {
     >li {
-
       a {
-
         color: $AU-color-foreground-text;
         border-bottom-color: var(--main-nav-active-link-border);
-        background: var(--main-nav-active-link-bg);
+        // background: var(--main-nav-active-link-bg);
 
         @include AU-media($AU-main-nav-breakpoint) {
           font-weight: bold;
-        }
 
-        &:hover,
-        &:focus {
-          background: var(--main-nav-active-link-bg--hover);
+          &:hover,
+          &:active,
+          &:focus {
+            // @include AU-space(margin-bottom, -0.5unit);
+            // @include AU-space(border-bottom, 0.5unit solid var(--main-nav-active-link-border));
+            background-color: var(--main-nav-active-link-bg--hover);
+            z-index: 400;
+          }
         }
-
       }
+
+
 
       &.active,
       &.active-trail {
@@ -31,9 +42,9 @@
           border-bottom-color: var(--main-nav-active-link-border);
           font-weight: bold;
 
-          @include AU-media($AU-main-nav-breakpoint) {
-            @include AU-space(padding, 1unit);
-          }
+          // @include AU-media($AU-main-nav-breakpoint) {
+          //   @include AU-space(padding, 1unit);
+          // }
 
         }
       }
@@ -59,12 +70,8 @@
     color: $AU-color-foreground-text;
     font-weight: bold;
     font-size: 1.25rem;
-    @include AU-space(padding, .5unit 0);
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-    }
+    padding: 12px 8px !important;
+    padding: 0.75rem 0.5rem !important;
 
     &:before {
       content: ""
@@ -106,4 +113,205 @@
 
 .au-main-nav__toggle--search__open.svg-inline--fa {
   display: none;
+}
+
+//--------------------------------------------------------------
+// Main nav - dropdown
+// Implement via class="au-main-nav au-main-nav--dropdown"
+
+// Two variant desktop widths:
+// 1. Default - container width  
+//
+//   Dropdown content layout is flexible but supports:
+//   a. Two-column flex (using class="au-link-list au-link-list--flex-halves")
+//   b. Three-column flex (using class="au-link-list au-link-list--flex-thirds")
+//   c. Mega-menu - freeform!
+
+// 2. Column - narrow column (for very small sites)
+//
+//   Layout is fixed.
+//--------------------------------------------------------------
+.au-main-nav {
+
+  // Dropdown nav variants
+  &.au-main-nav--dropdown {
+
+    position: relative;
+
+    a:focus,
+    .au-main-nav__toggle:focus {
+      outline-offset: 0;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        outline-offset: 2px;
+      }
+    }
+
+    a:hover,
+    .au-main-nav__toggle:hover {
+      background-color: var(--main-nav-active-link-bg--hover);
+    }
+
+    // Dropdown nav
+    .au-main-nav__dropdown {
+      display: none;
+      position: relative;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        position: absolute;
+        box-shadow: 0px 5px 0.375em rgba(0, 0, 0, 0.2);
+      }
+
+      width: 100%;
+      margin-left: 0;
+      z-index: 500;
+      background: var(--main-nav-dropdown-bg);
+      padding: 0;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        @include AU-space(padding, 1unit);
+        border-left: 0;
+      }
+
+      // TODO - add more spacing for default mega-menu
+
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        left: 0;
+        width: calc(100% - $AU-grid-12-gutter-width);
+        @include AU-space(margin-left, $AU-grid-12-gutter-width/2);
+        @include AU-space(margin-right, $AU-grid-12-gutter-width/2);
+
+        // First link to landing page (same target as control)
+        .au-main-nav__dropdown-title {
+          position: relative;
+          width: 100%;
+
+          a:after {
+            content: ' ';
+            display: inline-block;
+            margin: 0 0 -0.1rem 0.75rem;
+            height: 16px;
+            width: 14px;
+            transition: margin .2s ease;
+            transition-property: right;
+            background: #000;
+            mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+            -webkit-mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+          }
+        }
+      }
+    }
+
+    // Accommodate existing active tree
+    .au-link-list>li.active,
+    .au-link-list>li.active-trail {
+      .au-main-nav__dropdown a {
+        font-weight: normal;
+
+        @include AU-media($AU-main-nav-breakpoint) {
+          font-weight: bold;
+        }
+      }
+    }
+
+    // Dropdown control
+    .au-main-nav__dropdown-control {
+
+      >a {
+        @include AU-space(padding-right, 2.5unit);
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          @include AU-space(right, 1unit);
+          @include AU-space(margin-top, -0.5unit);
+          @include AU-space(width, 0.8unit);
+          @include AU-space(height, 0.8unit);
+          background-color: $AU-color-foreground-text;
+          mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64 0l64 64-16 16-64-64"/><path d="M64 0l16 16-64 64L0 64"/></svg>');
+          -webkit-mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64 0l64 64-16 16-64-64"/><path d="M64 0l16 16-64 64L0 64"/></svg>');
+          transform: rotate(180deg);
+          transition: transform 0.25s ease-in;
+        }
+      }
+
+      &.au-main-nav__dropdown-control--active {
+        >a {
+          background-color: #fff;
+
+          @include AU-media($AU-main-nav-breakpoint) {
+            background-color: var(--main-nav-active-link-bg--hover);
+          }
+
+          &:after {
+            transform: rotate(0);
+            @include AU-space(margin-top, -0.3unit);
+          }
+        }
+
+        // Display dropdown
+        .au-main-nav__dropdown {
+          display: block;
+        }
+
+        .au-link-list {
+          >li {
+
+            &.active a {
+              background-color: var(--main-nav-active-dropdown-link-bg--hover);
+            }
+
+            a {
+
+              &:hover,
+              &:focus,
+              &:active {
+                background-color: var(--main-nav-active-dropdown-link-bg--hover);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Variant with narrow stacked dropdown
+  &.au-main-nav--dropdown-columns {
+    .au-main-nav__dropdown-control {
+      position: relative;
+    }
+
+    .au-main-nav__dropdown {
+      width: 100%;
+      padding: 0;
+      margin-left: 0;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        width: 15vw;
+        min-width: 300px;
+      }
+
+      .au-link-list>li {
+        float: none;
+        border-left: 8px solid var(--main-nav-active-dropdown-border);
+
+        &.au-main-nav__dropdown-title {
+          border-left: 0;
+          border-bottom: 0;
+
+          a:after {
+            display: none;
+          }
+        }
+
+        @include AU-media($AU-main-nav-breakpoint) {
+          border-left: 0;
+        }
+      }
+    }
+
+  }
 }
