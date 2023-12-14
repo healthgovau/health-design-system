@@ -26,7 +26,7 @@ The guiding principles behind the Health Design System are:
 5. Be platform agnostic
 6. Eat our own dogfood - build the system and use the system!
 
-#### The following webites use this system:
+#### The following websites use this system:
 
 - [Department of Health and Aged Care](https://www.health.gov.au/)
 - [Australian Immunisation Handbook](https://immunisationhandbook.health.gov.au/)
@@ -37,3 +37,5 @@ The guiding principles behind the Health Design System are:
 - [Australian Industrial Chemicals Introduction Scheme](https://www.industrialchemicals.gov.au/)
 - [National Sports Tribunal](https://www.nationalsportstribunal.gov.au/)
 - [Antimicrobial Resistance](https://www.amr.gov.au/)
+- [Australian Clinical Trials](https://www.australianclinicaltrials.gov.au/)
+- [Health Workforce Data](https://hwd.health.gov.au/)
