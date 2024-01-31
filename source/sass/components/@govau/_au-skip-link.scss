@@ -1,0 +1,10 @@
+// Account for overlapping quickexit that injects class="au-body--offset" onto <body>
+.au-body--offset {
+    .au-skip-link__link {
+
+        &:active,
+        &:focus {
+            z-index: 10001;
+        }
+    }
+}

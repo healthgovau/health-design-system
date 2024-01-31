@@ -18,11 +18,11 @@
     }
 </style>
 
-<link rel="stylesheet" href="./themes/mandelbrot/css/navy.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="./themes/mandelbrot/css/navy.css?cachebust=1.10.3" type="text/css">
 
-<link rel="stylesheet" href="./subtheme/css/style.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="./subtheme/css/style.css?cachebust=1.10.3" type="text/css">
 
-<link rel="stylesheet" href="./themes/mandelbrot/css/highlight.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="./themes/mandelbrot/css/highlight.css?cachebust=1.10.3" type="text/css">
 
 
 <title>Introduction | Health Design System</title>
@@ -57,7 +57,7 @@
   </a>
   <ul class="Header-menu">
     
-      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 2.0.0-beta.2</a></li>
+      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 2.0.0-beta.3</a></li>
     
     <li>
       <a href="https://github.com/healthgovau/health-design-system">
@@ -108,7 +108,7 @@
 <li>Be platform agnostic</li>
 <li>Eat our own dogfood - build the system and use the system!</li>
 </ol>
-<h4 id="the-following-webites-use-this-system">The following webites use this system:</h4>
+<h4 id="the-following-websites-use-this-system">The following websites use this system:</h4>
 <ul>
 <li><a href="https://www.health.gov.au/">Department of Health and Aged Care</a></li>
 <li><a href="https://immunisationhandbook.health.gov.au/">Australian Immunisation Handbook</a></li>
@@ -119,6 +119,8 @@
 <li><a href="https://www.industrialchemicals.gov.au/">Australian Industrial Chemicals Introduction Scheme</a></li>
 <li><a href="https://www.nationalsportstribunal.gov.au/">National Sports Tribunal</a></li>
 <li><a href="https://www.amr.gov.au/">Antimicrobial Resistance</a></li>
+<li><a href="https://www.australianclinicaltrials.gov.au/">Australian Clinical Trials</a></li>
+<li><a href="https://hwd.health.gov.au/">Health Workforce Data</a></li>
 </ul>
 
     
@@ -4695,6 +4697,40 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
+                href="./components/detail/quick-exit.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="quick-exit"
+                data-handle="quick-exit"
+            >
+                <span>Quick Exit</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
                 href="./components/detail/references.html"
                 data-role="tree-link"
                 
@@ -5680,19 +5716,33 @@
     
         
         
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-content-page">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-content-page-items">
+                    Content Page
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-content-page-items">
+                
+                
+                
+                
+    
+        
+        
         
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./components/detail/content-page.html"
+                href="./components/detail/content-page--default.html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="content-page"
-                data-handle="content-page"
+                data-test="content-page--default"
+                data-handle="content-page--default"
             >
-                <span>Content Page</span>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -5710,6 +5760,46 @@
 
             </a>
         </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./components/detail/content-page--with-quick-exit.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="content-page--with-quick-exit"
+                data-handle="content-page--with-quick-exit"
+            >
+                <span>With Quick Exit</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
         
     
         
@@ -5963,7 +6053,7 @@
 
 
 
-<script src="./themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.1"></script>
+<script src="./themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.3"></script>
 
 
 

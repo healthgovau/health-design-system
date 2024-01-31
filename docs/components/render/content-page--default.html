@@ -1,0 +1,897 @@
+
+
+<nav class="au-skip-link" aria-label="skip links navigation">
+  <a class="au-skip-link__link" href="#content">Skip to main content</a>
+  <a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
+</nav>
+
+
+<div class="au-body">
+
+  <header class="au-header pillars-container" role="banner">
+  <div class="container">
+    <div id="pillars"></div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <a href="/" title="Home" rel="home" class="au-header__logo">
+          <img
+            src="../../images/logo.svg"
+            alt="Australia Government Department of Health"
+            class="au-header__logo-image au-responsive-media-img"
+          />
+        </a>
+        <div class="au-sronly">
+          <p>Australian Government Department of Health and Aged Care</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="health-sub-nav text--align-right">
+  <h3 class="au-sronly">Sub menu</h3>
+  <ul class="au-link-list au-link-list--inline">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</div>
+        <div class="health-search health-search--global">
+  <form class="au-form">
+    <div class="health-search__form__input-wrapper">
+      <div class="au-form__item">
+        <label class="au-sronly" for="search-field">Search</label>
+        <input placeholder="Search this website"
+               class="health-search__form__input au-text-input au-text-input au-text-input--block ui-autocomplete-input"
+               size="30" type="text" id="search-field" name="funnelback_search_field" value=""
+               maxlength="128" autocomplete="off">
+      </div>
+      <div class="health-loading"></div>    </div>
+    <input class="health-search__form__submit au-btn au-btn" type="submit" name="submit" value="Search">
+  </form>
+</div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.searchAutocomplete('#search-field', dinosaurData);
+  });
+</script>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="au-main-nav " aria-label="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="main-nav-default" class="au-main-nav__content">
+          <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--open" onclick="return AU.mainNav.Toggle( this )">
+            <span class="svg-inline--fa fa-fw">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+            </span>
+            Menu
+          </button>
+          <button class="au-main-nav__toggle au-main-nav__toggle--search au-main-nav__toggle--open">
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__closed">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+            </span>
+            <span class="svg-inline--fa fa-fw au-main-nav__toggle--search__open">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+            </span>
+            Search
+          </button>
+          <div class="au-main-nav__menu">
+            <div class="au-main-nav__menu-inner">
+              <div class="au-main-nav__focus-trap-top"></div>
+              <button aria-controls="main-nav-default" class="au-main-nav__toggle au-main-nav__toggle--close"
+                onclick="return AU.mainNav.Toggle( this )">
+                <span class="svg-inline--fa fa-fw">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                </span>
+                Close
+              </button>
+              <ul class="au-link-list">
+                <li class="active"><a href="#" aria-current="page">Home</a></li>
+                <li><a href="#">Dinosaurs</a></li>
+                <li><a href="#">Interesting facts</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+              <div class="au-main-nav__focus-trap-bottom"></div>
+            </div>
+          </div>
+          <div class="au-main-nav__overlay" aria-controls="main-nav-default" onclick="return AU.mainNav.Toggle( this )">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+  
+  <div class="health-sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8">
+          <nav class="au-breadcrumbs" aria-label="Breadcrumb">
+  <h2 class="au-sronly">You are here</h2>
+  <ol class="au-link-list au-link-list--inline">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Dinosaurs</a></li>
+    <li><a href="#">Theropods</a></li>
+  </ol>
+</nav>
+
+          <div class="health-sub-header__section-title">
+            <a class="au-direction-link au-direction-link--left" href="/about-us">About us</a>
+          </div>
+          <h1>Tyrannosaurus</h1>
+          <p class="au-introduction">
+            Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning &quot;king&quot; in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods.
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="health-toolbar">
+  <ul class="health-toolbar__items au-link-list au-link-list--inline">
+    <li>
+      <button id="health-toolbar__listen" href="#" class="au-btn au-btn--tertiary">
+        <span class="svg-inline--fa fa-fw fa-left">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <path
+              d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z">
+            </path>
+          </svg>
+        </span>Listen
+      </button>
+    </li>
+    <li>
+      <button id="health-toolbar__print" class="au-btn au-btn--tertiary">
+        <span class="svg-inline--fa fa-fw fa-left">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z">
+            </path>
+          </svg>
+        </span>Print
+      </button>
+    </li>
+    <li>
+      <button id="health-toolbar__share" class="au-btn au-btn--tertiary">
+        <span class="svg-inline--fa fa-fw fa-left">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z">
+            </path>
+          </svg>
+        </span>Share
+      </button>
+      <div id="health-share-menu">
+        <ul class="au-link-list">
+          <li>
+            <span class="svg-inline--fa fa-fw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+              </svg></span>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <span class="svg-inline--fa fa-fw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                </path>
+              </svg></span>
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <span class="svg-inline--fa fa-fw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                </path>
+              </svg></span>
+            <a href="#">Email</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.tooltip('#health-toolbar__share', {
+      html: document.getElementById("health-share-menu"),
+      trigger: 'click',
+      appendTo: $("#health-toolbar__share").parent('li')[0]
+    });
+  });
+</script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container not-full-width">
+
+    <div class="row">
+
+      <div class="col-sm-4 au-side-nav--right">
+        <aside class="au-side-nav" aria-label="side navigation">
+  <div id="nav-default" class="au-side-nav__content">
+    <h2 class="au-sidenav__title"><a href="#">Animals</a></h2>
+    <nav>
+      <ul class="au-link-list">
+        <li><a href="#">Mammals</a></li>
+        <li class="collapsed"><a href="#">Reptiles</a></li>
+        <li class="collapsed"><a href="#">Insects</a></li>
+        <li class="expanded active-trail"><a href="#">Dinosaurs</a>
+          <ul class="au-link-list">
+            <li><a href="#">Ornithischia</a></li>
+            <li><a href="#">Sauropodomorpha </a></li>
+            <li class="expanded active-trail"><a href="#">Theropods</a>
+              <ul class="au-link-list">
+                <li><a href="#" class="active">Tyrannosaurus</a></li>
+                <li><a href="#">Massospondylus</a></li>
+                <li><a href="#">Baryonyx</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Birds</a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+      </div>
+
+      <div class="col-sm-8">
+
+        <nav class="au-inpage-nav-links" aria-label="On this page">
+  <div class="au-inpage-nav-links__heading">On this page</div>
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#what-can-you-disclose">History of research</a></li>
+    <li><a href="#who-can-make-a-disclosure">Amazing facts</a></li>
+    <li><a href="#how-to-make-a-disclosure">Getting away from a Tyrannosaurus rex</a></li>
+    <li><a href="#what-happens-next">Glossary</a></li>
+    <li><a href="#contact">References</a></li>
+  </ul>
+</nav>
+
+        <h2 id="description">Description</h2>
+        <h3>Size</h3>
+        <p>
+          Tyrannosaurus Rex was one of the largest land carnivores of all time. One of the largest and the most complete
+          specimen, nicknamed Sue (FMNH PR2081), is located at the Field Museum of Natural History. Sue measured 12.8
+          meters (42 ft) long,was 3.66 meters (12 ft) tall at the hips, and according to the most recent
+          studies, using a variety of techniques, estimated to have weighed between 8.4 metric tons (9.3 short tons) to 14
+          metric tons (15.4 short tons).
+        </p>
+
+        <h2 id="accordion"></h2>
+        <div class="au-accordion-group__controls">
+    <button class="au-accordion-group__control" onclick="return AU.accordion.Open(document.querySelector('#accordion-group-1').getElementsByClassName('js-au-accordion'))">Open all</button>
+    <button class="au-accordion-group__control" onclick="return AU.accordion.Close(document.querySelector('#accordion-group-1').getElementsByClassName('js-au-accordion'))">Close all</button>
+</div>
+
+<ul class="au-accordion-group" id="accordion-group-1">
+  <li>
+    <section class="au-accordion">
+      <button class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-1-1"
+        aria-expanded="false" onclick="return AU.accordion.Toggle( this )">
+        Accordion title
+      </button>
+
+      <div class="au-accordion__body au-accordion--closed" id="accordion-1-1">
+        <div class="au-accordion__body-wrapper">
+          Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+        </div>
+      </div>
+    </section>
+  </li>
+  <li>
+    <section class="au-accordion">
+      <button class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-1-2"
+        aria-expanded="false" onclick="return AU.accordion.Toggle( this )">
+        Accordion title
+      </button>
+
+      <div class="au-accordion__body au-accordion--closed" id="accordion-1-2">
+        <div class="au-accordion__body-wrapper">
+          Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+        </div>
+      </div>
+    </section>
+  </li>
+  <li>
+    <section class="au-accordion">
+      <button class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-1-3"
+        aria-expanded="false" onclick="return AU.accordion.Toggle( this )">
+        Accordion title
+      </button>
+
+      <div class="au-accordion__body au-accordion--closed" id="accordion-1-3">
+        <div class="au-accordion__body-wrapper">
+          Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.
+        </div>
+      </div>
+    </section>
+  </li>
+</ul>
+
+        <h2 id="compare">Compare</h2>
+        <div class="health-compare">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 health-compare__title">
+        <p>Dinosaur sizes</p>
+      </div>
+      <div class="col-sm-6">
+        <h5 id="target-201819">Tyrannosaurus</h5>
+        <p>13 meters tall</p>
+      </div>
+      <div class="col-sm-6 standard-gap--mobile-only">
+        <h5 id="target-201922">Brachiosaurus</h5>
+        <p>21 meters tall</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <p>
+          A specimen nicknamed Scotty (RSM P2523.8), located at the Royal
+          Saskatchewan Museum, is reported to measure 13 m (43 ft) in length. Using a mass estimation technique that
+          extrapolates from the circumference of the femur, Scotty was estimated as the largest known specimen at 8.8
+          metric tons (9.7 short tons) in weight
+          <span class="health-references__links">
+            (<span class="health-references__link" title="Boyle J &amp;amp; Eades S (2016) Closing the gap in Aboriginal women’s reproductive health: some progress, but still a long way to go. <cite>Aust N Z J Obstet Gynaecol </cite>56(3): 223-4">Anderson, J. F. 1985</span>)
+          </span>.
+        </p>
+
+        <div class="health-figure health-figure--border">
+
+  <p class="au-display-sm">Restoration showing scaly skin with sparse feathering, and lipped jaws
+  </p>
+
+  <figure role="group" class="au-accordion au-accordion--small">
+
+    <a href="../../images/trex.jpg" data-lightbox="fancybox" class="health-figure__image-link" aria-label="Zoom in">
+      <span class="health-figure__image-link__icon svg-inline--fa fa-2x">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"></path></svg>
+      </span>
+      <img src="../../images/trex.jpg"/>
+    </a>
+    <div class="text--minor standard-gap">
+      <p>
+        Source: <a href="https://en.wikipedia.org/wiki/Tyrannosaurus#/media/File:Tyrannosaurus-rex-Profile-steveoc86.png">Wikipedia</a>
+      </p>
+    </div>
+
+    <a href="#figcaption"
+       class="standard-gap au-accordion__title au-accordion--closed js-au-accordion"
+       aria-controls="figcaption" aria-expanded="false"
+       onclick="return AU.accordion.Toggle( this )">
+      Show description of image
+    </a>
+
+    <figcaption class="au-accordion__body au-accordion--closed" id="figcaption">
+      <div class="au-accordion__body-wrapper">
+        <p>The largest known Tyrannosaurus rex skull measures up to 1.52 meters (5 ft) in length. Large fenestrae
+          (openings) in the skull reduced weight, as in all carnivorous theropods. In other respects Tyrannosaurus's
+          skull was significantly different from those of large non-tyrannosaurid theropods. It was extremely wide at
+          the rear but had a narrow snout, allowing unusually good binocular vision.</p>
+      </div>
+    </figcaption>
+
+  </figure>
+
+</div>
+
+        <p>
+          The discovery of feathered dinosaurs led to debates if, and to what extent, Tyrannosaurus might have been
+          feathered. Filamentous structures, which are commonly recognized as the precursors of feathers, have
+          been reported in the small-bodied, basal tyrannosauroid Dilong paradoxus from the Early Cretaceous Yixian
+          Formation of China in 2004. Because integumentary impressions of larger tyrannosauroids known at that time
+          showed evidence of scales, the researchers who studied Dilong speculated that insulating feathers might have
+          been lost by larger species due to their smaller surface-to-volume ratio.
+        </p>
+
+        <div class="health-table__responsive">
+  <table class="health-table">
+    <caption><p class="au-display-sm">Comparison of dinosaur sizes</p></caption>
+    <tbody>
+    <tr>
+      <th>Dinosaur</th>
+      <th>Weight</th>
+      <th>Length</th>
+    </tr>
+    <tr>
+      <td>Spinosaurus
+        <sup class="health-footnotes__links">
+          [<span class="health-footnotes__link" title="Sizes are given with a range, where possible, of estimates that have not been contradicted by more recent studies">1</span>]
+        </sup>
+      </td>
+      <td>21 tonnes</td>
+      <td>18 meters</td>
+    </tr>
+    <tr>
+      <td>Tyrannosaurus rex</td>
+      <td>18 tonnes</td>
+      <td>13 meters</td>
+    </tr>
+    <tr>
+      <td>Carcharodontosaurus</td>
+      <td>15 tonnes</td>
+      <td>14 meters</td>
+    </tr>
+    <tr>
+      <td>Giganotosaurus</td>
+      <td>14 tonnes</td>
+      <td>14 meters</td>
+    </tr>
+    <tr>
+      <td>Acrocanthosaurus
+        <sup class="health-footnotes__links">
+          [<span class="health-footnotes__link" title="Sauropodomorph size is difficult to estimate given their usually fragmentary state of preservation">2</span>]
+        </sup>
+      </td>
+      <td>7 tonnes</td>
+      <td>11 meters</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="3">
+        <ul class="health-footnotes list--remove text--minor">
+          <li class="row">
+            <span class="col-xs-1">1</span>
+            <span class="col-xs-11">One study of Tyrannosaurus specimens with tooth marks in the bones attributable to the same genus was presented as evidence of cannibalism.</span>
+          </li>
+          <li class="row">
+            <span class="col-xs-1">2</span>
+            <span class="col-xs-11">Evidence of intraspecific attack were found by Joseph Peterson and his colleagues in the juvenile Tyrannosaurus nicknamed Jane</span>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    </tfoot>
+  </table>
+</div>
+
+        <h3>Get the factsheet on how awesome the Tyrannosaurus is</h3>
+
+        <p>
+          The discovery of feathered dinosaurs led to debates if, and to what extent, Tyrannosaurus might have been
+          feathered.
+        </p>
+
+        <div class="au-callout au-callout--secondary">
+  <div class="row">
+    <div class="container">
+
+      <div class="health-file">
+        <span class="svg-inline--fa">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"/></svg>
+        </span>
+        <a class="health-file__link" href="#">
+          <span class="health-file__link--visible">
+            Download
+            <span class="sr-only">Out-of-Pocket Costs Transparency Reference Group Terms of Reference as </span>
+            PDF
+          </span>
+          - 276 KB, 3 pages
+        </a>
+      </div>
+
+      <div class="health-file">
+        <span class="svg-inline--fa">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm220.1-208c-5.7 0-10.6 4-11.7 9.5-20.6 97.7-20.4 95.4-21 103.5-.2-1.2-.4-2.6-.7-4.3-.8-5.1.3.2-23.6-99.5-1.3-5.4-6.1-9.2-11.7-9.2h-13.3c-5.5 0-10.3 3.8-11.7 9.1-24.4 99-24 96.2-24.8 103.7-.1-1.1-.2-2.5-.5-4.2-.7-5.2-14.1-73.3-19.1-99-1.1-5.6-6-9.7-11.8-9.7h-16.8c-7.8 0-13.5 7.3-11.7 14.8 8 32.6 26.7 109.5 33.2 136 1.3 5.4 6.1 9.1 11.7 9.1h25.2c5.5 0 10.3-3.7 11.6-9.1l17.9-71.4c1.5-6.2 2.5-12 3-17.3l2.9 17.3c.1.4 12.6 50.5 17.9 71.4 1.3 5.3 6.1 9.1 11.6 9.1h24.7c5.5 0 10.3-3.7 11.6-9.1 20.8-81.9 30.2-119 34.5-136 1.9-7.6-3.8-14.9-11.6-14.9h-15.8z"/></svg>
+        </span>
+        <a class="health-file__link" href="#">
+          <span class="health-file__link--visible">
+            Download
+            <span class="sr-only">Out-of-Pocket Costs Transparency Reference Group Terms of Reference as </span>
+            Word
+          </span>
+          - 125 KB, 1 page
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        <h3>Skeleton</h3>
+
+        <p>
+          The largest known Tyrannosaurus rex skull measures up to 1.52 meters (5 ft) in length. Large fenestrae
+          (openings) in the skull reduced weight, as in all carnivorous theropods. In other respects Tyrannosaurus's skull
+          was significantly different from those of large non-tyrannosaurid theropods.
+        </p>
+
+        
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+
+
+        <h2 id="history">History of research</h2>
+
+        <p class="au-callout">
+  More than 20 almost-complete t rex skeletons have been found. The most perfect, nicknamed Sue, was unearthed in South Dakota, USA, 20 years ago.
+</p>
+
+        <p>Teeth from what is now documented as a Tyrannosaurus rex were found in 1874 by Arthur Lakes near Golden,
+          Colorado. In the early 1890s, John Bell Hatcher collected postcranial elements in eastern Wyoming. The fossils
+          were believed to be from a large species of Ornithomimus (O. grandis, now Deinodon grandis) but are now
+          considered Tyrannosaurus rex remains.</p>
+
+        <div class="health-video">
+  <div class="health-video__preview">
+    <a class="health-video__preview__link" href="" data-youtubeid="soDUaoPKcjY">
+      <div class="au-responsive-media-img">
+        <img src="../../images/trex_16x9.jpg">
+      </div>
+      <div class="health-video__preview__play-button">
+        <span class="svg-inline--fa">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path
+            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+        </span>
+      </div>
+    </a>
+    <div class="au-video__preview__length health-video__preview__length">
+      <span class="svg-inline--fa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+      </span>
+      3:35
+    </div>
+  </div>
+</div>
+
+<section class="health-video__transcript au-accordion">
+    <button class="au-accordion__title js-au-accordion au-accordion--closed"
+            aria-controls="accordion-default"
+            aria-expanded="false"
+            onclick="return AU.accordion.Toggle( this )">
+        Transcript
+    </button>
+
+    <div class="au-accordion__body au-accordion--closed" id="accordion-default">
+        <div class="au-accordion__body-wrapper">
+          <p><i>NARRATOR:</i> It's one of the most mysterious dinosaurs ever discovered: head like a crocodile, meter-long jaws, a spectacular sail, and an overall body larger than T. rex.</p><p><i>NIZAR IBRAHIM (University of Chicago):</i> There is no animal alive or extinct, that we know of, that looks anything like <i>Spinosaurus</i> .</p><p><i>NARRATOR:</i> <i>Spinosaurus</i> : only one skeleton has ever been found, and, in a single night, it was destroyed.</p><p><i>HANS-DIETER SUES (National Museum of Natural History):</i> It was a catastrophic loss to science, overall.</p><p><i>NARRATOR:</i> Now, after a century of searching, a new skeleton has emerged from the Sahara.</p><p><i>MATT LAMANNA (Carnegie Museum of Natural History):</i> When this skeleton is revealed, it's going to change our understanding of this animal in pretty fundamental ways.</p>
+        </div>
+    </div>
+</section>
+
+        <p>
+          The largest known Tyrannosaurus rex skull measures up to 1.52 meters (5 ft) in length. Large fenestrae
+          (openings) in the skull reduced weight, as in all carnivorous theropods. In other respects Tyrannosaurus's skull
+          was significantly different from those of large non-tyrannosaurid theropods.
+        </p>
+
+        <div class="row au-callout au-callout--secondary au-callout--grid-row ">
+  <div class=" col-xs-3 col-md-2">
+    
+  <div class="image--link image--border">
+  <a href="#">
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: 800px;">
+      <div style="padding-top: 56.25%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="800" height="450" data-src="../../images/trex_16x9.jpg">
+      </div>
+    </div>
+  </div>
+
+  </a>
+  </div>
+
+  </div>
+  <div class=" col-xs-9 col-md-10">
+    <p class="au-display-md"><a href="#">Tyrannosaurus factsheet</a></p>
+    <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning
+      "king" in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large
+      theropods.</p>
+  </div>
+</div>
+        <div class="row au-callout au-callout--secondary au-callout--grid-row ">
+  <div class=" col-xs-3 col-md-2">
+    <div class="health-video">
+  <div class="health-video__preview">
+    
+      <div class="image--link image--border">
+      <a href="#">
+      <div class="image-outer">
+        <div class="image-placeholder" style="max-width: 200px;">
+          <div style="padding-top: 56.25%;"></div>
+        </div>
+        <div class="image-wrapper image-loading">
+          <div class="image">
+            <img width="200" height="113" data-src="../../images/trex_small_16x9.jpg">
+          </div>
+        </div>
+      </div>
+    
+      </a>
+      </div>
+    <div class="health-video__preview__length health-video__preview__length--small">
+      <span class="svg-inline--fa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+      </span>
+      3:35
+    </div>
+  </div>
+</div>
+  </div>
+  <div class=" col-xs-9 col-md-10">
+    <p class="au-display-md"><a href="#">Tyrannosaurus video</a></p>
+    <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning
+      "king" in Latin), often called T. rex or colloquially T-Rex, is one of the most well-represented of the large
+      theropods.</p>
+  </div>
+</div>
+
+        <h2 id="facts">Amazing facts</h2>
+
+        <p>Impress your friends with these amazing Tyrannosaurus rex facts:</p>
+
+        <ol class="list--large">
+          <li>The T. Rex roamed the planet during the late Cretaceous Period 65 million years ago, in what’s now the USA and Canada.</li>
+          <li>The name Tyrannosaurus Rex comes from Greek and Latin words meaning ‘Tyrant Lizard King’.</li>
+          <li>The terrific T. Rex was a seriously big beast, growing up to 12m long and 6m tall!</li>
+        </ol>
+
+        <h2 id="getting-away">Getting away from a Tyrannosaurus rex</h2>
+
+        <p>These are some things you can try if you ever see a Tyrannosaurus rex:</p>
+        <ul class="list--large--checklist">
+          <li>Run away as fast as you can</li>
+          <li>Laugh at its little arms</li>
+          <li>Play dead</li>
+        </ul>
+
+        <h2>Contacts</h2>
+
+        <div class="row au-callout au-callout--secondary au-callout--grid-row">
+  <div about="/contacts/cancer-council" typeof="sioc:Item foaf:Document">
+
+    <div class=" col-sm-2 col-xs-3">
+      <div class="image--circle">
+        <a href="#">
+          <img src="../../images/contact-single.png"/>
+        </a>
+      </div>
+    </div>
+
+    <div class=" col-sm-10 col-xs-9">
+
+      <p class="au-display-md">Dinosaur containment hotline</p>
+      <p>Call us if you spot a dinosaur on the loose.</p>
+
+      <div class="health-field health-field--label-hidden">
+
+        <div class="health-field__item">
+          <div class="health-field health-field--light health-field--inline">
+            <div class="health-field__label">
+              Switchboard
+            </div>
+            <div class="health-field__item">
+              <span class="svg-inline--fa fa-fw fa-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
+              </span><a href="#">0123 456 789</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="health-field__item">
+          <div class="health-field health-field--light health-field--inline">
+            <div class="health-field__label">
+              After hours
+            </div>
+            <div class="health-field__item">
+              <span class="svg-inline--fa fa-fw fa-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
+              </span><a href="#">0123 456 789</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="health-field health-field--label-hidden">
+        <div class="health-field__item">
+          <span class="svg-inline--fa fa-fw fa-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+          </span><a href="#">info@dinosaurs-r-us.com.au</a>
+        </div>
+      </div>
+
+      <div class="health-field health-field--label-hidden">
+        <div class="health-field__item">
+          <span class="svg-inline--fa fa-fw fa-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm82.29 357.6c-3.9 3.88-7.99 7.95-11.31 11.28-2.99 3-5.1 6.7-6.17 10.71-1.51 5.66-2.73 11.38-4.77 16.87l-17.39 46.85c-13.76 3-28 4.69-42.65 4.69v-27.38c1.69-12.62-7.64-36.26-22.63-51.25-6-6-9.37-14.14-9.37-22.63v-32.01c0-11.64-6.27-22.34-16.46-27.97-14.37-7.95-34.81-19.06-48.81-26.11-11.48-5.78-22.1-13.14-31.65-21.75l-.8-.72a114.792 114.792 0 0 1-18.06-20.74c-9.38-13.77-24.66-36.42-34.59-51.14 20.47-45.5 57.36-82.04 103.2-101.89l24.01 12.01C203.48 89.74 216 82.01 216 70.11v-11.3c7.99-1.29 16.12-2.11 24.39-2.42l28.3 28.3c6.25 6.25 6.25 16.38 0 22.63L264 112l-10.34 10.34c-3.12 3.12-3.12 8.19 0 11.31l4.69 4.69c3.12 3.12 3.12 8.19 0 11.31l-8 8a8.008 8.008 0 0 1-5.66 2.34h-8.99c-2.08 0-4.08.81-5.58 2.27l-9.92 9.65a8.008 8.008 0 0 0-1.58 9.31l15.59 31.19c2.66 5.32-1.21 11.58-7.15 11.58h-5.64c-1.93 0-3.79-.7-5.24-1.96l-9.28-8.06a16.017 16.017 0 0 0-15.55-3.1l-31.17 10.39a11.95 11.95 0 0 0-8.17 11.34c0 4.53 2.56 8.66 6.61 10.69l11.08 5.54c9.41 4.71 19.79 7.16 30.31 7.16s22.59 27.29 32 32h66.75c8.49 0 16.62 3.37 22.63 9.37l13.69 13.69a30.503 30.503 0 0 1 8.93 21.57 46.536 46.536 0 0 1-13.72 32.98zM417 274.25c-5.79-1.45-10.84-5-14.15-9.97l-17.98-26.97a23.97 23.97 0 0 1 0-26.62l19.59-29.38c2.32-3.47 5.5-6.29 9.24-8.15l12.98-6.49C440.2 193.59 448 223.87 448 256c0 8.67-.74 17.16-1.82 25.54L417 274.25z"/></svg>
+          </span><a href="#">www.dinosaurs-r-us.com.au</a>
+        </div>
+      </div>
+
+      <div class="health-field">
+        <div class="health-field__label">Postal addresses:</div>
+        <div class="health-field__item">
+          <div>GPO Box 1234</div>
+          <div>Sydney NSW 2001</div>
+        </div>
+      </div>
+
+      <div class="health-field">
+        <div class="health-field__label">Street addresses:</div>
+        <div class="health-field__item">
+          <div>1 Dinosaur Lane</div>
+          <div>Sydney NSW 2001</div>
+        </div>
+      </div>
+
+      <p><a href="#">View contact</a></p>
+    </div>
+
+  </div>
+
+</div>
+
+        <h2>Glossary</h2>
+
+        <dl class="health-dl">
+  <dt>AFBP</dt>
+  <dd>Aboriginal Family Birthing Program</dd>
+  <dt>AFP</dt>
+  <dd>α-fetoprotein</dd>
+  <dt>AGREE</dt>
+  <dd>Appraisal of Guidelines Research and Evaluation</dd>
+  <dt>AHMAC</dt>
+  <dd>Australian Health Ministers’ Advisory Council</dd>
+</dl>
+
+        <h2>References</h2>
+
+        <ul class="list--remove text--minor standard-gap">
+  <li>
+    Anderson, J. F.; Hall-Martin, A. J.; Russell, D. (1985). "Long bone circumference and weight in mammals, birds and
+    dinosaurs". Journal of Zoology. 207 (1): 53–61
+  </li>
+  <li>
+    Henderson, D. M. (1999-01-01). "Estimating the masses and centers of mass of extinct animals by 3-D mathematical
+    slicing". Paleobiology. 25 (1): 88–106.
+  </li>
+  <li>
+    Carr, T. D.; Williamson, T. E. (2004). "Diversity of late Maastrichtian Tyrannosauridae (Dinosauria: Theropoda) from
+    western North America". Zoological Journal of the Linnean Society. 142 (4): 479–523
+  </li>
+</ul>
+
+        <ul class="health-footnotes list--remove text--minor">
+  <li class="row">
+    <span class="col-xs-2 col-sm-1">1</span>
+    <span class="col-xs-10 col-sm-11">One study of Tyrannosaurus specimens with tooth marks in the bones attributable to the same genus was presented as evidence of cannibalism.</span>
+  </li>
+  <li class="row">
+    <span class="col-xs-2 col-sm-1">2</span>
+    <span class="col-xs-10 col-sm-11">Evidence of intraspecific attack were found by Joseph Peterson and his colleagues in the juvenile Tyrannosaurus nicknamed Jane</span>
+  </li>
+</ul>
+
+        <div class="health-book-nav standard-gap" role="navigation" aria-label="Book">
+  <div class="row">
+    <div class="col-xs-6">
+      <a class="health-book-nav--left" href="#">
+        <span class="au-direction-link au-direction-link--left">Previous</span>
+        <span class="au-display-lg au-display--light health-book-nav__title">Diplodocus</span>
+      </a>
+    </div>
+
+    <div class="col-xs-6">
+      <a class="health-book-nav--right" href="#">
+        <span class="au-direction-link au-direction-link--right">Next</span>
+        <span class="au-display-lg au-display--light health-book-nav__title">Velociraptor</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+        <div class="health-separator"></div>
+
+        <div class="health-field health-field--inline">
+          <div class="health-field__label">Last updated:</div>
+          <div class="health-field__item">20 June 2019</div>
+        </div>
+        <div class="health-field health-field--inline">
+          <div class="health-field__label">Tags:</div>
+          <div class="health-field__item">
+            <ul class="au-tags au-tags--inline">
+              <li><a href="#">Dinosaurs</a></li>
+              <li><a href="#">Theropod</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container standard-gap print--hide">
+  <div class="row">
+    <p class="col-xs-12">
+      <a class="link-help-improve" href="#" rel="nofollow" aria-controls="block-webform-client-block-1291" aria-expanded="false">
+        Is there anything wrong with this page?
+      </a>
+    </p>
+  </div>
+</div>
+
+</div>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+  <div class="container">
+    <nav class="au-footer__navigation row" aria-label="footer">
+      <div class="col-sm-6 col-md-3 au-footer__navigation-section">
+        <h3>About Dinosaurs</h3>
+        <ul class="au-link-list">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Corporate reporting</a></li>
+          <li><a href="#">Portfolio agencies</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-3 au-footer__navigation-section">
+        <h3>Using our websites</h3>
+        <ul class="au-link-list">
+          <li><a href="#">About our website</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Copyright</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Social media</a></li>
+          <li><a href="#">RSS feed</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-3 au-footer__navigation-section" >
+        <h3>Follow us</h3>
+        <ul class="au-link-list">
+          <li><a href="#">Media centre</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Youtube</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-3 au-footer__navigation-section">
+        <h3>Help us improve</h3>
+        <p>We are always looking for ways to improve our website.</p>
+        <a href="#" class="au-btn au-btn--secondary au-btn--dark standard-gap">Provide feedback</a>
+      </div>
+    </nav>
+    <div class="au-footer__end">
+      <div class="row">
+        <div class="col-xs-12">
+          <p><small>© Commonwealth of Australia</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="health-back-to-top ">
+  <a class="au-btn au-btn--secondary" href="#">
+    <span class="svg-inline--fa fa-fw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg>
+    </span>
+    Back to top
+  </a>
+</button>

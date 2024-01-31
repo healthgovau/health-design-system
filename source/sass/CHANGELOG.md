@@ -1,4 +1,4 @@
-#v2.0.0-beta2 changes
+#v2.0.0-beta2
 
 ## SCSS structure
 
@@ -79,3 +79,11 @@ New CTA link list component added.
 ## Note
 
 This is a beta-release. The official release will include updated documentation via the style guide.
+
+---
+
+#v2.0.0-beta3 changes
+
+## Quick exit
+
+Added quick exit component
