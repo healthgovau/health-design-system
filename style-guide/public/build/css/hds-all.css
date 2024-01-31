@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v2.0.0-beta.2 */
+/*! @health.gov.au/health-design-system v2.0.0-beta.3 */
 @charset "UTF-8";
 /*! PANCAKE v2.0.0 PANCAKE-SASS v3.0.0 */
 /*
@@ -4809,6 +4809,9 @@ svg {
       padding-left: 18px;
       padding-right: 18px; } }
 
+.au-body--offset .au-skip-link__link:active, .au-body--offset .au-skip-link__link:focus {
+  z-index: 10001; }
+
 .au-body .au-tags {
   margin: 0;
   padding: 0;
@@ -6948,6 +6951,95 @@ ul:has(.au-cta-link) {
     padding-top: 32px;
     padding-top: 2rem;
     border-top: 1px solid #ccc; }
+
+.au-body .quick-exit {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000; }
+  .au-body .quick-exit a {
+    color: #FFF; }
+  .au-body .quick-exit__icon {
+    color: #FFF; }
+    .au-body .quick-exit__icon .svg-inline--fa svg {
+      font-size: 4rem; }
+      @media (min-width: 576px) {
+        .au-body .quick-exit__icon .svg-inline--fa svg {
+          font-size: 5rem; } }
+  .au-body .quick-exit__action {
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+    padding: 1rem 0;
+    background: none;
+    width: 100%;
+    background-clip: padding-box;
+    text-align: left;
+    background: #92258F; }
+    @media (min-width: 576px) {
+      .au-body .quick-exit__action {
+        padding: 2rem; } }
+    .au-body .quick-exit__action:hover, .au-body .quick-exit__action:active, .au-body .quick-exit__action:focus {
+      text-decoration: none;
+      background: #7e207b; }
+  .au-body .quick-exit__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .au-body .quick-exit__text {
+    line-height: 1.5; }
+  .au-body .quick-exit__title {
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold; }
+    @media (min-width: 576px) {
+      .au-body .quick-exit__title {
+        font-size: 2.5rem; } }
+  .au-body .quick-exit__subline {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #FFF; }
+    @media (min-width: 576px) {
+      .au-body .quick-exit__subline {
+        font-size: 1.5rem; } }
+    .au-body .quick-exit__subline-key {
+      background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), color-stop(80%, #D2D2D2), to(#c0c0c0));
+      background: -o-linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);
+      background: linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);
+      padding: 0 6px;
+      -webkit-box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 6px 0 #C0C0C0, 0 8px 17px rgba(68, 68, 68, 0.4), 2px 1px 4px rgba(68, 68, 68, 0.25), -2px 1px 4px rgba(68, 68, 68, 0.25), 0 9px 16px rgba(68, 68, 68, 0.1);
+              box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 6px 0 #C0C0C0, 0 8px 17px rgba(68, 68, 68, 0.4), 2px 1px 4px rgba(68, 68, 68, 0.25), -2px 1px 4px rgba(68, 68, 68, 0.25), 0 9px 16px rgba(68, 68, 68, 0.1);
+      border-radius: 6px;
+      border-color: #f2f2f2;
+      border-style: solid;
+      border-width: 1px;
+      display: inline-block;
+      color: #313131; }
+  .au-body .quick-exit__link {
+    font-size: 0.8rem;
+    top: 0;
+    right: 1rem;
+    position: absolute; }
+    @media (min-width: 576px) {
+      .au-body .quick-exit__link {
+        font-size: 1rem; } }
+  .au-body .quick-exit .mobile-hidden {
+    display: none; }
+    @media (min-width: 768px) {
+      .au-body .quick-exit .mobile-hidden {
+        display: inline; } }
+
+@media print {
+  .au-body .quick-exit {
+    display: none; }
+  .au-body--offset {
+    margin-top: 0 !important; } }
 
 .health-recommendation--grade-practice-point {
   border-left-color: #d9c100; }

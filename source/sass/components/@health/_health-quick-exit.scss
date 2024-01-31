@@ -1,0 +1,124 @@
+.au-body {
+    .quick-exit {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+
+        a {
+            color: $text-colour--light;
+        }
+
+        &__icon {
+            color: $text-colour--light;
+
+            .svg-inline--fa svg {
+                font-size: 4rem;
+
+                @include AU-media(sm) {
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        &__action {
+            cursor: pointer;
+            border: 0;
+            margin: 0;
+            padding: 1rem 0;
+            background: none;
+            width: 100%;
+            background-clip: padding-box;
+            text-align: left;
+            background: $quick-exit-bg-colour;
+
+            @include AU-media(sm) {
+                padding: 2rem;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: none;
+                background: darken($quick-exit-bg-colour, 5%);
+            }
+        }
+
+        &__container {
+            display: flex;
+            position: relative;
+            align-items: center;
+        }
+
+        &__text {
+            line-height: 1.5;
+        }
+
+        &__title {
+            color: $text-colour--light;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            @include AU-media(sm) {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__subline {
+            margin-top: 0;
+            font-size: 1rem;
+
+            @include AU-media(sm) {
+                font-size: 1.5rem;
+            }
+
+            color: $text-colour--light;
+
+            &-key {
+                background: linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);
+                padding: 0 6px;
+                box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 6px 0 #C0C0C0, 0 8px 17px rgba(#444, 0.4), 2px 1px 4px rgba(#444, 0.25), -2px 1px 4px rgba(#444, 0.25), 0 9px 16px rgba(#444, 0.1);
+                border-radius: 6px;
+                border-color: #f2f2f2;
+                border-style: solid;
+                border-width: 1px;
+                display: inline-block;
+                color: $AU-color-foreground-text;
+            }
+        }
+
+        &__link {
+            font-size: 0.8rem;
+            top: 0;
+            right: 1rem;
+            position: absolute;
+
+            @include AU-media(sm) {
+                font-size: 1rem;
+            }
+        }
+
+        // Utility to show on mobile only
+        .mobile-hidden {
+            display: none;
+
+            @include AU-media(md) {
+                display: inline;
+            }
+        }
+    }
+}
+
+@media print {
+    .au-body {
+        .quick-exit {
+            display: none;
+        }
+
+        &--offset {
+            margin-top: 0 !important;
+        }
+    }
+}
