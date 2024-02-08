@@ -1,7 +1,8 @@
 /*! @health.gov.au/health-design-system v2.0.0-beta.3 */
+/*! @health.gov.au/health-design-system v2.0.0-beta.3 */
 var health = health || {};
 
-(function ($, once) {
+(function ($) {
 
   // Clear DOM and exit
   function exitPage() {
@@ -22,13 +23,13 @@ var health = health || {};
     offsetHeight(quickexit);
 
     // Recalculate height on resize
-    $(window).resize(function () {
+    $(window).on("resize", function () {
       offsetHeight(quickexit);
     });
 
     // Bind escape key
     if (quickexit !== null) {
-      $(document).keyup(function (e) {
+      $(document).on("keyup", function (e) {
         if (e.key === "Escape") {
           exitPage();
         }
@@ -37,8 +38,13 @@ var health = health || {};
 
   });
 
-  $(document).on('click', '.quick-exit__action', function () {
-    exitPage();
+  $(document).on('click', '.quick-exit__action', function (event) {
+    if (event.target.className === "quick-exit__link") {
+      location.href = $(event.target).attr('href');
+    }
+    else {
+      exitPage();
+    }
   });
 
-})(jQuery, once);
+})(jQuery);
