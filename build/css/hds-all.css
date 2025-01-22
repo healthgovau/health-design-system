@@ -10619,36 +10619,20 @@ table thead {
   }
 }
 
-/* add a separator between the lockups */
-.au-header__lockup.au-header__logo, .au-header__lockup {
-  padding-left: 1rem;
-  border-left: 1px solid #000000;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-@media (min-width: 992px) {
-  .au-header__lockup.au-header__logo, .au-header__lockup {
-    padding-left: 1.5rem;
-  }
-}
-
 /* Brand name lockup */
-.au-header__text--title {
+.au-header__title {
   font-size: 1rem;
   line-height: 1.2rem;
   font-weight: bold;
 }
 @media (min-width: 992px) {
-  .au-header__text--title {
+  .au-header__title {
     font-size: 1.2rem;
   }
 }
 
 /* Brand name with slogan lockup */
-.au-header__text--subline {
+.au-header__subline {
   font-size: 0.9rem;
   padding: 0.5rem 0 0 0;
   line-height: 1rem;
@@ -10660,21 +10644,37 @@ table thead {
           flex: 1;
 }
 
+/* add a separator between the lockups */
+.au-header__lockup {
+  padding-left: 1rem;
+  border-left: 1px solid #000000;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+@media (min-width: 992px) {
+  .au-header__lockup {
+    padding-left: 1.5rem;
+  }
+}
+
 /** change the logo image orientations depending on screen sizes **/
-.au-header .au-header__logo-image--hidden-desktop {
+.au-body .au-header__logo-image--hidden-desktop {
   display: block;
 }
 @media (min-width: 992px) {
-  .au-header .au-header__logo-image--hidden-desktop {
+  .au-body .au-header__logo-image--hidden-desktop {
     display: none;
   }
 }
 
-.au-header .au-header__logo-image--hidden-mobile {
+.au-body .au-header__logo-image--hidden-mobile {
   display: none;
 }
 @media (min-width: 992px) {
-  .au-header .au-header__logo-image--hidden-mobile {
+  .au-body .au-header__logo-image--hidden-mobile {
     display: block;
   }
 }

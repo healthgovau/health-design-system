@@ -16,8 +16,38 @@
 
 
 
+/* Brand name lockup */
+
+    // Mobile view
+.au-header__title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+
+
+    // Above mobile
+    @include AU-media(lg) {
+        font-size: 1.2rem; // Reset or define styles for larger screens
+    }
+}
+
+
+
+/* Brand name with slogan lockup */
+.au-header__subline {
+    font-size: .90rem;
+    padding: .5rem 0 0 0;
+    line-height: 1rem;
+}
+
+
+.au-header__logo{
+    flex: 1;
+}
+
+
 /* add a separator between the lockups */
-.au-header__lockup.au-header__logo, .au-header__lockup {
+.au-header__lockup {
     padding-left: 1rem;
     border-left: 1px solid $colour-black;
     align-content: center;
@@ -30,38 +60,9 @@
 }
 
 
-
-/* Brand name lockup */
-
-    // Mobile view
-.au-header__text--title {
-    font-size: 1rem;
-    line-height: 1.2rem;
-    font-weight: bold;
-
-    // Above mobile
-    @include AU-media(lg) {
-        font-size: 1.2rem; // Reset or define styles for larger screens
-    }
-}
-
-/* Brand name with slogan lockup */
-.au-header__text--subline {
-    font-size: .90rem;
-    padding: .5rem 0 0 0;
-    line-height: 1rem;
-}
-
-
-.au-header__logo{
-    flex: 1;
-}
-
-
-
 /** change the logo image orientations depending on screen sizes **/
 
-.au-header .au-header__logo-image--hidden-desktop {
+.au-body .au-header__logo-image--hidden-desktop {
     display: block; // Visible by default on mobile
   
     // Hide on desktop (above mobile)
@@ -71,7 +72,7 @@
   }
   
 
-  .au-header .au-header__logo-image--hidden-mobile {
+  .au-body .au-header__logo-image--hidden-mobile {
     display: none; // Hidden by default on mobile
   
     // Show on desktop (above mobile)
