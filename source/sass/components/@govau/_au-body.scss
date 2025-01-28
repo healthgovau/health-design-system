@@ -60,11 +60,24 @@
   .standard-gap {
     @include AU-space(margin-top, 1.5unit);
 
-    &--mobile-only {
+    &--mobile-only, &--xs-only {
       @include AU-space(margin-top, 1.5unit);
 
       @include AU-media(sm) {
         margin-top: 0;
+      }
+    }
+
+    &--sm-only {
+      margin-top: 0;
+      @include AU-media(md) {
+        @include AU-space(margin-top, 1.5unit);
+      }
+    }
+    &--md-only {
+      margin-top: 0;
+      @include AU-media(lg) {
+        @include AU-space(margin-top, 1.5unit);
       }
     }
 
@@ -95,5 +108,4 @@
   aside {
     display: block;
   }
-
 }
