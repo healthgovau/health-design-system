@@ -1,0 +1,85 @@
+/* Dual logo lockup */
+.au-header__flex-container {
+    // Mobile view
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+    align-items: stretch;
+
+    // Above mobile
+    @include AU-media(lg) {
+        gap: 2rem; // Reset or define styles for larger screens
+        border:none;
+    }
+}
+
+
+
+/* Brand name lockup */
+
+    // Mobile view
+.au-header__title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+
+
+    // Above mobile
+    @include AU-media(lg) {
+        font-size: 1.2rem; // Reset or define styles for larger screens
+    }
+}
+
+
+
+/* Brand name with slogan lockup */
+.au-header__subline {
+    font-size: .90rem;
+    padding: .5rem 0 0 0;
+    line-height: 1rem;
+}
+
+
+.au-header__logo{
+    flex: 1;
+}
+
+
+/* add a separator between the lockups */
+.au-header__lockup {
+    padding-left: 1rem;
+    border-left: 1px solid $colour-black;
+    align-content: center;
+    flex: 1;
+
+    // Above mobile
+    @include AU-media(lg) {
+        padding-left: 1.5rem; // Reset or define styles for larger screens
+    }
+}
+
+
+/** change the logo image orientations depending on screen sizes **/
+
+.au-body .au-header__logo-image--hidden-desktop {
+    display: block; // Visible by default on mobile
+  
+    // Hide on desktop (above mobile)
+    @include AU-media(lg) {
+      display: none;
+    }
+  }
+  
+
+  .au-body .au-header__logo-image--hidden-mobile {
+    display: none; // Hidden by default on mobile
+  
+    // Show on desktop (above mobile)
+    @include AU-media(lg) {
+      display: block;
+    }
+  }
+
+
+
