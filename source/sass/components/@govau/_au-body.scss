@@ -55,34 +55,64 @@
     @include AU-sronly();
   }
 
-  // The standard margin top used for uikit.
+  $spacing-unit: 0.25rem;
+
+  @function au-space($value) {
+    @return $spacing-unit * $value;
+  }
+
+  $spacing-sizes: (
+    none: 0,
+    small: 2, // 0.5rem
+    standard: 6, // 1.5rem
+    large: 12, //3rem
+  );
+
+  $screen-sizes: (
+    sm:'sm',
+    md:'md',
+    lg:'lg'
+  );
+
+  @each $name, $value in $spacing-sizes {
+    .mb-#{$name} {
+      margin-bottom: au-space($value);
+    }
+    .mt-#{$name} {
+      margin-top: au-space($value);
+    }
+  }
+
+  @each $screensize-key, $screensize in $screen-sizes {
+    @each $name, $value in $spacing-sizes {
+      @include AU-media($screensize) {
+        .#{$screensize}\:mb-#{$name} {
+          margin-bottom: au-space($value)
+        }
+        .#{$screensize}\:mt-#{$name} {
+          margin-top: au-space($value)
+        }
+      }
+    }
+  }
+
+  // Standard gap class (to keep previous functionality working)
   %standard-gap,
   .standard-gap {
-    @include AU-space(margin-top, 1.5unit);
+    @extend .mt-standard;
 
-    &--mobile-only, &--xs-only {
-      @include AU-space(margin-top, 1.5unit);
-
-      @include AU-media(sm) {
-        margin-top: 0;
-      }
-    }
-
-    &--sm-only {
-      margin-top: 0;
-      @include AU-media(md) {
-        @include AU-space(margin-top, 1.5unit);
-      }
-    }
-    &--md-only {
-      margin-top: 0;
-      @include AU-media(lg) {
-        @include AU-space(margin-top, 1.5unit);
-      }
+    &--mobile-only {
+      @extend .mt-standard;
+      @extend .md\:mt-none;
     }
 
     &--bottom {
-      @include AU-space(margin-bottom, 1.5unit);
+      @extend .mb-standard;
+
+      &--mobile-only {
+        @extend .mt-standard;
+        @extend .md\:mt-none;
+      }
     }
   }
 

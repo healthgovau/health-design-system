@@ -21,6 +21,13 @@
       "context": {
         "modifier": "standard-gap--bottom"
       }
+    },
+    {
+      "name": "Variable gap - mobile tablet desktop",
+      "notes": "For differing gaps between devices",
+      "context": {
+        "modifier": "mt-large sm:mt-standard md:mt-none"
+      }
     }
   ]
 }
