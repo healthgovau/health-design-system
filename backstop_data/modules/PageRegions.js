@@ -11,6 +11,19 @@ const components = [
     label: 'Page Regions - Header - Simple',
     url: 'http://localhost:3000/components/preview/header--simple',
   },
+
+  {
+    label: 'Page Regions - Header - Brand name lockup',
+    url: 'http://localhost:3000/components/preview/header--brand-name-lockup',
+  },
+  {
+    label: 'Page Regions - Header - Brand name with subline',
+    url: 'http://localhost:3000/components/preview/header--brand-name-with-subline',
+  },
+  {
+    label: 'Page Regions - Header - Dual logo lockup',
+    url: 'http://localhost:3000/components/preview/header--dual-logo-lockup',
+  },
   {
     label: 'Page Regions - Hero - Default',
     url: 'http://localhost:3000/components/preview/hero--default',
