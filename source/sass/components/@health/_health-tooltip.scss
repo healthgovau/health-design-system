@@ -1,4 +1,10 @@
-.health-tooltip-theme {
+.health-tooltip-theme,
+.health-tooltip {
+  display: inline-block;
+  width: max-content;
+  position: absolute;
+  top: 0;
+  left: 0;
   font-family: $AU-font;
   @include AU-space('padding', .5unit);
 
