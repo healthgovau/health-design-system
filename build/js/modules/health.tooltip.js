@@ -14,32 +14,40 @@ var health = health || {};
         const $tooltip = $(template);
         const $tooltipContent = $tooltip.find('.health-tooltip__content');
 
-        // Process tooltip content.
-        const content = $selector.attr('title');
-        if (content) {
-          $selector
-            .attr('data-health-tooltip', content)
-            .removeAttr('title');
-        }
+        $selector.each((index, element) => {
+          const $element = $(element);
+          let cleanup;
 
-        $selector
-          .on('focus mouseenter touchstart', (event) => {
-            // Set tooltip content.
-            $tooltipContent.html(content);
-            // Display tooltip.
-            $selector.append($tooltip);
-            // Set tooltip position.
-            FloatingUIDOM.computePosition($selector[0], $tooltip[0]).then(({ x, y }) => {
-              Object.assign($tooltip.css({
-                left: `${x}px`,
-                top: `${y}px`,
-              }));
+          // Process tooltip content.
+          const content = $element.attr('title');
+          if (content) {
+            $element
+              .attr('data-health-tooltip', content)
+              .removeAttr('title');
+          }
+
+          $element
+            .on('focus mouseenter touchstart', (event) => {
+              // Set tooltip content.
+              $tooltipContent.html(content);
+              // Display tooltip.
+              $element.append($tooltip);
+              // Set tooltip position.
+              cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], () => {
+                FloatingUIDOM.computePosition($element[0], $tooltip[0]).then(({ x, y }) => {
+                  Object.assign($tooltip.css({
+                    left: `${x}px`,
+                    top: `${y}px`,
+                  }));
+                });
+              });
+            })
+            .on('blur mouseleave touchend', () => {
+              $tooltip.remove();
+              $tooltipContent.html('');
+              cleanup();
             });
-          })
-          .on('blur mouseleave touchend', () => {
-            $tooltip.remove();
-            $tooltipContent.html('');
-          });
+        });
       }
 
       return null;
