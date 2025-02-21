@@ -23,6 +23,8 @@ var health = health || {};
               .removeAttr('title');
           }
           $element.attr('data-health-tooltip-id', `${index}`);
+          $element.attr('aria-expanded', 'false');
+          $element.attr('aria-controls', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
 
           $element
             .on('focus mouseenter touchstart', () => {
@@ -54,10 +56,12 @@ var health = health || {};
               if ($tooltip.hasClass('health-tooltip--active') === false) {
                 $tooltip.addClass('health-tooltip--active');
               }
+              $element.attr('aria-expanded', 'true');
             })
             .on('blur mouseleave touchend', () => {
               $tooltip.removeClass('health-tooltip--active');
               $element.removeAttr('aria-describedby');
+              $element.attr('aria-expanded', 'false');
               $tooltip.removeAttr('id');
               $tooltip.detach();
               $tooltipContent.html('');
