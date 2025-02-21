@@ -2,16 +2,14 @@ var health = health || {};
 
 (($, FloatingUIDOM, document) => {
   $(document).ready(() => {
-    health.tooltip = (selector, options) => {
+    health.tooltip = (selector) => {
       if (typeof FloatingUIDOM === 'object') {
-        const template = `
-          <div class="health-tooltip">
-            <div class="health-tooltip__content"><h2>Hi there!</h2></div>
-          </div>
-        `;
         const $selector = $(selector);
-        const $tooltip = $(template);
+
+        // Initialize tooltip component.
+        const $tooltip = $('#health-tooltip');
         const $tooltipContent = $tooltip.find('.health-tooltip__content');
+        $tooltip.detach();
 
         $selector.each((index, element) => {
           const $element = $(element);
@@ -24,25 +22,44 @@ var health = health || {};
               .attr('data-health-tooltip', content)
               .removeAttr('title');
           }
+          $element.attr('data-health-tooltip-id', `${index}`);
 
           $element
-            .on('focus mouseenter touchstart', (event) => {
+            .on('focus mouseenter touchstart', () => {
+              $element.after($tooltip);
               // Set tooltip content.
               $tooltipContent.html(content);
-              // Display tooltip.
-              $element.append($tooltip);
+              $tooltip.attr('id', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
+              $element.attr('aria-describedby', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
               // Set tooltip position.
               cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], () => {
-                FloatingUIDOM.computePosition($element[0], $tooltip[0]).then(({ x, y }) => {
+                FloatingUIDOM.computePosition(
+                  $element[0],
+                  $tooltip[0],
+                  {
+                    strategy: 'absolute',
+                    middleware: [
+                      FloatingUIDOM.shift(),
+                      FloatingUIDOM.flip(),
+                    ],
+                  },
+                ).then(({ x, y }) => {
                   Object.assign($tooltip.css({
                     left: `${x}px`,
                     top: `${y}px`,
                   }));
                 });
               });
+              // Display tooltip.
+              if ($tooltip.hasClass('health-tooltip--active') === false) {
+                $tooltip.addClass('health-tooltip--active');
+              }
             })
             .on('blur mouseleave touchend', () => {
-              $tooltip.remove();
+              $tooltip.removeClass('health-tooltip--active');
+              $element.removeAttr('aria-describedby');
+              $tooltip.removeAttr('id');
+              $tooltip.detach();
               $tooltipContent.html('');
               cleanup();
             });

@@ -11895,7 +11895,10 @@ table thead {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  opacity: 0;
   position: absolute;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
   top: 0;
   left: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -11914,6 +11917,10 @@ table thead {
 .health-tooltip p {
   padding: 0;
   margin: 0;
+}
+
+.health-tooltip--active {
+  opacity: 1;
 }
 
 * + .health-video {
