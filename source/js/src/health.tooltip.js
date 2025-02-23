@@ -5,6 +5,8 @@ var health = health || {};
     health.tooltip = (selector) => {
       if (typeof FloatingUIDOM === 'object') {
         const $selector = $(selector);
+        let hideTimeout;
+        let isTooltipOrElementActive = false;
 
         // Initialize tooltip component.
         const $tooltip = $('#health-tooltip');
@@ -26,39 +28,48 @@ var health = health || {};
           $element.attr('aria-expanded', 'false');
           $element.attr('aria-controls', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
 
-          $element
-            .on('focus mouseenter touchstart', () => {
-              $element.after($tooltip);
-              // Set tooltip content.
-              $tooltipContent.html(content);
-              $tooltip.attr('id', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
-              $element.attr('aria-describedby', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
-              // Set tooltip position.
-              cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], () => {
-                FloatingUIDOM.computePosition(
+          const showTooltip = () => {
+            clearTimeout(hideTimeout);
+            isTooltipOrElementActive = true;
+            $element.after($tooltip);
+
+            // Set tooltip content.
+            $tooltipContent.html(content);
+            $tooltip.attr('id', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
+            $element.attr('aria-describedby', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
+
+            // Set tooltip position.
+            cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], () => {
+              FloatingUIDOM
+                .computePosition(
                   $element[0],
                   $tooltip[0],
                   {
                     strategy: 'absolute',
                     middleware: [
+                      FloatingUIDOM.offset(10),
                       FloatingUIDOM.shift(),
                       FloatingUIDOM.flip(),
                     ],
                   },
-                ).then(({ x, y }) => {
+                )
+                .then(({ x, y }) => {
                   Object.assign($tooltip.css({
                     left: `${x}px`,
                     top: `${y}px`,
                   }));
                 });
-              });
-              // Display tooltip.
-              if ($tooltip.hasClass('health-tooltip--active') === false) {
-                $tooltip.addClass('health-tooltip--active');
-              }
-              $element.attr('aria-expanded', 'true');
-            })
-            .on('blur mouseleave touchend', () => {
+            });
+
+            // Display tooltip.
+            if ($tooltip.hasClass('health-tooltip--active') === false) {
+              $tooltip.addClass('health-tooltip--active');
+            }
+            $element.attr('aria-expanded', 'true');
+          };
+
+          const hideTooltip = () => {
+            if (isTooltipOrElementActive === false) {
               $tooltip.removeClass('health-tooltip--active');
               $element.removeAttr('aria-describedby');
               $element.attr('aria-expanded', 'false');
@@ -66,6 +77,32 @@ var health = health || {};
               $tooltip.detach();
               $tooltipContent.html('');
               cleanup();
+            }
+          };
+
+          $element
+            .on('focus mouseenter touchstart', () => {
+              clearTimeout(hideTimeout);
+              isTooltipOrElementActive = true;
+              showTooltip();
+            })
+            .on('blur mouseleave touchend', () => {
+              isTooltipOrElementActive = false;
+              hideTimeout = setTimeout(() => {
+                hideTooltip();
+              }, 600);
+            });
+
+          $tooltip
+            .on('focus mouseenter touchstart', () => {
+              clearTimeout(hideTimeout);
+              isTooltipOrElementActive = true;
+            })
+            .on('blur mouseleave touchend', () => {
+              isTooltipOrElementActive = false;
+              hideTimeout = setTimeout(() => {
+                hideTooltip();
+              }, 600);
             });
         });
       }

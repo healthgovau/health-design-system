@@ -11888,27 +11888,28 @@ table thead {
 
 .health-tooltip-theme,
 .health-tooltip {
-  display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  opacity: 0;
-  position: absolute;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-  top: 0;
-  left: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  padding: 8px;
-  padding: 0.5rem;
-  text-align: left;
-  color: #313131;
-  font-size: 0.9em;
   background-color: #fff;
   border: 3px solid #ccc;
   border-color: #87888A;
   -webkit-box-shadow: 0px 0px 35px -7px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 35px -7px rgba(0, 0, 0, 0.5);
+  color: #313131;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.9em;
+  left: 0;
+  max-width: 100vw;
+  opacity: 0;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px;
+  padding: 0.5rem;
 }
 .health-tooltip-theme p,
 .health-tooltip p {
