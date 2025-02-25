@@ -11901,6 +11901,7 @@ table thead {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.9em;
   left: 0;
+  margin: 0 0.5rem;
   max-width: 100vw;
   opacity: 0;
   position: absolute;
