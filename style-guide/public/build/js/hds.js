@@ -403,7 +403,7 @@ var health = health || {};
 
         $selector.each((index, element) => {
           const $element = $(element);
-          let cleanup;
+          let cleanup = () => {};
 
           // Process tooltip content.
           const content = $element.attr('title');
