@@ -386,10 +386,22 @@ var health = health || {};
 
 })(jQuery, once);
 
+/**
+ * Health tooltip component.
+ *
+ * Provides the functionality for the display of tooltips.
+ */
 var health = health || {};
 
 (($, FloatingUIDOM, document) => {
   $(document).ready(() => {
+    // Initialize tooltip component.
+    const $tooltip = $('#health-tooltip');
+    if ($tooltip.length === 0) {
+      return;
+    }
+    const $tooltipContent = $tooltip.find('.health-tooltip__content');
+
     health.tooltip = (selector) => {
       if (typeof FloatingUIDOM === 'object') {
         const $selector = $(selector);
@@ -399,7 +411,6 @@ var health = health || {};
         // Initialize tooltip component.
         const $tooltip = $('#health-tooltip');
         const $tooltipContent = $tooltip.find('.health-tooltip__content');
-        $tooltip.detach();
 
         $selector.each((index, element) => {
           const $element = $(element);
@@ -494,10 +505,9 @@ var health = health || {};
             });
         });
       }
-
-      return null;
     };
   });
+
 })(jQuery, window.FloatingUIDOM, document);
 (function ($) {
   $(document).ready(function () {
