@@ -18,14 +18,13 @@
   transition: opacity .5s ease;
   width: fit-content;
   @include AU-space('padding', .5unit);
-
-  p {
-    padding: 0;
-    margin: 0;
-  }
 }
 
-.health-tooltip__content {}
+.health-tooltip__content {
+  max-width: 40rem;
+  padding: 0 0.1rem;
+  width: max-content;
+}
 
 .health-tooltip--active {
   opacity: 1;

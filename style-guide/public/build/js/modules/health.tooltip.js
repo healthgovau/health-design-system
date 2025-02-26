@@ -59,7 +59,7 @@ var health = health || {};
                   {
                     strategy: 'absolute',
                     middleware: [
-                      FloatingUIDOM.offset(10),
+                      FloatingUIDOM.offset(8),
                       FloatingUIDOM.shift(),
                       FloatingUIDOM.flip(),
                     ],

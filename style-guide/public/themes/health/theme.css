@@ -11915,10 +11915,13 @@ table thead {
   padding: 8px;
   padding: 0.5rem;
 }
-.health-tooltip-theme p,
-.health-tooltip p {
-  padding: 0;
-  margin: 0;
+
+.health-tooltip__content {
+  max-width: 40rem;
+  padding: 0 0.1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .health-tooltip--active {
