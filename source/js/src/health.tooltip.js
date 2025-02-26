@@ -20,10 +20,6 @@ var health = health || {};
         let hideTimeout;
         let isTooltipOrElementActive = false;
 
-        // Initialize tooltip component.
-        const $tooltip = $('#health-tooltip');
-        const $tooltipContent = $tooltip.find('.health-tooltip__content');
-
         $selector.each((index, element) => {
           const $element = $(element);
           let cleanup = () => {};
