@@ -6,6 +6,46 @@
 var health = health || {};
 
 (($, FloatingUIDOM, document) => {
+
+  // Default tooltip settings.
+  // html:
+  //   tooltip content. If not provided, the title attribute of the element
+  //   will be used assuming it is present. If neither are present, the tooltip
+  //   will be empty.
+  // postProcess:
+  //   callback function to be executed after the tooltip has been initialized.
+  //   This can be used to perform additional operations on the tooltip.
+  // triggerOn:
+  //   event(s) that will trigger the display of the tooltip.
+  // triggerOff:
+  //   event(s) that will trigger the hiding of the tooltip.
+  const defaultSettings = {
+    html: null,
+    postProcess: () => {},
+    triggerOn: 'focus mouseenter touchstart',
+    triggerOff: 'blur mouseleave touchend',
+  };
+
+  /**
+   * Get tooltip settings.
+   *
+   * Overrides default settings with user provided settings.
+   *
+   * @param {*} settings
+   *   User provided settings.
+   *
+   * @return {*}
+   *   Updated tooltip settings where default settings have been overridden by
+   *   any user provided settings.
+   */
+  function getTooltipSettings(settings) {
+    const updatedSettings = {};
+    for (const key in defaultSettings) {
+      updatedSettings[key] = settings[key] ?? defaultSettings[key];
+    }
+    return updatedSettings;
+  }
+
   $(document).ready(() => {
     // Initialize tooltip component.
     const $tooltip = $('#health-tooltip');

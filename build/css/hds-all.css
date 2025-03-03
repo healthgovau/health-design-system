@@ -7667,8 +7667,7 @@ table .health-footnotes {
 @media (min-width: 768px) {
   .au-body .health-hero__content {
     background: var(--hero-bg--trans);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     padding: 48px;
     padding: 3rem;
     border-radius: 0;
@@ -7776,8 +7775,7 @@ table .health-footnotes {
 @media (min-width: 768px) {
   .au-body .health-hero.health-hero--inset-box-overlap .health-hero__content {
     background: var(--hero-bg--inset-opaque);
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
     margin: 48px 0;
     margin: 3rem 0;
   }
@@ -7797,8 +7795,7 @@ table .health-footnotes {
 }
 .au-body .health-hero.health-hero--bg-gradient .health-hero__content {
   z-index: 400;
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
+  backdrop-filter: none;
 }
 @media (min-width: 768px) {
   .au-body .health-hero.health-hero--bg-gradient .health-hero__content {
@@ -7840,8 +7837,7 @@ table .health-footnotes {
 }
 .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__content {
   background: none;
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
+  backdrop-filter: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
