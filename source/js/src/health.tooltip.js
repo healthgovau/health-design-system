@@ -1,8 +1,10 @@
+/*! @health.gov.au/health-design-system v3.0.3 */
 /**
  * Health tooltip component.
  *
  * Provides the functionality for the display of tooltips.
  */
+
 var health = health || {};
 
 (($, FloatingUIDOM, document) => {
@@ -47,16 +49,17 @@ var health = health || {};
   }
 
   $(document).ready(() => {
-    // Initialize tooltip component.
     const $tooltip = $('#health-tooltip');
     if ($tooltip.length === 0) {
       return;
     }
     const $tooltipContent = $tooltip.find('.health-tooltip__content');
 
-    health.tooltip = (selector) => {
+    // Initialize tooltip component.
+    health.tooltip = (selector, settings = {}) => {
       if (typeof FloatingUIDOM === 'object') {
         const $selector = $(selector);
+        settings = getTooltipSettings(settings);
         let hideTimeout;
         let isTooltipOrElementActive = false;
 
@@ -65,23 +68,29 @@ var health = health || {};
           let cleanup = () => {};
 
           // Process tooltip content.
-          const content = $element.attr('title');
-          if (content) {
+          const content = settings['html'] ?? $element.attr('title') ?? '';
+          if ($element.attr('title')) {
+            // Title attribute must be removed to prevent interference with
+            // tooltip popup in the case of <abbr> elements which have native
+            // browser support for tooltips.
             $element
-              .attr('data-health-tooltip', content)
               .removeAttr('title');
           }
+          $element.attr('data-health-tooltip', content)
           $element.attr('data-health-tooltip-id', `${index}`);
           $element.attr('aria-expanded', 'false');
           $element.attr('aria-controls', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
 
+          /**
+           * Show tooltip.
+           */
           const showTooltip = () => {
             clearTimeout(hideTimeout);
             isTooltipOrElementActive = true;
             $element.after($tooltip);
 
             // Set tooltip content.
-            $tooltipContent.html(content);
+            $tooltipContent.html($element.attr('data-health-tooltip'));
             $tooltip.attr('id', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
             $element.attr('aria-describedby', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
 
@@ -115,6 +124,9 @@ var health = health || {};
             $element.attr('aria-expanded', 'true');
           };
 
+          /**
+           * Hide tooltip.
+           */
           const hideTooltip = () => {
             if (isTooltipOrElementActive === false) {
               $tooltip.removeClass('health-tooltip--active');
@@ -127,19 +139,21 @@ var health = health || {};
             }
           };
 
+          // Add triggers to display and hide tooltip to target element.
           $element
-            .on('focus mouseenter touchstart', () => {
+            .on(settings.triggerOn, () => {
               clearTimeout(hideTimeout);
               isTooltipOrElementActive = true;
               showTooltip();
             })
-            .on('blur mouseleave touchend', () => {
+            .on(settings.triggerOff, () => {
               isTooltipOrElementActive = false;
               hideTimeout = setTimeout(() => {
                 hideTooltip();
               }, 600);
             });
 
+          // Add triggers to display and hide tooltip to tooltip element.
           $tooltip
             .on('focus mouseenter touchstart', () => {
               clearTimeout(hideTimeout);
@@ -152,6 +166,11 @@ var health = health || {};
               }, 600);
             });
         });
+      }
+
+      // Execute any post initialization tasks
+      if (settings.postProcess && typeof settings.postProcess === 'function') {
+        settings.postProcess();
       }
     };
   });

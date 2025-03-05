@@ -11871,16 +11871,16 @@ table thead {
 .health-toolbar #health-share-menu {
   display: none;
 }
-.health-toolbar .health-tooltip-theme #health-share-menu,
-.health-toolbar .health-tooltip-theme .health-share-menu {
+.health-toolbar .health-tooltip--active #health-share-menu,
+.health-toolbar .health-tooltip--active .health-share-menu {
   display: block;
 }
-.health-toolbar .health-tooltip-theme #health-share-menu a,
-.health-toolbar .health-tooltip-theme .health-share-menu a {
+.health-toolbar .health-tooltip--active #health-share-menu a,
+.health-toolbar .health-tooltip--active .health-share-menu a {
   color: #006FB0;
 }
-.health-toolbar .health-tooltip-theme #health-share-menu a:hover,
-.health-toolbar .health-tooltip-theme .health-share-menu a:hover {
+.health-toolbar .health-tooltip--active #health-share-menu a:hover,
+.health-toolbar .health-tooltip--active .health-share-menu a:hover {
   color: #006FB0;
   text-decoration: none;
 }
