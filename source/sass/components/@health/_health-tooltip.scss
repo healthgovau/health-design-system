@@ -20,9 +20,38 @@
   @include AU-space('padding', .5unit);
 }
 
+.health-tooltip__close {
+  align-items: center;
+  background-color: black;
+  border-radius: 0.75rem;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.5rem;
+}
+
+.health-tooltip__close:hover,
+.health-tooltip__close:active {
+  background-color: white;
+  color: black;
+}
+
+.health-tooltip__icon--close {
+  font-size: 1.625rem;
+  transform: rotate(45deg);
+}
+
 .health-tooltip__content {
   max-width: 40rem;
-  padding: 0 0.1rem;
+  padding: 0 2.6rem 0 0.1rem;
+  position: relative;
   width: max-content;
 }
 

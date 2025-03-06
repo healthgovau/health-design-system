@@ -11909,9 +11909,46 @@ table thead {
   padding: 0.5rem;
 }
 
+.health-tooltip__close {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  border-radius: 0.75rem;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.5rem;
+}
+
+.health-tooltip__close:hover,
+.health-tooltip__close:active {
+  background-color: white;
+  color: black;
+}
+
+.health-tooltip__icon--close {
+  font-size: 1.625rem;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .health-tooltip__content {
   max-width: 40rem;
-  padding: 0 0.1rem;
+  padding: 0 2.6rem 0 0.1rem;
+  position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;

@@ -22,6 +22,7 @@ var health = health || {};
   // triggerOff:
   //   event(s) that will trigger the hiding of the tooltip.
   const defaultSettings = {
+    closeButton: false,
     html: null,
     postProcess: () => {},
     triggerOn: 'focus mouseenter touchstart',
@@ -54,18 +55,93 @@ var health = health || {};
       return;
     }
     const $tooltipContent = $tooltip.find('.health-tooltip__content');
+    const closeButtonTemplate = `<button class="health-tooltip__close" type="button" aria-label="Close tooltip"><span class="health-tooltip__icon health-tooltip__icon--close">&plus;</span></button>`;
+    let cleanup;
+    let $closeButton;
+    let hideTimeout;
+    let isTooltipOrElementActive;
+
+    /**
+     * Show tooltip.
+     */
+    const showTooltip = ($element, $tooltip, useCloseButton = false) => {
+      clearTimeout(hideTimeout);
+      isTooltipOrElementActive = true;
+      $element.after($tooltip);
+
+      // Set tooltip content.
+      $tooltipContent.html($element.attr('data-health-tooltip'));
+      if (useCloseButton === true) {
+        const $closeButton = $(closeButtonTemplate);
+        $closeButton.on('click touchstart', () => {
+          isTooltipOrElementActive = false;
+          hideTooltip($element, $tooltip);
+        });
+        $tooltipContent.append($closeButton);
+      }
+
+      $tooltip.attr('id', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
+      $element.attr('aria-describedby', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
+
+      // Set tooltip position.
+      cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], () => {
+        FloatingUIDOM
+          .computePosition(
+            $element[0],
+            $tooltip[0],
+            {
+              strategy: 'absolute',
+              middleware: [
+                FloatingUIDOM.offset(8),
+                FloatingUIDOM.shift(),
+                FloatingUIDOM.flip(),
+              ],
+            },
+          )
+          .then(({ x, y }) => {
+            Object.assign($tooltip.css({
+              left: `${x}px`,
+              top: `${y}px`,
+            }));
+          });
+      });
+
+      // Display tooltip.
+      if ($tooltip.hasClass('health-tooltip--active') === false) {
+        $tooltip.addClass('health-tooltip--active');
+      }
+      $element.attr('aria-expanded', 'true');
+    };
+
+    /**
+     * Hide tooltip.
+     */
+    const hideTooltip = ($element, $tooltip) => {
+      if (isTooltipOrElementActive === false) {
+        $tooltip.removeClass('health-tooltip--active');
+        $element.removeAttr('aria-describedby');
+        $element.attr('aria-expanded', 'false');
+        $tooltip.removeAttr('id');
+        $tooltip.detach();
+        $tooltipContent.html('');
+        if (typeof $closeButton !== 'undefined') {
+          $closeButton.remove();
+        }
+        cleanup();
+      }
+    };
 
     // Initialize tooltip component.
     health.tooltip = (selector, settings = {}) => {
       if (typeof FloatingUIDOM === 'object') {
         const $selector = $(selector);
         settings = getTooltipSettings(settings);
-        let hideTimeout;
-        let isTooltipOrElementActive = false;
+        isTooltipOrElementActive = false;
 
         $selector.each((index, element) => {
+
           const $element = $(element);
-          let cleanup = () => {};
+          cleanup = () => {};
 
           // Process tooltip content.
           const content = settings['html'] ?? $element.attr('title') ?? '';
@@ -81,90 +157,34 @@ var health = health || {};
           $element.attr('aria-expanded', 'false');
           $element.attr('aria-controls', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
 
-          /**
-           * Show tooltip.
-           */
-          const showTooltip = () => {
+          // Add triggers to display and hide tooltip to target element.
+          $element.on(settings.triggerOn, () => {
             clearTimeout(hideTimeout);
             isTooltipOrElementActive = true;
-            $element.after($tooltip);
-
-            // Set tooltip content.
-            $tooltipContent.html($element.attr('data-health-tooltip'));
-            $tooltip.attr('id', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
-            $element.attr('aria-describedby', `health-tooltip-${$element.attr('data-health-tooltip-id')}`);
-
-            // Set tooltip position.
-            cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], () => {
-              FloatingUIDOM
-                .computePosition(
-                  $element[0],
-                  $tooltip[0],
-                  {
-                    strategy: 'absolute',
-                    middleware: [
-                      FloatingUIDOM.offset(8),
-                      FloatingUIDOM.shift(),
-                      FloatingUIDOM.flip(),
-                    ],
-                  },
-                )
-                .then(({ x, y }) => {
-                  Object.assign($tooltip.css({
-                    left: `${x}px`,
-                    top: `${y}px`,
-                  }));
-                });
-            });
-
-            // Display tooltip.
-            if ($tooltip.hasClass('health-tooltip--active') === false) {
-              $tooltip.addClass('health-tooltip--active');
-            }
-            $element.attr('aria-expanded', 'true');
-          };
-
-          /**
-           * Hide tooltip.
-           */
-          const hideTooltip = () => {
-            if (isTooltipOrElementActive === false) {
-              $tooltip.removeClass('health-tooltip--active');
-              $element.removeAttr('aria-describedby');
-              $element.attr('aria-expanded', 'false');
-              $tooltip.removeAttr('id');
-              $tooltip.detach();
-              $tooltipContent.html('');
-              cleanup();
-            }
-          };
-
-          // Add triggers to display and hide tooltip to target element.
-          $element
-            .on(settings.triggerOn, () => {
-              clearTimeout(hideTimeout);
-              isTooltipOrElementActive = true;
-              showTooltip();
-            })
-            .on(settings.triggerOff, () => {
+            showTooltip($element, $tooltip, settings.closeButton);
+          });
+          if (settings.closeButton === false) {
+            $element.on(settings.triggerOff, () => {
               isTooltipOrElementActive = false;
               hideTimeout = setTimeout(() => {
-                hideTooltip();
+                hideTooltip($element, $tooltip);
               }, 600);
             });
+          }
 
           // Add triggers to display and hide tooltip to tooltip element.
-          $tooltip
-            .on('focus mouseenter touchstart', () => {
-              clearTimeout(hideTimeout);
-              isTooltipOrElementActive = true;
-            })
-            .on('blur mouseleave touchend', () => {
+          $tooltip.on('focus mouseenter touchstart', () => {
+            clearTimeout(hideTimeout);
+            isTooltipOrElementActive = true;
+          });
+          if (settings.closeButton === false) {
+            $tooltip.on('blur mouseleave touchend', () => {
               isTooltipOrElementActive = false;
               hideTimeout = setTimeout(() => {
-                hideTooltip();
+                hideTooltip($element, $tooltip);
               }, 600);
             });
+          }
         });
       }
 
