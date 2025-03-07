@@ -177,11 +177,11 @@ var health = health || {};
           }
 
           // Add triggers to display and hide tooltip to tooltip element.
-          $tooltip.on('focus mouseenter touchstart', function () {
-            clearTimeout(hideTimeout);
-            isTooltipOrElementActive = true;
-          });
           if (settings.closeButton === false) {
+            $tooltip.on('focus mouseenter touchstart', function () {
+              clearTimeout(hideTimeout);
+              isTooltipOrElementActive = true;
+            });
             $tooltip.on('blur mouseleave touchend', function () {
               isTooltipOrElementActive = false;
               hideTimeout = setTimeout(function () {
