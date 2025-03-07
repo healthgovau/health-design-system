@@ -642,7 +642,7 @@ var health = health || {};
       return;
     }
     var $tooltipContent = $tooltip.find('.health-tooltip__content');
-    var closeButtonTemplate = "<button class=\"health-tooltip__close\" type=\"button\" aria-label=\"Close tooltip\"><span class=\"health-tooltip__icon health-tooltip__icon--close\">&plus;</span></button>";
+    var closeButtonTemplate = "<button class=\"health-tooltip__close\" type=\"button\" aria-label=\"Close tooltip\" tabindex=\"0\"><span class=\"health-tooltip__icon health-tooltip__icon--close\">&plus;</span></button>";
     var cleanup;
     var $closeButton;
     var hideTimeout;
@@ -656,16 +656,23 @@ var health = health || {};
       clearTimeout(hideTimeout);
       isTooltipOrElementActive = true;
       $element.after($tooltip);
-
+      if ($closeButton) {
+        // Remove previous instance of close button.
+        $closeButton.remove();
+      }
       // Set tooltip content.
       $tooltipContent.html($element.attr('data-health-tooltip'));
       if (useCloseButton === true) {
-        var _$closeButton = $(closeButtonTemplate);
-        _$closeButton.on('click touchstart', function () {
+        // Add close button to tooltip.
+        $closeButton = $(closeButtonTemplate);
+        if ($tooltipContent.hasClass('health-tooltip__content--close-button') === false) {
+          $tooltipContent.addClass('health-tooltip__content--close-button');
+        }
+        $closeButton.on('click touchstart', function () {
           isTooltipOrElementActive = false;
           hideTooltip($element, $tooltip);
         });
-        $tooltipContent.append(_$closeButton);
+        $tooltipContent.after($closeButton);
       }
       $tooltip.attr('id', "health-tooltip-".concat($element.attr('data-health-tooltip-id')));
       $element.attr('aria-describedby', "health-tooltip-".concat($element.attr('data-health-tooltip-id')));
@@ -703,9 +710,13 @@ var health = health || {};
         $tooltip.removeAttr('id');
         $tooltip.detach();
         $tooltipContent.html('');
-        if (typeof $closeButton !== 'undefined') {
+        if ($closeButton) {
           $closeButton.remove();
         }
+        if ($tooltipContent.hasClass('health-tooltip__content--close-button')) {
+          $tooltipContent.removeClass('health-tooltip__content--close-button');
+        }
+        // Cleanup tooltip positioning.
         cleanup();
       }
     };
