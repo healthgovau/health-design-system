@@ -67,12 +67,13 @@ var health = health || {};
      * Show tooltip.
      */
     var showTooltip = function showTooltip($element, $tooltip) {
-      var useCloseButton = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+      var useCloseButton = $element.attr('data-health-tooltip-close-method') === 'button' ? true : false;
       clearTimeout(hideTimeout);
       isTooltipOrElementActive = true;
       $element.after($tooltip);
       if ($closeButton) {
-        // Remove previous instance of close button.
+        // Remove previous instance of close button if there is one. We always
+        // want to start fresh.
         $closeButton.remove();
       }
       // Set tooltip content.
@@ -107,6 +108,20 @@ var health = health || {};
         });
       });
 
+      // Set the close tooltip behaviour when a close button is not being used.
+      if (useCloseButton === false) {
+        $tooltip.on('focus mouseenter touchstart', function () {
+          clearTimeout(hideTimeout);
+          isTooltipOrElementActive = true;
+        });
+        $tooltip.on('blur mouseleave touchend', function () {
+          isTooltipOrElementActive = false;
+          hideTimeout = setTimeout(function () {
+            hideTooltip($element, $tooltip);
+          }, 600);
+        });
+      }
+
       // Display tooltip.
       if ($tooltip.hasClass('health-tooltip--active') === false) {
         $tooltip.addClass('health-tooltip--active');
@@ -131,6 +146,11 @@ var health = health || {};
         if ($tooltipContent.hasClass('health-tooltip__content--close-button')) {
           $tooltipContent.removeClass('health-tooltip__content--close-button');
         }
+
+        // Reset close tooltip behaviour by removing any existing triggers.
+        $tooltip.off('focus mouseenter touchstart');
+        $tooltip.off('blur mouseleave touchend');
+
         // Cleanup tooltip positioning.
         cleanup();
       }
@@ -157,6 +177,7 @@ var health = health || {};
             $element.removeAttr('title');
           }
           $element.attr('data-health-tooltip', content);
+          $element.attr('data-health-tooltip-close-method', settings.closeButton ? 'button' : 'default');
           $element.attr('data-health-tooltip-id', "".concat(index));
           $element.attr('aria-expanded', 'false');
           $element.attr('aria-controls', "health-tooltip-".concat($element.attr('data-health-tooltip-id')));
@@ -169,20 +190,6 @@ var health = health || {};
           });
           if (settings.closeButton === false) {
             $element.on(settings.triggerOff, function () {
-              isTooltipOrElementActive = false;
-              hideTimeout = setTimeout(function () {
-                hideTooltip($element, $tooltip);
-              }, 600);
-            });
-          }
-
-          // Add triggers to display and hide tooltip to tooltip element.
-          if (settings.closeButton === false) {
-            $tooltip.on('focus mouseenter touchstart', function () {
-              clearTimeout(hideTimeout);
-              isTooltipOrElementActive = true;
-            });
-            $tooltip.on('blur mouseleave touchend', function () {
               isTooltipOrElementActive = false;
               hideTimeout = setTimeout(function () {
                 hideTooltip($element, $tooltip);
