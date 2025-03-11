@@ -682,7 +682,9 @@ var health = health || {};
       cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], function () {
         FloatingUIDOM.computePosition($element[0], $tooltip[0], {
           strategy: 'absolute',
-          middleware: [FloatingUIDOM.offset(8), FloatingUIDOM.shift(), FloatingUIDOM.flip()]
+          middleware: [FloatingUIDOM.offset(8), FloatingUIDOM.flip(), FloatingUIDOM.shift({
+            padding: 5
+          })]
         }).then(function (_ref) {
           var x = _ref.x,
             y = _ref.y;

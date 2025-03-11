@@ -102,8 +102,8 @@ var health = health || {};
               strategy: 'absolute',
               middleware: [
                 FloatingUIDOM.offset(8),
-                FloatingUIDOM.shift(),
                 FloatingUIDOM.flip(),
+                FloatingUIDOM.shift({ padding: 5 }),
               ],
             },
           )
