@@ -11914,14 +11914,14 @@ table thead {
       -ms-flex-align: center;
           align-items: center;
   background-color: black;
-  border-radius: 0.75rem;
+  border-radius: 12px;
   border: 1px solid black;
   color: white;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 1.5625rem;
+  height: 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -11929,7 +11929,7 @@ table thead {
   position: absolute;
   right: 0.25rem;
   top: 0.375rem;
-  width: 1.5625rem;
+  width: 24px;
 }
 
 .health-tooltip__close:hover,
@@ -11939,7 +11939,7 @@ table thead {
 }
 
 .health-tooltip__icon--close {
-  font-size: 1.5625rem;
+  font-size: 24px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
