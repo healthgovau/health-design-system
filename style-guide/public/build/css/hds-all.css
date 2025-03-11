@@ -11946,6 +11946,7 @@ table thead {
 }
 
 .health-tooltip__content {
+  line-height: 1.25rem;
   max-width: 40rem;
   padding: 0;
   position: relative;
