@@ -25,7 +25,7 @@ var health = health || {};
     closeButton: false,
     html: null,
     postProcess: () => {},
-    triggerOn: 'focus mouseenter touchstart',
+    triggerOn: 'mouseenter touchstart',
     triggerOff: 'blur mouseleave touchend',
   };
 
@@ -85,6 +85,7 @@ var health = health || {};
         $closeButton.on('click touchstart', () => {
           isTooltipOrElementActive = false;
           hideTooltip($element, $tooltip);
+          $element.focus();
         });
         $tooltipContent.after($closeButton);
       }
@@ -115,7 +116,8 @@ var health = health || {};
           });
       });
 
-      // Set the close tooltip behaviour when a close button is not being used.
+      // Set the close tooltip behaviour for when a close button is not being
+      // used.
       if (useCloseButton === false) {
         $tooltip.on('focus mouseenter touchstart', () => {
           clearTimeout(hideTimeout);
@@ -128,6 +130,16 @@ var health = health || {};
           }, 600);
         });
       }
+
+      // Tooltip is closable using the escape key.
+      $tooltip.on('keydown', (event) => {
+        console.log(event.key);
+        if (event.key === 'Escape') {
+          isTooltipOrElementActive = false;
+          hideTooltip($element, $tooltip);
+          $element.focus();
+        }
+      });
 
       // Display tooltip.
       if ($tooltip.hasClass('health-tooltip--active') === false) {
@@ -157,6 +169,7 @@ var health = health || {};
         // Reset close tooltip behaviour by removing any existing triggers.
         $tooltip.off('focus mouseenter touchstart');
         $tooltip.off('blur mouseleave touchend');
+         $tooltip.on('keydown');
 
         // Cleanup tooltip positioning.
         cleanup();
@@ -204,6 +217,15 @@ var health = health || {};
               }, 600);
             });
           }
+          // Add keyboard support to show tooltip.
+          $element.on('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              isTooltipOrElementActive = true;
+              showTooltip($element, $tooltip, settings.closeButton);
+              $tooltip.focus();
+            }
+          });
         });
       }
 
