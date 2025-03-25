@@ -10,6 +10,9 @@ var health = health || {};
 (($, FloatingUIDOM, document) => {
 
   // Default tooltip settings.
+  // closeButton:
+  //   If true, a close button will be displayed. If false, no close button
+  //   will be displayed.
   // html:
   //   tooltip content. If not provided, the title attribute of the element
   //   will be used assuming it is present. If neither are present, the tooltip
