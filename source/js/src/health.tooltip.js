@@ -126,7 +126,7 @@ var health = health || {};
           clearTimeout(hideTimeout);
           isTooltipOrElementActive = true;
         });
-        $tooltip.on('blur mouseleave touchend', () => {
+        $tooltip.on('mouseleave touchend', () => {
           isTooltipOrElementActive = false;
           hideTimeout = setTimeout(() => {
             hideTooltip($element, $tooltip);
@@ -136,7 +136,6 @@ var health = health || {};
 
       // Tooltip is closable using the escape key.
       $tooltip.on('keydown', (event) => {
-        console.log(event.key);
         if (event.key === 'Escape') {
           isTooltipOrElementActive = false;
           hideTooltip($element, $tooltip);
