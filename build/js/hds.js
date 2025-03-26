@@ -592,23 +592,51 @@ var health = health || {};
  * Health tooltip component.
  *
  * Provides the functionality for the display of tooltips.
+ *
+ * @example default tooltip usage:
+ *   health.tooltip("abbr[title]");
+ *
+ * @example tooltip with a manual close button:
+ *   health.tooltip("abbr[title]", {
+ *     closeButton: true,
+ *   });
+ *
+ * @example click activated tooltip:
+ *   health.tooltip("abbr[title]", {
+ *     triggerOn: 'click',
+ *   });
+ *
+ * @example restrict tooltip to appear only with the boundary of the main
+ * content area:
+ *   health.tooltip("abbr[title]", {
+ *     boundary: document.querySelector('.main-content'),
+ *   });
+ *
+ * List of optional tooltip settings.
+ * - boundary: {string|Element|Array<Element>|Rect} Used to determine the
+ *   boundary that the tooltip will be constrained to. Possible values are
+ *   'clippingAncestors' (default) | Element | Array<Element> | Rect. (See
+ *   https://floating-ui.com/docs/detectoverflow#boundary for more
+ *   information).
+ * - closeButton: {boolean} If true, a close button will be displayed. If
+ *   false, no close button will be displayed.
+ * - html: {string|null} Tooltip content. If not provided, the title attribute
+ *   of the element will be used assuming it is present. If neither are
+ *   present, the tooltip will be empty.
+ * - postProcess: {function} Anonymous function to be executed after the
+ *   tooltip has been initialized. This can be used to perform post
+ *   initialisation actions.
+ * - triggerOn: {string} Event or events which will trigger the display of the
+ *   tooltip. Multiple events should be separated by a space.
+ * - triggerOff: {string} Event or events which will trigger the hiding of the
+ *   tooltip. Multiple events should be separated by a space.
+
  */
 
 var health = health || {};
 (function ($, FloatingUIDOM, document) {
-  // Default tooltip settings.
-  // html:
-  //   tooltip content. If not provided, the title attribute of the element
-  //   will be used assuming it is present. If neither are present, the tooltip
-  //   will be empty.
-  // postProcess:
-  //   callback function to be executed after the tooltip has been initialized.
-  //   This can be used to perform additional operations on the tooltip.
-  // triggerOn:
-  //   event(s) that will trigger the display of the tooltip.
-  // triggerOff:
-  //   event(s) that will trigger the hiding of the tooltip.
   var defaultSettings = {
+    boundary: 'clippingAncestors',
     closeButton: false,
     html: null,
     postProcess: function postProcess() {},
@@ -651,7 +679,7 @@ var health = health || {};
     /**
      * Show tooltip.
      */
-    var showTooltip = function showTooltip($element, $tooltip) {
+    var showTooltip = function showTooltip($element, $tooltip, settings) {
       var useCloseButton = $element.attr('data-health-tooltip-close-method') === 'button' ? true : false;
       clearTimeout(hideTimeout);
       isTooltipOrElementActive = true;
@@ -682,9 +710,11 @@ var health = health || {};
       // Set tooltip position.
       cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], function () {
         FloatingUIDOM.computePosition($element[0], $tooltip[0], {
-          strategy: 'absolute',
-          middleware: [FloatingUIDOM.offset(8), FloatingUIDOM.flip(), FloatingUIDOM.shift({
-            padding: 5
+          placement: 'bottom',
+          strategy: 'fixed',
+          middleware: [FloatingUIDOM.inline(), FloatingUIDOM.shift({
+            // Fit tooltip within the main content area.
+            boundary: settings.boundary
           })]
         }).then(function (_ref) {
           var x = _ref.x,
@@ -703,7 +733,7 @@ var health = health || {};
           clearTimeout(hideTimeout);
           isTooltipOrElementActive = true;
         });
-        $tooltip.on('blur mouseleave touchend', function () {
+        $tooltip.on('mouseleave touchend', function () {
           isTooltipOrElementActive = false;
           hideTimeout = setTimeout(function () {
             hideTooltip($element, $tooltip);
@@ -713,7 +743,6 @@ var health = health || {};
 
       // Tooltip is closable using the escape key.
       $tooltip.on('keydown', function (event) {
-        console.log(event.key);
         if (event.key === 'Escape') {
           isTooltipOrElementActive = false;
           hideTooltip($element, $tooltip);
@@ -749,7 +778,7 @@ var health = health || {};
         // Reset close tooltip behaviour by removing any existing triggers.
         $tooltip.off('focus mouseenter touchstart');
         $tooltip.off('blur mouseleave touchend');
-        $tooltip.on('keydown');
+        // $tooltip.off('keydown');
 
         // Cleanup tooltip positioning.
         cleanup();
@@ -786,7 +815,7 @@ var health = health || {};
           $element.on(settings.triggerOn, function () {
             clearTimeout(hideTimeout);
             isTooltipOrElementActive = true;
-            showTooltip($element, $tooltip, settings.closeButton);
+            showTooltip($element, $tooltip, settings);
           });
           if (settings.closeButton === false) {
             $element.on(settings.triggerOff, function () {
@@ -800,8 +829,9 @@ var health = health || {};
           $element.on('keydown', function (event) {
             if (event.key === 'Enter' || event.key === ' ') {
               event.preventDefault();
+              event.stopPropagation();
               isTooltipOrElementActive = true;
-              showTooltip($element, $tooltip, settings.closeButton);
+              showTooltip($element, $tooltip, settings);
               $tooltip.focus();
             }
           });
