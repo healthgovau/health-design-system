@@ -21,7 +21,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
  *     triggerOn: 'click',
  *   });
  *
- * @example restrict tooltip to appear only with the boundary of the main
+ * @example restrict tooltip to appear only within the boundary of the main
  * content area:
  *   health.tooltip("abbr[title]", {
  *     boundary: document.querySelector('.main-content'),
@@ -45,11 +45,11 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
  *   tooltip. Multiple events should be separated by a space.
  * - triggerOff: {string} Event or events which will trigger the hiding of the
  *   tooltip. Multiple events should be separated by a space.
-
  */
 
 var health = health || {};
-(function ($, FloatingUIDOM, document) {
+(function (FloatingUIDOM, document) {
+  // Default tooltip settings.
   var defaultSettings = {
     boundary: 'clippingAncestors',
     closeButton: false,
@@ -79,121 +79,119 @@ var health = health || {};
     }
     return updatedSettings;
   }
-  $(document).ready(function () {
-    var $tooltip = $('#health-tooltip');
-    if ($tooltip.length === 0) {
+  document.addEventListener('DOMContentLoaded', function () {
+    var tooltip = document.getElementById('health-tooltip');
+    if (!tooltip) {
       return;
     }
-    var $tooltipContent = $tooltip.find('.health-tooltip__content');
+    var tooltipContent = tooltip.querySelector('.health-tooltip__content');
     var closeButtonTemplate = "<button class=\"health-tooltip__close\" type=\"button\" aria-label=\"Close tooltip\" tabindex=\"0\"><span class=\"health-tooltip__icon health-tooltip__icon--close\">&plus;</span></button>";
     var cleanup;
-    var $closeButton;
+    var closeButton;
     var hideTimeout;
     var isTooltipOrElementActive;
 
     /**
-     * Show tooltip.
-     */
-    var showTooltip = function showTooltip($element, $tooltip, settings) {
-      var useCloseButton = $element.attr('data-health-tooltip-close-method') === 'button' ? true : false;
+    * Show tooltip.
+    */
+    var showTooltip = function showTooltip(element, tooltip, settings) {
+      var useCloseButton = element.getAttribute('data-health-tooltip-close-method') === 'button';
       clearTimeout(hideTimeout);
       isTooltipOrElementActive = true;
-      $element.after($tooltip);
-      if ($closeButton) {
+      element.insertAdjacentElement('afterend', tooltip);
+      if (closeButton) {
         // Remove previous instance of close button if there is one. We always
         // want to start fresh.
-        $closeButton.remove();
+        closeButton.remove();
       }
+
       // Set tooltip content.
-      $tooltipContent.html($element.attr('data-health-tooltip'));
-      if (useCloseButton === true) {
+      tooltipContent.innerHTML = element.getAttribute('data-health-tooltip');
+      if (useCloseButton) {
         // Add close button to tooltip.
-        $closeButton = $(closeButtonTemplate);
-        if ($tooltipContent.hasClass('health-tooltip__content--close-button') === false) {
-          $tooltipContent.addClass('health-tooltip__content--close-button');
+        closeButton = document.createElement('div');
+        closeButton.innerHTML = closeButtonTemplate;
+        closeButton = closeButton.firstElementChild;
+        if (!tooltipContent.classList.contains('health-tooltip__content--close-button')) {
+          tooltipContent.classList.add('health-tooltip__content--close-button');
         }
-        $closeButton.on('click touchstart', function () {
+        closeButton.addEventListener('click', function () {
           isTooltipOrElementActive = false;
-          hideTooltip($element, $tooltip);
-          $element.focus();
+          hideTooltip(element, tooltip);
+          element.focus();
         });
-        $tooltipContent.after($closeButton);
+        tooltipContent.insertAdjacentElement('afterend', closeButton);
       }
-      $tooltip.attr('id', "health-tooltip-".concat($element.attr('data-health-tooltip-id')));
-      $element.attr('aria-describedby', "health-tooltip-".concat($element.attr('data-health-tooltip-id')));
+      tooltip.id = "health-tooltip-".concat(element.getAttribute('data-health-tooltip-id'));
+      element.setAttribute('aria-describedby', tooltip.id);
 
       // Set tooltip position.
-      cleanup = FloatingUIDOM.autoUpdate($element[0], $tooltip[0], function () {
-        FloatingUIDOM.computePosition($element[0], $tooltip[0], {
+      cleanup = FloatingUIDOM.autoUpdate(element, tooltip, function () {
+        FloatingUIDOM.computePosition(element, tooltip, {
           placement: 'bottom',
           strategy: 'fixed',
           middleware: [FloatingUIDOM.inline(), FloatingUIDOM.shift({
-            // Fit tooltip within the main content area.
             boundary: settings.boundary
           })]
         }).then(function (_ref) {
           var x = _ref.x,
             y = _ref.y;
-          Object.assign($tooltip.css({
-            left: "".concat(x, "px"),
-            top: "".concat(y, "px")
-          }));
+          tooltip.style.left = "".concat(x, "px");
+          tooltip.style.top = "".concat(y, "px");
         });
       });
 
       // Set the close tooltip behaviour for when a close button is not being
       // used.
-      if (useCloseButton === false) {
-        $tooltip.on('focus mouseenter touchstart', function () {
+      if (!useCloseButton) {
+        tooltip.addEventListener('mouseenter', function () {
           clearTimeout(hideTimeout);
           isTooltipOrElementActive = true;
         });
-        $tooltip.on('mouseleave touchend', function () {
+        tooltip.addEventListener('mouseleave', function () {
           isTooltipOrElementActive = false;
           hideTimeout = setTimeout(function () {
-            hideTooltip($element, $tooltip);
+            hideTooltip(element, tooltip);
           }, 600);
         });
       }
 
       // Tooltip is closable using the escape key.
-      $tooltip.on('keydown', function (event) {
+      tooltip.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
           isTooltipOrElementActive = false;
-          hideTooltip($element, $tooltip);
-          $element.focus();
+          hideTooltip(element, tooltip);
+          element.focus();
         }
       });
 
       // Display tooltip.
-      if ($tooltip.hasClass('health-tooltip--active') === false) {
-        $tooltip.addClass('health-tooltip--active');
+      if (!tooltip.classList.contains('health-tooltip--active')) {
+        tooltip.classList.add('health-tooltip--active');
       }
-      $element.attr('aria-expanded', 'true');
+      element.setAttribute('aria-expanded', 'true');
     };
 
     /**
      * Hide tooltip.
      */
-    var hideTooltip = function hideTooltip($element, $tooltip) {
-      if (isTooltipOrElementActive === false) {
-        $tooltip.removeClass('health-tooltip--active');
-        $element.removeAttr('aria-describedby');
-        $element.attr('aria-expanded', 'false');
-        $tooltip.removeAttr('id');
-        $tooltip.detach();
-        $tooltipContent.html('');
-        if ($closeButton) {
-          $closeButton.remove();
+    var hideTooltip = function hideTooltip(element, tooltip) {
+      if (!isTooltipOrElementActive) {
+        tooltip.classList.remove('health-tooltip--active');
+        element.removeAttribute('aria-describedby');
+        element.setAttribute('aria-expanded', 'false');
+        tooltip.removeAttribute('id');
+        tooltip.remove();
+        tooltipContent.innerHTML = '';
+        if (closeButton) {
+          closeButton.remove();
         }
-        if ($tooltipContent.hasClass('health-tooltip__content--close-button')) {
-          $tooltipContent.removeClass('health-tooltip__content--close-button');
+        if (tooltipContent.classList.contains('health-tooltip__content--close-button')) {
+          tooltipContent.classList.remove('health-tooltip__content--close-button');
         }
 
         // Reset close tooltip behaviour by removing any existing triggers.
-        $tooltip.off('focus mouseenter touchstart');
-        $tooltip.off('blur mouseleave touchend');
-        // $tooltip.off('keydown');
+        tooltip.replaceWith(tooltip.cloneNode(true));
 
         // Cleanup tooltip positioning.
         cleanup();
@@ -204,59 +202,63 @@ var health = health || {};
     health.tooltip = function (selector) {
       var settings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       if (_typeof(FloatingUIDOM) === 'object') {
-        var $selector = $(selector);
+        var elements = document.querySelectorAll(selector);
         settings = getTooltipSettings(settings);
         isTooltipOrElementActive = false;
-        $selector.each(function (index, element) {
+        elements.forEach(function (element, index) {
           var _ref2, _settings$html;
-          var $element = $(element);
           cleanup = function cleanup() {};
 
           // Process tooltip content.
-          var content = (_ref2 = (_settings$html = settings['html']) !== null && _settings$html !== void 0 ? _settings$html : $element.attr('title')) !== null && _ref2 !== void 0 ? _ref2 : '';
-          if ($element.attr('title')) {
+          var content = (_ref2 = (_settings$html = settings.html) !== null && _settings$html !== void 0 ? _settings$html : element.getAttribute('title')) !== null && _ref2 !== void 0 ? _ref2 : '';
+          if (element.getAttribute('title')) {
             // Title attribute must be removed to prevent interference with
             // tooltip popup in the case of <abbr> elements which have native
             // browser support for tooltips.
-            $element.removeAttr('title');
+            element.removeAttribute('title');
           }
-          $element.attr('data-health-tooltip', content);
-          $element.attr('data-health-tooltip-close-method', settings.closeButton ? 'button' : 'default');
-          $element.attr('data-health-tooltip-id', "".concat(index));
-          $element.attr('aria-expanded', 'false');
-          $element.attr('aria-controls', "health-tooltip-".concat($element.attr('data-health-tooltip-id')));
+          element.setAttribute('data-health-tooltip', content);
+          element.setAttribute('data-health-tooltip-close-method', settings.closeButton ? 'button' : 'default');
+          element.setAttribute('data-health-tooltip-id', "".concat(index));
+          element.setAttribute('aria-expanded', 'false');
+          element.setAttribute('aria-controls', "health-tooltip-".concat(index));
 
           // Add triggers to display and hide tooltip to target element.
-          $element.on(settings.triggerOn, function () {
-            clearTimeout(hideTimeout);
-            isTooltipOrElementActive = true;
-            showTooltip($element, $tooltip, settings);
+          settings.triggerOn.split(' ').forEach(function (event) {
+            element.addEventListener(event, function () {
+              clearTimeout(hideTimeout);
+              isTooltipOrElementActive = true;
+              showTooltip(element, tooltip, settings);
+            });
           });
-          if (settings.closeButton === false) {
-            $element.on(settings.triggerOff, function () {
-              isTooltipOrElementActive = false;
-              hideTimeout = setTimeout(function () {
-                hideTooltip($element, $tooltip);
-              }, 600);
+          if (!settings.closeButton) {
+            settings.triggerOff.split(' ').forEach(function (event) {
+              element.addEventListener(event, function () {
+                isTooltipOrElementActive = false;
+                hideTimeout = setTimeout(function () {
+                  hideTooltip(element, tooltip);
+                }, 600);
+              });
             });
           }
+
           // Add keyboard support to show tooltip.
-          $element.on('keydown', function (event) {
+          element.addEventListener('keydown', function (event) {
             if (event.key === 'Enter' || event.key === ' ') {
               event.preventDefault();
               event.stopPropagation();
               isTooltipOrElementActive = true;
-              showTooltip($element, $tooltip, settings);
-              $tooltip.focus();
+              showTooltip(element, tooltip, settings);
+              tooltip.focus();
             }
           });
         });
       }
 
-      // Execute any post initialization tasks
+      // Execute post initialization tasks.
       if (settings.postProcess && typeof settings.postProcess === 'function') {
         settings.postProcess();
       }
     };
   });
-})(jQuery, window.FloatingUIDOM, document);
+})(window.FloatingUIDOM, document);
