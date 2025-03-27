@@ -26,7 +26,7 @@
       "name": "Variable gap - mobile tablet desktop",
       "notes": "For differing gaps between devices",
       "context": {
-        "modifier": "mt-large sm:mt-standard md:mt-none"
+        "modifier": "margin-top-large sm:margin-top-standard md:margin-top-none"
       }
     }
   ]
