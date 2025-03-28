@@ -22,29 +22,38 @@
 }
 
 .health-tooltip__close {
-  align-items: center;
-  background-color: black;
+  // align-items: center;
+  background-color: transparent;
   border-radius: 0.75rem;
-  border: 1px solid black;
-  color: white;
+  border-style: none;
+  // color: white;
   cursor: pointer;
-  display: flex;
+  // display: flex;
   flex: 0 0 1.5rem;
   height: 1.5rem;
-  justify-content: center;
-  overflow: hidden;
+  // justify-content: center;
+  // overflow: hidden;
+  padding: 0;
   width: 1.5rem;
 }
 
 .health-tooltip__close:hover,
 .health-tooltip__close:active {
-  background-color: white;
-  color: black;
+  // background-color: white;
+  // color: black;
 }
 
-.health-tooltip__icon--close {
-  font-size: 1.5rem;
-  transform: rotate(45deg);
+.health-tooltip__close-icon {
+  fill: #000000;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.health-tooltip__close-icon:hover,
+.health-tooltip__close-icon:active {
+  fill: #A2AAAD;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .health-tooltip__content {

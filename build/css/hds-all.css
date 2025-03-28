@@ -11913,39 +11913,29 @@ table thead {
 }
 
 .health-tooltip__close {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
+  background-color: transparent;
   border-radius: 0.75rem;
-  border: 1px solid black;
-  color: white;
+  border-style: none;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1.5rem;
           flex: 0 0 1.5rem;
   height: 1.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
+  padding: 0;
   width: 1.5rem;
 }
 
-.health-tooltip__close:hover,
-.health-tooltip__close:active {
-  background-color: white;
-  color: black;
+.health-tooltip__close-icon {
+  fill: #000000;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-.health-tooltip__icon--close {
-  font-size: 1.5rem;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+.health-tooltip__close-icon:hover,
+.health-tooltip__close-icon:active {
+  fill: #A2AAAD;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .health-tooltip__content {
