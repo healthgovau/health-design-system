@@ -189,8 +189,20 @@
         
         <h1 id="tooltip">Tooltip</h1>
 <p>Tooltips use the <a href="https://github.com/floating-ui/floating-ui">FloatingUI</a> library.</p>
-<p>The title attribute is used as the tooltip.</p>
-<p><code>health.tooltip(selector, options)</code></p>
+<h2 id="usage">Usage</h2>
+<pre><code class="hljs">health.<span class="hljs-built_in">tooltip</span>(selector, options)</code></pre><h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>selector:</strong> <code>{string|HTMLElement|NodeList}</code> the element or elements to which the tooltip should be applied. When using a string then it must be a valid CSS selector string.</li>
+<li><strong>options:</strong> <code>{object}</code> tooltip options.<ul>
+<li><strong>boundary:</strong> <code>{string|Element|Array&lt;Element&gt;|Rect}</code> Used to determine the boundary that the tooltip will be constrained to. See the FloatingUI documentation on the <a href="https://floating-ui.com/docs/detectoverflow#boundary">boundary</a> property for more information on its usage.</li>
+<li><strong>closeButton:</strong> <code>{boolean}</code> If true, a close button will be displayed. If false, no close button will be displayed.</li>
+<li><strong>html:</strong> <code>{string|null}</code> Tooltip content. If not provided, the title attribute of the element will be used assuming it is present. If neither are present, the tooltip will be empty.</li>
+<li><strong>postProcess:</strong> <code>{function}</code> Anonymous function to be executed after the tooltip has been initialized. This can be used to perform post initialisation actions.</li>
+<li><strong>triggerOn:</strong> <code>{string}</code> Event or events which will trigger the display of the tooltip. Multiple events should be separated by a space.</li>
+<li><strong>triggerOff:</strong> <code>{string}</code> Event or events which will trigger the hiding of the tooltip. Multiple events should be separated by a space.</li>
+</ul>
+</li>
+</ul>
 <p>Default options</p>
 <pre><code class="hljs language-javascript">{
   <span class="hljs-attr">boundary</span>: <span class="hljs-string">&#x27;clippingAncestors&#x27;</span>,
@@ -199,16 +211,7 @@
   <span class="hljs-attr">postProcess</span>: <span class="hljs-function">() =&gt;</span> {},
   <span class="hljs-attr">triggerOn</span>: <span class="hljs-string">&#x27;mouseenter touchstart&#x27;</span>,
   <span class="hljs-attr">triggerOff</span>: <span class="hljs-string">&#x27;blur mouseleave touchend&#x27;</span>,
-}</code></pre><p>Options</p>
-<ul>
-<li><strong>boundary:</strong> <code>{string|Element|Array&lt;Element&gt;|Rect}</code> Used to determine the boundary that the tooltip will be constrained to. Possible values are ‘clippingAncestors’ (default) | Element | Array<Element> | Rect. (See <a href="https://floating-ui.com/docs/detectoverflow#boundary">https://floating-ui.com/docs/detectoverflow#boundary</a> for more information).</li>
-<li><strong>closeButton:</strong> <code>{boolean}</code> If true, a close button will be displayed. If false, no close button will be displayed.</li>
-<li><strong>html:</strong> <code>{string|null}</code> Tooltip content. If not provided, the title attribute of the element will be used assuming it is present. If neither are present, the tooltip will be empty.</li>
-<li><strong>postProcess:</strong> <code>{function}</code> Anonymous function to be executed after the tooltip has been initialized. This can be used to perform post initialisation actions.</li>
-<li><strong>triggerOn:</strong> <code>{string}</code> Event or events which will trigger the display of the tooltip. Multiple events should be separated by a space.</li>
-<li><strong>triggerOff:</strong> <code>{string}</code> Event or events which will trigger the hiding of the tooltip. Multiple events should be separated by a space.</li>
-</ul>
-
+}</code></pre>
         
     </div>
 </div>
@@ -302,8 +305,8 @@
                     <dt class="Tree-asideTerm">Build date:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2025-03-26T06:52:09.242Z">
-                                26/03/2025
+                            <time datetime="2025-04-02T03:29:12.593Z">
+                                02/04/2025
                             </time>
                         
                     </dd>
