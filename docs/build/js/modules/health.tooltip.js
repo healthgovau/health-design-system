@@ -1,5 +1,11 @@
 "use strict";
 
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 /*! @health.gov.au/health-design-system v3.0.3 */
 /*! @health.gov.au/health-design-system v3.0.3 */
@@ -85,7 +91,7 @@ var health = health || {};
       return;
     }
     var tooltipContent = tooltip.querySelector('.health-tooltip__content');
-    var closeButtonTemplate = "<button class=\"health-tooltip__close\" type=\"button\" aria-label=\"Close tooltip\" tabindex=\"0\"><span class=\"health-tooltip__icon health-tooltip__icon--close\">&plus;</span></button>";
+    var closeButtonTemplate = "\n      <button class=\"health-tooltip__close\" type=\"button\" aria-label=\"Close tooltip\" tabindex=\"0\">\n        <svg class=\"health-tooltip__close-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" stroke-width=\"1.5\">\n          <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM9.70164 8.64124C9.40875 8.34835 8.93388 8.34835 8.64098 8.64124C8.34809 8.93414 8.34809 9.40901 8.64098 9.7019L10.9391 12L8.64098 14.2981C8.34809 14.591 8.34809 15.0659 8.64098 15.3588C8.93388 15.6517 9.40875 15.6517 9.70164 15.3588L11.9997 13.0607L14.2978 15.3588C14.5907 15.6517 15.0656 15.6517 15.3585 15.3588C15.6514 15.0659 15.6514 14.591 15.3585 14.2981L13.0604 12L15.3585 9.7019C15.6514 9.40901 15.6514 8.93414 15.3585 8.64124C15.0656 8.34835 14.5907 8.34835 14.2978 8.64124L11.9997 10.9393L9.70164 8.64124Z\"></path>\n        </svg>\n      </button>";
     var cleanup;
     var closeButton;
     var hideTimeout;
@@ -198,11 +204,35 @@ var health = health || {};
       }
     };
 
-    // Initialize tooltip component.
+    /**
+     * Initialize tooltip component.
+     *
+     * @param {string|HTMLElement|NodeList} selector
+     *   Selector or element to attach tooltip to.
+     * @param {object} settings
+     *   Tooltip settings. This can be used to override default settings.
+     *   See the list of optional tooltip settings above.
+     * @return {void}
+     *   No return value.
+     */
     health.tooltip = function (selector) {
       var settings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      if (typeof selector !== 'string' && selector instanceof HTMLElement === false && selector instanceof NodeList === false) {
+        throw new Error('Invalid selector or element provided. Must be a string, HTMLElement, or NodeList.');
+      }
       if (_typeof(FloatingUIDOM) === 'object') {
-        var elements = document.querySelectorAll(selector);
+        var elements = [];
+        if (typeof selector === 'string') {
+          elements = _toConsumableArray(document.querySelectorAll(selector));
+        } else if (selector instanceof HTMLElement) {
+          elements.push(selector);
+        } else if (selector instanceof NodeList) {
+          elements = _toConsumableArray(selector);
+        }
+        if (elements.length === 0) {
+          // Exit early if there are no elements to process.
+          return;
+        }
         settings = getTooltipSettings(settings);
         isTooltipOrElementActive = false;
         elements.forEach(function (element, index) {
