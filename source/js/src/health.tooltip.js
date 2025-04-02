@@ -211,10 +211,42 @@ var health = health || {};
       }
     };
 
-    // Initialize tooltip component.
+    /**
+     * Initialize tooltip component.
+     *
+     * @param {string|HTMLElement|NodeList} selector
+     *   Selector or element to attach tooltip to.
+     * @param {object} settings
+     *   Tooltip settings. This can be used to override default settings.
+     *   See the list of optional tooltip settings above.
+     * @return {void}
+     *   No return value.
+     */
     health.tooltip = (selector, settings = {}) => {
+      if (
+        typeof selector !== 'string' &&
+        selector instanceof HTMLElement === false &&
+        selector instanceof NodeList === false
+      ) {
+        throw new Error('Invalid selector or element provided. Must be a string, HTMLElement, or NodeList.');
+      }
       if (typeof FloatingUIDOM === 'object') {
-        const elements = document.querySelectorAll(selector);
+        let elements = [];
+
+        if (typeof selector === 'string') {
+          elements = [...document.querySelectorAll(selector)];
+        }
+        else if (selector instanceof HTMLElement) {
+          elements.push(selector);
+        }
+        else if (selector instanceof NodeList) {
+          elements = [...selector];
+        }
+        if (elements.length === 0) {
+          // Exit early if there are no elements to process.
+          return;
+        }
+
         settings = getTooltipSettings(settings);
         isTooltipOrElementActive = false;
 
