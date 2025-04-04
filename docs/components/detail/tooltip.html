@@ -165,11 +165,17 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8628e0014d954f938b8157db258c2be5-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Portable Document Format&quot;</span>&gt;</span>PDF<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Sharing documents has become significantly easier in the digital age. One of the most common and versatile file formats for this purpose is the <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Portable Document Format&quot;</span>&gt;</span>PDF<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>. Its ability to preserve formatting across different platforms makes it ideal for everything from resumes to complex reports. Whether you&#x27;re sending a quick note or a lengthy manuscript, the format ensures your recipient sees exactly what you intended.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Data exchange between different systems is crucial in today&#x27;s interconnected world. Often, this involves structured data formats, and one such format that plays a vital role is XML. Its flexibility and human-readable nature make it suitable for a wide range of applications, from configuration files to web services. While other formats exist, <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Extendable Markup Language&quot;</span>&gt;</span>XML<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span> remains a powerful tool for representing and transmitting information<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Rogue Squadron (1996) is the first novel in the Star Wars: X-wing series. It is set at the beginning of the New Republic <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-references__links rs_preserve&quot;</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-references__link&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Reference&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;&lt;p&gt;Mike Murphy (May 25, 2017). <span class="hljs-symbol">&amp;quot;</span>The $11 million spent on <span class="hljs-symbol">&amp;quot;</span>Star Wars<span class="hljs-symbol">&amp;quot;</span> in 1977 was the best film investment ever made<span class="hljs-symbol">&amp;quot;</span>. Quartz. Archived from the original on June 6, 2017. Retrieved October 15, 2020.&lt;/p&gt;&quot;</span>&gt;</span>Mike Murphy<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;health-tooltip&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-tooltip&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-tooltip__content&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">language</span>=<span class="hljs-string">&quot;JavaScript&quot;</span>&gt;</span><span class="javascript">
     $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        health.tooltip(<span class="hljs-string">&#x27;abbr&#x27;</span>);
+        health.tooltip(<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;abbr, span[title]&#x27;</span>));
     });
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
         
@@ -181,19 +187,30 @@
     <div class="Prose Prose--condensed">
         
         <h1 id="tooltip">Tooltip</h1>
-<p>Tooltips use the <a href="https://atomiks.github.io/tippyjs/">tippy library v2.5.2</a>.</p>
-<p>The title attribute is used as the tooltip.</p>
-<p><code>health.tooltip(selector, options)</code></p>
+<p>Tooltips use the <a href="https://github.com/floating-ui/floating-ui">FloatingUI</a> library.</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="hljs">health.<span class="hljs-built_in">tooltip</span>(selector, options)</code></pre><h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>selector:</strong> <code>{string|HTMLElement|NodeList}</code> the element or elements to which the tooltip should be applied. When using a string then it must be a valid CSS selector string.</li>
+<li><strong>options:</strong> <code>{object}</code> tooltip options.<ul>
+<li><strong>boundary:</strong> <code>{string|Element|Array&lt;Element&gt;|Rect}</code> Used to determine the boundary that the tooltip will be constrained to. See the FloatingUI documentation on the <a href="https://floating-ui.com/docs/detectoverflow#boundary">boundary</a> property for more information on its usage.</li>
+<li><strong>closeButton:</strong> <code>{boolean}</code> If true, a close button will be displayed. If false, no close button will be displayed.</li>
+<li><strong>html:</strong> <code>{string|null}</code> Tooltip content. If not provided, the title attribute of the element will be used assuming it is present. If neither are present, the tooltip will be empty.</li>
+<li><strong>postProcess:</strong> <code>{function}</code> Anonymous function to be executed after the tooltip has been initialized. This can be used to perform post initialisation actions.</li>
+<li><strong>triggerOn:</strong> <code>{string}</code> Event or events which will trigger the display of the tooltip. Multiple events should be separated by a space.</li>
+<li><strong>triggerOff:</strong> <code>{string}</code> Event or events which will trigger the hiding of the tooltip. Multiple events should be separated by a space.</li>
+</ul>
+</li>
+</ul>
 <p>Default options</p>
 <pre><code class="hljs language-javascript">{
-  <span class="hljs-attr">arrow</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">theme</span>: <span class="hljs-string">&#x27;health-tooltip&#x27;</span>,
-  <span class="hljs-attr">performance</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">allowTitleHTML</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">interactive</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">animateFill</span>: <span class="hljs-literal">false</span>
-}</code></pre><p>Add to or replace options <a href="https://atomiks.github.io/tippyjs/all-options/">https://atomiks.github.io/tippyjs/all-options/</a> </p>
-
+  <span class="hljs-attr">boundary</span>: <span class="hljs-string">&#x27;clippingAncestors&#x27;</span>,
+  <span class="hljs-attr">closeButton</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">html</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">postProcess</span>: <span class="hljs-function">() =&gt;</span> {},
+  <span class="hljs-attr">triggerOn</span>: <span class="hljs-string">&#x27;mouseenter touchstart&#x27;</span>,
+  <span class="hljs-attr">triggerOff</span>: <span class="hljs-string">&#x27;blur mouseleave touchend&#x27;</span>,
+}</code></pre>
         
     </div>
 </div>
@@ -259,9 +276,11 @@
 
     
     
+        
+    
 
 
-<nav class="Navigation" data-behaviour="navigation">
+<nav class="Navigation in-variants-panel" data-behaviour="navigation">
     <div class="Navigation-panel Navigation-panel--main" data-role="main-panel">
     
         
@@ -287,8 +306,8 @@
                     <dt class="Tree-asideTerm">Build date:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2024-09-10T04:08:22.414Z">
-                                10/09/2024
+                            <time datetime="2025-04-02T03:29:12.593Z">
+                                02/04/2025
                             </time>
                         
                     </dd>
@@ -2363,7 +2382,7 @@
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./tooltip.html"
+                href="./tooltip--default.html"
                 data-role="tree-link"
                 
                 data-pjax
@@ -2876,7 +2895,7 @@
     </div>
 
     
-    <div class="Navigation-panel Navigation-panel--variants" data-role="variant-panel">
+    <div class="Navigation-panel Navigation-panel--variants is-visible" data-role="variant-panel">
         <div class="Navigation-backButtonWrapper">
             <button class="Navigation-backButton" data-role="back" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -6497,6 +6516,108 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./header--brand-name-lockup.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="header--brand-name-lockup"
+                data-handle="header"
+            >
+                <span>Brand Name Lockup</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #158839;" title="ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./header--brand-name-with-subline.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="header--brand-name-with-subline"
+                data-handle="header"
+            >
+                <span>Brand Name With Subline</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #158839;" title="ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./header--dual-logo-lockup.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="header--dual-logo-lockup"
+                data-handle="header"
+            >
+                <span>Dual Logo Lockup</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #158839;" title="ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
     </ul>
 </div>
@@ -7310,6 +7431,95 @@
     
         
     
+        
+            
+            <div class="Navigation-group is-visible" data-role="variant-group" data-component="tooltip">
+                
+<div class="Tree" data-behaviour="tree" id="tree-tooltip-variants">
+    <div class="Tree-header">
+        <h3 class="Tree-title">Tooltip Variants</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./tooltip--default.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="tooltip--default"
+                data-handle="tooltip"
+            >
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #158839;" title="ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./tooltip--with-close-button.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="tooltip--with-close-button"
+                data-handle="tooltip"
+            >
+                <span>With Close Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #158839;" title="ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+            </div>
         
     
         

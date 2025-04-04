@@ -1,19 +1,69 @@
-.health-tooltip-theme {
-  font-family: $AU-font;
-  @include AU-space('padding', .5unit);
-
-  text-align: left;
-  color: $AU-color-foreground-text;
-
-  font-size: .9em;
+.health-tooltip-theme,
+.health-tooltip {
   background-color: #fff;
-
   border: $health-borderize;
   border-color: $tooltip-bg-colour;
   box-shadow: 0px 0px 35px -7px rgba(0, 0, 0, .5);
+  color: $AU-color-foreground-text;
+  display: flex;
+  font-family: $AU-font;
+  font-size: 0.8125rem;
+  gap: 0.5rem;
+  left: 0;
+  margin: 0;
+  max-width: 100vw;
+  opacity: 0;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  transition: opacity .5s ease;
+  width: fit-content;
+  @include AU-space('padding', .5unit);
+}
 
-  p {
-    padding: 0;
-    margin: 0;
-  }
+.health-tooltip__close {
+  // align-items: center;
+  background-color: transparent;
+  border-radius: 0.75rem;
+  border-style: none;
+  // color: white;
+  cursor: pointer;
+  // display: flex;
+  flex: 0 0 1.5rem;
+  height: 1.5rem;
+  // justify-content: center;
+  // overflow: hidden;
+  padding: 0;
+  width: 1.5rem;
+}
+
+.health-tooltip__close:hover,
+.health-tooltip__close:active {
+  // background-color: white;
+  // color: black;
+}
+
+.health-tooltip__close-icon {
+  fill: #000000;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.health-tooltip__close-icon:hover,
+.health-tooltip__close-icon:active {
+  fill: #A2AAAD;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.health-tooltip__content {
+  line-height: 1.25rem;
+  max-width: 40rem;
+  padding: 0;
+  position: relative;
+  width: max-content;
+}
+
+.health-tooltip--active {
+  opacity: 1;
 }
