@@ -22,11 +22,11 @@ var health = health || {};
     // Add click event handlers for all the buttons
     $(".au-main-nav__dropdown-control > a").on("click", function (event) {
       event.preventDefault();
-      $control = $(this);
+      const $control = $(this);
 
       $.each(dropdownControls, function (index, element) {
         if ($(this).attr("id") === $control.attr("id")) {
-          $controlParent = $control.parent(".au-main-nav__dropdown-control");
+          const $controlParent = $control.parent(".au-main-nav__dropdown-control");
           if ($controlParent.hasClass('au-main-nav__dropdown-control--active')) {
             $controlParent.removeClass('au-main-nav__dropdown-control--active');
             $(this).attr("aria-expanded", "false");

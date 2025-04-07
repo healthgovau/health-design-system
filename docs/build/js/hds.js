@@ -7,7 +7,7 @@ function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Sym
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-/*! @health.gov.au/health-design-system v3.1.0 */
+/*! @health.gov.au/health-design-system v3.1.1 */
 /* PANCAKE v2.0.0 PANCAKE-JS v2.0.0 */!function (c) {
   var e = {};
   function s(e, t, n) {
@@ -400,10 +400,10 @@ var health = health || {};
     // Add click event handlers for all the buttons
     $(".au-main-nav__dropdown-control > a").on("click", function (event) {
       event.preventDefault();
-      $control = $(this);
+      var $control = $(this);
       $.each(dropdownControls, function (index, element) {
         if ($(this).attr("id") === $control.attr("id")) {
-          $controlParent = $control.parent(".au-main-nav__dropdown-control");
+          var $controlParent = $control.parent(".au-main-nav__dropdown-control");
           if ($controlParent.hasClass('au-main-nav__dropdown-control--active')) {
             $controlParent.removeClass('au-main-nav__dropdown-control--active');
             $(this).attr("aria-expanded", "false");
