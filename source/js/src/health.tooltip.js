@@ -49,10 +49,11 @@ var health = health || {};
 
   // Default tooltip settings.
   const defaultSettings = {
+    arrow: false,
     boundary: 'clippingAncestors',
     closeButton: false,
     html: null,
-    postProcess: () => {},
+    postProcess: () => { },
     triggerOn: 'mouseenter touchstart',
     triggerOff: 'blur mouseleave touchend',
   };
@@ -94,9 +95,9 @@ var health = health || {};
     let hideTimeout;
     let isTooltipOrElementActive;
 
-     /**
-     * Show tooltip.
-     */
+    /**
+    * Show tooltip.
+    */
     const showTooltip = (element, tooltip, settings) => {
       const useCloseButton = element.getAttribute('data-health-tooltip-close-method') === 'button';
       clearTimeout(hideTimeout);
@@ -136,18 +137,39 @@ var health = health || {};
 
       // Set tooltip position.
       cleanup = FloatingUIDOM.autoUpdate(element, tooltip, () => {
+        const arrow = tooltip.querySelector('.health-tooltip__arrow');
+        const middleware = [
+          FloatingUIDOM.inline(),
+          FloatingUIDOM.shift({
+            boundary: settings.boundary,
+          }),
+        ]
+        if (settings.arrow) {
+          middleware.push(FloatingUIDOM.arrow({
+            element: document.querySelector('.health-tooltip__arrow'),
+          }));
+        }
+
         FloatingUIDOM.computePosition(element, tooltip, {
           placement: 'bottom',
           strategy: 'fixed',
-          middleware: [
-            FloatingUIDOM.inline(),
-            FloatingUIDOM.shift({
-              boundary: settings.boundary,
-            }),
-          ],
-        }).then(({ x, y }) => {
+          middleware: middleware,
+        }).then(({ x, y, middlewareData, placement }) => {
           tooltip.style.left = `${x}px`;
           tooltip.style.top = `${y}px`;
+          if (settings.arrow && arrow) {
+            const arrowOffsetX = middlewareData.arrow?.x || 0;
+            Object.assign(arrow.style, {
+              display: 'block-inline',
+              left: `${arrowOffsetX}px`,
+            });
+            if (placement === 'bottom') {
+              arrow.style.top = `-10px`;
+            }
+            else if (placement === 'top') {
+              arrow.style.bottom = `-10px`;
+            }
+          }
         });
       });
 
@@ -251,7 +273,7 @@ var health = health || {};
         isTooltipOrElementActive = false;
 
         elements.forEach((element, index) => {
-          cleanup = () => {};
+          cleanup = () => { };
 
           // Process tooltip content.
           const content = settings.html ?? element.getAttribute('title') ?? '';

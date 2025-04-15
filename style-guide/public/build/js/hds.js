@@ -642,6 +642,7 @@ var health = health || {};
 (function (FloatingUIDOM, document) {
   // Default tooltip settings.
   var defaultSettings = {
+    arrow: false,
     boundary: 'clippingAncestors',
     closeButton: false,
     html: null,
@@ -718,17 +719,39 @@ var health = health || {};
 
       // Set tooltip position.
       cleanup = FloatingUIDOM.autoUpdate(element, tooltip, function () {
+        var arrow = tooltip.querySelector('.health-tooltip__arrow');
+        var middleware = [FloatingUIDOM.inline(), FloatingUIDOM.shift({
+          boundary: settings.boundary
+        })];
+        if (settings.arrow) {
+          middleware.push(FloatingUIDOM.arrow({
+            element: document.querySelector('.health-tooltip__arrow')
+          }));
+        }
         FloatingUIDOM.computePosition(element, tooltip, {
           placement: 'bottom',
           strategy: 'fixed',
-          middleware: [FloatingUIDOM.inline(), FloatingUIDOM.shift({
-            boundary: settings.boundary
-          })]
+          middleware: middleware
         }).then(function (_ref) {
           var x = _ref.x,
-            y = _ref.y;
+            y = _ref.y,
+            middlewareData = _ref.middlewareData,
+            placement = _ref.placement;
           tooltip.style.left = "".concat(x, "px");
           tooltip.style.top = "".concat(y, "px");
+          if (settings.arrow && arrow) {
+            var _middlewareData$arrow;
+            var arrowOffsetX = ((_middlewareData$arrow = middlewareData.arrow) === null || _middlewareData$arrow === void 0 ? void 0 : _middlewareData$arrow.x) || 0;
+            Object.assign(arrow.style, {
+              display: 'block-inline',
+              left: "".concat(arrowOffsetX, "px")
+            });
+            if (placement === 'bottom') {
+              arrow.style.top = "-10px";
+            } else if (placement === 'top') {
+              arrow.style.bottom = "-10px";
+            }
+          }
         });
       });
 

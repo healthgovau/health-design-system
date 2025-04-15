@@ -11912,6 +11912,15 @@ table thead {
   padding: 0.5rem;
 }
 
+.health-tooltip__arrow {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #87888A;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
 .health-tooltip__close {
   background-color: transparent;
   border-radius: 0.75rem;

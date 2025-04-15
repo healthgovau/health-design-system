@@ -21,6 +21,15 @@
   @include AU-space('padding', .5unit);
 }
 
+.health-tooltip__arrow {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $tooltip-bg-colour;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
 .health-tooltip__close {
   // align-items: center;
   background-color: transparent;
