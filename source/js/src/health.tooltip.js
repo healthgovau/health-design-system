@@ -139,6 +139,7 @@ var health = health || {};
       cleanup = FloatingUIDOM.autoUpdate(element, tooltip, () => {
         const arrow = tooltip.querySelector('.health-tooltip__arrow');
         const middleware = [
+          FloatingUIDOM.offset(settings.arrow ? 10 : 0),
           FloatingUIDOM.inline(),
           FloatingUIDOM.shift({
             boundary: settings.boundary,
@@ -147,6 +148,7 @@ var health = health || {};
         if (settings.arrow) {
           middleware.push(FloatingUIDOM.arrow({
             element: document.querySelector('.health-tooltip__arrow'),
+            offset: 10,
           }));
         }
 

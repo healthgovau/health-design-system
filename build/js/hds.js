@@ -720,12 +720,13 @@ var health = health || {};
       // Set tooltip position.
       cleanup = FloatingUIDOM.autoUpdate(element, tooltip, function () {
         var arrow = tooltip.querySelector('.health-tooltip__arrow');
-        var middleware = [FloatingUIDOM.inline(), FloatingUIDOM.shift({
+        var middleware = [FloatingUIDOM.offset(settings.arrow ? 10 : 0), FloatingUIDOM.inline(), FloatingUIDOM.shift({
           boundary: settings.boundary
         })];
         if (settings.arrow) {
           middleware.push(FloatingUIDOM.arrow({
-            element: document.querySelector('.health-tooltip__arrow')
+            element: document.querySelector('.health-tooltip__arrow'),
+            offset: 10
           }));
         }
         FloatingUIDOM.computePosition(element, tooltip, {
