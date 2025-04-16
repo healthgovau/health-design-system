@@ -687,6 +687,9 @@ var health = health || {};
     * Show tooltip.
     */
     var showTooltip = function showTooltip(element, tooltip, settings) {
+      if (cleanup) {
+        cleanup();
+      }
       var useCloseButton = element.getAttribute('data-health-tooltip-close-method') === 'button';
       clearTimeout(hideTimeout);
       isTooltipOrElementActive = true;
@@ -722,6 +725,8 @@ var health = health || {};
         var arrow = tooltip.querySelector('.health-tooltip__arrow');
         var middleware = [FloatingUIDOM.offset(settings.arrow ? 10 : 0), FloatingUIDOM.inline(), FloatingUIDOM.shift({
           boundary: settings.boundary
+        }), FloatingUIDOM.autoPlacement({
+          allowedPlacements: ['top', 'bottom']
         })];
         if (settings.arrow) {
           middleware.push(FloatingUIDOM.arrow({
@@ -730,7 +735,6 @@ var health = health || {};
           }));
         }
         FloatingUIDOM.computePosition(element, tooltip, {
-          placement: 'bottom',
           strategy: 'fixed',
           middleware: middleware
         }).then(function (_ref) {
@@ -744,13 +748,18 @@ var health = health || {};
             var _middlewareData$arrow;
             var arrowOffsetX = ((_middlewareData$arrow = middlewareData.arrow) === null || _middlewareData$arrow === void 0 ? void 0 : _middlewareData$arrow.x) || 0;
             Object.assign(arrow.style, {
-              display: 'block-inline',
               left: "".concat(arrowOffsetX, "px")
             });
             if (placement === 'bottom') {
-              arrow.style.top = "-10px";
+              if (arrow.classList.contains('health-tooltip__arrow--top')) {
+                arrow.classList.remove('health-tooltip__arrow--top');
+              }
+              arrow.classList.add('health-tooltip__arrow--bottom');
             } else if (placement === 'top') {
-              arrow.style.bottom = "-10px";
+              if (arrow.classList.contains('health-tooltip__arrow--bottom')) {
+                arrow.classList.remove('health-tooltip__arrow--bottom');
+              }
+              arrow.classList.add('health-tooltip__arrow--top');
             }
           }
         });

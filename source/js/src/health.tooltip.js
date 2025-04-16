@@ -99,6 +99,9 @@ var health = health || {};
     * Show tooltip.
     */
     const showTooltip = (element, tooltip, settings) => {
+      if (cleanup) {
+        cleanup();
+      }
       const useCloseButton = element.getAttribute('data-health-tooltip-close-method') === 'button';
       clearTimeout(hideTimeout);
       isTooltipOrElementActive = true;
@@ -144,6 +147,9 @@ var health = health || {};
           FloatingUIDOM.shift({
             boundary: settings.boundary,
           }),
+          FloatingUIDOM.autoPlacement({
+            allowedPlacements: ['top', 'bottom'],
+          }),
         ]
         if (settings.arrow) {
           middleware.push(FloatingUIDOM.arrow({
@@ -153,7 +159,6 @@ var health = health || {};
         }
 
         FloatingUIDOM.computePosition(element, tooltip, {
-          placement: 'bottom',
           strategy: 'fixed',
           middleware: middleware,
         }).then(({ x, y, middlewareData, placement }) => {
@@ -162,14 +167,19 @@ var health = health || {};
           if (settings.arrow && arrow) {
             const arrowOffsetX = middlewareData.arrow?.x || 0;
             Object.assign(arrow.style, {
-              display: 'block-inline',
               left: `${arrowOffsetX}px`,
             });
             if (placement === 'bottom') {
-              arrow.style.top = `-10px`;
+              if (arrow.classList.contains('health-tooltip__arrow--top')) {
+                arrow.classList.remove('health-tooltip__arrow--top');
+              }
+              arrow.classList.add('health-tooltip__arrow--bottom');
             }
             else if (placement === 'top') {
-              arrow.style.bottom = `-10px`;
+              if (arrow.classList.contains('health-tooltip__arrow--bottom')) {
+                arrow.classList.remove('health-tooltip__arrow--bottom');
+              }
+              arrow.classList.add('health-tooltip__arrow--top');
             }
           }
         });
