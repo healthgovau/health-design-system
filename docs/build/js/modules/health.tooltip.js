@@ -7,7 +7,7 @@ function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Sym
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-/*! @health.gov.au/health-design-system v3.1.1 */
+/*! @health.gov.au/health-design-system v3.1.2 */
 /*! @health.gov.au/health-design-system v3.0.3 */
 /**
  * Health tooltip component.
@@ -57,6 +57,7 @@ var health = health || {};
 (function (FloatingUIDOM, document) {
   // Default tooltip settings.
   var defaultSettings = {
+    arrow: false,
     boundary: 'clippingAncestors',
     closeButton: false,
     html: null,
@@ -101,6 +102,9 @@ var health = health || {};
     * Show tooltip.
     */
     var showTooltip = function showTooltip(element, tooltip, settings) {
+      if (cleanup) {
+        cleanup();
+      }
       var useCloseButton = element.getAttribute('data-health-tooltip-close-method') === 'button';
       clearTimeout(hideTimeout);
       isTooltipOrElementActive = true;
@@ -133,17 +137,46 @@ var health = health || {};
 
       // Set tooltip position.
       cleanup = FloatingUIDOM.autoUpdate(element, tooltip, function () {
+        var arrow = tooltip.querySelector('.health-tooltip__arrow');
+        var middleware = [FloatingUIDOM.offset(settings.arrow ? 10 : 0), FloatingUIDOM.inline(), FloatingUIDOM.shift({
+          boundary: settings.boundary
+        }), FloatingUIDOM.autoPlacement({
+          allowedPlacements: ['top', 'bottom']
+        })];
+        if (settings.arrow) {
+          middleware.push(FloatingUIDOM.arrow({
+            element: document.querySelector('.health-tooltip__arrow'),
+            offset: 10
+          }));
+        }
         FloatingUIDOM.computePosition(element, tooltip, {
-          placement: 'bottom',
           strategy: 'fixed',
-          middleware: [FloatingUIDOM.inline(), FloatingUIDOM.shift({
-            boundary: settings.boundary
-          })]
+          middleware: middleware
         }).then(function (_ref) {
           var x = _ref.x,
-            y = _ref.y;
+            y = _ref.y,
+            middlewareData = _ref.middlewareData,
+            placement = _ref.placement;
           tooltip.style.left = "".concat(x, "px");
           tooltip.style.top = "".concat(y, "px");
+          if (settings.arrow && arrow) {
+            var _middlewareData$arrow;
+            var arrowOffsetX = ((_middlewareData$arrow = middlewareData.arrow) === null || _middlewareData$arrow === void 0 ? void 0 : _middlewareData$arrow.x) || 0;
+            Object.assign(arrow.style, {
+              left: "".concat(arrowOffsetX, "px")
+            });
+            if (placement === 'bottom') {
+              if (arrow.classList.contains('health-tooltip__arrow--top')) {
+                arrow.classList.remove('health-tooltip__arrow--top');
+              }
+              arrow.classList.add('health-tooltip__arrow--bottom');
+            } else if (placement === 'top') {
+              if (arrow.classList.contains('health-tooltip__arrow--bottom')) {
+                arrow.classList.remove('health-tooltip__arrow--bottom');
+              }
+              arrow.classList.add('health-tooltip__arrow--top');
+            }
+          }
         });
       });
 

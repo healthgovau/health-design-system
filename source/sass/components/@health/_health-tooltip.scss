@@ -13,7 +13,7 @@
   margin: 0;
   max-width: 100vw;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   text-align: left;
   top: 0;
   transition: opacity .5s ease;
@@ -21,26 +21,35 @@
   @include AU-space('padding', .5unit);
 }
 
+.health-tooltip__arrow {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  display: none;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.health-tooltip__arrow--top {
+  border-top: 10px solid $tooltip-bg-colour;
+  bottom: -10px;
+  display: inline-block;
+}
+.health-tooltip__arrow--bottom {
+  border-bottom: 10px solid $tooltip-bg-colour;
+  display: inline-block;
+  top: -10px;
+}
+
 .health-tooltip__close {
-  // align-items: center;
   background-color: transparent;
   border-radius: 0.75rem;
   border-style: none;
-  // color: white;
   cursor: pointer;
-  // display: flex;
   flex: 0 0 1.5rem;
   height: 1.5rem;
-  // justify-content: center;
-  // overflow: hidden;
   padding: 0;
   width: 1.5rem;
-}
-
-.health-tooltip__close:hover,
-.health-tooltip__close:active {
-  // background-color: white;
-  // color: black;
 }
 
 .health-tooltip__close-icon {
