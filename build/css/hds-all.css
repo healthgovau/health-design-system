@@ -11886,7 +11886,7 @@ table thead {
 .health-tooltip {
   background-color: #fff;
   border: 3px solid #ccc;
-  border-color: #87888A;
+  border-color: #58585b;
   -webkit-box-shadow: 0px 0px 35px -7px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 35px -7px rgba(0, 0, 0, 0.5);
   color: #313131;
@@ -11922,13 +11922,13 @@ table thead {
 }
 
 .health-tooltip__arrow--top {
-  border-top: 10px solid #87888A;
+  border-top: 10px solid #58585b;
   bottom: -10px;
   display: inline-block;
 }
 
 .health-tooltip__arrow--bottom {
-  border-bottom: 10px solid #87888A;
+  border-bottom: 10px solid #58585b;
   display: inline-block;
   top: -10px;
 }
