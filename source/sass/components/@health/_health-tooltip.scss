@@ -41,9 +41,9 @@
   top: -10px;
 }
 
-.health-tooltip__close {
+.health-tooltip__button {
   background-color: transparent;
-  border-radius: 0.75rem;
+  border-radius: 50%;
   border-style: none;
   cursor: pointer;
   flex: 0 0 1.5rem;
@@ -52,17 +52,35 @@
   width: 1.5rem;
 }
 
-.health-tooltip__close-icon {
-  fill: #000000;
-  height: 1.5rem;
-  width: 1.5rem;
+.health-tooltip__button--close {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.health-tooltip__close-icon:hover,
-.health-tooltip__close-icon:active {
-  fill: #A2AAAD;
-  height: 1.5rem;
-  width: 1.5rem;
+.health-tooltip__button--close::after,
+.health-tooltip__button--close::before {
+  background-color: #fff;
+  content: '';
+  height: 12px;
+  position: absolute;
+  transform-origin: center;
+  width: 2px;
+}
+
+.health-tooltip__button--close::after {
+  transform: rotate(45deg);
+}
+
+.health-tooltip__button--close::before {
+  transform: rotate(-45deg);
+}
+
+
+.health-tooltip__button:hover,
+.health-tooltip__button:active {
+  background-color: #A2AAAD;
 }
 
 .health-tooltip__content {
