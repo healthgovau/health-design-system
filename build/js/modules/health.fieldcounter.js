@@ -1,6 +1,6 @@
 "use strict";
 
-/*! @health.gov.au/health-design-system v3.1.3 */
+/*! @health.gov.au/health-design-system v3.1.4 */
 var health = health || {};
 (function ($) {
   /**

@@ -7,7 +7,7 @@ function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Sym
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-/*! @health.gov.au/health-design-system v3.1.3 */
+/*! @health.gov.au/health-design-system v3.1.4 */
 /* PANCAKE v2.0.0 PANCAKE-JS v2.0.0 */!function (c) {
   var e = {};
   function s(e, t, n) {
@@ -643,6 +643,7 @@ var health = health || {};
   // Default tooltip settings.
   var defaultSettings = {
     arrow: false,
+    autoPosition: true,
     boundary: 'clippingAncestors',
     closeButton: false,
     html: null,
@@ -725,9 +726,12 @@ var health = health || {};
         var arrow = tooltip.querySelector('.health-tooltip__arrow');
         var middleware = [FloatingUIDOM.offset(settings.arrow ? 10 : 0), FloatingUIDOM.inline(), FloatingUIDOM.shift({
           boundary: settings.boundary
-        }), FloatingUIDOM.autoPlacement({
-          allowedPlacements: ['top', 'bottom']
         })];
+        if (settings.autoPosition) {
+          middleware.push(FloatingUIDOM.autoPlacement({
+            allowedPlacements: ['bottom', 'top']
+          }));
+        }
         if (settings.arrow) {
           middleware.push(FloatingUIDOM.arrow({
             element: document.querySelector('.health-tooltip__arrow'),
