@@ -50,6 +50,7 @@ var health = health || {};
   // Default tooltip settings.
   const defaultSettings = {
     arrow: false,
+    autoPosition: true,
     boundary: 'clippingAncestors',
     closeButton: false,
     html: null,
@@ -143,10 +144,12 @@ var health = health || {};
           FloatingUIDOM.shift({
             boundary: settings.boundary,
           }),
-          FloatingUIDOM.autoPlacement({
-            allowedPlacements: ['top', 'bottom'],
-          }),
-        ]
+        ];
+        if (settings.autoPosition) {
+          middleware.push(FloatingUIDOM.autoPlacement({
+            allowedPlacements: ['bottom', 'top'],
+          }));
+        }
         if (settings.arrow) {
           middleware.push(FloatingUIDOM.arrow({
             element: document.querySelector('.health-tooltip__arrow'),

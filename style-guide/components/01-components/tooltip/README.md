@@ -13,6 +13,7 @@ health.tooltip(selector, options)
 * **selector:** `{string|HTMLElement|NodeList}` the element or elements to which the tooltip should be applied. When using a string then it must be a valid CSS selector string.
 * **options:** `{object}` tooltip options.
   * **arrow:** `{boolean}` If true, an arrow will be displayed between the tooltip and the triggering element. If false, no arrow will be displayed.
+  * **autoPosition:** `{boolean}` If true, the popup will automattically appear above or below the tooltip marker so that it remains visible on the screen. If false, then the popup will appear below the tooltip marker.
   * **boundary:** `{string|Element|Array<Element>|Rect}` Used to determine the boundary that the tooltip will be constrained to. See the FloatingUI documentation on the [boundary](https://floating-ui.com/docs/detectoverflow#boundary) property for more information on its usage.
   * **closeButton:** `{boolean}` If true, a close button will be displayed. If false, no close button will be displayed.
   * **html:** `{string|null}` Tooltip content. If not provided, the title attribute of the element will be used assuming it is present. If neither are present, the tooltip will be empty.
@@ -25,6 +26,7 @@ Default options
 ```javascript
 {
   arrow: false,
+  autoPosition: true,
   boundary: 'clippingAncestors',
   closeButton: false,
   html: null,
