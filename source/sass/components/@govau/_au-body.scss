@@ -75,10 +75,10 @@
   );
 
   @each $name, $value in $spacing-sizes {
-    .margin-bottom-#{$name} {
+    .margin-bottom--#{$name} {
       margin-bottom: au-space($value);
     }
-    .margin-top-#{$name} {
+    .margin-top--#{$name} {
       margin-top: au-space($value);
     }
   }
@@ -86,10 +86,10 @@
   @each $screensize-key, $screensize in $screen-sizes {
     @each $name, $value in $spacing-sizes {
       @include AU-media($screensize) {
-        .#{$screensize}\:margin-bottom-#{$name} {
+        .#{$screensize}\:margin-bottom--#{$name} {
           margin-bottom: au-space($value)
         }
-        .#{$screensize}\:margin-top-#{$name} {
+        .#{$screensize}\:margin-top--#{$name} {
           margin-top: au-space($value)
         }
       }
@@ -99,19 +99,19 @@
   // Standard gap class (to keep previous functionality working)
   %standard-gap,
   .standard-gap {
-    @extend .margin-top-standard;
+    @extend .margin-top--standard;
 
     &--mobile-only {
-      @extend .margin-top-standard;
-      @extend .md\:margin-top-none;
+      @extend .margin-top--standard;
+      @extend .md\:margin-top--none;
     }
 
     &--bottom {
-      @extend .margin-bottom-standard;
+      @extend .margin-bottom--standard;
 
       &--mobile-only {
-        @extend .margin-top-standard;
-        @extend .md\:margin-top-none;
+        @extend .margin-top--standard;
+        @extend .md\:margin-top--none;
       }
     }
   }
