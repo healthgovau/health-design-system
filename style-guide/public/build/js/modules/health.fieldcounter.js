@@ -1,6 +1,7 @@
-/*! @health.gov.au/health-design-system v3.0.3 */
-var health = health || {};
+"use strict";
 
+/*! @health.gov.au/health-design-system v3.1.4 */
+var health = health || {};
 (function ($) {
   /**
    * Add a dynamic character counter to the bottom of a input field.
@@ -12,14 +13,10 @@ var health = health || {};
    *   How many characters to restrict. If ommited, will use maxlength attribute if found.
    */
   health.fieldLengthCounter = function (selector, maxlength) {
-
-    $(selector).each(function() {
-
+    $(selector).each(function () {
       var $counter = $('<span class="text--minor"></span>');
       var maxlength = parseInt(maxlength) || parseInt($(this).attr('maxlength')) || 0;
-
       $(this).after($counter);
-
       $(this).keyup(function () {
         var remaining = maxlength - $(this).val().length;
         if (remaining < 0) {
@@ -27,7 +24,6 @@ var health = health || {};
         }
         $counter.text(remaining + ' characters remaining');
       });
-
       $(this).trigger('keyup');
     });
   };

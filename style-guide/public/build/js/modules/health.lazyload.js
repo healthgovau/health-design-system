@@ -1,14 +1,14 @@
-/*! @health.gov.au/health-design-system v3.0.3 */
+"use strict";
+
+/*! @health.gov.au/health-design-system v3.1.4 */
 (function ($) {
   $(document).ready(function () {
     if (typeof LazyLoad !== 'undefined') {
       var myLazyLoad = new LazyLoad({
-        callback_load: function (el) {
+        callback_load: function callback_load(el) {
           // Remove all the space reserving class and styles.
           $(el).parents('.image-outer').find('.image-placeholder').remove();
-          $(el).parents('.image-wrapper')
-            .removeClass('image-loading')
-            .removeClass('image-wrapper');
+          $(el).parents('.image-wrapper').removeClass('image-loading').removeClass('image-wrapper');
           // Fire off an event to listeners that this image has loaded.
           $(el).trigger('lazyLoad_loaded', el);
         }
@@ -36,7 +36,7 @@
         myLazyLoad._settings.threshold = 999999999;
         myLazyLoad.update();
         window.scrollTo(0, document.body.scrollHeight);
-      }
+      };
     }
   });
 })(jQuery);

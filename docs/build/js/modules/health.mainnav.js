@@ -1,10 +1,9 @@
-/*! @health.gov.au/health-design-system v3.0.3 */
+"use strict";
+
+/*! @health.gov.au/health-design-system v3.1.4 */
 var health = health || {};
-
 (function ($, once) {
-
   $(document).ready(function () {
-
     // Main nav drop-down controls
     // Add IDs/aria to dropdown control/nav
     var dropdownControls = $('.au-main-nav__dropdown-control > a');
@@ -23,11 +22,10 @@ var health = health || {};
     // Add click event handlers for all the buttons
     $(".au-main-nav__dropdown-control > a").on("click", function (event) {
       event.preventDefault();
-      $control = $(this);
-
+      var $control = $(this);
       $.each(dropdownControls, function (index, element) {
         if ($(this).attr("id") === $control.attr("id")) {
-          $controlParent = $control.parent(".au-main-nav__dropdown-control");
+          var $controlParent = $control.parent(".au-main-nav__dropdown-control");
           if ($controlParent.hasClass('au-main-nav__dropdown-control--active')) {
             $controlParent.removeClass('au-main-nav__dropdown-control--active');
             $(this).attr("aria-expanded", "false");
@@ -51,7 +49,5 @@ var health = health || {};
         $(".au-main-nav__dropdown-control--active").removeClass('au-main-nav__dropdown-control--active');
       }
     });
-
   });
-
 })(jQuery, once);

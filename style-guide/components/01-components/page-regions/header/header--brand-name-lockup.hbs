@@ -1,0 +1,39 @@
+<header class="au-header pillars-container" role="banner">
+  <div class="container">
+    <div id="pillars"></div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        
+        <div class="au-header__flex-container">
+
+          <a href="/" title="Home" rel="home" class="au-header__logo">
+            <img
+              src="{{path '/images/{{ image }}'}}"
+              alt="Australia Government Department of Health"
+              class="au-header__logo-image au-header__logo-image--hidden-mobile au-responsive-media-img"
+            />
+
+            <img
+              src="{{path '/images/DHAC_stacked_strip.svg'}}"
+              {{!-- src="{{path '/images/{{ image }}'}}" --}}
+              alt="Australia Government Department of Health"
+              class="au-header__logo-image au-header__logo-image--hidden-desktop au-responsive-media-img"
+            />
+          </a>
+
+          <div class="au-header__lockup">
+              <div class="au-header__title">Brand name here</div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-md-6">
+        {{render "@sub-nav"}}
+        {{render "@search"}}
+      </div>
+    </div>
+  </div>
+</header>
+
+{{render "@main-nav"}}

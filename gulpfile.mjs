@@ -1,6 +1,7 @@
 import { dest, src, series, parallel, watch } from 'gulp';
 import { deleteSync } from 'del';
 import * as dartSass from 'sass';
+import babel from 'gulp-babel';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 import concat from 'gulp-concat';
@@ -96,6 +97,11 @@ function jsAggregate() {
   return src(options.paths.js + 'src/*.js')
     .pipe(concat(options.name + '.js'))
     .pipe(header(banner, { pkg : pkg } ))
+    .pipe(
+      babel({
+        presets: ['@babel/env']
+      })
+    )
     .pipe(minify({
       ext:{
         min:'.min.js'
@@ -111,6 +117,11 @@ function jsAggregate() {
 function js() {
   return src(options.paths.js + 'src/*.js')
     .pipe(header(banner, { pkg : pkg } ))
+    .pipe(
+      babel({
+        presets: ['@babel/env']
+      })
+    )
     .pipe(minify({
       ext:{
         min:'.min.js'

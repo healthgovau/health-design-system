@@ -1,8 +1,8 @@
-/*! @health.gov.au/health-design-system v3.0.3 */
+"use strict";
+
+/*! @health.gov.au/health-design-system v3.1.4 */
 var health = health || {};
-
 (function ($, once) {
-
   /**
    * Add an autocomplete dropdown to a text input.
    *
@@ -21,16 +21,16 @@ var health = health || {};
         "ui-autocomplete": "au-body au-link-list"
       },
       // When the user selects a value, submit the form.
-      select: function (event, ui) {
+      select: function select(event, ui) {
         $(this).val(ui.item.value);
         $(event.target).parents('form').submit();
       },
       // Show loading spinner.
-      search: function (event, ui) {
+      search: function search(event, ui) {
         $(event.target).parents('form').find('.health-loading').toggleClass('health-loading--active');
       },
       // Hide loading spinner.
-      response: function (event, ui) {
+      response: function response(event, ui) {
         $(event.target).parents('form').find('.health-loading').toggleClass('health-loading--active');
       }
     });
@@ -67,8 +67,7 @@ var health = health || {};
    */
   health.facetShowMore = function (selector, limit) {
     $(once('healthFacetShowMore', selector)).each(function () {
-      var
-        limit_css = limit - 1,
+      var limit_css = limit - 1,
         facet = $(this);
 
       // Hide filters beyond the limit.
@@ -91,9 +90,7 @@ var health = health || {};
       });
     });
   };
-
   $(document).ready(function () {
-
     var resizeTimer; // Set resizeTimer to empty so it resets on page load
     // On resize, run the function and reset the timeout
     $(window).resize(function () {
@@ -114,13 +111,12 @@ var health = health || {};
 
     // Filter toggles.
     $('.health-filter').click(function (e) {
-      $(this).toggleClass('health-filter--open');;
+      $(this).toggleClass('health-filter--open');
+      ;
       $('.health-facet').toggleClass('health-facet--mobile-hidden');
     });
 
     // Add correct grid class to second refine search in listings.
     $('.region-navigation #search-api-page-search-form-default-search--2').addClass('col-xs-12');
-
   });
-
 })(jQuery, once);

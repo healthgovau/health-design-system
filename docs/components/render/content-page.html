@@ -193,15 +193,22 @@
   </ul>
 </div>
 
+<div id="health-tooltip" class="health-tooltip">
+    <div class="health-tooltip__content"></div>
+</div>
+
 <script language="JavaScript">
-  $(document).ready(function () {
-    health.tooltip('#health-toolbar__share', {
-      html: document.getElementById("health-share-menu"),
-      trigger: 'click',
-      appendTo: $("#health-toolbar__share").parent('li')[0]
+  (function ($) {
+    $(document).ready(function() {
+      var element = document.getElementById("health-toolbar__share");
+      health.tooltip(element, {
+        html: document.getElementById("health-share-menu").outerHTML,
+        triggerOn: 'click'
+      });
     });
-  });
+  })(jQuery);
 </script>
+
         </div>
       </div>
     </div>

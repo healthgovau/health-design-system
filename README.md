@@ -1,6 +1,6 @@
 # Health Design System
 
-The Health Design System (HDS) is a design system for Australian Government Department of Health which is built on top of the [DTA Design System](https://gold.designsystemau.org/).
+The Health Design System (HDS) is a design system for Australian Government Department of Health, Disability and Ageing which is built on top of the [Gold Design System](https://gold.designsystemau.org/).
 
 ## Style Guide
 View the [Style Guide](https://healthgovau.github.io/health-design-system/) for documentation on how to use the Health Design System components.

@@ -1,4 +1,6 @@
-/*! @health.gov.au/health-design-system v3.0.3 */
+"use strict";
+
+/*! @health.gov.au/health-design-system v3.1.4 */
 (function ($) {
   $(document).ready(function () {
     //YouTube embed on click
@@ -29,7 +31,6 @@
 
       // Hide the length.
       $('.health-video__preview__length').hide();
-
     });
   });
 })(jQuery);

@@ -1,8 +1,8 @@
-/*! @health.gov.au/health-design-system v3.0.3 */
+"use strict";
+
+/*! @health.gov.au/health-design-system v3.1.4 */
 var health = health || {};
-
 (function ($) {
-
   /**
    * Dynamically generate the in page nav links.
    *
@@ -11,7 +11,7 @@ var health = health || {};
    * @param selector
    *   The area to look for the links, in a jQuery selector.
    */
-  health.inpagenav = function(selector) {
+  health.inpagenav = function (selector) {
     if (typeof $.fn.anchorific !== 'undefined') {
       $(selector).anchorific({
         navigation: '.au-inpage-nav-links',
@@ -21,6 +21,4 @@ var health = health || {};
       });
     }
   };
-
 })(jQuery);
-
