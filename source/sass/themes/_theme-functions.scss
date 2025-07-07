@@ -9,3 +9,7 @@
   }
   // desaturate($color, $percentage) - to decrease saturation (good for backgrounds) - built-in
   // Ref: https://uxmovement.com/content/why-you-should-avoid-bright-saturated-background-colors/
+
+@function health-space($value) {
+  @return $spacing-unit * $value;
+}

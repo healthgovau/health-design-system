@@ -2,8 +2,12 @@
   "title": "Spacing",
   "variants": [
     {
+      "name": "default",
+      "notes": "Default spacing applied to the body."
+    },
+    {
       "name": "Standard gap",
-      "notes": "Applies a gab above the content.",
+      "notes": "Applies a gap above the content.",
       "context": {
         "modifier": "standard-gap"
       }
@@ -20,6 +24,18 @@
       "notes": "Used on mobile when the grid stacks",
       "context": {
         "modifier": "standard-gap--bottom"
+      }
+    },
+    {
+      "name": "Margin top",
+      "context": {
+        "modifier": "margin-top--large sm:margin-top--standard md:margin-top--none"
+      }
+    },
+    {
+      "name": "Margin bottom",
+      "context": {
+        "modifier": "margin-bottom--large sm:margin-bottom--standard md:margin-bottom--none"
       }
     }
   ]

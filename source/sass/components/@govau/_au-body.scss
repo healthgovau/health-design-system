@@ -55,21 +55,45 @@
     @include AU-sronly();
   }
 
-  // The standard margin top used for uikit.
+  @each $name, $value in $spacing-sizes {
+    .margin-bottom--#{$name} {
+      margin-bottom: health-space($value);
+    }
+    .margin-top--#{$name} {
+      margin-top: health-space($value);
+    }
+  }
+
+  @each $screensize-key, $screensize in $spacing-screen-sizes {
+    @each $name, $value in $spacing-sizes {
+      @include AU-media($screensize) {
+        .#{$screensize}\:margin-bottom--#{$name} {
+          margin-bottom: health-space($value)
+        }
+        .#{$screensize}\:margin-top--#{$name} {
+          margin-top: health-space($value)
+        }
+      }
+    }
+  }
+
+  // Standard gap class (to keep previous functionality working)
   %standard-gap,
   .standard-gap {
-    @include AU-space(margin-top, 1.5unit);
+    @extend .margin-top--standard;
 
     &--mobile-only {
-      @include AU-space(margin-top, 1.5unit);
-
-      @include AU-media(sm) {
-        margin-top: 0;
-      }
+      @extend .margin-top--standard;
+      @extend .md\:margin-top--none;
     }
 
     &--bottom {
-      @include AU-space(margin-bottom, 1.5unit);
+      @extend .margin-bottom--standard;
+
+      &--mobile-only {
+        @extend .margin-top--standard;
+        @extend .md\:margin-top--none;
+      }
     }
   }
 
@@ -95,5 +119,4 @@
   aside {
     display: block;
   }
-
 }
