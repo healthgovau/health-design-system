@@ -81,3 +81,6 @@ $hero-overlap-top: 75px; // Amount to nudge mobile hero content over image
 $step-border-width: 2px;
 $step-node-size: 15px; // Odd numbers are better given centre-alignment
 $step-node-size--value: 33px; // This node has a value in it, such as a counter
+
+// Used for standardised spacing.
+$spacing-unit: 0.25rem;

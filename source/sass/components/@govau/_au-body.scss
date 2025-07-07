@@ -55,12 +55,6 @@
     @include AU-sronly();
   }
 
-  $spacing-unit: 0.25rem;
-
-  @function hds-body-space($value) {
-    @return $spacing-unit * $value;
-  }
-
   $spacing-sizes: (
     none: 0,
     small: 2, // 0.5rem
@@ -76,10 +70,10 @@
 
   @each $name, $value in $spacing-sizes {
     .margin-bottom--#{$name} {
-      margin-bottom: hds-body-space($value);
+      margin-bottom: health-space($value);
     }
     .margin-top--#{$name} {
-      margin-top: hds-body-space($value);
+      margin-top: health-space($value);
     }
   }
 
@@ -87,10 +81,10 @@
     @each $name, $value in $spacing-sizes {
       @include AU-media($screensize) {
         .#{$screensize}\:margin-bottom--#{$name} {
-          margin-bottom: hds-body-space($value)
+          margin-bottom: health-space($value)
         }
         .#{$screensize}\:margin-top--#{$name} {
-          margin-top: hds-body-space($value)
+          margin-top: health-space($value)
         }
       }
     }
