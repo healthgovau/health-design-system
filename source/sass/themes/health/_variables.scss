@@ -84,3 +84,14 @@ $step-node-size--value: 33px; // This node has a value in it, such as a counter
 
 // Used for standardised spacing.
 $spacing-unit: 0.25rem;
+$spacing-screen-sizes: (
+  sm:'sm',
+  md:'md',
+  lg:'lg'
+);
+$spacing-sizes: (
+  none: 0,
+  small: 2, // 0.5rem
+  standard: 6, // 1.5rem
+  large: 12, //3rem
+);

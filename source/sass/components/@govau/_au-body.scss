@@ -55,19 +55,6 @@
     @include AU-sronly();
   }
 
-  $spacing-sizes: (
-    none: 0,
-    small: 2, // 0.5rem
-    standard: 6, // 1.5rem
-    large: 12, //3rem
-  );
-
-  $screen-sizes: (
-    sm:'sm',
-    md:'md',
-    lg:'lg'
-  );
-
   @each $name, $value in $spacing-sizes {
     .margin-bottom--#{$name} {
       margin-bottom: health-space($value);
@@ -77,7 +64,7 @@
     }
   }
 
-  @each $screensize-key, $screensize in $screen-sizes {
+  @each $screensize-key, $screensize in $spacing-screen-sizes {
     @each $name, $value in $spacing-sizes {
       @include AU-media($screensize) {
         .#{$screensize}\:margin-bottom--#{$name} {
