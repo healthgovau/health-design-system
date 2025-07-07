@@ -2,8 +2,12 @@
   "title": "Spacing",
   "variants": [
     {
+      "name": "default",
+      "notes": "Default spacing applied to the body."
+    },
+    {
       "name": "Standard gap",
-      "notes": "Applies a gab above the content.",
+      "notes": "Applies a gap above the content.",
       "context": {
         "modifier": "standard-gap"
       }
@@ -24,14 +28,12 @@
     },
     {
       "name": "Margin top",
-      "notes": "Responsive spacing classes like sm:margin-top--standard or lg:margin-bottom--large apply top/bottom margins at specific screen sizes and up (sm, md, lg). Margin sizes include none, small, standard (1.5rem), and large (3rem). Use the format [screen]:margin-[top|bottom]--[size] to control vertical spacing responsively.",
       "context": {
         "modifier": "margin-top--large sm:margin-top--standard md:margin-top--none"
       }
     },
     {
       "name": "Margin bottom",
-      "notes": "Responsive spacing classes like sm:margin-top--standard or lg:margin-bottom--large apply top/bottom margins at specific screen sizes and up (sm, md, lg). Margin sizes include none, small, standard (1.5rem), and large (3rem). Use the format [screen]:margin-[top|bottom]--[size] to control vertical spacing responsively.",
       "context": {
         "modifier": "margin-bottom--large sm:margin-bottom--standard md:margin-bottom--none"
       }
