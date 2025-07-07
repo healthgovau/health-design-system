@@ -57,7 +57,7 @@
 
   $spacing-unit: 0.25rem;
 
-  @function au-space($value) {
+  @function hds-body-space($value) {
     @return $spacing-unit * $value;
   }
 
@@ -76,10 +76,10 @@
 
   @each $name, $value in $spacing-sizes {
     .margin-bottom--#{$name} {
-      margin-bottom: au-space($value);
+      margin-bottom: hds-body-space($value);
     }
     .margin-top--#{$name} {
-      margin-top: au-space($value);
+      margin-top: hds-body-space($value);
     }
   }
 
@@ -87,10 +87,10 @@
     @each $name, $value in $spacing-sizes {
       @include AU-media($screensize) {
         .#{$screensize}\:margin-bottom--#{$name} {
-          margin-bottom: au-space($value)
+          margin-bottom: hds-body-space($value)
         }
         .#{$screensize}\:margin-top--#{$name} {
-          margin-top: au-space($value)
+          margin-top: hds-body-space($value)
         }
       }
     }
