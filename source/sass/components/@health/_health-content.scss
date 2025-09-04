@@ -6,8 +6,7 @@
     margin-top: 0;
   }
 
-  > .row > div:first-of-type{
-    //margin-top;
+  > .row:first-of-type > div:first-of-type {
     @include AU-space('margin-top', 2.5unit);
 
     @include AU-media('sm') {
