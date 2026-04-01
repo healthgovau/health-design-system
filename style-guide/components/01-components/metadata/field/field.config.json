@@ -25,6 +25,14 @@
       }
     },
     {
+      "name": "Inline - Comma seperated",
+      "context": {
+        "field": {
+          "modifier": "health-field--inline--comma-seperated"
+        }
+      }
+    },
+    {
       "name": "Inline (label with icon)",
       "context": {
         "field": {
