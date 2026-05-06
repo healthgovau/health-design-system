@@ -438,6 +438,12 @@ $card-padding--mobile: $component-padding--mobile;
   }
 }
 
+.health-band--quaternary {
+  .health-card.health-card--colour-quaternary {
+    background: var(--quaternary-gradient-bg--end);
+  }
+}
+
 // Remove margin in listings
 .health-listing .health-card {
   margin-top: 0;

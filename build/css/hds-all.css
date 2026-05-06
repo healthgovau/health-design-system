@@ -7433,6 +7433,10 @@ textarea.au-text-input {
   background: var(--tertiary-gradient-bg--end);
 }
 
+.health-band--quaternary .health-card.health-card--colour-quaternary {
+  background: var(--quaternary-gradient-bg--end);
+}
+
 .health-listing .health-card {
   margin-top: 0;
 }
