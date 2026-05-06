@@ -67,6 +67,11 @@ const components = [
     viewports,
   },
   {
+    label: "Card - Full Colour Quaternary",
+    url: "http://localhost:3000/components/preview/card--full-colour-(quaternary)",
+    viewports,
+  },
+  {
     label: "Card - Multiple Links",
     url: "http://localhost:3000/components/preview/card--multple-links",
     viewports,
