@@ -92,6 +92,14 @@
       }
     },
     {
+      "name": "Full colour (quaternary)",
+      "view": "card--no-image.hbs",
+      "context": {
+        "class": "health-card--colour-quaternary",
+        "content": "This card uses the quaternary colour as a background."
+      }
+    },
+    {
       "name": "Multple links",
       "view": "card--multiple-links.hbs",
       "status": "wip"

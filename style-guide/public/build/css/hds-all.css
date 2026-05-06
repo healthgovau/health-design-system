@@ -4786,18 +4786,20 @@ p:empty,
   --secondary-gradient-bg--end: #0F7E87;
   --tertiary-gradient-bg--start: #0062a4;
   --tertiary-gradient-bg--end: #0075c5;
-  --quaternary-gradient-bg--start: #cfe6fb;
-  --quaternary-gradient-bg--end: #e6f3ff;
+  --quaternary-gradient-bg--start: rgb(0, 132.3, 160.2);
+  --quaternary-gradient-bg--end: #0093B2;
   --neutral-bg: #f8f8f8;
   --neutral--darker-bg: #ececec;
   --primary-body-text: #FFF;
   --secondary-body-text: #FFF;
   --tertiary-body-text: #FFF;
+  --quaternary-body-text: #FFF;
   --neutral-body-text: #313131;
   --neutral--darker-body-text: #313131;
   --primary-link-text: #FFF;
   --secondary-link-text: #FFF;
   --tertiary-link-text: #FFF;
+  --quaternary-link-text: #FFF;
   --neutral-link-text: #006FB0;
   --neutral--darker-link-text: #006FB0;
   --btn-bg: #006FB0;
@@ -4812,6 +4814,9 @@ p:empty,
   --tertiary-btn-bg: #FFF;
   --tertiary-btn-bg--hover: rgb(204, 223.6, 236.8);
   --tertiary-btn-text: #313131;
+  --quaternary-btn-bg: #FFF;
+  --quaternary-btn-bg--hover: rgb(245.4, 250, 254.2);
+  --quaternary-btn-text: #313131;
   --neutral-btn-bg: #006FB0;
   --neutral-btn-bg--hover: rgb(0, 78.8352272727, 125);
   --neutral-btn-text: #FFF;
@@ -4856,24 +4861,29 @@ p:empty,
   --card-text--primary: #FFF;
   --card-text--secondary: #FFF;
   --card-text--tertiary: #FFF;
+  --card-text--quaternary: #FFF;
   --card-text--neutral: #313131;
   --card-link--primary: #FFF;
   --card-link--secondary: #FFF;
   --card-link--tertiary: #FFF;
+  --card-link--quaternary: #FFF;
   --card-highlight-border: #0075c5;
   --card-clickable-icon: #000000;
   --card-clickable-icon--primary: #ffffff;
   --card-clickable-icon--secondary: #ffffff;
   --card-clickable-icon--tertiary: #ffffff;
+  --card-clickable-icon--quaternary: #ffffff;
   --card-clickable-icon--neutral: #000000;
   --card-text-minor: #414141;
   --card-text-minor--primary: #ffffff;
   --card-text-minor--secondary: #ffffff;
   --card-text-minor--tertiary: #ffffff;
+  --card-text-minor--quaternary: #ffffff;
   --card-text-minor--neutral: #414141;
   --callout-border--primary: #0075c5;
   --callout-border--secondary:#0F7E87;
   --callout-border--tertiary: #005ab0;
+  --callout-border--quaternary: #0093B2;
   --tab-border--active: #074cd9;
   --tag-link-bg: #e6f3ff;
   --tag-link-border: rgb(179, 218.52, 255);
@@ -7316,6 +7326,27 @@ textarea.au-text-input {
 }
 .au-body .health-card.health-card--colour-tertiary .health-card__date {
   color: var(--card-text-minor--tertiary);
+}
+.au-body .health-card.health-card--colour-quaternary {
+  background-color: var(--quaternary-gradient-bg--start);
+  background: -webkit-gradient(linear, left top, right top, from(var(--quaternary-gradient-bg--start)), to(var(--quaternary-gradient-bg--end)));
+  background: linear-gradient(to right, var(--quaternary-gradient-bg--start), var(--quaternary-gradient-bg--end));
+  color: var(--card-text--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary .health-card__title {
+  color: var(--card-text--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary .health-card__link {
+  color: var(--card-link--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary.health-card--clickable .health-card__link {
+  color: var(--card-text--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary.health-card--clickable:after {
+  background: var(--card-clickable-icon--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary .health-card__date {
+  color: var(--card-text-minor--quaternary);
 }
 .au-body .health-card.health-card--colour-neutral {
   background: var(--neutral--darker-bg);
