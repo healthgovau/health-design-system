@@ -453,63 +453,6 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #313131;
   background-color: #ffffff;
-  /**
-   * Highlighting in-page sections that are in focus
-   */
-  /**
-   * `mark` styling.
-   */
-  /**
-   * Text selection styling
-   */
-  /**
-   * Vertical spacing of common text elements.
-   */
-  /**
-   * Emphasis and alt. voice/mood/diff. from prose text.
-   */
-  /**
-   * Stong emphasis.
-   */
-  /**
-   * `small`: for less important information (not stylistic purposes).
-   */
-  /**
-   * `s`: represents contents no longer accurate/relevant.
-   * del` & `ins`: editorial markup.
-   */
-  /**
-   * Defining definition of a term.
-   *
-   * The paragraph, description list group, or section that is the nearest
-   * ancestor of the `dfn` element must also contain the definition(s) for the term
-   * given by the `dfn` element.
-   *
-   * Note: `abbr` can be nested inside `dfn`.
-   */
-  /**
-   * Abbreviations/acronyms.
-   */
-  /**
-   * Variables, eg. as used in mathematical expressions.
-   *
-   * We also provide semantic support for nested vars, and things like indices.
-   */
-  /**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   * https://github.com/necolas/normalize.css/blob/master/normalize.css#L174
-   */
-  /**
-   * Keyboard strokes.
-   * Code snippets and code blocks.
-   */
-  /**
-   * Horizontal rule, used for paragraph-level thematic breaks.
-   */
-  /**
-   *  Body colour schemes
-   */
 }
 .au-body a {
   color: #006FB0;
@@ -528,14 +471,29 @@
 .au-body a::-moz-focus-inner {
   border: 0;
 }
+.au-body {
+  /**
+   * Highlighting in-page sections that are in focus
+   */
+}
 .au-body [tabindex="0"]:focus,
 .au-body :target {
   outline: 3px solid #9263DE;
   outline-offset: 2px;
 }
+.au-body {
+  /**
+   * `mark` styling.
+   */
+}
 .au-body mark {
   color: #ffffff;
   background-color: #006FB0;
+}
+.au-body {
+  /**
+   * Text selection styling
+   */
 }
 .au-body ::-moz-selection {
   color: #ffffff;
@@ -552,6 +510,11 @@
 .au-body video::selection,
 .au-body iframe::selection {
   background-color: rgba(0, 111, 176, 0.75);
+}
+.au-body {
+  /**
+   * Vertical spacing of common text elements.
+   */
 }
 .au-body p {
   max-width: 42em;
@@ -610,18 +573,39 @@
   content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHZpZXdCb3g9IjAgMCA2NTggMTgiPjx0ZXh0IHg9IjEzIiB5PSIxMyIgZm9udC1zaXplPSIxMyI+TWVzc3JzLCBEb20sIFBhZ2V5LCBUcmViLCBQYXQgYW5kIEtsZXBhcyBhcmUgcHJvdWQgdG8gcHJlc2VudCB0aGUgR09MRCBkZXNpZ24gc3lzdGVtLiAtIE1pc2NoaWVmIG1hbmFnZWQ8L3RleHQ+PC9zdmc+");
   color: #BADA55;
 }
+.au-body {
+  /**
+   * Emphasis and alt. voice/mood/diff. from prose text.
+   */
+}
 .au-body em,
 .au-body i {
   font-style: italic;
+}
+.au-body {
+  /**
+   * Stong emphasis.
+   */
 }
 .au-body strong,
 .au-body b {
   font-weight: bold;
 }
+.au-body {
+  /**
+   * `small`: for less important information (not stylistic purposes).
+   */
+}
 .au-body small {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.4285714286;
+}
+.au-body {
+  /**
+   * `s`: represents contents no longer accurate/relevant.
+   * del` & `ins`: editorial markup.
+   */
 }
 .au-body s,
 .au-body del {
@@ -633,21 +617,43 @@
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
 }
+.au-body {
+  /**
+   * Defining definition of a term.
+   *
+   * The paragraph, description list group, or section that is the nearest
+   * ancestor of the `dfn` element must also contain the definition(s) for the term
+   * given by the `dfn` element.
+   *
+   * Note: `abbr` can be nested inside `dfn`.
+   */
+}
 .au-body dfn {
   font-style: normal;
+}
+.au-body {
+  /**
+   * Abbreviations/acronyms.
+   */
 }
 .au-body abbr,
 .au-body abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 .au-body abbr[title] {
   cursor: help;
 }
 .au-body a abbr {
   padding-bottom: 1px;
+}
+.au-body {
+  /**
+   * Variables, eg. as used in mathematical expressions.
+   *
+   * We also provide semantic support for nested vars, and things like indices.
+   */
 }
 .au-body var {
   padding: 0 1px;
@@ -659,6 +665,13 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   padding: 0 1px;
+}
+.au-body {
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   * https://github.com/necolas/normalize.css/blob/master/normalize.css#L174
+   */
 }
 .au-body sub,
 .au-body sup {
@@ -673,6 +686,12 @@
 }
 .au-body sup {
   top: -0.5em;
+}
+.au-body {
+  /**
+   * Keyboard strokes.
+   * Code snippets and code blocks.
+   */
 }
 .au-body kbd,
 .au-body code,
@@ -699,6 +718,11 @@
     -o-tab-size: 4;
        tab-size: 4;
 }
+.au-body {
+  /**
+   * Horizontal rule, used for paragraph-level thematic breaks.
+   */
+}
 .au-body hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -712,6 +736,11 @@
 .au-body * + hr {
   margin-top: 24px;
   margin-top: 1.5rem;
+}
+.au-body {
+  /**
+   *  Body colour schemes
+   */
 }
 .au-body.au-body--alt {
   background: rgb(234.6, 234.6, 234.6);
@@ -903,15 +932,6 @@ a.au-btn {
   vertical-align: middle;
   -webkit-transition: background 0.1s ease, border 0.1s ease, color 0.1s ease;
   transition: background 0.1s ease, border 0.1s ease, color 0.1s ease;
-  /**
-  * SECONDARY
-  */
-  /**
-  * TERTIARY
-  */
-  /**
-  	 * BLOCK
-  	 */
 }
 .au-body .au-btn,
 .au-body a.au-btn {
@@ -993,6 +1013,12 @@ a.au-btn.au-btn--dark:focus {
 a.au-btn.au-btn--dark::-moz-focus-inner {
   border: 0;
 }
+.au-btn,
+a.au-btn {
+  /**
+  * SECONDARY
+  */
+}
 .au-btn.au-btn--secondary,
 a.au-btn.au-btn--secondary {
   color: #006FB0;
@@ -1027,6 +1053,12 @@ a.au-btn.au-btn--secondary.au-btn--dark:hover:not(:disabled) {
 .ie8 .au-body a.au-btn.au-btn--secondary.au-btn--dark:hover {
   color: #000;
 }
+.au-btn,
+a.au-btn {
+  /**
+  * TERTIARY
+  */
+}
 .au-btn.au-btn--tertiary,
 a.au-btn.au-btn--tertiary {
   color: #006FB0;
@@ -1054,6 +1086,12 @@ a.au-btn.au-btn--pride {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(16.6666666667%, rgba(255, 62, 24, 0.5)), color-stop(16.6666666667%, rgba(252, 154, 0, 0.5)), color-stop(33.3333333333%, rgba(252, 154, 0, 0.52)), color-stop(33.3333333333%, rgba(255, 216, 0, 0.5)), color-stop(33.3333333333%, rgba(255, 216, 0, 0.5)), color-stop(50%, rgba(255, 216, 0, 0.5)), color-stop(50%, rgba(57, 234, 124, 0.5)), color-stop(66.6666666667%, rgba(57, 234, 124, 0.5)), color-stop(66.6666666667%, rgba(11, 178, 255, 0.5)), color-stop(83.3333333333%, rgba(11, 178, 255, 0.5)), color-stop(83.3333333333%, rgba(152, 90, 255, 0.5)));
   background: linear-gradient(to bottom, rgba(255, 62, 24, 0.5) 16.6666666667%, rgba(252, 154, 0, 0.5) 16.6666666667%, rgba(252, 154, 0, 0.52) 33.3333333333%, rgba(255, 216, 0, 0.5) 33.3333333333%, rgba(255, 216, 0, 0.5) 33.3333333333%, rgba(255, 216, 0, 0.5) 50%, rgba(57, 234, 124, 0.5) 50%, rgba(57, 234, 124, 0.5) 66.6666666667%, rgba(11, 178, 255, 0.5) 66.6666666667%, rgba(11, 178, 255, 0.5) 83.3333333333%, rgba(152, 90, 255, 0.5) 83.3333333333%);
   color: #313131;
+}
+.au-btn,
+a.au-btn {
+  /**
+  	 * BLOCK
+  	 */
 }
 .au-btn.au-btn--block, .health-btn--sticky-bottom .au-btn,
 a.au-btn.au-btn--block {
@@ -4508,15 +4546,6 @@ a.au-tag.au-tag--dark::-moz-focus-inner {
   width: 100%;
   max-width: 205px;
   max-width: 12.8125rem;
-  /**
-   * Block modifier
-   */
-  /**
-   * Number input styling.
-   *
-   * Numbers are easier to disambiguate from each other (and letters) when set in
-   * monospace.
-   */
 }
 .au-text-input.au-text-input--dark:invalid, .au-text-input:invalid {
   background-color: rgb(252.95, 242.25, 242.25);
@@ -4588,11 +4617,24 @@ a.au-tag.au-tag--dark::-moz-focus-inner {
   max-width: 384px;
   max-width: 24rem;
 }
+.au-text-input {
+  /**
+   * Block modifier
+   */
+}
 .au-text-input.au-text-input--block {
   display: block;
   max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.au-text-input {
+  /**
+   * Number input styling.
+   *
+   * Numbers are easier to disambiguate from each other (and letters) when set in
+   * monospace.
+   */
 }
 .au-text-input.au-text-input--number {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -4747,16 +4789,20 @@ p:empty,
   --secondary-gradient-bg--end: #0F7E87;
   --tertiary-gradient-bg--start: #0062a4;
   --tertiary-gradient-bg--end: #0075c5;
+  --quaternary-gradient-bg--start: rgb(0, 132.3, 160.2);
+  --quaternary-gradient-bg--end: #0093B2;
   --neutral-bg: #f8f8f8;
   --neutral--darker-bg: #ececec;
   --primary-body-text: #FFF;
   --secondary-body-text: #FFF;
   --tertiary-body-text: #FFF;
+  --quaternary-body-text: #FFF;
   --neutral-body-text: #313131;
   --neutral--darker-body-text: #313131;
   --primary-link-text: #FFF;
   --secondary-link-text: #FFF;
   --tertiary-link-text: #FFF;
+  --quaternary-link-text: #FFF;
   --neutral-link-text: #006FB0;
   --neutral--darker-link-text: #006FB0;
   --btn-bg: #006FB0;
@@ -4771,6 +4817,9 @@ p:empty,
   --tertiary-btn-bg: #FFF;
   --tertiary-btn-bg--hover: rgb(204, 223.6, 236.8);
   --tertiary-btn-text: #313131;
+  --quaternary-btn-bg: #FFF;
+  --quaternary-btn-bg--hover: rgb(245.4, 250, 254.2);
+  --quaternary-btn-text: #313131;
   --neutral-btn-bg: #006FB0;
   --neutral-btn-bg--hover: rgb(0, 78.8352272727, 125);
   --neutral-btn-text: #FFF;
@@ -4815,24 +4864,29 @@ p:empty,
   --card-text--primary: #FFF;
   --card-text--secondary: #FFF;
   --card-text--tertiary: #FFF;
+  --card-text--quaternary: #FFF;
   --card-text--neutral: #313131;
   --card-link--primary: #FFF;
   --card-link--secondary: #FFF;
   --card-link--tertiary: #FFF;
+  --card-link--quaternary: #FFF;
   --card-highlight-border: #0075c5;
   --card-clickable-icon: #000000;
   --card-clickable-icon--primary: #ffffff;
   --card-clickable-icon--secondary: #ffffff;
   --card-clickable-icon--tertiary: #ffffff;
+  --card-clickable-icon--quaternary: #ffffff;
   --card-clickable-icon--neutral: #000000;
   --card-text-minor: #414141;
   --card-text-minor--primary: #ffffff;
   --card-text-minor--secondary: #ffffff;
   --card-text-minor--tertiary: #ffffff;
+  --card-text-minor--quaternary: #ffffff;
   --card-text-minor--neutral: #414141;
   --callout-border--primary: #0075c5;
   --callout-border--secondary:#0F7E87;
   --callout-border--tertiary: #005ab0;
+  --callout-border--quaternary: #0093B2;
   --tab-border--active: #074cd9;
   --tag-link-bg: #e6f3ff;
   --tag-link-border: rgb(179, 218.52, 255);
@@ -5618,6 +5672,9 @@ a.au-btn.au-btn--inline {
 }
 .au-body .au-callout--tertiary {
   border-left-color: var(--callout-border--tertiary);
+}
+.au-body .au-callout--quaternary {
+  border-left-color: var(--callout-border--quaternary);
 }
 .au-body .au-callout--success {
   border-left-color: #0b996c;
@@ -6729,6 +6786,61 @@ textarea.au-text-input {
   border-color: var(--tertiary-btn-bg--hover);
   color: var(--tertiary-btn-bg--hover);
 }
+.au-body .health-band.health-band--quaternary .health-band__container, .au-body .health-band.health-band--quaternary.health-band--full-width-bg::before {
+  background-color: var(--quaternary-gradient-bg--start);
+  background: -webkit-gradient(linear, left top, right top, from(var(--quaternary-gradient-bg--start)), to(var(--quaternary-gradient-bg--end)));
+  background: linear-gradient(to right, var(--quaternary-gradient-bg--start), var(--quaternary-gradient-bg--end));
+}
+.au-body .health-band.health-band--quaternary.health-band--full-width-bg .health-band__container {
+  background: none;
+}
+.au-body .health-band.health-band--quaternary {
+  color: var(--quaternary-body-text);
+}
+.au-body .health-band.health-band--quaternary a:not(.health-card__link) {
+  color: var(--quaternary-link-text);
+}
+.au-body .health-band.health-band--quaternary a:not(.health-card__link):hover {
+  text-decoration: none;
+}
+.au-body .health-band.health-band--quaternary .au-cta-link {
+  color: var(--quaternary-link-text);
+}
+.au-body .health-band.health-band--quaternary .au-cta-link:after {
+  background: var(--quaternary-link-text);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+}
+.au-body .health-band.health-band--quaternary .au-cta-link:hover {
+  color: var(--quaternary-link-text);
+}
+.au-body .health-band.health-band--quaternary .au-cta-link:hover:after {
+  background: var(--quaternary-link-text);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+}
+.au-body .health-band.health-band--quaternary .au-callout {
+  color: #313131;
+}
+.au-body .health-band.health-band--quaternary .au-btn.au-btn--primary {
+  background-color: var(--quaternary-btn-bg);
+  color: var(--quaternary-btn-text) !important;
+  border-color: var(--quaternary-btn-bg);
+}
+.au-body .health-band.health-band--quaternary .au-btn.au-btn--primary:hover:not(:disabled) {
+  text-decoration: underline;
+  border-color: var(--quaternary-btn-bg--hover);
+  background-color: var(--quaternary-btn-bg--hover);
+}
+.au-body .health-band.health-band--quaternary .au-btn.au-btn--secondary {
+  border-color: var(--quaternary-btn-bg);
+  color: var(--quaternary-btn-bg) !important;
+}
+.au-body .health-band.health-band--quaternary .au-btn.au-btn--secondary:hover:not(:disabled) {
+  text-decoration: underline;
+  border-color: var(--quaternary-btn-bg--hover);
+  color: var(--quaternary-btn-bg--hover);
+}
 .au-body .health-band.health-band--neutral .health-band__container, .au-body .health-band.health-band--neutral.health-band--full-width-bg::before {
   background: var(--neutral-bg);
 }
@@ -7221,6 +7333,27 @@ textarea.au-text-input {
 .au-body .health-card.health-card--colour-tertiary .health-card__date {
   color: var(--card-text-minor--tertiary);
 }
+.au-body .health-card.health-card--colour-quaternary {
+  background-color: var(--quaternary-gradient-bg--start);
+  background: -webkit-gradient(linear, left top, right top, from(var(--quaternary-gradient-bg--start)), to(var(--quaternary-gradient-bg--end)));
+  background: linear-gradient(to right, var(--quaternary-gradient-bg--start), var(--quaternary-gradient-bg--end));
+  color: var(--card-text--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary .health-card__title {
+  color: var(--card-text--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary .health-card__link {
+  color: var(--card-link--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary.health-card--clickable .health-card__link {
+  color: var(--card-text--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary.health-card--clickable:after {
+  background: var(--card-clickable-icon--quaternary);
+}
+.au-body .health-card.health-card--colour-quaternary .health-card__date {
+  color: var(--card-text-minor--quaternary);
+}
 .au-body .health-card.health-card--colour-neutral {
   background: var(--neutral--darker-bg);
   color: var(--card-text--neutral);
@@ -7301,6 +7434,10 @@ textarea.au-text-input {
 
 .health-band--tertiary .health-card.health-card--colour-tertiary {
   background: var(--tertiary-gradient-bg--end);
+}
+
+.health-band--quaternary .health-card.health-card--colour-quaternary {
+  background: var(--quaternary-gradient-bg--end);
 }
 
 .health-listing .health-card {

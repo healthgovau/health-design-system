@@ -32,6 +32,10 @@
       border-left-color: var(--callout-border--tertiary);
     }
 
+    &--quaternary {
+      border-left-color: var(--callout-border--quaternary);
+    }
+
     &--success {
       border-left-color: $AU-color-success;
     }

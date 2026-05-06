@@ -23,6 +23,11 @@ const components = [
     viewports,
   },
   {
+    label: "Callout - Colour Quaternary",
+    url: "http://localhost:3000/components/preview/callout--colour---quaternary",
+    viewports,
+  },
+  {
     label: "Callout - Colour Success",
     url: "http://localhost:3000/components/preview/callout--colour---success",
     viewports,
