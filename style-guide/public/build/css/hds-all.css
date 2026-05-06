@@ -5670,6 +5670,9 @@ a.au-btn.au-btn--inline {
 .au-body .au-callout--tertiary {
   border-left-color: var(--callout-border--tertiary);
 }
+.au-body .au-callout--quaternary {
+  border-left-color: var(--callout-border--quaternary);
+}
 .au-body .au-callout--success {
   border-left-color: #0b996c;
 }
