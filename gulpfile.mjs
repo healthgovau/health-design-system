@@ -10,12 +10,12 @@ import cleanCss from 'gulp-clean-css';
 import header from 'gulp-header';
 import autoprefixer from 'gulp-autoprefixer';
 
-import pkg from './package.json' assert { type: "json" };
+import pkg from './package.json' with { type: "json" };
 
 const sass = gulpSass(dartSass);
 
 const options = {
-  paths : {
+  paths: {
     sass: 'source/sass/',
     js: 'source/js/',
     dist: 'build/',
@@ -49,7 +49,7 @@ function cssDev() {
       path.basename = options.name + '-' + path.basename;
       path.extname = ".css";
     }))
-    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(dest(options.paths.dist + 'css', { sourcemaps: '.' }));
 }
 
@@ -64,7 +64,7 @@ function cssProd() {
       path.basename = options.name + '-' + path.basename;
       path.extname = ".min.css";
     }))
-    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(dest(options.paths.dist + 'css'));
 }
 
@@ -96,15 +96,15 @@ function jsClean(cb) {
 function jsAggregate() {
   return src(options.paths.js + 'src/*.js')
     .pipe(concat(options.name + '.js'))
-    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(
       babel({
         presets: ['@babel/env']
       })
     )
     .pipe(minify({
-      ext:{
-        min:'.min.js'
+      ext: {
+        min: '.min.js'
       },
       preserveComments: 'some'
     }))
@@ -116,15 +116,15 @@ function jsAggregate() {
  */
 function js() {
   return src(options.paths.js + 'src/*.js')
-    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(
       babel({
         presets: ['@babel/env']
       })
     )
     .pipe(minify({
-      ext:{
-        min:'.min.js'
+      ext: {
+        min: '.min.js'
       },
       preserveComments: 'some'
     }))
