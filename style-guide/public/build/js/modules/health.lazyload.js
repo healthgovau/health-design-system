@@ -1,6 +1,6 @@
 "use strict";
 
-/*! @health.gov.au/health-design-system v3.3.0 */
+/*! @health.gov.au/health-design-system v3.3.1 */
 (function ($) {
   $(document).ready(function () {
     if (typeof LazyLoad !== 'undefined') {
