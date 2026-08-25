@@ -123,8 +123,26 @@ The HDS uses [Gulp](https://gulpjs.com) to create compiled versions of the HDS C
 ```
 npm run gulp
 ```
+
+## Publish npm package
+
+These instructions assume you are working in an WSL2 environment.
+
+Log into npmjs.com.
+
+```
+BROWSER=wslview npm login --scope @health.gov.au
+```
+Publish packge.
+```
+BROWSER=wslview npm publish
+```
+
+
 ### HDS Starter Kit
 
+> The HDS Starter Kit is no longer maintained.
+
 setup.js is a file which is used to configure the HDS Starter kit.
-It is used to create a base fiel structure for instant development.
+It is used to create a base file structure for instant development.
 More information about the HDS Starter kit can be found here: https://github.com/healthgovau/health-design-system-starter-kit
