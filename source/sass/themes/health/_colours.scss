@@ -115,17 +115,12 @@ $body-bg-colour--dark-tertiary: $colour-primary-blue;
 // Brand/pillars
 $brand-primary-colour: $colour-primary-blue;
 
-// Back to top
-$button-bg-colour--secondary: $colour-lighter;
-$button-bg-colour--secondary-hover: $colour-light;
-$button-bg-colour--dark-hover: $colour-light;
-$button-border-colour--dark-hover: $colour-light;
-
 // Button for bands, not states
 // Declared here to permit SASS calculation using mix()
 $button-primary: mix($colour-bg-light, $colour-primary-blue, 80%);
 $button-secondary: mix($colour-bg-light, $colour-primary-teal-darker-1, 80%);
 $button-tertiary: mix($colour-bg-light, $colour-complementary-skyblue-darker-1, 80%);
+$button-quaternary: mix($colour-bg-light, $colour-primary-blue-pale, 80%);
 $button-neutral: $AU-color-foreground-action;
 $button-neutral--darker: $AU-color-foreground-action;
 

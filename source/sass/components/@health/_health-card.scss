@@ -32,6 +32,7 @@ $card-padding--mobile: $component-padding--mobile;
       display: flex;
       flex-direction: column;
       @include AU-space(padding, $card-padding--mobile);
+
       @include AU-media('sm') {
         @include AU-space(padding, $card-padding);
       }
@@ -107,15 +108,17 @@ $card-padding--mobile: $component-padding--mobile;
     &.health-card--borderless {
       box-shadow: none !important;
       border: none !important;
+
       .health-card__body {
         padding: 0;
       }
+
       .health-card__image {
         img {
           @include border-radius;
         }
 
-        &+ .health-card__body {
+        &+.health-card__body {
           @include AU-space(padding-top, $card-padding--mobile);
 
           @include AU-media('sm') {
@@ -123,6 +126,7 @@ $card-padding--mobile: $component-padding--mobile;
           }
         }
       }
+
       &:after {
         display: none !important;
       }
@@ -289,6 +293,34 @@ $card-padding--mobile: $component-padding--mobile;
       }
     }
 
+    &.health-card--colour-quaternary {
+      @include background-style(var(--quaternary-gradient-bg--start), var(--quaternary-gradient-bg--end));
+      color: var(--card-text--quaternary);
+
+      .health-card__title {
+        color: var(--card-text--quaternary);
+
+      }
+
+      .health-card__link {
+        color: var(--card-link--quaternary);
+      }
+
+      &.health-card--clickable {
+        .health-card__link {
+          color: var(--card-text--quaternary);
+        }
+
+        &:after {
+          background: var(--card-clickable-icon--quaternary);
+        }
+      }
+
+      .health-card__date {
+        color: var(--card-text-minor--quaternary);
+      }
+    }
+
     &.health-card--colour-neutral {
       @include background-style(var(--neutral--darker-bg));
       color: var(--card-text--neutral);
@@ -403,6 +435,12 @@ $card-padding--mobile: $component-padding--mobile;
 .health-band--tertiary {
   .health-card.health-card--colour-tertiary {
     background: var(--tertiary-gradient-bg--end);
+  }
+}
+
+.health-band--quaternary {
+  .health-card.health-card--colour-quaternary {
+    background: var(--quaternary-gradient-bg--end);
   }
 }
 
