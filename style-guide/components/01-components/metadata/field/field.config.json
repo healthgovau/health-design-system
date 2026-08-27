@@ -25,10 +25,10 @@
       }
     },
     {
-      "name": "Inline - Comma seperated",
+      "name": "Inline - Comma separated",
       "context": {
         "field": {
-          "modifier": "health-field--inline--comma-seperated"
+          "modifier": "health-field--inline-comma-separated"
         }
       }
     },

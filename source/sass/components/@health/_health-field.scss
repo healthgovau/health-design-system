@@ -49,11 +49,12 @@
       @include AU-media(sm) {
         grid-column: 2;
       }
+
       grid-column: 1;
     }
   }
 
-  &--inline--comma-seperated {
+  &--inline-comma-separated {
     display: flex;
 
     .health-field__label {
@@ -66,8 +67,8 @@
 
       &:not(:last-child) {
         &:after {
-        content: ", ";
-        white-space: pre;
+          content: ", ";
+          white-space: pre;
 
         }
       }
