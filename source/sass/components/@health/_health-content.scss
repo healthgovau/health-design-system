@@ -1,17 +1,21 @@
 // Manage main content area padding
 .health-content {
-  @include AU-space('margin-top', 2unit);
-
-  @include AU-media('sm') {
-    @include AU-space('margin-top', 2.5unit);
-  }
-
-  &--flush {
-    @include AU-space('margin-top', 0unit);
-  }
+  @include AU-space('margin-top', 0unit);
 
   @media print {
     margin-top: 0;
+  }
+
+  > .row:first-of-type > div:first-of-type {
+    @include AU-space('margin-top', 2.5unit);
+
+    @include AU-media('sm') {
+      @include AU-space('margin-top', 2unit);
+    }
+
+    &.health-band {
+      @include AU-space('margin-top', 0unit);
+    }
   }
 
 }
