@@ -46,20 +46,18 @@
     }
 
     .health-field__item {
+      grid-column: 1;
+
       @include AU-media(sm) {
         grid-column: 2;
       }
-
-      grid-column: 1;
     }
   }
 
   &--inline-comma-separated {
-    display: flex;
-
-    .health-field__label {
-      width: 10em;
-      margin-right: 1rem;
+    @include AU-media(sm) {
+      display: flex;
+      column-gap: 0;
     }
 
     .health-field__item {
@@ -75,7 +73,8 @@
     }
   }
 
-  &--inline {
+  &--inline,
+  &--inline-comma-separated {
     .health-field__label {
       @include AU-media(sm) {
         width: 10em;

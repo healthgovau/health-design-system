@@ -7589,22 +7589,23 @@ textarea.au-text-input {
   grid-column: 1;
   margin-bottom: 0;
 }
+.health-field--inline .health-field__item, .health-field--inline--wide .health-field__item {
+  grid-column: 1;
+}
 @media (min-width: 576px) {
   .health-field--inline .health-field__item, .health-field--inline--wide .health-field__item {
     grid-column: 2;
   }
 }
-.health-field--inline .health-field__item, .health-field--inline--wide .health-field__item {
-  grid-column: 1;
-}
-.health-field--inline-comma-separated {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.health-field--inline-comma-separated .health-field__label {
-  width: 10em;
-  margin-right: 1rem;
+@media (min-width: 576px) {
+  .health-field--inline-comma-separated {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+  }
 }
 .health-field--inline-comma-separated .health-field__item {
   display: inline;
@@ -7614,7 +7615,7 @@ textarea.au-text-input {
   white-space: pre;
 }
 @media (min-width: 576px) {
-  .health-field--inline .health-field__label {
+  .health-field--inline .health-field__label, .health-field--inline-comma-separated .health-field__label {
     width: 10em;
   }
 }
