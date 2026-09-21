@@ -61,6 +61,7 @@
     "fractal:build": "npm run gulp && cd style-guide && fractal build"
   },
   "allowScripts": {
-    "@parcel/watcher@2.6.0": true
+    "@parcel/watcher@2.6.0": true,
+    "core-js@2.6.12": true
   }
 }
