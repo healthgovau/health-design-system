@@ -59,5 +59,8 @@
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
     "fractal:build": "npm run gulp && cd style-guide && fractal build"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true
   }
 }
