@@ -62,6 +62,7 @@
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,
-    "core-js@2.6.12": true
+    "core-js@2.6.12": true,
+    "puppeteer@22.15.0": true
   }
 }
