@@ -7572,15 +7572,44 @@ textarea.au-text-input {
   margin-top: 0.5rem;
 }
 @media (min-width: 576px) {
+  .health-field--inline, .health-field--inline--wide {
+    display: grid;
+    grid-template-columns: -webkit-max-content 1fr;
+    grid-template-columns: max-content 1fr;
+    -webkit-column-gap: 0rem;
+       -moz-column-gap: 0rem;
+            column-gap: 0rem;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
   .health-field--inline .health-field__label, .health-field--inline--wide .health-field__label {
-    float: left;
+    grid-column: 1;
+    margin-bottom: 0;
+  }
+  .health-field--inline .health-field__item, .health-field--inline--wide .health-field__item {
+    grid-column: 2;
   }
 }
-.health-field--inline .health-field__item, .health-field--inline--wide .health-field__item {
-  display: table;
+@media (min-width: 576px) {
+  .health-field--inline-comma-separated {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+  }
+}
+.health-field--inline-comma-separated .health-field__item {
+  display: inline;
+}
+.health-field--inline-comma-separated .health-field__item:not(:last-child):after {
+  content: ", ";
+  white-space: pre;
 }
 @media (min-width: 576px) {
-  .health-field--inline .health-field__label {
+  .health-field--inline .health-field__label, .health-field--inline-comma-separated .health-field__label {
     width: 10em;
   }
 }
@@ -7713,10 +7742,21 @@ textarea.au-text-input {
             flex-direction: row;
   }
 }
+@media (min-width: 576px) {
+  .health-field-group--horizontal .health-field--inline, .health-field-group--horizontal-stubborn .health-field--inline {
+    -webkit-column-gap: 0.5rem;
+       -moz-column-gap: 0.5rem;
+            column-gap: 0.5rem;
+  }
+}
 .health-field-group--horizontal .health-field--inline .health-field__label, .health-field-group--horizontal-stubborn .health-field--inline .health-field__label {
   width: auto;
-  margin-right: 8px;
   margin-right: 0.5rem;
+}
+@media (min-width: 576px) {
+  .health-field-group--horizontal .health-field--inline .health-field__label, .health-field-group--horizontal-stubborn .health-field--inline .health-field__label {
+    margin-right: 0;
+  }
 }
 
 .health-field-group--horizontal-stubborn {
