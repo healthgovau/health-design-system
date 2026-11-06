@@ -31,10 +31,18 @@
 
     // Override the inline field labels
     .health-field--inline {
-        .health-field__label {
-            width: auto;
-            @include AU-space(margin-right, 0.5unit);
+      @include AU-media(sm) {
+        column-gap: 0.5rem;
+      }
+
+      .health-field__label {
+        width: auto;
+        margin-right: 0.5rem;
+        @include AU-media(sm) {
+          margin-right: 0;
         }
+
+      }
     }
 
 }
