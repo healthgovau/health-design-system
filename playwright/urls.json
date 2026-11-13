@@ -1,0 +1,77 @@
+[
+  {
+    "description": "Sample App or Tool content page",
+    "path": "/resources/rebel-base-locator",
+    "file": "sample-app-or-tool.webp"
+  },
+  {
+    "description": "Sample Audio content page",
+    "path": "/resources/theme-song",
+    "file": "sample-audio.webp"
+  },
+  {
+    "description": "Sample collection content page",
+    "path": "/collections/technical-specifications",
+    "file": "sample-collection.webp"
+  },
+  {
+    "description": "Sample FOI Request content page",
+    "path": "/foi/holographic-disguise-matrix",
+    "file": "sample-foi-request.webp"
+  },
+  {
+    "description": "Sample video content page",
+    "path": "/resources/rise-darth-vader",
+    "file": "sample-video.webp"
+  },
+  {
+    "description": "Sample contact content page",
+    "path": "/contacts/darth-vader",
+    "file": "sample-contact.webp"
+  },
+  {
+    "description": "Sample news page",
+    "path": "/news/force-friday-event-guide-updated",
+    "file": "sample-news.webp"
+  },
+  {
+    "description": "Sample Landing page",
+    "path": "/star-wars-trilogy",
+    "file": "sample-landing.webp"
+  },
+  {
+    "description": "Sample Landing page with featured content",
+    "path": "/featured-items",
+    "file": "sample-landing-featured.webp"
+  },
+  {
+    "description": "Sample listing content page",
+    "path": "/resources",
+    "file": "sample-listing.webp"
+  },
+  {
+    "description": "Sample Standard Page content page",
+    "path": "/star-wars",
+    "file": "sample-standard-page.webp"
+  },
+  {
+    "description": "Sample Webinar content page",
+    "path": "/resources/webinar-darth-vader",
+    "file": "sample-webinar.webp"
+  },
+  {
+    "description": "Sample search results page",
+    "path": "/search?search_api_fulltext=star",
+    "file": "sample-search-results.webp"
+  },
+  {
+    "description": "Sample no results search results page",
+    "path": "/search?search_api_fulltext=asdfasdf",
+    "file": "sample-no-results-search.webp"
+  },
+  {
+    "description": "Sample no results resources page",
+    "path": "/resources?search_api_fulltext_listing=asdfg",
+    "file": "sample-no-results-resources.webp"
+  }
+]

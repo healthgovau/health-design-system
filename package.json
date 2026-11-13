@@ -24,10 +24,11 @@
     "@drupal/once": "^1.0.1",
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
-    "backstopjs": "^6.3.23",
+    "@playwright/test": "^1.65.0",
     "del": "^9.0.1",
     "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^10.0.0",
     "gulp-babel": "^8.1.0",
@@ -59,7 +60,12 @@
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
-    "fractal:build": "npm run gulp && cd style-guide && fractal build"
+    "fractal:build": "npm run gulp && cd style-guide && fractal build",
+    "playwright:build": "docker compose -f playwright/compose.yml build",
+    "playwright:open": "playwright show-report playwright/report",
+    "playwright:reference": "docker compose -f playwright/compose.yml run --rm --user $(id -u):$(id -g) -e PLAYWRIGHT_USE_REFERENCE_URL=true playwright test --update-snapshots=all",
+    "playwright:run": "docker compose -f playwright/compose.yml run --rm --user $(id -u):$(id -g) playwright test",
+    "playwright:ui": "node playwright/scripts/docker-ui.mjs"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,

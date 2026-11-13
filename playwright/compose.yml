@@ -1,0 +1,21 @@
+services:
+  playwright:
+    build:
+      context: ..
+      dockerfile: playwright/Dockerfile
+    platform: linux/amd64
+    init: true
+    shm_size: "1gb"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+      - "health.docker.amazee.io:host-gateway"
+      - "ask.docker.amazee.io:host-gateway"
+    environment:
+      CI: ${CI:-}
+      HOME: /tmp
+      PLAYWRIGHT_REFERENCE_URL:
+      PLAYWRIGHT_TEST_URL:
+      PLAYWRIGHT_USE_REFERENCE_URL: "false"
+    volumes:
+      - .:/work/playwright
+      - ../playwright.config.js:/work/playwright.config.js:ro

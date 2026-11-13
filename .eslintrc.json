@@ -1,6 +1,17 @@
 {
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "rules" : {
     "no-console": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["playwright/**/*.js", "playwright.config.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "devDependencies": true }
+        ]
+      }
+    }
+  ]
 }
