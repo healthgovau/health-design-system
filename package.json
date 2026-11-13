@@ -25,7 +25,7 @@
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
     "backstopjs": "^6.3.23",
-    "del": "^8.0.0",
+    "del": "^9.0.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "gulp": "^5.0.0",
