@@ -137,12 +137,3 @@ Publish packge.
 ```
 BROWSER=wslview npm publish
 ```
-
-
-### HDS Starter Kit
-
-> The HDS Starter Kit is no longer maintained.
-
-setup.js is a file which is used to configure the HDS Starter kit.
-It is used to create a base file structure for instant development.
-More information about the HDS Starter kit can be found here: https://github.com/healthgovau/health-design-system-starter-kit
