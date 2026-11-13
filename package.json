@@ -19,8 +19,8 @@
     "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/preset-env": "^7.26.9",
+    "@babel/core": "^8.1.2",
+    "@babel/preset-env": "^8.0.7",
     "@drupal/once": "^1.0.1",
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
@@ -30,7 +30,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
-    "gulp-babel": "^8.0.0",
+    "gulp-babel": "^8.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^5.0.0",
