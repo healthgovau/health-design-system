@@ -26,33 +26,16 @@ Rebuild the runner after changing `package-lock.json` or
 
 ## Configure the site URLs
 
-Set the default URLs in `playwright.config.js`. No URL changes are needed in
-`compose.yml`, and no environment variables need to be set:
+Set the default URLs in `playwright.config.js`:
 
 ```js
-const referenceBaseURL =
-  process.env.PLAYWRIGHT_REFERENCE_URL ?? 'https://www.health.gov.au';
-const testBaseURL =
-  process.env.PLAYWRIGHT_TEST_URL ?? 'http://health.docker.amazee.io';
+const referenceBaseURL = "http://host.docker.internal:3000";
+const testBaseURL = "http://host.docker.internal:3000";
 ```
 
-Use the site base URL (including `http://` or `https://`), not a page path:
-tests navigate to paths relative to that base URL.
-
-Environment variables remain available as optional overrides, including in CI:
-
-```sh
-PLAYWRIGHT_REFERENCE_URL=https://published.example.test npm run playwright:reference
-PLAYWRIGHT_TEST_URL=https://preview.example.test npm run playwright:run
-```
-
-- `PLAYWRIGHT_REFERENCE_URL` is used when capturing or updating reference
-  screenshots.
-- `PLAYWRIGHT_TEST_URL` is used for normal test runs.
-
-Compose passes these variables through only when they are set; otherwise,
-Playwright uses the defaults in `playwright.config.js`. The config is mounted
-into the container, so changing the URLs does not require rebuilding the runner.
+`referenceBaseURL` is used as the source when generating reference images to be
+used by the visual regression tests. `testBaseURL` is used as the source of the
+pages to be tested against the reference images.
 
 ## Generate references and run tests
 
@@ -69,9 +52,6 @@ Review the changed images before committing them; only update references when
 the new appearance is intentional. Make sure the reference URL serves the
 approved appearance, rather than the version under test. If Fractal is not
 already running locally on port 3000, the runner prompts to start it first.
-
-Run the tests against `PLAYWRIGHT_TEST_URL` and compare the results with the
-checked-in references:
 
 ```sh
 npm run playwright:run
@@ -98,17 +78,7 @@ comparison artifacts are written to `playwright/test-results/`.
 
 ## Add tests
 
-The configured test directory is `playwright/tests/`. The `pages.spec.js` test
-loads each entry in `playwright/urls.json` and takes a full-page screenshot.
-Add an entry there to include another page in the visual regression suite:
-
-```json
-{
-  "description": "Sample page",
-  "path": "/sample-page",
-  "file": "sample-page.webp"
-}
-```
+The configured test directory is `playwright/tests/`.
 
 For functional tests, add a spec under `playwright/tests/` and use Playwright's
 `page` fixture. `page.goto()` accepts a path relative to the configured site

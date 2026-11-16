@@ -91,6 +91,7 @@ The following is a description of important directories used in the project.
 | `source/sass/components/@gov.au/` | Overrides to styles provided by the DTA Design System should be placed in this directory. Overrides should be placed in a SASS partial file with the same name as the file in which the style is defined within the DTA Design System. |
 | `source/sass/components/@health/` | Styling for custom HDS components. These are components which are not a part of the DTA Design System. |
 | `style-guide/` | Source template and configuration files for components included in the HDS component library (aka. the Style Guide). The Style Guide is created using [Fractal](https://fractal.build/).  |
+| `playwright/` | Playwright visual regression tests. |
 
 ## Health Design System development
 
