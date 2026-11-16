@@ -62,7 +62,7 @@
     "fractal:build": "npm run gulp && cd style-guide && fractal build",
     "playwright:build": "docker compose -f playwright/compose.yml build",
     "playwright:open": "playwright show-report playwright/report",
-    "playwright:reference": "docker compose -f playwright/compose.yml run --rm --user $(id -u):$(id -g) -e PLAYWRIGHT_USE_REFERENCE_URL=true playwright test --update-snapshots=all",
+    "playwright:reference": "sh scripts/playwright_test_runner.sh reference",
     "playwright:run": "sh scripts/playwright_test_runner.sh",
     "playwright:ui": "node playwright/scripts/docker-ui.mjs"
   },

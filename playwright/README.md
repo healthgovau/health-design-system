@@ -67,7 +67,8 @@ This runs the Playwright tests and updates screenshots for all configured
 projects. Reference images are stored in `playwright/reference_images/`.
 Review the changed images before committing them; only update references when
 the new appearance is intentional. Make sure the reference URL serves the
-approved appearance, rather than the version under test.
+approved appearance, rather than the version under test. If Fractal is not
+already running locally on port 3000, the runner prompts to start it first.
 
 Run the tests against `PLAYWRIGHT_TEST_URL` and compare the results with the
 checked-in references:

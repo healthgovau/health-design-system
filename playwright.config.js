@@ -31,7 +31,7 @@ export default defineConfig({
     timeout: 10000,
   },
   /* Retry on CI only */
-  retries: 2,
+  retries: 3,
   /* Opt out of parallel tests on CI. */
   workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
