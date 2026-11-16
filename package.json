@@ -28,7 +28,9 @@
     "del": "^9.0.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.7",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^10.0.0",
     "gulp-babel": "^8.1.0",
@@ -40,6 +42,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^6.0.1",
+    "prettier": "^3.10.1",
     "sass": "^1.77.8",
     "sass-versioning": "^0.4.5"
   },
@@ -64,7 +67,7 @@
     "playwright:build": "docker compose -f playwright/compose.yml build",
     "playwright:open": "playwright show-report playwright/report",
     "playwright:reference": "docker compose -f playwright/compose.yml run --rm --user $(id -u):$(id -g) -e PLAYWRIGHT_USE_REFERENCE_URL=true playwright test --update-snapshots=all",
-    "playwright:run": "docker compose -f playwright/compose.yml run --rm --user $(id -u):$(id -g) playwright test",
+    "playwright:run": "sh scripts/playwright_test_runner.sh",
     "playwright:ui": "node playwright/scripts/docker-ui.mjs"
   },
   "allowScripts": {
