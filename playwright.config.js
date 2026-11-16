@@ -1,4 +1,3 @@
-// @ts-check
 import { defineConfig, devices } from '@playwright/test';
 
 // Configure site URLs here; environment variables are optional overrides.
