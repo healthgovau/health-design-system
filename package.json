@@ -56,10 +56,6 @@
   },
   "scripts": {
     "start": "cat .githooks/pre-commit > .git/hooks/pre-commit && chmod a+x .git/hooks/pre-commit",
-    "backstop:accept": "backstop approve --config=backstop.config.js",
-    "backstop:approve": "backstop approve --config=backstop.config.js",
-    "backstop:open": "backstop openReport --config=backstop.config.js",
-    "backstop:run": "sh scripts/visual_regression_tests.sh",
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
