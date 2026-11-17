@@ -1,4 +1,13 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate } from "../handlebars";
+import withPagePreview from "../decorators";
+import tableSource from "../../style-guide/components/01-components/table/table.hbs?raw";
 
-export default { title: "Components/Table" };
-export const Default = componentStory("table");
+const renderTable = compileTemplate(tableSource);
+
+export default {
+  title: "Components/Table",
+  decorators: [withPagePreview],
+  render: (args) => renderTable(args),
+};
+
+export const Default = { args: {} };

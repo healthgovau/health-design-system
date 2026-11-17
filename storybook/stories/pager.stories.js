@@ -1,4 +1,13 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate } from "../handlebars";
+import withPagePreview from "../decorators";
+import pagerSource from "../../style-guide/components/01-components/navigation/pager/pager.hbs?raw";
 
-export default { title: "Navigation/Pager" };
-export const Default = componentStory("pager");
+const renderPager = compileTemplate(pagerSource);
+
+export default {
+  title: "Navigation/Pager",
+  decorators: [withPagePreview],
+  render: (args) => renderPager(args),
+};
+
+export const Default = { args: {} };

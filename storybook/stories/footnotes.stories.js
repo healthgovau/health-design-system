@@ -1,4 +1,13 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate } from "../handlebars";
+import withPagePreview from "../decorators";
+import footnotesSource from "../../style-guide/components/01-components/supplementary-content/footnotes/footnotes.hbs?raw";
 
-export default { title: "Supplementary content/Footnotes" };
-export const Default = componentStory("footnotes");
+const renderFootnotes = compileTemplate(footnotesSource);
+
+export default {
+  title: "Supplementary content/Footnotes",
+  decorators: [withPagePreview],
+  render: (args) => renderFootnotes(args),
+};
+
+export const Default = { args: {} };

@@ -1,13 +1,49 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate, getVariantArgs, storyPartial } from "../handlebars";
+import withPagePreview from "../decorators";
+import subHeaderConfig from "../../style-guide/components/01-components/page-regions/sub-header/sub-header.config.json";
+import subHeaderSource from "../../style-guide/components/01-components/page-regions/sub-header/sub-header.hbs?raw";
+import subHeaderLightSource from "../../style-guide/components/01-components/page-regions/sub-header/sub-header--light.hbs?raw";
+import subHeaderCampaignSource from "../../style-guide/components/01-components/page-regions/sub-header/sub-header--campaign.hbs?raw";
+import BreadcrumbMeta, {
+  Default as BreadcrumbDefault,
+} from "./breadcrumb.stories";
+import ToolbarMeta, { Default as ToolbarDefault } from "./toolbar.stories";
+
+const renderSubHeader = compileTemplate(subHeaderSource, {
+  "@breadcrumb": storyPartial(BreadcrumbMeta, BreadcrumbDefault),
+  "@toolbar": storyPartial(ToolbarMeta, ToolbarDefault),
+});
+const renderSubHeaderLight = compileTemplate(subHeaderLightSource, {
+  "@breadcrumb": storyPartial(BreadcrumbMeta, BreadcrumbDefault),
+  "@toolbar": storyPartial(ToolbarMeta, ToolbarDefault),
+});
+const renderSubHeaderCampaign = compileTemplate(subHeaderCampaignSource);
 
 export default {
   title: "Page regions/Sub header",
   parameters: { layout: "fullscreen" },
+  decorators: [withPagePreview],
+  render: (args) => renderSubHeader(args),
 };
-export const Dark = componentStory("sub-header");
-export const Light = componentStory("sub-header--light");
-export const Campaign = componentStory("sub-header--campaign");
-export const CampaignSecondary = componentStory(
-  "sub-header--campaign-secondary",
-);
-export const CampaignTertiary = componentStory("sub-header--campaign-tertiary");
+
+export const Dark = { args: subHeaderConfig.context };
+
+export const Light = {
+  args: getVariantArgs(subHeaderConfig, "Light"),
+  render: (args) => renderSubHeaderLight(args),
+};
+
+export const Campaign = {
+  args: getVariantArgs(subHeaderConfig, "Campaign"),
+  render: (args) => renderSubHeaderCampaign(args),
+};
+
+export const CampaignSecondary = {
+  args: getVariantArgs(subHeaderConfig, "Campaign secondary"),
+  render: (args) => renderSubHeaderCampaign(args),
+};
+
+export const CampaignTertiary = {
+  args: getVariantArgs(subHeaderConfig, "Campaign tertiary"),
+  render: (args) => renderSubHeaderCampaign(args),
+};

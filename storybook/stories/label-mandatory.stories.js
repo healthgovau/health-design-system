@@ -1,4 +1,13 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate } from "../handlebars";
+import withPagePreview from "../decorators";
+import labelMandatorySource from "../../style-guide/components/01-components/form-controls/label-mandatory/label-mandatory.hbs?raw";
 
-export default { title: "Form Controls/Label mandatory" };
-export const Default = componentStory("label-mandatory");
+const renderLabelMandatory = compileTemplate(labelMandatorySource);
+
+export default {
+  title: "Form Controls/Label mandatory",
+  decorators: [withPagePreview],
+  render: (args) => renderLabelMandatory(args),
+};
+
+export const Default = { args: {} };

@@ -1,4 +1,13 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate } from "../handlebars";
+import withPagePreview from "../decorators";
+import iconsSource from "../../style-guide/components/01-components/typography/icons/icons.hbs?raw";
 
-export default { title: "Typography/Icons" };
-export const Default = componentStory("icons");
+const renderIcons = compileTemplate(iconsSource);
+
+export default {
+  title: "Typography/Icons",
+  decorators: [withPagePreview],
+  render: (args) => renderIcons(args),
+};
+
+export const Default = { args: {} };

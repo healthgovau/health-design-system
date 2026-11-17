@@ -1,6 +1,18 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate, getVariantArgs } from "../handlebars";
+import withPagePreview from "../decorators";
+import loadingConfig from "../../style-guide/components/01-components/_loading/loading.config.json";
+import loadingSource from "../../style-guide/components/01-components/_loading/loading.hbs?raw";
 
-export default { title: "Components/Loading" };
-export const Default = componentStory("loading");
-export const Small = componentStory("loading--small");
-export const Search = componentStory("loading--search");
+const renderLoading = compileTemplate(loadingSource);
+
+export default {
+  title: "Components/Loading",
+  decorators: [withPagePreview],
+  render: (args) => renderLoading(args),
+};
+
+export const Default = { args: loadingConfig.context };
+
+export const Small = { args: getVariantArgs(loadingConfig, "Small") };
+
+export const Search = { args: getVariantArgs(loadingConfig, "Search") };

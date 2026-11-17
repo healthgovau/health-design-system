@@ -15,7 +15,11 @@ bands, metadata, references, typography, and utilities. Full-page templates are
 not included. Start it with `npm run storybook` or build it with
 `npm run storybook:build`.
 
-The additional component previews reuse the existing Fractal preview layout in
+Stories explicitly import their Handlebars templates and configuration data,
+select variant arguments, and declare any composed components. There is no
+automatic component discovery or component-name-to-template registry.
+
+The shared `withPagePreview` decorator reuses the existing preview layout in
 isolated frames. This preserves page-load JavaScript, nested Handlebars components,
 and optional libraries (for example autocomplete, lazy-loaded images, and
 tooltips), and keeps Quick exit navigation inside its preview. Controls update
@@ -23,8 +27,8 @@ the preview context. The preview frames are 600px high and scroll for taller
 examples; use Storybook's viewport controls to check responsive layouts.
 
 This is exploratory; Fractal remains the tool used to build the full style guide.
-Run `npm run storybook:test` to check the component adapter's context merging,
-nested rendering, and legacy template compatibility.
+Run `npm run storybook:test` to check context merging, explicit story composition,
+and template compatibility.
 
 ## Dependencies
 * [jQuery v3+](https://jquery.com/)

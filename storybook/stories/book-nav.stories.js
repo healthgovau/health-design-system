@@ -1,4 +1,13 @@
-import { componentStory } from "../component-preview";
+import { compileTemplate } from "../handlebars";
+import withPagePreview from "../decorators";
+import bookNavSource from "../../style-guide/components/01-components/navigation/book-nav/book-nav.hbs?raw";
 
-export default { title: "Navigation/Book navigation" };
-export const Default = componentStory("book-nav");
+const renderBookNav = compileTemplate(bookNavSource);
+
+export default {
+  title: "Navigation/Book navigation",
+  decorators: [withPagePreview],
+  render: (args) => renderBookNav(args),
+};
+
+export const Default = { args: {} };
