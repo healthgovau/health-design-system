@@ -25,6 +25,7 @@
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
     "@playwright/test": "^1.65.0",
+    "@storybook/addon-docs": "^10.6.7",
     "@storybook/html-vite": "^10.6.7",
     "del": "^9.0.1",
     "eslint": "^8.57.0",
