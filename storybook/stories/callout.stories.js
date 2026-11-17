@@ -18,34 +18,60 @@ function getVariantArgs(name) {
 
 export default {
   title: "Components/Callout",
-  render: (args) => `<div class="au-body au-grid">${renderCallout(args)}</div>`,
+  decorators: [
+    (Story) => {
+      const decorator = document.createElement('div');
+      decorator.classList.add('au-body', 'au-grid');
+      decorator.innerHTML = Story();
+      return decorator;
+    },
+  ],
+  render: (args) => `${renderCallout(args)}`,
   argTypes: {
+    content: { control: "text" },
     modifier: { control: "text" },
   },
 };
 
 export const Default = {
-  args: {},
+  args: {
+    content: "More than 20 almost-complete t rex skeletons have been found. The most perfect, nicknamed Sue, was unearthed in South Dakota, USA, 20 years ago.",
+    modifier: "",
+  },
 };
 
 export const Secondary = {
-  args: getVariantArgs("Colour - Secondary"),
+  args: {
+    ...Default.args,
+    modifier: "au-callout--secondary",
+  },
 };
 
 export const Tertiary = {
-  args: getVariantArgs("Colour - Tertiary"),
+  args: {
+    ...Default.args,
+    modifier: "au-callout--tertiary",
+  },
 };
 
 export const Quaternary = {
-  args: getVariantArgs("Colour - Quaternary"),
+  args: {
+    ...Default.args,
+    modifier: "au-callout--quaternary",
+  },
 };
 
 export const Success = {
-  args: getVariantArgs("Colour - Success"),
+  args: {
+    ...Default.args,
+    modifier: "au-callout--success",
+  },
 };
 
 export const Simple = {
-  args: getVariantArgs("Simple"),
-  render: (args) =>
-    `<div class="au-body au-grid">${renderSimpleCallout(args)}</div>`,
+  args: {
+    ...Default.args,
+    modifier: "au-callout--simple",
+  },
+  render: (args) => `${renderSimpleCallout(args)}`,
 };
