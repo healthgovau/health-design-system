@@ -30,11 +30,11 @@
 
       </div>
       <div class="col-xs-12 col-md-6">
-        {{render "@sub-nav"}}
-        {{render "@search"}}
+        {{> @sub-nav }}
+        {{> @search searchForm }}
       </div>
     </div>
   </div>
 </header>
 
-{{render "@main-nav"}}
+{{> @main-nav mainNav }}

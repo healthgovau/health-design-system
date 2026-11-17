@@ -1,0 +1,21 @@
+{
+  "title": "Inline reference",
+  "context": {
+    "image": {
+      "link": true,
+      "url": "/images/picsum-20-1865x1319.jpg",
+      "width": 800,
+      "height": 450,
+      "ratio": 56.25,
+      "modifier": "image--link image--border"
+    },
+    "videoImage": {
+      "link": true,
+      "url": "https://picsum.photos/id/867/800/450",
+      "ratio": 56.25,
+      "modifier": "image--link image--border",
+      "width": 800,
+      "height": 450
+    }
+  }
+}

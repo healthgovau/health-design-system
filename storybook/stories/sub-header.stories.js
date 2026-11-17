@@ -1,22 +1,12 @@
-import { compileTemplate, getVariantArgs, storyPartial } from "../handlebars";
+import { compileTemplate, getVariantArgs } from "../handlebars";
 import withPagePreview from "../decorators";
 import subHeaderConfig from "../../style-guide/components/01-components/page-regions/sub-header/sub-header.config.json";
 import subHeaderSource from "../../style-guide/components/01-components/page-regions/sub-header/sub-header.hbs?raw";
 import subHeaderLightSource from "../../style-guide/components/01-components/page-regions/sub-header/sub-header--light.hbs?raw";
 import subHeaderCampaignSource from "../../style-guide/components/01-components/page-regions/sub-header/sub-header--campaign.hbs?raw";
-import BreadcrumbMeta, {
-  Default as BreadcrumbDefault,
-} from "./breadcrumb.stories";
-import ToolbarMeta, { Default as ToolbarDefault } from "./toolbar.stories";
 
-const renderSubHeader = compileTemplate(subHeaderSource, {
-  "@breadcrumb": storyPartial(BreadcrumbMeta, BreadcrumbDefault),
-  "@toolbar": storyPartial(ToolbarMeta, ToolbarDefault),
-});
-const renderSubHeaderLight = compileTemplate(subHeaderLightSource, {
-  "@breadcrumb": storyPartial(BreadcrumbMeta, BreadcrumbDefault),
-  "@toolbar": storyPartial(ToolbarMeta, ToolbarDefault),
-});
+const renderSubHeader = compileTemplate(subHeaderSource);
+const renderSubHeaderLight = compileTemplate(subHeaderLightSource);
 const renderSubHeaderCampaign = compileTemplate(subHeaderCampaignSource);
 
 export default {

@@ -18,25 +18,58 @@
       "name": "Cards image",
       "context": {
         "title": "Latest news",
-        "modifier": "neutral"
+        "modifier": "neutral",
+        "card": {
+          "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
+          "date": "20 July 2019",
+          "tag": "News",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        },
+        "horizontalCard": {
+          "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
+          "date": "20 July 2019",
+          "tag": "News",
+          "content": "This card presents image and body side-by-side.",
+          "class": "health-card--horizontal"
+        }
       }
     },
     {
       "name": "Cards call to action",
       "context": {
-        "title": "Top tasks"
+        "title": "Top tasks",
+        "resourceCard": {
+          "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
+          "date": "20 July 2019",
+          "tag": "News",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        }
       }
     },
     {
       "name": "Cards resources",
       "context": {
-        "title": "Latest resources"
+        "title": "Latest resources",
+        "resourceCard": {
+          "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
+          "date": "20 July 2019",
+          "tag": "News",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        }
       }
     },
     {
       "name": "Featured",
       "context": {
-        "title": "Featured resource"
+        "title": "Featured resource",
+        "featuredImage": {
+          "link": true,
+          "url": "/images/picsum-20-1865x1319.jpg",
+          "width": 800,
+          "height": 450,
+          "ratio": 56.25,
+          "modifier": "image--link image--border"
+        }
       }
     },
     {
@@ -58,6 +91,18 @@
           "height": 450,
           "ratio": 56.25,
           "modifier": "image--link image--border"
+        }
+      }
+    },
+    {
+      "name": "Cards borderless",
+      "context": {
+        "borderlessCard": {
+          "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
+          "date": "20 July 2019",
+          "tag": "News",
+          "content": "This card removes the border and internal padding.",
+          "class": "health-card--borderless"
         }
       }
     }

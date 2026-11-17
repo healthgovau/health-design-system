@@ -45,11 +45,11 @@
         </div>
       </div>
       <div class="col-sm-7">
-        {{render "@sub-nav"}}
-        {{render "@search"}}
+        {{> @sub-nav }}
+        {{> @search searchForm }}
       </div>
     </div>
   </div>
 </header>
 
-{{render "@main-nav"}}
+{{> @main-nav mainNav }}

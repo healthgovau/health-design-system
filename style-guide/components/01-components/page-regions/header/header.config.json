@@ -4,14 +4,32 @@
   "context": {
     "title": "Site title",
     "tagline": "Optional tagline for the website or product",
-    "image": "logo.svg"
+    "image": "logo.svg",
+    "searchForm": {
+      "search": {
+        "placeholder": "Search this website",
+        "id": "search-field",
+        "global": true
+      },
+      "searchLoading": {
+        "loading": {
+          "active": true
+        },
+        "modifier": "health-loading--small health-loading--search",
+        "link": true
+      }
+    },
+    "mainNav": {}
   },
   "variants": [
     {
       "name": "Dark",
       "hidden": "true",
       "context": {
-        "image": "logo--reverse.svg"
+        "image": "logo--reverse.svg",
+        "mainNav": {
+          "modifier": "au-main-nav--dark"
+        }
       }
     },
     {

@@ -9,7 +9,7 @@ const server = await createServer({
 });
 after(() => server.close());
 
-const { compileTemplate, storyPartial } = await server.ssrLoadModule(
+const { compileTemplate } = await server.ssrLoadModule(
   "/storybook/handlebars.js",
 );
 
@@ -17,7 +17,8 @@ async function renderStory(file, name, args) {
   const stories = await server.ssrLoadModule(
     `/storybook/stories/${file}.stories.js`,
   );
-  return storyPartial(stories.default, stories[name])(args);
+  const story = stories[name];
+  return (story.render || stories.default.render)(args || story.args);
 }
 
 test("nested variant contexts retain default image attributes", async () => {
@@ -27,10 +28,14 @@ test("nested variant contexts retain default image attributes", async () => {
   assert.match(html, /data-src="\/images\/picsum-20-1865x1319.jpg"/);
 });
 
-test("explicit render helpers and partials compose stories", async () => {
+test("native partials compose components with their explicit example data", async () => {
   const cards = await renderStory("band", "CardsResources");
   assert.equal((cards.match(/class="health-card /g) || []).length, 4);
   assert.match(cards, /class="health-card__link" href="#">[^<]+/);
+
+  const imageCards = await renderStory("band", "CardsImage");
+  assert.equal((imageCards.match(/class="health-card /g) || []).length, 5);
+  assert.equal((imageCards.match(/health-card--horizontal/g) || []).length, 2);
 
   const videos = await renderStory("band", "VideoListing");
   assert.equal(
@@ -67,22 +72,32 @@ test("header paths and explicitly composed dark navigation resolve", async () =>
   assert.match(dark, /au-main-nav--dark/);
 });
 
-test("composed overrides preserve nested defaults without mutating story args", async () => {
-  const first = await renderStory("image", "Border", { image: { width: 400 } });
+test("component data is supplied by the caller, not by another story's defaults", async () => {
+  const first = compileTemplate("{{> @image image=image}}")({
+    image: {
+      url: "/explicit-image.jpg",
+      width: 400,
+      height: 225,
+      ratio: 56.25,
+    },
+  });
   const second = await renderStory("image", "Border");
   assert.match(first, /width="400"/);
-  assert.match(first, /data-src="\/images\/picsum-20-1865x1319.jpg"/);
+  assert.match(first, /data-src="\/explicit-image.jpg"/);
   assert.match(second, /width="800"/);
 });
 
 test("partial registrations are local to each compiled template", () => {
-  const render = compileTemplate('{{render "@example"}}', {
-    "@example": () => "<strong>Example</strong>",
+  const render = compileTemplate("{{> @example child}}", {
+    "@example": "<strong>{{label}}</strong>",
   });
-  assert.equal(render({}), "<strong>Example</strong>");
-  assert.throws(
-    () => compileTemplate('{{render "@example"}}')({}),
-    /Unknown rendered partial: @example/,
+  assert.equal(
+    render({ label: "Parent", child: { label: "Child" } }),
+    "<strong>Child</strong>",
   );
-  assert.throws(() => storyPartial({}, {}), /must provide a render function/);
+  assert.equal(render({ label: "Parent", child: {} }), "<strong></strong>");
+  assert.throws(
+    () => compileTemplate("{{> @example child}}")({ child: {} }),
+    /partial @example could not be found/,
+  );
 });

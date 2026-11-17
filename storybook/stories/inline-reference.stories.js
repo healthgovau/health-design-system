@@ -1,20 +1,15 @@
-import { compileTemplate, storyPartial } from "../handlebars";
+import { compileTemplate } from "../handlebars";
 import withPagePreview from "../decorators";
+import inlineReferenceConfig from "../../style-guide/components/01-components/references/inline-reference/inline-reference.config.json";
 import inlineReferenceSource from "../../style-guide/components/01-components/references/inline-reference/inline-reference.hbs?raw";
 import inlineReferenceContactSource from "../../style-guide/components/01-components/references/inline-reference/inline-reference--contact.hbs?raw";
 import inlineReferenceVideoSource from "../../style-guide/components/01-components/references/inline-reference/inline-reference--video.hbs?raw";
-import ImageMeta, { BorderLink as ImageBorderLink } from "./image.stories";
-import VideoMeta, { Preview as VideoPreview } from "./video.stories";
 
-const renderInlineReference = compileTemplate(inlineReferenceSource, {
-  "@image--border-link": storyPartial(ImageMeta, ImageBorderLink),
-});
+const renderInlineReference = compileTemplate(inlineReferenceSource);
 const renderInlineReferenceContact = compileTemplate(
   inlineReferenceContactSource,
 );
-const renderInlineReferenceVideo = compileTemplate(inlineReferenceVideoSource, {
-  "@video--preview": storyPartial(VideoMeta, VideoPreview),
-});
+const renderInlineReferenceVideo = compileTemplate(inlineReferenceVideoSource);
 
 export default {
   title: "References/Inline reference",
@@ -22,7 +17,7 @@ export default {
   render: (args) => renderInlineReference(args),
 };
 
-export const Default = { args: {} };
+export const Default = { args: inlineReferenceConfig.context };
 
 export const Contact = {
   args: {},
@@ -30,6 +25,6 @@ export const Contact = {
 };
 
 export const Video = {
-  args: {},
+  args: inlineReferenceConfig.context,
   render: (args) => renderInlineReferenceVideo(args),
 };

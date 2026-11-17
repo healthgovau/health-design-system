@@ -16,8 +16,11 @@ not included. Start it with `npm run storybook` or build it with
 `npm run storybook:build`.
 
 Stories explicitly import their Handlebars templates and configuration data,
-select variant arguments, and declare any composed components. There is no
-automatic component discovery or component-name-to-template registry.
+and select variant arguments. Shared component templates are registered directly
+as native Handlebars partials; templates pass their data explicitly, for example
+`{{> @card card}}` or `{{> @image image=featuredImage}}`. Composite component
+configurations provide the complete nested example data. Partials do not import
+stories, look up story arguments, or automatically merge component defaults.
 
 The shared `withPagePreview` decorator reuses the existing preview layout in
 isolated frames. This preserves page-load JavaScript, nested Handlebars components,
@@ -27,7 +30,7 @@ the preview context. The preview frames are 600px high and scroll for taller
 examples; use Storybook's viewport controls to check responsive layouts.
 
 This is exploratory; Fractal remains the tool used to build the full style guide.
-Run `npm run storybook:test` to check context merging, explicit story composition,
+Run `npm run storybook:test` to check variant data, native partial composition,
 and template compatibility.
 
 ## Dependencies

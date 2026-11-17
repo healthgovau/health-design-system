@@ -9,7 +9,9 @@
       "link": true,
       "url": "https://picsum.photos/id/867/800/450",
       "ratio": 56.25,
-      "modifier": "image--link image--border"
+      "modifier": "image--link image--border",
+      "width": 800,
+      "height": 450
     }
   }
 }

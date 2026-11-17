@@ -1,4 +1,4 @@
-import { compileTemplate, getVariantArgs, storyPartial } from "../handlebars";
+import { compileTemplate, getVariantArgs } from "../handlebars";
 import withPagePreview from "../decorators";
 import headerConfig from "../../style-guide/components/01-components/page-regions/header/header.config.json";
 import headerSource from "../../style-guide/components/01-components/page-regions/header/header.hbs?raw";
@@ -9,55 +9,19 @@ import headerAlignedSource from "../../style-guide/components/01-components/page
 import headerBrandNameLockupSource from "../../style-guide/components/01-components/page-regions/header/header--brand-name-lockup.hbs?raw";
 import headerBrandNameWithSublineSource from "../../style-guide/components/01-components/page-regions/header/header--brand-name-with-subline.hbs?raw";
 import headerDualLogoLockupSource from "../../style-guide/components/01-components/page-regions/header/header--dual-logo-lockup.hbs?raw";
-import SubNavMeta, { Default as SubNavDefault } from "./sub-nav.stories";
-import SearchMeta, { Default as SearchDefault } from "./search.stories";
-import MainNavMeta, {
-  Default as MainNavDefault,
-  Dark as MainNavDark,
-} from "./main-nav.stories";
 
-const renderHeader = compileTemplate(headerSource, {
-  "@sub-nav": storyPartial(SubNavMeta, SubNavDefault),
-  "@search": storyPartial(SearchMeta, SearchDefault),
-  "@main-nav": storyPartial(MainNavMeta, MainNavDefault),
-});
-const renderHeaderWithSiteTitle = compileTemplate(headerWithSiteTitleSource, {
-  "@sub-nav": storyPartial(SubNavMeta, SubNavDefault),
-  "@search": storyPartial(SearchMeta, SearchDefault),
-  "@main-nav": storyPartial(MainNavMeta, MainNavDefault),
-});
+const renderHeader = compileTemplate(headerSource);
+const renderHeaderWithSiteTitle = compileTemplate(headerWithSiteTitleSource);
 const renderHeaderSimple = compileTemplate(headerSimpleSource);
-const renderHeaderDark = compileTemplate(headerDarkSource, {
-  "@sub-nav": storyPartial(SubNavMeta, SubNavDefault),
-  "@search": storyPartial(SearchMeta, SearchDefault),
-  "@main-nav--dark": storyPartial(MainNavMeta, MainNavDark),
-});
-const renderHeaderAligned = compileTemplate(headerAlignedSource, {
-  "@sub-nav": storyPartial(SubNavMeta, SubNavDefault),
-  "@search": storyPartial(SearchMeta, SearchDefault),
-  "@main-nav": storyPartial(MainNavMeta, MainNavDefault),
-});
+const renderHeaderDark = compileTemplate(headerDarkSource);
+const renderHeaderAligned = compileTemplate(headerAlignedSource);
 const renderHeaderBrandNameLockup = compileTemplate(
   headerBrandNameLockupSource,
-  {
-    "@sub-nav": storyPartial(SubNavMeta, SubNavDefault),
-    "@search": storyPartial(SearchMeta, SearchDefault),
-    "@main-nav": storyPartial(MainNavMeta, MainNavDefault),
-  },
 );
 const renderHeaderBrandNameWithSubline = compileTemplate(
   headerBrandNameWithSublineSource,
-  {
-    "@sub-nav": storyPartial(SubNavMeta, SubNavDefault),
-    "@search": storyPartial(SearchMeta, SearchDefault),
-    "@main-nav": storyPartial(MainNavMeta, MainNavDefault),
-  },
 );
-const renderHeaderDualLogoLockup = compileTemplate(headerDualLogoLockupSource, {
-  "@sub-nav": storyPartial(SubNavMeta, SubNavDefault),
-  "@search": storyPartial(SearchMeta, SearchDefault),
-  "@main-nav": storyPartial(MainNavMeta, MainNavDefault),
-});
+const renderHeaderDualLogoLockup = compileTemplate(headerDualLogoLockupSource);
 
 export default {
   title: "Page regions/Header",

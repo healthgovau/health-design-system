@@ -1,23 +1,10 @@
-import Handlebars from "handlebars";
-import { pagePreview } from "../handlebars";
+import { compileTemplate, pagePreview } from "../handlebars";
 import card from "../../style-guide/components/01-components/card/card.config.json";
 import cardSource from "../../style-guide/components/01-components/card/card.hbs?raw";
 import noImageSource from "../../style-guide/components/01-components/card/card--no-image.hbs?raw";
 import noClickSource from "../../style-guide/components/01-components/card/card--no-click.hbs?raw";
 import contactSource from "../../style-guide/components/01-components/card/card--contact.hbs?raw";
 import multipleLinksSource from "../../style-guide/components/01-components/card/card--multiple-links.hbs?raw";
-import callToActionLinksSource from "../../style-guide/components/01-components/link/link--call-to-action-list.hbs?raw";
-
-const handlebars = Handlebars.create();
-const renderCallToActionLinks = handlebars.compile(callToActionLinksSource);
-
-handlebars.registerHelper("render", (componentName) => {
-  if (componentName !== "@link--call-to-action-list") {
-    throw new Error(`Unknown rendered component: ${componentName}`);
-  }
-
-  return new Handlebars.SafeString(renderCallToActionLinks({}));
-});
 
 const templates = {
   "card.hbs": cardSource,
@@ -34,7 +21,7 @@ function createStory(variant) {
     throw new Error(`Unknown Card template: ${variant.view}`);
   }
 
-  const renderCard = handlebars.compile(templateSource);
+  const renderCard = compileTemplate(templateSource);
 
   return {
     args: {

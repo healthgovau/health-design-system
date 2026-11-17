@@ -1,4 +1,4 @@
-import { compileTemplate, getVariantArgs, storyPartial } from "../handlebars";
+import { compileTemplate, getVariantArgs } from "../handlebars";
 import withPagePreview from "../decorators";
 import bandConfig from "../../style-guide/components/01-components/layout/band/band.config.json";
 import bandSource from "../../style-guide/components/01-components/layout/band/band.hbs?raw";
@@ -11,41 +11,21 @@ import bandFeaturedSource from "../../style-guide/components/01-components/layou
 import bandImageTextHorizontalSource from "../../style-guide/components/01-components/layout/band/band--image-text-horizontal.hbs?raw";
 import bandStatisticsSource from "../../style-guide/components/01-components/layout/band/band--statistics.hbs?raw";
 import bandVideoListingSource from "../../style-guide/components/01-components/layout/band/band--video-listing.hbs?raw";
-import CardMeta, {
-  Default as CardDefault,
-  Horizontal as CardHorizontal,
-  WithoutImage as CardWithoutImage,
-  Borderless as CardBorderless,
-} from "./card.stories";
-import ImageMeta, { BorderLink as ImageBorderLink } from "./image.stories";
-import VideoMeta, { Preview as VideoPreview } from "./video.stories";
 
 const renderBand = compileTemplate(bandSource);
 const renderBandHotline = compileTemplate(bandHotlineSource);
-const renderBandCardsImage = compileTemplate(bandCardsImageSource, {
-  "@card": storyPartial(CardMeta, CardDefault),
-  "@card--horizontal": storyPartial(CardMeta, CardHorizontal),
-});
+const renderBandCardsImage = compileTemplate(bandCardsImageSource);
 const renderBandCardsCallToAction = compileTemplate(
   bandCardsCallToActionSource,
-  { "@card--without-image": storyPartial(CardMeta, CardWithoutImage) },
 );
-const renderBandCardsResources = compileTemplate(bandCardsResourcesSource, {
-  "@card--without-image": storyPartial(CardMeta, CardWithoutImage),
-});
-const renderBandCardsBorderless = compileTemplate(bandCardsBorderlessSource, {
-  "@card--borderless": storyPartial(CardMeta, CardBorderless),
-});
-const renderBandFeatured = compileTemplate(bandFeaturedSource, {
-  "@image--border-link": storyPartial(ImageMeta, ImageBorderLink),
-});
+const renderBandCardsResources = compileTemplate(bandCardsResourcesSource);
+const renderBandCardsBorderless = compileTemplate(bandCardsBorderlessSource);
+const renderBandFeatured = compileTemplate(bandFeaturedSource);
 const renderBandImageTextHorizontal = compileTemplate(
   bandImageTextHorizontalSource,
 );
 const renderBandStatistics = compileTemplate(bandStatisticsSource);
-const renderBandVideoListing = compileTemplate(bandVideoListingSource, {
-  "@video--preview": storyPartial(VideoMeta, VideoPreview),
-});
+const renderBandVideoListing = compileTemplate(bandVideoListingSource);
 
 export default {
   title: "Layout/Band",
@@ -80,7 +60,7 @@ export const CardsResources = {
 };
 
 export const CardsBorderless = {
-  args: bandConfig.context,
+  args: getVariantArgs(bandConfig, "Cards borderless"),
   render: (args) => renderBandCardsBorderless(args),
 };
 
