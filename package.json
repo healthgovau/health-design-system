@@ -71,6 +71,7 @@
     "playwright:run": "sh scripts/playwright_test_runner.sh",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
+    "storybook:test": "node --test storybook/*.test.mjs",
     "playwright:ui": "node playwright/scripts/docker-ui.mjs"
   },
   "allowScripts": {

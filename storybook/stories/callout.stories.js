@@ -1,8 +1,10 @@
-import Handlebars from 'handlebars';
-import callout from '../../style-guide/components/01-components/callout/callout.config.json';
-import templateSource from '../../style-guide/components/01-components/callout/callout.hbs?raw';
+import Handlebars from "handlebars";
+import callout from "../../style-guide/components/01-components/callout/callout.config.json";
+import templateSource from "../../style-guide/components/01-components/callout/callout.hbs?raw";
+import simpleTemplateSource from "../../style-guide/components/01-components/callout/callout--simple.hbs?raw";
 
 const renderCallout = Handlebars.compile(templateSource);
+const renderSimpleCallout = Handlebars.compile(simpleTemplateSource);
 
 function getVariantArgs(name) {
   const variant = callout.variants.find((item) => item.name === name);
@@ -15,10 +17,10 @@ function getVariantArgs(name) {
 }
 
 export default {
-  title: 'Components/Callout',
+  title: "Components/Callout",
   render: (args) => `<div class="au-body au-grid">${renderCallout(args)}</div>`,
   argTypes: {
-    modifier: { control: 'text' },
+    modifier: { control: "text" },
   },
 };
 
@@ -27,21 +29,23 @@ export const Default = {
 };
 
 export const Secondary = {
-  args: getVariantArgs('Colour - Secondary'),
+  args: getVariantArgs("Colour - Secondary"),
 };
 
 export const Tertiary = {
-  args: getVariantArgs('Colour - Tertiary'),
+  args: getVariantArgs("Colour - Tertiary"),
 };
 
 export const Quaternary = {
-  args: getVariantArgs('Colour - Quaternary'),
+  args: getVariantArgs("Colour - Quaternary"),
 };
 
 export const Success = {
-  args: getVariantArgs('Colour - Success'),
+  args: getVariantArgs("Colour - Success"),
 };
 
 export const Simple = {
-  args: getVariantArgs('Simple'),
+  args: getVariantArgs("Simple"),
+  render: (args) =>
+    `<div class="au-body au-grid">${renderSimpleCallout(args)}</div>`,
 };

@@ -33,6 +33,17 @@ export default [
     },
   },
   {
+    files: ["storybook/**/*.{js,mjs}"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+    },
+    rules: {
+      "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
+      "import/no-unresolved": ["error", { ignore: ["\\?raw$"] }],
+    },
+  },
+  {
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
       globals: {
