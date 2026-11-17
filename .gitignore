@@ -22,3 +22,6 @@ source/sass/vendors/govau-ds.scss
 # Playwright testing framework.
 /playwright/report
 /playwright/test-results/
+
+# Storybook proof of concept build.
+/storybook-static/

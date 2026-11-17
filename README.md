@@ -7,6 +7,14 @@ View the [Style Guide](https://healthgovau.github.io/health-design-system/) for 
 
 The style guide is built using [Fractal](https://github.com/frctl/fractal).
 
+### Storybook proof of concept
+
+A small Storybook proof of concept renders existing Back to top, Callout,
+Accordion, Accordion group, and Card Handlebars templates with their configured
+variants. Start it with `npm run storybook` or build it with
+`npm run storybook:build`. This is exploratory; Fractal remains the tool used
+to build the full style guide.
+
 ## Dependencies
 * [jQuery v3+](https://jquery.com/)
 
