@@ -19,25 +19,58 @@ function getVariantArgs(name) {
 
 export default {
   title: 'Components/Accordion',
-  render: (args) => `<div class="au-body au-grid">${renderAccordion(args)}</div>`,
+  decorators: [
+    (Story) => {
+      const decorator = document.createElement('div');
+      // Add CSS class names.
+      decorator.classList.add('au-body', 'au-grid');
+      decorator.innerHTML = Story();
+      return decorator;
+    },
+  ],
+  render: (args) => `${renderAccordion(args)}`,
   argTypes: {
-    modifier: { control: 'text' },
-    accordion: { control: 'object' },
+    title: {
+      control: 'text',
+      description: 'The title of the accordion. HTML is allowed.',
+      type: 'string',
+    },
+    content: {
+      control: 'text',
+      description: 'The content of the accordion body. HTML is allowed.',
+      type: 'string',
+    },
+    modifier: {
+      type: 'string',
+    },
   },
 };
 
 export const Default = {
-  args: accordion.context,
+  args: {
+    title: "Accordion title",
+    content: "Contents of the accordion body. Duis lacinia sed mi ornare <a href='#'>vulputate</a>. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh, et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra.",
+    modifier: "",
+  },
 };
 
 export const Block = {
-  args: getVariantArgs('Block'),
+  args: {
+    ...Default.args,
+    modifier: "au-accordion--block",
+  },
 };
 
 export const Shadow = {
-  args: getVariantArgs('Shadow'),
+  args: {
+    ...Default.args,
+    modifier: "au-accordion--shadow",
+  },
 };
 
 export const Compact = {
-  args: getVariantArgs('Compact'),
+  args: {
+    ...Default.args,
+    modifier: "au-accordion--compact",
+  },
 };

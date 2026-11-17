@@ -55,14 +55,15 @@ function getVariant(name) {
 }
 
 export default {
-  title: 'Components/Card',
+  title: "Components/Card",
   argTypes: {
-    class: { control: 'text' },
-    title: { control: 'text' },
+    class: { control: "text" },
+    title: { control: "text" },
     content: { control: 'text' },
     date: { control: 'text' },
     tag: { control: 'text' },
   },
+  tags: ['autodocs'],
 };
 
 export const Default = createStory();

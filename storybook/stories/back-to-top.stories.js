@@ -1,27 +1,40 @@
 import Handlebars from 'handlebars';
-import backToTop from '../../style-guide/components/01-components/back-to-top/back-to-top.config.json';
 import templateSource from '../../style-guide/components/01-components/back-to-top/back-to-top.hbs?raw';
 
 const renderBackToTop = Handlebars.compile(templateSource);
 
 export default {
   title: 'Components/Back to top',
-  render: (args) => `<div class="au-body au-grid">${renderBackToTop(args)}</div>`,
+  decorators: [
+    (Story) => {
+      const decorator = document.createElement('div');
+      // Add CSS class names.
+      decorator.classList.add('au-body', 'au-grid');
+      decorator.innerHTML = Story();
+      return decorator;
+    },
+  ],
+  render: (args) => `${renderBackToTop(args)}`,
   argTypes: {
-    backToTop: { control: 'object' },
+    isVisible: {
+      control: 'boolean',
+    },
+  },
+  parameters: {
+    docs: {
+      codePanel: true,
+    },
   },
 };
 
 export const Visible = {
-  args: backToTop.context,
+  args: {
+    isVisible: true,
+  },
 };
 
 export const Hidden = {
   args: {
-    ...backToTop.context,
-    backToTop: {
-      ...backToTop.context.backToTop,
-      isVisible: false,
-    },
+    isVisible: false,
   },
 };

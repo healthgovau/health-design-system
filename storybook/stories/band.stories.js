@@ -1,6 +1,12 @@
 import { componentStory } from "../component-preview";
 
-export default { title: "Layout/Band", parameters: { layout: "fullscreen" } };
+export default {
+  title: "Layout/Band",
+  parameters: {
+    layout: "fullscreen",
+  },
+  tags: ['autodocs'],
+};
 export const Default = componentStory("band");
 export const Hotline = componentStory("band--hotline");
 export const CardsImage = componentStory("band--cards-image");
