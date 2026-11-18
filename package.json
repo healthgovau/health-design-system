@@ -23,6 +23,7 @@
     "@babel/preset-env": "^8.0.7",
     "@drupal/once": "^1.0.1",
     "@playwright/test": "^1.65.0",
+    "@storybook/addon-a11y": "^10.6.7",
     "@storybook/addon-docs": "^10.6.7",
     "@storybook/html-vite": "^10.6.7",
     "del": "^9.0.1",
@@ -69,13 +70,14 @@
     "playwright:reference": "sh scripts/playwright_test_runner.sh reference",
     "playwright:run": "sh scripts/playwright_test_runner.sh",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build",
+    "storybook:build": "storybook build -o dist",
     "storybook:test": "node --test storybook/*.test.mjs",
     "playwright:ui": "node playwright/scripts/docker-ui.mjs"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,
     "core-js@2.6.12": true,
-    "puppeteer@22.15.0": true
+    "puppeteer@22.15.0": true,
+    "esbuild@0.28.2": true
   }
 }

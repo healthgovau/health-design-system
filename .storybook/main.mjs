@@ -4,13 +4,13 @@ const config = {
     '../storybook/stories/**/*.mdx',
   ],
   addons: [
+    "@storybook/addon-a11y",
     "@storybook/addon-docs",
   ],
   framework: {
     name: '@storybook/html-vite',
     options: {},
   },
-  staticDirs: ['../style-guide/public'],
 };
 
 export default config;

@@ -25,3 +25,6 @@ source/sass/vendors/govau-ds.scss
 
 # Storybook proof of concept build.
 /storybook-static/
+
+# Build output.
+/dist
