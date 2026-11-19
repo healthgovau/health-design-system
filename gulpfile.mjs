@@ -5,7 +5,7 @@ import babel from 'gulp-babel';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 import concat from 'gulp-concat';
-import minify from 'gulp-minify';
+import terser from 'gulp-terser';
 import cleanCss from 'gulp-clean-css';
 import header from 'gulp-header';
 import autoprefixer from 'gulp-autoprefixer';
@@ -102,12 +102,13 @@ function jsAggregate() {
         presets: ['@babel/env']
       })
     )
-    .pipe(minify({
-      ext: {
-        min: '.min.js'
-      },
-      preserveComments: 'some'
+    .pipe(dest(options.paths.dist + 'js'))
+    .pipe(terser({
+      format: {
+        comments: 'some'
+      }
     }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(dest(options.paths.dist + 'js'));
 }
 
@@ -122,12 +123,13 @@ function js() {
         presets: ['@babel/env']
       })
     )
-    .pipe(minify({
-      ext: {
-        min: '.min.js'
-      },
-      preserveComments: 'some'
+    .pipe(dest(options.paths.dist + 'js/modules'))
+    .pipe(terser({
+      format: {
+        comments: 'some'
+      }
     }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(dest(options.paths.dist + 'js/modules'));
 }
 

@@ -1,6 +1,4 @@
-"use strict";
-
-/*! @health.gov.au/health-design-system v3.3.1 */
+/*! @health.gov.au/health-design-system v3.3.2 */
 (function ($) {
   $(document).ready(function () {
     //YouTube embed on click

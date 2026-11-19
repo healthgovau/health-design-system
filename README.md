@@ -91,6 +91,7 @@ The following is a description of important directories used in the project.
 | `source/sass/components/@gov.au/` | Overrides to styles provided by the DTA Design System should be placed in this directory. Overrides should be placed in a SASS partial file with the same name as the file in which the style is defined within the DTA Design System. |
 | `source/sass/components/@health/` | Styling for custom HDS components. These are components which are not a part of the DTA Design System. |
 | `style-guide/` | Source template and configuration files for components included in the HDS component library (aka. the Style Guide). The Style Guide is created using [Fractal](https://fractal.build/).  |
+| `playwright/` | Playwright visual regression tests. |
 
 ## Health Design System development
 
@@ -138,11 +139,23 @@ Publish packge.
 BROWSER=wslview npm publish
 ```
 
+## Regression testing
 
-### HDS Starter Kit
+Visual regression testing is performed using a curated set of reference images. Testing is performed using the Playwright framework.
 
-> The HDS Starter Kit is no longer maintained.
-
-setup.js is a file which is used to configure the HDS Starter kit.
-It is used to create a base file structure for instant development.
-More information about the HDS Starter kit can be found here: https://github.com/healthgovau/health-design-system-starter-kit
+1. Build the test environment.
+    ```sh
+    npm run playwright:build
+    ```
+2. Run the tests to compare against the reference images.
+    ```sh
+    npm run playwright:run
+    ```
+3. View test results.
+    ```sh
+    npm run playwright:open
+    ```
+4. Update reference images. If you have made deliberate changes to the HDS you will need to update the reference images to include those changes.
+    ```sh
+    npm run playwright:reference
+    ```

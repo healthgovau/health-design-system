@@ -8,12 +8,6 @@ source/sass/vendors/govau-ds.scss
 /node_modules
 /vendor
 
-# Backstop.js.
-backstop_data/*
-!backstop_data/engine_scripts
-!backstop_data/bitmaps_reference
-!backstop_data/modules
-
 # Git merge conflict files.
 *.orig
 *.rej
@@ -24,3 +18,10 @@ backstop_data/*
 
 # IDE related files.
 /.vscode
+
+# Playwright testing framework.
+/playwright/report
+/playwright/test-results/
+
+# Static style guide build files.
+/dist

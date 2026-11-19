@@ -53,7 +53,7 @@
         "title": "Your stories",
         "image": {
           "link": true,
-          "url": "https://picsum.photos/id/867/800/450",
+          "url": "/images/picsum-867-1280x720.jpg",
           "width": 800,
           "height": 450,
           "ratio": 56.25,
