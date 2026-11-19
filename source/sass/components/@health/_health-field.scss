@@ -34,18 +34,46 @@
   // Inline label/value variant (stacked on mobile)
   &--inline,
   &--inline--wide {
-    .health-field__label {
-      @include AU-media(sm) {
-        float: left;
-      }
-    }
 
-    .health-field__item {
-      display: table;
+    @include AU-media(sm) {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      column-gap: 0;
+      align-items: baseline;
+
+      .health-field__label {
+        grid-column: 1;
+        margin-bottom: 0;
+      }
+
+      .health-field__item {
+
+        grid-column: 2;
+      }
     }
   }
 
-  &--inline {
+  &--inline-comma-separated {
+    @include AU-media(sm) {
+      display: flex;
+      column-gap: 0;
+    }
+
+    .health-field__item {
+      display: inline;
+
+      &:not(:last-child) {
+        &:after {
+          content: ", ";
+          white-space: pre;
+
+        }
+      }
+    }
+  }
+
+  &--inline,
+  &--inline-comma-separated {
     .health-field__label {
       @include AU-media(sm) {
         width: 10em;
