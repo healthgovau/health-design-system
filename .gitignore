@@ -22,3 +22,6 @@ source/sass/vendors/govau-ds.scss
 # Playwright testing framework.
 /playwright/report
 /playwright/test-results/
+
+# Static style guide build files.
+/dist
