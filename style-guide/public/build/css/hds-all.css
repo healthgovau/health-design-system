@@ -7576,9 +7576,9 @@ textarea.au-text-input {
     display: grid;
     grid-template-columns: -webkit-max-content 1fr;
     grid-template-columns: max-content 1fr;
-    -webkit-column-gap: 0rem;
-       -moz-column-gap: 0rem;
-            column-gap: 0rem;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
