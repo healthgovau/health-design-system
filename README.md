@@ -138,3 +138,24 @@ Publish packge.
 ```
 BROWSER=wslview npm publish
 ```
+
+## Regression testing
+
+Visual regression testing is performed using a curated set of reference images. Testing is performed using the Playwright framework.
+
+1. Build the test environment.
+    ```sh
+    npm run playwright:build
+    ```
+2. Run the tests to compare against the reference images.
+    ```sh
+    npm run playwright:run
+    ```
+3. View test results.
+    ```sh
+    npm run playwright:open
+    ```
+4. Update reference images. If you have made deliberate changes to the HDS you will need to update the reference images to include those changes.
+    ```sh
+    npm run playwright:reference
+    ```
