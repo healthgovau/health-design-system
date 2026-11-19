@@ -26,7 +26,7 @@
       "name": "Dark",
       "hidden": "true",
       "context": {
-        "image": "logo--reverse.svg",
+        "image": "DoHCrest-white.png",
         "mainNav": {
           "modifier": "au-main-nav--dark"
         }

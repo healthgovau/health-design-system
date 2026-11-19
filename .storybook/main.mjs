@@ -11,6 +11,7 @@ const config = {
     name: '@storybook/html-vite',
     options: {},
   },
+  staticDirs: ['../style-guide/public'],
 };
 
 export default config;
