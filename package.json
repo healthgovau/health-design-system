@@ -60,12 +60,16 @@
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
+<<<<<<< HEAD
     "fractal:build": "npm run gulp && cd style-guide && fractal build",
     "playwright:build": "docker compose -f playwright/compose.yml build",
     "playwright:open": "playwright show-report playwright/report",
     "playwright:reference": "sh scripts/playwright_test_runner.sh reference",
     "playwright:run": "sh scripts/playwright_test_runner.sh",
     "playwright:ui": "node playwright/scripts/docker-ui.mjs"
+=======
+    "fractal:build": "npm run gulp && cd style-guide && fractal build"
+>>>>>>> 3.x
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,
