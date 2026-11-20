@@ -1,0 +1,32 @@
+<div class="au-body">
+  <div class="Document-header">
+    <h1 class="Document-title">Versioning</h1>
+  </div>
+  <div class="Document-content">
+    <div class="Prose">
+      <p class="au-introduction">The HDS uses semantic versioning to help understand the potential impact of a new version.</p>
+
+      <h2>Semantic versioning</h2>
+      <p>Semantic Versioning (SemVer) is a versioning scheme for software that aims to make version numbers meaningful and informative about the nature of changes in a release. The format for SemVer is MAJOR.MINOR.PATCH, where each segment of the version number indicates the type of changes that have been made. Here’s a breakdown:</p>
+
+      <h3>Major releases</h3>
+      <p>These releases may contain breaking changes, it will almost always be necessary to refactor some of your code and check for usage of deprecated components.</p>
+      <p>Example: <code>v2.0.0</code></p>
+
+      <h3>Minor releases</h3>
+      <p>These releases can contain new components, or non breaking changes. These are changes where the HTML template remains the same, but the SCSS may have been updated. If your project does not override the SCSS, there will be no impact.</p>
+      <p>Example: <code>v2.1.0</code></p>
+
+      <h3>Patch releases</h3>
+      <p>These are bug fixes so rarely impact your product. In addition to the HDS code itself, the codebase contains the style guide (what you're reading now). Sometimes, we may simply update the style guide without making changes the HDS code. Given the rules of semantic versioning, we will push these changes as a patch release. Refer to the release notes for more information.</p>
+      <p>Example: <code>v2.0.1</code></p>
+
+      <h3>Pre-release</h3>
+      <p>A pre-release version number may be denoted by appending a string immediately following the patch version and a decimal point. These releases should be used with caution in a production environment.</p>
+      <p>Example: <code>v2.0.0-beta2</code></p>
+
+      <h2>Version history</h2>
+      <p>Version history is available in the <a href="https://github.com/healthgovau/health-design-system/releases">Health Design System releases</a>.</p>
+    </div>
+  </div>
+</div>

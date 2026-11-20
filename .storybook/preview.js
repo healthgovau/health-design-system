@@ -19,7 +19,12 @@ export default {
         // method: "",
         order: [
           "Home",
-          "Who is this for?",
+          "Who should use it?",
+          "Getting started",
+          "Principles",
+          "Versioning",
+          "Colours and variables",
+          "Products Using It",
           "Base",
           "Typography",
           "Components",
