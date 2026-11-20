@@ -1,0 +1,40 @@
+{
+  "title": "Image",
+  "context": {
+    "image": {
+      "link": false,
+      "url": "/images/picsum-20-1865x1319.jpg",
+      "width": 800,
+      "height": 450,
+      "ratio": 56.25
+    }
+  },
+  "variants": [
+    {
+      "name": "Border",
+      "context": {
+        "image": {
+          "modifier": "image--border"
+        }
+      }
+    },
+    {
+      "name": "Link",
+      "context": {
+        "image": {
+          "modifier": "image--link",
+          "link": true
+        }
+      }
+    },
+    {
+      "name": "Border link",
+      "context": {
+        "image": {
+          "modifier": "image--link image--border",
+          "link": true
+        }
+      }
+    }
+  ]
+}

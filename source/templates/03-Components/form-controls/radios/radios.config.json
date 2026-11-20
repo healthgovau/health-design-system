@@ -1,0 +1,17 @@
+{
+  "title": "Radios",
+  "context": {
+    "error": false,
+    "radios": {
+      "label": "Is this feedback for:"
+    }
+  },
+  "variants": [
+    {
+      "name": "Error",
+      "context": {
+        "error": true
+      }
+    }
+  ]
+}

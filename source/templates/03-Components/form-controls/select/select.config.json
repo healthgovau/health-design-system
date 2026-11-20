@@ -1,0 +1,17 @@
+{
+  "title": "Select",
+  "context": {
+    "select": {
+      "label": "Favourite animal"
+    },
+    "error": false
+  },
+  "variants": [
+    {
+      "name": "Error",
+      "context": {
+        "error": true
+      }
+    }
+  ]
+}

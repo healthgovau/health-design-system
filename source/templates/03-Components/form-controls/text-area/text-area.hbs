@@ -1,0 +1,10 @@
+<div class="au-form__item">
+  <label for="email">
+    {{textArea.label}}
+    {{> @label-mandatory }}
+  </label>
+  <div class="au-form__item-description">
+    Please do not include any personal or financial information - limit is 1200 characters
+  </div>
+  <textarea class="au-text-input au-text-input--block{{#if error}} error{{/if}}" id="description" name="description"></textarea>
+</div>

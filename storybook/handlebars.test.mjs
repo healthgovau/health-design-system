@@ -21,6 +21,22 @@ async function renderStory(file, name, args) {
   return (story.render || stories.default.render)(args || story.args);
 }
 
+test("default card renders its configured and updated card data", async () => {
+  const { Default } = await server.ssrLoadModule(
+    "/storybook/stories/03-Components/card.stories.js",
+  );
+  const html = Default.render(Default.args);
+  assert.match(html, /class="health-card__link" href="#">Card Title<\/a>/);
+  assert.match(html, /Card content goes here\./);
+  assert.match(html, /2024-06-05/);
+  assert.match(html, /class="health-card__tag">Tag/);
+
+  const updated = Default.render({
+    card: { ...Default.args.card, title: "Updated title" },
+  });
+  assert.match(updated, /class="health-card__link" href="#">Updated title<\/a>/);
+});
+
 test("nested variant contexts retain default image attributes", async () => {
   const html = await renderStory("image", "BorderLink");
   assert.match(html, /class="image--link image--border"/);

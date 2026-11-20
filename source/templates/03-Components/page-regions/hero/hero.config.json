@@ -1,0 +1,42 @@
+{
+  "title": "Header",
+  "preview": "@preview-page",
+  "context": {
+    "title": "Hero title",
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maxime eum, incidunt quisquam corrupti qui. Tempora, iste? Illum, unde. Assumenda incidunt voluptatum.",
+    "image": "/images/hero_1600x900-alt.jpg",
+    "cta-primary": "Primary call-to-action"
+  },
+  "variants": [
+    {
+      "name": "Hero inset box",
+      "context": {
+        "modifer": "inset-box",
+        "image": "/images/hero_1600x900-alt.jpg"
+      }
+    },
+    {
+      "name": "Hero inset box (overlapping)",
+      "context": {
+        "modifer": "inset-box-overlap",
+        "image": "/images/hero_1098x898.png"
+      }
+    },
+    {
+      "name": "Hero gradient",
+      "context": {
+        "modifer": "bg-gradient",
+        "image": "/images/hero_1098x898.png"
+      }
+    },
+    {
+      "name": "Hero gradient (vertical)",
+      "context": {
+        "modifer": "bg-gradient--vertical",
+        "image": "/images/hero_1600x900-alt.jpg",
+        "cta-primary": "",
+        "summary": ""
+      }
+    }
+  ]
+}

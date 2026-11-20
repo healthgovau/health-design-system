@@ -15,6 +15,10 @@ bands, metadata, references, typography, and utilities. Full-page templates are
 not included. Start it with `npm run storybook` or build it with
 `npm run storybook:build`.
 
+Storybook refreshes the HDS lazy loader after rendering stories and docs.
+After changing the lazy loader, rebuild with `npm run gulp` and copy
+`build/js/hds.js` into `public/build/js/`, which Storybook serves.
+
 Stories explicitly import their Handlebars templates and configuration data,
 and select variant arguments. Shared component templates are registered directly
 as native Handlebars partials; templates pass their data explicitly, for example

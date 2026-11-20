@@ -1,0 +1,30 @@
+{
+  "title": "Step indicator",
+  "context": {
+    "title": "Simple steps",
+    "desc": "The default step timeline uses empty nodes to indicate steps.",
+    "type": "ul"
+  },
+  "variants": [
+    {
+      "name": "Numbered",
+      "notes": "The numbered variant should be used for sequential steps. <p>Numbers are generated automatically, begin from 1 and increment. A different start number can be specified using the data attribute `['data-counter-start' = 5]`",
+      "context": {
+        "modifier": "health-steps--numbered",
+        "title": "Numbered steps",
+        "desc": "This variant uses an ordered list to create semantically correct numbered steps.",
+        "type": "ol"
+      }
+    },
+    {
+      "name": "Progress",
+      "notes": "The progress variant should be used for processes that involve state changes. These may be time or action-based. <h2>Progress states</h2><p>Three states are available for application to each node: <ol><li>Incomplete (default)</li><li>In-progress</li><li>Complete</li></ol>",
+      "context": {
+        "modifier": "health-steps--status",
+        "title": "Progress steps",
+        "desc": "This variant uses icons to indicate upcoming, current and completed steps.",
+        "type": "ul"
+      }
+    }
+  ]
+}

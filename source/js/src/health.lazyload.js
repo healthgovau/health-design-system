@@ -12,6 +12,14 @@
           $(el).trigger('lazyLoad_loaded', el);
         }
       });
+
+      // Listen for a custom event to update lazy load instances. This is used
+      // by Storybook which loads components dynamically after the initial page
+      // load. @todo Consider removing this as it is not needed outside of
+      // Storybook.
+      document.addEventListener('hds:lazyload:update', function () {
+        myLazyLoad.update();
+      });
     }
 
     // If the user tries to print, then try to load all the images so printing works :)

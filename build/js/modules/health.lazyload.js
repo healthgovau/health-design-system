@@ -11,6 +11,9 @@
           $(el).trigger('lazyLoad_loaded', el);
         }
       });
+      document.addEventListener('hds:lazyload:update', function () {
+        myLazyLoad.update();
+      });
     }
 
     // If the user tries to print, then try to load all the images so printing works :)

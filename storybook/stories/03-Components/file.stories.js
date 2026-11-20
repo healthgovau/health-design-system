@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars';
-import templateSource from '../../../style-guide/components/01-components/file/file.hbs?raw';
+import templateSource from '../../../source/templates/03-Components/file/file.hbs?raw';
 
 const renderFile = Handlebars.compile(templateSource);
 

@@ -1,0 +1,25 @@
+<header class="au-header pillars-container" role="banner">
+  <div class="container">
+    <div id="pillars"></div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <a href="/" title="Home" rel="home" class="au-header__logo">
+          <img
+            src="{{path '/images/{{ image }}'}}"
+            alt="Australia Government Department of Health"
+            class="au-header__logo-image au-responsive-media-img"
+          />
+        </a>
+        <div class="au-sronly">
+          <p>Australian Government Department of Health and Aged Care</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        {{> @sub-nav }}
+        {{> @search searchForm }}
+      </div>
+    </div>
+  </div>
+</header>
+
+{{> @main-nav mainNav }}

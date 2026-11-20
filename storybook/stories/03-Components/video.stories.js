@@ -1,21 +1,42 @@
 import { compileTemplate } from "../../handlebars";
-import withPagePreview from "../../decorators";
-import videoConfig from "../../../style-guide/components/01-components/video/video.config.json";
-import videoSource from "../../../style-guide/components/01-components/video/video.hbs?raw";
-import videoPreviewSource from "../../../style-guide/components/01-components/video/video--preview.hbs?raw";
-
-const renderVideo = compileTemplate(videoSource);
-const renderVideoPreview = compileTemplate(videoPreviewSource);
+import decorators from "../../decorators";
+// import videoConfig from "../../../source/templates/03-Components/video/video.config.json";
+import videoTemplate from "../../../source/templates/03-Components/video/video.hbs?raw";
+import videoPreviewTemplate from "../../../source/templates/03-Components/video/video--preview.hbs?raw";
 
 export default {
   title: "Components/Video",
-  decorators: [withPagePreview],
-  render: (args) => renderVideo(args),
+  decorators,
 };
 
-export const Default = { args: videoConfig.context };
+export const Default = {
+  args: {
+    accordion: {
+      title: "Transcript",
+      content:
+        "<p><i>NARRATOR:</i> It's one of the most mysterious dinosaurs ever discovered: head like a crocodile, meter-long jaws, a spectacular sail, and an overall body larger than T. rex.</p><p><i>NIZAR IBRAHIM (University of Chicago):</i> There is no animal alive or extinct, that we know of, that looks anything like <i>Spinosaurus</i> .</p><p><i>NARRATOR:</i> <i>Spinosaurus</i> : only one skeleton has ever been found, and, in a single night, it was destroyed.</p><p><i>HANS-DIETER SUES (National Museum of Natural History):</i> It was a catastrophic loss to science, overall.</p><p><i>NARRATOR:</i> Now, after a century of searching, a new skeleton has emerged from the Sahara.</p><p><i>MATT LAMANNA (Carnegie Museum of Natural History):</i> When this skeleton is revealed, it's going to change our understanding of this animal in pretty fundamental ways.</p>",
+    },
+    image: {
+      link: true,
+      url: "https://picsum.photos/id/867/800/450",
+      ratio: 56.25,
+      modifier: "image--link image--border",
+      width: 800,
+      height: 450,
+    },
+  },
+  render: (args) => {
+    const template = compileTemplate(videoTemplate);
+    return template(args);
+  },
+};
 
 export const Preview = {
-  args: videoConfig.context,
-  render: (args) => renderVideoPreview(args),
+  args: {
+    ...Default.args,
+  },
+  render: (args) => {
+    const template = compileTemplate(videoPreviewTemplate);
+    return template(args);
+  },
 };

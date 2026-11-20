@@ -1,0 +1,53 @@
+{
+  "title": "Field",
+  "default": "Stacked",
+  "context": {
+    "field": {
+      "label": "Genus",
+      "item": "Tyranasuarus Rex"
+    }
+  },
+  "variants": [
+    {
+      "name": "Stacked - label with icon",
+      "context": {
+        "field": {
+          "modifier": "health-field--icon"
+        }
+      }
+    },
+    {
+      "name": "Inline",
+      "context": {
+        "field": {
+          "modifier": "health-field--inline"
+        }
+      }
+    },
+    {
+      "name": "Inline (label with icon)",
+      "context": {
+        "field": {
+          "modifier": "health-field--inline health-field--icon"
+        }
+      }
+    },
+    {
+      "name": "Icon only",
+      "context": {
+        "field": {
+          "modifier": "health-field--icon-only"
+        }
+      }
+    },
+    {
+      "name": "List of icons",
+      "view": "field--icons.hbs",
+      "context": {
+        "field": {
+          "modifier": "health-field--icon-only"
+        }
+      }
+    }
+  ]
+}

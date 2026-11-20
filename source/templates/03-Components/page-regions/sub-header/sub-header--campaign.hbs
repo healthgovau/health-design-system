@@ -1,0 +1,27 @@
+ <!--
+   Output inline style for image for more granular control
+   Preferably add to CSS but this depends on the implementation
+-->
+<style>
+  .health-sub-header--campaign {
+    background-image: url('{{ subheader.image }}') !important; // reqd to override .au-body--dark bg
+  }
+</style>
+
+<div class="health-sub-header health-sub-header--campaign au-body au-body--dark">
+  <div class="container">
+    <div class="row">
+      <div class="health-sub-header__content{{ subheader.color }} col-sm-7">
+        <h1>{{ subheader.title }}</h1>
+        <p class="au-introduction">
+          {{ subheader.summary }}
+        </p>
+        <p>
+          <a class="au-btn au-btn--dark au-btn--large" href="#">
+            {{ subheader.callout }}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

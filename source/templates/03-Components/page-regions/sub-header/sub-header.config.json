@@ -1,0 +1,63 @@
+{
+  "title": "Sub header",
+  "preview": "@preview-page",
+  "default": "Dark",
+  "context": {
+    "subheader": {
+      "title": "Page title",
+      "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor."
+    }
+  },
+  "variants": [
+    {
+      "name": "Light",
+      "context": {
+        "subheader": {
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "color": ""
+        }
+      }
+    },
+    {
+      "name": "Campaign",
+      "view": "sub-header--campaign.hbs",
+      "context": {
+        "subheader": {
+          "title": "Campaign title",
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "callout": "Callout button",
+          "image": "https://picsum.photos/id/867/1920/700",
+          "color": ""
+        }
+      }
+    },
+    {
+      "name": "Campaign secondary",
+      "view": "sub-header--campaign.hbs",
+      "hidden": true,
+      "context": {
+        "subheader": {
+          "title": "Campaign title",
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "callout": "Callout button",
+          "image": "https://picsum.photos/id/867/1920/700",
+          "color": "--secondary"
+        }
+      }
+    },
+    {
+      "name": "Campaign tertiary",
+      "view": "sub-header--campaign.hbs",
+      "hidden": true,
+      "context": {
+        "subheader": {
+          "title": "Campaign title",
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "callout": "Callout button",
+          "image": "https://picsum.photos/id/867/1920/700",
+          "color": "--tertiary"
+        }
+      }
+    }
+  ]
+}

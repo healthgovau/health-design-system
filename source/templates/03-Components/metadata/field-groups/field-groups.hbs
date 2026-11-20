@@ -1,0 +1,91 @@
+<h2>{{ group.name }} group variant</h2>
+<p>{{group.notes}}</p>
+
+<h3>{{ group.name }} group of stacked fields</h3>
+<div class="health-field-group {{#if group.modifier}} {{group.modifier}}{{/if}}">
+  <div class="health-field">
+    <div class="health-field__label">Date published:</div>
+    <div class="health-field__item">23 May 2024</div>
+  </div>
+  <div class="health-field">
+    <div class="health-field__label">Duration:</div>
+    <div class="health-field__item">30 minutes</div>
+  </div>
+  <div class="health-field">
+    <div class="health-field__label">Type:</div>
+    <div class="health-field__item">News article</div>
+  </div>
+</div>
+
+<hr>
+
+<h3>{{ group.name }} group of stacked (label with icon) fields</h3>
+<div class="health-field-group {{#if group.modifier}} {{group.modifier}}{{/if}}">
+  <div class="health-field health-field--icon health-field--icon-date">
+    <div class="health-field__label">Date published:</div>
+    <div class="health-field__item">23 May 2024</div>
+  </div>
+  <div class="health-field health-field--icon health-field--icon-duration">
+    <div class="health-field__label">Duration:</div>
+    <div class="health-field__item">30 minutes</div>
+  </div>
+  <div class="health-field health-field--icon health-field--icon-type">
+    <div class="health-field__label">Type:</div>
+    <div class="health-field__item">News article</div>
+  </div>
+</div>
+
+<hr>
+
+<h3>{{ group.name }} group of inline fields</h3>
+<div class="health-field-group {{#if group.modifier}} {{group.modifier}}{{/if}}">
+  <div class="health-field health-field--inline">
+    <div class="health-field__label">Date published:</div>
+    <div class="health-field__item">23 May 2024</div>
+  </div>
+  <div class="health-field health-field--inline">
+    <div class="health-field__label">Duration:</div>
+    <div class="health-field__item">30 minutes</div>
+  </div>
+  <div class="health-field health-field--inline">
+    <div class="health-field__label">Type:</div>
+    <div class="health-field__item">News article</div>
+  </div>
+</div>
+
+<hr>
+
+<h3>{{ group.name }} group of inline (label with icon) fields</h3>
+<div class="health-field-group {{#if group.modifier}} {{group.modifier}}{{/if}}">
+  <div class="health-field health-field--inline health-field--icon health-field--icon-date">
+    <div class="health-field__label">Date published:</div>
+    <div class="health-field__item">23 May 2024</div>
+  </div>
+  <div class="health-field health-field--inline health-field--icon health-field--icon-duration">
+    <div class="health-field__label">Duration:</div>
+    <div class="health-field__item">30 minutes</div>
+  </div>
+  <div class="health-field health-field--inline health-field--icon health-field--icon-type">
+    <div class="health-field__label">Type:</div>
+    <div class="health-field__item">News article</div>
+  </div>
+</div>
+
+<hr>
+
+
+<h3>{{ group.name }} group of icon-only fields</h3>
+<div class="health-field-group {{#if group.modifier}} {{group.modifier}}{{/if}}">
+  <div class="health-field health-field--icon-only health-field--icon-date">
+    <div class="health-field__label">Date published:</div>
+    <div class="health-field__item">23 May 2024</div>
+  </div>
+  <div class="health-field health-field--icon-only health-field--icon-duration">
+    <div class="health-field__label">Duration:</div>
+    <div class="health-field__item">30 minutes</div>
+  </div>
+  <div class="health-field health-field--icon-only health-field--icon-type">
+    <div class="health-field__label">Type:</div>
+    <div class="health-field__item">News article</div>
+  </div>
+</div>

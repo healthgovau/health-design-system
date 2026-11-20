@@ -1,0 +1,23 @@
+{
+  "title": "Loading",
+  "context": {
+    "loading": {
+      "active": true
+    }
+  },
+  "variants": [
+    {
+      "name": "Small",
+      "context": {
+        "modifier": "health-loading--small"
+      }
+    },
+    {
+      "name": "Search",
+      "context": {
+        "modifier": "health-loading--small health-loading--search",
+        "link": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<div class="health-steps {{#if modifier}} {{modifier}}{{/if}}" data-counter-start="1">
+  <div class="health-steps__intro">
+    <h2>{{ title }} - all fields</h2>
+    <p>{{ desc }}</p>
+  </div>
+  <{{ type }}>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-date">January 2024</p>
+        <h3 class="health-steps__item-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+        <p class="health-steps__item-desc">Hic inventore molestiae excepturi voluptate consectetur voluptas iusto voluptates debitis dignissimos, necessitatibus eos deleniti eius consequuntur dolore.</p>
+        <a href="#" class="health-steps__item-link">Soluta dolore impedit</a>
+      </span>
+    </li>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-date">February 2024</p>
+        <h3 class="health-steps__item-title">Corrupti maxime nostrum voluptatem numquam</h3>
+        <p class="health-steps__item-desc">Eaque dignissimos odio dolore nam quia adipisci quidem quaerat corporis iusto deserunt nemo, culpa optio? Suscipit, doloremque sint. Sunt velit quisquam laborum delectus odio ratione modi ad nesciunt earum accusamus?</p>
+        <a href="#" class="health-steps__item-link">Nihil nulla</a>
+      </span>
+    </li>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-date">March 2024</p>
+        <h3 class="health-steps__item-title">Animi modi iure dignissimos laboriosam dolorum</h3>
+        <p class="health-steps__item-desc">Officia explicabo soluta tempora quasi necessitatibus reiciendis a laudantium labore deserunt accusantium suscipit, itaque illo! Necessitatibus, ipsam reiciendis voluptate culpa, ullam eos recusandae, harum corrupti sed nihil magnam ducimus aut.</p>
+        <a href="#" class="health-steps__item-link">Consequuntur necessitatibus tempora</a>
+      </span>
+    </li>
+  </{{ type }}>
+</div>
+
+<hr />
+
+<div class="health-steps health-steps--title-only {{#if modifier}} {{modifier}}{{/if}}" data-counter-start="1">
+  <div class="health-steps__intro">
+    <h2>{{ title }} - title only</h2>
+    <p>As above but outputting only the title.</p>
+  </div>
+  <{{ type }}>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+      </span>
+    </li>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-title">Corrupti maxime nostrum voluptatem numquam</p>
+      </span>
+    </li>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-title">Animi modi iure dignissimos laboriosam dolorum</p>
+      </span>
+    </li>
+  </{{ type }}>
+</div>

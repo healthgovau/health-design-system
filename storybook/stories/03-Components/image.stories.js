@@ -1,21 +1,54 @@
-import { compileTemplate, getVariantArgs } from "../../handlebars";
-import withPagePreview from "../../decorators";
-import imageConfig from "../../../style-guide/components/01-components/image/image.config.json";
-import imageSource from "../../../style-guide/components/01-components/image/image.hbs?raw";
-
-const renderImage = compileTemplate(imageSource);
+import { compileTemplate } from "../../handlebars";
+import decorators from "../../decorators";
+import imageTemplate from "../../../source/templates/03-Components/image/image.hbs?raw";
 
 export default {
   title: "Components/Image",
   parameters: { layout: "fullscreen" },
-  decorators: [withPagePreview],
-  render: (args) => renderImage(args),
+  decorators,
+  render: (args) => {
+    const template = compileTemplate(imageTemplate);
+    return template(args);
+  },
 };
 
-export const Default = { args: imageConfig.context };
+export const Default = {
+  args: {
+    image: {
+      link: false,
+      url: "/images/picsum-20-1865x1319.jpg",
+      width: 800,
+      height: 450,
+      ratio: 56.25,
+    },
+  },
+};
 
-export const Border = { args: getVariantArgs(imageConfig, "Border") };
+export const Border = {
+  args: {
+    image: {
+      ...Default.args.image,
+      modifier: "image--border",
+    },
+  },
+};
 
-export const Link = { args: getVariantArgs(imageConfig, "Link") };
+export const Link = {
+  args: {
+    image: {
+      ...Default.args.image,
+      modifier: "image--link",
+      link: true,
+    },
+  },
+};
 
-export const BorderLink = { args: getVariantArgs(imageConfig, "Border link") };
+export const BorderLink = {
+  args: {
+    image: {
+      ...Default.args.image,
+      modifier: "image--border image--link",
+      link: true,
+    },
+  },
+};

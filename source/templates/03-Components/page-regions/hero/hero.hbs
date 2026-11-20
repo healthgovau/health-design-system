@@ -1,0 +1,27 @@
+<div class="health-hero health-hero--{{modifer}}">
+  <div class="health-hero__bg"></div>
+  {{#if image}}
+    <div class="health-hero__image-container">
+      <img class="health-hero__image" src="{{image}}" alt="Hero image" />
+    </div>
+  {{/if}}
+  <div class="container">
+    <div class="health-hero__content">
+      <h1 class="health-hero__title">{{title}}</h1>
+      {{#if summary}}
+        <p class="health-hero__summary">{{summary}}</p>
+      {{/if}}
+      {{#if cta-primary }}
+      <p class="health-hero__call-to-action">
+        {{#if cta-primary}}
+        <a href="#" class="au-btn au-btn--dark au-btn--large">{{cta-primary}}</a>
+        {{/if}}
+
+        {{#if cta-secondary}}
+          <a href="#" class="au-btn au-btn--dark au-btn--large au-btn--secondary">{{cta-secondary}}</a>
+        {{/if}}
+      </p>
+      {{/if}}
+    </div>
+  </div>
+</div>

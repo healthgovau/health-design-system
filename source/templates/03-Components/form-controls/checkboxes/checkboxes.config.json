@@ -1,0 +1,17 @@
+{
+  "title": "Checkboxes",
+  "context": {
+    "error": false,
+    "checkboxes": {
+      "label": "My favourite animals are"
+    }
+  },
+  "variants": [
+    {
+      "name": "Error",
+      "context": {
+        "error": true
+      }
+    }
+  ]
+}

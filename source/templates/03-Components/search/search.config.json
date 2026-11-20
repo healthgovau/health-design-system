@@ -1,0 +1,17 @@
+{
+  "title": "Search",
+  "context": {
+    "search": {
+      "placeholder": "Search this website",
+      "id": "search-field",
+      "global": true
+    },
+    "searchLoading": {
+      "loading": {
+        "active": true
+      },
+      "modifier": "health-loading--small health-loading--search",
+      "link": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="au-form__item">
+  <label for="email">
+    {{textInput.label}}
+    {{> @label-mandatory }}
+  </label>
+  <div class="au-form__item-description">
+    Health will not share this email. It will only be used to contact you regarding your feedback.
+  </div>
+  <input class="au-text-input au-text-input--block{{#if error}} error{{/if}}" type="email" id="email" name="email" maxlength="50">
+</div>
+
+<script language="JavaScript">
+  $(document).ready(function () {
+    health.fieldLengthCounter('#email');
+  });
+</script>

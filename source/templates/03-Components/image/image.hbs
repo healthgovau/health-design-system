@@ -1,0 +1,24 @@
+
+{{#if image.modifier}}
+  <div class="{{image.modifier}}">
+{{/if}}
+{{#if image.link}}
+  <a href="#">
+{{/if}}
+  <div class="image-outer">
+    <div class="image-placeholder" style="max-width: {{image.width}}px;">
+      <div style="padding-top: {{image.ratio}}%;"></div>
+    </div>
+    <div class="image-wrapper image-loading">
+      <div class="image">
+        <img width="{{image.width}}" height="{{image.height}}" data-src="{{ path image.url}}">
+      </div>
+    </div>
+  </div>
+
+{{#if image.link}}
+  </a>
+{{/if}}
+{{#if image.modifier}}
+  </div>
+{{/if}}

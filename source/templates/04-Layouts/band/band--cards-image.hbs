@@ -1,0 +1,30 @@
+<div class="health-band health-band--full-width-bg{{#if modifier}} health-band--{{ modifier }}{{/if}}">
+  <div class="health-band__container">
+    <h2>List of image (vertical) cards</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        {{> @card card=card }}
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        {{> @card card=card }}
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        {{> @card card=card }}
+      </div>
+    </div>
+    <h2>List of image (horizontal) cards</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        {{> @card--horizontal card=horizontalCard }}
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        {{> @card--horizontal card=horizontalCard }}
+      </div>
+    </div>
+    <div class="row standard-gap">
+      <div class="col-xs-12 text--align-right">
+        <a href="#" class="au-cta-link">All news</a>
+      </div>
+    </div>
+  </div>
+</div>

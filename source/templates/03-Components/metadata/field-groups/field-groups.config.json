@@ -1,0 +1,32 @@
+{
+  "title": "Field groups",
+  "default": "Vertical group",
+  "context": {
+    "group": {
+      "name": "Vertical",
+      "notes": "The default vertical group stacks fields on top of each other on all devices."
+    }
+  },
+  "variants": [
+    {
+      "name": "Horizontal group",
+      "context": {
+        "group": {
+          "name": "Horizontal",
+          "modifier": "health-field-group--horizontal",
+          "notes": "The horizontal group displays fields inline but responsively switches to vertical on mobile."
+        }
+      }
+    },
+    {
+      "name": "Horizontal (fixed) group",
+      "context": {
+        "group": {
+          "name": "Horizontal (fixed)",
+          "modifier": "health-field-group--horizontal-stubborn",
+          "notes": "The horizontal (fixed) group looks the same across all devices and doesn't stack on mobile. A great space-saver for few fields but to be used judiciously."
+        }
+      }
+    }
+  ]
+}

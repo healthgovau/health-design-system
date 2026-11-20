@@ -1,0 +1,21 @@
+{
+  "title": "Accordion group",
+  "context": {
+    "accordion": {
+      "title": "Accordion title",
+      "content": "Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus lacinia pharetra."
+    }
+  },
+  "variants": [
+    {
+      "name": "Flush",
+      "context": {
+        "modifier": "au-accordion-group--flush",
+        "accordion": {
+          "title": "Accordion group flush variant",
+          "content": "This accordion group removes spacing between each accordion.<br><br>Duis lacinia sed mi ornare vulputate. Nam dictum eros at orci finibus, quis porttitor ante viverra. Proin et posuere urna, ut placerat nulla. Nam iaculis commodo nulla, at eleifend urna rutrum at. Mauris id aliquet nibh,    et porta quam. Cras iaculis lorem eget faucibus consectetur. Ut nec scelerisque tortor. Pellentesque consectetur    massa sapien, non mattis justo hendrerit a. Nunc pulvinar nibh ut lectus"
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import Handlebars from "handlebars";
 
-import homeSource from './home.hbs?raw';
+import homeSource from "../../../source/templates/00-Intro/home/home.hbs?raw";
 
 const renderHome = Handlebars.compile(homeSource);
 
