@@ -22,6 +22,7 @@
     "@babel/core": "^8.1.2",
     "@babel/preset-env": "^8.0.7",
     "@drupal/once": "^1.0.1",
+    "@etchteam/storybook-addon-status": "^8.1.0",
     "@playwright/test": "^1.65.0",
     "@storybook/addon-a11y": "^10.6.7",
     "@storybook/addon-docs": "^10.6.7",

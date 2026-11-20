@@ -212,6 +212,7 @@ export const MultipleLinks = {
       content: "This card contains multiple links.",
     },
   },
+  tags: ["beta"],
   render: (args) => {
     const template = compileTemplate(cardMultipleLinksTemplate);
     return template(args);
