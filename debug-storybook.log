@@ -1,0 +1,36 @@
+[14:42:31.745] [INFO] storybook v10.6.7
+[14:42:31.952] [DEBUG] Getting package.json info for /home/bgunn/dev/git/health-design-system/package.json...
+[14:42:32.139] [DEBUG] Serving static files from [36mpublic[39m at [36m/[39m
+[14:42:32.139] [INFO] Starting...
+[14:42:32.167] [DEBUG] readDependencyManifest: could not resolve "@drupal/once"
+[14:42:32.321] [DEBUG] Starting preview..
+[14:42:32.353] [WARN] 🚨 Unable to index ./storybook/stories/03-Components/filter.mdx:
+  Error: Invariant failed: Could not find or load CSF file at path "./filter.stories" referenced by `of={}` in docs file "storybook/stories/03-Components/filter.mdx".
+
+- Does that file exist?
+- If so, is it a CSF file (`.stories.*`)?
+- If so, is it matched by the `stories` glob in `main.js`?
+- If so, has the file successfully loaded in Storybook and are its stories visible?
+    at invariant (file:///home/bgunn/dev/git/health-design-system/node_modules/storybook/dist/_node-chunks/chunk-NWLLGJRB.js:20:11)
+    at _StoryIndexGenerator.extractDocs (file:///home/bgunn/dev/git/health-design-system/node_modules/storybook/dist/core-server/index.js:16950:13)
+    at async file:///home/bgunn/dev/git/health-design-system/node_modules/storybook/dist/core-server/index.js:16795:39
+    at async Promise.all (index 2)
+    at async Promise.all (index 1)
+    at async _StoryIndexGenerator.updateExtracted (file:///home/bgunn/dev/git/health-design-system/node_modules/storybook/dist/core-server/index.js:16783:5)
+    at async _StoryIndexGenerator.ensureExtracted (file:///home/bgunn/dev/git/health-design-system/node_modules/storybook/dist/core-server/index.js:16820:8)
+    at async _StoryIndexGenerator.initialize (file:///home/bgunn/dev/git/health-design-system/node_modules/storybook/dist/core-server/index.js:16779:5)
+    at async file:///home/bgunn/dev/git/health-design-system/node_modules/storybook/dist/core-server/presets/common-preset.js:2347:10
+[14:42:32.355] [ERROR] Failed to build the preview
+[14:42:32.358] [ERROR] Error: Unable to index ./storybook/stories/03-Components/filter.mdx
+    at _StoryIndexGenerator.getIndexAndStats (file://./node_modules/storybook/dist/core-server/index.js:17055:15)
+    at async _StoryIndexGenerator.getIndex (file://./node_modules/storybook/dist/core-server/index.js:17044:13)
+    at async BasicMinimalPluginContext.config (file://./node_modules/@storybook/builder-vite/dist/_node-chunks/chunk-UEDSVI3A.js:188:19)
+    at async runConfigHook (file://./node_modules/vite/dist/node/chunks/node.js:38201:15)
+    at async resolveConfig (file://./node_modules/vite/dist/node/chunks/node.js:37607:11)
+    at async _createServer (file://./node_modules/vite/dist/node/chunks/node.js:24755:65)
+    at async Module.start (file://./node_modules/@storybook/builder-vite/dist/index.js:1801:17)
+    at async storybookDevServer (file://./node_modules/storybook/dist/core-server/index.js:8584:59)
+    at async buildOrThrow (file://./node_modules/storybook/dist/core-server/index.js:7269:12)
+    at async buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:9546:41)
+[14:42:32.359] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.

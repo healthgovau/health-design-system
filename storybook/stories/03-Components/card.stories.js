@@ -54,7 +54,6 @@ export default {
       tag: { control: "text" },
     },
   },
-  tags: ["autodocs"],
   render: (args) => {
     const template = compileTemplate(cardTemplate);
     return template(args);

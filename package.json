@@ -69,10 +69,11 @@
     "playwright:open": "playwright show-report playwright/report",
     "playwright:reference": "sh scripts/playwright_test_runner.sh reference",
     "playwright:run": "sh scripts/playwright_test_runner.sh",
-    "storybook": "storybook dev -p 6006",
+    "playwright:ui": "node playwright/scripts/docker-ui.mjs",
+    "storybook:run": "storybook dev -p 6006",
     "storybook:build": "storybook build -o docs",
-    "storybook:test": "node --test storybook/*.test.mjs",
-    "playwright:ui": "node playwright/scripts/docker-ui.mjs"
+    "storybook:docs": "storybook dev -p 6006 --docs",
+    "storybook:test": "node --test storybook/*.test.mjs"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,
