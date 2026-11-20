@@ -1,0 +1,28 @@
+{{ render '@skip' }}
+
+{{ render '@release-status--launch' }}
+
+<div class="au-body">
+  {{ render '@header' }}
+  {{> @sub-header }}
+
+  <div class="container health-content health-content--flush">
+    <div class="row">
+      {{ render '@band--cards-call-to-action' }}
+      {{ render '@band--cards-image'}}
+      {{ render '@accordion-group' }}
+      {{ render '@band--hotline' }}
+      {{ render '@band--featured' }}
+      {{ render '@band--cards-resources' }}
+      {{ render '@band--statistics' }}
+      {{ render '@band--video-listing' }}
+    </div>
+  </div>
+
+  {{ render '@something-wrong' }}
+
+</div>
+
+{{ render '@footer' }}
+
+{{> @back-to-top }}

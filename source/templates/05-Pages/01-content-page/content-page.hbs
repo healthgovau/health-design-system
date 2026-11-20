@@ -1,0 +1,156 @@
+{{ render '@skip' }}
+
+{{!-- {{ render '@release-status--launch' }} --}}
+
+<div class="au-body">
+
+  {{ render '@header' }}
+  {{> @sub-header }}
+
+  <div class="container health-content">
+    <div class="row">
+
+      <div class="col-sm-8" id="content">
+
+        {{ render '@inpage-nav' }}
+
+        <h2 id="description">Description</h2>
+        <h3>Size</h3>
+        <p>
+          Tyrannosaurus Rex was one of the largest land carnivores of all time. One of the largest and the most complete
+          specimen, nicknamed Sue (FMNH PR2081), is located at the Field Museum of Natural History. Sue measured 12.8
+          meters (42 ft) long,was 3.66 meters (12 ft) tall at the hips, and according to the most recent
+          studies, using a variety of techniques, estimated to have weighed between 8.4 metric tons (9.3 short tons) to 14
+          metric tons (15.4 short tons).
+        </p>
+
+        <h2 id="accordion"></h2>
+        {{ render '@accordion-group' }}
+
+        <p>
+          A specimen nicknamed Scotty (RSM P2523.8), located at the Royal
+          Saskatchewan Museum, is reported to measure 13 m (43 ft) in length. Using a mass estimation technique that
+          extrapolates from the circumference of the femur, Scotty was estimated as the largest known specimen at 8.8
+          metric tons (9.7 short tons) in weight
+          <span class="health-references__links">
+            (<span class="health-references__link" title="Boyle J &amp;amp; Eades S (2016) Closing the gap in Aboriginal women’s reproductive health: some progress, but still a long way to go. <cite>Aust N Z J Obstet Gynaecol </cite>56(3): 223-4">Anderson, J. F. 1985</span>)
+          </span>.
+        </p>
+
+        {{ render '@figure' }}
+
+        <p>
+          The discovery of feathered dinosaurs led to debates if, and to what extent, Tyrannosaurus might have been
+          feathered. Filamentous structures, which are commonly recognized as the precursors of feathers, have
+          been reported in the small-bodied, basal tyrannosauroid Dilong paradoxus from the Early Cretaceous Yixian
+          Formation of China in 2004. Because integumentary impressions of larger tyrannosauroids known at that time
+          showed evidence of scales, the researchers who studied Dilong speculated that insulating feathers might have
+          been lost by larger species due to their smaller surface-to-volume ratio.
+        </p>
+
+        {{ render '@table' }}
+
+        <h3>Get the factsheet on how awesome the Tyrannosaurus is</h3>
+
+        <p>
+          The discovery of feathered dinosaurs led to debates if, and to what extent, Tyrannosaurus might have been
+          feathered.
+        </p>
+
+        {{ render '@file' }}
+
+        <h3>Skeleton</h3>
+
+        <p>
+          The largest known Tyrannosaurus rex skull measures up to 1.52 meters (5 ft) in length. Large fenestrae
+          (openings) in the skull reduced weight, as in all carnivorous theropods. In other respects Tyrannosaurus's skull
+          was significantly different from those of large non-tyrannosaurid theropods.
+        </p>
+
+        {{ render '@image' }}
+
+        <h2 id="history">History of research</h2>
+
+        {{ render '@callout' }}
+
+        <p>Teeth from what is now documented as a Tyrannosaurus rex were found in 1874 by Arthur Lakes near Golden,
+          Colorado. In the early 1890s, John Bell Hatcher collected postcranial elements in eastern Wyoming. The fossils
+          were believed to be from a large species of Ornithomimus (O. grandis, now Deinodon grandis) but are now
+          considered Tyrannosaurus rex remains.</p>
+
+        {{ render '@video' }}
+
+        <p>
+          The largest known Tyrannosaurus rex skull measures up to 1.52 meters (5 ft) in length. Large fenestrae
+          (openings) in the skull reduced weight, as in all carnivorous theropods. In other respects Tyrannosaurus's skull
+          was significantly different from those of large non-tyrannosaurid theropods.
+        </p>
+
+        {{ render '@inline-reference' }}
+        {{ render '@inline-reference--video' }}
+
+        <h2 id="facts">Amazing facts</h2>
+
+        <p>Impress your friends with these amazing Tyrannosaurus rex facts:</p>
+
+        <ol class="list--large">
+          <li>The T. Rex roamed the planet during the late Cretaceous Period 65 million years ago, in what’s now the USA and Canada.</li>
+          <li>The name Tyrannosaurus Rex comes from Greek and Latin words meaning ‘Tyrant Lizard King’.</li>
+          <li>The terrific T. Rex was a seriously big beast, growing up to 12m long and 6m tall!</li>
+        </ol>
+
+        <h2 id="getting-away">Getting away from a Tyrannosaurus rex</h2>
+
+        <p>These are some things you can try if you ever see a Tyrannosaurus rex:</p>
+        <ul class="list--large--checklist">
+          <li>Run away as fast as you can</li>
+          <li>Laugh at its little arms</li>
+          <li>Play dead</li>
+        </ul>
+
+        <h2>Contacts</h2>
+
+        {{ render '@inline-reference--contact' }}
+
+        <h2>Glossary</h2>
+
+        {{ render '@lists--definition-list' }}
+
+        <h2>References</h2>
+
+        {{ render '@references' }}
+
+        {{ render '@footnotes' }}
+
+        {{ render '@book-nav' }}
+
+        {{ render '@separator' }}
+
+        {{> @field--inline }}
+
+        <div class="health-field health-field--inline">
+          <div class="health-field__label">Tags:</div>
+          <div class="health-field__item">
+            <ul class="au-tags au-tags--inline">
+              <li><a href="#">Dinosaurs</a></li>
+              <li><a href="#">Theropod</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-4">
+        {{ render '@side-nav' }}
+      </div>
+
+    </div>
+  </div>
+
+  {{ render '@something-wrong' }}
+
+</div>
+
+{{ render '@footer' }}
+
+{{> @back-to-top }}

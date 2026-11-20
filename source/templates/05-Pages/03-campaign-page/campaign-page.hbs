@@ -1,0 +1,21 @@
+{{ render '@skip' }}
+
+<div class="au-body">
+  {{ render '@header--simple' }}
+  {{> @sub-header--campaign }}
+
+  <div class="container health-content health-content--flush">
+    <div class="row">
+      {{ render '@band--featured' }}
+      {{ render '@band--hotline' }}
+      {{ render '@band--video-listing' }}
+    </div>
+  </div>
+
+  {{ render '@something-wrong' }}
+
+</div>
+
+{{ render '@footer' }}
+
+{{> @back-to-top }}

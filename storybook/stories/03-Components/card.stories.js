@@ -57,7 +57,7 @@ export default {
   tags: ["autodocs"],
   render: (args) => {
     const template = compileTemplate(cardTemplate);
-    return template(args.card);
+    return template(args);
   },
 };
 
@@ -75,8 +75,8 @@ export const Default = {
 
 export const CardWithoutImage = {
   args: {
-    ...Default.args,
     card: {
+      ...Default.args.card,
       class: "",
       title: "Card Title",
       content: "Card content goes here.",
@@ -86,14 +86,14 @@ export const CardWithoutImage = {
   },
   render: (args) => {
     const template = compileTemplate(cardNoImageTemplate);
-    return template(args.card);
+    return template(args);
   },
 };
 
 export const CardHorizontal = {
   args: {
-    ...Default.args,
     card: {
+      ...Default.args.card,
       title: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
       date: "20 July 2019",
       tag: "News",

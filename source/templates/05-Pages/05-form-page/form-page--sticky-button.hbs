@@ -1,0 +1,59 @@
+{{ render '@skip' }}
+
+{{ render '@release-status--launch' }}
+
+<div class="au-body">
+
+  {{ render '@header' }}
+  {{> @sub-header }}
+
+  <div class="container health-content">
+    <div class="row">
+      <div class="col-sm-8">
+      
+        {{> @video }}
+      </div>
+
+      <div class="col-sm-4">
+        <h3>Webinar details</h3>
+        <div class="health-field-group ">
+          <div class="health-field health-field--icon-only health-field--icon-date">
+            <div class="health-field__label">Date:</div>
+            <div class="health-field__item">23 May 2024, 10:00am AEST</div>
+          </div>
+          <div class="health-field health-field--icon-only health-field--icon-duration">
+            <div class="health-field__label">Duration:</div>
+            <div class="health-field__item">30 minutes</div>
+          </div>
+          <div class="health-field health-field--icon-only health-field--icon-type">
+            <div class="health-field__label">Type:</div>
+            <div class="health-field__item">Webinar</div>
+          </div>
+        </div>
+        <p>
+          {{> @button--sticky }}
+        </p>
+      </div>
+
+    </div>
+
+    <h2>About the webinar</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nulla id ut dolor minus voluptas, quidem nobis autem inventore impedit dolorum veritatis doloribus natus deserunt optio iusto ex sed minima!</p>
+    <p>Dolorem veritatis obcaecati tempore corrupti ipsa ullam numquam commodi temporibus magni iusto molestias maxime non tempora expedita dolor maiores eligendi unde dicta quibusdam necessitatibus, laborum culpa ipsum. Cupiditate, ut soluta.</p>
+  
+    {{ render '@separator' }}
+
+    <div class="health-field health-field--inline">
+      <div class="health-field__label">Tags:</div>
+      <div class="health-field__item">
+        <ul class="au-tags au-tags--inline">
+          <li><a href="#">Dinosaurs</a></li>
+          <li><a href="#">Theropod</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{{ render '@footer' }}

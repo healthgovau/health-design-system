@@ -1,0 +1,19 @@
+{
+  "title": "Search page",
+  "label": "Search page",
+  "preview": "@preview-page",
+  "context": {
+    "subheader": {
+      "title": "Search",
+      "summary": ""
+    },
+    "backToTop": {
+      "isVisible": false
+    },
+    "search": {
+      "placeholder": "Search this website",
+      "global": false,
+      "id": "search-field"
+    }
+  }
+}
