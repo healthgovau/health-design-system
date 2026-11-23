@@ -10,13 +10,11 @@ export default {
   title: "Components/Card",
   decorators,
   argTypes: {
-    card: {
-      class: { control: "text" },
-      title: { control: "text" },
-      content: { control: "text" },
-      date: { control: "text" },
-      tag: { control: "text" },
-    },
+    class: { control: "text" },
+    title: { control: "text" },
+    content: { control: "text" },
+    date: { control: "text" },
+    tag: { control: "text" },
   },
   render: (args) => {
     const template = compileTemplate(cardTemplate);
@@ -26,22 +24,18 @@ export default {
 
 export const Default = {
   args: {
-    card: {
-      class: "",
-      title: "Card Title",
-      content: "Card content goes here.",
-      date: "2024-06-05",
-      tag: "Tag",
-    },
+    class: "",
+    title: "Card Title",
+    content: "Card content goes here.",
+    date: "2024-06-05",
+    tag: "Tag",
   },
 };
 
 export const CardWithoutImage = {
   name: "Without image",
   args: {
-    card: {
-      ...Default.args.card,
-    },
+    ...Default.args,
   },
   render: (args) => {
     const template = compileTemplate(cardNoImageTemplate);
@@ -52,9 +46,7 @@ export const CardWithoutImage = {
 export const NotClickable = {
   name: "Not clickable",
   args: {
-    card: {
-      ...Default.args.card,
-    },
+    ...Default.args,
   },
   render: (args) => {
     const template = compileTemplate(cardNoClickTemplate);
@@ -65,33 +57,27 @@ export const NotClickable = {
 export const Borderless = {
   name: "Borderless",
   args: {
-    card: {
-      ...Default.args.card,
-      class: "health-card--borderless",
-      content: "This card removes the border and internal padding.",
-    },
+    ...Default.args,
+    class: "health-card--borderless",
+    content: "This card removes the border and internal padding.",
   },
 };
 
 export const Highlight = {
   name: "Highlight",
   args: {
-    card: {
-      ...Default.args.card,
-      content: "This card includes a highlight keyline.",
-      class: "health-card--highlight",
-    },
+    ...Default.args,
+    content: "This card includes a highlight keyline.",
+    class: "health-card--highlight",
   },
 };
 
 export const Centred = {
   name: "Centred",
   args: {
-    card: {
-      ...Default.args.card,
-      content: "This card centres all content.",
-      class: "health-card--centered",
-    },
+    ...Default.args,
+    content: "This card centres all content.",
+    class: "health-card--centered",
   },
   render: (args) => {
     const template = compileTemplate(cardNoClickTemplate);
@@ -102,26 +88,22 @@ export const Centred = {
 export const Horizontal = {
   name: "Horizontal",
   args: {
-    card: {
-      ...Default.args.card,
-      title: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
-      date: "20 July 2019",
-      tag: "News",
-      content: "This card presents image and body side-by-side.",
-      class:
-        "health-card--clickable health-card--shadow health-card--horizontal",
-    },
+    ...Default.args,
+    title: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
+    date: "20 July 2019",
+    tag: "News",
+    content: "This card presents image and body side-by-side.",
+    class:
+      "health-card--clickable health-card--shadow health-card--horizontal",
   },
 };
 
 export const Contact = {
   name: "Contact",
   args: {
-    card: {
-      ...Default.args.card,
-      content: "This card presents a contact.",
-      class: "health-card--contact",
-    },
+    ...Default.args,
+    content: "This card presents a contact.",
+    class: "health-card--contact",
   },
   render: (args) => {
     const template = compileTemplate(cardContactTemplate);
@@ -132,11 +114,9 @@ export const Contact = {
 export const ContactHorizontal = {
   name: "Contact (horizontal)",
   args: {
-    card: {
-      ...Default.args.card,
-      content: "This card presents a contact in horizontal layout.",
-      class: "health-card--contact-horizontal",
-    },
+    ...Default.args,
+    content: "This card presents a contact in horizontal layout.",
+    class: "health-card--contact-horizontal",
   },
   render: (args) => {
     const template = compileTemplate(cardContactTemplate);
@@ -147,11 +127,9 @@ export const ContactHorizontal = {
 export const FullColourPrimary = {
   name: "Full colour (primary)",
   args: {
-    card: {
-      ...Default.args.card,
-      class: "health-card--colour-primary",
-      content: "This card uses the primary colour as a background.",
-    },
+    ...Default.args,
+    class: "health-card--colour-primary",
+    content: "This card uses the primary colour as a background.",
   },
   render: (args) => {
     const template = compileTemplate(cardNoImageTemplate);
@@ -162,11 +140,9 @@ export const FullColourPrimary = {
 export const FullColourSecondary = {
   name: "Full colour (secondary)",
   args: {
-    card: {
-      ...Default.args.card,
-      class: "health-card--colour-secondary",
-      content: "This card uses the secondary colour as a background.",
-    },
+    ...Default.args,
+    class: "health-card--colour-secondary",
+    content: "This card uses the secondary colour as a background.",
   },
   render: (args) => {
     const template = compileTemplate(cardNoImageTemplate);
@@ -177,11 +153,9 @@ export const FullColourSecondary = {
 export const FullColourTertiary = {
   name: "Full colour (tertiary)",
   args: {
-    card: {
-      ...Default.args.card,
-      class: "health-card--colour-tertiary",
-      content: "This card uses the tertiary colour as a background.",
-    },
+    ...Default.args,
+    class: "health-card--colour-tertiary",
+    content: "This card uses the tertiary colour as a background.",
   },
   render: (args) => {
     const template = compileTemplate(cardNoImageTemplate);
@@ -192,11 +166,9 @@ export const FullColourTertiary = {
 export const FullColourQuaternary = {
   name: "Full colour (quaternary)",
   args: {
-    card: {
-      ...Default.args.card,
-      class: "health-card--colour-quaternary",
-      content: "This card uses the quaternary colour as a background.",
-    },
+    ...Default.args,
+    class: "health-card--colour-quaternary",
+    content: "This card uses the quaternary colour as a background.",
   },
   render: (args) => {
     const template = compileTemplate(cardNoImageTemplate);
@@ -207,10 +179,8 @@ export const FullColourQuaternary = {
 export const MultipleLinks = {
   name: "Multiple links",
   args: {
-    card: {
-      ...Default.args.card,
-      content: "This card contains multiple links.",
-    },
+    ...Default.args,
+    content: "This card contains multiple links.",
   },
   tags: ["beta"],
   render: (args) => {

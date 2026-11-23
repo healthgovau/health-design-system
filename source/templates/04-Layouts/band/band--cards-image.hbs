@@ -3,22 +3,22 @@
     <h2>List of image (vertical) cards</h2>
     <div class="row">
       <div class="col-xs-12 col-sm-4">
-        {{> @card card=card }}
+        {{> @card title=card.title content=card.content class=card.class }}
       </div>
       <div class="col-xs-12 col-sm-4">
-        {{> @card card=card }}
+        {{> @card title=card.title content=card.content class=card.class }}
       </div>
       <div class="col-xs-12 col-sm-4">
-        {{> @card card=card }}
+        {{> @card title=card.title content=card.content class=card.class }}
       </div>
     </div>
     <h2>List of image (horizontal) cards</h2>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        {{> @card--horizontal card=horizontalCard }}
+        {{> @card--horizontal title=horizontalCard.title content=horizontalCard.content class=horizontalCard.class }}
       </div>
       <div class="col-xs-12 col-sm-6">
-        {{> @card--horizontal card=horizontalCard }}
+        {{> @card--horizontal title=horizontalCard.title content=horizontalCard.content class=horizontalCard.class }}
       </div>
     </div>
     <div class="row standard-gap">
