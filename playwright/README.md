@@ -22,7 +22,8 @@ npm run playwright:build
 ```
 
 Rebuild the runner after changing `package-lock.json` or
-`playwright/Dockerfile`.
+`playwright/Dockerfile`. When updating Playwright, also update the Dockerfile's
+image tag to match the exact `@playwright/test` version in `package-lock.json`.
 
 ## Configure the site URLs
 
