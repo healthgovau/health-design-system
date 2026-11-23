@@ -17,7 +17,6 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
-  tags: ["autodocs"],
   render: (args) => {
     const template = compileTemplate(bandTemplate);
     return template(args);

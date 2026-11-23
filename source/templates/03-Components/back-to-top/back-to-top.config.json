@@ -1,9 +1,0 @@
-{
-  "title": "Back to top",
-  "preview": "@preview-page",
-  "context": {
-    "backToTop": {
-      "isVisible": true
-    }
-  }
-}

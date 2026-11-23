@@ -1,7 +1,6 @@
 var health = health || {};
 
 (function ($) {
-
   /**
    * Dynamically generate the in page nav links.
    *
@@ -10,16 +9,15 @@ var health = health || {};
    * @param selector
    *   The area to look for the links, in a jQuery selector.
    */
-  health.inpagenav = function(selector) {
-    if (typeof $.fn.anchorific !== 'undefined') {
-      $(selector).anchorific({
-        navigation: '.au-inpage-nav-links',
-        headers: 'h2',
+  health.inpagenav = function (selector) {
+    if (typeof $.fn.anchorific !== "undefined") {
+      const config = {
+        navigation: ".au-inpage-nav-links",
+        headers: "h2",
         anchorText: false,
-        spy: false
-      });
+        spy: false,
+      };
+      $(selector).anchorific(config);
     }
   };
-
 })(jQuery);
-

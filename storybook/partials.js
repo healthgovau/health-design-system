@@ -15,8 +15,8 @@ import listingPublicationTemplate from "../source/templates/03-Components/listin
 import listingVideoTemplate from "../source/templates/03-Components/listing/_listing-video.hbs?raw";
 import subNavTemplate from "../source/templates/03-Components/page-regions/_sub-nav/sub-nav.hbs?raw";
 import searchTemplate from "../source/templates/03-Components/search/search.hbs?raw";
-import mainNavTemplate from "../source/templates/03-Components/navigation/main-nav/main-nav.hbs?raw";
-import breadcrumbTemplate from "../source/templates/03-Components/navigation/breadcrumb/breadcrumb.hbs?raw";
+import mainNavTemplate from "../source/templates/06-Navigation/main-nav/main-nav.hbs?raw";
+import breadcrumbTemplate from "../source/templates/06-Navigation/breadcrumb/breadcrumb.hbs?raw";
 import toolbarTemplate from "../source/templates/03-Components/toolbar/toolbar.hbs?raw";
 
 const sharedPartials = {

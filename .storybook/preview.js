@@ -27,6 +27,7 @@ export default {
           "Products Using It",
           "Base",
           "Typography",
+          "Navigation",
           "Components",
           "Layouts",
         ],
