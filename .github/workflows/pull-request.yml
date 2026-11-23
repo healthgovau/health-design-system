@@ -8,15 +8,14 @@ on:
     branches:
       - 1.x
       - 2.x
+      - 3.x
       - master
 jobs:
   cname_exists:
     name: CNAME exists
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout codebase
+      - name: Checkout codebase
         uses: actions/checkout@v2
-      -
-        name: Check the CNAME file used by Github pages exists
+      - name: Check the CNAME file used by Github pages exists
         run: sh scripts/cname.sh

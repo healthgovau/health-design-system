@@ -13,52 +13,59 @@
   },
   "main": "index.js",
   "bin": {
-    "healthds": "./bin/cli.js",
-    "hdssetup": "bin/setup.js"
+    "healthds": "./bin/cli.js"
   },
   "dependencies": {
-    "copy": "^0.3.2",
-    "get-dependencies": "^1.1.0",
-    "get-installed-path": "^4.0.8"
+    "copy": "^0.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/preset-env": "^7.26.9",
+    "@babel/core": "^8.1.2",
+    "@babel/preset-env": "^8.0.7",
     "@drupal/once": "^1.0.1",
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
-    "backstopjs": "^6.3.23",
-    "del": "^8.0.0",
+    "@playwright/test": "^1.65.0",
+    "del": "^9.0.1",
     "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "fs-extra": "^11.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-yml": "^1.19.1",
     "gulp": "^5.0.0",
-    "gulp-autoprefixer": "^9.0.0",
-    "gulp-babel": "^8.0.0",
+    "gulp-autoprefixer": "^10.0.0",
+    "gulp-babel": "^8.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^5.0.0",
     "gulp-debug": "^5.0.1",
     "gulp-header": "^2.0.9",
-    "gulp-minify": "^3.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "prettier": "^3.10.1",
     "sass": "^1.77.8",
     "sass-versioning": "^0.4.5"
+  },
+  "overrides": {
+    "sass": {
+      "immutable": "5.2.0"
+    }
   },
   "engines": {
     "node": ">=24.x"
   },
   "scripts": {
     "start": "cat .githooks/pre-commit > .git/hooks/pre-commit && chmod a+x .git/hooks/pre-commit",
-    "backstop:accept": "backstop approve --config=backstop.config.js",
-    "backstop:approve": "backstop approve --config=backstop.config.js",
-    "backstop:open": "backstop openReport --config=backstop.config.js",
-    "backstop:run": "sh scripts/visual_regression_tests.sh",
     "gulp": "gulp",
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
-    "fractal:build": "npm run gulp && cd style-guide && fractal build"
+    "fractal:build": "npm run gulp && cd style-guide && fractal build",
+    "playwright:build": "docker compose -f playwright/compose.yml build",
+    "playwright:open": "playwright show-report playwright/report",
+    "playwright:reference": "sh scripts/playwright_test_runner.sh reference",
+    "playwright:run": "sh scripts/playwright_test_runner.sh",
+    "playwright:ui": "node playwright/scripts/docker-ui.mjs"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,
